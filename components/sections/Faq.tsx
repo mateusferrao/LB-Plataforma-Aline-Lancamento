@@ -6,6 +6,10 @@ const FAQS = [
     a: "Não. É ao vivo, uma vez só — por isso a sua vaga garante a sua presença. O que a Aline mostrar fica com quem esteve na sala.",
   },
   {
+    q: "Por que pagar, se você já ensina tanto de graça?",
+    a: "Porque o que sai de graça é conteúdo — o que você ganha aqui é acesso: a Aline ao vivo, respondendo sua dúvida na hora, ensinando o que ela nunca gravou pra ninguém. Isso não cabe num story.",
+  },
+  {
     q: "Preciso estar ao vivo mesmo?",
     a: "Sim. O tira-dúvidas e a revelação da nova fase acontecem na hora, sem replay. Reserve o dia 24, às 20h.",
   },
@@ -19,7 +23,7 @@ const FAQS = [
   },
   {
     q: "E se eu não gostar?",
-    a: "Devolvemos o seu ingresso. Simples assim — o risco é todo nosso.",
+    a: "Assista a aula até o final. Se mesmo assim não fizer sentido pra você, é só pedir o reembolso por WhatsApp ou e-mail — sem prazo fixo, sem perguntas.",
   },
   {
     q: "Vou ser obrigada a comprar algo na live?",

@@ -50,7 +50,7 @@ export function Offer() {
           </div>
 
           <div className="flex flex-col justify-center rounded-[4px] bg-accent px-8 py-9 text-center text-on-accent">
-            <div className="text-[14px] opacity-80">Pelo que você levaria de um presencial</div>
+            <div className="text-[14px] opacity-80">Exclusivo pra quem está na sala</div>
             <div className="my-1.5 font-serif text-[3.5rem] leading-none sm:text-[3.7rem]">
               R$67
             </div>
@@ -65,7 +65,8 @@ export function Offer() {
             <div className="mt-6 flex items-start gap-2.5 text-left text-[0.96rem] opacity-90">
               <span className="font-serif text-[1.2rem] italic leading-none">✓</span>
               <span>
-                Risco zero: se a aula não te entregar valor, devolvemos o seu ingresso.
+                Risco zero: assista até o fim e, se não fizer sentido pra você, devolvemos o
+                seu ingresso. É só pedir, sem prazo fixo.
               </span>
             </div>
             <div className="mt-3 text-left text-[0.92rem] opacity-80">

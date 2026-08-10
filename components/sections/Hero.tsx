@@ -17,8 +17,8 @@ export function Hero() {
               </span>
             </div>
 
-            <h1 className="mt-5 text-balance font-serif text-[2.55rem] leading-[1.09] tracking-[-0.012em] sm:text-[3.4rem] lg:text-[4.1rem]">
-              A aula que muda a sua mão antes da próxima agulha.
+            <h1 className="mt-5 text-balance font-serif text-[2.35rem] leading-[1.12] tracking-[-0.012em] sm:text-[3.1rem] lg:text-[3.7rem]">
+              A anatomia que te dá segurança pra aplicar com resultado — ao vivo, 24/09.
             </h1>
 
             <p className="mt-6 max-w-[560px] text-[1.2rem] leading-[1.6] text-ink-soft">

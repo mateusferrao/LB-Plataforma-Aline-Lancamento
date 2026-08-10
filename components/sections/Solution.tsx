@@ -1,10 +1,11 @@
 import { Container } from "@/components/Container";
+import { CtaButton } from "@/components/CtaButton";
 
 const SEE = [
   "Onde mora o risco real — e como a anatomia muda a sua mão antes da agulha.",
-  "Os planos que definem naturalidade e segurança em cada região do rosto.",
+  "Por que alguns resultados ficam naturais e outros não? A resposta mora nos planos anatômicos, não na técnica.",
   "O que a dissecção revela e o atlas nunca mostrou.",
-  "Como levar o rigor de um laboratório internacional pra sua rotina de consultório.",
+  "Se você souber onde estão os limites de verdade, sua mão nunca mais hesita na agulha.",
 ];
 
 export function Solution() {
@@ -38,6 +39,10 @@ export function Solution() {
               No fim, em primeira mão: a nova fase que só quem está na sala vê nascer.
             </li>
           </ul>
+
+          <CtaButton className="mt-9">
+            Quero minha vaga <span className="font-serif text-[1.16rem]">· R$67</span>
+          </CtaButton>
         </Container>
       </section>
     </>

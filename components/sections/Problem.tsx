@@ -2,8 +2,8 @@ import { Container } from "@/components/Container";
 
 const PAINS = [
   "A insegurança de aplicar a milímetros de estruturas que você nunca viu de verdade — só desenhadas.",
-  "O medo, legítimo, da intercorrência vascular que ninguém quer viver na própria cadeira.",
   "A sensação de executar bem a técnica, mas sem enxergar o que está logo abaixo da pele.",
+  "O medo, legítimo, da intercorrência vascular que ninguém quer viver na própria cadeira.",
 ];
 
 export function Problem() {

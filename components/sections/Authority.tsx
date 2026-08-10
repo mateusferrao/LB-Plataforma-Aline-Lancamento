@@ -33,10 +33,13 @@ export function Authority() {
             </span>
             <h2 className="mt-3.5 mb-4 font-serif text-[2.1rem]">Dra. Aline Filgueiras</h2>
             <p className="max-w-[520px] text-ink-soft">
-              Biomédica, especialista em harmonização facial e estética avançada. Onze anos
-              resolvendo os casos mais complexos, com certificação internacional em
-              anatomia. Fundadora da Filgueiras Academy e da pós-graduação em Estética
-              Avançada e Integrativa, com selo MEC. Atende em Belo Horizonte e Praia Grande.
+              Antes de ensinar, a Dra. Aline sentiu a mesma insegurança que você sente:
+              aplicar sem enxergar de verdade o que está por baixo da pele. Foi atrás disso
+              a fundo, numa temporada de dissecção nos Estados Unidos — e hoje ministra ela
+              mesma vários cursos internacionais de anatomia na Europa. Soma a isso onze
+              anos resolvendo os casos mais complexos da estética, a Filgueiras Academy que
+              fundou e a pós-graduação em Estética Avançada e Integrativa, com selo MEC.
+              Atende em Belo Horizonte e Praia Grande.
             </p>
 
             <div className="mt-7 grid grid-cols-2 gap-px overflow-hidden rounded-[3px] border border-line bg-line">
