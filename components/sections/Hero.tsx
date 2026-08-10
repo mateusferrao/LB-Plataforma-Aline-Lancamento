@@ -29,14 +29,14 @@ export function Hero() {
 
             <Countdown className="mt-8 mb-8" />
 
-            <CtaButton>
+            <CtaButton className="w-full justify-center sm:w-auto sm:justify-start">
               Quero minha vaga <span className="font-serif text-[1.16rem]">· R$67</span>
             </CtaButton>
             <p className="mt-3.5 text-[13.5px] tracking-[0.02em] text-ink-faint">
               Vagas ao vivo limitadas · sem gravação · reembolso garantido do ingresso
             </p>
 
-            <div className="mt-10 flex flex-wrap gap-7 border-t border-line pt-7">
+            <div className="mt-10 grid grid-cols-3 gap-4 border-t border-line pt-7 sm:gap-7">
               <Stat n="11+" l="anos de clínica" />
               <Stat n="1.000+" l="alunas formadas" />
               <Stat n="40 mil+" l="na comunidade" />
@@ -65,8 +65,10 @@ export function Hero() {
 function Stat({ n, l }: { n: string; l: string }) {
   return (
     <div>
-      <div className="font-serif text-[1.6rem] text-ink">{n}</div>
-      <div className="text-[12px] tracking-[0.05em] text-ink-faint uppercase">{l}</div>
+      <div className="font-serif text-[1.35rem] text-ink sm:text-[1.6rem]">{n}</div>
+      <div className="text-[11px] tracking-[0.05em] text-ink-faint uppercase sm:text-[12px]">
+        {l}
+      </div>
     </div>
   );
 }

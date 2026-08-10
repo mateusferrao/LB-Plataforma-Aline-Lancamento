@@ -15,7 +15,7 @@ export function FinalCta() {
 
         <Countdown className="justify-center" />
 
-        <CtaButton className="mt-8">
+        <CtaButton className="mt-8 w-full justify-center sm:w-auto">
           Quero minha vaga <span className="font-serif text-[1.16rem]">· R$67</span>
         </CtaButton>
         <p className="mt-3.5 text-[13.5px] tracking-[0.02em] text-ink-faint">
