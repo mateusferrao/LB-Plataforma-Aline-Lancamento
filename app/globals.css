@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+
+  --paper: #fdfbf7;
+  --nude: #f6efe6;
+  --nude-2: #f0e6d9;
+  --nude-3: #e9dccb;
+  --card: #ffffff;
+
+  --ink: #2e241b;
+  --ink-soft: #6f6053;
+  --ink-faint: #a0907f;
+
+  --accent: #8a6a66;
+  --accent-deep: #6e4f4b;
+  --on-accent: #fbf6ef;
+
+  --line: rgba(46, 36, 27, 0.12);
+  --line-soft: rgba(46, 36, 27, 0.06);
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-nude: var(--nude);
+  --color-nude-2: var(--nude-2);
+  --color-nude-3: var(--nude-3);
+  --color-card: var(--card);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-ink-faint: var(--ink-faint);
+  --color-accent: var(--accent);
+  --color-accent-deep: var(--accent-deep);
+  --color-on-accent: var(--on-accent);
+  --color-line: var(--line);
+  --color-line-soft: var(--line-soft);
+  --font-serif: var(--font-cormorant);
+  --font-sans: var(--font-roboto);
+}
+
+html {
+  color-scheme: light;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--on-accent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
