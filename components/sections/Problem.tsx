@@ -2,7 +2,7 @@ import { Container } from "@/components/Container";
 import { CaixinhaProof } from "@/components/CaixinhaProof";
 
 const PAINS = [
-  "A insegurança de aplicar a milímetros de estruturas que você nunca viu de verdade — só desenhadas.",
+  "A insegurança de aplicar a milímetros de estruturas que você nunca viu de verdade, só desenhadas.",
   "A sensação de executar bem a técnica, mas sem enxergar o que está logo abaixo da pele.",
   "O medo, legítimo, da intercorrência vascular que ninguém quer viver na própria cadeira.",
 ];

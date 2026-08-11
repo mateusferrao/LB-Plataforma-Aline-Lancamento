@@ -36,7 +36,7 @@ export function Authority() {
             <p className="max-w-[520px] text-ink-soft">
               Antes de ensinar, a Dra. Aline sentiu a mesma insegurança que você sente:
               aplicar sem enxergar de verdade o que está por baixo da pele. Foi atrás disso
-              a fundo, numa temporada de dissecção nos Estados Unidos — e hoje ministra ela
+              a fundo, numa temporada de dissecção nos Estados Unidos, e hoje ministra ela
               mesma vários cursos internacionais de anatomia na Europa. Soma a isso onze
               anos resolvendo os casos mais complexos da estética, a Filgueiras Academy que
               fundou e a pós-graduação em Estética Avançada e Integrativa, com selo MEC.

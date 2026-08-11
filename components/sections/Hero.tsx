@@ -18,12 +18,12 @@ export function Hero() {
             </div>
 
             <h1 className="mt-5 text-balance font-serif text-[2.35rem] leading-[1.12] tracking-[-0.012em] sm:text-[3.1rem] lg:text-[3.7rem]">
-              A anatomia que te dá segurança pra aplicar com resultado — ao vivo, 24/09.
+              A anatomia que te dá segurança pra aplicar com resultado. Ao vivo, dia 24/09.
             </h1>
 
             <p className="mt-6 max-w-[560px] text-[1.2rem] leading-[1.6] text-ink-soft">
               Dia 24 de setembro, ao vivo, a Dra. Aline Filgueiras traz da mesa de dissecção
-              o que atlas e curso gravado não mostram — pra você aplicar harmonização com a
+              o que atlas e curso gravado não mostram, pra você aplicar harmonização com a
               segurança de quem já viu por dentro.
             </p>
 

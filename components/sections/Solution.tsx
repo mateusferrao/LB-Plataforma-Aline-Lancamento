@@ -2,9 +2,9 @@ import { Container } from "@/components/Container";
 import { CtaButton } from "@/components/CtaButton";
 
 const SEE = [
-  "Onde mora o risco real — o que está a milímetros da agulha e nenhum atlas te mostrou.",
+  "Onde mora o risco real: o que está a milímetros da agulha e nenhum atlas te mostrou.",
   "Por que dois resultados idênticos na técnica ficam diferentes na cara.",
-  "O que a dissecção revela sobre os planos — e por que isso muda a sua mão.",
+  "O que a dissecção revela sobre os planos, e por que isso muda a sua mão.",
   "Onde estão os limites de verdade, pra sua mão parar de hesitar na agulha.",
 ];
 
@@ -21,8 +21,8 @@ export function Solution() {
             Eu fui até a mesa de dissecção pra te trazer o que o superficial esconde.
           </h2>
           <p className="mt-[22px] max-w-[600px] text-[1.2rem] leading-[1.6] text-ink-soft">
-            Na aula ao vivo, a Aline abre — de verdade — o caminho por baixo da pele: os
-            planos, as estruturas e os limites que transformam a sua conduta. É o rigor do
+            Na aula ao vivo, a Aline abre de verdade o caminho por baixo da pele: os
+            planos, as estruturas e os limites que mudam a sua conduta. É o rigor do
             curso internacional presencial, traduzido pra uma noite ao vivo.
           </p>
 

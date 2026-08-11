@@ -3,11 +3,11 @@ import { Container } from "@/components/Container";
 const FAQS = [
   {
     q: "Vai ter gravação?",
-    a: "Não. É ao vivo, uma vez só — por isso a sua vaga garante a sua presença. O que a Aline mostrar fica com quem esteve na sala.",
+    a: "Não. É ao vivo, uma vez só, e por isso a sua vaga garante a sua presença. O que a Aline mostrar fica com quem esteve na sala.",
   },
   {
     q: "Por que pagar, se você já ensina tanto de graça?",
-    a: "Porque o que sai de graça é conteúdo — o que você ganha aqui é acesso: a Aline ao vivo, respondendo sua dúvida na hora, ensinando o que ela nunca gravou pra ninguém. Isso não cabe num story.",
+    a: "Porque de graça você recebe conteúdo. Aqui você recebe acesso: a Aline ao vivo, respondendo a sua dúvida na hora e ensinando o que ela nunca gravou pra ninguém. Isso não cabe num story.",
   },
   {
     q: "Preciso estar ao vivo mesmo?",
@@ -19,19 +19,19 @@ const FAQS = [
   },
   {
     q: "Pra quem é essa aula?",
-    a: "Biomédicas, dentistas, enfermeiras, farmacêuticas e esteticistas que já aplicam — ou vão aplicar — harmonização facial e querem mais segurança e resultado.",
+    a: "Biomédicas, dentistas, enfermeiras, farmacêuticas e esteticistas que já aplicam (ou vão aplicar) harmonização facial e querem mais segurança e resultado.",
   },
   {
     q: "Ainda não aplico / estou começando. Essa aula é pra mim?",
-    a: "É. Quanto antes você entende a anatomia por dentro, menos vícios você carrega. A aula parte do que está embaixo da pele e por que isso muda a conduta — serve pra quem já aplica e pra quem quer começar com o pé no lugar certo.",
+    a: "É. Quanto antes você entende a anatomia por dentro, menos vícios você carrega. A aula parte do que está embaixo da pele e por que isso muda a conduta. Serve pra quem já aplica e pra quem quer começar com o pé no lugar certo.",
   },
   {
     q: "E se eu não gostar?",
-    a: "Assista a aula até o final. Se mesmo assim não fizer sentido pra você, é só pedir o reembolso por WhatsApp ou e-mail — sem prazo fixo, sem perguntas.",
+    a: "Assista a aula até o final. Se mesmo assim não fizer sentido pra você, é só pedir o reembolso por WhatsApp ou e-mail. Sem prazo fixo, sem perguntas.",
   },
   {
     q: "Vou ser obrigada a comprar algo na live?",
-    a: "Não. A aula entrega sozinha. Se você quiser continuar depois, vai existir uma condição especial — só se fizer sentido pra você.",
+    a: "Não. A aula entrega sozinha. Se você quiser continuar depois, vai existir uma condição especial, só se fizer sentido pra você.",
   },
 ];
 
