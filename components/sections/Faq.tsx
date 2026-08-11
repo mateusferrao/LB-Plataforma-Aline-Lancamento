@@ -22,6 +22,10 @@ const FAQS = [
     a: "Biomédicas, dentistas, enfermeiras, farmacêuticas e esteticistas que já aplicam — ou vão aplicar — harmonização facial e querem mais segurança e resultado.",
   },
   {
+    q: "Ainda não aplico / estou começando. Essa aula é pra mim?",
+    a: "É. Quanto antes você entende a anatomia por dentro, menos vícios você carrega. A aula parte do que está embaixo da pele e por que isso muda a conduta — serve pra quem já aplica e pra quem quer começar com o pé no lugar certo.",
+  },
+  {
     q: "E se eu não gostar?",
     a: "Assista a aula até o final. Se mesmo assim não fizer sentido pra você, é só pedir o reembolso por WhatsApp ou e-mail — sem prazo fixo, sem perguntas.",
   },

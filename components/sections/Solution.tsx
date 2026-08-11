@@ -2,10 +2,10 @@ import { Container } from "@/components/Container";
 import { CtaButton } from "@/components/CtaButton";
 
 const SEE = [
-  "Onde mora o risco real — e como a anatomia muda a sua mão antes da agulha.",
-  "Por que alguns resultados ficam naturais e outros não? A resposta mora nos planos anatômicos, não na técnica.",
-  "O que a dissecção revela e o atlas nunca mostrou.",
-  "Se você souber onde estão os limites de verdade, sua mão nunca mais hesita na agulha.",
+  "Onde mora o risco real — o que está a milímetros da agulha e nenhum atlas te mostrou.",
+  "Por que dois resultados idênticos na técnica ficam diferentes na cara.",
+  "O que a dissecção revela sobre os planos — e por que isso muda a sua mão.",
+  "Onde estão os limites de verdade, pra sua mão parar de hesitar na agulha.",
 ];
 
 export function Solution() {
@@ -26,7 +26,10 @@ export function Solution() {
             curso internacional presencial, traduzido pra uma noite ao vivo.
           </p>
 
-          <ul className="mt-9 list-none p-0">
+          <p className="mt-9 text-[12px] font-semibold tracking-[0.2em] text-accent uppercase">
+            O que essa noite abre pra você
+          </p>
+          <ul className="mt-3 list-none p-0">
             {SEE.map((item) => (
               <li
                 key={item}

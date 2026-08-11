@@ -26,6 +26,9 @@ export function Offer() {
         <h2 className="mt-[18px] font-serif text-[1.95rem] sm:text-[2.6rem]">
           Uma noite. Ao vivo. Sem repeteco.
         </h2>
+        <p className="mt-[18px] max-w-[560px] text-[1.12rem] leading-[1.55] text-ink-soft">
+          O rigor de uma temporada de dissecção lá fora, destilado em uma noite ao vivo.
+        </p>
       </Container>
 
       <Container>
@@ -47,6 +50,10 @@ export function Offer() {
                 </span>
               </div>
             ))}
+            <p className="mt-6 max-w-[440px] font-serif text-[1.16rem] leading-[1.45] text-accent-deep italic">
+              R$67 hoje. Uma única intercorrência custa muito mais — em dinheiro, em
+              reputação, em noites sem dormir.
+            </p>
           </div>
 
           <div className="flex flex-col justify-center rounded-[4px] bg-accent px-8 py-9 text-center text-on-accent">
@@ -70,7 +77,7 @@ export function Offer() {
               </span>
             </div>
             <div className="mt-3 text-left text-[0.92rem] opacity-80">
-              Sala ao vivo com vagas limitadas. Não vai ter gravação.
+              A sala ao vivo tem lugar limitado — de verdade. É uma vez só, sem replay.
             </div>
           </div>
         </div>

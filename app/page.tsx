@@ -8,6 +8,7 @@ import { Offer } from "@/components/sections/Offer";
 import { Faq } from "@/components/sections/Faq";
 import { FinalCta } from "@/components/sections/FinalCta";
 import { Footer } from "@/components/Footer";
+import { StickyCta } from "@/components/StickyCta";
 
 export default function Home() {
   return (
@@ -24,6 +25,8 @@ export default function Home() {
         <FinalCta />
       </main>
       <Footer />
+      <div aria-hidden className="h-[76px] sm:hidden" />
+      <StickyCta />
     </>
   );
 }

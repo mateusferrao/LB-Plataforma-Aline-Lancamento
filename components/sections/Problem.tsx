@@ -1,4 +1,5 @@
 import { Container } from "@/components/Container";
+import { CaixinhaProof } from "@/components/CaixinhaProof";
 
 const PAINS = [
   "A insegurança de aplicar a milímetros de estruturas que você nunca viu de verdade — só desenhadas.",
@@ -27,6 +28,8 @@ export function Problem() {
             </p>
           ))}
         </div>
+
+        <CaixinhaProof />
       </Container>
     </section>
   );
