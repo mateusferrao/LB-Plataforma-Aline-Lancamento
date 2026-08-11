@@ -10,10 +10,6 @@ export const metadata: Metadata = {
     "Como tratamos seus dados e cookies na página da aula Por Dentro da Face.",
 };
 
-// PLACEHOLDERS a confirmar com o cliente antes de publicar:
-// - E-mail de contato do titular dos dados
-// - CNPJ / razão social do controlador
-const CONTACT_EMAIL = "[e-mail de contato — a confirmar]";
 const CONTROLLER = "Filgueiras Academy (Dra. Aline Filgueiras)";
 const UPDATED_AT = "agosto de 2026";
 
@@ -103,15 +99,15 @@ export default function PoliticaDePrivacidade() {
               <p className="mt-2">
                 Você pode solicitar acesso, correção, exclusão, portabilidade ou oposição ao
                 tratamento dos seus dados, além de revogar o consentimento. É só entrar em
-                contato pelo e-mail abaixo.
+                contato pelo nosso WhatsApp de atendimento.
               </p>
             </section>
 
             <section>
               <h2 className="font-serif text-[1.4rem] text-ink">6. Contato</h2>
               <p className="mt-2">
-                Para qualquer questão sobre os seus dados, fale com {CONTROLLER} pelo e-mail{" "}
-                <strong>{CONTACT_EMAIL}</strong>.
+                Para qualquer questão sobre os seus dados, fale com {CONTROLLER} pelo nosso
+                WhatsApp de atendimento.
               </p>
             </section>
           </div>

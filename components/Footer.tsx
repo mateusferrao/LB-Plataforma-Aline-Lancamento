@@ -14,9 +14,8 @@ export function Footer() {
           height={44}
           className="h-auto w-[120px]"
         />
-        {/* CNPJ pendente de confirmação do cliente — não inventar antes do build final */}
         <p className="mt-3 text-[12.5px] tracking-[0.03em] text-ink-faint">
-          Filgueiras Academy · CNPJ a confirmar · © 2026 · Todos os direitos reservados
+          Filgueiras Academy · © 2026 · Todos os direitos reservados
         </p>
         <Link
           href="/politica-de-privacidade"
