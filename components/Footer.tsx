@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Container } from "@/components/Container";
 import { withBasePath } from "@/lib/basePath";
 
@@ -17,6 +18,12 @@ export function Footer() {
         <p className="mt-3 text-[12.5px] tracking-[0.03em] text-ink-faint">
           Filgueiras Academy · CNPJ a confirmar · © 2026 · Todos os direitos reservados
         </p>
+        <Link
+          href="/politica-de-privacidade"
+          className="mt-2 text-[12.5px] tracking-[0.03em] text-ink-faint underline underline-offset-2 hover:text-accent-deep"
+        >
+          Política de Privacidade
+        </Link>
       </Container>
     </footer>
   );

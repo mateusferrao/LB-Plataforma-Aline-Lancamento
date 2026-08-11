@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Roboto } from "next/font/google";
 import "./globals.css";
+import { MetaPixel } from "@/components/MetaPixel";
+import { GoogleAnalytics } from "@/components/GoogleAnalytics";
+import { TrackingParams } from "@/components/TrackingParams";
+import { ConsentNotice } from "@/components/ConsentNotice";
 
 const cormorant = Cormorant_Garamond({
   variable: "--font-cormorant",
@@ -39,7 +43,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       style={{ colorScheme: "light" }}
     >
       <body className="min-h-screen bg-paper font-sans text-ink antialiased">
+        <MetaPixel />
+        <GoogleAnalytics />
+        <TrackingParams />
         {children}
+        <ConsentNotice />
       </body>
     </html>
   );
