@@ -19,7 +19,7 @@ export function FinalCta() {
           Quero minha vaga <span className="font-serif text-[1.16rem]">· R$67</span>
         </CtaButton>
         <p className="mt-3.5 text-[13.5px] tracking-[0.02em] text-ink-faint">
-          Vagas ao vivo limitadas · sem gravação · reembolso garantido do ingresso
+          Vagas ao vivo limitadas · sem gravação · reembolso garantido em 7 dias
         </p>
       </Container>
     </section>

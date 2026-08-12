@@ -18,7 +18,7 @@ export function Testimonial({
   const isPlaceholder = !quote;
   return (
     <figure
-      className={`rounded-[4px] border bg-nude/60 p-6 ${
+      className={`flex h-full flex-col rounded-[4px] border bg-nude/60 p-6 ${
         isPlaceholder ? "border-dashed border-line" : "border-line-soft"
       } ${className}`}
     >
@@ -29,7 +29,7 @@ export function Testimonial({
       >
         {isPlaceholder ? "depoimento real de aluna aqui" : `“${quote}”`}
       </blockquote>
-      <figcaption className="mt-4 text-[12px] tracking-[0.03em] text-ink-faint uppercase">
+      <figcaption className="mt-auto pt-4 text-[12px] tracking-[0.03em] text-ink-faint uppercase">
         {author}
       </figcaption>
     </figure>

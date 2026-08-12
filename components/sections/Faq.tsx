@@ -27,7 +27,7 @@ const FAQS = [
   },
   {
     q: "E se eu não gostar?",
-    a: "Assista a aula até o final. Se mesmo assim não fizer sentido pra você, é só pedir o reembolso por WhatsApp ou e-mail. Sem prazo fixo, sem perguntas.",
+    a: "Você tem 7 dias após a compra pra pedir reembolso do ingresso, por WhatsApp ou e-mail. Sem perguntas.",
   },
   {
     q: "Vou ser obrigada a comprar algo na live?",

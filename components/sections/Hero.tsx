@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { AnimatedNumber } from "@/components/AnimatedNumber";
 import { Container } from "@/components/Container";
 import { Countdown } from "@/components/Countdown";
 import { CtaButton } from "@/components/CtaButton";
@@ -8,7 +9,7 @@ export function Hero() {
   return (
     <section className="pt-10 pb-20 sm:pb-[78px]">
       <Container>
-        <div className="grid grid-cols-1 items-center gap-9 sm:gap-[54px] md:grid-cols-[1.12fr_0.88fr]">
+        <div className="grid grid-cols-1 items-stretch gap-9 sm:gap-[54px] md:grid-cols-[1.12fr_0.88fr]">
           <div>
             <div className="flex items-center gap-3.5">
               <span className="h-px w-[42px] bg-accent" aria-hidden="true" />
@@ -33,17 +34,17 @@ export function Hero() {
               Quero minha vaga <span className="font-serif text-[1.16rem]">· R$67</span>
             </CtaButton>
             <p className="mt-3.5 text-[13.5px] tracking-[0.02em] text-ink-faint">
-              Vagas ao vivo limitadas · sem gravação · reembolso garantido do ingresso
+              Vagas ao vivo limitadas · sem gravação · reembolso garantido em 7 dias
             </p>
 
             <div className="mt-10 grid grid-cols-3 gap-4 border-t border-line pt-7 sm:gap-7">
-              <Stat n="11+" l="anos de clínica" />
-              <Stat n="1.000+" l="alunas formadas" />
-              <Stat n="40 mil+" l="na comunidade" />
+              <Stat target={11} suffix="+" l="anos de clínica" />
+              <Stat target={1000} suffix="+" formatThousands l="alunas formadas" />
+              <Stat target={40} suffix=" mil+" l="na comunidade" />
             </div>
           </div>
 
-          <div className="relative mx-auto aspect-[4/5] w-full max-w-[420px] overflow-hidden rounded-[4px] border border-line-soft bg-nude-2">
+          <div className="relative mx-auto aspect-[4/5] w-full max-w-[420px] overflow-hidden rounded-[4px] border border-line-soft bg-nude-2 md:aspect-auto md:h-full">
             <Image
               src={withBasePath("/images/hero-aline.jpg")}
               alt="Dra. Aline Filgueiras"
@@ -62,10 +63,25 @@ export function Hero() {
   );
 }
 
-function Stat({ n, l }: { n: string; l: string }) {
+function Stat({
+  target,
+  suffix,
+  formatThousands,
+  l,
+}: {
+  target: number;
+  suffix: string;
+  formatThousands?: boolean;
+  l: string;
+}) {
   return (
     <div>
-      <div className="font-serif text-[1.35rem] text-ink sm:text-[1.6rem]">{n}</div>
+      <AnimatedNumber
+        target={target}
+        suffix={suffix}
+        formatThousands={formatThousands}
+        className="block font-serif text-[1.35rem] text-ink sm:text-[1.6rem]"
+      />
       <div className="text-[11px] tracking-[0.05em] text-ink-faint uppercase sm:text-[12px]">
         {l}
       </div>

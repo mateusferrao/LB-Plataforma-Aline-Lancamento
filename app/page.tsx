@@ -2,6 +2,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { Hero } from "@/components/sections/Hero";
 import { Problem } from "@/components/sections/Problem";
 import { Solution } from "@/components/sections/Solution";
+import { SocialProof } from "@/components/sections/SocialProof";
 import { Authority } from "@/components/sections/Authority";
 import { Offer } from "@/components/sections/Offer";
 import { Faq } from "@/components/sections/Faq";
@@ -17,6 +18,7 @@ export default function Home() {
         <Hero />
         <Problem />
         <Solution />
+        <SocialProof />
         <Authority />
         <Offer />
         <Faq />
