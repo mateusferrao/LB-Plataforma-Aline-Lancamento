@@ -42,7 +42,7 @@ export function Faq() {
         <span className="text-[12px] font-semibold tracking-[0.24em] text-accent uppercase">
           Dúvidas
         </span>
-        <h2 className="mt-[18px] font-serif text-[1.95rem] sm:text-[2.6rem]">
+        <h2 className="mt-[18px] font-serif font-medium text-[1.95rem] sm:text-[2.6rem]">
           Perguntas honestas.
         </h2>
 

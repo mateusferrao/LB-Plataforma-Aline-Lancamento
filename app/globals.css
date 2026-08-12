@@ -3,22 +3,22 @@
 :root {
   color-scheme: light;
 
-  --paper: #fdfbf7;
-  --nude: #f6efe6;
-  --nude-2: #f0e6d9;
-  --nude-3: #e9dccb;
-  --card: #ffffff;
+  --paper: #f0e7d7;
+  --nude: #e7d9c4;
+  --nude-2: #ddccb2;
+  --nude-3: #d3c0a2;
+  --card: #fbf7ef;
 
   --ink: #2e241b;
-  --ink-soft: #6f6053;
-  --ink-faint: #a0907f;
+  --ink-soft: #6a5b4d;
+  --ink-faint: #857460;
 
   --accent: #8a6a66;
   --accent-deep: #6e4f4b;
   --on-accent: #fbf6ef;
 
-  --line: rgba(46, 36, 27, 0.12);
-  --line-soft: rgba(46, 36, 27, 0.06);
+  --line: rgba(46, 36, 27, 0.16);
+  --line-soft: rgba(46, 36, 27, 0.09);
 }
 
 @theme inline {

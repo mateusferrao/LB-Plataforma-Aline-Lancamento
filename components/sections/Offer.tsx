@@ -26,7 +26,7 @@ export function Offer() {
         <span className="text-[12px] font-semibold tracking-[0.24em] text-accent uppercase">
           Seu ingresso
         </span>
-        <h2 className="mt-[18px] font-serif text-[1.95rem] sm:text-[2.6rem]">
+        <h2 className="mt-[18px] font-serif font-medium text-[1.95rem] sm:text-[2.6rem]">
           É uma noite ao vivo, e não vai ter repeteco.
         </h2>
         <p className="mt-[18px] max-w-[560px] text-[1.12rem] leading-[1.55] text-ink-soft">

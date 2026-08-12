@@ -17,7 +17,7 @@ export function Solution() {
           <span className="text-[12px] font-semibold tracking-[0.24em] text-accent uppercase">
             Por dentro da face
           </span>
-          <h2 className="mt-[18px] text-balance font-serif text-[1.95rem] leading-[1.12] sm:text-[2.6rem]">
+          <h2 className="mt-[18px] text-balance font-serif font-medium text-[1.95rem] leading-[1.12] sm:text-[2.6rem]">
             Eu fui até a mesa de dissecção pra te trazer o que o superficial esconde.
           </h2>
           <p className="mt-[22px] max-w-[600px] text-[1.2rem] leading-[1.6] text-ink-soft">

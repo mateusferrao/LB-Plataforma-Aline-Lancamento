@@ -32,7 +32,7 @@ export function Authority() {
             <span className="text-[12px] font-semibold tracking-[0.24em] text-accent uppercase">
               Quem conduz
             </span>
-            <h2 className="mt-3.5 mb-4 font-serif text-[2.1rem]">Dra. Aline Filgueiras</h2>
+            <h2 className="mt-3.5 mb-4 font-serif font-medium text-[2.1rem]">Dra. Aline Filgueiras</h2>
             <p className="max-w-[520px] text-ink-soft">
               Antes de ensinar, a Dra. Aline sentiu a mesma insegurança que você sente:
               aplicar sem enxergar de verdade o que está por baixo da pele. Foi atrás disso
