@@ -25,7 +25,7 @@ export default function Home() {
         <FinalCta />
       </main>
       <Footer />
-      <div aria-hidden className="h-[76px] sm:hidden" />
+      <div aria-hidden className="h-[122px] sm:hidden" />
       <StickyCta />
     </>
   );

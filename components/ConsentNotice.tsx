@@ -30,7 +30,7 @@ export function ConsentNotice() {
   };
 
   return (
-    <div className="fixed inset-x-0 bottom-[80px] z-50 sm:bottom-0">
+    <div className="fixed inset-x-0 bottom-[126px] z-50 sm:bottom-0">
       <div className="mx-auto max-w-[1060px] px-4 pb-3">
         <div className="flex flex-col gap-3 rounded-[6px] border border-line bg-paper/95 px-4 py-3 shadow-[0_6px_24px_rgba(0,0,0,0.08)] backdrop-blur-sm sm:flex-row sm:items-center sm:justify-between">
           <p className="text-[13px] leading-[1.5] text-ink-soft">

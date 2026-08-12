@@ -1,5 +1,8 @@
 import { Container } from "@/components/Container";
 import { CtaButton } from "@/components/CtaButton";
+import { ProvaSocialViva } from "@/components/ProvaSocialViva";
+import { ReservaTimer } from "@/components/ReservaTimer";
+import { VagasBadge } from "@/components/VagasBadge";
 
 const INCLUDES = [
   {
@@ -65,9 +68,19 @@ export function Offer() {
               Ingresso único · ao vivo
             </div>
 
-            <CtaButton variant="accent" className="mt-6 w-full justify-center">
+            <div className="mt-6 flex flex-col items-center gap-3 border-t border-on-accent/15 pt-6">
+              <VagasBadge tone="onAccent" />
+              <ReservaTimer tone="onAccent" />
+            </div>
+
+            <CtaButton variant="accent" className="mt-4 w-full justify-center">
               Garantir minha vaga
             </CtaButton>
+
+            <ProvaSocialViva
+              tone="onAccent"
+              className="mt-4 justify-center"
+            />
 
             <div className="mt-6 flex items-start gap-2.5 text-left text-[0.96rem] opacity-90">
               <span className="font-serif text-[1.2rem] italic leading-none">✓</span>
