@@ -12,8 +12,8 @@ import { useEffect, useState } from "react";
 //
 // Para usar dado REAL no futuro, troque o gerador por uma fonte de verdade
 // (GA Realtime API ou webhook de vendas da Ticto) e remova o data-simulado.
-const MIN = 8;
-const MAX = 23;
+const MIN = 4;
+const MAX = 10;
 const KEY = "lp_prova_social";
 
 function clamp(n: number) {

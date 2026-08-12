@@ -6,10 +6,6 @@ import { ProvaSocialViva } from "@/components/ProvaSocialViva";
 import { ReservaTimer } from "@/components/ReservaTimer";
 import { VagasBadge } from "@/components/VagasBadge";
 
-function Divisor() {
-  return <span className="h-4 w-px bg-line" aria-hidden="true" />;
-}
-
 // CTA fixo com urgência (vaga reservada + poucas vagas).
 // - Mobile: sempre visível, layout enxuto (sem "pessoas vendo" — não cabe).
 // - Desktop: barra discreta que aparece só após rolar além do Hero e some perto
@@ -56,12 +52,10 @@ export function StickyCta() {
             : "pointer-events-none translate-y-full opacity-0"
         }`}
       >
-        <div className="mx-auto flex max-w-[1060px] items-center justify-center gap-7 px-[30px] py-3">
-          <div className="flex items-center gap-4">
+        <div className="mx-auto flex max-w-[1200px] flex-wrap items-center justify-center gap-x-12 gap-y-2.5 px-10 py-[18px]">
+          <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-1.5 text-ink-soft">
             <ProvaSocialViva />
-            <Divisor />
-            <VagasBadge>Poucas vagas</VagasBadge>
-            <Divisor />
+            <VagasBadge plain>Poucas vagas</VagasBadge>
             <ReservaTimer />
           </div>
           <CtaButton className="shrink-0">

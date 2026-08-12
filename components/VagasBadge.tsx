@@ -1,23 +1,31 @@
 // Selo qualitativo de escassez — SEM número (decisão de produto: "poucas vagas").
 // Reforça a copy real de "sala ao vivo com lugar limitado de verdade" sem inventar
 // uma quantidade que o site estático não teria como sustentar.
+//
+// - pill (padrão): selo com fundo suave, pra destacar dentro do card de oferta.
+// - plain: só ponto + texto, sem fundo — mais leve e editorial na barra de rolagem.
 type Tone = "light" | "onAccent";
 
 export function VagasBadge({
   className = "",
   children = "Poucas vagas para a sala ao vivo",
   tone = "light",
+  plain = false,
 }: {
   className?: string;
   children?: React.ReactNode;
   tone?: Tone;
+  plain?: boolean;
 }) {
-  const base =
-    "inline-flex items-center gap-1.5 rounded-[2px] px-2.5 py-1 text-[11px] font-semibold tracking-[0.08em] uppercase";
-  const cls =
-    tone === "onAccent"
-      ? "bg-on-accent/15 text-on-accent"
-      : "bg-accent/10 text-accent-deep";
+  const base = plain
+    ? "inline-flex items-center gap-2 text-[11px] font-semibold tracking-[0.12em] uppercase"
+    : "inline-flex items-center gap-1.5 rounded-[2px] px-2.5 py-1 text-[11px] font-semibold tracking-[0.08em] uppercase";
+
+  const cor = tone === "onAccent" ? "text-on-accent" : "text-accent-deep";
+  const cls = plain
+    ? cor
+    : `${cor} ${tone === "onAccent" ? "bg-on-accent/15" : "bg-accent/10"}`;
+
   return (
     <span className={`${base} ${cls} ${className}`}>
       <span
