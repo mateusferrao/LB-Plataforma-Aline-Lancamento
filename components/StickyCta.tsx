@@ -52,10 +52,12 @@ export function StickyCta() {
             : "pointer-events-none translate-y-full opacity-0"
         }`}
       >
-        <div className="mx-auto flex max-w-[1060px] flex-wrap items-center justify-center gap-x-10 gap-y-2 px-10 py-[18px] text-ink-soft">
-          <VagasBadge plain>Poucas vagas</VagasBadge>
-          <ReservaTimer />
-          <CtaButton className="ml-1 shrink-0">
+        <div className="mx-auto flex max-w-[1060px] items-center justify-between gap-8 px-10 py-[18px] text-ink-soft">
+          <div className="flex items-center gap-7">
+            <VagasBadge plain>Poucas vagas</VagasBadge>
+            <ReservaTimer />
+          </div>
+          <CtaButton className="shrink-0">
             Quero minha vaga <span className="font-serif text-[1.16rem]">· R$77</span>
           </CtaButton>
         </div>
