@@ -5,8 +5,8 @@ Como etiquetar os links para saber de onde vem cada visita e cada venda.
 ## Como funciona (resumo)
 1. Você coloca as etiquetas UTM no link da landing que divulga.
 2. A pessoa clica e cai na LP com as etiquetas na URL.
-3. O código da LP **repassa as etiquetas para o checkout do Ticto** no clique do CTA
-   (automático — nada a fazer aqui).
+3. O script oficial da Ticto (`ticto-echo`, embutido na LP) **repassa as etiquetas para o
+   checkout do Ticto** no clique do CTA (automático — nada a fazer aqui).
 4. No **Ticto → aba Rastreamento** de cada venda você vê a origem; no **GA4**, as origens de tráfego.
 
 > Importante: para **anúncio Meta**, quem atribui a venda ao anúncio é o **pixel + CAPI + `fbclid`**

@@ -3,7 +3,7 @@ import { Cormorant_Garamond, Roboto } from "next/font/google";
 import "./globals.css";
 import { MetaPixel } from "@/components/MetaPixel";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
-import { TrackingParams } from "@/components/TrackingParams";
+import { TictoEcho } from "@/components/TictoEcho";
 import { ConsentNotice } from "@/components/ConsentNotice";
 
 const cormorant = Cormorant_Garamond({
@@ -45,7 +45,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="min-h-screen bg-paper font-sans text-ink antialiased">
         <MetaPixel />
         <GoogleAnalytics />
-        <TrackingParams />
+        <TictoEcho />
         {children}
         <ConsentNotice />
       </body>
