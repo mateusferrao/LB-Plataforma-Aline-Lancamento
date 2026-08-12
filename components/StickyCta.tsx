@@ -2,14 +2,18 @@
 
 import { useEffect, useState } from "react";
 import { CtaButton } from "@/components/CtaButton";
+import { ProvaSocialViva } from "@/components/ProvaSocialViva";
 import { ReservaTimer } from "@/components/ReservaTimer";
 import { VagasBadge } from "@/components/VagasBadge";
 
+function Divisor() {
+  return <span className="h-4 w-px bg-line" aria-hidden="true" />;
+}
+
 // CTA fixo com urgência (vaga reservada + poucas vagas).
-// - Mobile: sempre visível (padrão de LP mobile).
-// - Desktop: barra discreta que só aparece DEPOIS que o visitante rola além do
-//   Hero (onde o CTA original já saiu da tela) e SOME perto do rodapé, pra não
-//   cobrir o conteúdo final nem parecer intrusiva.
+// - Mobile: sempre visível, layout enxuto (sem "pessoas vendo" — não cabe).
+// - Desktop: barra discreta que aparece só após rolar além do Hero e some perto
+//   do rodapé; traz prova social + poucas vagas + reserva + CTA, centralizados.
 export function StickyCta() {
   const [mostrarDesktop, setMostrarDesktop] = useState(false);
 
@@ -54,8 +58,10 @@ export function StickyCta() {
       >
         <div className="mx-auto flex max-w-[1060px] items-center justify-center gap-7 px-[30px] py-3">
           <div className="flex items-center gap-4">
-            <VagasBadge />
-            <span className="h-4 w-px bg-line" aria-hidden="true" />
+            <ProvaSocialViva />
+            <Divisor />
+            <VagasBadge>Poucas vagas</VagasBadge>
+            <Divisor />
             <ReservaTimer />
           </div>
           <CtaButton className="shrink-0">

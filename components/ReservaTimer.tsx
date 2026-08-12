@@ -59,20 +59,26 @@ export function ReservaTimer({
 
   return (
     <div
-      className={`flex items-center justify-center gap-2 ${className}`}
+      className={`flex items-center justify-center gap-2 whitespace-nowrap ${className}`}
       aria-live="polite"
     >
-      <span className={`text-[12px] tracking-[0.02em] ${labelCls}`}>
-        {expirado ? "Sua reserva está expirando —" : "Sua vaga está reservada por"}
-      </span>
       {expirado ? (
-        <span className={`text-[12px] font-semibold ${destaqueCls}`}>garanta agora</span>
-      ) : (
-        <span
-          className={`font-serif text-[1.15rem] leading-none tabular-nums ${destaqueCls}`}
-        >
-          {restanteMs === null ? "--:--" : `${two(minutos)}:${two(segundos)}`}
+        // Estado expirado curto — só um nudge, não implica perda (o CTA continua
+        // funcionando e o preço não muda). Texto longo aqui quebrava o layout.
+        <span className={`text-[12px] font-semibold ${destaqueCls}`}>
+          Garanta sua vaga agora
         </span>
+      ) : (
+        <>
+          <span className={`text-[12px] tracking-[0.02em] ${labelCls}`}>
+            Sua vaga está reservada por
+          </span>
+          <span
+            className={`font-serif text-[1.15rem] leading-none tabular-nums ${destaqueCls}`}
+          >
+            {restanteMs === null ? "--:--" : `${two(minutos)}:${two(segundos)}`}
+          </span>
+        </>
       )}
     </div>
   );
