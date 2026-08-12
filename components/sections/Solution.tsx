@@ -44,7 +44,7 @@ export function Solution() {
           </ul>
 
           <CtaButton className="mt-9 w-full justify-center sm:w-auto sm:justify-start">
-            Quero minha vaga <span className="font-serif text-[1.16rem]">· R$67</span>
+            Quero minha vaga <span className="font-serif text-[1.16rem]">· R$77</span>
           </CtaButton>
         </Container>
       </section>

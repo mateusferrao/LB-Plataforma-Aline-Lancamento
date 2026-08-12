@@ -28,10 +28,10 @@ export function CtaButton({ children, variant = "dark", className = "" }: Props)
       onClick={() => {
         trackCustom("ClickCheckout", {
           content_name: "Ingresso Por Dentro da Face",
-          value: 67,
+          value: 77,
           currency: "BRL",
         });
-        gaEvent("click_checkout", { value: 67, currency: "BRL" });
+        gaEvent("click_checkout", { value: 77, currency: "BRL" });
       }}
       data-checkout
     >

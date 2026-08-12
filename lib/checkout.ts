@@ -1,6 +1,5 @@
-// URL do checkout Ticto do ingresso (R$67). Ainda não temos acesso à conta Ticto —
-// enquanto isso, o CTA aponta para este placeholder, sinalizado por data-checkout-placeholder
-// no componente CtaButton para facilitar QA visual antes de trocar pela URL real.
+// URL do checkout Ticto do ingresso (R$77). Vem de NEXT_PUBLIC_TICTO_CHECKOUT_URL
+// (.env.production); se ausente, cai no placeholder #checkout-pendente.
 export const TICTO_CHECKOUT_URL =
   process.env.NEXT_PUBLIC_TICTO_CHECKOUT_URL ?? "#checkout-pendente";
 

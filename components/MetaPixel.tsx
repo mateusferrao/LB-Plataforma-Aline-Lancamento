@@ -22,7 +22,7 @@ export function MetaPixel() {
           fbq('track', 'ViewContent', {
             content_name: 'Ingresso Por Dentro da Face',
             content_category: 'live',
-            value: 67,
+            value: 77,
             currency: 'BRL'
           });
         `}

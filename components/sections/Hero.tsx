@@ -31,7 +31,7 @@ export function Hero() {
             <Countdown className="mt-8 mb-8" />
 
             <CtaButton className="w-full justify-center sm:w-auto sm:justify-start">
-              Quero minha vaga <span className="font-serif text-[1.16rem]">· R$67</span>
+              Quero minha vaga <span className="font-serif text-[1.16rem]">· R$77</span>
             </CtaButton>
             <p className="mt-3.5 text-[13.5px] tracking-[0.02em] text-ink-faint">
               Vagas ao vivo limitadas · sem gravação · reembolso garantido em 7 dias

@@ -59,7 +59,7 @@ export function Offer() {
           <div className="flex flex-col justify-center rounded-[4px] bg-accent px-8 py-9 text-center text-on-accent">
             <div className="text-[14px] opacity-80">Exclusivo pra quem está na sala</div>
             <div className="my-1.5 font-serif text-[3.5rem] leading-none sm:text-[3.7rem]">
-              R$67
+              R$77
             </div>
             <div className="text-[12px] tracking-[0.16em] uppercase opacity-90">
               Ingresso único · ao vivo
