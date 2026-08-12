@@ -2,14 +2,14 @@
 
 import { useEffect, useState } from "react";
 import { CtaButton } from "@/components/CtaButton";
-import { ProvaSocialViva } from "@/components/ProvaSocialViva";
 import { ReservaTimer } from "@/components/ReservaTimer";
 import { VagasBadge } from "@/components/VagasBadge";
 
 // CTA fixo com urgência (vaga reservada + poucas vagas).
-// - Mobile: sempre visível, layout enxuto (sem "pessoas vendo" — não cabe).
+// - Mobile: sempre visível, layout enxuto.
 // - Desktop: barra discreta que aparece só após rolar além do Hero e some perto
-//   do rodapé; traz prova social + poucas vagas + reserva + CTA, centralizados.
+//   do rodapé; traz poucas vagas + reserva + CTA num bloco centralizado e arejado.
+//   (A prova social "X pessoas vendo" fica no card de oferta, pra não poluir aqui.)
 export function StickyCta() {
   const [mostrarDesktop, setMostrarDesktop] = useState(false);
 
@@ -52,11 +52,10 @@ export function StickyCta() {
             : "pointer-events-none translate-y-full opacity-0"
         }`}
       >
-        <div className="mx-auto flex max-w-[1320px] items-center justify-between gap-6 px-12 py-[18px] text-ink-soft">
-          <ProvaSocialViva />
+        <div className="mx-auto flex max-w-[1060px] flex-wrap items-center justify-center gap-x-10 gap-y-2 px-10 py-[18px] text-ink-soft">
           <VagasBadge plain>Poucas vagas</VagasBadge>
           <ReservaTimer />
-          <CtaButton className="shrink-0">
+          <CtaButton className="ml-1 shrink-0">
             Quero minha vaga <span className="font-serif text-[1.16rem]">· R$77</span>
           </CtaButton>
         </div>
