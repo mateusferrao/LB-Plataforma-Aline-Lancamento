@@ -52,9 +52,10 @@ export function StickyCta() {
             : "pointer-events-none translate-y-full opacity-0"
         }`}
       >
-        <div className="mx-auto flex max-w-[1060px] items-center justify-between gap-6 px-[30px] py-3">
-          <div className="flex items-center gap-5">
+        <div className="mx-auto flex max-w-[1060px] items-center justify-center gap-7 px-[30px] py-3">
+          <div className="flex items-center gap-4">
             <VagasBadge />
+            <span className="h-4 w-px bg-line" aria-hidden="true" />
             <ReservaTimer />
           </div>
           <CtaButton className="shrink-0">
