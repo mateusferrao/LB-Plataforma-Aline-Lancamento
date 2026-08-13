@@ -21,10 +21,10 @@ export function VagasBadge({
     ? "inline-flex items-center gap-2 text-[11px] font-semibold tracking-[0.12em] uppercase"
     : "inline-flex items-center gap-1.5 rounded-[2px] px-2.5 py-1 text-[11px] font-semibold tracking-[0.08em] uppercase";
 
-  const cor = tone === "onAccent" ? "text-on-accent" : "text-accent-deep";
+  const cor = tone === "onAccent" ? "text-on-wine" : "text-wine-ink";
   const cls = plain
     ? cor
-    : `${cor} ${tone === "onAccent" ? "bg-on-accent/15" : "bg-accent/10"}`;
+    : `${cor} ${tone === "onAccent" ? "bg-on-wine/15" : "bg-wine-ink/15"}`;
 
   return (
     <span className={`${base} ${cls} ${className}`}>

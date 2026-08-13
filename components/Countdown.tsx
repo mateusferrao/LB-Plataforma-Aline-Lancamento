@@ -42,12 +42,12 @@ export function Countdown({ className = "" }: { className?: string }) {
       {UNITS.map(({ key, label }) => (
         <div
           key={key}
-          className="min-w-[74px] rounded-[3px] border border-line-soft bg-nude px-1 py-3 text-center"
+          className="min-w-[74px] rounded-[4px] border border-line-soft bg-bg-3 px-1 py-3 text-center"
         >
-          <div className="font-serif text-[2rem] leading-none tabular-nums text-ink">
+          <div className="font-serif text-[2rem] leading-none tabular-nums text-fg">
             {remaining ? two(remaining[key]) : "--"}
           </div>
-          <div className="mt-2 text-[10.5px] tracking-[0.16em] text-ink-faint uppercase">
+          <div className="mt-2 text-[10.5px] tracking-[0.16em] text-fg-faint uppercase">
             {label}
           </div>
         </div>

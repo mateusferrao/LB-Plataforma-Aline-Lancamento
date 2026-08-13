@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { AnimatedNumber } from "@/components/AnimatedNumber";
 import { Container } from "@/components/Container";
+import { Reveal } from "@/components/Reveal";
 import { withBasePath } from "@/lib/basePath";
 
 const STATS = [
@@ -14,50 +15,48 @@ export function Authority() {
   return (
     <section className="py-16 sm:py-[92px]">
       <Container>
-        <div className="grid grid-cols-1 items-stretch gap-9 rounded-[4px] border border-line-soft bg-nude p-7 sm:gap-11 sm:p-12 md:grid-cols-[0.85fr_1.15fr]">
-          <div className="relative mx-auto aspect-[3/4] w-full max-w-[320px] overflow-hidden rounded-[3px] border border-line-soft bg-nude-3 md:aspect-auto md:h-full">
+        <Reveal className="grid grid-cols-1 items-stretch gap-9 rounded-[6px] border border-line-soft bg-bg-2 p-7 sm:gap-11 sm:p-12 md:grid-cols-[0.85fr_1.15fr]">
+          <div className="relative mx-auto aspect-[3/4] w-full max-w-[320px] overflow-hidden rounded-[4px] border border-line-soft bg-surface md:aspect-auto md:h-full">
+            {/* FOTO: aline-authority-marsala.jpg — blazer marsala, sentada, COLORIDA.
+                (arquivo atual é stand-in; sobrescreva com a foto real de mesmo nome) */}
             <Image
-              src={withBasePath("/images/authority-aline.jpg")}
+              src={withBasePath("/images/aline-authority-marsala.jpg")}
               alt="Dra. Aline Filgueiras"
               fill
               sizes="(min-width: 768px) 320px, 70vw"
               className="object-cover"
             />
-            <span className="absolute bottom-3 left-3.5 rounded-[2px] bg-nude/95 px-[9px] py-[2px] font-serif text-[12px] italic text-accent-deep">
-              Retrato · Aline Filgueiras
-            </span>
           </div>
 
           <div>
-            <span className="text-[12px] font-semibold tracking-[0.24em] text-accent uppercase">
+            <span className="text-[12px] font-semibold tracking-[0.24em] text-wine-ink uppercase">
               Quem conduz
             </span>
-            <h2 className="mt-3.5 mb-4 font-serif font-medium text-[2.1rem]">Dra. Aline Filgueiras</h2>
-            <p className="max-w-[520px] text-ink-soft">
-              Antes de ensinar, a Dra. Aline sentiu a mesma insegurança que você sente:
-              aplicar sem enxergar de verdade o que está por baixo da pele. Foi atrás disso
-              a fundo, numa temporada de dissecção nos Estados Unidos, e hoje ministra ela
-              mesma vários cursos internacionais de anatomia na Europa. Soma a isso onze
-              anos resolvendo os casos mais complexos da estética, a Filgueiras Academy que
-              fundou e a pós-graduação em Estética Avançada e Integrativa, com selo MEC.
-              Atende em Belo Horizonte e Praia Grande.
+            <h2 className="mt-3.5 mb-4 font-serif font-medium text-[2.1rem] text-fg">Dra. Aline Filgueiras</h2>
+            <p className="max-w-[520px] text-fg-soft">
+              Antes de ensinar, a Aline sentiu a mesma insegurança que você sente: aplicar
+              sem enxergar o que está embaixo da pele. Foi atrás disso a fundo. Fez uma
+              temporada de dissecção nos Estados Unidos e hoje dá cursos internacionais de
+              anatomia na Europa. São onze anos resolvendo os casos mais complexos da
+              estética, a Filgueiras Academy que ela fundou e a pós em Estética Avançada e
+              Integrativa, com selo MEC. Atende em Belo Horizonte e Praia Grande.
             </p>
 
-            <div className="mt-7 grid grid-cols-2 gap-px overflow-hidden rounded-[3px] border border-line bg-line">
+            <div className="mt-7 grid grid-cols-2 gap-px overflow-hidden rounded-[4px] border border-line bg-line">
               {STATS.map((s) => (
-                <div key={s.l} className="bg-nude px-[18px] py-[19px]">
+                <div key={s.l} className="bg-bg-3 px-[18px] py-[19px]">
                   <AnimatedNumber
                     target={s.target}
                     suffix={s.suffix}
                     formatThousands={s.formatThousands}
-                    className="block font-serif text-[1.75rem] text-ink"
+                    className="block font-serif text-[1.75rem] text-fg"
                   />
-                  <div className="text-[12px] tracking-[0.03em] text-ink-faint">{s.l}</div>
+                  <div className="text-[12px] tracking-[0.03em] text-fg-faint">{s.l}</div>
                 </div>
               ))}
             </div>
           </div>
-        </div>
+        </Reveal>
       </Container>
     </section>
   );

@@ -15,11 +15,13 @@ type Props = {
 // que o Ticto dispara via CAPI.
 export function CtaButton({ children, variant = "dark", className = "" }: Props) {
   const base =
-    "inline-flex items-center gap-3 rounded-[2px] px-8 py-[19px] font-sans text-[1.02rem] font-semibold transition-transform duration-150 ease-out hover:-translate-y-0.5";
+    "inline-flex items-center gap-3 rounded-[2px] px-8 py-[19px] font-sans text-[1.02rem] font-semibold transition-[transform,background-color] duration-150 ease-out hover:-translate-y-0.5";
+  // dark = CTA marsala padrão (único elemento colorido da página).
+  // accent = botão claro/creme, usado DENTRO do card de oferta (fundo marsala).
   const palette =
     variant === "dark"
-      ? "bg-ink text-paper hover:bg-accent-deep"
-      : "bg-on-accent text-accent-deep hover:bg-white";
+      ? "bg-wine text-on-wine hover:bg-wine-hover"
+      : "bg-fg text-wine hover:bg-white";
 
   return (
     <a

@@ -32,13 +32,13 @@ export function ConsentNotice() {
   return (
     <div className="fixed inset-x-0 bottom-[126px] z-50 sm:bottom-0">
       <div className="mx-auto max-w-[1060px] px-4 pb-3">
-        <div className="flex flex-col gap-3 rounded-[6px] border border-line bg-paper/95 px-4 py-3 shadow-[0_6px_24px_rgba(0,0,0,0.08)] backdrop-blur-sm sm:flex-row sm:items-center sm:justify-between">
-          <p className="text-[13px] leading-[1.5] text-ink-soft">
+        <div className="flex flex-col gap-3 rounded-[6px] border border-line bg-bg/95 px-4 py-3 shadow-[0_6px_24px_rgba(0,0,0,0.4)] backdrop-blur-sm sm:flex-row sm:items-center sm:justify-between">
+          <p className="text-[13px] leading-[1.5] text-fg-soft">
             Usamos cookies e o pixel da Meta pra medir e melhorar a divulgação. Ao
             continuar, você concorda.{" "}
             <Link
               href="/politica-de-privacidade"
-              className="underline underline-offset-2 hover:text-accent-deep"
+              className="underline underline-offset-2 hover:text-wine-ink"
             >
               Política de Privacidade
             </Link>
@@ -46,7 +46,7 @@ export function ConsentNotice() {
           </p>
           <button
             onClick={dismiss}
-            className="shrink-0 rounded-[2px] bg-ink px-5 py-2 text-[13px] font-semibold text-paper transition-colors hover:bg-accent-deep"
+            className="shrink-0 rounded-[2px] bg-wine px-5 py-2 text-[13px] font-semibold text-on-wine transition-colors hover:bg-wine-hover"
           >
             Entendi
           </button>

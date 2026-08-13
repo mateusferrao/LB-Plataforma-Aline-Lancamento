@@ -3,6 +3,7 @@ import { AnimatedNumber } from "@/components/AnimatedNumber";
 import { Container } from "@/components/Container";
 import { Countdown } from "@/components/Countdown";
 import { CtaButton } from "@/components/CtaButton";
+import { Mark } from "@/components/Mark";
 import { withBasePath } from "@/lib/basePath";
 
 export function Hero() {
@@ -12,20 +13,20 @@ export function Hero() {
         <div className="grid grid-cols-1 items-stretch gap-9 sm:gap-[54px] md:grid-cols-[1.12fr_0.88fr]">
           <div>
             <div className="flex items-center gap-3.5">
-              <span className="h-px w-[42px] bg-accent" aria-hidden="true" />
-              <span className="text-[12px] font-semibold tracking-[0.24em] text-accent uppercase">
+              <span className="h-px w-[42px] bg-wine-ink" aria-hidden="true" />
+              <span className="text-[12px] font-semibold tracking-[0.24em] text-wine-ink uppercase">
                 Aula ao vivo · 24 de setembro · 20h · online
               </span>
             </div>
 
-            <h1 className="mt-5 text-balance font-serif font-medium text-[2.35rem] leading-[1.12] tracking-[-0.012em] sm:text-[3.1rem] lg:text-[3.7rem]">
-              A anatomia que te dá segurança pra aplicar com resultado. Ao vivo, dia 24/09.
+            <h1 className="mt-5 text-balance font-serif font-medium text-[2.35rem] leading-[1.12] tracking-[-0.012em] text-fg sm:text-[3.1rem] lg:text-[3.7rem]">
+              A anatomia que te dá <Mark>segurança</Mark> na hora de aplicar.
             </h1>
 
-            <p className="mt-6 max-w-[560px] text-[1.2rem] leading-[1.6] text-ink-soft">
-              Dia 24 de setembro, ao vivo, a Dra. Aline Filgueiras traz da mesa de dissecção
-              o que atlas e curso gravado não mostram, pra você aplicar harmonização com a
-              segurança de quem já viu por dentro.
+            <p className="mt-6 max-w-[560px] text-[1.2rem] leading-[1.6] text-fg-soft">
+              No dia 24, ao vivo, a Dra. Aline mostra o que o atlas e o curso gravado não
+              mostram: a face por dentro, direto da mesa de dissecção. Você aplica com a
+              firmeza de quem já viu onde estão os riscos.
             </p>
 
             <Countdown className="mt-8 mb-8" />
@@ -33,7 +34,7 @@ export function Hero() {
             <CtaButton className="w-full justify-center sm:w-auto sm:justify-start">
               Quero minha vaga <span className="font-serif text-[1.16rem]">· R$77</span>
             </CtaButton>
-            <p className="mt-3.5 text-[13.5px] tracking-[0.02em] text-ink-faint">
+            <p className="mt-3.5 text-[13.5px] tracking-[0.02em] text-fg-faint">
               Vagas ao vivo limitadas · sem gravação · reembolso garantido em 7 dias
             </p>
 
@@ -44,18 +45,17 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="relative mx-auto aspect-[4/5] w-full max-w-[420px] overflow-hidden rounded-[4px] border border-line-soft bg-nude-2 md:aspect-auto md:h-full">
+          <div className="relative mx-auto aspect-[4/5] w-full max-w-[420px] overflow-hidden rounded-[4px] border border-line-soft bg-surface md:aspect-auto md:h-full">
+            {/* FOTO: aline-hero-marsala.jpg — blazer marsala, perfil/mão no queixo, COLORIDA.
+                (arquivo atual é stand-in; sobrescreva com a foto real de mesmo nome) */}
             <Image
-              src={withBasePath("/images/hero-aline.jpg")}
+              src={withBasePath("/images/aline-hero-marsala.jpg")}
               alt="Dra. Aline Filgueiras"
               fill
               priority
               sizes="(min-width: 768px) 420px, 90vw"
               className="object-cover"
             />
-            <span className="absolute bottom-3.5 left-4 rounded-[2px] bg-paper/95 px-[11px] py-[3px] font-serif text-[13px] italic text-accent-deep">
-              Dra. Aline Filgueiras
-            </span>
           </div>
         </div>
       </Container>
@@ -80,9 +80,9 @@ function Stat({
         target={target}
         suffix={suffix}
         formatThousands={formatThousands}
-        className="block font-serif text-[1.35rem] text-ink sm:text-[1.6rem]"
+        className="block font-serif text-[1.35rem] text-fg sm:text-[1.6rem]"
       />
-      <div className="text-[11px] tracking-[0.05em] text-ink-faint uppercase sm:text-[12px]">
+      <div className="text-[11px] tracking-[0.05em] text-fg-faint uppercase sm:text-[12px]">
         {l}
       </div>
     </div>

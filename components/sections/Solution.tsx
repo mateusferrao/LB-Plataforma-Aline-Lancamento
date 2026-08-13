@@ -1,11 +1,15 @@
+import Image from "next/image";
 import { Container } from "@/components/Container";
 import { CtaButton } from "@/components/CtaButton";
+import { Mark } from "@/components/Mark";
+import { Reveal } from "@/components/Reveal";
+import { withBasePath } from "@/lib/basePath";
 
 const SEE = [
-  "Onde mora o risco real: o que está a milímetros da agulha e nenhum atlas te mostrou.",
-  "Por que dois resultados idênticos na técnica ficam diferentes na cara.",
-  "O que a dissecção revela sobre os planos, e por que isso muda a sua mão.",
-  "Onde estão os limites de verdade, pra sua mão parar de hesitar na agulha.",
+  "Onde está o risco que os atlas não mostram, a milímetros da sua agulha.",
+  "Por que a mesma técnica dá resultados diferentes em cada rosto.",
+  "O que a dissecção revela sobre os planos e muda a sua mão.",
+  "Onde ficam os limites que fazem a sua mão parar de hesitar.",
 ];
 
 export function Solution() {
@@ -13,39 +17,57 @@ export function Solution() {
     <>
       <hr className="border-line" />
       <section className="py-16 sm:py-[92px]">
-        <Container narrow>
-          <span className="text-[12px] font-semibold tracking-[0.24em] text-accent uppercase">
-            Por dentro da face
-          </span>
-          <h2 className="mt-[18px] text-balance font-serif font-medium text-[1.95rem] leading-[1.12] sm:text-[2.6rem]">
-            Eu fui até a mesa de dissecção pra te trazer o que o superficial esconde.
-          </h2>
-          <p className="mt-[22px] max-w-[600px] text-[1.2rem] leading-[1.6] text-ink-soft">
-            Na aula ao vivo, a Aline abre de verdade o caminho por baixo da pele: os
-            planos, as estruturas e os limites que mudam a sua conduta. É o rigor do
-            curso internacional presencial, traduzido pra uma noite ao vivo.
-          </p>
+        <Container>
+          <div className="grid grid-cols-1 items-center gap-9 sm:gap-[54px] md:grid-cols-[0.82fr_1.18fr]">
+            <Reveal className="relative mx-auto aspect-[3/4] w-full max-w-[360px] overflow-hidden rounded-[4px] border border-line-soft bg-surface md:aspect-auto md:h-full md:self-stretch">
+              {/* FOTO: aline-solution-grafite-bw.jpg — blazer grafite, movimento/energia (P&B via grayscale).
+                  (arquivo atual é stand-in; sobrescreva com a foto real de mesmo nome) */}
+              <Image
+                src={withBasePath("/images/aline-solution-grafite-bw.jpg")}
+                alt="Dra. Aline Filgueiras"
+                fill
+                sizes="(min-width: 768px) 360px, 80vw"
+                className="object-cover grayscale"
+              />
+            </Reveal>
 
-          <p className="mt-9 text-[12px] font-semibold tracking-[0.2em] text-accent uppercase">
-            O que essa noite abre pra você
-          </p>
-          <ul className="mt-3 list-none p-0">
-            {SEE.map((item) => (
-              <li
-                key={item}
-                className="max-w-[660px] border-b border-line-soft py-[18px] text-[1.08rem]"
-              >
-                {item}
-              </li>
-            ))}
-            <li className="max-w-[660px] pt-[26px] font-serif text-[1.28rem] text-accent-deep italic">
-              No fim, em primeira mão: a nova fase que só quem está na sala vê nascer.
-            </li>
-          </ul>
+            <Reveal>
+              <span className="text-[12px] font-semibold tracking-[0.24em] text-wine-ink uppercase">
+                Por dentro da face
+              </span>
+              <h2 className="mt-[18px] text-balance font-serif font-medium text-[1.95rem] leading-[1.12] text-fg sm:text-[2.6rem]">
+                Fui até a mesa de dissecção pra te mostrar{" "}
+                <Mark>o que a pele esconde</Mark>.
+              </h2>
+              <p className="mt-[22px] max-w-[600px] text-[1.12rem] leading-[1.6] text-fg-soft">
+                Na aula ao vivo, a Aline mostra o que existe embaixo da pele. Os planos, as
+                estruturas e os limites que mudam a sua conduta na cadeira. É o mesmo rigor
+                do curso internacional que ela dá presencialmente, numa noite só.
+              </p>
 
-          <CtaButton className="mt-9 w-full justify-center sm:w-auto sm:justify-start">
-            Quero minha vaga <span className="font-serif text-[1.16rem]">· R$77</span>
-          </CtaButton>
+              <ul className="mt-7 list-none p-0">
+                {SEE.map((item) => (
+                  <li
+                    key={item}
+                    className="flex gap-3 border-b border-line-soft py-[16px] text-[1.02rem] leading-[1.5] text-fg"
+                  >
+                    <span className="text-wine-ink" aria-hidden="true">
+                      —
+                    </span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+
+              <p className="mt-7 border-l-2 border-wine pl-4 font-serif text-[1.28rem] leading-[1.4] text-fg italic">
+                No fim, quem está na sala vê a nova fase nascer em primeira mão.
+              </p>
+
+              <CtaButton className="mt-8 w-full justify-center sm:w-auto sm:justify-start">
+                Quero minha vaga <span className="font-serif text-[1.16rem]">· R$77</span>
+              </CtaButton>
+            </Reveal>
+          </div>
         </Container>
       </section>
     </>

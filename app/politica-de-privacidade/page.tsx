@@ -19,19 +19,19 @@ export default function PoliticaDePrivacidade() {
         <Container narrow>
           <Link
             href="/"
-            className="text-[13px] tracking-[0.02em] text-accent hover:text-accent-deep"
+            className="text-[13px] tracking-[0.02em] text-wine-ink hover:text-fg"
           >
             ← Voltar
           </Link>
 
-          <h1 className="mt-6 font-serif text-[2rem] leading-[1.15] sm:text-[2.6rem]">
+          <h1 className="mt-6 font-serif text-[2rem] leading-[1.15] text-fg sm:text-[2.6rem]">
             Política de Privacidade
           </h1>
-          <p className="mt-3 text-[13px] text-ink-faint">
+          <p className="mt-3 text-[13px] text-fg-faint">
             Atualizada em {UPDATED_AT}
           </p>
 
-          <div className="mt-8 flex flex-col gap-7 text-[1.02rem] leading-[1.65] text-ink-soft">
+          <div className="mt-8 flex flex-col gap-7 text-[1.02rem] leading-[1.65] text-fg-soft">
             <p>
               Esta política explica como {CONTROLLER} trata os seus dados nesta página
               (live.alinefilgueiras.com.br), referente à aula ao vivo &quot;Por Dentro da
@@ -40,7 +40,7 @@ export default function PoliticaDePrivacidade() {
             </p>
 
             <section>
-              <h2 className="font-serif text-[1.4rem] text-ink">1. Dados que coletamos</h2>
+              <h2 className="font-serif text-[1.4rem] text-fg">1. Dados que coletamos</h2>
               <p className="mt-2">
                 Ao navegar nesta página, coletamos dados de navegação por meio de cookies e
                 tecnologias semelhantes: páginas vistas, cliques, tipo de dispositivo,
@@ -57,7 +57,7 @@ export default function PoliticaDePrivacidade() {
             </section>
 
             <section>
-              <h2 className="font-serif text-[1.4rem] text-ink">
+              <h2 className="font-serif text-[1.4rem] text-fg">
                 2. Cookies e ferramentas de medição
               </h2>
               <p className="mt-2">
@@ -70,7 +70,7 @@ export default function PoliticaDePrivacidade() {
             </section>
 
             <section>
-              <h2 className="font-serif text-[1.4rem] text-ink">
+              <h2 className="font-serif text-[1.4rem] text-fg">
                 3. Para que usamos e base legal
               </h2>
               <p className="mt-2">
@@ -81,7 +81,7 @@ export default function PoliticaDePrivacidade() {
             </section>
 
             <section>
-              <h2 className="font-serif text-[1.4rem] text-ink">
+              <h2 className="font-serif text-[1.4rem] text-fg">
                 4. Com quem compartilhamos
               </h2>
               <p className="mt-2">
@@ -93,7 +93,7 @@ export default function PoliticaDePrivacidade() {
             </section>
 
             <section>
-              <h2 className="font-serif text-[1.4rem] text-ink">5. Os seus direitos</h2>
+              <h2 className="font-serif text-[1.4rem] text-fg">5. Os seus direitos</h2>
               <p className="mt-2">
                 Você pode solicitar acesso, correção, exclusão, portabilidade ou oposição ao
                 tratamento dos seus dados, além de revogar o consentimento. É só entrar em
@@ -102,7 +102,7 @@ export default function PoliticaDePrivacidade() {
             </section>
 
             <section>
-              <h2 className="font-serif text-[1.4rem] text-ink">6. Contato</h2>
+              <h2 className="font-serif text-[1.4rem] text-fg">6. Contato</h2>
               <p className="mt-2">
                 Para qualquer questão sobre os seus dados, fale com {CONTROLLER} pelo nosso
                 WhatsApp de atendimento.

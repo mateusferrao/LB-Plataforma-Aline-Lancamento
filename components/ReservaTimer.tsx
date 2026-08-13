@@ -54,8 +54,8 @@ export function ReservaTimer({
   const minutos = restanteMs === null ? 0 : Math.floor(restanteMs / 60000);
   const segundos = restanteMs === null ? 0 : Math.floor((restanteMs % 60000) / 1000);
 
-  const labelCls = tone === "onAccent" ? "opacity-90" : "text-ink-faint";
-  const destaqueCls = tone === "onAccent" ? "text-on-accent" : "text-accent-deep";
+  const labelCls = tone === "onAccent" ? "opacity-90" : "text-fg-faint";
+  const destaqueCls = tone === "onAccent" ? "text-on-wine" : "text-wine-ink";
 
   return (
     <div

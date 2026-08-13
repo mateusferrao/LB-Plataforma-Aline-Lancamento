@@ -1,56 +1,79 @@
 @import "tailwindcss";
 
+/*
+  Design system — "Por Dentro da Face" (redesign dark 2026).
+  Paleta: marsala profundo + preto quente + branco/creme.
+  Tokens role-based (bg/fg/wine), dark-first. Cor de acento = marsala.
+*/
 :root {
-  color-scheme: light;
+  color-scheme: dark;
 
-  --paper: #f0e7d7;
-  --nude: #e7d9c4;
-  --nude-2: #ddccb2;
-  --nude-3: #d3c0a2;
-  --card: #fbf7ef;
+  /* Superfícies — preto quente (levemente amarronzado, casa com as fotos de estúdio) */
+  --bg: #0c0b0a;
+  --bg-2: #141110;
+  --bg-3: #1b1613;
+  --surface: #221b17;
 
-  --ink: #2e241b;
-  --ink-soft: #6a5b4d;
-  --ink-faint: #857460;
+  /* Texto */
+  --fg: #f5f1ea;
+  --fg-soft: #a69f97;
+  --fg-faint: #726b63;
 
-  --accent: #8a6a66;
-  --accent-deep: #6e4f4b;
-  --on-accent: #fbf6ef;
+  /* Marsala (marca / CTA) — hex oficial do cliente */
+  --wine: #7e1e1c;
+  --wine-hover: #99302c;
+  --wine-ink: #cf8079; /* marsala legível sobre preto — eyebrows, fios, marcadores */
+  --on-wine: #ffffff;
 
-  --line: rgba(46, 36, 27, 0.16);
-  --line-soft: rgba(46, 36, 27, 0.09);
+  /* Linhas */
+  --line: rgba(245, 241, 234, 0.12);
+  --line-soft: rgba(245, 241, 234, 0.07);
 }
 
 @theme inline {
-  --color-paper: var(--paper);
-  --color-nude: var(--nude);
-  --color-nude-2: var(--nude-2);
-  --color-nude-3: var(--nude-3);
-  --color-card: var(--card);
-  --color-ink: var(--ink);
-  --color-ink-soft: var(--ink-soft);
-  --color-ink-faint: var(--ink-faint);
-  --color-accent: var(--accent);
-  --color-accent-deep: var(--accent-deep);
-  --color-on-accent: var(--on-accent);
+  --color-bg: var(--bg);
+  --color-bg-2: var(--bg-2);
+  --color-bg-3: var(--bg-3);
+  --color-surface: var(--surface);
+  --color-fg: var(--fg);
+  --color-fg-soft: var(--fg-soft);
+  --color-fg-faint: var(--fg-faint);
+  --color-wine: var(--wine);
+  --color-wine-hover: var(--wine-hover);
+  --color-wine-ink: var(--wine-ink);
+  --color-on-wine: var(--on-wine);
   --color-line: var(--line);
   --color-line-soft: var(--line-soft);
   --font-serif: var(--font-cormorant);
-  --font-sans: var(--font-roboto);
+  --font-sans: var(--font-poppins);
 }
 
 html {
-  color-scheme: light;
+  color-scheme: dark;
 }
 
 body {
-  background: var(--paper);
-  color: var(--ink);
+  background: var(--bg);
+  color: var(--fg-soft);
 }
 
 ::selection {
-  background: var(--accent);
-  color: var(--on-accent);
+  background: var(--wine);
+  color: var(--on-wine);
+}
+
+/* Reveal on scroll — usado por <Reveal>. Estado inicial escondido + transição suave. */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity 0.6s ease-out,
+    transform 0.6s ease-out;
+  will-change: opacity, transform;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -59,5 +82,10 @@ body {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+  /* Sem animação de entrada: conteúdo já visível */
+  .reveal {
+    opacity: 1;
+    transform: none;
   }
 }

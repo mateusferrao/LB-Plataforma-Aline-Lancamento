@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Roboto } from "next/font/google";
+import { Cormorant_Garamond, Poppins } from "next/font/google";
 import "./globals.css";
 import { MetaPixel } from "@/components/MetaPixel";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
@@ -14,8 +14,8 @@ const cormorant = Cormorant_Garamond({
   display: "swap",
 });
 
-const roboto = Roboto({
-  variable: "--font-roboto",
+const poppins = Poppins({
+  variable: "--font-poppins",
   subsets: ["latin"],
   weight: ["400", "500", "600"],
   display: "swap",
@@ -39,10 +39,14 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="pt-BR"
-      className={`${cormorant.variable} ${roboto.variable}`}
-      style={{ colorScheme: "light" }}
+      className={`${cormorant.variable} ${poppins.variable}`}
+      style={{ colorScheme: "dark" }}
     >
-      <body className="min-h-screen bg-paper font-sans text-ink antialiased">
+      <body className="min-h-screen bg-bg font-sans text-fg antialiased">
+        {/* Fallback sem JS: nunca esconder conteúdo se o reveal não puder rodar */}
+        <noscript>
+          <style>{`.reveal{opacity:1 !important;transform:none !important}`}</style>
+        </noscript>
         <MetaPixel />
         <GoogleAnalytics />
         <TictoEcho />
