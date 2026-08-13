@@ -32,14 +32,17 @@ export function Authority() {
             <span className="text-[12px] font-semibold tracking-[0.24em] text-wine-ink uppercase">
               Quem conduz
             </span>
-            <h2 className="mt-3.5 mb-4 font-serif font-medium text-[2.1rem] text-fg">Dra. Aline Filgueiras</h2>
+            <h2 className="mt-3.5 mb-4 font-serif font-semibold text-[2.1rem] text-fg">Dra. Aline Filgueiras</h2>
             <p className="max-w-[520px] text-fg-soft">
               Antes de ensinar, a Aline sentiu a mesma insegurança que você sente: aplicar
-              sem enxergar o que está embaixo da pele. Foi atrás disso a fundo. Fez uma
-              temporada de dissecção nos Estados Unidos e hoje dá cursos internacionais de
-              anatomia na Europa. São onze anos resolvendo os casos mais complexos da
-              estética, a Filgueiras Academy que ela fundou e a pós em Estética Avançada e
-              Integrativa, com selo MEC. Atende em Belo Horizonte e Praia Grande.
+              sem enxergar o que está embaixo da pele. A virada veio em 2018, no primeiro
+              curso de dissecção: ao ver a face por dentro, na profundidade real, ela ganhou
+              uma segurança que nenhum atlas tinha dado — e foi isso que destravou a carreira
+              dela. Foi atrás de mais: uma temporada de dissecção nos Estados Unidos e, hoje,
+              cursos internacionais de anatomia na Europa. São onze anos resolvendo os casos
+              mais complexos da estética, a Filgueiras Academy que ela fundou e a pós em
+              Estética Avançada e Integrativa, com selo MEC. Atende em Belo Horizonte e Praia
+              Grande.
             </p>
 
             <div className="mt-7 grid grid-cols-2 gap-px overflow-hidden rounded-[4px] border border-line bg-line">

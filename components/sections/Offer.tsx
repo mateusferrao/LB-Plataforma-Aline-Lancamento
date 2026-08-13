@@ -28,7 +28,7 @@ export function Offer() {
           <span className="text-[12px] font-semibold tracking-[0.24em] text-wine-ink uppercase">
             Seu ingresso
           </span>
-          <h2 className="mt-[18px] font-serif font-medium text-[1.95rem] text-fg sm:text-[2.6rem]">
+          <h2 className="mt-[18px] font-serif font-semibold text-[1.95rem] text-fg sm:text-[2.6rem]">
             É uma noite ao vivo, e <Mark>não vai ter repeteco</Mark>.
           </h2>
           <p className="mt-[18px] max-w-[560px] text-[1.12rem] leading-[1.55] text-fg-soft">

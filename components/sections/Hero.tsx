@@ -19,14 +19,14 @@ export function Hero() {
               </span>
             </div>
 
-            <h1 className="mt-5 text-balance font-serif font-medium text-[2.35rem] leading-[1.12] tracking-[-0.012em] text-fg sm:text-[3.1rem] lg:text-[3.7rem]">
-              A anatomia que te dá <Mark>segurança</Mark> na hora de aplicar.
+            <h1 className="mt-5 text-balance font-serif font-semibold text-[2.35rem] leading-[1.12] tracking-[-0.012em] text-fg sm:text-[3.1rem] lg:text-[3.7rem]">
+              O que a <Mark>dissecção</Mark> revela, o atlas nunca vai te mostrar.
             </h1>
 
             <p className="mt-6 max-w-[560px] text-[1.2rem] leading-[1.6] text-fg-soft">
-              No dia 24, ao vivo, a Dra. Aline mostra o que o atlas e o curso gravado não
-              mostram: a face por dentro, direto da mesa de dissecção. Você aplica com a
-              firmeza de quem já viu onde estão os riscos.
+              No dia 24, ao vivo, a Dra. Aline leva você para dentro da face — direto da
+              mesa de dissecção. Você passa a aplicar com a firmeza de quem já viu, na
+              profundidade real, onde estão os riscos.
             </p>
 
             <Countdown className="mt-8 mb-8" />

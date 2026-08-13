@@ -1,21 +1,21 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Poppins } from "next/font/google";
+import { Fraunces, Inter } from "next/font/google";
 import "./globals.css";
 import { MetaPixel } from "@/components/MetaPixel";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 import { TictoEcho } from "@/components/TictoEcho";
 import { ConsentNotice } from "@/components/ConsentNotice";
 
-const cormorant = Cormorant_Garamond({
-  variable: "--font-cormorant",
+const fraunces = Fraunces({
+  variable: "--font-fraunces",
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
+  weight: ["400", "500", "600", "700"],
   style: ["normal", "italic"],
   display: "swap",
 });
 
-const poppins = Poppins({
-  variable: "--font-poppins",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
   weight: ["400", "500", "600"],
   display: "swap",
@@ -39,7 +39,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="pt-BR"
-      className={`${cormorant.variable} ${poppins.variable}`}
+      className={`${fraunces.variable} ${inter.variable}`}
       style={{ colorScheme: "dark" }}
     >
       <body className="min-h-screen bg-bg font-sans text-fg antialiased">

@@ -16,7 +16,7 @@ export function Problem() {
           <span className="text-[12px] font-semibold tracking-[0.24em] text-wine-ink uppercase">
             O ponto cego
           </span>
-          <h2 className="mt-[18px] text-balance font-serif font-medium text-[1.95rem] leading-[1.12] text-fg sm:text-[2.6rem]">
+          <h2 className="mt-[18px] text-balance font-serif font-semibold text-[1.95rem] leading-[1.12] text-fg sm:text-[2.6rem]">
             Você estudou em atlas, slide e boneco. O rosto na sua cadeira{" "}
             <Mark>não é nenhum dos três</Mark>.
           </h2>

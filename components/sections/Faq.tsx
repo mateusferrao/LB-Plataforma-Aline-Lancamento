@@ -46,7 +46,7 @@ export function Faq() {
           <span className="text-[12px] font-semibold tracking-[0.24em] text-wine-ink uppercase">
             Dúvidas
           </span>
-          <h2 className="mt-[18px] font-serif font-medium text-[1.95rem] text-fg sm:text-[2.6rem]">
+          <h2 className="mt-[18px] font-serif font-semibold text-[1.95rem] text-fg sm:text-[2.6rem]">
             Perguntas honestas.
           </h2>
         </Reveal>

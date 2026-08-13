@@ -27,7 +27,7 @@ export function FinalCta() {
         <span className="text-[12px] font-semibold tracking-[0.24em] text-wine-ink uppercase">
           24 de setembro · 20h
         </span>
-        <h2 className="mt-[18px] mb-6 max-w-[560px] text-balance font-serif font-medium text-[1.95rem] text-fg sm:text-[2.6rem]">
+        <h2 className="mt-[18px] mb-6 max-w-[560px] text-balance font-serif font-semibold text-[1.95rem] text-fg sm:text-[2.6rem]">
           Nesse dia, a mesa de dissecção <Mark>vira a sua tela</Mark>.
         </h2>
 

@@ -35,7 +35,7 @@ export function Solution() {
               <span className="text-[12px] font-semibold tracking-[0.24em] text-wine-ink uppercase">
                 Por dentro da face
               </span>
-              <h2 className="mt-[18px] text-balance font-serif font-medium text-[1.95rem] leading-[1.12] text-fg sm:text-[2.6rem]">
+              <h2 className="mt-[18px] text-balance font-serif font-semibold text-[1.95rem] leading-[1.12] text-fg sm:text-[2.6rem]">
                 Fui até a mesa de dissecção pra te mostrar{" "}
                 <Mark>o que a pele esconde</Mark>.
               </h2>
