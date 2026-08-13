@@ -71,7 +71,7 @@ export function ReservaTimer({
       ) : (
         <>
           <span className={`text-[12px] tracking-[0.02em] ${labelCls}`}>
-            Sua vaga está reservada por
+            Vaga reservada por
           </span>
           <span
             className={`font-serif text-[1.15rem] leading-none tabular-nums ${destaqueCls}`}
