@@ -12,8 +12,16 @@ const PROOFS = [
     alt: "Aluna: fiz cursos presenciais e nunca tinha feito uma boca tão linda. Assinei a plataforma e a boca da paciente ficou perfeita.",
   },
   {
+    src: "/images/depoimento-13.jpg",
+    alt: "Aluna: fiz seu curso em janeiro, comecei a atender com harmonização em março e em dois meses faturei R$20.000 de lucro numa cidade de 25 mil habitantes.",
+  },
+  {
     src: "/images/depoimento-2.jpg",
     alt: "Aluna: amei as 3 aulas da consulta, super esclarecedora e de fácil entendimento para colocar em prática.",
+  },
+  {
+    src: "/images/depoimento-11.jpg",
+    alt: "Aluna: realizar meu sonho de fazer um curso de harmonização facial foi incrível. Foi, sem dúvida, o melhor que já fiz. Agora estou pronta para transformar vidas.",
   },
   {
     src: "/images/depoimento-9.jpg",
@@ -24,12 +32,20 @@ const PROOFS = [
     alt: "Aluna: que virada de chave essas aulas, amei demais, amanhã mesmo vou colocar em prática.",
   },
   {
+    src: "/images/depoimento-12.jpg",
+    alt: "Aluna: saio desse curso com a certeza de estar aprendendo com a pessoa certa, ela nos torna profissionais mais humanos e seguros.",
+  },
+  {
     src: "/images/depoimento-6.jpg",
     alt: "Aluna: depois que eu mudei o posicionamento, até elogios eu recebo muito mais.",
   },
   {
     src: "/images/depoimento-3.jpg",
     alt: "Aluna: o melhor curso que já investi, você entregou muito além.",
+  },
+  {
+    src: "/images/depoimento-10.jpg",
+    alt: "Aluna: isso não é um curso, é uma virada de chave nas nossas vidas. Obrigada por projetar tudo com tanto zelo.",
   },
   {
     src: "/images/depoimento-8.jpg",
