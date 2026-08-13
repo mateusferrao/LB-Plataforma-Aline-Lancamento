@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Container } from "@/components/Container";
-import { SiteHeader } from "@/components/SiteHeader";
 import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
@@ -16,7 +15,6 @@ const UPDATED_AT = "agosto de 2026";
 export default function PoliticaDePrivacidade() {
   return (
     <>
-      <SiteHeader />
       <main className="py-14 sm:py-20">
         <Container narrow>
           <Link

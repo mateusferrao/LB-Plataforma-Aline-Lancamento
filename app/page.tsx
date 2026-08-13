@@ -1,4 +1,3 @@
-import { SiteHeader } from "@/components/SiteHeader";
 import { Hero } from "@/components/sections/Hero";
 import { Problem } from "@/components/sections/Problem";
 import { Solution } from "@/components/sections/Solution";
@@ -13,7 +12,6 @@ import { StickyCta } from "@/components/StickyCta";
 export default function Home() {
   return (
     <>
-      <SiteHeader />
       <main>
         <Hero />
         <Problem />
