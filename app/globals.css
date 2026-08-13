@@ -62,6 +62,20 @@ body {
   color: var(--on-wine);
 }
 
+/* Destaque de título (<Mark>): barra sólida grossa no marsala do botão. Feita
+   com background-gradient (não text-decoration) para não abrir falhas ao redor
+   do "ç"/descidas, em unidades em para escalar com o tamanho do título e com
+   box-decoration-break para funcionar quando a frase quebra de linha. */
+.mark-underline {
+  background-image: linear-gradient(var(--wine), var(--wine));
+  background-repeat: no-repeat;
+  background-size: 100% 0.18em;
+  background-position: left 100%;
+  padding-bottom: 0.02em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
 /* Reveal on scroll — usado por <Reveal>. Estado inicial escondido + transição suave. */
 .reveal {
   opacity: 0;
