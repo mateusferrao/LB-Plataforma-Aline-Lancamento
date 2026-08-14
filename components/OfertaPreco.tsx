@@ -24,7 +24,7 @@ export function OfertaPreco() {
   return (
     <>
       <div className="text-[12px] tracking-[0.16em] uppercase opacity-90">
-        {montado && lote ? `Lote ${lote.n} de ${TOTAL_LOTES} · ao vivo` : "Ao vivo"}
+        {montado && lote ? `Lote ${lote.n} · ao vivo` : "Ao vivo"}
       </div>
       <div className="my-1.5 font-serif text-[3.5rem] leading-none sm:text-[3.7rem]">
         {montado && lote ? lote.priceLabel : " "}
