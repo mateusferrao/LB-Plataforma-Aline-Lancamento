@@ -20,13 +20,13 @@ export function Hero() {
             </div>
 
             <h1 className="mt-5 text-balance font-serif font-semibold text-[2.35rem] leading-[1.12] tracking-[-0.012em] text-fg sm:text-[3.1rem] lg:text-[3.7rem]">
-              O que a <Mark>dissecção</Mark> revela, o atlas nunca vai te mostrar.
+              O que a dissecção revela, o atlas <Mark>nunca</Mark> vai te mostrar.
             </h1>
 
             <p className="mt-6 max-w-[560px] text-[1.2rem] leading-[1.6] text-fg-soft">
-              No dia 24, ao vivo, a Dra. Aline leva você para dentro da face — direto da
-              mesa de dissecção. Você passa a aplicar com a firmeza de quem já viu, na
-              profundidade real, onde estão os riscos.
+              No dia 24, ao vivo, a Dra. Aline mostra a face por dentro, direto da mesa
+              de dissecção. Você sai da aula aplicando com a firmeza de quem já viu onde
+              ficam os riscos.
             </p>
 
             <Countdown className="mt-8 mb-8" />

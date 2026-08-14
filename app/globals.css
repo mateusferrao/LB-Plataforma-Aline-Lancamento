@@ -62,16 +62,17 @@ body {
   color: var(--on-wine);
 }
 
-/* Destaque de título (<Mark>): barra sólida grossa no marsala do botão. Feita
-   com background-gradient (não text-decoration) para não abrir falhas ao redor
-   do "ç"/descidas, em unidades em para escalar com o tamanho do título e com
-   box-decoration-break para funcionar quando a frase quebra de linha. */
+/* Destaque de título (<Mark>): traço "à mão" no marsala do botão. É um SVG de
+   linha levemente irregular (não text-decoration), então não abre falhas ao redor
+   do "ç"/descidas; em unidades em para escalar com o tamanho do título e com
+   box-decoration-break para funcionar quando a frase quebra de linha. O SVG estica
+   na largura (preserveAspectRatio=none), acompanhando trechos curtos ou longos. */
 .mark-underline {
-  background-image: linear-gradient(var(--wine), var(--wine));
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjYiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxwYXRoIGQ9Ik00IDE0IEMgNDYgMTAgODIgMTcgMTIwIDEzIEMgMTUyIDEwIDE4MiAxNiAxOTYgMTMiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzdlMWUxYyIgc3Ryb2tlLXdpZHRoPSI4IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz48L3N2Zz4=");
   background-repeat: no-repeat;
-  background-size: 100% 0.18em;
-  background-position: left 100%;
-  padding-bottom: 0.02em;
+  background-position: left bottom;
+  background-size: 100% 0.5em;
+  padding-bottom: 0.1em;
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
 }
