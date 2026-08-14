@@ -82,8 +82,7 @@ export function Offer() {
             <div className="mt-6 flex items-start gap-2.5 text-left text-[0.96rem] opacity-90">
               <span className="font-serif text-[1.2rem] italic leading-none">✓</span>
               <span>
-                Risco zero: não gostou? Você tem 7 dias pra pedir reembolso do seu ingresso,
-                sem perguntas.
+                Risco zero: você tem 7 dias pra pedir reembolso, sem perguntas.
               </span>
             </div>
             <div className="mt-3 text-left text-[0.92rem] opacity-80">
