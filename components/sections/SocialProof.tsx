@@ -92,6 +92,10 @@ export function SocialProof() {
                   alt={i < PROOFS.length ? p.alt : ""}
                   width={460}
                   height={620}
+                  // Marquee corre em loop contínuo: com lazy loading os prints
+                  // só baixavam ao entrar na viewport e "apareciam do nada".
+                  // eager faz baixarem no carregamento, deixando o loop fluido.
+                  loading="eager"
                   className="max-h-full w-auto max-w-full rounded-[5px] object-contain"
                 />
               </div>
