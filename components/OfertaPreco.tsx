@@ -1,6 +1,6 @@
 "use client";
 
-import { TOTAL_LOTES, formatDiaMes } from "@/lib/lotes";
+import { TOTAL_LOTES, LOTE_TETO } from "@/lib/lotes";
 import { useLoteAtivo } from "@/lib/useLoteAtivo";
 
 // Bloco de preço do card de oferta: rótulo do lote + preço grande + próximo preço.
@@ -32,7 +32,7 @@ export function OfertaPreco() {
       <div className="min-h-[1.2em] text-[0.95rem] opacity-90">
         {montado && lote
           ? proximo
-            ? `Sobe pra ${proximo.priceLabel} em ${formatDiaMes(proximo.startsAt)}`
+            ? `Sobe até ${LOTE_TETO.priceLabel}`
             : "Último lote"
           : ""}
       </div>

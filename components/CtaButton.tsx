@@ -68,11 +68,8 @@ export function CtaButton({
       data-checkout
     >
       {children}
-      {showPrice && (
-        // Largura mínima reservada pra não dar "pop-in" antes de montar.
-        <span className="inline-block min-w-[3.6em] font-serif text-[1.16rem]">
-          {montado && lote ? `· ${lote.priceLabel}` : " "}
-        </span>
+      {showPrice && montado && lote && (
+        <span className="font-serif text-[1.16rem]">· {lote.priceLabel}</span>
       )}
     </a>
   );

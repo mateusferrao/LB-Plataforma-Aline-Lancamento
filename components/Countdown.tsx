@@ -33,13 +33,12 @@ function legenda(lote: Lote | null, proximo: Lote | null): string {
   return "O preço sobe em";
 }
 
-// Subtexto padronizado com o próximo preço e o teto.
+// Subtexto: preço atual + teto. No último lote (teto) a mensagem vira escassez
+// de tempo (encerramento), não mais de preço.
 function subtexto(lote: Lote | null, proximo: Lote | null): string {
   if (!lote) return "";
   if (!proximo) return "Último lote. As inscrições encerram no início da aula.";
-  const teto =
-    proximo.price < LOTE_TETO.price ? `, e sobe até ${LOTE_TETO.priceLabel}` : "";
-  return `${lote.priceLabel} agora. No próximo lote vira ${proximo.priceLabel}${teto}.`;
+  return `${lote.priceLabel} agora. Sobe até ${LOTE_TETO.priceLabel}.`;
 }
 
 export function Countdown({
@@ -65,6 +64,8 @@ export function Countdown({
   }, [lote]);
 
   const alignCls = align === "center" ? "items-center text-center" : "items-start";
+  // Menos de 24h restantes (days === 0): dígitos no vermelho do botão pra reforçar urgência.
+  const urgente = remaining !== null && remaining.days === 0;
 
   // Encerrado (montou e sem lote): sem tiles, só o aviso.
   if (montado && !lote) {
@@ -92,7 +93,11 @@ export function Countdown({
             key={key}
             className="min-w-[74px] rounded-[4px] border border-line-soft bg-bg-3 px-1 py-3 text-center"
           >
-            <div className="font-serif text-[2rem] leading-none tabular-nums text-fg">
+            <div
+              className={`font-serif text-[2rem] leading-none tabular-nums transition-colors ${
+                urgente ? "text-wine" : "text-fg"
+              }`}
+            >
               {remaining ? two(remaining[key]) : "--"}
             </div>
             <div className="mt-2 text-[10.5px] tracking-[0.16em] text-fg-faint uppercase">
