@@ -20,7 +20,7 @@ export function Authority() {
             {/* FOTO: aline-authority-marsala.jpg — blazer marsala, sentada, COLORIDA.
                 (arquivo atual é stand-in; sobrescreva com a foto real de mesmo nome) */}
             <Image
-              src={withBasePath("/images/aline-authority-marsala.jpg")}
+              src={withBasePath("/images/aline-authority-marsala-v2.jpg")}
               alt="Dra. Aline Filgueiras"
               fill
               sizes="(min-width: 768px) 320px, 70vw"

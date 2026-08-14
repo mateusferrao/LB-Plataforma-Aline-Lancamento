@@ -49,7 +49,7 @@ export function Hero() {
             {/* FOTO: aline-hero-marsala.jpg — blazer marsala, perfil/mão no queixo, COLORIDA.
                 (arquivo atual é stand-in; sobrescreva com a foto real de mesmo nome) */}
             <Image
-              src={withBasePath("/images/aline-hero-marsala.jpg")}
+              src={withBasePath("/images/aline-hero-marsala-v2.jpg")}
               alt="Dra. Aline Filgueiras"
               fill
               priority
