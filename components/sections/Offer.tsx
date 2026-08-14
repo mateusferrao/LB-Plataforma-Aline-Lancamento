@@ -86,7 +86,7 @@ export function Offer() {
               </span>
             </div>
             <div className="mt-3 text-left text-[0.92rem] opacity-80">
-              A sala ao vivo tem lugar limitado. É uma vez só, sem replay.
+              A sala tem lugar limitado. É uma vez só, sem replay.
             </div>
           </Reveal>
         </div>
