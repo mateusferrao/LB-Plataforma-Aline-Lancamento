@@ -1,7 +1,3 @@
-"use client";
-
-import { useEffect, useState } from "react";
-
 // ============================================================================
 //  LOTES DO EVENTO — FONTE ÚNICA DA VERDADE
 //  Para mudar datas, preços ou links do checkout, edite SÓ o array LOTES abaixo.
@@ -66,6 +62,9 @@ export const LIVE_DATE_ISO = "2026-09-24T20:00:00-03:00";
 // Total de lotes, para o rótulo "Lote X de N".
 export const TOTAL_LOTES = LOTES.length;
 
+// Último lote (preço-teto). Usado no "sobe até R$97".
+export const LOTE_TETO = LOTES[LOTES.length - 1];
+
 // ---------------------------------------------------------------------------
 //  Resolvers puros (testáveis, sem estado)
 // ---------------------------------------------------------------------------
@@ -99,13 +98,10 @@ export function formatDiaMes(iso: string): string {
   return `${dia}/${mes}`;
 }
 
-// ---------------------------------------------------------------------------
-//  Hook client — resolve o lote ativo em tempo real (vira sozinho na data)
-// ---------------------------------------------------------------------------
-
-// Override de QA: ?preview=<ISO> força um "agora" fixo (ex.: ?preview=2026-08-29T10:00:00-03:00)
-// para pré-visualizar qualquer lote/estado sem mexer no relógio. Inócuo em produção.
-function agoraComPreview(): number {
+// "Agora" em ms, com override de QA: ?preview=<ISO> força um instante fixo
+// (ex.: ?preview=2026-08-29T10:00:00-03:00) para pré-visualizar qualquer lote/estado
+// sem mexer no relógio. No servidor (sem window) e sem o parâmetro, é só Date.now().
+export function agora(): number {
   if (typeof window !== "undefined") {
     const p = new URLSearchParams(window.location.search).get("preview");
     if (p) {
@@ -116,34 +112,5 @@ function agoraComPreview(): number {
   return Date.now();
 }
 
-export type LoteState = {
-  lote: Lote | null;
-  proximo: Lote | null;
-  montado: boolean;
-};
-
-/**
- * Retorna o lote ativo (e o próximo) resolvido no cliente, atualizando a cada
- * segundo. `montado` fica false até a primeira montagem — nesse meio-tempo os
- * componentes mostram placeholders neutros (sem piscar preço errado nem quebrar
- * a hidratação). A virada de lote acontece automaticamente na data, sem deploy.
- */
-export function useLoteAtivo(): LoteState {
-  const [state, setState] = useState<LoteState>({
-    lote: null,
-    proximo: null,
-    montado: false,
-  });
-
-  useEffect(() => {
-    const tick = () => {
-      const lote = loteAtivoEm(agoraComPreview());
-      setState({ lote, proximo: proximoLoteDe(lote), montado: true });
-    };
-    tick();
-    const id = setInterval(tick, 1000);
-    return () => clearInterval(id);
-  }, []);
-
-  return state;
-}
+// O hook client useLoteAtivo() vive em lib/useLoteAtivo.ts (este arquivo é puro,
+// para poder ser importado também por Server Components como o MetaPixel).

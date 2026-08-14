@@ -4,6 +4,7 @@ import { Container } from "@/components/Container";
 import { Countdown } from "@/components/Countdown";
 import { CtaButton } from "@/components/CtaButton";
 import { Mark } from "@/components/Mark";
+import { UrgenciaFina } from "@/components/UrgenciaFina";
 import { withBasePath } from "@/lib/basePath";
 
 export function Hero() {
@@ -31,12 +32,10 @@ export function Hero() {
 
             <Countdown className="mt-8 mb-8" />
 
-            <CtaButton className="w-full justify-center sm:w-auto sm:justify-start">
-              Quero minha vaga <span className="font-serif text-[1.16rem]">· R$77</span>
+            <CtaButton showPrice className="w-full justify-center sm:w-auto sm:justify-start">
+              Quero minha vaga
             </CtaButton>
-            <p className="mt-3.5 text-[13.5px] tracking-[0.02em] text-fg-faint">
-              Vagas ao vivo limitadas · sem gravação · reembolso garantido em 7 dias
-            </p>
+            <UrgenciaFina className="mt-3.5 text-[13.5px] tracking-[0.02em] text-fg-faint" />
 
             <div className="mt-10 grid grid-cols-3 gap-4 border-t border-line pt-7 sm:gap-7">
               <Stat target={11} suffix="+" l="anos de clínica" />

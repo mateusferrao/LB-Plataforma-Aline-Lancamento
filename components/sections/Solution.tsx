@@ -49,11 +49,12 @@ export function Solution() {
                 {SEE.map((item) => (
                   <li
                     key={item}
-                    className="flex gap-3 border-b border-line-soft py-[16px] text-[1.02rem] leading-[1.5] text-fg"
+                    className="flex items-baseline gap-3 border-b border-line-soft py-[16px] text-[1.02rem] leading-[1.5] text-fg"
                   >
-                    <span className="text-wine-ink" aria-hidden="true">
-                      —
-                    </span>
+                    <span
+                      className="mt-[9px] h-1.5 w-1.5 shrink-0 rounded-[1px] bg-wine-ink"
+                      aria-hidden="true"
+                    />
                     {item}
                   </li>
                 ))}
@@ -63,8 +64,8 @@ export function Solution() {
                 No fim, quem está na sala vê a nova fase nascer em primeira mão.
               </p>
 
-              <CtaButton className="mt-8 w-full justify-center sm:w-auto sm:justify-start">
-                Quero minha vaga <span className="font-serif text-[1.16rem]">· R$77</span>
+              <CtaButton showPrice className="mt-8 w-full justify-center sm:w-auto sm:justify-start">
+                Quero minha vaga
               </CtaButton>
             </Reveal>
           </div>

@@ -38,8 +38,8 @@ export function StickyCta() {
           <VagasBadge>Poucas vagas</VagasBadge>
           <ReservaTimer />
         </div>
-        <CtaButton className="w-full justify-center">
-          Quero minha vaga <span className="font-serif text-[1.16rem]">· R$77</span>
+        <CtaButton showPrice className="w-full justify-center">
+          Quero minha vaga
         </CtaButton>
       </div>
 
@@ -57,8 +57,8 @@ export function StickyCta() {
             <VagasBadge plain>Poucas vagas</VagasBadge>
             <ReservaTimer />
           </div>
-          <CtaButton className="shrink-0">
-            Quero minha vaga <span className="font-serif text-[1.16rem]">· R$77</span>
+          <CtaButton showPrice className="shrink-0">
+            Quero minha vaga
           </CtaButton>
         </div>
       </div>

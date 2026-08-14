@@ -1,8 +1,8 @@
 import { Container } from "@/components/Container";
 import { CtaButton } from "@/components/CtaButton";
 import { Mark } from "@/components/Mark";
+import { OfertaPreco } from "@/components/OfertaPreco";
 import { Reveal } from "@/components/Reveal";
-import { ReservaTimer } from "@/components/ReservaTimer";
 import { VagasBadge } from "@/components/VagasBadge";
 
 const INCLUDES = [
@@ -47,7 +47,10 @@ export function Offer() {
                   i < INCLUDES.length - 1 ? "border-b border-line" : ""
                 }`}
               >
-                <span className="pt-0.5 text-wine-ink">—</span>
+                <span
+                  className="mt-[11px] h-1.5 w-1.5 shrink-0 rounded-[1px] bg-wine-ink"
+                  aria-hidden="true"
+                />
                 <span className="text-[1.1rem] text-fg">
                   {item.title}
                   <small className="mt-1 block text-[0.87rem] text-fg-faint">
@@ -66,17 +69,10 @@ export function Offer() {
             delay={90}
             className="flex flex-col justify-center rounded-[6px] bg-wine px-8 py-9 text-center text-on-wine"
           >
-            <div className="text-[14px] opacity-80">Exclusivo pra quem está na sala</div>
-            <div className="my-1.5 font-serif text-[3.5rem] leading-none sm:text-[3.7rem]">
-              R$77
-            </div>
-            <div className="text-[12px] tracking-[0.16em] uppercase opacity-90">
-              Ingresso único · ao vivo
-            </div>
+            <OfertaPreco />
 
             <div className="mt-6 flex flex-col items-center gap-3 border-t border-on-wine/15 pt-6">
               <VagasBadge tone="onAccent" />
-              <ReservaTimer tone="onAccent" />
             </div>
 
             <CtaButton variant="accent" className="mt-4 w-full justify-center">

@@ -1,4 +1,9 @@
 import Script from "next/script";
+import { LOTES, loteAtivoEm } from "@/lib/lotes";
+
+// Preço do ViewContent = lote ativo no BUILD (é <Script>, não reativo). Calculado
+// no escopo do módulo (uma vez, no build) para não chamar Date.now() no render.
+const VIEW_VALUE = (loteAtivoEm(Date.now()) ?? LOTES[0]).price;
 
 // Semeia o pixel do Meta (plano de lançamento, "estratégia de tráfego": cada evento
 // treina a conta). Sem NEXT_PUBLIC_META_PIXEL_ID configurado, não renderiza nada.
@@ -22,7 +27,7 @@ export function MetaPixel() {
           fbq('track', 'ViewContent', {
             content_name: 'Ingresso Por Dentro da Face',
             content_category: 'live',
-            value: 77,
+            value: ${VIEW_VALUE},
             currency: 'BRL'
           });
         `}
