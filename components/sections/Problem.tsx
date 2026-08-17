@@ -1,5 +1,4 @@
 import { Container } from "@/components/Container";
-import { Mark } from "@/components/Mark";
 import { Reveal } from "@/components/Reveal";
 
 const PAINS = [
@@ -16,9 +15,11 @@ export function Problem() {
           <span className="text-[12px] font-semibold tracking-[0.24em] text-wine-ink uppercase">
             O ponto cego
           </span>
-          <h2 className="mt-[18px] text-balance font-serif font-semibold text-[1.95rem] leading-[1.12] text-fg sm:text-[2.6rem]">
-            Você estudou em atlas, slide e boneco. O rosto na sua cadeira{" "}
-            <Mark>não é nenhum dos três</Mark>.
+          <h2 className="mt-[18px] text-balance font-serif font-semibold text-[1.95rem] leading-[1.12] sm:text-[2.6rem]">
+            <span className="titulo-grifo">
+              Você estudou em atlas, slide e boneco. O rosto na sua cadeira não é nenhum dos
+              três.
+            </span>
           </h2>
         </Reveal>
 

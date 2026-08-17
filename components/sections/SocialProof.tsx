@@ -72,8 +72,8 @@ export function SocialProof() {
           <span className="text-[12px] font-semibold tracking-[0.24em] text-wine-ink uppercase">
             Quem já estuda com a Aline
           </span>
-          <h2 className="mt-[18px] font-serif font-semibold text-[1.95rem] text-fg sm:text-[2.6rem]">
-            O que elas dizem depois de sentar nessa sala.
+          <h2 className="mt-[18px] font-serif font-semibold text-[1.95rem] sm:text-[2.6rem]">
+            <span className="titulo-grifo">O que elas dizem depois de sentar nessa sala.</span>
           </h2>
         </Reveal>
       </Container>

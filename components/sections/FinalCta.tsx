@@ -2,7 +2,6 @@ import Image from "next/image";
 import { Container } from "@/components/Container";
 import { Countdown } from "@/components/Countdown";
 import { CtaButton } from "@/components/CtaButton";
-import { Mark } from "@/components/Mark";
 import { UrgenciaFina } from "@/components/UrgenciaFina";
 import { withBasePath } from "@/lib/basePath";
 
@@ -28,8 +27,8 @@ export function FinalCta() {
         <span className="text-[12px] font-semibold tracking-[0.24em] text-wine-ink uppercase">
           24 de setembro · 20h
         </span>
-        <h2 className="mt-[18px] mb-6 max-w-[560px] text-balance font-serif font-semibold text-[1.95rem] text-fg sm:text-[2.6rem]">
-          Nesse dia, a mesa de dissecção <Mark>vira a sua tela</Mark>.
+        <h2 className="mt-[18px] mb-6 max-w-[560px] text-balance font-serif font-semibold text-[1.95rem] sm:text-[2.6rem]">
+          <span className="titulo-grifo">Nesse dia, a mesa de dissecção vira a sua tela.</span>
         </h2>
 
         <Countdown align="center" />

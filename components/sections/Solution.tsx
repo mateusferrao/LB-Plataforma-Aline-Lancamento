@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { Container } from "@/components/Container";
 import { CtaButton } from "@/components/CtaButton";
-import { Mark } from "@/components/Mark";
 import { Reveal } from "@/components/Reveal";
 import { withBasePath } from "@/lib/basePath";
 
@@ -35,9 +34,10 @@ export function Solution() {
               <span className="text-[12px] font-semibold tracking-[0.24em] text-wine-ink uppercase">
                 Por dentro da face
               </span>
-              <h2 className="mt-[18px] text-balance font-serif font-semibold text-[1.95rem] leading-[1.12] text-fg sm:text-[2.6rem]">
-                Fui até a mesa de dissecção pra te mostrar{" "}
-                <Mark>o que a pele esconde</Mark>.
+              <h2 className="mt-[18px] text-balance font-serif font-semibold text-[1.95rem] leading-[1.12] sm:text-[2.6rem]">
+                <span className="titulo-grifo">
+                  Fui até a mesa de dissecção pra te mostrar o que a pele esconde.
+                </span>
               </h2>
               <p className="mt-[22px] max-w-[600px] text-[1.12rem] leading-[1.6] text-fg-soft">
                 Na aula ao vivo, a Aline mostra o que existe embaixo da pele. Os planos, as

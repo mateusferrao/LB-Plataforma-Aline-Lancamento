@@ -62,6 +62,17 @@ body {
   color: var(--on-wine);
 }
 
+/* Grifo de título: bloco sólido no marsala do botão atrás do texto, tipo marca-texto.
+   box-decoration-break: clone faz cada linha visual (o título quebra diferente em
+   mobile/desktop) ganhar seu próprio bloco colado ao texto. */
+.titulo-grifo {
+  background-color: var(--wine);
+  color: var(--fg);
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  padding: 0.04em 0.16em;
+}
+
 /* Reveal on scroll — usado por <Reveal>. Estado inicial escondido + transição suave. */
 .reveal {
   opacity: 0;

@@ -1,6 +1,5 @@
 import { Container } from "@/components/Container";
 import { CtaButton } from "@/components/CtaButton";
-import { Mark } from "@/components/Mark";
 import { OfertaPreco } from "@/components/OfertaPreco";
 import { Reveal } from "@/components/Reveal";
 import { VagasBadge } from "@/components/VagasBadge";
@@ -28,8 +27,8 @@ export function Offer() {
           <span className="text-[12px] font-semibold tracking-[0.24em] text-wine-ink uppercase">
             Seu ingresso
           </span>
-          <h2 className="mt-[18px] font-serif font-semibold text-[1.95rem] text-fg sm:text-[2.6rem]">
-            É uma noite ao vivo, e <Mark>não vai ter repeteco</Mark>.
+          <h2 className="mt-[18px] font-serif font-semibold text-[1.95rem] sm:text-[2.6rem]">
+            <span className="titulo-grifo">É uma noite ao vivo, e não vai ter repeteco.</span>
           </h2>
           <p className="mt-[18px] max-w-[560px] text-[1.12rem] leading-[1.55] text-fg-soft">
             O rigor de uma temporada de dissecção lá fora, numa noite ao vivo com você.

@@ -3,7 +3,6 @@ import { AnimatedNumber } from "@/components/AnimatedNumber";
 import { Container } from "@/components/Container";
 import { Countdown } from "@/components/Countdown";
 import { CtaButton } from "@/components/CtaButton";
-import { Mark } from "@/components/Mark";
 import { UrgenciaFina } from "@/components/UrgenciaFina";
 import { withBasePath } from "@/lib/basePath";
 
@@ -20,8 +19,10 @@ export function Hero() {
               </span>
             </div>
 
-            <h1 className="mt-5 text-balance font-serif font-semibold text-[2.35rem] leading-[1.12] tracking-[-0.012em] text-fg sm:text-[3.1rem] lg:text-[3.7rem]">
-              O que a dissecção revela, o atlas <Mark>nunca</Mark> vai te mostrar.
+            <h1 className="mt-5 text-balance font-serif font-semibold text-[2.35rem] leading-[1.12] tracking-[-0.012em] sm:text-[3.1rem] lg:text-[3.7rem]">
+              <span className="titulo-grifo">
+                O que a dissecção revela, o atlas nunca vai te mostrar.
+              </span>
             </h1>
 
             <p className="mt-6 max-w-[560px] text-[1.2rem] leading-[1.6] text-fg-soft">
