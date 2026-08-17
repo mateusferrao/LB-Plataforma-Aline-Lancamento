@@ -1,6 +1,6 @@
 "use client";
 
-import { TOTAL_LOTES, LOTE_TETO } from "@/lib/lotes";
+import { LOTE_TETO } from "@/lib/lotes";
 import { useLoteAtivo } from "@/lib/useLoteAtivo";
 
 // Bloco de preço do card de oferta: rótulo do lote + preço grande + próximo preço.
