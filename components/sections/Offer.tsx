@@ -15,7 +15,7 @@ const INCLUDES = [
   },
   {
     title: "Link privado, exclusivo pra inscritos",
-    detail: "Enviado por e-mail e WhatsApp após a compra",
+    detail: "Enviado no grupo do WhatsApp antes da aula.",
   },
 ];
 

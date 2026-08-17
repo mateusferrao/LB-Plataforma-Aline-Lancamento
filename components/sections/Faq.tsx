@@ -30,7 +30,7 @@ const FAQS = [
   },
   {
     q: "Como recebo o acesso à sala?",
-    a: "Assim que a compra é confirmada, o link privado da live chega por e-mail e WhatsApp, com lembretes antes de começar.",
+    a: "Assim que a compra é confirmada, você recebe acesso ao grupo do WhatsApp. O link da sala é enviado por lá, junto com avisos importantes antes da aula.",
   },
   {
     q: "E se não for pra mim?",

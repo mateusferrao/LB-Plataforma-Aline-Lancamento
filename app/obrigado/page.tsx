@@ -27,7 +27,7 @@ export default function Obrigado() {
 
           <p className="mx-auto mt-5 max-w-[480px] text-[1.05rem] leading-[1.6] text-fg-soft">
             Você recebe a confirmação por e-mail em instantes. Agora é só entrar no grupo do
-            WhatsApp pra não perder nenhum aviso antes da aula.
+            WhatsApp pra não perder nenhum aviso antes da aula, o link será enviado por lá. 
           </p>
 
           <a
