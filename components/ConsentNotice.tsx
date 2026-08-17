@@ -37,7 +37,7 @@ export function ConsentNotice() {
       <div className="mx-auto max-w-[1060px] px-4 pb-3">
         <div className="flex flex-col gap-3 rounded-[6px] border border-line bg-bg/95 px-4 py-3 shadow-[0_6px_24px_rgba(0,0,0,0.4)] backdrop-blur-sm sm:flex-row sm:items-center sm:justify-between">
           <p className="text-[13px] leading-[1.5] text-fg-soft">
-            Usamos cookies e o pixel da Meta pra medir e melhorar a divulgação. Ao
+            Usamos cookies pra medir e melhorar a divulgação. Ao
             continuar, você concorda.{" "}
             <Link
               href="/politica-de-privacidade"
