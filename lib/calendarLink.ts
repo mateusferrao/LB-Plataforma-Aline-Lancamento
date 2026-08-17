@@ -15,7 +15,7 @@ export function googleCalendarUrl(): string {
 
   const params = new URLSearchParams({
     action: "TEMPLATE",
-    text: "Por Dentro da Face · aula ao vivo com Dra. Aline Filgueiras",
+    text: "Por Dentro da Face · Aula ao vivo com Dra. Aline Filgueiras",
     dates: `${formatUTC(start)}/${formatUTC(end)}`,
     details: "Aula ao vivo de anatomia da dissecção aplicada à harmonização facial.",
   });
