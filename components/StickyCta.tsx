@@ -33,7 +33,10 @@ export function StickyCta() {
   return (
     <>
       {/* Mobile — sempre visível */}
-      <div className="fixed inset-x-0 bottom-0 z-40 border-t border-line bg-bg/95 px-4 py-2.5 backdrop-blur-sm sm:hidden">
+      <div
+        data-fixed-bottom-bar="true"
+        className="fixed inset-x-0 bottom-0 z-40 border-t border-line bg-bg/95 px-4 py-2.5 backdrop-blur-sm sm:hidden"
+      >
         <div className="mb-2 flex items-center justify-between gap-2">
           <VagasBadge>Poucas vagas</VagasBadge>
           <ReservaTimer />
@@ -45,6 +48,7 @@ export function StickyCta() {
 
       {/* Desktop — aparece ao rolar além do Hero, some perto do rodapé */}
       <div
+        data-fixed-bottom-bar="true"
         aria-hidden={!mostrarDesktop}
         className={`fixed inset-x-0 bottom-0 z-40 hidden border-t border-line bg-bg/95 backdrop-blur-sm transition-all duration-300 ease-out sm:block ${
           mostrarDesktop

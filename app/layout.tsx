@@ -5,6 +5,7 @@ import { MetaPixel } from "@/components/MetaPixel";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 import { TictoEcho } from "@/components/TictoEcho";
 import { ConsentNotice } from "@/components/ConsentNotice";
+import { WhatsAppFloatingButton } from "@/components/WhatsAppFloatingButton";
 
 // Fontes auto-hospedadas (next/font/local) para o build não depender de baixar
 // do Google em CI. Arquivos variáveis (latin) em app/fonts/.
@@ -68,6 +69,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <TictoEcho />
         {children}
         <ConsentNotice />
+        <WhatsAppFloatingButton />
       </body>
     </html>
   );

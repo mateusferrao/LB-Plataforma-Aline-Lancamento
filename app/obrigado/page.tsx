@@ -14,6 +14,11 @@ export const metadata: Metadata = {
 // (uma por lote). Sem urgência/garantia aqui: quem chega nesta página já comprou.
 const GRUPO_WHATSAPP_URL = "https://chat.whatsapp.com/KmL36ic5sFGFYVCJL6vm7g?s=cl&p=i&mlu=4";
 
+// Número do time (mesmo do botão flutuante), com mensagem de contexto pós-compra.
+const TIME_WHATSAPP_URL =
+  "https://wa.me/5531953491799?text=" +
+  encodeURIComponent("Oi! Comprei a aula Por Dentro da Face e fiquei com uma dúvida.");
+
 export default function Obrigado() {
   return (
     <>
@@ -54,7 +59,15 @@ export default function Obrigado() {
           </p>
 
           <p className="mt-6 text-[13.5px] text-fg-faint">
-            Ficou com dúvida? Fala com a gente no grupo.
+            Ficou com dúvida?{" "}
+            <a
+              href={TIME_WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline underline-offset-2 hover:text-wine-ink"
+            >
+              Fala com nosso time.
+            </a>
           </p>
         </Container>
       </main>
