@@ -73,6 +73,20 @@ body {
   padding: 0.04em 0.16em;
 }
 
+/* Foto do Hero se dissolvendo no fundo da página: as 4 bordas esmaecem de forma
+   independente (sem virar oval), pra sumir o corte reto entre o fundo do estúdio
+   da foto e o --bg quase preto da página. */
+.foto-funde-fundo {
+  mask-image:
+    linear-gradient(to right, transparent, black 14%, black 86%, transparent),
+    linear-gradient(to bottom, transparent, black 10%, black 92%, transparent);
+  mask-composite: intersect;
+  -webkit-mask-image:
+    linear-gradient(to right, transparent, black 14%, black 86%, transparent),
+    linear-gradient(to bottom, transparent, black 10%, black 92%, transparent);
+  -webkit-mask-composite: source-in;
+}
+
 /* Reveal on scroll — usado por <Reveal>. Estado inicial escondido + transição suave. */
 .reveal {
   opacity: 0;

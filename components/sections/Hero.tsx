@@ -45,16 +45,14 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="relative mx-auto aspect-[4/5] w-full max-w-[420px] overflow-hidden rounded-[4px] border border-line-soft bg-surface md:aspect-auto md:h-full">
-            {/* FOTO: aline-hero-marsala.jpg — blazer marsala, perfil/mão no queixo, COLORIDA.
-                (arquivo atual é stand-in; sobrescreva com a foto real de mesmo nome) */}
+          <div className="relative mx-auto aspect-[4/5] w-full max-w-[420px] md:aspect-auto md:h-full">
             <Image
               src={withBasePath("/images/aline-hero-marsala-v2.jpg")}
               alt="Dra. Aline Filgueiras"
               fill
               priority
               sizes="(min-width: 768px) 420px, 90vw"
-              className="object-cover"
+              className="foto-funde-fundo object-cover"
             />
           </div>
         </div>
