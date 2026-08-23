@@ -55,7 +55,7 @@ export default function Obrigado() {
           </a>
 
           <p className="mt-11 text-[1rem] text-fg-soft">
-            Guarde a data: <span className="text-fg">24 de setembro, 20h, ao vivo.</span>
+            Guarde a data: <span className="text-fg">6 de outubro, 20h, ao vivo.</span>
           </p>
 
           <p className="mt-6 text-[13.5px] text-fg-faint">

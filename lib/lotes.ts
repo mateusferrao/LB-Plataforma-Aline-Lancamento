@@ -25,39 +25,39 @@ export const LOTES: Lote[] = [
     n: 1,
     price: 67,
     priceLabel: "R$67",
-    startsAt: "2026-08-12T00:00:00-03:00",
-    endsAt: "2026-08-28T00:00:00-03:00",
+    startsAt: "2026-08-12T17:00:00-03:00",
+    endsAt: "2026-08-31T00:00:00-03:00",
     checkoutUrl: "https://payment.ticto.app/O26600803",
   },
   {
     n: 2,
     price: 77,
     priceLabel: "R$77",
-    startsAt: "2026-08-28T00:00:00-03:00",
-    endsAt: "2026-09-04T00:00:00-03:00",
+    startsAt: "2026-08-31T00:00:00-03:00",
+    endsAt: "2026-09-08T00:00:00-03:00",
     checkoutUrl: "https://payment.ticto.app/OD322CA54",
   },
   {
     n: 3,
     price: 87,
     priceLabel: "R$87",
-    startsAt: "2026-09-04T00:00:00-03:00",
-    endsAt: "2026-09-11T00:00:00-03:00",
+    startsAt: "2026-09-08T00:00:00-03:00",
+    endsAt: "2026-09-16T00:00:00-03:00",
     checkoutUrl: "https://payment.ticto.app/O47BB1FA1",
   },
   {
     n: 4,
     price: 97,
     priceLabel: "R$97",
-    startsAt: "2026-09-11T00:00:00-03:00",
-    endsAt: "2026-09-24T20:00:00-03:00", // encerra no início da aula (24/09, 20h)
+    startsAt: "2026-09-16T00:00:00-03:00",
+    endsAt: "2026-10-06T23:59:00-03:00", // checkout encerra no fim do dia da aula (06/10); a aula em si é às 20h
     checkoutUrl: "https://payment.ticto.app/OA516687A",
   },
 ];
 
-// Data/hora da aula ao vivo (= fim do último lote). Usada em textos e no fim do
-// contador no último lote. Se mudar a data da aula, ajuste também o endsAt do L4.
-export const LIVE_DATE_ISO = "2026-09-24T20:00:00-03:00";
+// Data/hora da aula ao vivo (20h). Usada em textos e no calendário — não precisa
+// ser igual ao endsAt do L4 (o checkout do último lote fica aberto até 23:59).
+export const LIVE_DATE_ISO = "2026-10-06T20:00:00-03:00";
 
 // Total de lotes, para o rótulo "Lote X de N".
 export const TOTAL_LOTES = LOTES.length;

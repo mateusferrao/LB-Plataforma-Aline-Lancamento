@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 
 // Cronômetro de RESERVA da vaga — urgência ligada à sessão do visitante.
-// NÃO confundir com Countdown.tsx (esse conta até a data da live, 24/09).
+// NÃO confundir com Countdown.tsx (esse conta até a data da live, 06/10).
 // Ancorado em sessionStorage: começa na primeira visita e NÃO reinicia a cada
 // refresh dentro da mesma sessão (mais crível e menos manipulador que resetar
 // pra 15:00 toda hora). Ao zerar, não bloqueia nada — só reforça o CTA.

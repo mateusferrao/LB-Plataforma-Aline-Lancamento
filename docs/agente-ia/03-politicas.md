@@ -14,7 +14,7 @@
 - Pedidos de reembolso devem ser **escalados para o atendimento humano**.
 
 ## 2. Formato da aula (gravação e comparecimento)
-- Aula **ao vivo e online**, **24/09/2026 às 20h (horário de Brasília)**, ~90 minutos.
+- Aula **ao vivo e online**, **06/10/2026 às 20h (horário de Brasília)**, ~90 minutos.
 - **Não há gravação nem replay.** É uma noite só.
 - Quem não puder comparecer ao vivo **não tem acesso posterior**; dentro dos 7 dias, cabe reembolso.
 
@@ -32,7 +32,7 @@
 
 ## 5. Preço e lotes
 - Ingresso por lotes, com preço subindo por data: **R$67 → R$77 → R$87 → R$97** (teto).
-- Após 24/09 às 20h, **as inscrições encerram**.
+- Após 06/10 às 23h59, **as inscrições encerram**.
 - O preço vigente é sempre o exibido no site no momento da compra.
 
 ## 6. Certificado

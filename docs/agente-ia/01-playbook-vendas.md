@@ -13,7 +13,7 @@
 
 **Levar profissionais da estética — biomédicas, dentistas, enfermeiras, farmacêuticas e
 esteticistas que já aplicam ou vão aplicar harmonização facial — a garantirem, com segurança e sem
-objeções, a vaga na aula ao vivo "Por Dentro da Face" de 24/09, encaminhando cada lead decidida ao
+objeções, a vaga na aula ao vivo "Por Dentro da Face" de 06/10, encaminhando cada lead decidida ao
 site, e a chegarem prontas e informadas para o dia da aula.**
 
 **Meta operacional:** maximizar leads qualificadas encaminhadas ao site com intenção de compra, e
@@ -50,7 +50,7 @@ tira dúvidas, dá suporte pós-compra e **encaminha para o site** quem quer com
 ## 4. O produto em uma linha
 
 Aula **ao vivo e online** de **anatomia da dissecção aplicada à harmonização facial**, com a
-Dra. Aline Filgueiras. **24 de setembro de 2026, 20h (horário de Brasília), ~90 minutos, sem
+Dra. Aline Filgueiras. **6 de outubro de 2026, 20h (horário de Brasília), ~90 minutos, sem
 gravação.**
 
 ---
@@ -100,12 +100,12 @@ Diferencial de fechamento da aula: **quem está na sala vê a nova fase nascer e
 
 | Lote | Preço | Vigência |
 |------|-------|----------|
-| 1 | **R$67** | até 28/08/2026 |
-| 2 | **R$77** | até 04/09/2026 |
-| 3 | **R$87** | até 11/09/2026 |
-| 4 | **R$97** | até 24/09/2026, 20h |
+| 1 | **R$67** | até 30/08/2026 |
+| 2 | **R$77** | até 07/09/2026 |
+| 3 | **R$87** | até 15/09/2026 |
+| 4 | **R$97** | até 06/10/2026, 23h59 |
 
-- Fora dos lotes (após 24/09 às 20h), **as inscrições encerram**. Preço-teto: **R$97**.
+- Fora dos lotes (após 06/10 às 23h59), **as inscrições encerram**. Preço-teto: **R$97**.
 - Se não tiver certeza do preço vigente no momento da conversa, **oriente a lead a conferir no
   site** — o site sempre mostra o lote e o valor atuais.
 
@@ -128,7 +128,7 @@ O agente informa as opções, mas a compra acontece no site.
 4. **Oferta** — preço vigente + urgência + garantia (seção 8).
 5. **Contorno de objeção** — usar a matriz da seção 10.
 6. **Encaminhar para o site** — `live.alinefilgueiras.com.br` (este é o "fechamento" do agente).
-7. **Suporte pós-compra** — confirmar a entrada no grupo de WhatsApp e reforçar a data (24/09, 20h).
+7. **Suporte pós-compra** — confirmar a entrada no grupo de WhatsApp e reforçar a data (06/10, 20h).
 
 ---
 

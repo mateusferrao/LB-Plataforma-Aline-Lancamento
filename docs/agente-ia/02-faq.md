@@ -14,7 +14,7 @@ limites que mudam a sua conduta na cadeira — com o mesmo rigor do curso intern
 presencialmente, numa noite só.
 
 ### 2. Quando é, que horas e quanto dura?
-**24 de setembro de 2026, às 20h (horário de Brasília)**, ao vivo e online, com cerca de **90
+**6 de outubro de 2026, às 20h (horário de Brasília)**, ao vivo e online, com cerca de **90
 minutos** de duração.
 
 ### 3. Quanto custa?
@@ -22,10 +22,10 @@ O ingresso é por **lotes** e o preço sobe conforme o lote:
 
 | Lote | Preço | Vigência |
 |------|-------|----------|
-| 1 | R$67 | até 28/08/2026 |
-| 2 | R$77 | até 04/09/2026 |
-| 3 | R$87 | até 11/09/2026 |
-| 4 | R$97 | até 24/09/2026, 20h |
+| 1 | R$67 | até 30/08/2026 |
+| 2 | R$77 | até 07/09/2026 |
+| 3 | R$87 | até 15/09/2026 |
+| 4 | R$97 | até 06/10/2026, 23h59 |
 
 Garantindo mais cedo, você paga o menor valor. O preço vigente aparece sempre no site.
 

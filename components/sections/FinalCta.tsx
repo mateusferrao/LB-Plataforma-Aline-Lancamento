@@ -25,7 +25,7 @@ export function FinalCta() {
 
       <Container narrow className="relative mx-auto flex flex-col items-center">
         <span className="text-[12px] font-semibold tracking-[0.24em] text-wine-ink uppercase">
-          24 de setembro · 20h
+          6 de outubro · 20h
         </span>
         <h2 className="mt-[18px] mb-6 max-w-[560px] text-balance font-serif font-semibold text-[1.95rem] sm:text-[2.6rem]">
           <span className="titulo-grifo">Nesse dia, a mesa de dissecção vira a sua tela.</span>

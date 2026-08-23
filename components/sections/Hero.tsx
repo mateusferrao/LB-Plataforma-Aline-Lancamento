@@ -15,7 +15,7 @@ export function Hero() {
             <div className="flex items-center gap-3.5">
               <span className="h-px w-[42px] bg-wine-ink" aria-hidden="true" />
               <span className="text-[12px] font-semibold tracking-[0.24em] text-wine-ink uppercase">
-                Aula ao vivo · 24 de setembro · 20h · online
+                Aula ao vivo · 6 de outubro · 20h · online
               </span>
             </div>
 
@@ -26,7 +26,7 @@ export function Hero() {
             </h1>
 
             <p className="mt-6 max-w-[560px] text-[1.2rem] leading-[1.6] text-fg-soft">
-              No dia 24, ao vivo, a Dra. Aline mostra a face por dentro, direto da mesa
+              No dia 6, ao vivo, a Dra. Aline mostra a face por dentro, direto da mesa
               de dissecção. Você sai da aula aplicando com a firmeza de quem já viu onde
               ficam os riscos.
             </p>
