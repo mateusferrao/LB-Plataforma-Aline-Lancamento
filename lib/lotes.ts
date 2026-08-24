@@ -27,7 +27,7 @@ export const LOTES: Lote[] = [
     priceLabel: "R$67",
     startsAt: "2026-08-12T17:00:00-03:00",
     endsAt: "2026-08-31T00:00:00-03:00",
-    checkoutUrl: "https://payment.ticto.app/O26600803",
+    checkoutUrl: "https://payment.ticto.app/O072A87DC",
   },
   {
     n: 2,
@@ -35,7 +35,7 @@ export const LOTES: Lote[] = [
     priceLabel: "R$77",
     startsAt: "2026-08-31T00:00:00-03:00",
     endsAt: "2026-09-08T00:00:00-03:00",
-    checkoutUrl: "https://payment.ticto.app/OD322CA54",
+    checkoutUrl: "https://payment.ticto.app/O7D6423E8",
   },
   {
     n: 3,
@@ -43,7 +43,7 @@ export const LOTES: Lote[] = [
     priceLabel: "R$87",
     startsAt: "2026-09-08T00:00:00-03:00",
     endsAt: "2026-09-16T00:00:00-03:00",
-    checkoutUrl: "https://payment.ticto.app/O47BB1FA1",
+    checkoutUrl: "https://payment.ticto.app/OA9EEDED2",
   },
   {
     n: 4,
@@ -51,7 +51,7 @@ export const LOTES: Lote[] = [
     priceLabel: "R$97",
     startsAt: "2026-09-16T00:00:00-03:00",
     endsAt: "2026-10-06T23:59:00-03:00", // checkout encerra no fim do dia da aula (06/10); a aula em si é às 20h
-    checkoutUrl: "https://payment.ticto.app/OA516687A",
+    checkoutUrl: "https://payment.ticto.app/O4F95B1D3",
   },
 ];
 
