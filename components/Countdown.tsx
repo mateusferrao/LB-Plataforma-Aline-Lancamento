@@ -38,7 +38,7 @@ function legenda(lote: Lote | null, proximo: Lote | null): string {
 function subtexto(lote: Lote | null, proximo: Lote | null): string {
   if (!lote) return "";
   if (!proximo) return "Último lote. As inscrições estão encerrando.";
-  return `${lote.priceLabel} agora. Sobe até ${LOTE_TETO.priceLabel}.`;
+  return `${lote.priceLabel} somente por enquanto.`;
 }
 
 export function Countdown({

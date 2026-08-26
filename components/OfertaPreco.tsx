@@ -32,7 +32,7 @@ export function OfertaPreco() {
       <div className="min-h-[1.2em] text-[0.95rem] opacity-90">
         {montado && lote
           ? proximo
-            ? `Sobe até ${LOTE_TETO.priceLabel}`
+            ? `Preço sobe em breve`
             : "Último lote"
           : ""}
       </div>
