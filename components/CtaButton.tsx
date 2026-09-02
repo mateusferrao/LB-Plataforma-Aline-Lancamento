@@ -23,7 +23,7 @@ export function CtaButton({
   className = "",
   showPrice = false,
 }: Props) {
-  const { lote, montado } = useLoteAtivo();
+  const { lote, montado, proximo } = useLoteAtivo();
 
   const base =
     "inline-flex items-center gap-3 rounded-[2px] px-8 py-[19px] font-sans text-[1.02rem] font-semibold transition-[transform,background-color] duration-150 ease-out hover:-translate-y-0.5";
@@ -33,6 +33,23 @@ export function CtaButton({
     variant === "dark"
       ? "bg-wine text-on-wine hover:bg-wine-hover"
       : "bg-fg text-wine hover:bg-white";
+
+  if (montado && !lote && !proximo) {
+    return (
+      <a
+        href={INSTAGRAM_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={`${base} ${palette} ${className}`}
+        onClick={() => {
+          trackCustom("ClickProximaTurma", { content_name: "Proxima turma (Instagram)" });
+          gaEvent("click_proxima_turma", {});
+        }}
+      >
+        Quero ser avisado quando abrir
+      </a>
+    );
+  }
 
   // Estado encerrado: já montou e não há lote ativo → CTA pro Instagram.
   if (montado && !lote) {

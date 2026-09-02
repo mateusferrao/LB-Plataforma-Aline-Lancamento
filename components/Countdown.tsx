@@ -67,6 +67,16 @@ export function Countdown({
   // Menos de 24h restantes (days === 0): dígitos no vermelho do botão pra reforçar urgência.
   const urgente = remaining !== null && remaining.days === 0;
 
+  if (montado && !lote && !proximo) {
+    return (
+      <div className={`flex flex-col gap-3 ${alignCls} ${className}`}>
+        <p className="font-serif text-[1.5rem] leading-snug text-fg">
+          As inscrições desta turma começarão em breve.
+        </p>
+      </div>
+    );
+  }
+
   // Encerrado (montou e sem lote): sem tiles, só o aviso.
   if (montado && !lote) {
     return (
