@@ -64,7 +64,11 @@ export function Solution() {
                 No fim, quem está na sala vê a nova fase nascer em primeira mão.
               </p>
 
-              <CtaButton showPrice className="mt-8 w-full justify-center sm:w-auto sm:justify-start">
+              <CtaButton
+                showPrice
+                requireVsl
+                className="mt-8 w-full justify-center sm:w-auto sm:justify-start"
+              >
                 Quero minha vaga
               </CtaButton>
             </Reveal>

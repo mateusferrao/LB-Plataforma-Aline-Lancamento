@@ -5,9 +5,12 @@ import { useEffect, useRef, useState } from "react";
 import { gaEvent, trackCustom } from "@/lib/analytics";
 import { markVslCompleted, setVslRemaining } from "@/lib/useVslGate";
 
-// Vídeo privado/não listado: o hash de acesso (h) só é aceito pelo SDK via
-// `url`, não como opção separada junto de `id`.
-const VIMEO_URL = "https://player.vimeo.com/video/1225929589?h=5dcbd0a4f6" as const;
+// Iframe com src já pronto (em vez de deixar o SDK criar o iframe via
+// options+url) — isso evita um round-trip extra ao oEmbed do Vimeo antes de
+// começar a carregar o vídeo, que é o que fazia o player demorar a aparecer.
+// O navegador já começa a baixar o iframe assim que o HTML é parseado.
+const VIMEO_SRC =
+  "https://player.vimeo.com/video/1225929589?h=5dcbd0a4f6&autoplay=1&muted=1&playsinline=1&background=0&controls=0&title=0&byline=0&portrait=0&dnt=1";
 
 // Se o player do Vimeo falhar (bloqueador de anúncio, instabilidade) ou o
 // evento `ended` nunca chegar por algum motivo, libera o CTA de qualquer
@@ -16,6 +19,13 @@ const VIMEO_URL = "https://player.vimeo.com/video/1225929589?h=5dcbd0a4f6" as co
 const SAFETY_TIMEOUT_MS = 3 * 60 * 1000;
 
 export function VslPlayer({ className = "" }: { className?: string }) {
+  // O container é um <div> persistente; o <iframe> em si é criado à mão
+  // dentro do efeito (em vez de JSX fixo) porque o destroy() do SDK do
+  // Vimeo REMOVE o elemento iframe do DOM ao desmontar. Se o iframe fosse
+  // o próprio nó referenciado, um remount (StrictMode no dev, ou qualquer
+  // remontagem em produção) apagaria o vídeo pra sempre, já que o efeito
+  // seguinte reusaria a mesma ref já destacada do DOM. Recriando o iframe
+  // a cada execução do efeito, o container sempre volta a ter vídeo.
   const containerRef = useRef<HTMLDivElement>(null);
   const playerRef = useRef<Player | null>(null);
   const fired = useRef({
@@ -29,21 +39,18 @@ export function VslPlayer({ className = "" }: { className?: string }) {
   const [muted, setMuted] = useState(true);
 
   useEffect(() => {
-    const el = containerRef.current;
-    if (!el) return;
+    const container = containerRef.current;
+    if (!container) return;
 
-    const player = new Player(el, {
-      url: VIMEO_URL,
-      autoplay: true,
-      muted: true,
-      playsinline: true,
-      background: false,
-      controls: false,
-      title: false,
-      byline: false,
-      portrait: false,
-      dnt: true,
-    });
+    const el = document.createElement("iframe");
+    el.src = VIMEO_SRC;
+    el.title = "Vídeo: Dra. Aline Filgueiras";
+    el.allow = "autoplay; fullscreen; picture-in-picture; encrypted-media";
+    el.allowFullscreen = true;
+    el.className = "absolute inset-0 h-full w-full border-0";
+    container.appendChild(el);
+
+    const player = new Player(el);
     playerRef.current = player;
 
     function unlock(reason: "complete" | "load_error" | "player_error" | "timeout") {
@@ -121,18 +128,18 @@ export function VslPlayer({ className = "" }: { className?: string }) {
     <div
       className={`overflow-hidden rounded-[4px] border border-line-soft bg-surface ${className}`}
     >
-      <div
-        ref={containerRef}
-        className="absolute inset-0 [&_iframe]:absolute [&_iframe]:inset-0 [&_iframe]:h-full [&_iframe]:w-full"
-      />
+      <div ref={containerRef} className="absolute inset-0" />
       {muted && (
         <button
           type="button"
           onClick={handleUnmute}
-          className="absolute right-3 bottom-3 z-10 inline-flex items-center gap-1.5 rounded-full bg-bg/90 px-3 py-1.5 text-[12px] font-semibold text-fg shadow-sm backdrop-blur-sm transition-colors hover:bg-bg"
+          className="absolute inset-x-0 bottom-4 z-10 mx-auto flex w-fit items-center gap-2.5 rounded-full bg-wine px-5 py-3 text-[13.5px] font-semibold text-on-wine shadow-lg transition-transform duration-150 hover:scale-105"
         >
-          <span aria-hidden="true">🔈</span>
-          Ativar som
+          <span className="relative flex h-2.5 w-2.5 shrink-0" aria-hidden="true">
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-on-wine opacity-75" />
+            <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-on-wine" />
+          </span>
+          🔊 Toque para ativar o som
         </button>
       )}
     </div>

@@ -74,7 +74,7 @@ export function Offer() {
               <VagasBadge tone="onAccent" />
             </div>
 
-            <CtaButton variant="accent" className="mt-4 w-full justify-center">
+            <CtaButton variant="accent" requireVsl className="mt-4 w-full justify-center">
               Garantir minha vaga
             </CtaButton>
 

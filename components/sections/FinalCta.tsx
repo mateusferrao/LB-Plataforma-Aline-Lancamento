@@ -33,7 +33,7 @@ export function FinalCta() {
 
         <Countdown align="center" />
 
-        <CtaButton showPrice className="mt-8 w-full justify-center sm:w-auto">
+        <CtaButton showPrice requireVsl className="mt-8 w-full justify-center sm:w-auto">
           Quero minha vaga
         </CtaButton>
         <UrgenciaFina className="mt-3.5 text-[13.5px] tracking-[0.02em] text-fg-faint" />

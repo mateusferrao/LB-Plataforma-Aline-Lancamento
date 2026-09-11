@@ -2,9 +2,9 @@
 
 import { useSyncExternalStore } from "react";
 
-// Trava só o CTA do Hero até a VSL terminar. Estado compartilhado como
-// singleton de módulo (não Context — o projeto não usa Context em lugar
-// nenhum, o padrão daqui é hook standalone em lib/, como useLoteAtivo).
+// Trava os CTAs da página até a VSL do Hero terminar. Estado compartilhado
+// como singleton de módulo (não Context — o projeto não usa Context em
+// lugar nenhum, o padrão daqui é hook standalone em lib/, como useLoteAtivo).
 // Persiste em sessionStorage (mesmo padrão do ReservaTimer) pra quem já
 // assistiu não ser re-bloqueado em refresh/scroll na mesma sessão.
 const KEY = "lp_vsl_completed";

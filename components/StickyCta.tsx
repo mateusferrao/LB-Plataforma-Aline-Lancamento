@@ -41,7 +41,7 @@ export function StickyCta() {
           <VagasBadge>Poucas vagas</VagasBadge>
           <ReservaTimer />
         </div>
-        <CtaButton showPrice className="w-full justify-center">
+        <CtaButton showPrice requireVsl className="w-full justify-center">
           Quero minha vaga
         </CtaButton>
       </div>
@@ -61,7 +61,7 @@ export function StickyCta() {
             <VagasBadge plain>Poucas vagas</VagasBadge>
             <ReservaTimer />
           </div>
-          <CtaButton showPrice className="shrink-0">
+          <CtaButton showPrice requireVsl className="shrink-0">
             Quero minha vaga
           </CtaButton>
         </div>
