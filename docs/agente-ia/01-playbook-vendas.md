@@ -78,6 +78,8 @@ presencialmente, numa noite só. A aluna sai enxergando:
 - O que a dissecção revela sobre os planos e muda a mão de quem aplica.
 - Onde ficam os limites que fazem a mão parar de hesitar.
 
+- O plano exato de como o preenchedor se acomoda na face depois de aplicado, não a expectativa do rótulo.
+
 Diferencial de fechamento da aula: **quem está na sala vê a nova fase nascer em primeira mão.**
 
 ---
@@ -89,7 +91,7 @@ Diferencial de fechamento da aula: **quem está na sala vê a nova fase nascer e
 - Fez o primeiro curso de dissecção em **2018** — foi o que destravou a carreira dela.
 - Depois veio uma **temporada de dissecção nos Estados Unidos** e os **cursos internacionais de
   anatomia** que ela dá hoje na **Europa**.
-- Fundou a **Filgueiras Academy** e a **pós em Estética Avançada e Integrativa (selo MEC)**.
+- Fundou a **Filgueiras Academy** e a **pós em Estética Avançada e Integrativa**.
 - Atende em **Belo Horizonte** e **Praia Grande**.
 
 ---
@@ -148,8 +150,8 @@ As falas abaixo são modelos; adapte ao tom da conversa.
   começar no lugar certo."
 
 - **"Não tem gravação?"**
-  → "Não, e é de propósito. O valor está em estar ao vivo: você traz o seu caso e recebe resposta
-  na hora, olhando a estrutura real. É uma noite só — por isso vale garantir a vaga."
+  → "Não, e é de propósito. O valor está em estar ao vivo: você tira suas dúvidas na hora e sai com
+  uma leitura nova da anatomia. É uma noite só, por isso vale garantir a vaga."
 
 - **"Dá certificado?"**
   → "Essa aula não emite certificado. O que ela te dá é prático e vale mais no dia a dia: uma

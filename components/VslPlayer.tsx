@@ -31,17 +31,23 @@ const SAFETY_TIMEOUT_MS = 3 * 60 * 1000;
 // navegador embutido do Instagram/Facebook) — sem isso, o visitante fica
 // com um frame congelado e nenhuma forma de destravar o vídeo. Se o `play`
 // não chegar nesse tempo depois do player ficar pronto, mostramos o botão
-// de play manual.
-//
-// Importante: NÃO usamos ausência de `timeupdate` como sinal de "travado"
-// durante a reprodução — buffering de conexão lenta também para de mandar
-// timeupdate por alguns segundos sem que o vídeo esteja de fato parado (o
-// player se recupera sozinho), e isso fazia o botão aparecer à toa. O
-// único sinal confiável de que a reprodução parou de verdade é o evento
-// `pause` do player — a página nunca chama player.pause() sozinha (não há
-// controles de pausa nossos), então qualquer pause é sempre uma
-// interrupção real, nunca buffering.
+// de play manual. Checagem única, só pro início — depois disso quem decide
+// é o `bufferstart`/`bufferend` (ver abaixo) e o `pause` real.
 const AUTOPLAY_GRACE_MS = 2000;
+
+// Se o handshake inicial do player nunca resolver NEM rejeitar (iframe
+// bloqueado por extensão, rede instável), sem isso a caixa do vídeo fica
+// vazia pra sempre sem nenhum feedback. Trata como falha de carregamento
+// depois desse prazo, do mesmo jeito que uma rejeição real do ready().
+const READY_TIMEOUT_MS = 6000;
+
+// Sinal de travamento DURANTE a reprodução: usamos os eventos de buffer do
+// player (`bufferstart`/`bufferend`), não ausência de `timeupdate` — um
+// buffering curto e normal (a maioria dos casos) termina sozinho em menos
+// de 1-2s e nunca deve mostrar nada. Só quando o buffering começa e NÃO
+// termina dentro desse prazo é que tratamos como travado de verdade (o
+// caso relatado: o vídeo mostra um frame real e fica parado nele).
+const BUFFER_STUCK_MS = 7000;
 
 export function VslPlayer({ className = "" }: { className?: string }) {
   // O container é um <div> persistente; o <iframe> em si é criado à mão
@@ -79,6 +85,8 @@ export function VslPlayer({ className = "" }: { className?: string }) {
     const player = new Player(el);
     playerRef.current = player;
     let graceTimer: number | undefined;
+    let bufferTimer: number | undefined;
+    let readyTimedOut = false;
 
     function showStuck() {
       setStuck(true);
@@ -86,11 +94,17 @@ export function VslPlayer({ className = "" }: { className?: string }) {
       gaEvent("vsl_playback_stuck", {});
     }
 
+    function clearBufferTimer() {
+      window.clearTimeout(bufferTimer);
+      bufferTimer = undefined;
+    }
+
     function unlock(reason: "complete" | "load_error" | "player_error" | "timeout") {
       if (fired.current.complete) return;
       fired.current.complete = true;
       window.clearTimeout(safety);
       window.clearTimeout(graceTimer);
+      clearBufferTimer();
       if (reason === "complete") {
         trackCustom("VslComplete", {});
         gaEvent("vsl_complete", {});
@@ -105,22 +119,33 @@ export function VslPlayer({ className = "" }: { className?: string }) {
 
     const safety = window.setTimeout(() => unlock("timeout"), SAFETY_TIMEOUT_MS);
 
+    const readyTimeout = window.setTimeout(() => {
+      readyTimedOut = true;
+      unlock("load_error");
+    }, READY_TIMEOUT_MS);
+
     player
       .ready()
       .then(() => {
+        window.clearTimeout(readyTimeout);
+        if (readyTimedOut) return; // já liberou pelo timeout, não inicia mais nada
         // Se o `play` (autoplay) não chegar nesse prazo, o navegador
         // provavelmente bloqueou — mostra o botão de play manual. Checagem
-        // única, só pro início: depois disso quem decide é o evento
-        // `pause` (ver abaixo), não ausência de progresso.
+        // única, só pro início: depois disso quem decide é o `bufferstart`/
+        // `bufferend` e o `pause` real (ver abaixo).
         graceTimer = window.setTimeout(() => {
           if (fired.current.play) return;
           showStuck();
         }, AUTOPLAY_GRACE_MS);
       })
-      .catch(() => unlock("load_error"));
+      .catch(() => {
+        window.clearTimeout(readyTimeout);
+        unlock("load_error");
+      });
 
     player.on("play", () => {
       window.clearTimeout(graceTimer);
+      clearBufferTimer();
       setStuck(false);
       if (fired.current.play) return;
       fired.current.play = true;
@@ -128,14 +153,31 @@ export function VslPlayer({ className = "" }: { className?: string }) {
       gaEvent("vsl_play", {});
     });
 
-    // Único sinal confiável de reprodução parada de verdade (ver nota
-    // acima sobre por que não usamos ausência de timeupdate aqui).
+    // Pause real (nunca disparado por nós — não há controles de pausa
+    // próprios, então qualquer pause é uma interrupção de verdade).
     player.on("pause", () => {
       if (fired.current.complete) return;
       showStuck();
     });
 
+    // Buffering CURTO é normal e se resolve sozinho — só tratamos como
+    // travado se o buffering começar e não terminar dentro do prazo.
+    player.on("bufferstart", () => {
+      if (fired.current.complete) return;
+      clearBufferTimer();
+      bufferTimer = window.setTimeout(() => {
+        if (fired.current.complete) return;
+        showStuck();
+      }, BUFFER_STUCK_MS);
+    });
+
+    player.on("bufferend", () => {
+      clearBufferTimer();
+      setStuck(false);
+    });
+
     player.on("timeupdate", ({ seconds, duration, percent }) => {
+      clearBufferTimer();
       setStuck(false);
       if (duration > 0) setVslRemaining(duration - seconds);
       if (percent >= 0.25 && !fired.current.p25) {
@@ -160,7 +202,9 @@ export function VslPlayer({ className = "" }: { className?: string }) {
 
     return () => {
       window.clearTimeout(safety);
+      window.clearTimeout(readyTimeout);
       window.clearTimeout(graceTimer);
+      clearBufferTimer();
       player.destroy().catch(() => {});
     };
   }, []);
@@ -205,10 +249,10 @@ export function VslPlayer({ className = "" }: { className?: string }) {
     >
       <div ref={containerRef} className="absolute inset-0" />
       {stuck ? (
-        // Vídeo travado: autoplay que não pegou no início, ou um pause
-        // real em qualquer ponto da reprodução (interrupção do sistema —
-        // Modo de Baixo Consumo no iOS, navegador embutido do Instagram/
-        // Facebook, etc.) — nunca por buffering normal, ver nota acima.
+        // Vídeo travado: autoplay que não pegou no início, buffering que
+        // começou e não terminou sozinho, ou um pause real (interrupção do
+        // sistema — Modo de Baixo Consumo no iOS, navegador embutido do
+        // Instagram/Facebook, etc.) — nunca por buffering curto e normal.
         <button
           type="button"
           onClick={handleManualPlay}

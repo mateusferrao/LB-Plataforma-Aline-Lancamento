@@ -9,6 +9,7 @@ const SEE = [
   "Por que a mesma técnica dá resultados diferentes em cada rosto.",
   "O que a dissecção revela sobre os planos e muda a sua mão.",
   "Onde ficam os limites que fazem a sua mão parar de hesitar.",
+  "O plano exato de como o preenchedor se acomoda na face depois de aplicado, não a expectativa do rótulo.",
 ];
 
 export function Solution() {

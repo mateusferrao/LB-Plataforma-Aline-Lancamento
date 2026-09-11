@@ -39,7 +39,7 @@ ao checkout do lote atual. (Quer que eu te mande o link?)
 
 ### 6. Tem gravação ou replay?
 Não. A aula é **ao vivo, uma vez só, sem gravação**. E isso é de propósito: o valor está em estar
-presente — você traz o seu caso e recebe resposta na hora, olhando a estrutura real.
+presente. Você tira suas dúvidas na hora e sai com uma leitura nova da anatomia.
 
 ### 7. Dá certificado?
 Essa aula **não emite certificado**. O que ela te entrega é prático e vale mais no dia a dia: uma
@@ -64,9 +64,8 @@ parte do que está embaixo da pele, então serve pra quem já aplica e pra quem 
 certo.
 
 ### 12. Por que a aula é ao vivo e sem gravação?
-Porque o valor está em estar presente. Você traz o seu caso e recebe resposta na hora, olhando pra
-estrutura real. Quem entra sai com decisão de conduta na mão, não com mais um vídeo pra assistir um
-dia.
+Porque o valor está em estar presente. Ao vivo, você tira suas dúvidas na hora e sai com uma leitura
+nova da anatomia, não com mais um vídeo pra assistir um dia.
 
 ### 13. Por que ver a anatomia por dissecção muda o meu resultado?
 Porque atlas e boneco achatam o que é tridimensional. Ver por dentro é o que separa quem repete
@@ -81,7 +80,7 @@ por e-mail.
 São **11+ anos de clínica**, **1000+ alunas formadas** e **30+ certificações**. Ela fez o primeiro
 curso de dissecção em 2018, passou por uma temporada de dissecção nos Estados Unidos e hoje dá
 cursos internacionais de anatomia na Europa. Fundou a Filgueiras Academy e a pós em Estética
-Avançada e Integrativa (selo MEC), e atende em Belo Horizonte e Praia Grande.
+Avançada e Integrativa, e atende em Belo Horizonte e Praia Grande.
 
 ### 16. Como falo com o suporte?
 Pelo **WhatsApp +55 31 95349-1799** ou pelo **e-mail suporte.alinefilgueiras@gmail.com.br**.

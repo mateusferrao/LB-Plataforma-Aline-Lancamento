@@ -6,7 +6,7 @@ import { Reveal } from "@/components/Reveal";
 const FAQS = [
   {
     q: "Por que a aula é ao vivo e sem gravação?",
-    a: "Porque o valor está em estar presente. Você traz o seu caso e recebe resposta na hora, olhando pra estrutura real. Quem entra sai com decisão de conduta na mão, não com mais um vídeo pra assistir um dia.",
+    a: "Porque o valor está em estar presente. Ao vivo, você tira suas dúvidas na hora e sai com uma leitura nova da anatomia, não com mais um vídeo pra assistir um dia.",
   },
   {
     q: "O que eu vou levar pra minha cadeira já na próxima semana?",

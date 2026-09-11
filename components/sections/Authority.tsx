@@ -41,8 +41,7 @@ export function Authority() {
               Depois vieram uma temporada de dissecção nos Estados Unidos e os cursos
               internacionais de anatomia que ela dá hoje na Europa. São onze anos resolvendo
               os casos mais complexos da estética. Ela fundou a Filgueiras Academy e a pós em
-              Estética Avançada e Integrativa, com selo MEC, e atende em Belo Horizonte e
-              Praia Grande.
+              Estética Avançada e Integrativa, e atende em Belo Horizonte e Praia Grande.
             </p>
 
             <div className="mt-7 grid grid-cols-2 gap-px overflow-hidden rounded-[4px] border border-line bg-line">
