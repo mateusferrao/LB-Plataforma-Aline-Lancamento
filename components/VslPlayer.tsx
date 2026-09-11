@@ -18,13 +18,16 @@ const VIMEO_SRC =
 // travaria o botão de compra do Hero indefinidamente.
 const SAFETY_TIMEOUT_MS = 3 * 60 * 1000;
 
-// Autoplay mudo pode falhar silenciosamente em alguns celulares (Modo de
-// Baixo Consumo no iOS, configuração de "Reprodução Automática" do Safari,
-// navegador embutido do Instagram/Facebook) — sem isso, o visitante fica
-// com um frame congelado e nenhuma forma de destravar o vídeo. Se o `play`
-// não chegar nesse tempo depois do player ficar pronto, mostramos um botão
-// de play manual.
-const AUTOPLAY_GRACE_MS = 1500;
+// O vídeo pode travar a qualquer momento, não só no início (autoplay que
+// nunca pega, buffering, uma interrupção do sistema — Modo de Baixo
+// Consumo no iOS, navegador embutido do Instagram/Facebook, etc.). Sem
+// alguma forma de detectar isso, o visitante fica com um frame congelado e
+// nenhuma forma de destravar o vídeo. Um "vigia" contínuo checa se o
+// player fez progresso real (evento `timeupdate`) nos últimos N ms; se não
+// fez, mostra o botão de play manual — e continua checando durante todo o
+// vídeo, não só nos primeiros segundos.
+const STUCK_THRESHOLD_MS = 2000;
+const STUCK_CHECK_INTERVAL_MS = 500;
 
 export function VslPlayer({ className = "" }: { className?: string }) {
   // O container é um <div> persistente; o <iframe> em si é criado à mão
@@ -45,7 +48,7 @@ export function VslPlayer({ className = "" }: { className?: string }) {
     complete: false,
   });
   const [muted, setMuted] = useState(true);
-  const [autoplayFailed, setAutoplayFailed] = useState(false);
+  const [stuck, setStuck] = useState(false);
 
   useEffect(() => {
     const container = containerRef.current;
@@ -61,12 +64,22 @@ export function VslPlayer({ className = "" }: { className?: string }) {
 
     const player = new Player(el);
     playerRef.current = player;
-    let graceTimer: number | undefined;
+    let lastProgressAt = Date.now();
+    let wasStuck = false;
+    let stuckCheck: number | undefined;
+
+    function trackStuck() {
+      if (wasStuck) return;
+      wasStuck = true;
+      trackCustom("VslPlaybackStuck", {});
+      gaEvent("vsl_playback_stuck", {});
+    }
 
     function unlock(reason: "complete" | "load_error" | "player_error" | "timeout") {
       if (fired.current.complete) return;
       fired.current.complete = true;
       window.clearTimeout(safety);
+      window.clearInterval(stuckCheck);
       if (reason === "complete") {
         trackCustom("VslComplete", {});
         gaEvent("vsl_complete", {});
@@ -84,27 +97,44 @@ export function VslPlayer({ className = "" }: { className?: string }) {
     player
       .ready()
       .then(() => {
-        // Se o `play` (autoplay) não chegar nesse prazo, o navegador
-        // provavelmente bloqueou — mostra o botão de play manual.
-        graceTimer = window.setTimeout(() => {
-          if (fired.current.play) return;
-          setAutoplayFailed(true);
-          trackCustom("VslAutoplayFailed", {});
-          gaEvent("vsl_autoplay_failed", {});
-        }, AUTOPLAY_GRACE_MS);
+        lastProgressAt = Date.now();
+        // Vigia contínuo: se não houve progresso real (timeupdate) nos
+        // últimos STUCK_THRESHOLD_MS, o vídeo está travado — mostra o
+        // botão de play manual. Continua rodando durante todo o vídeo, não
+        // só nos primeiros segundos, e para quando o vídeo termina.
+        stuckCheck = window.setInterval(() => {
+          if (fired.current.complete) return;
+          const isStuck = Date.now() - lastProgressAt > STUCK_THRESHOLD_MS;
+          if (isStuck) trackStuck();
+          setStuck(isStuck);
+        }, STUCK_CHECK_INTERVAL_MS);
       })
       .catch(() => unlock("load_error"));
 
     player.on("play", () => {
-      window.clearTimeout(graceTimer);
-      setAutoplayFailed(false);
+      lastProgressAt = Date.now();
+      wasStuck = false;
+      setStuck(false);
       if (fired.current.play) return;
       fired.current.play = true;
       trackCustom("VslPlay", {});
       gaEvent("vsl_play", {});
     });
 
+    // A página nunca chama player.pause() sozinha (não há controles de
+    // pausa nossos) — qualquer pause é sempre uma interrupção inesperada
+    // (SO, navegador embutido, etc.), nunca uma ação intencional a
+    // ignorar. Marca travado na hora, sem esperar o vigia.
+    player.on("pause", () => {
+      if (fired.current.complete) return;
+      trackStuck();
+      setStuck(true);
+    });
+
     player.on("timeupdate", ({ seconds, duration, percent }) => {
+      lastProgressAt = Date.now();
+      wasStuck = false;
+      setStuck(false);
       if (duration > 0) setVslRemaining(duration - seconds);
       if (percent >= 0.25 && !fired.current.p25) {
         fired.current.p25 = true;
@@ -128,7 +158,7 @@ export function VslPlayer({ className = "" }: { className?: string }) {
 
     return () => {
       window.clearTimeout(safety);
-      window.clearTimeout(graceTimer);
+      window.clearInterval(stuckCheck);
       player.destroy().catch(() => {});
     };
   }, []);
@@ -172,10 +202,11 @@ export function VslPlayer({ className = "" }: { className?: string }) {
       className={`overflow-hidden rounded-[4px] border border-line-soft bg-surface ${className}`}
     >
       <div ref={containerRef} className="absolute inset-0" />
-      {autoplayFailed ? (
-        // Autoplay não pegou (comum em Modo de Baixo Consumo do iOS, em
-        // navegadores embutidos do Instagram/Facebook, etc.) — sem isso o
-        // vídeo fica congelado sem nenhuma forma de destravar.
+      {stuck ? (
+        // Vídeo travado (autoplay que não pegou, buffering, interrupção do
+        // sistema — Modo de Baixo Consumo no iOS, navegador embutido do
+        // Instagram/Facebook, etc.) — sem isso o vídeo fica congelado sem
+        // nenhuma forma de destravar, a qualquer momento da reprodução.
         <button
           type="button"
           onClick={handleManualPlay}
