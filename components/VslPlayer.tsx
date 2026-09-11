@@ -108,14 +108,15 @@ export function VslPlayer({ className = "" }: { className?: string }) {
     };
   }, []);
 
-  function handleUnmute() {
+  function toggleMute() {
     const player = playerRef.current;
     if (!player) return;
+    const next = !muted;
     player
-      .setMuted(false)
+      .setMuted(next)
       .then(() => {
-        setMuted(false);
-        if (!fired.current.unmuted) {
+        setMuted(next);
+        if (!next && !fired.current.unmuted) {
           fired.current.unmuted = true;
           trackCustom("VslUnmuted", {});
           gaEvent("vsl_unmuted", {});
@@ -129,19 +130,21 @@ export function VslPlayer({ className = "" }: { className?: string }) {
       className={`overflow-hidden rounded-[4px] border border-line-soft bg-surface ${className}`}
     >
       <div ref={containerRef} className="absolute inset-0" />
-      {muted && (
-        <button
-          type="button"
-          onClick={handleUnmute}
-          className="absolute inset-x-0 bottom-4 z-10 mx-auto flex w-fit items-center gap-2.5 rounded-full bg-wine px-5 py-3 text-[13.5px] font-semibold text-on-wine shadow-lg transition-transform duration-150 hover:scale-105"
-        >
-          <span className="relative flex h-2.5 w-2.5 shrink-0" aria-hidden="true">
-            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-on-wine opacity-75" />
-            <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-on-wine" />
+      {/* Cobre o vídeo inteiro: clicar em qualquer ponto alterna mudo/com
+          som (clicar de novo depois de ativar o som volta a mutar). O
+          ícone só aparece enquanto o vídeo está mudo. */}
+      <button
+        type="button"
+        onClick={toggleMute}
+        aria-label={muted ? "Ativar som do vídeo" : "Silenciar vídeo"}
+        className="absolute inset-0 z-10 flex items-center justify-center"
+      >
+        {muted && (
+          <span className="flex h-16 w-16 items-center justify-center rounded-2xl bg-black/70 text-[28px] shadow-lg backdrop-blur-sm">
+            🔇
           </span>
-          🔊 Toque para ativar o som
-        </button>
-      )}
+        )}
+      </button>
     </div>
   );
 }
