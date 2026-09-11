@@ -67,6 +67,12 @@ export default function PoliticaDePrivacidade() {
                 Você pode bloquear ou apagar cookies nas configurações do seu navegador; a
                 página continua funcionando normalmente.
               </p>
+              <p className="mt-2">
+                O vídeo de apresentação desta página é exibido por meio do{" "}
+                <strong>Vimeo</strong> (Vimeo.com Inc.), que também pode usar cookies
+                próprios para reproduzir o player e medir a audiência do vídeo, conforme a
+                política de privacidade dele.
+              </p>
             </section>
 
             <section>

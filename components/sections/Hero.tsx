@@ -1,10 +1,9 @@
-import Image from "next/image";
 import { AnimatedNumber } from "@/components/AnimatedNumber";
 import { Container } from "@/components/Container";
 import { Countdown } from "@/components/Countdown";
 import { CtaButton } from "@/components/CtaButton";
 import { UrgenciaFina } from "@/components/UrgenciaFina";
-import { withBasePath } from "@/lib/basePath";
+import { VslPlayer } from "@/components/VslPlayer";
 
 export function Hero() {
   return (
@@ -33,7 +32,11 @@ export function Hero() {
 
             <Countdown className="mt-8 mb-8" />
 
-            <CtaButton showPrice className="w-full justify-center sm:w-auto sm:justify-start">
+            <CtaButton
+              showPrice
+              requireVsl
+              className="w-full justify-center sm:w-auto sm:justify-start"
+            >
               Quero minha vaga
             </CtaButton>
             <UrgenciaFina className="mt-3.5 text-[13.5px] tracking-[0.02em] text-fg-faint" />
@@ -45,15 +48,11 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="relative mx-auto aspect-[4/5] w-full max-w-[420px] md:aspect-auto md:h-full">
-            <Image
-              src={withBasePath("/images/aline-hero-marsala-v2.jpg")}
-              alt="Dra. Aline Filgueiras"
-              fill
-              priority
-              sizes="(min-width: 768px) 420px, 90vw"
-              className="foto-funde-fundo object-cover"
-            />
+          {/* No mobile (1 coluna) o vídeo vem ANTES do texto/CTA — o botão diz
+              "assista o vídeo acima", então ele precisa estar acima de verdade.
+              No desktop (grid 2 colunas) volta pra direita, ordem natural. */}
+          <div className="relative order-first mx-auto aspect-[9/16] w-full max-w-[420px] md:order-none md:self-center">
+            <VslPlayer className="absolute inset-0" />
           </div>
         </div>
       </Container>
