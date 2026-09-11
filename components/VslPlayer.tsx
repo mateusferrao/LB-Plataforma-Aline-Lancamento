@@ -9,8 +9,16 @@ import { markVslCompleted, setVslRemaining } from "@/lib/useVslGate";
 // options+url) — isso evita um round-trip extra ao oEmbed do Vimeo antes de
 // começar a carregar o vídeo, que é o que fazia o player demorar a aparecer.
 // O navegador já começa a baixar o iframe assim que o HTML é parseado.
+//
+// initial_quality=720p: sem isso o Vimeo tenta abrir direto numa qualidade
+// mais alta (a "auto" inicial tende a mirar alto), e num vídeo vertical que
+// aqui é exibido num box pequeno (~400px de largura), isso não faz
+// diferença visual nenhuma — só aumenta a chance de travar pra
+// rebufferizar logo nos primeiros segundos, mesmo em conexão boa. Depois
+// que estabiliza, o player continua ajustando a qualidade sozinho (ABR)
+// pra cima se sobrar banda.
 const VIMEO_SRC =
-  "https://player.vimeo.com/video/1225929589?h=5dcbd0a4f6&autoplay=1&muted=1&playsinline=1&background=0&controls=0&title=0&byline=0&portrait=0&dnt=1&preload=auto";
+  "https://player.vimeo.com/video/1225929589?h=5dcbd0a4f6&autoplay=1&muted=1&playsinline=1&background=0&controls=0&title=0&byline=0&portrait=0&dnt=1&preload=auto&initial_quality=720p";
 
 // Se o player do Vimeo falhar (bloqueador de anúncio, instabilidade) ou o
 // evento `ended` nunca chegar por algum motivo, libera o CTA de qualquer
