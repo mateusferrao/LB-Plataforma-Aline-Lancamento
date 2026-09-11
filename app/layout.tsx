@@ -59,6 +59,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${fraunces.variable} ${inter.variable}`}
       style={{ colorScheme: "dark" }}
     >
+      <head>
+        {/* Aquece a conexão com o Vimeo antes do Hero montar o iframe da
+            VSL, pra não perder tempo com DNS/TLS quando o vídeo começa. */}
+        <link rel="preconnect" href="https://player.vimeo.com" />
+        <link rel="preconnect" href="https://i.vimeocdn.com" crossOrigin="anonymous" />
+      </head>
       <body className="min-h-screen bg-bg font-sans text-fg antialiased">
         {/* Fallback sem JS: nunca esconder conteúdo se o reveal não puder rodar */}
         <noscript>

@@ -10,13 +10,21 @@ import { markVslCompleted, setVslRemaining } from "@/lib/useVslGate";
 // começar a carregar o vídeo, que é o que fazia o player demorar a aparecer.
 // O navegador já começa a baixar o iframe assim que o HTML é parseado.
 const VIMEO_SRC =
-  "https://player.vimeo.com/video/1225929589?h=5dcbd0a4f6&autoplay=1&muted=1&playsinline=1&background=0&controls=0&title=0&byline=0&portrait=0&dnt=1";
+  "https://player.vimeo.com/video/1225929589?h=5dcbd0a4f6&autoplay=1&muted=1&playsinline=1&background=0&controls=0&title=0&byline=0&portrait=0&dnt=1&preload=auto";
 
 // Se o player do Vimeo falhar (bloqueador de anúncio, instabilidade) ou o
 // evento `ended` nunca chegar por algum motivo, libera o CTA de qualquer
 // forma depois desse tempo. Sem essa salvaguarda, uma falha de terceiro
 // travaria o botão de compra do Hero indefinidamente.
 const SAFETY_TIMEOUT_MS = 3 * 60 * 1000;
+
+// Autoplay mudo pode falhar silenciosamente em alguns celulares (Modo de
+// Baixo Consumo no iOS, configuração de "Reprodução Automática" do Safari,
+// navegador embutido do Instagram/Facebook) — sem isso, o visitante fica
+// com um frame congelado e nenhuma forma de destravar o vídeo. Se o `play`
+// não chegar nesse tempo depois do player ficar pronto, mostramos um botão
+// de play manual.
+const AUTOPLAY_GRACE_MS = 1500;
 
 export function VslPlayer({ className = "" }: { className?: string }) {
   // O container é um <div> persistente; o <iframe> em si é criado à mão
@@ -37,6 +45,7 @@ export function VslPlayer({ className = "" }: { className?: string }) {
     complete: false,
   });
   const [muted, setMuted] = useState(true);
+  const [autoplayFailed, setAutoplayFailed] = useState(false);
 
   useEffect(() => {
     const container = containerRef.current;
@@ -52,6 +61,7 @@ export function VslPlayer({ className = "" }: { className?: string }) {
 
     const player = new Player(el);
     playerRef.current = player;
+    let graceTimer: number | undefined;
 
     function unlock(reason: "complete" | "load_error" | "player_error" | "timeout") {
       if (fired.current.complete) return;
@@ -71,9 +81,23 @@ export function VslPlayer({ className = "" }: { className?: string }) {
 
     const safety = window.setTimeout(() => unlock("timeout"), SAFETY_TIMEOUT_MS);
 
-    player.ready().catch(() => unlock("load_error"));
+    player
+      .ready()
+      .then(() => {
+        // Se o `play` (autoplay) não chegar nesse prazo, o navegador
+        // provavelmente bloqueou — mostra o botão de play manual.
+        graceTimer = window.setTimeout(() => {
+          if (fired.current.play) return;
+          setAutoplayFailed(true);
+          trackCustom("VslAutoplayFailed", {});
+          gaEvent("vsl_autoplay_failed", {});
+        }, AUTOPLAY_GRACE_MS);
+      })
+      .catch(() => unlock("load_error"));
 
     player.on("play", () => {
+      window.clearTimeout(graceTimer);
+      setAutoplayFailed(false);
       if (fired.current.play) return;
       fired.current.play = true;
       trackCustom("VslPlay", {});
@@ -104,9 +128,27 @@ export function VslPlayer({ className = "" }: { className?: string }) {
 
     return () => {
       window.clearTimeout(safety);
+      window.clearTimeout(graceTimer);
       player.destroy().catch(() => {});
     };
   }, []);
+
+  function handleManualPlay() {
+    const player = playerRef.current;
+    if (!player) return;
+    player.play().catch(() => {});
+    player
+      .setMuted(false)
+      .then(() => {
+        setMuted(false);
+        if (!fired.current.unmuted) {
+          fired.current.unmuted = true;
+          trackCustom("VslUnmuted", {});
+          gaEvent("vsl_unmuted", {});
+        }
+      })
+      .catch(() => {});
+  }
 
   function toggleMute() {
     const player = playerRef.current;
@@ -130,21 +172,40 @@ export function VslPlayer({ className = "" }: { className?: string }) {
       className={`overflow-hidden rounded-[4px] border border-line-soft bg-surface ${className}`}
     >
       <div ref={containerRef} className="absolute inset-0" />
-      {/* Cobre o vídeo inteiro: clicar em qualquer ponto alterna mudo/com
-          som (clicar de novo depois de ativar o som volta a mutar). O
-          ícone só aparece enquanto o vídeo está mudo. */}
-      <button
-        type="button"
-        onClick={toggleMute}
-        aria-label={muted ? "Ativar som do vídeo" : "Silenciar vídeo"}
-        className="absolute inset-0 z-10 flex items-center justify-center"
-      >
-        {muted && (
-          <span className="flex h-16 w-16 items-center justify-center rounded-2xl bg-black/70 text-[28px] shadow-lg backdrop-blur-sm">
-            🔇
+      {autoplayFailed ? (
+        // Autoplay não pegou (comum em Modo de Baixo Consumo do iOS, em
+        // navegadores embutidos do Instagram/Facebook, etc.) — sem isso o
+        // vídeo fica congelado sem nenhuma forma de destravar.
+        <button
+          type="button"
+          onClick={handleManualPlay}
+          aria-label="Tocar vídeo"
+          className="absolute inset-0 z-10 flex items-center justify-center"
+        >
+          <span className="flex items-center gap-2 rounded-2xl bg-black/70 px-5 py-3 text-white shadow-lg backdrop-blur-sm">
+            <span className="text-[20px] leading-none" aria-hidden="true">
+              ▶️
+            </span>
+            <span className="text-[13.5px] font-semibold">Toque para assistir</span>
           </span>
-        )}
-      </button>
+        </button>
+      ) : (
+        // Cobre o vídeo inteiro: clicar em qualquer ponto alterna mudo/com
+        // som (clicar de novo depois de ativar o som volta a mutar). O
+        // ícone só aparece enquanto o vídeo está mudo.
+        <button
+          type="button"
+          onClick={toggleMute}
+          aria-label={muted ? "Ativar som do vídeo" : "Silenciar vídeo"}
+          className="absolute inset-0 z-10 flex items-center justify-center"
+        >
+          {muted && (
+            <span className="flex h-16 w-16 items-center justify-center rounded-2xl bg-black/70 text-[28px] shadow-lg backdrop-blur-sm">
+              🔇
+            </span>
+          )}
+        </button>
+      )}
     </div>
   );
 }
