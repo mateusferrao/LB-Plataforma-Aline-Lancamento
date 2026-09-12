@@ -29,7 +29,10 @@ export function OfertaPreco() {
       <div className="my-1.5 font-serif text-[3.5rem] leading-none sm:text-[3.7rem]">
         {montado && lote ? lote.priceLabel : " "}
       </div>
-      <div className="min-h-[1.2em] text-[0.95rem] opacity-90">
+      {montado && lote && (
+        <div className="text-[0.85rem] opacity-75">ou em até 12x no cartão</div>
+      )}
+      <div className="mt-1 min-h-[1.2em] text-[0.95rem] opacity-90">
         {montado && lote
           ? proximo
             ? `Preço sobe em breve`
