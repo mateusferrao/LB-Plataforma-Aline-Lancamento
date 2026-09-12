@@ -36,6 +36,7 @@ export function FinalCta() {
         <CtaButton showPrice requireVsl className="mt-8 w-full justify-center sm:w-auto">
           Quero minha vaga
         </CtaButton>
+        <p className="mt-2 text-[0.85rem] text-fg-faint">ou em até 12x no cartão</p>
         <UrgenciaFina className="mt-3.5 text-[13.5px] tracking-[0.02em] text-fg-faint" />
       </Container>
     </section>

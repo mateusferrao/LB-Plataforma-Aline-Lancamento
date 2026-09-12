@@ -36,6 +36,10 @@ const FAQS = [
     q: "E se não for pra mim?",
     a: "Você tem 7 dias após a compra pra pedir reembolso do ingresso, por WhatsApp ou e-mail. Sem perguntas.",
   },
+  {
+    q: "Posso parcelar?",
+    a: "Pode: no cartão em até 12x (com a taxa do gateway) ou à vista no Pix. As opções aparecem no checkout, direto no site.",
+  },
 ];
 
 export function Faq() {
