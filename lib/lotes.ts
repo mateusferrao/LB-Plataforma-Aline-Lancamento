@@ -7,6 +7,9 @@
 //   - As datas são no fuso de Brasília (o "-03:00" no final garante isso).
 //   - `endsAt` de um lote deve ser igual ao `startsAt` do próximo (sem buraco).
 //   - `price` é só número (usado no tracking); `priceLabel` é o texto exibido.
+//   - `parcela12x` é o valor da parcela em 12x direto da Ticto (com a taxa do
+//     gateway) — não é calculado aqui, vem pronto de lá. Atualize junto se o
+//     preço do lote mudar.
 //   - `checkoutUrl` é o link do checkout Ticto daquele lote.
 //   - Fora de qualquer lote (antes do 1º ou depois do último), o botão bloqueia.
 // ============================================================================
@@ -15,6 +18,7 @@ export type Lote = {
   n: number;
   price: number;
   priceLabel: string;
+  parcela12x: string;
   startsAt: string; // ISO com fuso de Brasília, ex: "2026-08-12T00:00:00-03:00"
   endsAt: string;
   checkoutUrl: string;
@@ -25,6 +29,7 @@ export const LOTES: Lote[] = [
     n: 1,
     price: 67,
     priceLabel: "R$67",
+    parcela12x: "R$6,92",
     startsAt: "2026-09-12T00:00:00-03:00",
     endsAt: "2026-09-15T20:00:00-03:00",
     checkoutUrl: "https://payment.ticto.app/O072A87DC",
@@ -33,6 +38,7 @@ export const LOTES: Lote[] = [
     n: 2,
     price: 77,
     priceLabel: "R$77",
+    parcela12x: "R$7,96",
     startsAt: "2026-09-15T20:00:00-03:00",
     endsAt: "2026-09-22T20:00:00-03:00",
     checkoutUrl: "https://payment.ticto.app/O7D6423E8",
@@ -41,6 +47,7 @@ export const LOTES: Lote[] = [
     n: 3,
     price: 87,
     priceLabel: "R$87",
+    parcela12x: "R$8,99",
     startsAt: "2026-09-22T20:00:00-03:00",
     endsAt: "2026-09-29T20:00:00-03:00",
     checkoutUrl: "https://payment.ticto.app/OA9EEDED2",
@@ -49,6 +56,7 @@ export const LOTES: Lote[] = [
     n: 4,
     price: 97,
     priceLabel: "R$97",
+    parcela12x: "R$10,03",
     startsAt: "2026-09-29T20:00:00-03:00",
     endsAt: "2026-10-06T20:00:00-03:00",
     checkoutUrl: "https://payment.ticto.app/O4F95B1D3",

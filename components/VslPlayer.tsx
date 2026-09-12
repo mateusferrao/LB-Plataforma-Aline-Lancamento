@@ -49,6 +49,15 @@ const READY_TIMEOUT_MS = 6000;
 // caso relatado: o vídeo mostra um frame real e fica parado nele).
 const BUFFER_STUCK_MS = 7000;
 
+// Rede de segurança complementar: em alguns casos a conexão trava de um
+// jeito que nem dispara `bufferstart` (não é buffering "ativo" que o
+// player reconhece, é mais como a conexão simplesmente parar de responder
+// sem o player notar). Por isso também cronometramos silêncio TOTAL de
+// progresso (`timeupdate`), com um prazo bem mais generoso que faria
+// sentido pra buffering normal — nenhum buffering saudável deveria levar
+// 12s pra se resolver sozinho.
+const SILENCE_STUCK_MS = 12000;
+
 export function VslPlayer({ className = "" }: { className?: string }) {
   // O container é um <div> persistente; o <iframe> em si é criado à mão
   // dentro do efeito (em vez de JSX fixo) porque o destroy() do SDK do
@@ -86,12 +95,23 @@ export function VslPlayer({ className = "" }: { className?: string }) {
     playerRef.current = player;
     let graceTimer: number | undefined;
     let bufferTimer: number | undefined;
+    let silenceCheck: number | undefined;
     let readyTimedOut = false;
+    let stuckNotified = false;
+    let lastProgressAt = Date.now();
 
     function showStuck() {
       setStuck(true);
+      if (stuckNotified) return;
+      stuckNotified = true;
       trackCustom("VslPlaybackStuck", {});
       gaEvent("vsl_playback_stuck", {});
+    }
+
+    function clearStuck() {
+      setStuck(false);
+      stuckNotified = false;
+      lastProgressAt = Date.now();
     }
 
     function clearBufferTimer() {
@@ -104,6 +124,7 @@ export function VslPlayer({ className = "" }: { className?: string }) {
       fired.current.complete = true;
       window.clearTimeout(safety);
       window.clearTimeout(graceTimer);
+      window.clearInterval(silenceCheck);
       clearBufferTimer();
       if (reason === "complete") {
         trackCustom("VslComplete", {});
@@ -137,6 +158,14 @@ export function VslPlayer({ className = "" }: { className?: string }) {
           if (fired.current.play) return;
           showStuck();
         }, AUTOPLAY_GRACE_MS);
+
+        // Rede de segurança complementar ao bufferstart/bufferend — ver
+        // nota de SILENCE_STUCK_MS acima.
+        lastProgressAt = Date.now();
+        silenceCheck = window.setInterval(() => {
+          if (fired.current.complete) return;
+          if (Date.now() - lastProgressAt > SILENCE_STUCK_MS) showStuck();
+        }, 2000);
       })
       .catch(() => {
         window.clearTimeout(readyTimeout);
@@ -146,7 +175,7 @@ export function VslPlayer({ className = "" }: { className?: string }) {
     player.on("play", () => {
       window.clearTimeout(graceTimer);
       clearBufferTimer();
-      setStuck(false);
+      clearStuck();
       if (fired.current.play) return;
       fired.current.play = true;
       trackCustom("VslPlay", {});
@@ -173,12 +202,12 @@ export function VslPlayer({ className = "" }: { className?: string }) {
 
     player.on("bufferend", () => {
       clearBufferTimer();
-      setStuck(false);
+      clearStuck();
     });
 
     player.on("timeupdate", ({ seconds, duration, percent }) => {
       clearBufferTimer();
-      setStuck(false);
+      clearStuck();
       if (duration > 0) setVslRemaining(duration - seconds);
       if (percent >= 0.25 && !fired.current.p25) {
         fired.current.p25 = true;
@@ -204,6 +233,7 @@ export function VslPlayer({ className = "" }: { className?: string }) {
       window.clearTimeout(safety);
       window.clearTimeout(readyTimeout);
       window.clearTimeout(graceTimer);
+      window.clearInterval(silenceCheck);
       clearBufferTimer();
       player.destroy().catch(() => {});
     };

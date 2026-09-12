@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Container } from "@/components/Container";
 import { CtaButton } from "@/components/CtaButton";
+import { ParcelaLine } from "@/components/ParcelaLine";
 import { Reveal } from "@/components/Reveal";
 import { withBasePath } from "@/lib/basePath";
 
@@ -72,6 +73,7 @@ export function Solution() {
               >
                 Quero minha vaga
               </CtaButton>
+              <ParcelaLine className="mt-2 text-center sm:text-left" />
             </Reveal>
           </div>
         </Container>

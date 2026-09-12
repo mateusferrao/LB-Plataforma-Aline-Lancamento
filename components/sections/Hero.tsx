@@ -2,6 +2,7 @@ import { AnimatedNumber } from "@/components/AnimatedNumber";
 import { Container } from "@/components/Container";
 import { Countdown } from "@/components/Countdown";
 import { CtaButton } from "@/components/CtaButton";
+import { ParcelaLine } from "@/components/ParcelaLine";
 import { UrgenciaFina } from "@/components/UrgenciaFina";
 import { VslPlayer } from "@/components/VslPlayer";
 
@@ -39,6 +40,7 @@ export function Hero() {
             >
               Quero minha vaga
             </CtaButton>
+            <ParcelaLine className="mt-2 text-center sm:text-left" />
             <UrgenciaFina className="mt-3.5 text-[13.5px] tracking-[0.02em] text-fg-faint" />
 
             <div className="mt-10 grid grid-cols-3 gap-4 border-t border-line pt-7 sm:gap-7">
