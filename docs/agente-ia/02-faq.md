@@ -1,7 +1,7 @@
 # FAQ — Agente de IA · Aula "Por Dentro da Face"
 
 > Respostas prontas para o agente usar via WhatsApp. Tom de conversão, factuais, sem inventar.
-> Fatos que mudam por data (preço/lote) devem ser confirmados no site quando houver dúvida.
+> As inscrições encerram na hora da aula (06/10/2026, 20h) — confirme no site quando houver dúvida.
 > Regra geral: o agente **não vende direto** — na intenção de compra, **encaminha para o site**
 > `https://live.alinefilgueiras.com.br`.
 
@@ -18,16 +18,9 @@ presencialmente, numa noite só.
 minutos** de duração.
 
 ### 3. Quanto custa?
-O ingresso é por **lotes** e o preço sobe conforme o lote:
-
-| Lote | Preço | Vigência |
-|------|-------|----------|
-| 1 | R$67 | até 30/08/2026 |
-| 2 | R$77 | até 07/09/2026 |
-| 3 | R$87 | até 15/09/2026 |
-| 4 | R$97 | até 06/10/2026, 23h59 |
-
-Garantindo mais cedo, você paga o menor valor. O preço vigente aparece sempre no site.
+O ingresso custa **R$67**, valor único até a chegada da aula (06/10/2026, 20h). Não sobe por
+lote — mas as inscrições encerram na hora da aula, então quem deixar pra última hora corre o
+risco de não conseguir mais garantir. O preço e o contador até a aula aparecem sempre no site.
 
 ### 4. Quais as formas de pagamento? Posso parcelar?
 Sim: **cartão de crédito em até 12x** (com a taxa do gateway) ou **Pix** à vista. As opções
@@ -35,7 +28,7 @@ aparecem no checkout, direto no site.
 
 ### 5. Como eu compro?
 A compra é feita **no site**: `https://live.alinefilgueiras.com.br`. É só escolher, que ele te leva
-ao checkout do lote atual. (Quer que eu te mande o link?)
+ao checkout. (Quer que eu te mande o link?)
 
 ### 6. Tem gravação ou replay?
 Não. A aula é **ao vivo, uma vez só, sem gravação**. E isso é de propósito: o valor está em estar
