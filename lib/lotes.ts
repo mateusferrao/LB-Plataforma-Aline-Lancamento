@@ -12,6 +12,9 @@
 //     preço do lote mudar.
 //   - `checkoutUrl` é o link do checkout Ticto daquele lote.
 //   - Fora de qualquer lote (antes do 1º ou depois do último), o botão bloqueia.
+//
+//  Dinâmica atual: um único lote (R$67) vale do início das inscrições até a
+//  chegada da aula (LIVE_DATE_ISO) — sem virada de preço no meio do caminho.
 // ============================================================================
 
 export type Lote = {
@@ -31,40 +34,13 @@ export const LOTES: Lote[] = [
     priceLabel: "R$67",
     parcela12x: "R$6,92",
     startsAt: "2026-09-12T00:00:00-03:00",
-    endsAt: "2026-09-15T20:00:00-03:00",
-    checkoutUrl: "https://payment.ticto.app/O072A87DC",
-  },
-  {
-    n: 2,
-    price: 77,
-    priceLabel: "R$77",
-    parcela12x: "R$7,96",
-    startsAt: "2026-09-15T20:00:00-03:00",
-    endsAt: "2026-09-22T20:00:00-03:00",
-    checkoutUrl: "https://payment.ticto.app/O7D6423E8",
-  },
-  {
-    n: 3,
-    price: 87,
-    priceLabel: "R$87",
-    parcela12x: "R$8,99",
-    startsAt: "2026-09-22T20:00:00-03:00",
-    endsAt: "2026-09-29T20:00:00-03:00",
-    checkoutUrl: "https://payment.ticto.app/OA9EEDED2",
-  },
-  {
-    n: 4,
-    price: 97,
-    priceLabel: "R$97",
-    parcela12x: "R$10,03",
-    startsAt: "2026-09-29T20:00:00-03:00",
     endsAt: "2026-10-06T20:00:00-03:00",
-    checkoutUrl: "https://payment.ticto.app/O4F95B1D3",
+    checkoutUrl: "https://payment.ticto.app/O072A87DC",
   },
 ];
 
-// Data/hora da aula ao vivo (20h). Usada em textos e no calendário — não precisa
-// ser igual ao endsAt do L4 (o checkout do último lote fica aberto até 23:59).
+// Data/hora da aula ao vivo (20h). Usada em textos, no calendário e como alvo
+// do contador regressivo — hoje coincide com o endsAt do lote único.
 export const LIVE_DATE_ISO = "2026-10-06T20:00:00-03:00";
 
 // Total de lotes, para o rótulo "Lote X de N".

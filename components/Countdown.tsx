@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { agora, LOTE_TETO, type Lote } from "@/lib/lotes";
+import { agora, LIVE_DATE_ISO } from "@/lib/lotes";
 import { useLoteAtivo } from "@/lib/useLoteAtivo";
 
 type Remaining = { days: number; hours: number; minutes: number; seconds: number };
@@ -27,20 +27,6 @@ const UNITS: { key: keyof Remaining; label: string }[] = [
   { key: "seconds", label: "seg" },
 ];
 
-// Legenda acima dos tiles conforme o lote.
-function legenda(lote: Lote | null, proximo: Lote | null): string {
-  if (lote && !proximo) return "As inscrições encerram em";
-  return "O preço sobe em";
-}
-
-// Subtexto: preço atual + teto. No último lote (teto) a mensagem vira escassez
-// de tempo (encerramento), não mais de preço.
-function subtexto(lote: Lote | null, proximo: Lote | null): string {
-  if (!lote) return "";
-  if (!proximo) return "Último lote. As inscrições estão encerrando.";
-  return `${lote.priceLabel} somente por enquanto.`;
-}
-
 export function Countdown({
   className = "",
   align = "left",
@@ -48,26 +34,24 @@ export function Countdown({
   className?: string;
   align?: "left" | "center";
 }) {
-  const { lote, proximo, montado } = useLoteAtivo();
-  // Alvo dos tiles = fim do lote ativo; "--" antes de montar (evita mismatch).
+  const { lote, montado } = useLoteAtivo();
+  // Alvo dos tiles = chegada da aula ao vivo, fixo (não depende do lote ativo).
   const [remaining, setRemaining] = useState<Remaining | null>(null);
 
   useEffect(() => {
-    if (!lote) {
-      setRemaining(null);
-      return;
-    }
-    const tick = () => setRemaining(getRemaining(lote.endsAt));
+    const tick = () => setRemaining(getRemaining(LIVE_DATE_ISO));
     tick();
     const id = setInterval(tick, 1000);
     return () => clearInterval(id);
-  }, [lote]);
+  }, []);
 
   const alignCls = align === "center" ? "items-center text-center" : "items-start";
   // Menos de 24h restantes (days === 0): dígitos no vermelho do botão pra reforçar urgência.
   const urgente = remaining !== null && remaining.days === 0;
+  // Fora da janela de inscrições: antes de abrir ou depois da aula já ter chegado.
+  const encerrado = montado && !lote && agora() >= Date.parse(LIVE_DATE_ISO);
 
-  if (montado && !lote && !proximo) {
+  if (montado && !lote && !encerrado) {
     return (
       <div className={`flex flex-col gap-3 ${alignCls} ${className}`}>
         <p className="font-serif text-[1.5rem] leading-snug text-fg">
@@ -77,8 +61,7 @@ export function Countdown({
     );
   }
 
-  // Encerrado (montou e sem lote): sem tiles, só o aviso.
-  if (montado && !lote) {
+  if (encerrado) {
     return (
       <div className={`flex flex-col gap-3 ${alignCls} ${className}`}>
         <p className="font-serif text-[1.5rem] leading-snug text-fg">
@@ -91,12 +74,12 @@ export function Countdown({
   return (
     <div className={`flex flex-col gap-3 ${alignCls} ${className}`}>
       <span className="text-[12px] font-semibold tracking-[0.18em] text-wine-ink uppercase">
-        {legenda(lote, proximo)}
+        A aula ao vivo começa em
       </span>
 
       <div
         className="flex gap-2.5"
-        aria-label="Contagem regressiva para o fim do lote"
+        aria-label="Contagem regressiva para a aula ao vivo"
       >
         {UNITS.map(({ key, label }) => (
           <div
@@ -119,7 +102,7 @@ export function Countdown({
 
       {/* Subtexto do preço; min-height reservada pra não pular na hidratação. */}
       <p className="min-h-[1.5em] max-w-[520px] text-[0.98rem] leading-[1.5] text-fg-soft">
-        {montado ? subtexto(lote, proximo) : ""}
+        {montado && lote ? `${lote.priceLabel} até a aula. Vagas por tempo limitado.` : ""}
       </p>
     </div>
   );
