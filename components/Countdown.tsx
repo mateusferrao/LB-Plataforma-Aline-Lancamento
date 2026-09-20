@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { agora } from "@/lib/lotes";
+import { agora, LIVE_DATE_ISO } from "@/lib/lotes";
 import { useLoteAtivo } from "@/lib/useLoteAtivo";
 
 type Remaining = { days: number; hours: number; minutes: number; seconds: number };
@@ -27,13 +27,6 @@ const UNITS: { key: keyof Remaining; label: string }[] = [
   { key: "seconds", label: "seg" },
 ];
 
-// Legenda acima dos tiles: contagem até a aula começar (fim do lote único
-// coincide com o horário da aula ao vivo).
-const LEGENDA = "A aula ao vivo começa em";
-
-// Subtexto: reforça que as inscrições encerram junto com o início da aula.
-const SUBTEXTO = "As inscrições encerram quando a aula começar.";
-
 export function Countdown({
   className = "",
   align = "left",
@@ -41,26 +34,24 @@ export function Countdown({
   className?: string;
   align?: "left" | "center";
 }) {
-  const { lote, antes, montado } = useLoteAtivo();
-  // Alvo dos tiles = fim do lote ativo; "--" antes de montar (evita mismatch).
+  const { lote, montado } = useLoteAtivo();
+  // Alvo dos tiles = chegada da aula ao vivo, fixo (não depende do lote ativo).
   const [remaining, setRemaining] = useState<Remaining | null>(null);
 
   useEffect(() => {
-    if (!lote) {
-      setRemaining(null);
-      return;
-    }
-    const tick = () => setRemaining(getRemaining(lote.endsAt));
+    const tick = () => setRemaining(getRemaining(LIVE_DATE_ISO));
     tick();
     const id = setInterval(tick, 1000);
     return () => clearInterval(id);
-  }, [lote]);
+  }, []);
 
   const alignCls = align === "center" ? "items-center text-center" : "items-start";
   // Menos de 24h restantes (days === 0): dígitos no vermelho do botão pra reforçar urgência.
   const urgente = remaining !== null && remaining.days === 0;
+  // Fora da janela de inscrições: antes de abrir ou depois da aula já ter chegado.
+  const encerrado = montado && !lote && agora() >= Date.parse(LIVE_DATE_ISO);
 
-  if (montado && !lote && antes) {
+  if (montado && !lote && !encerrado) {
     return (
       <div className={`flex flex-col gap-3 ${alignCls} ${className}`}>
         <p className="font-serif text-[1.5rem] leading-snug text-fg">
@@ -70,8 +61,7 @@ export function Countdown({
     );
   }
 
-  // Encerrado (montou e sem lote): sem tiles, só o aviso.
-  if (montado && !lote) {
+  if (encerrado) {
     return (
       <div className={`flex flex-col gap-3 ${alignCls} ${className}`}>
         <p className="font-serif text-[1.5rem] leading-snug text-fg">
@@ -84,12 +74,12 @@ export function Countdown({
   return (
     <div className={`flex flex-col gap-3 ${alignCls} ${className}`}>
       <span className="text-[12px] font-semibold tracking-[0.18em] text-wine-ink uppercase">
-        {LEGENDA}
+        A aula ao vivo começa em
       </span>
 
       <div
         className="flex gap-2.5"
-        aria-label="Contagem regressiva para o início da aula"
+        aria-label="Contagem regressiva para a aula ao vivo"
       >
         {UNITS.map(({ key, label }) => (
           <div
@@ -110,9 +100,9 @@ export function Countdown({
         ))}
       </div>
 
-      {/* min-height reservada pra não pular na hidratação. */}
+      {/* Subtexto do preço; min-height reservada pra não pular na hidratação. */}
       <p className="min-h-[1.5em] max-w-[520px] text-[0.98rem] leading-[1.5] text-fg-soft">
-        {montado ? SUBTEXTO : ""}
+        {montado && lote ? `${lote.priceLabel} até a aula. Vagas por tempo limitado.` : ""}
       </p>
     </div>
   );

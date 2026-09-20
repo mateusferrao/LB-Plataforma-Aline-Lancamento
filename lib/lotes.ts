@@ -5,14 +5,16 @@
 //
 //  Regras:
 //   - As datas são no fuso de Brasília (o "-03:00" no final garante isso).
-//   - Hoje só existe um lote (preço único até a aula) — o array continua
-//     no formato de lista pra suportar voltar a ter mais de um no futuro.
+//   - `endsAt` de um lote deve ser igual ao `startsAt` do próximo (sem buraco).
 //   - `price` é só número (usado no tracking); `priceLabel` é o texto exibido.
 //   - `parcela12x` é o valor da parcela em 12x direto da Ticto (com a taxa do
 //     gateway) — não é calculado aqui, vem pronto de lá. Atualize junto se o
 //     preço do lote mudar.
 //   - `checkoutUrl` é o link do checkout Ticto daquele lote.
 //   - Fora de qualquer lote (antes do 1º ou depois do último), o botão bloqueia.
+//
+//  Dinâmica atual: um único lote (R$67) vale do início das inscrições até a
+//  chegada da aula (LIVE_DATE_ISO) — sem virada de preço no meio do caminho.
 // ============================================================================
 
 export type Lote = {
@@ -37,8 +39,15 @@ export const LOTES: Lote[] = [
   },
 ];
 
-// Data/hora da aula ao vivo (20h). Usada em textos e no calendário.
+// Data/hora da aula ao vivo (20h). Usada em textos, no calendário e como alvo
+// do contador regressivo — hoje coincide com o endsAt do lote único.
 export const LIVE_DATE_ISO = "2026-10-06T20:00:00-03:00";
+
+// Total de lotes, para o rótulo "Lote X de N".
+export const TOTAL_LOTES = LOTES.length;
+
+// Último lote (preço-teto). Usado no "sobe até R$97".
+export const LOTE_TETO = LOTES[LOTES.length - 1];
 
 // ---------------------------------------------------------------------------
 //  Resolvers puros (testáveis, sem estado)
@@ -57,11 +66,6 @@ export function loteAtivoEm(ts: number): Lote | null {
 export function proximoLoteDe(lote: Lote | null): Lote | null {
   if (!lote) return null;
   return LOTES.find((l) => l.n === lote.n + 1) ?? null;
-}
-
-/** true se `ts` for antes do único lote abrir (ainda não começou). */
-export function estaAntesDoPrimeiroLote(ts: number): boolean {
-  return ts < Date.parse(LOTES[0].startsAt);
 }
 
 /** Formata a data de início de um lote como "dd/mm" (fuso de Brasília). */

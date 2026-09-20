@@ -30,10 +30,10 @@
   `https://live.alinefilgueiras.com.br`.
 - O site não armazena dados de pagamento; eles são tratados diretamente pela Ticto.
 
-## 5. Preço
-- Ingresso com **preço único: R$67**, válido até a aula (06/10, 20h).
-- Após esse horário, **as inscrições encerram**.
-- O preço vigente é sempre o exibido no site no momento da compra.
+## 5. Preço e prazo
+- Ingresso a **preço único: R$67**, válido do início das inscrições até a chegada da aula.
+- Na hora da aula (06/10/2026, 20h), **as inscrições encerram**.
+- O preço e o contador até a aula são sempre os exibidos no site no momento da compra.
 
 ## 6. Certificado
 - A aula **não emite certificado** de participação ou conclusão.

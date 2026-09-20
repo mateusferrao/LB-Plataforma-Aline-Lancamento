@@ -26,14 +26,14 @@ export function Hero({ comVsl }: { comVsl: boolean }) {
 
             <h1 className="mt-5 text-balance font-serif font-semibold text-[2.35rem] leading-[1.12] tracking-[-0.012em] sm:text-[3.1rem] lg:text-[3.7rem]">
               <span className="titulo-grifo">
-                O que a dissecção revela, o atlas nunca vai te mostrar.
+                Aplique com a segurança de quem já viu, por dentro, onde estão os riscos da face.
               </span>
             </h1>
 
             <p className="mt-6 max-w-[560px] text-[1.2rem] leading-[1.6] text-fg-soft">
               No dia 6, ao vivo, a Dra. Aline mostra a face por dentro, direto da mesa
-              de dissecção. Você sai da aula aplicando com a firmeza de quem já viu onde
-              ficam os riscos.
+              de dissecção. Você sai da aula com a mão mais firme e a leitura de anatomia
+              que faltava.
             </p>
 
             <Countdown className="mt-8 mb-8" />

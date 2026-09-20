@@ -64,13 +64,17 @@ body {
 
 /* Grifo de título: bloco sólido no marsala do botão atrás do texto, tipo marca-texto.
    box-decoration-break: clone faz cada linha visual (o título quebra diferente em
-   mobile/desktop) ganhar seu próprio bloco colado ao texto. */
+   mobile/desktop) ganhar seu próprio bloco colado ao texto. line-height próprio
+   (maior que o leading apertado do título) evita que a caixa da linha de baixo
+   cubra o descendente de letras como "j"/"g"/"p" da linha de cima.
+*/
 .titulo-grifo {
   background-color: var(--wine);
   color: var(--fg);
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
   padding: 0.04em 0.16em;
+  line-height: 1.35;
 }
 
 /* Foto do Hero se dissolvendo no fundo da página: as 4 bordas esmaecem de forma

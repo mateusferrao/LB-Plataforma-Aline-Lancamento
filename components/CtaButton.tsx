@@ -1,5 +1,6 @@
 "use client";
 
+import { agora, LIVE_DATE_ISO } from "@/lib/lotes";
 import { useLoteAtivo } from "@/lib/useLoteAtivo";
 import { useVslGate } from "@/lib/useVslGate";
 import { trackCustom, gaEvent } from "@/lib/analytics";
@@ -39,9 +40,14 @@ export function CtaButton({
   showPrice = false,
   requireVsl = false,
 }: Props) {
-  const { lote, montado, antes } = useLoteAtivo();
+  const { lote, montado } = useLoteAtivo();
   const { completed: vslCompleted, remainingSeconds } = useVslGate();
   const locked = requireVsl && !vslCompleted;
+  // Fora da janela de inscrições: antes de abrir ou depois da aula já ter
+  // chegado. Não dá pra usar só "!lote" pra isso (mesmo teste em ambos os
+  // casos) — precisa comparar com a chegada da aula (mesmo critério do
+  // Countdown, ver components/Countdown.tsx).
+  const encerrado = montado && !lote && agora() >= Date.parse(LIVE_DATE_ISO);
 
   const base =
     "inline-flex items-center gap-3 rounded-[2px] px-8 py-[19px] font-sans text-[1.02rem] font-semibold transition-[transform,background-color] duration-150 ease-out hover:-translate-y-0.5";
@@ -61,7 +67,7 @@ export function CtaButton({
   let label: React.ReactNode = children;
   let track: () => void = () => {};
 
-  if (montado && !lote && antes) {
+  if (montado && !lote && !encerrado) {
     href = INSTAGRAM_URL;
     external = true;
     label = "Quero ser avisado quando abrir";
@@ -69,8 +75,8 @@ export function CtaButton({
       trackCustom("ClickProximaTurma", { content_name: "Proxima turma (Instagram)" });
       gaEvent("click_proxima_turma", {});
     };
-  } else if (montado && !lote) {
-    // Estado encerrado: já montou e não há lote ativo → CTA pro Instagram.
+  } else if (encerrado) {
+    // Estado encerrado: já montou, sem lote ativo e a aula já chegou → CTA pro Instagram.
     href = INSTAGRAM_URL;
     external = true;
     label = "Quero saber da próxima turma";
