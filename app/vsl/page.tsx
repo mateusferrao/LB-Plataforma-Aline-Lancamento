@@ -9,24 +9,25 @@ import { FinalCta } from "@/components/sections/FinalCta";
 import { Footer } from "@/components/Footer";
 import { StickyCta } from "@/components/StickyCta";
 
-// Rota padrão: variante SEM VSL do teste A/B (foto estática no Hero, CTAs
-// nunca travados). A variante COM VSL vive em app/vsl/page.tsx.
-export default function Home() {
+// Rota do teste A/B COM VSL (vídeo no Hero, CTAs travados até o fim do
+// vídeo). Estrutura idêntica a app/page.tsx (a rota SEM VSL) — só muda o
+// `comVsl` passado às seções.
+export default function VslPage() {
   return (
     <>
       <main>
-        <Hero comVsl={false} />
+        <Hero comVsl={true} />
         <Problem />
-        <Solution comVsl={false} />
+        <Solution comVsl={true} />
         <SocialProof />
         <Authority />
-        <Offer comVsl={false} />
+        <Offer comVsl={true} />
         <Faq />
-        <FinalCta comVsl={false} />
+        <FinalCta comVsl={true} />
       </main>
       <Footer />
       <div aria-hidden className="h-[122px] sm:hidden" />
-      <StickyCta comVsl={false} />
+      <StickyCta comVsl={true} />
     </>
   );
 }

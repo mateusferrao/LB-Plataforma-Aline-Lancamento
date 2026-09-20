@@ -5,7 +5,8 @@
 //
 //  Regras:
 //   - As datas são no fuso de Brasília (o "-03:00" no final garante isso).
-//   - `endsAt` de um lote deve ser igual ao `startsAt` do próximo (sem buraco).
+//   - Hoje só existe um lote (preço único até a aula) — o array continua
+//     no formato de lista pra suportar voltar a ter mais de um no futuro.
 //   - `price` é só número (usado no tracking); `priceLabel` é o texto exibido.
 //   - `parcela12x` é o valor da parcela em 12x direto da Ticto (com a taxa do
 //     gateway) — não é calculado aqui, vem pronto de lá. Atualize junto se o
@@ -31,47 +32,13 @@ export const LOTES: Lote[] = [
     priceLabel: "R$67",
     parcela12x: "R$6,92",
     startsAt: "2026-09-12T00:00:00-03:00",
-    endsAt: "2026-09-15T20:00:00-03:00",
-    checkoutUrl: "https://payment.ticto.app/O072A87DC",
-  },
-  {
-    n: 2,
-    price: 77,
-    priceLabel: "R$77",
-    parcela12x: "R$7,96",
-    startsAt: "2026-09-15T20:00:00-03:00",
-    endsAt: "2026-09-22T20:00:00-03:00",
-    checkoutUrl: "https://payment.ticto.app/O7D6423E8",
-  },
-  {
-    n: 3,
-    price: 87,
-    priceLabel: "R$87",
-    parcela12x: "R$8,99",
-    startsAt: "2026-09-22T20:00:00-03:00",
-    endsAt: "2026-09-29T20:00:00-03:00",
-    checkoutUrl: "https://payment.ticto.app/OA9EEDED2",
-  },
-  {
-    n: 4,
-    price: 97,
-    priceLabel: "R$97",
-    parcela12x: "R$10,03",
-    startsAt: "2026-09-29T20:00:00-03:00",
     endsAt: "2026-10-06T20:00:00-03:00",
-    checkoutUrl: "https://payment.ticto.app/O4F95B1D3",
+    checkoutUrl: "https://payment.ticto.app/O072A87DC",
   },
 ];
 
-// Data/hora da aula ao vivo (20h). Usada em textos e no calendário — não precisa
-// ser igual ao endsAt do L4 (o checkout do último lote fica aberto até 23:59).
+// Data/hora da aula ao vivo (20h). Usada em textos e no calendário.
 export const LIVE_DATE_ISO = "2026-10-06T20:00:00-03:00";
-
-// Total de lotes, para o rótulo "Lote X de N".
-export const TOTAL_LOTES = LOTES.length;
-
-// Último lote (preço-teto). Usado no "sobe até R$97".
-export const LOTE_TETO = LOTES[LOTES.length - 1];
 
 // ---------------------------------------------------------------------------
 //  Resolvers puros (testáveis, sem estado)
@@ -90,6 +57,11 @@ export function loteAtivoEm(ts: number): Lote | null {
 export function proximoLoteDe(lote: Lote | null): Lote | null {
   if (!lote) return null;
   return LOTES.find((l) => l.n === lote.n + 1) ?? null;
+}
+
+/** true se `ts` for antes do único lote abrir (ainda não começou). */
+export function estaAntesDoPrimeiroLote(ts: number): boolean {
+  return ts < Date.parse(LOTES[0].startsAt);
 }
 
 /** Formata a data de início de um lote como "dd/mm" (fuso de Brasília). */

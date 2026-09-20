@@ -30,9 +30,9 @@
   `https://live.alinefilgueiras.com.br`.
 - O site não armazena dados de pagamento; eles são tratados diretamente pela Ticto.
 
-## 5. Preço e lotes
-- Ingresso por lotes, com preço subindo por data: **R$67 → R$77 → R$87 → R$97** (teto).
-- Após 06/10 às 23h59, **as inscrições encerram**.
+## 5. Preço
+- Ingresso com **preço único: R$67**, válido até a aula (06/10, 20h).
+- Após esse horário, **as inscrições encerram**.
 - O preço vigente é sempre o exibido no site no momento da compra.
 
 ## 6. Certificado

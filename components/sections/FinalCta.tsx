@@ -6,7 +6,7 @@ import { ParcelaLine } from "@/components/ParcelaLine";
 import { UrgenciaFina } from "@/components/UrgenciaFina";
 import { withBasePath } from "@/lib/basePath";
 
-export function FinalCta() {
+export function FinalCta({ comVsl }: { comVsl: boolean }) {
   return (
     <section className="relative overflow-hidden py-20 text-center sm:py-[112px]">
       {/* FOTO: aline-final-branco-bw.jpg — vestido branco, olhar direto (P&B via grayscale).
@@ -34,7 +34,11 @@ export function FinalCta() {
 
         <Countdown align="center" />
 
-        <CtaButton showPrice requireVsl className="mt-8 w-full justify-center sm:w-auto">
+        <CtaButton
+          showPrice
+          requireVsl={comVsl}
+          className="mt-8 w-full justify-center sm:w-auto"
+        >
           Quero minha vaga
         </CtaButton>
         <ParcelaLine className="mt-2" />

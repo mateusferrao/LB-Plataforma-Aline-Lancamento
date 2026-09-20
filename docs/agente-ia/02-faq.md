@@ -18,16 +18,8 @@ presencialmente, numa noite só.
 minutos** de duração.
 
 ### 3. Quanto custa?
-O ingresso é por **lotes** e o preço sobe conforme o lote:
-
-| Lote | Preço | Vigência |
-|------|-------|----------|
-| 1 | R$67 | até 30/08/2026 |
-| 2 | R$77 | até 07/09/2026 |
-| 3 | R$87 | até 15/09/2026 |
-| 4 | R$97 | até 06/10/2026, 23h59 |
-
-Garantindo mais cedo, você paga o menor valor. O preço vigente aparece sempre no site.
+O ingresso tem **preço único: R$67**, válido até a aula (06/10/2026, 20h). Depois desse
+horário, as inscrições encerram. O preço aparece sempre no site.
 
 ### 4. Quais as formas de pagamento? Posso parcelar?
 Sim: **cartão de crédito em até 12x** (com a taxa do gateway) ou **Pix** à vista. As opções

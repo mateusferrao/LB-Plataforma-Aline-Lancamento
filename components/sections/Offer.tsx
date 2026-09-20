@@ -19,7 +19,7 @@ const INCLUDES = [
   },
 ];
 
-export function Offer() {
+export function Offer({ comVsl }: { comVsl: boolean }) {
   return (
     <section className="bg-bg-2 py-16 sm:py-[92px]">
       <Container narrow>
@@ -74,7 +74,11 @@ export function Offer() {
               <VagasBadge tone="onAccent" />
             </div>
 
-            <CtaButton variant="accent" requireVsl className="mt-4 w-full justify-center">
+            <CtaButton
+              variant="accent"
+              requireVsl={comVsl}
+              className="mt-4 w-full justify-center"
+            >
               Garantir minha vaga
             </CtaButton>
 

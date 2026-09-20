@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { agora, LOTE_TETO, type Lote } from "@/lib/lotes";
+import { agora } from "@/lib/lotes";
 import { useLoteAtivo } from "@/lib/useLoteAtivo";
 
 type Remaining = { days: number; hours: number; minutes: number; seconds: number };
@@ -27,19 +27,12 @@ const UNITS: { key: keyof Remaining; label: string }[] = [
   { key: "seconds", label: "seg" },
 ];
 
-// Legenda acima dos tiles conforme o lote.
-function legenda(lote: Lote | null, proximo: Lote | null): string {
-  if (lote && !proximo) return "As inscrições encerram em";
-  return "O preço sobe em";
-}
+// Legenda acima dos tiles: contagem até a aula começar (fim do lote único
+// coincide com o horário da aula ao vivo).
+const LEGENDA = "A aula ao vivo começa em";
 
-// Subtexto: preço atual + teto. No último lote (teto) a mensagem vira escassez
-// de tempo (encerramento), não mais de preço.
-function subtexto(lote: Lote | null, proximo: Lote | null): string {
-  if (!lote) return "";
-  if (!proximo) return "Último lote. As inscrições estão encerrando.";
-  return `${lote.priceLabel} somente por enquanto.`;
-}
+// Subtexto: reforça que as inscrições encerram junto com o início da aula.
+const SUBTEXTO = "As inscrições encerram quando a aula começar.";
 
 export function Countdown({
   className = "",
@@ -48,7 +41,7 @@ export function Countdown({
   className?: string;
   align?: "left" | "center";
 }) {
-  const { lote, proximo, montado } = useLoteAtivo();
+  const { lote, antes, montado } = useLoteAtivo();
   // Alvo dos tiles = fim do lote ativo; "--" antes de montar (evita mismatch).
   const [remaining, setRemaining] = useState<Remaining | null>(null);
 
@@ -67,7 +60,7 @@ export function Countdown({
   // Menos de 24h restantes (days === 0): dígitos no vermelho do botão pra reforçar urgência.
   const urgente = remaining !== null && remaining.days === 0;
 
-  if (montado && !lote && !proximo) {
+  if (montado && !lote && antes) {
     return (
       <div className={`flex flex-col gap-3 ${alignCls} ${className}`}>
         <p className="font-serif text-[1.5rem] leading-snug text-fg">
@@ -91,12 +84,12 @@ export function Countdown({
   return (
     <div className={`flex flex-col gap-3 ${alignCls} ${className}`}>
       <span className="text-[12px] font-semibold tracking-[0.18em] text-wine-ink uppercase">
-        {legenda(lote, proximo)}
+        {LEGENDA}
       </span>
 
       <div
         className="flex gap-2.5"
-        aria-label="Contagem regressiva para o fim do lote"
+        aria-label="Contagem regressiva para o início da aula"
       >
         {UNITS.map(({ key, label }) => (
           <div
@@ -117,9 +110,9 @@ export function Countdown({
         ))}
       </div>
 
-      {/* Subtexto do preço; min-height reservada pra não pular na hidratação. */}
+      {/* min-height reservada pra não pular na hidratação. */}
       <p className="min-h-[1.5em] max-w-[520px] text-[0.98rem] leading-[1.5] text-fg-soft">
-        {montado ? subtexto(lote, proximo) : ""}
+        {montado ? SUBTEXTO : ""}
       </p>
     </div>
   );

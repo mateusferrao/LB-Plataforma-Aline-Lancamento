@@ -1,12 +1,11 @@
 "use client";
 
-import { LOTE_TETO } from "@/lib/lotes";
 import { useLoteAtivo } from "@/lib/useLoteAtivo";
 
-// Bloco de preço do card de oferta: rótulo do lote + preço grande + próximo preço.
+// Bloco de preço do card de oferta: preço parcelado em destaque + preço à vista.
 // Tudo do lote ativo (client). Larguras/alturas reservadas pra não dar layout shift.
 export function OfertaPreco() {
-  const { lote, proximo, montado } = useLoteAtivo();
+  const { lote, montado } = useLoteAtivo();
 
   if (montado && !lote) {
     return (
@@ -23,9 +22,7 @@ export function OfertaPreco() {
 
   return (
     <>
-      <div className="text-[12px] tracking-[0.16em] uppercase opacity-90">
-        {montado && lote ? `Lote ${lote.n} · ao vivo` : "Ao vivo"}
-      </div>
+      <div className="text-[12px] tracking-[0.16em] uppercase opacity-90">Ao vivo</div>
       <div className="my-1.5 font-serif text-[2.5rem] leading-none sm:text-[2.7rem]">
         {montado && lote ? `12x de ${lote.parcela12x}` : ""}
       </div>
@@ -35,11 +32,7 @@ export function OfertaPreco() {
         </div>
       )}
       <div className="mt-1 min-h-[1.2em] text-[0.95rem] opacity-90">
-        {montado && lote
-          ? proximo
-            ? `Preço sobe em breve`
-            : "Último lote"
-          : ""}
+        {montado && lote ? "Inscrições até 6 de outubro, 20h." : ""}
       </div>
     </>
   );

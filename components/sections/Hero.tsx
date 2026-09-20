@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { AnimatedNumber } from "@/components/AnimatedNumber";
 import { Container } from "@/components/Container";
 import { Countdown } from "@/components/Countdown";
@@ -5,8 +6,12 @@ import { CtaButton } from "@/components/CtaButton";
 import { ParcelaLine } from "@/components/ParcelaLine";
 import { UrgenciaFina } from "@/components/UrgenciaFina";
 import { VslPlayer } from "@/components/VslPlayer";
+import { withBasePath } from "@/lib/basePath";
 
-export function Hero() {
+// `comVsl` decide a variante de teste A/B: com vídeo (Hero trava o CTA até o
+// fim da VSL) ou sem vídeo (foto estática, CTA nunca travado — sem vídeo,
+// não haveria como o gate liberar).
+export function Hero({ comVsl }: { comVsl: boolean }) {
   return (
     <section className="pt-10 pb-20 sm:pb-[78px]">
       <Container>
@@ -35,7 +40,7 @@ export function Hero() {
 
             <CtaButton
               showPrice
-              requireVsl
+              requireVsl={comVsl}
               className="w-full justify-center sm:w-auto sm:justify-start"
             >
               Quero minha vaga
@@ -50,12 +55,25 @@ export function Hero() {
             </div>
           </div>
 
-          {/* No mobile (1 coluna) o vídeo vem ANTES do texto/CTA — o botão diz
-              "assista o vídeo acima", então ele precisa estar acima de verdade.
-              No desktop (grid 2 colunas) volta pra direita, ordem natural. */}
-          <div className="relative order-first mx-auto aspect-[9/16] w-full max-w-[420px] md:order-none md:self-center">
-            <VslPlayer className="absolute inset-0" />
-          </div>
+          {comVsl ? (
+            // No mobile (1 coluna) o vídeo vem ANTES do texto/CTA — o botão diz
+            // "assista o vídeo acima", então ele precisa estar acima de verdade.
+            // No desktop (grid 2 colunas) volta pra direita, ordem natural.
+            <div className="relative order-first mx-auto aspect-[9/16] w-full max-w-[420px] md:order-none md:self-center">
+              <VslPlayer className="absolute inset-0" />
+            </div>
+          ) : (
+            <div className="relative mx-auto aspect-[4/5] w-full max-w-[420px] overflow-hidden rounded-[4px] border border-line-soft bg-surface md:aspect-auto md:h-full md:self-stretch">
+              <Image
+                src={withBasePath("/images/aline-hero-marsala-v2.jpg")}
+                alt="Dra. Aline Filgueiras"
+                fill
+                priority
+                sizes="(min-width: 768px) 420px, 90vw"
+                className="foto-funde-fundo object-cover"
+              />
+            </div>
+          )}
         </div>
       </Container>
     </section>

@@ -39,7 +39,7 @@ export function CtaButton({
   showPrice = false,
   requireVsl = false,
 }: Props) {
-  const { lote, montado, proximo } = useLoteAtivo();
+  const { lote, montado, antes } = useLoteAtivo();
   const { completed: vslCompleted, remainingSeconds } = useVslGate();
   const locked = requireVsl && !vslCompleted;
 
@@ -61,7 +61,7 @@ export function CtaButton({
   let label: React.ReactNode = children;
   let track: () => void = () => {};
 
-  if (montado && !lote && !proximo) {
+  if (montado && !lote && antes) {
     href = INSTAGRAM_URL;
     external = true;
     label = "Quero ser avisado quando abrir";

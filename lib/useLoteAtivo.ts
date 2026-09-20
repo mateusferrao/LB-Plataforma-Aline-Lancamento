@@ -1,11 +1,21 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { agora, loteAtivoEm, proximoLoteDe, type Lote } from "@/lib/lotes";
+import {
+  agora,
+  estaAntesDoPrimeiroLote,
+  loteAtivoEm,
+  proximoLoteDe,
+  type Lote,
+} from "@/lib/lotes";
 
 export type LoteState = {
   lote: Lote | null;
   proximo: Lote | null;
+  // Só relevante quando `lote` é null: true se ainda não abriu o (único)
+  // lote, false se o evento já passou. Distingue os dois estados "fora de
+  // lote" sem depender de `proximo` (que não serve pra isso).
+  antes: boolean;
   montado: boolean;
 };
 
@@ -19,13 +29,20 @@ export function useLoteAtivo(): LoteState {
   const [state, setState] = useState<LoteState>({
     lote: null,
     proximo: null,
+    antes: true,
     montado: false,
   });
 
   useEffect(() => {
     const tick = () => {
-      const lote = loteAtivoEm(agora());
-      setState({ lote, proximo: proximoLoteDe(lote), montado: true });
+      const ts = agora();
+      const lote = loteAtivoEm(ts);
+      setState({
+        lote,
+        proximo: proximoLoteDe(lote),
+        antes: !lote && estaAntesDoPrimeiroLote(ts),
+        montado: true,
+      });
     };
     tick();
     const id = setInterval(tick, 1000);

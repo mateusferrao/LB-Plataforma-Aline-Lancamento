@@ -10,8 +10,8 @@ export const metadata: Metadata = {
   description: "Sua vaga na aula Por Dentro da Face está garantida.",
 };
 
-// Configurar esta URL como redirecionamento pós-compra nas 4 ofertas do Ticto
-// (uma por lote). Sem urgência/garantia aqui: quem chega nesta página já comprou.
+// Configurar esta URL como redirecionamento pós-compra na oferta do Ticto.
+// Sem urgência/garantia aqui: quem chega nesta página já comprou.
 const GRUPO_WHATSAPP_URL = "https://chat.whatsapp.com/KmL36ic5sFGFYVCJL6vm7g?s=cl&p=i&mlu=4";
 
 // Número do time (mesmo do botão flutuante), com mensagem de contexto pós-compra.

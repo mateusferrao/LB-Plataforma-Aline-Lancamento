@@ -98,24 +98,14 @@ Diferencial de fechamento da aula: **quem está na sala vê a nova fase nascer e
 
 ## 8. Oferta, preço e urgência
 
-**Preço por lotes** (o valor sobe conforme o lote; a virada é automática por data):
-
-| Lote | Preço | Vigência |
-|------|-------|----------|
-| 1 | **R$67** | até 30/08/2026 |
-| 2 | **R$77** | até 07/09/2026 |
-| 3 | **R$87** | até 15/09/2026 |
-| 4 | **R$97** | até 06/10/2026, 23h59 |
-
-- Fora dos lotes (após 06/10 às 23h59), **as inscrições encerram**. Preço-teto: **R$97**.
-- Se não tiver certeza do preço vigente no momento da conversa, **oriente a lead a conferir no
-  site** — o site sempre mostra o lote e o valor atuais.
+**Preço único: R$67**, válido até a aula (06/10/2026, 20h). Depois desse horário, **as
+inscrições encerram**.
 
 **Gatilhos reais de urgência (todos verdadeiros — pode usar):**
-- **O preço sobe** a cada lote. Garantir hoje sai mais barato.
 - **Poucas vagas** para a sala ao vivo (nunca cite um número — não temos número declarado).
 - **Ao vivo, uma vez só, sem gravação.**
 - **Garantia de 7 dias** (reembolso sem perguntas) — reduz o risco da decisão.
+- **Inscrições encerram quando a aula começa.**
 
 **Pagamento (feito no site, pela Ticto):** **cartão em até 12x (com taxa do gateway)** ou **Pix**.
 O agente informa as opções, mas a compra acontece no site.
@@ -141,8 +131,8 @@ As falas abaixo são modelos; adapte ao tom da conversa.
 
 - **"Está caro / R$X é muito"**
   → "Uma intercorrência custa muito mais que o ingresso: custa dinheiro, reputação e noites de
-  sono. E o valor ainda sobe no próximo lote — garantindo hoje você paga o menor preço. Quer que eu
-  te mande o site pra assegurar agora?"
+  sono. E as inscrições encerram quando a aula começa — quer que eu te mande o site pra assegurar
+  agora?"
 
 - **"Sou iniciante, será que aproveito?"**
   → "Aproveita, e muito. Quanto antes você entende a anatomia por dentro, menos vícios carrega. A
