@@ -4,6 +4,7 @@ import "./globals.css";
 import { MetaPixel } from "@/components/MetaPixel";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 import { TictoEcho } from "@/components/TictoEcho";
+import { UtmifyPixel } from "@/components/UtmifyPixel";
 import { ConsentNotice } from "@/components/ConsentNotice";
 import { WhatsAppFloatingButton } from "@/components/WhatsAppFloatingButton";
 
@@ -73,6 +74,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <MetaPixel />
         <GoogleAnalytics />
         <TictoEcho />
+        <UtmifyPixel />
         {children}
         <ConsentNotice />
         <WhatsAppFloatingButton />
