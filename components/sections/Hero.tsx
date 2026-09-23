@@ -29,7 +29,7 @@ export function Hero({ comVsl }: { comVsl: boolean }) {
                   no mobile. Ela é só dor/virada: quem conduz e o que é vêm logo
                   abaixo, no subtítulo (tráfego frio de anúncio). */}
               <span className="titulo-grifo">
-                O erro no preenchimento não acontece na agulha.
+                O erro na aplicação não acontece na agulha.
               </span>{" "}
               <span className="mt-5 block text-[1.45rem] leading-[1.3] font-medium tracking-normal text-fg sm:text-[1.8rem] lg:text-[2.05rem]">
                 Acontece antes, na decisão que você toma sem enxergar o rosto por dentro.
