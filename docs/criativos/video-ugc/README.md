@@ -252,6 +252,39 @@ aluna.
 
 **Aposta principal: V3-A.** Quem se reconhece na pergunta fica pra ouvir a resposta.
 
+### Ganchos de reação (falam do vídeo que vai tocar)
+A pessoa de IA reage ao vídeo pausado como quem acabou de assistir e precisa mostrar pra
+alguém. Três regras deixam esse tipo de gancho forte:
+
+1. **Sempre um detalhe concreto do que vem**, sem entregar a resposta. Compare "Você não
+   acredita no que ela falou" com "…no que ela falou sobre boneco e atlas". A segunda
+   diz o assunto, e o assunto é o que faz a pessoa certa parar.
+2. **Olhar pro vídeo antes de falar.** Nos primeiros 0,3s ela está virada pro fundo
+   pausado. Depois vira pra câmera com a sobrancelha levantada e fala. É isso que vende a
+   reação.
+3. **Sem opinião em primeira pessoa.** Frases como "é a melhor explicação que eu já ouvi"
+   ou "isso mudou tudo pra mim" são depoimento de uma pessoa que não existe. Ela aponta
+   pro vídeo e deixa a Aline convencer.
+
+**Sobre "especialista em HOF":** especialista em harmonização orofacial é título formal
+do CFO pra dentistas. Se a Aline não tem esse título, use "essa doutora", "essa
+referência em harmonização" ou "essa professora de anatomia". O efeito é o mesmo e não
+vira título inventado.
+
+| # | Vídeo | Fala | Texto na tela |
+|---|-------|------|---------------|
+| R1 | V1 | "Você não acredita no que ela falou de dentro de um laboratório de dissecção." | ELA GRAVOU ISSO NUM LABORATÓRIO DE DISSECÇÃO |
+| R2 | V1 | "Ela disse de onde vem a sua insegurança pra aplicar. Não é o que você pensa." | DE ONDE VEM SUA INSEGURANÇA |
+| R3 | V2 | "Você não acredita no que essa doutora falou sobre preenchimento." | O QUE ELA FALOU SOBRE PREENCHIMENTO |
+| R4 | V2 | "Ela falou sobre boneco e atlas o que nenhum curso tem coragem de falar." | O QUE NENHUM CURSO FALA |
+| R5 | V2 | "Presta atenção no que ela fala sobre artéria nos primeiros 5 segundos." | PRESTA ATENÇÃO NOS 5 PRIMEIROS SEGUNDOS |
+| R6 | V3 | "Você não acredita no que ela respondeu pra essa pergunta." [aponta pra caixinha] | OLHA A RESPOSTA DELA |
+| R7 | V3 | "Perguntaram isso pra ela, e a resposta é pra quem tem medo de aplicar." | PRA QUEM TEM MEDO DE APLICAR |
+
+**Apostas:** R4 no V2 (curiosidade com polêmica e assunto claro) e R2 no V1 (promete
+explicar uma coisa que ela sente todo dia). O R5 funciona bem porque a promessa se cumpre
+na hora: a Aline fala de artéria já na primeira frase.
+
 ### Como dizer o gancho
 - Corte o primeiro quadro na primeira sílaba. Nada de respiração, "é…" ou sorriso antes.
 - A palavra mais importante leva o peso: "**Não** preenche mais nenhum rosto…", "…não é
@@ -312,6 +345,9 @@ aluna.
 
 - **Rodada 1:** V1-A, V1-B, V2-A, V2-B e V3-A com a Camila, no mesmo conjunto de público
   frio. Depois, os 2 melhores ganchos com a persona B.
+- **Reação × técnica:** em cada vídeo, rode um gancho de reação contra a aposta de técnica
+  (por exemplo, R4 × V2-B no V2). Isso mostra se esse público para mais pela curiosidade
+  sobre o vídeo ou pela provocação direta.
 - **Rodada 2:** o gancho vencedor com 2 textos de tela diferentes. O texto sozinho às
   vezes muda a taxa de gancho tanto quanto a fala.
 - **O que olhar, nesta ordem:**
