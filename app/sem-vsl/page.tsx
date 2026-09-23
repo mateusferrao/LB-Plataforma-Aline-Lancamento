@@ -1,6 +1,6 @@
 import { Hero } from "@/components/sections/Hero";
 import { Problem } from "@/components/sections/Problem";
-import { Criterio } from "@/components/sections/Criterio";
+import { TresCamadas } from "@/components/sections/TresCamadas";
 import { ParaQuem } from "@/components/sections/ParaQuem";
 import { Solution } from "@/components/sections/Solution";
 import { SocialProof } from "@/components/sections/SocialProof";
@@ -21,7 +21,7 @@ export default function SemVslPage() {
       <main>
         <Hero comVsl={false} />
         <Problem />
-        <Criterio />
+        <TresCamadas />
         <Solution comVsl={false} />
         <Authority />
         <SocialProof />

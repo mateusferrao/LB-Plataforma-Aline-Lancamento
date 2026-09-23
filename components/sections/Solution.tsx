@@ -36,7 +36,7 @@ export function Solution({ comVsl }: { comVsl: boolean }) {
               </span>
               <h2 className="mt-[18px] text-balance font-serif font-semibold text-[1.95rem] leading-[1.12] sm:text-[2.6rem]">
                 <span className="titulo-grifo">
-                  Critério se aprende vendo o que a pele esconde.
+                  Anatomia e resultado se aprendem vendo o que a pele esconde.
                 </span>
               </h2>
               <p className="mt-[22px] max-w-[600px] text-[1.12rem] leading-[1.6] text-fg-soft">

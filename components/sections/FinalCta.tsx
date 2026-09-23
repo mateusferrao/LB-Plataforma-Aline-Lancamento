@@ -28,7 +28,7 @@ export function FinalCta({ comVsl }: { comVsl: boolean }) {
           6 de outubro · 20h
         </span>
         <h2 className="mt-[18px] mb-6 max-w-[560px] text-balance font-serif font-semibold text-[1.95rem] sm:text-[2.6rem]">
-          <span className="titulo-grifo">No dia 6, você volta pra cadeira com critério, não com mais um protocolo.</span>
+          <span className="titulo-grifo">No dia 6, você volta pra cadeira com as 3 camadas, não com mais um protocolo.</span>
         </h2>
 
         <Countdown align="center" />

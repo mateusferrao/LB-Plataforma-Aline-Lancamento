@@ -33,8 +33,8 @@ export function Hero({ comVsl }: { comVsl: boolean }) {
                 diferente em cada rosto.
               </span>{" "}
               <span className="mt-5 block text-[1.3rem] leading-[1.3] font-medium tracking-normal text-fg sm:text-[1.6rem] lg:text-[1.8rem]">
-                Em um evento ao vivo, direto da mesa de dissecção, a Dra. Aline mostra o que
-                está embaixo da pele e onde o produto vai parar em cada plano da face.
+                Em um evento ao vivo, direto da mesa de dissecção, a Dra. Aline mostra as 3
+                camadas: técnica, anatomia e resultado.
               </span>
             </h1>
 
