@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { Container } from "@/components/Container";
 import { CtaButton } from "@/components/CtaButton";
-import { ParcelaLine } from "@/components/ParcelaLine";
 import { Reveal } from "@/components/Reveal";
 import { withBasePath } from "@/lib/basePath";
 
@@ -67,13 +66,11 @@ export function Solution({ comVsl }: { comVsl: boolean }) {
               </p>
 
               <CtaButton
-                showPrice
                 requireVsl={comVsl}
                 className="mt-8 w-full justify-center sm:w-auto sm:justify-start"
               >
                 Quero minha vaga
               </CtaButton>
-              <ParcelaLine className="mt-2 text-center sm:text-left" />
             </Reveal>
           </div>
         </Container>

@@ -2,7 +2,6 @@ import Image from "next/image";
 import { Container } from "@/components/Container";
 import { Countdown } from "@/components/Countdown";
 import { CtaButton } from "@/components/CtaButton";
-import { ParcelaLine } from "@/components/ParcelaLine";
 import { UrgenciaFina } from "@/components/UrgenciaFina";
 import { withBasePath } from "@/lib/basePath";
 
@@ -35,13 +34,11 @@ export function FinalCta({ comVsl }: { comVsl: boolean }) {
         <Countdown align="center" />
 
         <CtaButton
-          showPrice
           requireVsl={comVsl}
           className="mt-8 w-full justify-center sm:w-auto"
         >
           Quero minha vaga
         </CtaButton>
-        <ParcelaLine className="mt-2" />
         <UrgenciaFina className="mt-3.5 text-[13.5px] tracking-[0.02em] text-fg-faint" />
       </Container>
     </section>

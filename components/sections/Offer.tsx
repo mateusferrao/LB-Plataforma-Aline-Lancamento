@@ -22,8 +22,8 @@ const INCLUDES = [
 // Como funciona do clique à sala — tráfego de anúncio compra sem conhecer o
 // processo; os 3 passos tiram o "e depois que eu pagar?".
 const PASSOS = [
-  { t: "Garanta sua vaga", d: "No Pix ou no cartão em até 12x, direto no site." },
-  { t: "Entre no grupo do WhatsApp", d: "O acesso chega assim que a compra é confirmada." },
+  { t: "Emita seu ingresso", d: "Leva 10 segundos, direto no site." },
+  { t: "Confirme no Pix ou no cartão", d: "Em até 12x. O acesso ao grupo do WhatsApp chega na hora." },
   { t: "Dia 6, às 20h, entre na sala", d: "Pelo link privado enviado no grupo." },
 ];
 
@@ -87,7 +87,7 @@ export function Offer({ comVsl }: { comVsl: boolean }) {
               requireVsl={comVsl}
               className="mt-4 w-full justify-center"
             >
-              Garantir minha vaga
+              Emitir meu ingresso
             </CtaButton>
 
             <div className="mt-6 flex items-start gap-2.5 text-left text-[0.96rem] opacity-90">

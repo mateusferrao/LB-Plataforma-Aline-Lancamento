@@ -10,6 +10,7 @@ import { Faq } from "@/components/sections/Faq";
 import { FinalCta } from "@/components/sections/FinalCta";
 import { Footer } from "@/components/Footer";
 import { StickyCta } from "@/components/StickyCta";
+import { IngressoModal } from "@/components/IngressoModal";
 
 // Rota do teste A/B SEM VSL (foto estática no Hero, CTAs nunca travados).
 // Estrutura idêntica a app/page.tsx (a rota padrão, COM VSL) — só muda o
@@ -32,6 +33,7 @@ export default function SemVslPage() {
       <Footer />
       <div aria-hidden className="h-[122px] sm:hidden" />
       <StickyCta comVsl={false} />
+      <IngressoModal />
     </>
   );
 }

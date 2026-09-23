@@ -41,7 +41,7 @@ export function StickyCta({ comVsl }: { comVsl: boolean }) {
           <VagasBadge>Poucas vagas</VagasBadge>
           <ReservaTimer />
         </div>
-        <CtaButton showPrice requireVsl={comVsl} className="w-full justify-center">
+        <CtaButton requireVsl={comVsl} className="w-full justify-center">
           Quero minha vaga
         </CtaButton>
       </div>
@@ -61,7 +61,7 @@ export function StickyCta({ comVsl }: { comVsl: boolean }) {
             <VagasBadge plain>Poucas vagas</VagasBadge>
             <ReservaTimer />
           </div>
-          <CtaButton showPrice requireVsl={comVsl} className="shrink-0">
+          <CtaButton requireVsl={comVsl} className="shrink-0">
             Quero minha vaga
           </CtaButton>
         </div>

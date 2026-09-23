@@ -10,6 +10,7 @@ import { Faq } from "@/components/sections/Faq";
 import { FinalCta } from "@/components/sections/FinalCta";
 import { Footer } from "@/components/Footer";
 import { StickyCta } from "@/components/StickyCta";
+import { IngressoModal } from "@/components/IngressoModal";
 
 // Rota padrão: variante COM VSL do teste A/B (vídeo no Hero, CTAs travados
 // até o fim do vídeo). A variante SEM VSL vive em app/sem-vsl/page.tsx.
@@ -31,6 +32,7 @@ export default function Home() {
       <Footer />
       <div aria-hidden className="h-[122px] sm:hidden" />
       <StickyCta comVsl={true} />
+      <IngressoModal />
     </>
   );
 }
