@@ -35,6 +35,10 @@ export function Hero({ comVsl }: { comVsl: boolean }) {
               de dissecção. Você sai da aula com a mão mais firme e a leitura de anatomia
               que faltava.
             </p>
+            <p className="mt-4 max-w-[560px] text-[1.05rem] leading-[1.55] text-fg-soft">
+              É a bagagem de quem estudou anatomia em peças fresh frozen nos Estados Unidos e
+              hoje dá cursos internacionais de anatomia na Europa.
+            </p>
 
             <Countdown className="mt-8 mb-8" />
 
