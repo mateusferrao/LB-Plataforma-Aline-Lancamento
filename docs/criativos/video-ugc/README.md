@@ -29,9 +29,12 @@ em `fundos/`.
 3. **A pessoa de IA apresenta, não dá depoimento.** Ela nunca diz "eu fiz a aula", "minha
    paciente", "sou biomédica" nem "mudou minha carreira". Um depoimento de gente que não
    existe é propaganda enganosa (CONAR) e risco de reprovação na Meta. O papel dela é o
-   da amiga que manda um vídeo: "olha o que ela falou".
-4. **Nada de jaleco, crachá ou título na pessoa de IA.** Isso sugere uma credencial que
-   ela não tem. Roupa comum de creator.
+   da colega que manda um vídeo: "olha o que ela falou".
+4. **Jaleco pode, credencial não.** Com o jaleco, ela já parece ser da área, então todo o
+   resto precisa ficar neutro: jaleco liso, sem nome bordado, sem número de registro
+   (CRBM, CRO, COREN), sem logo e sem crachá. Ela fala sempre com "você" ou sobre a
+   Aline ("ela"), nunca "eu aplico" ou "as minhas pacientes", e nunca diz a profissão
+   nem o nome. Se ela afirmar uma formação, vira credencial inventada.
 
 A Meta pode colocar o selo "Informações de IA" no anúncio. Isso é normal e não derruba o
 formato. Não tente esconder.
@@ -57,31 +60,98 @@ Regras:
 
 ---
 
-## 2. Que tipo de pessoa de IA usar
+## 2. A pessoa de IA: descrição completa
 
-Teste **duas personas**. Com o mesmo gancho, a persona costuma mudar mais o resultado do
-que a própria copy.
+Nome interno pra equipe: **"Camila"**. O nome serve só pra manter a mesma pessoa em
+todos os vídeos. Ele nunca aparece na tela nem na fala.
 
-**Persona A · "A colega" (principal)**
-- Mulher de 27 a 34 anos, brasileira típica, maquiagem leve, cabelo natural.
-- Blusa lisa ou camiseta básica. Sem jaleco.
-- Fala rápida e informal, tom de fofoca útil ("gente, olha isso").
-- Enquadramento de selfie, com leve movimento de mão.
-- Por quê: o público é quase todo feminino e jovem na profissão. Ela se parece com quem
-  está assistindo, e isso segura o dedo no feed.
+**Quem ela parece ser:** a colega mais experiente do grupo de WhatsApp da turma. Segura,
+direta e acolhedora. Não é modelo nem influenciadora de estúdio. É alguém que a
+biomédica, a dentista ou a enfermeira de 28 anos olha e pensa "é da minha área, sabe do
+que está falando".
 
-**Persona B · "A curadora"**
-- Mulher de 35 a 45 anos, blazer ou camisa, tom calmo e sério ("presta atenção nisso").
-- Por quê: passa mais peso pra quem já aplica há anos e é mais cética.
+### Aparência
+- **Idade aparente:** 30 a 34 anos.
+- **Pele:** morena clara, tom médio com subtom quente. Textura de pele visível (poros,
+  leve brilho na testa), sem pele de filtro.
+- **Cabelo:** castanho-escuro, comprido, ondulado natural, preso num rabo baixo com dois
+  ou três fios soltos na frente do rosto.
+- **Rosto:** simpático e comum, sobrancelhas naturais cheias e penteadas, olhos
+  castanhos, sorriso fácil de canto de boca.
+- **Maquiagem de consultório:** base leve, blush pêssego, boca nude rosada, rímel.
+  Sem cílios postiços e sem contorno marcado.
+- **Acessórios:** brinco pequeno de pérola ou ponto de luz, relógio fino ou nada. Unhas
+  curtas, nude ou francesinha. Sem colar chamativo.
 
-**Evite:** homem (o público é feminino, só teste depois), avatar "perfeito demais" de
-estúdio (entrega a IA), fundo próprio do avatar visível (quebra o efeito de "na frente do
-vídeo") e sotaque de dublagem.
+### Roupa
+- **Jaleco branco acinturado**, de gabardine, bem passado. Manga longa levemente
+  arregaçada até o antebraço, que passa a ideia de quem põe a mão na massa. Gola
+  tradicional aberta.
+- **Por baixo:** blusa preta lisa de gola careca. O preto conversa com a identidade do
+  lançamento e dá contraste com o jaleco.
+- **Proibido:** nome bordado, número de registro, logo, crachá, estetoscópio, luvas, touca
+  ou máscara.
 
-**Alternativa sem IA (vale um teste):** uma pessoa real, como uma aluna ou alguém da
-equipe, gravando no celular com o efeito green screen do Instagram ou do CapCut. Costuma
-converter igual ou melhor, e não tem nenhum risco de selo de IA nem de depoimento falso,
-desde que ela também não finja ter feito a aula.
+### Enquadramento e luz
+- **Selfie vertical 9:16**, celular na mão com o braço esticado, lente na altura dos
+  olhos ou um pouco acima.
+- **Do meio do peito pra cima.** Na montagem ela ocupa a metade de baixo da tela, e o
+  criativo pausado aparece em cima.
+- **Olhar sempre na lente.** Pequenos movimentos naturais: balanço da mão, inclinação de
+  cabeça, piscada normal.
+- **Luz suave de janela**, de frente ou de lado. Sem ring light, porque o reflexo
+  redondo no olho entrega o estúdio.
+- **Temperatura de cor igual à do fundo:** neutra e fria no V1 (laboratório branco),
+  levemente quente no V2 (consultório bege). Se a luz dela não bater com o fundo, o
+  recorte fica evidente.
+- **Fundo do avatar** (antes do recorte): parede lisa clara ou verde, pra recortar fácil.
+
+### Voz e jeito de falar
+- **Voz feminina de timbre médio**, nem aguda nem grave. Português do Brasil com sotaque
+  neutro, paulista ou mineiro leve (combina com BH, onde a Aline atende).
+- **Ritmo rápido:** cerca de 3 palavras por segundo no gancho.
+- **Energia 8 de 10 nos primeiros 2 segundos.** Sobrancelha sobe na primeira palavra.
+- **Tom de quem conta uma coisa séria pra uma colega.** Não é locutora e não é
+  vendedora.
+- **Termina o gancho em afirmação**, com a voz descendo. Entonação de pergunta no fim
+  soa insegura.
+- A fala começa no primeiro quadro. Corte a respiração de antes.
+
+### Gestos
+- No "olha" ou "escuta": aponta com o polegar por cima do ombro, na direção do vídeo
+  pausado, ou vira o rosto uns 20° pra trás.
+- No V2-C ("a milímetros"): mostra um espaço mínimo entre o polegar e o indicador.
+- Nada de mão na frente do rosto nem gesto grande que saia do quadro.
+
+### Prompt pra criar a foto base do avatar
+Pra ferramentas que criam o avatar a partir de uma foto (em inglês, que costuma render
+melhor):
+
+> Vertical 9:16 smartphone front-camera selfie of a 32-year-old Brazilian woman who works
+> in facial aesthetics. Medium warm skin with visible natural texture, dark brown wavy
+> hair in a low ponytail with a few loose strands framing the face, full natural
+> eyebrows, brown eyes, minimal makeup (light base, peach blush, nude pink lips), small
+> pearl stud earrings. Wearing a crisp fitted plain white lab coat with sleeves slightly
+> rolled up and a black crew-neck top underneath. No name embroidery, no logos, no badge,
+> no stethoscope. Soft window light from the side, plain light wall behind her. Looking
+> straight into the lens with a confident, friendly half-smile, chest-up framing,
+> realistic and unretouched, slight phone-camera grain.
+>
+> Negative: text, watermark, logo, name tag, stethoscope, gloves, heavy retouching,
+> plastic skin, studio ring light, fashion model look.
+
+### Persona B (alternativa pra teste)
+Mesmo jaleco e as mesmas regras, mas com 38 a 42 anos, cabelo preso em coque baixo,
+óculos de armação fina e tom calmo e mais grave ("presta atenção nisso"). Serve pra quem
+já aplica há anos e é mais cética. Teste só depois de achar o gancho vencedor com a
+Camila.
+
+**Evite:** avatar "perfeito demais" (pele lisa, cabelo de salão), sotaque de dublagem,
+fundo próprio do avatar aparecendo e homem (o público é feminino).
+
+**Alternativa sem IA (vale um teste):** uma pessoa real da equipe, de jaleco liso,
+gravando no celular com o efeito green screen do Instagram ou do CapCut. As mesmas
+regras de fala valem pra ela.
 
 ---
 
@@ -126,24 +196,70 @@ arquivo original em 1080p pra quem editou. O V2 já está em 1080×1920.
 
 ---
 
-## 4. Roteiros (fala da pessoa de IA)
+## 4. Ganchos
 
-O gancho está entre aspas. [ação] é o gesto. → é a primeira fala do criativo, que entra
-logo depois.
+Cada gancho tem três partes:
+- **Fala:** no máximo 12 palavras, dita em até 4 segundos.
+- **Texto na tela:** até 6 palavras, logo abaixo do ícone de pausa, em branco negrito.
+  Ele segura quem assiste sem som.
+- **Ponte:** a primeira frase da Aline, que entra quando a pessoa sai de cena. A melhor
+  ponte é quando a Aline **responde** o que a pessoa de IA provocou.
+
+As técnicas usadas: **interrupção** (manda parar), **polêmica** (contraria o que ela
+acredita), **pergunta que dói**, **bastidor** (mostra algo que pouca gente viu) e
+**identidade** (descreve a pessoa exata que está assistindo).
 
 ### V1 · Laboratório (fundo: `pausa-lab-com-icone.jpg`, Aline debruçada na mesa)
-- **A (curiosidade + lugar):** "Olha onde essa doutora foi parar pra perder o medo de
-  aplicar." [aponta pra trás] → "Você sabe que essa insegurança que cê tem…"
-- **B (dor):** "Se você ainda trava na hora de aplicar, escuta ela." [aponta] → "Você sabe
-  que essa insegurança…"
-- **C (autoridade):** "Ela estudou a face por dentro, nos Estados Unidos. Olha o recado
-  dela." [aponta]
+A Aline abre com: "Você sabe que essa insegurança que cê tem é do conhecimento que cê
+ainda não adquiriu…"
+
+| # | Técnica | Fala | Texto na tela |
+|---|---------|------|---------------|
+| V1-A | Polêmica | "Sua insegurança na hora de aplicar não é falta de prática." [aponta] | NÃO É FALTA DE PRÁTICA |
+| V1-B | Interrupção | "Para tudo. Se você trava na hora de aplicar, escuta isso." [aponta] | SE VOCÊ TRAVA NA HORA DE APLICAR |
+| V1-C | Identidade | "Evita alguma região do rosto por medo? Assiste até o fim." [aponta] | EVITA REGIÃO POR MEDO? |
+| V1-D | Bastidor | "Isso é um laboratório de dissecção nos EUA. Olha o recado dela." [vira pro fundo] | ELA ESTUDOU A FACE POR DENTRO |
+
+**Aposta principal: V1-A.** A pessoa de IA nega a explicação que ela sempre se deu ("é
+falta de prática"), e a Aline entra com a resposta ("é do conhecimento que cê ainda não
+adquiriu"). A curiosidade abre e fecha em 5 segundos.
 
 ### V2 · Consultório (fundo: `pausa-aula-com-icone.jpg`)
-- **A (encaixe direto):** "Escuta o que ela falou pra quem preenche rosto." [aponta] →
-  "Toda vez que você preenche um rosto, existe uma artéria ali a milímetros…"
-- **B (polêmica):** "Ela falou uma verdade sobre boneco e atlas que ninguém fala." [aponta]
-- **C (desejo):** "Se você quer aplicar sem aquele frio na barriga, assiste isso." [aponta]
+A Aline abre com: "Toda vez que você preenche um rosto, existe uma artéria ali a
+milímetros da sua cânula ou da sua agulha."
+
+| # | Técnica | Fala | Texto na tela |
+|---|---------|------|---------------|
+| V2-A | Interrupção | "Não preenche mais nenhum rosto antes de ouvir isso." [aponta] | ANTES DO PRÓXIMO PREENCHIMENTO |
+| V2-B | Pergunta que dói | "Você sabe o que tem a milímetros da sua agulha?" [gesto de milímetro] | O QUE TEM A MILÍMETROS DA SUA AGULHA? |
+| V2-C | Polêmica | "Se você aprendeu em boneco, esse vídeo vai te incomodar." [aponta] | APRENDEU EM BONECO? |
+| V2-D | Desejo | "Ela explicou por que sua mão ainda treme na hora de preencher." [aponta] | POR QUE SUA MÃO AINDA TREME |
+| V2-E | Bastidor | "Isso o seu curso de harmonização não te mostrou." [aponta] | O QUE SEU CURSO NÃO MOSTROU |
+
+**Aposta principal: V2-B.** A pergunta é respondida literalmente na primeira frase da
+Aline ("existe uma artéria ali a milímetros…"). O V2-A é o mais forte pra parar o dedo,
+porque é uma ordem.
+
+### V3 · Caixinha de perguntas (fundo: o quadro com a **pergunta da caixinha visível**)
+Aqui a pausa tem que mostrar a caixinha, porque a pergunta é a dor com as palavras da
+aluna.
+
+| # | Técnica | Fala | Texto na tela |
+|---|---------|------|---------------|
+| V3-A | Identidade | "Se você já pensou isso antes de aplicar, escuta a resposta." [aponta pra caixinha] | VOCÊ JÁ PENSOU ISSO? |
+| V3-B | Bastidor | "Mandaram pra ela a pergunta que toda injetora tem vergonha de fazer." [aponta] | A PERGUNTA QUE NINGUÉM FAZ |
+| V3-C | Leitura | [voz mais baixa, lendo] "'Me sinto muito insegura nas aplicações, qual dica você me dá?' A resposta é pra você." | (a própria caixinha) |
+
+**Aposta principal: V3-A.** Quem se reconhece na pergunta fica pra ouvir a resposta.
+
+### Como dizer o gancho
+- Corte o primeiro quadro na primeira sílaba. Nada de respiração, "é…" ou sorriso antes.
+- A palavra mais importante leva o peso: "**Não** preenche mais nenhum rosto…", "…não é
+  falta de **prática**".
+- Meio segundo de silêncio antes do gesto de apontar. É o que faz o "play" do vídeo
+  parecer uma resposta.
+- Gere 3 tomadas de cada gancho no avatar e escolha a mais natural. A primeira raramente
+  é a melhor.
 
 **Cortes do V2** (1min41 é longo pra anúncio frio; ajuste ±0,3s pelo áudio):
 - **Corte curto, cerca de 34s:** 0:00–0:17 ("…seu paciente ali no seu consultório não é
@@ -194,8 +310,10 @@ aluna.
 
 ## 6. Como testar
 
-- **Rodada 1:** V1-A, V1-B, V2-A, V2-B, V3-A com a persona A, no mesmo conjunto de
-  público frio. Depois, os 2 melhores ganchos com a persona B.
+- **Rodada 1:** V1-A, V1-B, V2-A, V2-B e V3-A com a Camila, no mesmo conjunto de público
+  frio. Depois, os 2 melhores ganchos com a persona B.
+- **Rodada 2:** o gancho vencedor com 2 textos de tela diferentes. O texto sozinho às
+  vezes muda a taxa de gancho tanto quanto a fala.
 - **O que olhar, nesta ordem:**
   1. **Taxa de gancho** (visualizações de 3s ÷ impressões). Como referência comum de
      mercado, abaixo de 25% o gancho não está parando o dedo.
