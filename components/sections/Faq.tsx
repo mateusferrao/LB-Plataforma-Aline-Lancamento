@@ -25,10 +25,6 @@ const FAQS = [
     a: "Sim. No fim da aula, em primeira mão, a Aline abre a nova fase pra quem esteve na sala. Quem não estava, fica sabendo depois.",
   },
   {
-    q: "Pra quem é essa aula?",
-    a: "Biomédicas, dentistas, enfermeiras, farmacêuticas e esteticistas que já aplicam (ou vão aplicar) harmonização facial e querem mais segurança e resultado.",
-  },
-  {
     q: "Ainda estou começando. Aproveito mesmo assim?",
     a: "Aproveita, e muito. Quanto antes você entende a anatomia por dentro, menos vícios carrega. A aula parte do que está embaixo da pele, então serve pra quem já aplica e pra quem quer começar no lugar certo.",
   },

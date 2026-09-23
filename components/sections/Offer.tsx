@@ -19,6 +19,14 @@ const INCLUDES = [
   },
 ];
 
+// Como funciona do clique à sala — tráfego de anúncio compra sem conhecer o
+// processo; os 3 passos tiram o "e depois que eu pagar?".
+const PASSOS = [
+  { t: "Garanta sua vaga", d: "No Pix ou no cartão em até 12x, direto no site." },
+  { t: "Entre no grupo do WhatsApp", d: "O acesso chega assim que a compra é confirmada." },
+  { t: "Dia 6, às 20h, entre na sala", d: "Pelo link privado enviado no grupo." },
+];
+
 export function Offer({ comVsl }: { comVsl: boolean }) {
   return (
     <section className="bg-bg-2 py-16 sm:py-[92px]">
@@ -93,6 +101,16 @@ export function Offer({ comVsl }: { comVsl: boolean }) {
             </div>
           </Reveal>
         </div>
+
+        <Reveal className="mt-12 grid grid-cols-1 gap-px overflow-hidden rounded-[4px] border border-line bg-line sm:grid-cols-3">
+          {PASSOS.map((p, i) => (
+            <div key={p.t} className="bg-bg-3 px-6 py-5">
+              <span className="font-serif text-[1.05rem] text-wine-ink">{i + 1}.</span>
+              <div className="mt-1.5 text-[1.02rem] text-fg">{p.t}</div>
+              <div className="mt-1 text-[0.9rem] leading-[1.5] text-fg-faint">{p.d}</div>
+            </div>
+          ))}
+        </Reveal>
 
         {/* Semente leve da plataforma (produto principal por trás do tripwire) */}
         <p className="mx-auto mt-10 max-w-[560px] text-center text-[0.98rem] leading-[1.55] text-fg-faint italic">

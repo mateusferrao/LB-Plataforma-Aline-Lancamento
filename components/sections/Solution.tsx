@@ -16,7 +16,6 @@ const SEE = [
 export function Solution({ comVsl }: { comVsl: boolean }) {
   return (
     <>
-      <hr className="border-line" />
       <section className="py-16 sm:py-[92px]">
         <Container>
           <div className="grid grid-cols-1 items-center gap-9 sm:gap-[54px] md:grid-cols-[0.82fr_1.18fr]">

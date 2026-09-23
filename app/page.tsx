@@ -1,5 +1,7 @@
 import { Hero } from "@/components/sections/Hero";
 import { Problem } from "@/components/sections/Problem";
+import { Criterio } from "@/components/sections/Criterio";
+import { ParaQuem } from "@/components/sections/ParaQuem";
 import { Solution } from "@/components/sections/Solution";
 import { SocialProof } from "@/components/sections/SocialProof";
 import { Authority } from "@/components/sections/Authority";
@@ -17,9 +19,11 @@ export default function Home() {
       <main>
         <Hero comVsl={true} />
         <Problem />
+        <Criterio />
         <Solution comVsl={true} />
-        <SocialProof />
         <Authority />
+        <SocialProof />
+        <ParaQuem />
         <Offer comVsl={true} />
         <Faq />
         <FinalCta comVsl={true} />
