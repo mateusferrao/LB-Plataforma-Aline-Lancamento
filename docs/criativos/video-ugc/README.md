@@ -171,6 +171,30 @@ ganchos precisam sair palavra por palavra.
 Antes de assinar, confirme no plano: voz PT-BR, exportação 1080×1920 e exportação com
 fundo verde ou transparente.
 
+### Remover o fundo do vídeo da pessoa
+**O jeito mais limpo é animar em cima do verde.** O recorte por IA quadro a quadro
+treme nos fios soltos do cabelo. O chroma key sobre verde liso sai estável.
+
+1. **Antes de animar:** use `avatar/camila-fundo-verde.jpg`, a foto da Camila com o fundo
+   trocado por verde (#00B140). Anime essa foto na ferramenta de avatar (Hedra, HeyGen,
+   Dreamina etc.). Se a ferramenta deixar escolher o fundo, escolha verde liso.
+2. **No CapCut desktop:** selecione o clipe dela → **Vídeo → Recorte → Chroma key** →
+   use o conta-gotas no verde. Suba a **intensidade** até o verde sumir sem comer o
+   cabelo e ajuste a **sombra** pra tirar o reflexo verde na borda.
+3. **Se o vídeo já veio com outro fundo:** **Vídeo → Recorte → Remover fundo → Remoção
+   automática**. No celular fica em **Editar → Remover fundo**. Funciona bem com parede
+   lisa, mas confira os fios de cabelo quadro a quadro no começo e no fim do gancho.
+4. **Acabamento:** borda suave de 1 a 2 px e uma sombra leve atrás dela. Como o fundo
+   pausado está escurecido e desfocado, qualquer resto de halo quase não aparece.
+
+Outras opções, se o CapCut não der conta: o **Canva Pro** (remover fundo de vídeo), o
+**Runway** (remoção de fundo por IA) e, pra quem já usa, o **DaVinci Resolve** (Magic
+Mask) ou o **After Effects** (Roto Brush).
+
+**Posição na tela:** largura de cerca de 80% da tela, colada embaixo. No V1, centralizada
+um pouco pra direita. No V2, deslocada pra esquerda, pra manter o rosto da Aline visível
+à direita. Veja `avatar/previa-montagem.jpg`.
+
 ### Montar no CapCut (desktop)
 1. Crie um projeto **9:16, 1080×1920, 30 fps**.
 2. **Faixa principal:** `fundos/pausa-lab-com-icone.jpg` (ou `pausa-aula-…`) com a
