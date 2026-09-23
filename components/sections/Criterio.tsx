@@ -1,9 +1,8 @@
 import { Container } from "@/components/Container";
 import { Reveal } from "@/components/Reveal";
 
-// Explica a "decisão" da headline do Hero: mostra, lado a lado, o que o curso
-// de técnica entrega e o que só o critério dá. A maioria do público já fez
-// curso — o contraste é com o que ela já tem.
+// Mostra, lado a lado, o que o curso de técnica entrega e o que só o critério
+// dá. A maioria do público já fez curso — o contraste é com o que ela já tem.
 const ROWS = [
   {
     tecnica: "O ponto de aplicação do protocolo.",

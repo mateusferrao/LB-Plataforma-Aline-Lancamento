@@ -24,17 +24,20 @@ export function Hero({ comVsl }: { comVsl: boolean }) {
               </span>
             </div>
 
-            <h1 className="mt-5 text-balance font-serif font-semibold text-[2.35rem] leading-[1.12] tracking-[-0.012em] sm:text-[3.1rem] lg:text-[3.7rem]">
-              {/* Headline em dois níveis visuais pra não empurrar o CTA pra baixo
-                  no mobile: a virada grifada e, no segundo nível, a decisão + o
-                  que é e quem conduz (tráfego frio de anúncio lê só o H1). */}
+            <h1 className="mt-5 text-balance font-serif font-semibold text-[2rem] leading-[1.12] tracking-[-0.012em] sm:text-[2.6rem] lg:text-[3rem]">
+              {/* Headline em dois níveis: a promessa grifada (o resultado que o
+                  público mais pede na pesquisa: menos produto, mais resultado,
+                  sem retoque) e, no segundo nível, o que é e quem conduz —
+                  tráfego frio de anúncio lê só o H1. Tamanho menor que o das
+                  outras seções porque a frase é longa e o CTA precisa caber na
+                  primeira tela do mobile. */}
               <span className="titulo-grifo">
-                O erro na aplicação não acontece na agulha.
+                Quem entende onde o produto se acomoda usa menos seringa, entrega mais
+                resultado e não precisa corrigir depois.
               </span>{" "}
-              <span className="mt-5 block text-[1.45rem] leading-[1.3] font-medium tracking-normal text-fg sm:text-[1.8rem] lg:text-[2.05rem]">
-                Acontece antes, na decisão que você toma sem enxergar o rosto por dentro.
+              <span className="mt-5 block text-[1.3rem] leading-[1.3] font-medium tracking-normal text-fg sm:text-[1.6rem] lg:text-[1.8rem]">
                 Em um evento ao vivo, direto da mesa de dissecção, a Dra. Aline mostra o que
-                está embaixo da pele.
+                está embaixo da pele e onde o produto vai parar em cada plano da face.
               </span>
             </h1>
 
