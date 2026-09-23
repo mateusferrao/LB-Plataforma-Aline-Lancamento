@@ -73,7 +73,7 @@ por e-mail.
 
 ### 15. Quem é a Dra. Aline Filgueiras?
 São **11+ anos de clínica**, **1000+ alunas formadas** e **30+ certificações**. Ela fez o primeiro
-curso de dissecção em 2018, passou por uma temporada de dissecção nos Estados Unidos e hoje dá
+curso de dissecção em 2018, passou por uma temporada de dissecção em peças fresh frozen nos Estados Unidos e hoje dá
 cursos internacionais de anatomia na Europa. Fundou a Filgueiras Academy e a pós em Estética
 Avançada e Integrativa, e atende em Belo Horizonte e Praia Grande.
 

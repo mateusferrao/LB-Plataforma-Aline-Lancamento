@@ -38,8 +38,8 @@ export function Authority() {
               aplicar sem enxergar o que está embaixo da pele. Isso mudou em 2018, quando
               ela fez o primeiro curso de dissecção. Ver a face por dentro deu a ela uma
               segurança que nenhum atlas tinha dado, e foi o que destravou a carreira dela.
-              Depois vieram uma temporada de dissecção nos Estados Unidos e os cursos
-              internacionais de anatomia que ela dá hoje na Europa. São onze anos resolvendo
+              Depois vieram uma temporada de dissecção em peças fresh frozen nos Estados
+              Unidos e os cursos internacionais de anatomia que ela dá hoje na Europa. São onze anos resolvendo
               os casos mais complexos da estética. Ela fundou a Filgueiras Academy e a pós em
               Estética Avançada e Integrativa, e atende em Belo Horizonte e Praia Grande.
             </p>

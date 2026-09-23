@@ -89,8 +89,8 @@ Diferencial de fechamento da aula: **quem está na sala vê a nova fase nascer e
 - **11+ anos de clínica**, **1000+ alunas formadas**, **30+ certificações**, **40 mil+** na
   comunidade.
 - Fez o primeiro curso de dissecção em **2018** — foi o que destravou a carreira dela.
-- Depois veio uma **temporada de dissecção nos Estados Unidos** e os **cursos internacionais de
-  anatomia** que ela dá hoje na **Europa**.
+- Depois veio uma **temporada de dissecção em peças fresh frozen nos Estados Unidos** e os
+  **cursos internacionais de anatomia** que ela dá hoje na **Europa**.
 - Fundou a **Filgueiras Academy** e a **pós em Estética Avançada e Integrativa**.
 - Atende em **Belo Horizonte** e **Praia Grande**.
 
@@ -157,8 +157,8 @@ As falas abaixo são modelos; adapte ao tom da conversa.
   após a compra pra pedir reembolso, sem perguntas. Então o risco de garantir a vaga é zero."
 
 - **"É confiável? Quem é a Aline?"**
-  → (usar a seção 7) "São 11+ anos de clínica, 1000+ alunas formadas, temporada de dissecção nos
-  EUA e cursos internacionais de anatomia na Europa. É esse rigor que ela traz pra essa noite."
+  → (usar a seção 7) "São 11+ anos de clínica, 1000+ alunas formadas, temporada de dissecção em
+  peças fresh frozen nos EUA e cursos internacionais de anatomia na Europa. É esse rigor que ela traz pra essa noite."
 
 - **"E se eu não gostar?"**
   → "Risco zero: você tem 7 dias pra pedir reembolso, sem perguntas."
