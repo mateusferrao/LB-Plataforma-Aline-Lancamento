@@ -13,12 +13,9 @@ import { Footer } from "@/components/Footer";
 import { StickyCta } from "@/components/lp2/StickyCta";
 import { IngressoModal } from "@/components/lp2/IngressoModal";
 
-// /lp2 — versão B do teste A/B de LP (a versão A é a rota /, em app/page.tsx).
-// Copy nova, seções As 3 camadas e Pra quem é, e emissão de ingresso
-// antes do preço (components/lp2/IngressoModal.tsx). Mesma variante de vídeo
-// da / (COM VSL), pra que o teste compare só a LP. Os componentes que mudaram
-// em relação à / vivem em components/lp2/; o resto é compartilhado. A variante
-// SEM VSL é app/lp2/sem-vsl/page.tsx.
+// /lp2/sem-vsl — versão B do teste de LP na variante SEM VSL (foto estática
+// no Hero, CTAs nunca travados). Estrutura idêntica a app/lp2/page.tsx (COM
+// VSL); só muda o `comVsl`. Par da /sem-vsl da versão A.
 export const metadata: Metadata = {
   title: "Por Dentro da Face · Aula ao vivo com Dra. Aline Filgueiras · 06/10",
   description:
@@ -32,24 +29,24 @@ export const metadata: Metadata = {
   },
 };
 
-export default function Lp2() {
+export default function Lp2SemVsl() {
   return (
     <>
       <main>
-        <Hero comVsl={true} />
+        <Hero comVsl={false} />
         <Problem />
         <TresCamadas />
-        <Solution comVsl={true} />
+        <Solution comVsl={false} />
         <Authority />
         <SocialProof />
         <ParaQuem />
-        <Offer comVsl={true} />
+        <Offer comVsl={false} />
         <Faq />
-        <FinalCta comVsl={true} />
+        <FinalCta comVsl={false} />
       </main>
       <Footer />
       <div aria-hidden className="h-[122px] sm:hidden" />
-      <StickyCta comVsl={true} />
+      <StickyCta comVsl={false} />
       <IngressoModal />
     </>
   );
