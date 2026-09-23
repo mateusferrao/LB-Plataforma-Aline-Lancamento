@@ -24,15 +24,13 @@ export function Hero({ comVsl }: { comVsl: boolean }) {
             </div>
 
             <h1 className="mt-5 text-balance font-serif font-semibold text-[2rem] leading-[1.12] tracking-[-0.012em] sm:text-[2.6rem] lg:text-[3rem]">
-              {/* Headline em dois níveis: a promessa grifada (o resultado que o
-                  público mais pede na pesquisa: menos produto, mais resultado,
-                  sem retoque) e, no segundo nível, o que é e quem conduz —
-                  tráfego frio de anúncio lê só o H1. Tamanho menor que o das
-                  outras seções porque a frase é longa e o CTA precisa caber na
-                  primeira tela do mobile. */}
+              {/* Headline em dois níveis: a promessa grifada e, no segundo nível, o
+                  que é e quem conduz — tráfego frio de anúncio lê só o H1.
+                  Tamanho menor que o das outras seções porque a frase é longa e
+                  o CTA precisa caber na primeira tela do mobile. */}
               <span className="titulo-grifo">
-                Quem entende onde o produto se acomoda usa menos seringa, entrega mais
-                resultado e não precisa corrigir depois.
+                Entenda as 3 camadas que ninguém te mostrou e pare de ter resultado
+                diferente em cada rosto.
               </span>{" "}
               <span className="mt-5 block text-[1.3rem] leading-[1.3] font-medium tracking-normal text-fg sm:text-[1.6rem] lg:text-[1.8rem]">
                 Em um evento ao vivo, direto da mesa de dissecção, a Dra. Aline mostra o que
