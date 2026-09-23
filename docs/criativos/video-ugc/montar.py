@@ -118,7 +118,7 @@ def main():
     ap.add_argument("--x", type=int, default=100, help="deslocamento horizontal da pessoa em px (negativo = esquerda)")
     ap.add_argument("--largura", type=float, default=0.8, help="largura da pessoa em fração da tela")
     ap.add_argument("--corte", type=float, default=0.68, help="fração da altura do vídeo da pessoa mantida, de cima pra baixo")
-    ap.add_argument("--saida-cena", type=float, default=0.3, help="duração da saída deslizando pra baixo, em segundos")
+    ap.add_argument("--saida-cena", type=float, default=0.3, help="duração da saída deslizando pra baixo, em segundos (0 = corte seco)")
     ap.add_argument("--sem-verde", action="store_true", help="remove o fundo com IA quando o vídeo não vem em verde")
     ap.add_argument("--cor", default="0x00B140", help="cor do fundo verde")
     ap.add_argument("--fonte", default=str(AQUI / "inter-semibold.ttf"))
@@ -139,7 +139,8 @@ def main():
         )
         fundo = f"[0:v]scale={W}:{H},setsar=1,fps={FPS},format=yuv420p[f]"
         x = f"(W-w)/2+{args.x}"
-        y = f"H-h+if(gt(t\\,{t - s:.3f})\\,(t-{t - s:.3f})/{s}*h\\,0)"
+        # Com --saida-cena 0 o corte é seco: ela some junto com o fim da fala.
+        y = f"H-h+if(gt(t\\,{t - s:.3f})\\,(t-{t - s:.3f})/{s}*h\\,0)" if s > 0 else "H-h"
         if args.texto:
             imagem_do_texto(args.texto, args.fonte, tmp / "texto.png")
             gancho = f"[f][p]overlay=x={x}:y={y}:shortest=1[fp];[fp][3:v]overlay=0:0,format=yuv420p[gv]"
