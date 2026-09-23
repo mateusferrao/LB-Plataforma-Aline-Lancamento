@@ -16,7 +16,7 @@ prova de por que a Aline consegue entregar isso (legenda da foto, linha de autor
 | 02 | `png/criativo-02.png` | Resultado bonito e previsível em cada rosto | Frio |
 | 03 | `png/criativo-03.png` | Calma perto das áreas de risco | Frio |
 | 04 | `png/criativo-04.png` | Mais segurança na mão, mais resultado na paciente (prova) | Morno/quente |
-| 05 | `png/criativo-05.png` | Uma noite pra aplicar com outra segurança (oferta) | Quente |
+| 05 | `png/criativo-05.png` | Uma noite pra aplicar com segurança (oferta) | Quente |
 
 ---
 
@@ -195,7 +195,7 @@ Regras que valem para todos:
   - B. "A paciente ficou perfeita." (citação do print como headline)
 
 ### Criativo 05 · O ingresso
-- **Headline:** Uma noite pra aplicar *com outra segurança.*
+- **Headline:** Uma noite pra aplicar com *segurança.*
 - **Apoio:** Você sai com a mão mais firme e resultados mais previsíveis em cada rosto.
 - **Ingresso:** Por Dentro da Face · pra aplicar harmonização facial com mais segurança e
   resultado · 06.10.2026 · 20h (Brasília) · ~90 min · Online · **R$67** · 12x no cartão ou
@@ -206,7 +206,7 @@ Regras que valem para todos:
 - **Por quê:** fundo de funil. O desejo vem primeiro e a urgência depois, pra ela decidir
   pelo que ganha, não só pelo medo de perder.
 - **Alternativas:**
-  - A. "R$67 pra aplicar com outra segurança." Preço como gancho, pra público quente.
+  - A. "R$67 pra aplicar com segurança." Preço como gancho, pra público quente.
   - B. "06/10, 20h. A noite em que a sua mão fica mais firme."
 
 ## 5. Legendas sugeridas (texto principal do anúncio)
@@ -228,7 +228,7 @@ Regras que valem para todos:
 > aplicar sabendo o resultado que vai entregar.
 
 **Para 04 e 05 (público quente):**
-> Uma noite pra aplicar com outra segurança. Ao vivo, sem replay: as inscrições encerram
+> Uma noite pra aplicar com segurança. Ao vivo, sem replay: as inscrições encerram
 > às 20h do dia 6. R$67 no Pix ou em até 12x, com 7 dias de garantia.
 
 **Título do anúncio:** Aplique com mais segurança · 06/10 às 20h
