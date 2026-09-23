@@ -5,10 +5,6 @@ import { Reveal } from "@/components/Reveal";
 // Regra Sugarman: nenhuma resposta introduz objeção nova.
 const FAQS = [
   {
-    q: "Já fiz curso de harmonização. Essa aula não vai repetir o que eu já sei?",
-    a: "Não. Curso ensina técnica: o protocolo, os pontos, o passo a passo. Essa aula é sobre o que vem antes: o critério que a anatomia por dentro dá pra você decidir em cada rosto, inclusive quando ele foge do protocolo.",
-  },
-  {
     q: "Por que a aula é ao vivo e sem gravação?",
     a: "Porque o valor está em estar presente. Ao vivo, você tira suas dúvidas na hora e sai com uma leitura nova da anatomia, não com mais um vídeo pra assistir um dia.",
   },
@@ -23,6 +19,10 @@ const FAQS = [
   {
     q: "É verdade que eu vejo a nova fase nascer antes de todo mundo?",
     a: "Sim. No fim da aula, em primeira mão, a Aline abre a nova fase pra quem esteve na sala. Quem não estava, fica sabendo depois.",
+  },
+  {
+    q: "Pra quem é essa aula?",
+    a: "Biomédicas, dentistas, enfermeiras, farmacêuticas e esteticistas que já aplicam (ou vão aplicar) harmonização facial e querem mais segurança e resultado.",
   },
   {
     q: "Ainda estou começando. Aproveito mesmo assim?",

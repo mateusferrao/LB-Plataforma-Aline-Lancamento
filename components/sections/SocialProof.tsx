@@ -70,10 +70,10 @@ export function SocialProof() {
       <Container narrow>
         <Reveal>
           <span className="text-[12px] font-semibold tracking-[0.24em] text-wine-ink uppercase">
-            +1.000 alunas formadas
+            Quem já estuda com a Aline
           </span>
           <h2 className="mt-[18px] font-serif font-semibold text-[1.95rem] sm:text-[2.6rem]">
-            <span className="titulo-grifo">Quem aprende com a Aline volta pra cadeira diferente.</span>
+            <span className="titulo-grifo">O que elas dizem depois de sentar nessa sala.</span>
           </h2>
         </Reveal>
       </Container>

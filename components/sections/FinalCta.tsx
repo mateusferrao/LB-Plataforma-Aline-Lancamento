@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Container } from "@/components/Container";
 import { Countdown } from "@/components/Countdown";
 import { CtaButton } from "@/components/CtaButton";
+import { ParcelaLine } from "@/components/ParcelaLine";
 import { UrgenciaFina } from "@/components/UrgenciaFina";
 import { withBasePath } from "@/lib/basePath";
 
@@ -28,17 +29,19 @@ export function FinalCta({ comVsl }: { comVsl: boolean }) {
           6 de outubro · 20h
         </span>
         <h2 className="mt-[18px] mb-6 max-w-[560px] text-balance font-serif font-semibold text-[1.95rem] sm:text-[2.6rem]">
-          <span className="titulo-grifo">No dia 6, você volta pra cadeira com critério, não com mais um protocolo.</span>
+          <span className="titulo-grifo">Nesse dia, a mesa de dissecção vira a sua tela.</span>
         </h2>
 
         <Countdown align="center" />
 
         <CtaButton
+          showPrice
           requireVsl={comVsl}
           className="mt-8 w-full justify-center sm:w-auto"
         >
           Quero minha vaga
         </CtaButton>
+        <ParcelaLine className="mt-2" />
         <UrgenciaFina className="mt-3.5 text-[13.5px] tracking-[0.02em] text-fg-faint" />
       </Container>
     </section>

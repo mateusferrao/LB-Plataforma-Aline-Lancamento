@@ -7,7 +7,7 @@ import { VagasBadge } from "@/components/VagasBadge";
 const INCLUDES = [
   {
     title: "Aula ao vivo de ~90 minutos com a Dra. Aline",
-    detail: "O que a dissecção revela, aplicado às suas decisões na cadeira",
+    detail: "Anatomia da dissecção aplicada à sua conduta",
   },
   {
     title: "Tira-dúvidas ao vivo, na hora",
@@ -17,14 +17,6 @@ const INCLUDES = [
     title: "Link privado, exclusivo pra inscritos",
     detail: "Enviado no grupo do WhatsApp antes da aula.",
   },
-];
-
-// Como funciona do clique à sala — tráfego de anúncio compra sem conhecer o
-// processo; os 3 passos tiram o "e depois que eu pagar?".
-const PASSOS = [
-  { t: "Emita seu ingresso", d: "Leva 10 segundos, direto no site." },
-  { t: "Confirme no Pix ou no cartão", d: "Em até 12x. O acesso ao grupo do WhatsApp chega na hora." },
-  { t: "Dia 6, às 20h, entre na sala", d: "Pelo link privado enviado no grupo." },
 ];
 
 export function Offer({ comVsl }: { comVsl: boolean }) {
@@ -67,8 +59,8 @@ export function Offer({ comVsl }: { comVsl: boolean }) {
               </div>
             ))}
             <p className="mt-6 max-w-[440px] font-serif text-[1.16rem] leading-[1.45] text-wine-ink italic">
-              O ingresso custa menos que uma seringa de preenchedor. Uma intercorrência
-              custa muito mais: dinheiro, reputação e noites de sono.
+              Uma intercorrência custa muito mais que o ingresso. Custa dinheiro,
+              reputação e noites de sono.
             </p>
           </Reveal>
 
@@ -87,7 +79,7 @@ export function Offer({ comVsl }: { comVsl: boolean }) {
               requireVsl={comVsl}
               className="mt-4 w-full justify-center"
             >
-              Emitir meu ingresso
+              Garantir minha vaga
             </CtaButton>
 
             <div className="mt-6 flex items-start gap-2.5 text-left text-[0.96rem] opacity-90">
@@ -101,16 +93,6 @@ export function Offer({ comVsl }: { comVsl: boolean }) {
             </div>
           </Reveal>
         </div>
-
-        <Reveal className="mt-12 grid grid-cols-1 gap-px overflow-hidden rounded-[4px] border border-line bg-line sm:grid-cols-3">
-          {PASSOS.map((p, i) => (
-            <div key={p.t} className="bg-bg-3 px-6 py-5">
-              <span className="font-serif text-[1.05rem] text-wine-ink">{i + 1}.</span>
-              <div className="mt-1.5 text-[1.02rem] text-fg">{p.t}</div>
-              <div className="mt-1 text-[0.9rem] leading-[1.5] text-fg-faint">{p.d}</div>
-            </div>
-          ))}
-        </Reveal>
 
         {/* Semente leve da plataforma (produto principal por trás do tripwire) */}
         <p className="mx-auto mt-10 max-w-[560px] text-center text-[0.98rem] leading-[1.55] text-fg-faint italic">

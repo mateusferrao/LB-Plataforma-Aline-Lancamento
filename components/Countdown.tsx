@@ -100,10 +100,9 @@ export function Countdown({
         ))}
       </div>
 
-      {/* Subtexto sem valor em R$ (o preço só aparece no ingresso emitido);
-          min-height reservada pra não pular na hidratação. */}
+      {/* Subtexto do preço; min-height reservada pra não pular na hidratação. */}
       <p className="min-h-[1.5em] max-w-[520px] text-[0.98rem] leading-[1.5] text-fg-soft">
-        {montado && lote ? "Preço único até a aula. Vagas por tempo limitado." : ""}
+        {montado && lote ? `${lote.priceLabel} até a aula. Vagas por tempo limitado.` : ""}
       </p>
     </div>
   );

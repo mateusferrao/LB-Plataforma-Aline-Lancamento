@@ -11,9 +11,6 @@
 //     gateway) — não é calculado aqui, vem pronto de lá. Atualize junto se o
 //     preço do lote mudar.
 //   - `checkoutUrl` é o link do checkout Ticto daquele lote.
-//   - `precoDe`/`precoDeLabel` (opcionais) são o preço "de" mostrado no
-//     ingresso emitido ("De R$197 por R$67", com o % de desconto calculado).
-//     Sem eles, o ingresso mostra só o preço do lote.
 //   - Fora de qualquer lote (antes do 1º ou depois do último), o botão bloqueia.
 //
 //  Dinâmica atual: um único lote (R$67) vale do início das inscrições até a
@@ -28,8 +25,6 @@ export type Lote = {
   startsAt: string; // ISO com fuso de Brasília, ex: "2026-08-12T00:00:00-03:00"
   endsAt: string;
   checkoutUrl: string;
-  precoDe?: number;
-  precoDeLabel?: string;
 };
 
 export const LOTES: Lote[] = [
@@ -41,8 +36,6 @@ export const LOTES: Lote[] = [
     startsAt: "2026-09-12T00:00:00-03:00",
     endsAt: "2026-10-06T20:00:00-03:00",
     checkoutUrl: "https://payment.ticto.app/O072A87DC",
-    precoDe: 197,
-    precoDeLabel: "R$197",
   },
 ];
 

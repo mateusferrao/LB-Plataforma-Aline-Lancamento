@@ -103,7 +103,7 @@ Diferencial de fechamento da aula: **quem está na sala vê a nova fase nascer e
 
 - Na data e hora da aula (06/10, 20h), **as inscrições encerram**.
 - Se não tiver certeza do valor vigente no momento da conversa, **oriente a lead a conferir no
-  site** — o preço atual aparece no ingresso, logo depois que a pessoa o emite no site.
+  site** — o site sempre mostra o preço atual e o contador até a aula.
 
 **Gatilhos reais de urgência (todos verdadeiros — pode usar):**
 - **Poucas vagas** para a sala ao vivo (nunca cite um número — não temos número declarado).

@@ -1,13 +1,10 @@
 import { Container } from "@/components/Container";
 import { Reveal } from "@/components/Reveal";
 
-// Dores na linguagem da pesquisa de público: a maioria já fez curso de HOF e
-// trava na DECISÃO (ponto certo pra cada caso, resultado que muda de rosto pra
-// rosto, medo de intercorrência) — não na técnica em si.
 const PAINS = [
-  "Você sabe a técnica, mas trava na hora de escolher o ponto certo para aquele rosto.",
-  "A mesma técnica que ficou linda numa paciente fica sem graça na outra, e você não sabe explicar por quê.",
-  "O medo da intercorrência vascular faz a sua mão hesitar a milímetros de estruturas que você só viu desenhadas.",
+  "A insegurança de aplicar a milímetros de estruturas que você só viu desenhadas.",
+  "Fazer a técnica certinha e mesmo assim não enxergar o que tem logo abaixo da pele.",
+  "O medo da intercorrência vascular que ninguém quer viver na própria cadeira.",
 ];
 
 export function Problem() {
@@ -20,7 +17,8 @@ export function Problem() {
           </span>
           <h2 className="mt-[18px] text-balance font-serif font-semibold text-[1.95rem] leading-[1.12] sm:text-[2.6rem]">
             <span className="titulo-grifo">
-              Você aprendeu o protocolo. Ninguém te ensinou a decidir quando o rosto foge dele.
+              Você estudou em atlas, slide e boneco. O rosto na sua cadeira não é nenhum dos
+              três.
             </span>
           </h2>
         </Reveal>
@@ -39,13 +37,6 @@ export function Problem() {
             </Reveal>
           ))}
         </div>
-
-        <Reveal>
-          <p className="mt-9 max-w-[600px] font-serif text-[1.28rem] leading-[1.4] text-fg italic">
-            Isso não se resolve com mais um curso de técnica. Se resolve com critério. E
-            critério vem de ver o que está embaixo da pele.
-          </p>
-        </Reveal>
       </Container>
     </section>
   );

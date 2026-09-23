@@ -1,7 +1,6 @@
 "use client";
 
 import { agora, LIVE_DATE_ISO } from "@/lib/lotes";
-import { abrirIngresso } from "@/lib/ingresso";
 import { useLoteAtivo } from "@/lib/useLoteAtivo";
 import { useVslGate } from "@/lib/useVslGate";
 import { trackCustom, gaEvent } from "@/lib/analytics";
@@ -12,6 +11,8 @@ type Props = {
   children: React.ReactNode;
   variant?: "dark" | "accent";
   className?: string;
+  // Quando true, anexa " · R$XX" do lote ativo ao final do texto.
+  showPrice?: boolean;
   // Quando true, o botão fica travado (aria-disabled, sem navegar) até a
   // VSL do Hero terminar — em qualquer estado (checkout, aviso ou
   // encerrado). Passado em todas as instâncias do CtaButton na página.
@@ -28,15 +29,15 @@ function formatRemaining(seconds: number) {
   return `${m}:${two(s)}`;
 }
 
-// Com inscrições abertas, o botão NÃO vai direto pro checkout: abre o modal de
-// emitir ingresso (components/IngressoModal.tsx), que só mostra o preço e o
-// link do checkout depois que a visitante emite o ingresso. O ClickCheckout
-// agora dispara lá, no "Confirmar meu ingresso".
-// Fora dos lotes (antes de abrir ou encerrado), vira um CTA pro Instagram.
+// O repasse de UTM/params para o checkout é feito pelo script oficial da Ticto
+// (ticto-echo), montado no layout. Aqui apontamos pra URL do LOTE ATIVO e
+// disparamos o evento de intenção (ClickCheckout) com o preço do lote.
+// Fora dos lotes (encerrado), o botão vira um CTA pro Instagram da Aline.
 export function CtaButton({
   children,
   variant = "dark",
   className = "",
+  showPrice = false,
   requireVsl = false,
 }: Props) {
   const { lote, montado } = useLoteAtivo();
@@ -62,7 +63,7 @@ export function CtaButton({
   // igual pra qualquer um desses três estados.
   let href: string;
   let external = false;
-  let abreIngresso = false;
+  let isCheckout = false;
   let label: React.ReactNode = children;
   let track: () => void = () => {};
 
@@ -84,11 +85,24 @@ export function CtaButton({
       gaEvent("click_proxima_turma", {});
     };
   } else {
-    href = "#ingresso";
-    abreIngresso = true;
+    href = lote?.checkoutUrl ?? "#";
+    isCheckout = true;
+    label = (
+      <>
+        {children}
+        {showPrice && montado && lote && (
+          <span className="font-serif text-[1.16rem]">· {lote.priceLabel}</span>
+        )}
+      </>
+    );
     track = () => {
-      trackCustom("AbrirIngresso", { content_name: "Ingresso Por Dentro da Face" });
-      gaEvent("open_ingresso", {});
+      if (!lote) return;
+      trackCustom("ClickCheckout", {
+        content_name: "Ingresso Por Dentro da Face",
+        value: lote.price,
+        currency: "BRL",
+      });
+      gaEvent("click_checkout", { value: lote.price, currency: "BRL" });
     };
   }
 
@@ -121,12 +135,8 @@ export function CtaButton({
             return;
           }
           track();
-          if (abreIngresso) {
-            e.preventDefault();
-            abrirIngresso();
-          }
         }}
-        aria-haspopup={abreIngresso ? "dialog" : undefined}
+        data-checkout={isCheckout || undefined}
       >
         {label}
       </a>

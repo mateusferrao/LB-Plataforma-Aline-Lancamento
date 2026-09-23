@@ -3,6 +3,7 @@ import { AnimatedNumber } from "@/components/AnimatedNumber";
 import { Container } from "@/components/Container";
 import { Countdown } from "@/components/Countdown";
 import { CtaButton } from "@/components/CtaButton";
+import { ParcelaLine } from "@/components/ParcelaLine";
 import { UrgenciaFina } from "@/components/UrgenciaFina";
 import { VslPlayer } from "@/components/VslPlayer";
 import { withBasePath } from "@/lib/basePath";
@@ -23,31 +24,28 @@ export function Hero({ comVsl }: { comVsl: boolean }) {
               </span>
             </div>
 
-            <h1 className="mt-5 text-balance font-serif font-semibold text-[2rem] leading-[1.12] tracking-[-0.012em] sm:text-[2.6rem] lg:text-[3rem]">
-              {/* Headline em dois níveis: a promessa grifada (o resultado que o
-                  público mais pede na pesquisa: menos produto, mais resultado,
-                  sem retoque) e, no segundo nível, o que é e quem conduz —
-                  tráfego frio de anúncio lê só o H1. Tamanho menor que o das
-                  outras seções porque a frase é longa e o CTA precisa caber na
-                  primeira tela do mobile. */}
+            <h1 className="mt-5 text-balance font-serif font-semibold text-[2.35rem] leading-[1.12] tracking-[-0.012em] sm:text-[3.1rem] lg:text-[3.7rem]">
               <span className="titulo-grifo">
-                Quem entende onde o produto se acomoda usa menos seringa, entrega mais
-                resultado e não precisa corrigir depois.
-              </span>{" "}
-              <span className="mt-5 block text-[1.3rem] leading-[1.3] font-medium tracking-normal text-fg sm:text-[1.6rem] lg:text-[1.8rem]">
-                Em um evento ao vivo, direto da mesa de dissecção, a Dra. Aline mostra o que
-                está embaixo da pele e onde o produto vai parar em cada plano da face.
+                Aplique com a segurança de quem já viu, por dentro, onde estão os riscos da face.
               </span>
             </h1>
+
+            <p className="mt-6 max-w-[560px] text-[1.2rem] leading-[1.6] text-fg-soft">
+              No dia 6, ao vivo, a Dra. Aline mostra a face por dentro, direto da mesa
+              de dissecção. Você sai da aula com a mão mais firme e a leitura de anatomia
+              que faltava.
+            </p>
 
             <Countdown className="mt-8 mb-8" />
 
             <CtaButton
+              showPrice
               requireVsl={comVsl}
               className="w-full justify-center sm:w-auto sm:justify-start"
             >
               Quero minha vaga
             </CtaButton>
+            <ParcelaLine className="mt-2 text-center sm:text-left" />
             <UrgenciaFina className="mt-3.5 text-[13.5px] tracking-[0.02em] text-fg-faint" />
 
             <div className="mt-10 grid grid-cols-3 gap-4 border-t border-line pt-7 sm:gap-7">
