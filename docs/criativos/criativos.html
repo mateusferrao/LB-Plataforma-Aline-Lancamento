@@ -4,7 +4,8 @@
 <meta charset="utf-8">
 <title>Criativos · Por Dentro da Face</title>
 <!--
-  5 criativos estáticos 1080x1350 (feed 4:5) da aula "Por Dentro da Face".
+  7 criativos estáticos da aula "Por Dentro da Face", cada um em feed 1080x1350 (4:5)
+  e story 1080x1920 (9:16). As stories são clones dos feeds com a classe .story.
   Mesma identidade da LP: preto quente + marsala + creme, Fraunces + Inter,
   grifo marsala atrás do título. Fotos reais do laboratório de dissecção (EUA).
   Para gerar os PNGs: node docs/criativos/render.mjs
@@ -39,103 +40,149 @@
   .grao::after { content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .07; mix-blend-mode: overlay;
     background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>"); }
 
-  /* ---------- 01 · Atlas, slide e boneco ---------- */
-  #c1 .foto { position: absolute; inset: 0; background: url("fotos/lab-luvas.jpg") center 18% / cover; filter: saturate(.55) contrast(1.05); }
-  #c1 .veu { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(12,11,10,.55) 0%, rgba(12,11,10,0) 22%, rgba(12,11,10,0) 34%, rgba(12,11,10,.88) 55%, var(--bg) 70%); }
-  #c1 .topo { position: absolute; top: 64px; left: 72px; right: 72px; display: flex; justify-content: space-between; align-items: center; }
-  #c1 .legenda { top: 612px; right: 72px; }
-  #c1 .texto { position: absolute; left: 72px; right: 72px; top: 700px; }
-  #c1 h1 { font-size: 64px; line-height: 1.12; font-weight: 600; color: var(--fg); letter-spacing: -.01em; }
-  #c1 h1 .grifo { line-height: 1.42; }
-  #c1 p { margin-top: 30px; font-size: 29px; line-height: 1.45; color: var(--fg-soft); max-width: 880px; }
-  #c1 p b { color: var(--fg); font-weight: 600; }
+  /* ---------- t1 · foto luvas em tela cheia (01 e 06) ---------- */
+  .t1 .foto { position: absolute; inset: 0; background: url("fotos/lab-luvas.jpg") center 18% / cover; filter: saturate(.55) contrast(1.05); }
+  .t1 .veu { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(12,11,10,.55) 0%, rgba(12,11,10,0) 22%, rgba(12,11,10,0) 34%, rgba(12,11,10,.88) 55%, var(--bg) 70%); }
+  .t1 .topo { position: absolute; top: 64px; left: 72px; right: 72px; display: flex; justify-content: space-between; align-items: center; }
+  .t1 .legenda { top: 612px; right: 72px; }
+  .t1 .texto { position: absolute; left: 72px; right: 72px; top: 700px; }
+  .t1 h1 { font-size: 64px; line-height: 1.12; font-weight: 600; color: var(--fg); letter-spacing: -.01em; }
+  .t1 h1 .grifo { line-height: 1.42; }
+  .t1 p { margin-top: 30px; font-size: 29px; line-height: 1.45; color: var(--fg-soft); max-width: 880px; }
+  .t1 p b { color: var(--fg); font-weight: 600; }
 
-  /* ---------- 02 · Mesma técnica ---------- */
-  #c2 { background: var(--bg); }
-  #c2 .interno { position: absolute; left: 72px; right: 72px; top: 76px; }
-  #c2 .repete { margin-top: 34px; font-size: 60px; line-height: 1.08; font-weight: 500; color: var(--fg-faint); letter-spacing: -.015em; }
-  #c2 .repete span { display: block; }
-  #c2 .repete span:nth-child(3) { color: var(--fg-soft); }
-  #c2 .virada { margin-top: 26px; font-size: 70px; line-height: 1.34; font-weight: 600; letter-spacing: -.015em; }
-  #c2 .explica { margin-top: 30px; font-size: 30px; line-height: 1.45; color: var(--fg-soft); max-width: 900px; }
-  #c2 .explica b { color: var(--fg); font-weight: 600; }
-  #c2 .camadas { margin-top: 36px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-  #c2 .camada { border: 1.5px solid rgba(126,30,28,.85); border-radius: 10px; padding: 24px 24px 26px; background: var(--bg-2); }
-  #c2 .camada.apagada { border-color: var(--line); background: var(--bg-3); }
-  #c2 .camada .n { font-size: 20px; color: var(--fg-faint); letter-spacing: .12em; }
-  #c2 .camada .selo { margin-top: 12px; font-size: 17px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--wine-ink); }
-  #c2 .camada.apagada .selo { color: var(--fg-faint); }
-  #c2 .camada .nome { margin-top: 10px; font-size: 31px; line-height: 1.2; font-weight: 600; color: var(--fg); }
-  #c2 .quem { margin-top: 34px; padding-top: 28px; border-top: 1px solid var(--line); display: flex; align-items: center; gap: 30px; }
-  #c2 .quem img { width: 112px; height: 112px; border-radius: 50%; object-fit: cover; border: 3px solid var(--wine); flex: none; }
-  #c2 .quem p { font-size: 26px; line-height: 1.45; color: var(--fg-soft); }
-  #c2 .quem p b { color: var(--fg); font-weight: 600; }
-  #c2 .camada.apagada .nome { color: var(--fg-faint); text-decoration: line-through; text-decoration-thickness: 2px; text-decoration-color: rgba(166,159,151,.6); }
+  /* ---------- t2 · tipográfico (02) ---------- */
+  .t2 { background: var(--bg); }
+  .t2 .interno { position: absolute; left: 72px; right: 72px; top: 76px; }
+  .t2 .repete { margin-top: 34px; font-size: 60px; line-height: 1.08; font-weight: 500; color: var(--fg-faint); letter-spacing: -.015em; }
+  .t2 .repete span { display: block; }
+  .t2 .repete span:nth-child(3) { color: var(--fg-soft); }
+  .t2 .virada { margin-top: 26px; font-size: 70px; line-height: 1.34; font-weight: 600; letter-spacing: -.015em; }
+  .t2 .explica { margin-top: 30px; font-size: 30px; line-height: 1.45; color: var(--fg-soft); max-width: 900px; }
+  .t2 .explica b { color: var(--fg); font-weight: 600; }
+  .t2 .camadas { margin-top: 36px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .t2 .camada { border: 1.5px solid rgba(126,30,28,.85); border-radius: 10px; padding: 24px 24px 26px; background: var(--bg-2); }
+  .t2 .camada.apagada { border-color: var(--line); background: var(--bg-3); }
+  .t2 .camada .n { font-size: 20px; color: var(--fg-faint); letter-spacing: .12em; }
+  .t2 .camada .selo { margin-top: 12px; font-size: 17px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--wine-ink); }
+  .t2 .camada.apagada .selo { color: var(--fg-faint); }
+  .t2 .camada .nome { margin-top: 10px; font-size: 31px; line-height: 1.2; font-weight: 600; color: var(--fg); }
+  .t2 .quem { margin-top: 34px; padding-top: 28px; border-top: 1px solid var(--line); display: flex; align-items: center; gap: 30px; }
+  .t2 .quem img { width: 112px; height: 112px; border-radius: 50%; object-fit: cover; border: 3px solid var(--wine); flex: none; }
+  .t2 .quem p { font-size: 26px; line-height: 1.45; color: var(--fg-soft); }
+  .t2 .quem p b { color: var(--fg); font-weight: 600; }
+  .t2 .camada.apagada .nome { color: var(--fg-faint); text-decoration: line-through; text-decoration-thickness: 2px; text-decoration-color: rgba(166,159,151,.6); }
 
-  /* ---------- 03 · A milímetros ---------- */
-  #c3 .foto { position: absolute; left: 0; right: 0; top: 0; height: 640px; background: url("fotos/lab-mesas.jpg") center 55% / cover; filter: grayscale(1) contrast(1.08) brightness(.82); }
-  #c3 .veu { position: absolute; left: 0; right: 0; top: 0; height: 640px; background: linear-gradient(180deg, rgba(12,11,10,.4) 0%, rgba(12,11,10,0) 30%, rgba(12,11,10,.1) 70%, var(--bg) 100%); }
-  #c3 .legenda { top: 64px; left: 72px; }
+  /* ---------- t3 · sala P&B + régua (03 e 07) ---------- */
+  .t3 .foto { position: absolute; left: 0; right: 0; top: 0; height: 640px; background: url("fotos/lab-mesas.jpg") center 55% / cover; filter: grayscale(1) contrast(1.08) brightness(.82); }
+  .t3 .veu { position: absolute; left: 0; right: 0; top: 0; height: 640px; background: linear-gradient(180deg, rgba(12,11,10,.4) 0%, rgba(12,11,10,0) 30%, rgba(12,11,10,.1) 70%, var(--bg) 100%); }
+  .t3 .legenda { top: 64px; left: 72px; }
   /* régua milimetrada: o "a milímetros" virando imagem */
-  #c3 .regua { position: absolute; left: 72px; right: 72px; top: 626px; height: 44px; border-top: 2px solid var(--wine-ink);
+  .t3 .regua { position: absolute; left: 72px; right: 72px; top: 626px; height: 44px; border-top: 2px solid var(--wine-ink);
     background:
       repeating-linear-gradient(90deg, var(--wine-ink) 0 2px, transparent 2px 187.2px) top left / 100% 34px no-repeat,
       repeating-linear-gradient(90deg, rgba(207,128,121,.85) 0 1.5px, transparent 1.5px 93.6px) top left / 100% 24px no-repeat,
       repeating-linear-gradient(90deg, rgba(207,128,121,.7) 0 1.5px, transparent 1.5px 18.72px) top left / 100% 16px no-repeat; }
-  #c3 .regua i { position: absolute; top: 40px; font-style: normal; font-size: 15px; color: var(--fg-faint); letter-spacing: .06em; transform: translateX(-50%); white-space: nowrap; }
-  #c3 .texto { position: absolute; left: 72px; right: 72px; top: 730px; }
-  #c3 h1 { font-size: 62px; line-height: 1.13; font-weight: 600; color: var(--fg); letter-spacing: -.01em; }
-  #c3 h1 .grifo { line-height: 1.42; }
-  #c3 p { margin-top: 28px; font-size: 29px; line-height: 1.45; color: var(--fg-soft); max-width: 900px; }
-  #c3 p b { color: var(--fg); font-weight: 600; }
+  .t3 .regua i { position: absolute; top: 40px; font-style: normal; font-size: 15px; color: var(--fg-faint); letter-spacing: .06em; transform: translateX(-50%); white-space: nowrap; }
+  .t3 .texto { position: absolute; left: 72px; right: 72px; top: 730px; }
+  .t3 h1 { font-size: 62px; line-height: 1.13; font-weight: 600; color: var(--fg); letter-spacing: -.01em; }
+  .t3 h1 .grifo { line-height: 1.42; }
+  .t3 p { margin-top: 28px; font-size: 29px; line-height: 1.45; color: var(--fg-soft); max-width: 900px; }
+  .t3 p b { color: var(--fg); font-weight: 600; }
 
-  /* ---------- 04 · Prova social (prints reais) ---------- */
-  #c4 { background: var(--bg-2); }
-  #c4 .interno { position: absolute; left: 72px; right: 72px; top: 76px; }
-  #c4 h1 { margin-top: 24px; font-size: 62px; line-height: 1.2; color: var(--fg); font-weight: 600; letter-spacing: -.01em; }
-  #c4 h1 .grifo { line-height: 1.42; }
-  #c4 .prints { position: absolute; left: 0; right: 0; top: 372px; height: 600px; }
-  #c4 .print { position: absolute; background: #fff; border-radius: 18px; padding: 10px; box-shadow: 0 24px 60px rgba(0,0,0,.55); }
-  #c4 .print img { display: block; border-radius: 10px; }
-  #c4 .p1 { left: 66px; top: 22px; transform: rotate(-2.4deg); }
-  #c4 .p1 img { width: 452px; }
-  #c4 .p2 { right: 66px; top: 44px; transform: rotate(2deg); }
-  #c4 .p2 img { width: 452px; }
-  #c4 .rotulo { position: absolute; left: 72px; right: 72px; top: 978px; font-size: 19px; letter-spacing: .14em; text-transform: uppercase; color: var(--fg-faint); }
-  #c4 .stats { position: absolute; left: 72px; right: 72px; top: 1036px; display: flex; gap: 56px; }
-  #c4 .stat b { display: block; font-family: "Fraunces", serif; font-size: 56px; font-weight: 600; color: var(--fg); line-height: 1; }
-  #c4 .stat span { display: block; margin-top: 10px; font-size: 21px; color: var(--fg-soft); }
+  /* ---------- t4 · prova social, prints reais (04) ---------- */
+  .t4 { background: var(--bg-2); }
+  .t4 .interno { position: absolute; left: 72px; right: 72px; top: 76px; }
+  .t4 h1 { margin-top: 24px; font-size: 62px; line-height: 1.2; color: var(--fg); font-weight: 600; letter-spacing: -.01em; }
+  .t4 h1 .grifo { line-height: 1.42; }
+  .t4 .prints { position: absolute; left: 0; right: 0; top: 372px; height: 600px; }
+  .t4 .print { position: absolute; background: #fff; border-radius: 18px; padding: 10px; box-shadow: 0 24px 60px rgba(0,0,0,.55); }
+  .t4 .print img { display: block; border-radius: 10px; }
+  .t4 .p1 { left: 66px; top: 22px; transform: rotate(-2.4deg); }
+  .t4 .p1 img { width: 452px; }
+  .t4 .p2 { right: 66px; top: 44px; transform: rotate(2deg); }
+  .t4 .p2 img { width: 452px; }
+  .t4 .rotulo { position: absolute; left: 72px; right: 72px; top: 978px; font-size: 19px; letter-spacing: .14em; text-transform: uppercase; color: var(--fg-faint); }
+  .t4 .stats { position: absolute; left: 72px; right: 72px; top: 1036px; display: flex; gap: 56px; }
+  .t4 .stat b { display: block; font-family: "Fraunces", serif; font-size: 56px; font-weight: 600; color: var(--fg); line-height: 1; }
+  .t4 .stat span { display: block; margin-top: 10px; font-size: 21px; color: var(--fg-soft); }
 
-  /* ---------- 05 · Ingresso ---------- */
-  #c5 .foto { position: absolute; top: 0; right: 0; width: 620px; height: 1350px; background: url("fotos/lab-braco-erguido.jpg") 8% center / cover; filter: saturate(.6); }
-  #c5 .veu { position: absolute; top: 0; right: 0; width: 620px; height: 1350px; background: linear-gradient(90deg, var(--bg) 0%, rgba(12,11,10,.55) 24%, rgba(12,11,10,0) 55%), linear-gradient(0deg, var(--bg) 0%, rgba(12,11,10,0) 30%); }
-  #c5 .legenda { top: 1128px; right: 72px; }
-  #c5 .interno { position: absolute; left: 72px; top: 76px; width: 640px; }
-  #c5 h1 { margin-top: 24px; font-size: 72px; line-height: 1.08; font-weight: 600; color: var(--fg); letter-spacing: -.02em; }
-  #c5 h1 .grifo { line-height: 1.38; }
-  #c5 .sub { margin-top: 28px; font-size: 28px; line-height: 1.45; color: var(--fg-soft); width: 620px; }
-  #c5 .ticket { position: absolute; left: 72px; top: 620px; width: 660px; background: var(--fg); color: #1a1512; border-radius: 16px; overflow: hidden; box-shadow: 0 30px 80px rgba(0,0,0,.6); }
-  #c5 .ticket .cab { background: var(--wine); color: #fff; padding: 22px 32px; display: flex; justify-content: space-between; align-items: center; font-size: 19px; letter-spacing: .2em; font-weight: 600; text-transform: uppercase; }
-  #c5 .ticket .corpo { padding: 28px 32px 22px; }
-  #c5 .ticket .titulo { font-family: "Fraunces", serif; font-size: 50px; font-weight: 600; line-height: 1; letter-spacing: -.01em; }
-  #c5 .ticket .desc { margin-top: 10px; font-size: 21px; color: #5e554e; line-height: 1.4; }
-  #c5 .ticket .grade { margin-top: 22px; display: grid; grid-template-columns: repeat(4, auto); justify-content: space-between; row-gap: 14px; }
-  #c5 .ticket .grade small { display: block; font-size: 15px; letter-spacing: .16em; text-transform: uppercase; color: #8a7f76; font-weight: 600; }
-  #c5 .ticket .grade span { display: block; margin-top: 4px; font-size: 25px; font-weight: 600; }
-  #c5 .ticket .picote { position: relative; border-top: 3px dashed rgba(26,21,18,.25); margin: 0 0; }
-  #c5 .ticket .picote::before, #c5 .ticket .picote::after { content: ""; position: absolute; top: -16px; width: 30px; height: 30px; border-radius: 50%; background: var(--bg); }
-  #c5 .ticket .picote::before { left: -15px; } #c5 .ticket .picote::after { right: -15px; }
-  #c5 .ticket .preco { padding: 22px 32px 26px; display: flex; align-items: flex-end; justify-content: space-between; }
-  #c5 .ticket .preco b { font-family: "Fraunces", serif; font-size: 70px; line-height: 1; font-weight: 600; color: var(--wine); }
-  #c5 .ticket .preco span { font-size: 20px; color: #5e554e; line-height: 1.45; text-align: right; }
-  #c5 .aviso { position: absolute; left: 72px; top: 1092px; width: 620px; font-size: 22px; line-height: 1.45; color: var(--fg-soft); }
-  #c5 .aviso b { color: var(--wine-ink); font-weight: 600; }
+  /* ---------- t5 · ingresso (05) ---------- */
+  .t5 .foto { position: absolute; top: 0; right: 0; width: 620px; height: 1350px; background: url("fotos/lab-braco-erguido.jpg") 8% center / cover; filter: saturate(.6); }
+  .t5 .veu { position: absolute; top: 0; right: 0; width: 620px; height: 1350px; background: linear-gradient(90deg, var(--bg) 0%, rgba(12,11,10,.55) 24%, rgba(12,11,10,0) 55%), linear-gradient(0deg, var(--bg) 0%, rgba(12,11,10,0) 30%); }
+  .t5 .legenda { top: 1128px; right: 72px; }
+  .t5 .interno { position: absolute; left: 72px; top: 76px; width: 640px; }
+  .t5 h1 { margin-top: 24px; font-size: 72px; line-height: 1.08; font-weight: 600; color: var(--fg); letter-spacing: -.02em; }
+  .t5 h1 .grifo { line-height: 1.38; }
+  .t5 .sub { margin-top: 28px; font-size: 28px; line-height: 1.45; color: var(--fg-soft); width: 620px; }
+  .t5 .ticket { position: absolute; left: 72px; top: 620px; width: 660px; background: var(--fg); color: #1a1512; border-radius: 16px; overflow: hidden; box-shadow: 0 30px 80px rgba(0,0,0,.6); }
+  .t5 .ticket .cab { background: var(--wine); color: #fff; padding: 22px 32px; display: flex; justify-content: space-between; align-items: center; font-size: 19px; letter-spacing: .2em; font-weight: 600; text-transform: uppercase; }
+  .t5 .ticket .corpo { padding: 28px 32px 22px; }
+  .t5 .ticket .titulo { font-family: "Fraunces", serif; font-size: 50px; font-weight: 600; line-height: 1; letter-spacing: -.01em; }
+  .t5 .ticket .desc { margin-top: 10px; font-size: 21px; color: #5e554e; line-height: 1.4; }
+  .t5 .ticket .grade { margin-top: 22px; display: grid; grid-template-columns: repeat(4, auto); justify-content: space-between; row-gap: 14px; }
+  .t5 .ticket .grade small { display: block; font-size: 15px; letter-spacing: .16em; text-transform: uppercase; color: #8a7f76; font-weight: 600; }
+  .t5 .ticket .grade span { display: block; margin-top: 4px; font-size: 25px; font-weight: 600; }
+  .t5 .ticket .picote { position: relative; border-top: 3px dashed rgba(26,21,18,.25); margin: 0 0; }
+  .t5 .ticket .picote::before, .t5 .ticket .picote::after { content: ""; position: absolute; top: -16px; width: 30px; height: 30px; border-radius: 50%; background: var(--bg); }
+  .t5 .ticket .picote::before { left: -15px; } .t5 .ticket .picote::after { right: -15px; }
+  .t5 .ticket .preco { padding: 22px 32px 26px; display: flex; align-items: flex-end; justify-content: space-between; }
+  .t5 .ticket .preco b { font-family: "Fraunces", serif; font-size: 70px; line-height: 1; font-weight: 600; color: var(--wine); }
+  .t5 .ticket .preco span { font-size: 20px; color: #5e554e; line-height: 1.45; text-align: right; }
+  .t5 .aviso { position: absolute; left: 72px; top: 1092px; width: 620px; font-size: 22px; line-height: 1.45; color: var(--fg-soft); }
+  .t5 .aviso b { color: var(--wine-ink); font-weight: 600; }
+
+  /* ---------- Stories 1080x1920 ----------
+     Clones dos feeds (gerados no script do fim da página) com a classe .story.
+     Área segura: nada de texto nos ~250px de cima (barra de perfil) nem nos
+     ~330px de baixo (resposta/link do story). */
+  .ad.story { height: 1920px; }
+  .story .rodape { bottom: 330px; }
+
+  .story.t1 .foto { background-position: 62% 20%; }
+  .story.t1 .veu { background: linear-gradient(180deg, rgba(12,11,10,.7) 0%, rgba(12,11,10,0) 20%, rgba(12,11,10,0) 38%, rgba(12,11,10,.9) 54%, var(--bg) 64%); }
+  .story.t1 .topo { top: 250px; }
+  .story.t1 .legenda { top: 900px; }
+  .story.t1 .texto { top: 990px; }
+  .story.t1 p { font-size: 31px; }
+
+  .story.t2 .interno { top: 260px; }
+  .story.t2 .repete { font-size: 64px; }
+  .story.t2 .virada { font-size: 74px; }
+  .story.t2 .explica { font-size: 31px; }
+  .story.t2 .camadas { margin-top: 44px; }
+  .story.t2 .quem { margin-top: 44px; padding-top: 36px; }
+
+  .story.t3 .foto, .story.t3 .veu { height: 940px; }
+  .story.t3 .foto { background-position: center 60%; }
+  .story.t3 .veu { background: linear-gradient(180deg, rgba(12,11,10,.75) 0%, rgba(12,11,10,0) 26%, rgba(12,11,10,.1) 70%, var(--bg) 100%); }
+  .story.t3 .legenda { top: 872px; }
+  .story.t3 .regua { top: 926px; }
+  .story.t3 .texto { top: 1030px; }
+  .story.t3 h1 { font-size: 64px; }
+  .story.t3 p { font-size: 30px; }
+
+  .story.t4 .interno { top: 260px; }
+  .story.t4 .prints { top: 590px; }
+  .story.t4 .rotulo { top: 1190px; }
+  .story.t4 .stats { top: 1250px; }
+
+  /* foto começa abaixo do texto e ancorada embaixo: o rosto fica entre o título e o ingresso */
+  .story.t5 .foto, .story.t5 .veu { top: 520px; width: 1080px; height: 1104px; }
+  .story.t5 .foto { background-position: center bottom; }
+  .story.t5 .veu { background: linear-gradient(180deg, var(--bg) 0%, rgba(12,11,10,0) 22%, rgba(12,11,10,0) 38%, rgba(12,11,10,.85) 55%, var(--bg) 72%); }
+  .story.t5 .interno { top: 250px; width: 936px; }
+  .story.t5 h1 { font-size: 78px; }
+  .story.t5 .sub { width: 760px; }
+  .story.t5 .ticket { top: 950px; width: 936px; }
+  .story.t5 .ticket .desc { font-size: 23px; }
+  .story.t5 .aviso { top: 1404px; width: 936px; }
 </style>
 </head>
 <body>
 
 <!-- 01 · Desejo: mão firme, aplicar sem medo -->
-<section class="ad grao" id="c1">
+<section class="ad grao t1" id="c1">
   <div class="foto"></div><div class="veu"></div>
   <div class="topo">
     <span class="eyebrow" style="color:var(--fg)">Aula ao vivo · 06/10 · 20h</span>
@@ -153,7 +200,7 @@
 </section>
 
 <!-- 02 · Desejo: resultado bonito em cada rosto -->
-<section class="ad grao" id="c2">
+<section class="ad grao t2" id="c2">
   <div class="interno">
     <span class="eyebrow">Por dentro da face</span>
     <div class="repete serif"><span>Ficou lindo nela.</span><span>Na próxima, nem tanto.</span><span>E você não sabe por quê.</span></div>
@@ -176,7 +223,7 @@
 </section>
 
 <!-- 03 · Desejo: aplicar perto do risco com calma (até onde ir) -->
-<section class="ad grao" id="c3">
+<section class="ad grao t3" id="c3">
   <div class="foto"></div><div class="veu"></div>
   <span class="legenda">Onde a Aline estudou a face · EUA</span>
   <div class="regua"><i style="left:0">0</i><i style="left:20%">1</i><i style="left:40%">2</i><i style="left:60%">3</i><i style="left:80%">4</i><i style="left:100%">5mm</i></div>
@@ -191,7 +238,7 @@
 </section>
 
 <!-- 04 · Prova social: prints reais de alunas -->
-<section class="ad grao" id="c4">
+<section class="ad grao t4" id="c4">
   <div class="interno">
     <span class="eyebrow">+1.000 alunas formadas</span>
     <h1 class="serif">Mais segurança na mão.<br><span class="grifo">Mais resultado na paciente.</span></h1>
@@ -213,7 +260,7 @@
 </section>
 
 <!-- 05 · Oferta: o ingresso (desejo + urgência real) -->
-<section class="ad grao" id="c5">
+<section class="ad grao t5" id="c5">
   <div class="foto"></div><div class="veu"></div>
   <div class="interno">
     <span class="eyebrow">Seu ingresso</span>
@@ -244,6 +291,49 @@
     <img class="logo" src="../../public/images/logo-ink.png" alt="">
   </div>
 </section>
+
+<!-- 06 · Crença quebrada: atlas, slide e boneco (versão anterior do 01, mantida) -->
+<section class="ad grao t1" id="c6">
+  <div class="foto"></div><div class="veu"></div>
+  <div class="topo">
+    <span class="eyebrow" style="color:var(--fg)">Aula ao vivo · 06/10 · 20h</span>
+    <img class="logo" src="../../public/images/logo-ink.png" alt="">
+  </div>
+  <span class="legenda">Laboratório de dissecção · EUA</span>
+  <div class="texto">
+    <h1 class="serif">Você estudou em atlas, slide e boneco. <span class="grifo">O rosto na sua cadeira não é nenhum dos três.</span></h1>
+    <p>No dia 6, ao vivo, a <b>Dra. Aline Filgueiras</b> mostra a face por dentro, direto da mesa de dissecção.</p>
+  </div>
+  <div class="rodape">
+    <span class="cta">Quero minha vaga <span class="seta">→</span></span>
+    <span class="data"><b>R$67</b> · online<br>sem gravação</span>
+  </div>
+</section>
+
+<!-- 07 · O risco a milímetros da agulha (versão anterior do 03, mantida) -->
+<section class="ad grao t3" id="c7">
+  <div class="foto"></div><div class="veu"></div>
+  <span class="legenda">Onde a Aline estudou a face · EUA</span>
+  <div class="regua"><i style="left:0">0</i><i style="left:20%">1</i><i style="left:40%">2</i><i style="left:60%">3</i><i style="left:80%">4</i><i style="left:100%">5mm</i></div>
+  <div class="texto">
+    <h1 class="serif">O risco que o atlas não mostra fica <span class="grifo">a milímetros da sua agulha.</span></h1>
+    <p>Ao vivo, direto da mesa de dissecção: os planos, as estruturas e os limites que fazem a sua mão <b>parar de hesitar.</b></p>
+  </div>
+  <div class="rodape">
+    <span class="cta">Quero minha vaga <span class="seta">→</span></span>
+    <span class="data"><b>06/10 · 20h</b> · online<br>Dra. Aline Filgueiras</span>
+  </div>
+</section>
+
+<script>
+  // Versão story (1080x1920) de cada criativo: mesmo conteúdo, layout de .story.
+  for (const ad of [...document.querySelectorAll(".ad")]) {
+    const story = ad.cloneNode(true);
+    story.id = ad.id.replace("c", "s");
+    story.classList.add("story");
+    document.body.appendChild(story);
+  }
+</script>
 
 </body>
 </html>

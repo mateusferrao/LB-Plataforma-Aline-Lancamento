@@ -1,8 +1,15 @@
 # Criativos estáticos · Por Dentro da Face
 
-5 criativos de feed (1080×1350, 4:5) para a aula ao vivo de 06/10, 20h.
-Os PNGs finais estão em `png/`. A fonte é `criativos.html`. Para gerar de novo,
-rode `node docs/criativos/render.mjs` (precisa do Playwright com Chromium).
+7 criativos para a aula ao vivo de 06/10, 20h, cada um em dois formatos:
+- **Feed** 1080×1350 (4:5): `png/feed/criativo-0N.png`
+- **Story** 1080×1920 (9:16): `png/story/criativo-0N-story.png`
+
+A fonte é `criativos.html`. Cada story é uma cópia do feed com outro layout (classe
+`.story`), então a copy é sempre a mesma nos dois formatos. Para gerar de novo, rode
+`node docs/criativos/render.mjs` (precisa do Playwright com Chromium).
+
+**Área segura das stories:** nenhum texto nos ~250px de cima (barra de perfil) nem nos
+~330px de baixo (resposta e link do story). O botão desenhado fica logo acima dessa faixa.
 
 **Regra de copy de todas as peças:** a aluna não compra anatomia. Ela compra **resultado
 melhor e segurança pra aplicar**. A headline sempre fala do desejo: mão firme, resultado
@@ -10,13 +17,18 @@ bonito em cada rosto, calma perto das áreas de risco, paciente que volta e indi
 Anatomia e dissecção nunca aparecem como o que ela está comprando. Aparecem só como
 prova de por que a Aline consegue entregar isso (legenda da foto, linha de autoridade).
 
-| # | Arquivo | Desejo que a peça vende | Público |
-|---|---------|-------------------------|---------|
-| 01 | `png/criativo-01.png` | Mão firme pra aplicar sem medo | Frio |
-| 02 | `png/criativo-02.png` | Resultado bonito e previsível em cada rosto | Frio |
-| 03 | `png/criativo-03.png` | Calma perto das áreas de risco | Frio |
-| 04 | `png/criativo-04.png` | Mais segurança na mão, mais resultado na paciente (prova) | Morno/quente |
-| 05 | `png/criativo-05.png` | Uma noite pra aplicar com segurança (oferta) | Quente |
+| # | Ângulo | Público |
+|---|--------|---------|
+| 01 | Desejo: mão firme pra aplicar sem medo | Frio |
+| 02 | Desejo: resultado bonito e previsível em cada rosto | Frio |
+| 03 | Desejo: calma perto das áreas de risco | Frio |
+| 04 | Prova: mais segurança na mão, mais resultado na paciente | Morno/quente |
+| 05 | Oferta: uma noite pra aplicar com segurança | Quente |
+| 06 | Crença quebrada: atlas, slide e boneco × rosto real | Frio |
+| 07 | Dor: o risco a milímetros da agulha | Frio |
+
+O 06 e o 07 são as versões anteriores do 01 e do 03, mantidas a pedido. Eles partem da
+dor e da crença, não do desejo, e servem de contraponto no teste (seção 6).
 
 ---
 
@@ -32,7 +44,7 @@ prova de por que a Aline consegue entregar isso (legenda da foto, linha de autor
 - **Pesquisa de mercado feita em 23/09/2026.** O proxy bloqueou a leitura direta de
   vários sites, então alguns números vêm do trecho que a busca devolveu. **Abra a fonte
   e confira antes de usar qualquer número em peça.** Nenhum número externo foi usado
-  nos 5 criativos.
+  nos criativos.
 
 ## 2. Análise
 
@@ -194,6 +206,22 @@ Regras que valem para todos:
   - A. "Elas voltaram pra cadeira mais seguras."
   - B. "A paciente ficou perfeita." (citação do print como headline)
 
+### Criativo 06 · Atlas, slide e boneco (versão anterior do 01)
+- **Foto:** a mesma do 01 (Aline calçando as luvas).
+- **Headline:** Você estudou em atlas, slide e boneco. *O rosto na sua cadeira não é nenhum dos três.*
+- **Apoio:** No dia 6, ao vivo, a Dra. Aline Filgueiras mostra a face por dentro, direto da mesa de dissecção.
+- **Rodapé:** Quero minha vaga → · R$67 · online · sem gravação
+- **Por quê:** é o H2 do "Ponto cego" da LP principal. Nomeia como ela aprendeu e o limite
+  disso sem culpar ninguém, e gera o "é isso" de reconhecimento.
+
+### Criativo 07 · A milímetros da agulha (versão anterior do 03)
+- **Foto:** a mesma do 03 (sala de dissecção em P&B, com a régua milimetrada).
+- **Headline:** O risco que o atlas não mostra fica *a milímetros da sua agulha.*
+- **Apoio:** Ao vivo, direto da mesa de dissecção: os planos, as estruturas e os limites
+  que fazem a sua mão parar de hesitar.
+- **Por quê:** toca direto no medo de intercorrência, a dor mais forte do nicho, e fecha
+  no desejo ("parar de hesitar").
+
 ### Criativo 05 · O ingresso
 - **Headline:** Uma noite pra aplicar com *segurança.*
 - **Apoio:** Você sai com a mão mais firme e resultados mais previsíveis em cada rosto.
@@ -211,7 +239,7 @@ Regras que valem para todos:
 
 ## 5. Legendas sugeridas (texto principal do anúncio)
 
-**Para 01 e 03 (público frio):**
+**Para 01, 03, 06 e 07 (público frio):**
 > Você já sabe a técnica. O que falta é chegar perto das áreas de risco com a mão firme,
 > sem aquele frio na barriga.
 >
@@ -236,9 +264,14 @@ Regras que valem para todos:
 
 ## 6. Sugestão de teste
 
-- **Fase 1 (gancho):** 01, 02 e 03 no mesmo conjunto, público frio de profissionais da
-  estética. Cada peça testa um desejo diferente (mão firme × resultado × calma). O desejo
-  vencedor vira a linha principal das próximas peças e da VSL.
+- **Fase 1 (gancho):** 01, 02, 03, 06 e 07 no mesmo conjunto, público frio de
+  profissionais da estética. As comparações diretas são 01 × 06 (mesma foto: desejo ×
+  crença) e 03 × 07 (mesma foto: calma × medo). Elas mostram se esse público responde
+  mais ao desejo ou à dor. O ângulo vencedor vira a linha principal das próximas peças
+  e da VSL.
+- **Feed e story no mesmo anúncio:** suba as duas versões de cada criativo no mesmo
+  anúncio (posicionamento personalizado da Meta). Assim o nome do anúncio, e o
+  `utm_content`, continua sendo um por criativo.
 - **Fase 2 (conversão):** 04 e 05 em remarketing (visitou a LP, assistiu a VSL, engajou
   no perfil) nos últimos 7 a 10 dias antes da aula.
 - **Últimas 72h:** 05 com a alternativa A de headline e a legenda de encerramento.
