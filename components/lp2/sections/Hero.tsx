@@ -33,10 +33,18 @@ export function Hero({ comVsl }: { comVsl: boolean }) {
                 diferente em cada rosto.
               </span>{" "}
               <span className="mt-5 block text-[1.3rem] leading-[1.3] font-medium tracking-normal text-fg sm:text-[1.6rem] lg:text-[1.8rem]">
-                Em um evento ao vivo, direto da mesa de dissecção, a Dra. Aline mostra as 3
-                camadas: técnica, anatomia e resultado.
+                Em um evento ao vivo, a Dra. Aline mostra as 3 camadas: técnica, anatomia e
+                resultado.
               </span>
             </h1>
+
+            {/* Diferencial da Aline (a mesma formação da seção Autoridade), fora
+                do H1 pra não empurrar o CTA no mobile. */}
+            <p className="mt-4 max-w-[560px] text-[1.05rem] leading-[1.55] text-fg-soft">
+              Tudo direto da mesa de dissecção, com a bagagem de quem estudou anatomia em
+              peças fresh frozen nos Estados Unidos e hoje dá cursos internacionais de
+              anatomia na Europa.
+            </p>
 
             <Countdown className="mt-8 mb-8" />
 
