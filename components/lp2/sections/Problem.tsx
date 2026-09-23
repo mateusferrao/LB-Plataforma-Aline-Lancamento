@@ -42,8 +42,8 @@ export function Problem() {
 
         <Reveal>
           <p className="mt-9 max-w-[600px] font-serif text-[1.28rem] leading-[1.4] text-fg italic">
-            Isso não se resolve com mais um curso de técnica. Se resolve com critério. E
-            critério vem de ver o que está embaixo da pele.
+            Isso não se resolve com mais um curso de técnica. Técnica é só a primeira das 3
+            camadas. Faltam as outras duas: anatomia e resultado.
           </p>
         </Reveal>
       </Container>

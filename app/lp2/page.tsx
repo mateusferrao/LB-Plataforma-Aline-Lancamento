@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Hero } from "@/components/lp2/sections/Hero";
 import { Problem } from "@/components/lp2/sections/Problem";
-import { Criterio } from "@/components/lp2/sections/Criterio";
+import { TresCamadas } from "@/components/lp2/sections/TresCamadas";
 import { ParaQuem } from "@/components/lp2/sections/ParaQuem";
 import { Solution } from "@/components/lp2/sections/Solution";
 import { SocialProof } from "@/components/lp2/sections/SocialProof";
@@ -37,7 +37,7 @@ export default function Lp2() {
       <main>
         <Hero comVsl={true} />
         <Problem />
-        <Criterio />
+        <TresCamadas />
         <Solution comVsl={true} />
         <Authority />
         <SocialProof />

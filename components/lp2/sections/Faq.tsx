@@ -6,7 +6,7 @@ import { Reveal } from "@/components/Reveal";
 const FAQS = [
   {
     q: "Já fiz curso de harmonização. Essa aula não vai repetir o que eu já sei?",
-    a: "Não. Curso ensina técnica: o protocolo, os pontos, o passo a passo. Essa aula é sobre o que vem antes: o critério que a anatomia por dentro dá pra você decidir em cada rosto, inclusive quando ele foge do protocolo.",
+    a: "Não. Curso ensina a primeira das 3 camadas, a técnica: o protocolo, os pontos, o passo a passo. Essa aula entrega as outras duas: a anatomia, vista por dentro na dissecção, e o resultado, ou seja, por que cada rosto responde de um jeito.",
   },
   {
     q: "Por que a aula é ao vivo e sem gravação?",
