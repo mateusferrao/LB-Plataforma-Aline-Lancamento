@@ -25,15 +25,21 @@ export function Hero({ comVsl }: { comVsl: boolean }) {
             </div>
 
             <h1 className="mt-5 text-balance font-serif font-semibold text-[2.35rem] leading-[1.12] tracking-[-0.012em] sm:text-[3.1rem] lg:text-[3.7rem]">
+              {/* Headline completa no H1: a provocação sozinha não diz o que é nem
+                  quem conduz (tráfego frio de anúncio). Dois níveis visuais pra
+                  não empurrar o CTA pra baixo no mobile. */}
               <span className="titulo-grifo">
                 Técnica todo curso ensina. Critério quase nenhum.
+              </span>{" "}
+              <span className="mt-5 block text-[1.45rem] leading-[1.3] font-medium tracking-normal text-fg sm:text-[1.8rem] lg:text-[2.05rem]">
+                Em um evento ao vivo, a Dra. Aline mostra o que decide o resultado antes da
+                agulha entrar.
               </span>
             </h1>
 
-            <p className="mt-6 max-w-[560px] text-[1.2rem] leading-[1.6] text-fg-soft">
-              Em um evento ao vivo, a Dra. Aline mostra o que decide o resultado antes da
-              agulha entrar. Direto da mesa de dissecção: onde, em que plano e até onde ir
-              em cada rosto.
+            <p className="mt-5 max-w-[560px] text-[1.15rem] leading-[1.6] text-fg-soft">
+              Tudo direto da mesa de dissecção: onde aplicar, em que plano e até onde ir em
+              cada rosto.
             </p>
 
             <Countdown className="mt-8 mb-8" />
