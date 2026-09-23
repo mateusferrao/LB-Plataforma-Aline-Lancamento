@@ -1,0 +1,108 @@
+import Image from "next/image";
+import { Container } from "@/components/Container";
+import { Reveal } from "@/components/Reveal";
+import { withBasePath } from "@/lib/basePath";
+
+// Prints REAIS de alunas (enviados pela Aline). Usamos a imagem do print, mais
+// crível que texto redigitado. `alt` guarda o teor pra acessibilidade/SEO.
+// Ordem pensada pra intercalar prova técnica/clínica com transformação.
+const PROOFS = [
+  {
+    src: "/images/depoimento-1.jpg",
+    alt: "Aluna: fiz cursos presenciais e nunca tinha feito uma boca tão linda. Assinei a plataforma e a boca da paciente ficou perfeita.",
+  },
+  {
+    src: "/images/depoimento-13.jpg",
+    alt: "Aluna: fiz seu curso em janeiro, comecei a atender com harmonização em março e em dois meses faturei R$20.000 de lucro numa cidade de 25 mil habitantes.",
+  },
+  {
+    src: "/images/depoimento-2.jpg",
+    alt: "Aluna: amei as 3 aulas da consulta, super esclarecedora e de fácil entendimento para colocar em prática.",
+  },
+  {
+    src: "/images/depoimento-11.jpg",
+    alt: "Aluna: realizar meu sonho de fazer um curso de harmonização facial foi incrível. Foi, sem dúvida, o melhor que já fiz. Agora estou pronta para transformar vidas.",
+  },
+  {
+    src: "/images/depoimento-9.jpg",
+    alt: "Aluna iniciante: estou adorando as aulas, bem explicativas e objetivas. Quero renovar o meu acesso à plataforma.",
+  },
+  {
+    src: "/images/depoimento-7.jpg",
+    alt: "Aluna: que virada de chave essas aulas, amei demais, amanhã mesmo vou colocar em prática.",
+  },
+  {
+    src: "/images/depoimento-12.jpg",
+    alt: "Aluna: saio desse curso com a certeza de estar aprendendo com a pessoa certa, ela nos torna profissionais mais humanos e seguros.",
+  },
+  {
+    src: "/images/depoimento-6.jpg",
+    alt: "Aluna: depois que eu mudei o posicionamento, até elogios eu recebo muito mais.",
+  },
+  {
+    src: "/images/depoimento-3.jpg",
+    alt: "Aluna: o melhor curso que já investi, você entregou muito além.",
+  },
+  {
+    src: "/images/depoimento-10.jpg",
+    alt: "Aluna: isso não é um curso, é uma virada de chave nas nossas vidas. Obrigada por projetar tudo com tanto zelo.",
+  },
+  {
+    src: "/images/depoimento-8.jpg",
+    alt: "Aluna: você conseguiu explicar de uma forma tão simples, agora passou a fazer mais sentido.",
+  },
+  {
+    src: "/images/depoimento-5.jpg",
+    alt: "Aluna: mal começou e eu já estou apaixonada por essa plataforma, sou muito grata.",
+  },
+  {
+    src: "/images/depoimento-4.jpg",
+    alt: "Aluna: essa aula foi tão importante, não consegui controlar as lágrimas.",
+  },
+];
+
+export function SocialProof() {
+  // Duplicado pra faixa correr em loop contínuo sem emenda (translateX -50%).
+  const loop = [...PROOFS, ...PROOFS];
+
+  return (
+    <section className="overflow-hidden bg-bg-2 py-16 sm:py-[92px]">
+      <Container narrow>
+        <Reveal>
+          <span className="text-[12px] font-semibold tracking-[0.24em] text-wine-ink uppercase">
+            +1.000 alunas formadas
+          </span>
+          <h2 className="mt-[18px] font-serif font-semibold text-[1.95rem] sm:text-[2.6rem]">
+            <span className="titulo-grifo">Quem aprende com a Aline volta pra cadeira diferente.</span>
+          </h2>
+        </Reveal>
+      </Container>
+
+      <Container>
+        <div className="marquee mt-10">
+          <div className="marquee-track">
+            {loop.map((p, i) => (
+            <div
+              key={i}
+              aria-hidden={i >= PROOFS.length}
+              className="mr-4 flex h-[210px] w-[300px] shrink-0 items-center justify-center rounded-[8px] border border-line-soft bg-bg-3 p-3 sm:h-[250px] sm:w-[360px]"
+            >
+                <Image
+                  src={withBasePath(p.src)}
+                  alt={i < PROOFS.length ? p.alt : ""}
+                  width={460}
+                  height={620}
+                  // Marquee corre em loop contínuo: com lazy loading os prints
+                  // só baixavam ao entrar na viewport e "apareciam do nada".
+                  // eager faz baixarem no carregamento, deixando o loop fluido.
+                  loading="eager"
+                  className="max-h-full w-auto max-w-full rounded-[5px] object-contain"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </Container>
+    </section>
+  );
+}

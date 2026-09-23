@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 // refresh dentro da mesma sessão (mais crível e menos manipulador que resetar
 // pra 15:00 toda hora). Ao zerar, não bloqueia nada — só reforça o CTA.
 const KEY = "lp_reserva_inicio";
-const DURACAO_MS = 15 * 60 * 1000; // 15 minutos
+export const RESERVA_DURACAO_MS = 15 * 60 * 1000; // 15 minutos
 
 function getInicio(): number {
   try {
@@ -25,8 +25,26 @@ function getInicio(): number {
   }
 }
 
-function two(n: number) {
+export function two(n: number) {
   return String(n).padStart(2, "0");
+}
+
+// Milissegundos restantes da reserva. null = ainda não montou no cliente →
+// placeholder neutro pra evitar mismatch de hidratação (o valor depende do
+// relógio/armazenamento do visitante). Compartilhado com o ingresso emitido.
+export function useReservaRestante(): number | null {
+  const [restanteMs, setRestanteMs] = useState<number | null>(null);
+
+  useEffect(() => {
+    const inicio = getInicio();
+    const tick = () =>
+      setRestanteMs(Math.max(0, inicio + RESERVA_DURACAO_MS - Date.now()));
+    tick();
+    const id = setInterval(tick, 1000);
+    return () => clearInterval(id);
+  }, []);
+
+  return restanteMs;
 }
 
 type Tone = "light" | "onAccent";
@@ -38,17 +56,7 @@ export function ReservaTimer({
   className?: string;
   tone?: Tone;
 }) {
-  // null = ainda não montou no cliente → placeholder neutro pra evitar mismatch
-  // de hidratação (o valor depende do relógio/armazenamento do visitante).
-  const [restanteMs, setRestanteMs] = useState<number | null>(null);
-
-  useEffect(() => {
-    const inicio = getInicio();
-    const tick = () => setRestanteMs(Math.max(0, inicio + DURACAO_MS - Date.now()));
-    tick();
-    const id = setInterval(tick, 1000);
-    return () => clearInterval(id);
-  }, []);
+  const restanteMs = useReservaRestante();
 
   const expirado = restanteMs !== null && restanteMs <= 0;
   const minutos = restanteMs === null ? 0 : Math.floor(restanteMs / 60000);

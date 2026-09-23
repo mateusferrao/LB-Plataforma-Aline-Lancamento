@@ -30,6 +30,11 @@ aparecem no checkout, direto no site.
 A compra é feita **no site**: `https://live.alinefilgueiras.com.br`. É só escolher, que ele te leva
 ao checkout. (Quer que eu te mande o link?)
 
+> Teste A/B em andamento: parte do tráfego cai na versão `/lp2` da página. Nela, o botão pede pra
+> **emitir o ingresso** (nome e área, leva 10 segundos) antes de mostrar o valor, que aparece como
+> **de R$197 por R$67**, e o "Confirmar meu ingresso" leva ao checkout. Se a lead citar esse passo
+> ou esse de/por, é a mesma aula e o mesmo checkout.
+
 ### 6. Tem gravação ou replay?
 Não. A aula é **ao vivo, uma vez só, sem gravação**. E isso é de propósito: o valor está em estar
 presente. Você tira suas dúvidas na hora e sai com uma leitura nova da anatomia.
