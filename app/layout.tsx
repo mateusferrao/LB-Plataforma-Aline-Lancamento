@@ -42,12 +42,12 @@ const inter = localFont({
 export const metadata: Metadata = {
   title: "Por Dentro da Face · Aula ao vivo com Dra. Aline Filgueiras · 06/10",
   description:
-    "Técnica todo curso ensina. Critério quase nenhum. Aula ao vivo com a Dra. Aline Filgueiras, direto da mesa de dissecção: o que decide o resultado antes da agulha entrar. 6 de outubro, 20h.",
+    "O erro no preenchimento não acontece na agulha. Acontece antes, na decisão que você toma sem enxergar o rosto por dentro. Aula ao vivo com a Dra. Aline Filgueiras, direto da mesa de dissecção. 6 de outubro, 20h.",
   metadataBase: new URL("https://alinefilgueiras.com.br"),
   openGraph: {
     title: "Por Dentro da Face · Aula ao vivo com Dra. Aline Filgueiras",
     description:
-      "Técnica todo curso ensina. Critério quase nenhum. 6 de outubro, 20h, ao vivo: o que decide o resultado antes da agulha entrar.",
+      "O erro no preenchimento não acontece na agulha. Acontece antes, na decisão que você toma sem enxergar o rosto por dentro. 6 de outubro, 20h, ao vivo.",
     locale: "pt_BR",
     type: "website",
   },
