@@ -195,6 +195,36 @@ Mask) ou o **After Effects** (Roto Brush).
 um pouco pra direita. No V2, deslocada pra esquerda, pra manter o rosto da Aline visível
 à direita. Veja `avatar/previa-montagem.jpg`.
 
+### Opções grátis pra montar
+Como o vídeo da Camila vem com **fundo verde**, não precisa da função paga de "remover
+fundo". Basta **chroma key** (apagar uma cor), que os editores grátis têm:
+
+- **Shotcut** (grátis, Windows e Mac): coloque o criativo numa faixa e a Camila na faixa
+  de cima. Nela, use o filtro **Chroma Key: Simple**, clique no verde e ajuste a
+  distância. Posicione com o filtro **Tamanho, posição e rotação**. É o mais simples.
+- **DaVinci Resolve** (versão grátis): chroma key pelo **3D Keyer**, na página Color.
+  É o de melhor qualidade de recorte, mas demora mais pra aprender. O Magic Mask
+  (recorte sem verde) é só da versão paga.
+- **Kdenlive** e **OpenShot** (grátis): também têm efeito de chroma key.
+- **CapCut:** o **Chroma key** costuma continuar grátis. O que ficou pago foi o recorte
+  automático sem verde.
+
+**Montagem automática (`montar.py`):** o script faz tudo sem editor. Ele tira o verde,
+coloca a pessoa sobre o fundo pausado com o texto na tela, anima a saída e emenda o
+criativo em 1080×1920:
+
+```
+python3 docs/criativos/video-ugc/montar.py \
+  --avatar camila-v2b.mp4 --criativo aline-consultorio.mov \
+  --fundo docs/criativos/video-ugc/fundos/pausa-aula-com-icone.jpg \
+  --texto "O QUE TEM A MILÍMETROS DA SUA AGULHA?" --x -170 --saida ugc-v2-gancho-b.mp4
+```
+
+Ele precisa de Python e ffmpeg (`pip install imageio-ffmpeg pillow`). Com `--sem-verde`,
+ele remove um fundo que não é verde usando IA (`pip install 'rembg[cpu]'`). Nesse modo,
+os fios de cabelo podem tremer um pouco. A legenda da fala da pessoa não entra no script,
+só o texto fixo na tela.
+
 ### Montar no CapCut (desktop)
 1. Crie um projeto **9:16, 1080×1920, 30 fps**.
 2. **Faixa principal:** `fundos/pausa-lab-com-icone.jpg` (ou `pausa-aula-…`) com a
