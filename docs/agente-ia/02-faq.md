@@ -21,7 +21,7 @@ minutos** de duração.
 O ingresso custa **R$67**, valor único até a chegada da aula (06/10/2026, 20h). Não sobe por
 lote — mas as inscrições encerram na hora da aula, então quem deixar pra última hora corre o
 risco de não conseguir mais garantir. No site, o preço aparece no ingresso, logo depois que a
-pessoa o emite (nome + área, leva 10 segundos).
+pessoa o emite (nome + área, leva 10 segundos), como **de R$197 por R$67**.
 
 ### 4. Quais as formas de pagamento? Posso parcelar?
 Sim: **cartão de crédito em até 12x** (com a taxa do gateway) ou **Pix** à vista. As opções

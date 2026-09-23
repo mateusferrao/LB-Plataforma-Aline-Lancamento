@@ -237,6 +237,9 @@ function IngressoEmitido({
   const restanteMs = useReservaRestante();
   const expirado = restanteMs !== null && restanteMs <= 0;
   const progresso = restanteMs === null ? 1 : restanteMs / RESERVA_DURACAO_MS;
+  const temDesconto = !!(lote?.precoDe && lote.precoDeLabel && lote.precoDe > lote.price);
+  const pctDesconto =
+    lote?.precoDe && temDesconto ? Math.round((1 - lote.price / lote.precoDe) * 100) : 0;
 
   return (
     <div>
@@ -260,7 +263,7 @@ function IngressoEmitido({
               </div>
             </div>
             <span className="shrink-0 rounded-[3px] border border-wine px-2 py-1 text-[10px] font-semibold tracking-[0.14em] text-wine uppercase">
-              Preço único
+              Vagas limitadas
             </span>
           </div>
 
@@ -320,15 +323,32 @@ function IngressoEmitido({
         </div>
       </div>
 
-      {/* Reserva da vaga — mesmo cronômetro da barra fixa (sessionStorage). */}
+      {/* Desconto da emissão — mesmo cronômetro da reserva da barra fixa
+          (sessionStorage, não reinicia no refresh). Sem precoDe no lote, vira
+          só a reserva da vaga. */}
       <div className="mt-5 rounded-[8px] border border-line bg-bg-3 px-5 py-5 text-center">
+        {montado && lote && temDesconto && (
+          <div className="mb-4">
+            <p className="text-[1.05rem] text-fg">Você emitiu seu ingresso e ganhou</p>
+            <p className="mt-0.5 font-serif text-[1.6rem] leading-tight font-semibold text-wine-ink">
+              {pctDesconto}% de desconto
+            </p>
+            <p className="mt-1 text-[1rem] text-fg-soft">
+              De <s className="text-fg-faint">{lote.precoDeLabel}</s> por{" "}
+              <strong className="font-semibold text-fg">{lote.priceLabel}</strong>
+            </p>
+          </div>
+        )}
         {expirado ? (
           <p className="font-serif text-[1.15rem] text-fg">
-            Sua reserva expirou, mas a vaga ainda pode ser sua. Confirme agora.
+            Confirme agora para garantir seu ingresso por{" "}
+            {montado && lote ? lote.priceLabel : "este valor"}.
           </p>
         ) : (
           <>
-            <p className="text-[1rem] text-fg-soft">Seu lugar na sala fica reservado por</p>
+            <p className="text-[1rem] text-fg-soft">
+              {temDesconto ? "Desconto válido por" : "Seu lugar na sala fica reservado por"}
+            </p>
             <div
               className="mt-1 font-serif text-[2.2rem] leading-none text-wine-ink tabular-nums"
               aria-live="off"
