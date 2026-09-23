@@ -26,20 +26,17 @@ export function Hero({ comVsl }: { comVsl: boolean }) {
 
             <h1 className="mt-5 text-balance font-serif font-semibold text-[2.35rem] leading-[1.12] tracking-[-0.012em] sm:text-[3.1rem] lg:text-[3.7rem]">
               {/* Headline em dois níveis visuais pra não empurrar o CTA pra baixo
-                  no mobile. Ela é só dor/virada: quem conduz e o que é vêm logo
-                  abaixo, no subtítulo (tráfego frio de anúncio). */}
+                  no mobile: a virada grifada e, no segundo nível, a decisão + o
+                  que é e quem conduz (tráfego frio de anúncio lê só o H1). */}
               <span className="titulo-grifo">
                 O erro na aplicação não acontece na agulha.
               </span>{" "}
               <span className="mt-5 block text-[1.45rem] leading-[1.3] font-medium tracking-normal text-fg sm:text-[1.8rem] lg:text-[2.05rem]">
                 Acontece antes, na decisão que você toma sem enxergar o rosto por dentro.
+                Em um evento ao vivo, direto da mesa de dissecção, a Dra. Aline mostra o que
+                está embaixo da pele.
               </span>
             </h1>
-
-            <p className="mt-5 max-w-[560px] text-[1.15rem] leading-[1.6] text-fg-soft">
-              Em um evento ao vivo, direto da mesa de dissecção, a Dra. Aline mostra o que
-              está embaixo da pele: onde aplicar, em que plano e até onde ir em cada caso.
-            </p>
 
             <Countdown className="mt-8 mb-8" />
 
