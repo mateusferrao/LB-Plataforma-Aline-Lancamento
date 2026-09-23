@@ -26,14 +26,14 @@ export function Hero({ comVsl }: { comVsl: boolean }) {
 
             <h1 className="mt-5 text-balance font-serif font-semibold text-[2.35rem] leading-[1.12] tracking-[-0.012em] sm:text-[3.1rem] lg:text-[3.7rem]">
               <span className="titulo-grifo">
-                Aplique com a segurança de quem já viu, por dentro, onde estão os riscos da face.
+                Técnica todo curso ensina. Critério quase nenhum.
               </span>
             </h1>
 
             <p className="mt-6 max-w-[560px] text-[1.2rem] leading-[1.6] text-fg-soft">
-              No dia 6, ao vivo, a Dra. Aline mostra a face por dentro, direto da mesa
-              de dissecção. Você sai da aula com a mão mais firme e a leitura de anatomia
-              que faltava.
+              Em um evento ao vivo, a Dra. Aline mostra o que decide o resultado antes da
+              agulha entrar. Direto da mesa de dissecção: onde, em que plano e até onde ir
+              em cada rosto.
             </p>
 
             <Countdown className="mt-8 mb-8" />

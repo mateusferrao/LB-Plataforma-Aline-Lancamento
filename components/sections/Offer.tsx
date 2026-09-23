@@ -7,7 +7,7 @@ import { VagasBadge } from "@/components/VagasBadge";
 const INCLUDES = [
   {
     title: "Aula ao vivo de ~90 minutos com a Dra. Aline",
-    detail: "Anatomia da dissecção aplicada à sua conduta",
+    detail: "O que a dissecção revela, aplicado às suas decisões na cadeira",
   },
   {
     title: "Tira-dúvidas ao vivo, na hora",
@@ -59,8 +59,8 @@ export function Offer({ comVsl }: { comVsl: boolean }) {
               </div>
             ))}
             <p className="mt-6 max-w-[440px] font-serif text-[1.16rem] leading-[1.45] text-wine-ink italic">
-              Uma intercorrência custa muito mais que o ingresso. Custa dinheiro,
-              reputação e noites de sono.
+              O ingresso custa menos que uma seringa de preenchedor. Uma intercorrência
+              custa muito mais: dinheiro, reputação e noites de sono.
             </p>
           </Reveal>
 

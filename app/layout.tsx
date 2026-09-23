@@ -42,12 +42,12 @@ const inter = localFont({
 export const metadata: Metadata = {
   title: "Por Dentro da Face · Aula ao vivo com Dra. Aline Filgueiras · 06/10",
   description:
-    "Aula ao vivo de anatomia da dissecção aplicada à harmonização facial, com a Dra. Aline Filgueiras. 6 de outubro, 20h. Vagas limitadas, sem gravação.",
+    "Técnica todo curso ensina. Critério quase nenhum. Aula ao vivo com a Dra. Aline Filgueiras, direto da mesa de dissecção: o que decide o resultado antes da agulha entrar. 6 de outubro, 20h.",
   metadataBase: new URL("https://alinefilgueiras.com.br"),
   openGraph: {
     title: "Por Dentro da Face · Aula ao vivo com Dra. Aline Filgueiras",
     description:
-      "6 de outubro, 20h, ao vivo. A anatomia que só a dissecção revela, aplicada à sua conduta clínica.",
+      "Técnica todo curso ensina. Critério quase nenhum. 6 de outubro, 20h, ao vivo: o que decide o resultado antes da agulha entrar.",
     locale: "pt_BR",
     type: "website",
   },

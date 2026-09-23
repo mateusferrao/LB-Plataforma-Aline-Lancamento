@@ -7,10 +7,10 @@ import { withBasePath } from "@/lib/basePath";
 
 const SEE = [
   "Onde está o risco que os atlas não mostram, a milímetros da sua agulha.",
-  "Por que a mesma técnica dá resultados diferentes em cada rosto.",
-  "O que a dissecção revela sobre os planos e muda a sua mão.",
-  "Onde ficam os limites que fazem a sua mão parar de hesitar.",
-  "O plano exato de como o preenchedor se acomoda na face depois de aplicado, não a expectativa do rótulo.",
+  "Por que a mesma técnica dá resultados diferentes em cada rosto, e como ler isso antes de aplicar.",
+  "Como os planos da face mudam a escolha do ponto de aplicação em cada caso.",
+  "Até onde ir: os limites que fazem a sua mão parar de hesitar.",
+  "Como o preenchedor se acomoda na face depois de aplicado, e não o que promete o rótulo.",
 ];
 
 export function Solution({ comVsl }: { comVsl: boolean }) {
@@ -38,13 +38,14 @@ export function Solution({ comVsl }: { comVsl: boolean }) {
               </span>
               <h2 className="mt-[18px] text-balance font-serif font-semibold text-[1.95rem] leading-[1.12] sm:text-[2.6rem]">
                 <span className="titulo-grifo">
-                  Fui até a mesa de dissecção pra te mostrar o que a pele esconde.
+                  Critério se aprende vendo o que a pele esconde.
                 </span>
               </h2>
               <p className="mt-[22px] max-w-[600px] text-[1.12rem] leading-[1.6] text-fg-soft">
-                Na aula ao vivo, a Aline mostra o que existe embaixo da pele. Os planos, as
-                estruturas e os limites que mudam a sua conduta na cadeira. É o mesmo rigor
-                do curso internacional que ela dá presencialmente, numa noite só.
+                Na aula ao vivo, a Aline abre a face por dentro, direto da mesa de dissecção:
+                os planos, as estruturas e os limites que decidem o resultado antes da agulha
+                entrar. É o mesmo rigor do curso internacional que ela dá presencialmente,
+                numa noite só.
               </p>
 
               <ul className="mt-7 list-none p-0">

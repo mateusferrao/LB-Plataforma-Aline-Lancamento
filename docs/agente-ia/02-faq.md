@@ -77,3 +77,8 @@ Avançada e Integrativa, e atende em Belo Horizonte e Praia Grande.
 
 ### 16. Como falo com o suporte?
 Pelo **WhatsApp +55 31 95349-1799** ou pelo **e-mail suporte.alinefilgueiras@gmail.com.br**.
+
+### 17. Já fiz curso de harmonização. Essa aula não vai repetir o que eu já sei?
+Não. Curso ensina **técnica**: o protocolo, os pontos, o passo a passo. Essa aula é sobre o que vem
+antes: o **critério** que a anatomia por dentro dá pra você decidir em cada rosto, inclusive quando
+ele foge do protocolo.
