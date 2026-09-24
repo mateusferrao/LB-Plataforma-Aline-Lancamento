@@ -252,9 +252,32 @@ arquivo original em 1080p pra quem editou. O V2 já está em 1080×1920.
 
 ## 4. Ganchos
 
+### Regra nº 1: o gancho filtra o público
+Quem precisa parar é **a profissional que aplica**, não a paciente que quer fazer um
+preenchimento. Palavras como "preenchimento", "harmonização", "botox" ou "essa doutora",
+sozinhas, também fisgam a paciente. Ela clica, cai numa aula técnica e não compra. O
+anúncio paga esse clique, e o algoritmo aprende a buscar mais gente como ela.
+
+Por isso, todo gancho obedece a estas regras:
+
+1. **Chamar a profissional nos 2 primeiros segundos.** Use "Você que aplica…", "Se você
+   injeta…", "Biomédica, dentista, enfermeira…" ou "Pra quem aplica harmonização…".
+2. **Usar o vocabulário de quem está do outro lado da agulha:** aplicar, injetar, sua
+   agulha, cânula, sua paciente, sua cadeira, intercorrência, seu curso. A paciente não
+   fala "minha paciente" nem "minha agulha".
+3. **Nunca falar só do procedimento.** "Preenchimento" só entra junto com o verbo de quem
+   faz: "você que aplica preenchimento", nunca "sobre preenchimento".
+4. **O texto na tela também filtra.** Se a fala não couber o filtro, o texto carrega:
+   PRA QUEM APLICA HARMONIZAÇÃO.
+5. **Nada de antes e depois de rosto de paciente, nem promessa de resultado no rosto.**
+   Isso atrai a paciente e é vetado pela Meta pra esse tipo de procedimento.
+
+Teste rápido antes de gravar: **uma paciente que ouvir esse gancho se sente chamada?** Se
+sim, reescreva.
+
 Cada gancho tem três partes:
 - **Fala:** no máximo 12 palavras, dita em até 4 segundos.
-- **Texto na tela:** até 6 palavras, logo abaixo do ícone de pausa, em branco negrito.
+- **Texto na tela:** até 7 palavras, logo abaixo do ícone de pausa, em branco negrito.
   Ele segura quem assiste sem som.
 - **Ponte:** a primeira frase da Aline, que entra quando a pessoa sai de cena. A melhor
   ponte é quando a Aline **responde** o que a pessoa de IA provocou.
@@ -263,60 +286,63 @@ As técnicas usadas: **interrupção** (manda parar), **polêmica** (contraria o
 acredita), **pergunta que dói**, **bastidor** (mostra algo que pouca gente viu) e
 **identidade** (descreve a pessoa exata que está assistindo).
 
-### V1 · Laboratório (fundo: `pausa-lab-com-icone.jpg`, Aline debruçada na mesa)
+### V1 · Laboratório (fundo: `pausa-lab-pb.jpg` ou `pausa-lab-com-icone.jpg`)
 A Aline abre com: "Você sabe que essa insegurança que cê tem é do conhecimento que cê
 ainda não adquiriu…"
 
 | # | Técnica | Fala | Texto na tela |
 |---|---------|------|---------------|
-| V1-A | Polêmica | "Sua insegurança na hora de aplicar não é falta de prática." [aponta] | NÃO É FALTA DE PRÁTICA |
-| V1-B | Interrupção | "Para tudo. Se você trava na hora de aplicar, escuta isso." [aponta] | SE VOCÊ TRAVA NA HORA DE APLICAR |
-| V1-C | Identidade | "Evita alguma região do rosto por medo? Assiste até o fim." [aponta] | EVITA REGIÃO POR MEDO? |
-| V1-D | Bastidor | "Isso é um laboratório de dissecção nos EUA. Olha o recado dela." [vira pro fundo] | ELA ESTUDOU A FACE POR DENTRO |
+| V1-A | Polêmica | "Você que aplica e ainda trava: não é falta de prática." [aponta] | PRA QUEM APLICA · NÃO É FALTA DE PRÁTICA |
+| V1-B | Interrupção | "Para tudo. Se você trava com a agulha na mão, escuta isso." [aponta] | SE VOCÊ TRAVA NA HORA DE APLICAR |
+| V1-C | Identidade | "Biomédica, dentista, enfermeira: evita aplicar em alguma região por medo?" [aponta] | EVITA APLICAR EM ALGUMA REGIÃO? |
+| V1-D | Bastidor | "Isso é um laboratório de dissecção. O recado é pra quem aplica." [vira pro fundo] | PRA QUEM APLICA HARMONIZAÇÃO |
 
-**Aposta principal: V1-A.** A pessoa de IA nega a explicação que ela sempre se deu ("é
+**Aposta principal: V1-A.** Ela nega a explicação que a profissional sempre se deu ("é
 falta de prática"), e a Aline entra com a resposta ("é do conhecimento que cê ainda não
 adquiriu"). A curiosidade abre e fecha em 5 segundos.
 
-### V2 · Consultório (fundo: `pausa-aula-com-icone.jpg`)
+### V2 · Consultório (fundo: `pausa-aula-pb.jpg` ou `pausa-aula-com-icone.jpg`)
 A Aline abre com: "Toda vez que você preenche um rosto, existe uma artéria ali a
 milímetros da sua cânula ou da sua agulha."
 
 | # | Técnica | Fala | Texto na tela |
 |---|---------|------|---------------|
-| V2-A | Interrupção | "Não preenche mais nenhum rosto antes de ouvir isso." [aponta] | ANTES DO PRÓXIMO PREENCHIMENTO |
-| V2-B | Pergunta que dói | "Você sabe o que tem a milímetros da sua agulha?" [gesto de milímetro] | O QUE TEM A MILÍMETROS DA SUA AGULHA? |
-| V2-C | Polêmica | "Se você aprendeu em boneco, esse vídeo vai te incomodar." [aponta] | APRENDEU EM BONECO? |
-| V2-D | Desejo | "Ela explicou por que sua mão ainda treme na hora de preencher." [aponta] | POR QUE SUA MÃO AINDA TREME |
+| V2-A | Interrupção | "Não aplica em mais nenhuma paciente antes de ouvir isso." [aponta] | ANTES DA SUA PRÓXIMA PACIENTE |
+| V2-B | Pergunta que dói | "Você que aplica: sabe o que tem a milímetros da sua agulha?" [gesto de milímetro] | O QUE TEM A MILÍMETROS DA SUA AGULHA? |
+| V2-C | Polêmica | "Se você aprendeu a aplicar em boneco, isso vai te incomodar." [aponta] | APRENDEU A APLICAR EM BONECO? |
+| V2-D | Desejo | "Por que sua mão ainda treme na hora de injetar? Ela explicou." [aponta] | POR QUE SUA MÃO AINDA TREME |
 | V2-E | Bastidor | "Isso o seu curso de harmonização não te mostrou." [aponta] | O QUE SEU CURSO NÃO MOSTROU |
 
-**Aposta principal: V2-B.** A pergunta é respondida literalmente na primeira frase da
-Aline ("existe uma artéria ali a milímetros…"). O V2-A é o mais forte pra parar o dedo,
-porque é uma ordem.
+**Aposta principal: V2-B.** A pergunta já filtra ("você que aplica", "sua agulha") e é
+respondida literalmente na primeira frase da Aline ("existe uma artéria ali a
+milímetros…"). O V2-A é o mais forte pra parar o dedo, porque é uma ordem.
 
 ### V3 · Caixinha de perguntas (fundo: o quadro com a **pergunta da caixinha visível**)
-Aqui a pausa tem que mostrar a caixinha, porque a pergunta é a dor com as palavras da
-aluna.
+A pausa tem que mostrar a caixinha, porque a pergunta é a dor com as palavras da aluna,
+e "insegura nas aplicações" já filtra sozinha.
 
 | # | Técnica | Fala | Texto na tela |
 |---|---------|------|---------------|
-| V3-A | Identidade | "Se você já pensou isso antes de aplicar, escuta a resposta." [aponta pra caixinha] | VOCÊ JÁ PENSOU ISSO? |
-| V3-B | Bastidor | "Mandaram pra ela a pergunta que toda injetora tem vergonha de fazer." [aponta] | A PERGUNTA QUE NINGUÉM FAZ |
+| V3-A | Identidade | "Se você já pensou isso antes de aplicar, escuta a resposta." [aponta pra caixinha] | VOCÊ QUE APLICA JÁ PENSOU ISSO? |
+| V3-B | Bastidor | "Mandaram pra ela a pergunta que toda injetora tem vergonha de fazer." [aponta] | A PERGUNTA QUE NENHUMA INJETORA FAZ |
 | V3-C | Leitura | [voz mais baixa, lendo] "'Me sinto muito insegura nas aplicações, qual dica você me dá?' A resposta é pra você." | (a própria caixinha) |
 
 **Aposta principal: V3-A.** Quem se reconhece na pergunta fica pra ouvir a resposta.
 
 ### Ganchos de reação (falam do vídeo que vai tocar)
 A pessoa de IA reage ao vídeo pausado como quem acabou de assistir e precisa mostrar pra
-alguém. Três regras deixam esse tipo de gancho forte:
+uma colega. Quatro regras deixam esse tipo de gancho forte:
 
-1. **Sempre um detalhe concreto do que vem**, sem entregar a resposta. Compare "Você não
+1. **Chamar a profissional logo na abertura** ("você que aplica", "se você injeta"). É a
+   regra nº 1 acima, e aqui ela pesa mais, porque "você não acredita no que ela falou"
+   sozinho atrai qualquer pessoa curiosa.
+2. **Sempre um detalhe concreto do que vem**, sem entregar a resposta. Compare "Você não
    acredita no que ela falou" com "…no que ela falou sobre boneco e atlas". A segunda
    diz o assunto, e o assunto é o que faz a pessoa certa parar.
-2. **Olhar pro vídeo antes de falar.** Nos primeiros 0,3s ela está virada pro fundo
+3. **Olhar pro vídeo antes de falar.** Nos primeiros 0,3s ela está virada pro fundo
    pausado. Depois vira pra câmera com a sobrancelha levantada e fala. É isso que vende a
    reação.
-3. **Sem opinião em primeira pessoa.** Frases como "é a melhor explicação que eu já ouvi"
+4. **Sem opinião em primeira pessoa.** Frases como "é a melhor explicação que eu já ouvi"
    ou "isso mudou tudo pra mim" são depoimento de uma pessoa que não existe. Ela aponta
    pro vídeo e deixa a Aline convencer.
 
@@ -327,22 +353,23 @@ vira título inventado.
 
 | # | Vídeo | Fala | Texto na tela |
 |---|-------|------|---------------|
-| R1 | V1 | "Você não acredita no que ela falou de dentro de um laboratório de dissecção." | ELA GRAVOU ISSO NUM LABORATÓRIO DE DISSECÇÃO |
-| R2 | V1 | "Ela disse de onde vem a sua insegurança pra aplicar. Não é o que você pensa." | DE ONDE VEM SUA INSEGURANÇA |
-| R3 | V2 | "Você não acredita no que essa doutora falou sobre preenchimento." | O QUE ELA FALOU SOBRE PREENCHIMENTO |
-| R4 | V2 | "Ela falou sobre boneco e atlas o que nenhum curso tem coragem de falar." | O QUE NENHUM CURSO FALA |
-| R5 | V2 | "Presta atenção no que ela fala sobre artéria nos primeiros 5 segundos." | PRESTA ATENÇÃO NOS 5 PRIMEIROS SEGUNDOS |
-| R6 | V3 | "Você não acredita no que ela respondeu pra essa pergunta." [aponta pra caixinha] | OLHA A RESPOSTA DELA |
+| R1 | V1 | "Você que aplica precisa ouvir o que ela gravou num laboratório de dissecção." | PRA QUEM APLICA HARMONIZAÇÃO |
+| R2 | V1 | "Ela disse de onde vem a sua insegurança pra aplicar. Não é o que você pensa." | DE ONDE VEM SUA INSEGURANÇA PRA APLICAR |
+| R3 | V2 | "Você que aplica preenchimento não vai acreditar no que ela acabou de falar." | PRA QUEM APLICA PREENCHIMENTO |
+| R4 | V2 | "Ela falou sobre aprender em boneco e atlas o que nenhum curso fala." | PRA QUEM FEZ CURSO DE HARMONIZAÇÃO |
+| R5 | V2 | "Se você injeta, presta atenção no que ela fala sobre artéria." | SE VOCÊ INJETA, PRESTA ATENÇÃO |
+| R6 | V3 | "Você que aplica não vai acreditar no que ela respondeu aqui." [aponta pra caixinha] | OLHA A RESPOSTA DELA |
 | R7 | V3 | "Perguntaram isso pra ela, e a resposta é pra quem tem medo de aplicar." | PRA QUEM TEM MEDO DE APLICAR |
 
-**Apostas:** R4 no V2 (curiosidade com polêmica e assunto claro) e R2 no V1 (promete
-explicar uma coisa que ela sente todo dia). O R5 funciona bem porque a promessa se cumpre
-na hora: a Aline fala de artéria já na primeira frase.
+**Apostas:** R4 no V2 (curiosidade com polêmica e público claro, porque só quem fez curso
+se reconhece) e R2 no V1 (promete explicar uma coisa que ela sente todo dia). O R3
+substitui o gancho antigo "…no que essa doutora falou sobre preenchimento", que chamava
+também a paciente.
 
 ### Como dizer o gancho
 - Corte o primeiro quadro na primeira sílaba. Nada de respiração, "é…" ou sorriso antes.
-- A palavra mais importante leva o peso: "**Não** preenche mais nenhum rosto…", "…não é
-  falta de **prática**".
+- A palavra que filtra e a palavra mais importante levam o peso: "Você que **aplica**…",
+  "**Não** aplica em mais nenhuma paciente…", "…não é falta de **prática**".
 - Meio segundo de silêncio antes do gesto de apontar. É o que faz o "play" do vídeo
   parecer uma resposta.
 - Gere 3 tomadas de cada gancho no avatar e escolha a mais natural. A primeira raramente
@@ -357,14 +384,7 @@ na hora: a Aline fala de artéria já na primeira frase.
   1:24,5–1:41.
 - **Completo:** pra remarketing de quem já assistiu à VSL ou visitou a LP.
 
-### V3 · Caixinha de perguntas (fundo: o quadro com a **pergunta da caixinha visível**)
-Aqui a pausa tem que mostrar a caixinha, porque a pergunta é a dor com as palavras da
-aluna.
-- **A:** "Mandaram isso na caixinha dela." [lê] "'Me sinto muito insegura nas aplicações.'
-  Olha o que ela respondeu." [aponta]
-- **B:** "Perguntaram pra ela o que toda injetora pensa e ninguém fala." [aponta]
-
-**Pra gravação da resposta da Aline** (se ainda der tempo de ajustar):
+**Pra gravação da resposta da caixinha** (se ainda der tempo de ajustar):
 1. Já comece respondendo, sem "oi gente": "Essa insegurança não é falta de coragem, é
    falta de clareza…"
 2. Dê **uma** dica prática de verdade em 15 a 20s. Por exemplo: antes de aplicar, saiba
