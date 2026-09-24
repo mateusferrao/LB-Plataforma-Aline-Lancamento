@@ -260,8 +260,8 @@ anúncio paga esse clique, e o algoritmo aprende a buscar mais gente como ela.
 
 Por isso, todo gancho obedece a estas regras:
 
-1. **Chamar a profissional nos 2 primeiros segundos.** Use "Você que aplica…", "Se você
-   injeta…", "Biomédica, dentista, enfermeira…" ou "Pra quem aplica harmonização…".
+1. **O filtro é a primeira palavra, em forma de pergunta curta** (até 1 segundo), e o
+   gancho vem logo depois. Veja a tabela de aberturas abaixo.
 2. **Usar o vocabulário de quem está do outro lado da agulha:** aplicar, injetar, sua
    agulha, cânula, sua paciente, sua cadeira, intercorrência, seu curso. A paciente não
    fala "minha paciente" nem "minha agulha".
@@ -271,6 +271,19 @@ Por isso, todo gancho obedece a estas regras:
    PRA QUEM APLICA HARMONIZAÇÃO.
 5. **Nada de antes e depois de rosto de paciente, nem promessa de resultado no rosto.**
    Isso atrai a paciente e é vetado pela Meta pra esse tipo de procedimento.
+
+**Aberturas-filtro** (a primeira coisa que ela fala):
+
+| Abertura | Filtra? | Por quê |
+|---|---|---|
+| "Faz preenchimento?" | Não | É a frase da paciente ("eu faço preenchimento", "já fez preenchimento?"). Clínica usa essa pergunta pra vender pra paciente |
+| **"Aplica preenchimento?"** | Sim | "Aplicar" é de quem segura a seringa |
+| **"Injetora?"** | Sim, a mais afiada | Jargão da profissão. Paciente nunca se chama assim |
+| "Biomédica? Dentista? Enfermeira?" | Sim | Não tem erro, mas leva uns 1,5s |
+| "Sua paciente…" | Sim | "Sua paciente" já diz com quem ela está falando |
+
+O texto na tela abre com a mesma pergunta (APLICA PREENCHIMENTO?, INJETORA?), pra filtrar
+também quem assiste sem som.
 
 Teste rápido antes de gravar: **uma paciente que ouvir esse gancho se sente chamada?** Se
 sim, reescreva.
@@ -366,9 +379,26 @@ se reconhece) e R2 no V1 (promete explicar uma coisa que ela sente todo dia). O 
 substitui o gancho antigo "…no que essa doutora falou sobre preenchimento", que chamava
 também a paciente.
 
+### Versões com pergunta-filtro na primeira palavra
+Mesmas ideias das tabelas acima, reescritas pra abrir com a pergunta-filtro. São as que eu
+gravaria primeiro.
+
+| # | Vídeo | Fala | Texto na tela |
+|---|-------|------|---------------|
+| F1 | V2 | "Aplica preenchimento? Olha o que ela acabou de falar." [aponta] | APLICA PREENCHIMENTO? |
+| F2 | V2 | "Injetora? Você sabe o que tem a milímetros da sua agulha?" [gesto de milímetro] | INJETORA? O QUE TEM A MILÍMETROS DA SUA AGULHA? |
+| F3 | V2 | "Aplica preenchimento? Se aprendeu em boneco, isso vai te incomodar." | APLICA PREENCHIMENTO? |
+| F4 | V1 | "Aplica harmonização e ainda trava? Não é falta de prática." [aponta] | APLICA E AINDA TRAVA? |
+| F5 | V1 | "Injetora? Evita alguma região por medo? Escuta ela." [aponta] | INJETORA? EVITA ALGUMA REGIÃO? |
+| F6 | V3 | "Injetora? Mandaram isso pra ela na caixinha." [aponta pra caixinha] | INJETORA? OLHA ESSA PERGUNTA |
+
+**Apostas:** F1 no consultório (é o gancho que já foi gravado, com o filtro na frente) e
+F4 no laboratório. F2 é o mais forte se o público responder bem a "injetora".
+
 ### Como dizer o gancho
 - Corte o primeiro quadro na primeira sílaba. Nada de respiração, "é…" ou sorriso antes.
-- A palavra que filtra e a palavra mais importante levam o peso: "Você que **aplica**…",
+- A pergunta-filtro sai rápida e com a sobrancelha levantada ("**Aplica** preenchimento?"),
+  com um respiro curto antes do resto. A palavra mais importante também leva peso: "Você que **aplica**…",
   "**Não** aplica em mais nenhuma paciente…", "…não é falta de **prática**".
 - Meio segundo de silêncio antes do gesto de apontar. É o que faz o "play" do vídeo
   parecer uma resposta.
