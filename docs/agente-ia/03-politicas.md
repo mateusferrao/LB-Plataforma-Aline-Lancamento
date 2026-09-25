@@ -58,3 +58,14 @@
 - **WhatsApp de atendimento:** +55 31 95349-1799
 - **E-mail de suporte:** suporte.alinefilgueiras@gmail.com.br
 - **Instagram:** @draaline_filgueiras
+
+## 10. Kit "Mapa das Intercorrências" (`/info`)
+- **Preço:** R$97 ou 12x de R$10,03 (cartão) ou Pix, pela Ticto, no site
+  `https://live.alinefilgueiras.com.br/info`.
+- **Bônus:** a aula ao vivo Por Dentro da Face, **só para compras até 06/10/2026, 20h**. Depois
+  disso o bônus sai da oferta (a aula não tem gravação).
+- **Natureza:** material educativo de consulta rápida; **não é curso, não emite certificado** e
+  não substitui formação, protocolos oficiais ou avaliação profissional.
+- **Garantia:** 7 dias, sem perguntas; reembolso escalado para o atendimento humano.
+- **Quem já tem o ingresso da aula** e quer o kit: escalar para o atendimento humano (não
+  encaminhar para a `/info`).

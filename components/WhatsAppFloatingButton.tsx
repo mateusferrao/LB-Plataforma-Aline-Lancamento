@@ -1,13 +1,17 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import { WhatsAppIcon } from "@/components/WhatsAppIcon";
 import { trackCustom, gaEvent } from "@/lib/analytics";
 
 // Número do time (suporte + conversão de dúvidas pré-compra), formato E.164 do wa.me.
 const NUMERO_WHATSAPP = "5531953491799";
 const MENSAGEM = "Oi! Fiquei com uma dúvida antes de comprar a aula Por Dentro da Face.";
-const WHATSAPP_URL = `https://wa.me/${NUMERO_WHATSAPP}?text=${encodeURIComponent(MENSAGEM)}`;
+// Na /info (kit Mapa das Intercorrências) a dúvida é sobre o kit, não a aula.
+const MENSAGEM_KIT = "Oi! Fiquei com uma dúvida antes de comprar o Mapa das Intercorrências.";
+const whatsappUrl = (msg: string) =>
+  `https://wa.me/${NUMERO_WHATSAPP}?text=${encodeURIComponent(msg)}`;
 
 const MARGEM_PADRAO = 20; // canto puro, sem nada mais ocupando o rodapé
 const GAP = 14; // respiro acima do elemento fixo mais alto
@@ -37,6 +41,8 @@ export function WhatsAppFloatingButton() {
   // Antes de montar, usa a margem padrão do canto (evita mismatch de hidratação —
   // mesmo padrão do Countdown/useLoteAtivo/ObrigadoSaudacao nesta sessão).
   const [bottom, setBottom] = useState(MARGEM_PADRAO);
+  const pathname = usePathname();
+  const href = whatsappUrl(/^\/info(\.html)?(\/|$)/.test(pathname ?? "") ? MENSAGEM_KIT : MENSAGEM);
 
   useEffect(() => {
     const recalcular = () => setBottom(calcularBottom());
@@ -53,7 +59,7 @@ export function WhatsAppFloatingButton() {
 
   return (
     <a
-      href={WHATSAPP_URL}
+      href={href}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Falar com nosso time no WhatsApp"

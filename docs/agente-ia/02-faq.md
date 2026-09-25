@@ -82,3 +82,36 @@ Avançada e Integrativa, e atende em Belo Horizonte e Praia Grande.
 
 ### 16. Como falo com o suporte?
 Pelo **WhatsApp +55 31 95349-1799** ou pelo **e-mail suporte.alinefilgueiras@gmail.com.br**.
+
+---
+
+## Kit "Mapa das Intercorrências" (página `/info`)
+
+> Use só quando a lead perguntar pelo kit ou vier da `/info`. Detalhes em
+> `01-playbook-vendas.md`, seção 8.1.
+
+### K1. O que é o Mapa das Intercorrências?
+Um **kit de referência clínica** da Dra. Aline: PDF de 10 páginas com 4 pranchas para imprimir (as
+8 zonas de risco da face, profundidade e planos, o que fazer se acontecer uma intercorrência e o
+"normal ou alerta?" do pós), tabela de zonas, glossário, referências e um card de cuidados pra
+enviar à paciente. **Não é curso**: é material educativo de consulta rápida.
+
+### K2. Quanto custa?
+**R$97**, ou **12x de R$10,03** no cartão, ou Pix. Quem garante **até 06/10, às 20h**, leva **de
+presente a aula ao vivo Por Dentro da Face**. A compra é no site:
+`https://live.alinefilgueiras.com.br/info`.
+
+### K3. Como recebo?
+Depois da confirmação do pagamento, você recebe o acesso ao PDF e ao card da paciente em PNG. Se
+comprou até 06/10, a página de obrigado também leva ao grupo de WhatsApp da aula.
+
+### K4. Já comprei o ingresso da aula. Posso pegar o Mapa?
+Pode, mas não compre pela página do kit, senão você paga a aula duas vezes. Vou te passar para o
+nosso time resolver o acesso ao Mapa. *(Escalar para o atendimento humano.)*
+
+### K5. O Mapa substitui protocolo ou formação?
+Não. É material educativo: organiza o que a literatura publicou pra você ter à vista. Doses,
+medicamentos e condutas seguem os consensos atualizados e a sua formação.
+
+### K6. Tem garantia?
+Sim: **7 dias após a compra para pedir reembolso, sem perguntas**, pelo WhatsApp ou e-mail.

@@ -1,9 +1,13 @@
 import Script from "next/script";
 import { LOTES, loteAtivoEm } from "@/lib/lotes";
+import { FASES, faseKitEm } from "@/lib/ofertaKit";
 
 // Preço do ViewContent = lote ativo no BUILD (é <Script>, não reativo). Calculado
 // no escopo do módulo (uma vez, no build) para não chamar Date.now() no render.
 const VIEW_VALUE = (loteAtivoEm(Date.now()) ?? LOTES[0]).price;
+// Mesma ideia para a /info (kit Mapa das Intercorrências, lib/ofertaKit.ts):
+// o script é um só no layout, então escolhe o conteúdo pelo pathname.
+const KIT_VIEW_VALUE = (faseKitEm(Date.now()) ?? FASES[0]).price;
 
 // Semeia o pixel do Meta (plano de lançamento, "estratégia de tráfego": cada evento
 // treina a conta). Sem NEXT_PUBLIC_META_PIXEL_ID configurado, não renderiza nada.
@@ -24,7 +28,12 @@ export function MetaPixel() {
           document,'script','https://connect.facebook.net/en_US/fbevents.js');
           fbq('init', '${pixelId}');
           fbq('track', 'PageView');
-          fbq('track', 'ViewContent', {
+          fbq('track', 'ViewContent', /\\/info(\\.html)?(\\/|$)/.test(location.pathname) ? {
+            content_name: 'Mapa das Intercorrências',
+            content_category: 'kit',
+            value: ${KIT_VIEW_VALUE},
+            currency: 'BRL'
+          } : {
             content_name: 'Ingresso Por Dentro da Face',
             content_category: 'live',
             value: ${VIEW_VALUE},

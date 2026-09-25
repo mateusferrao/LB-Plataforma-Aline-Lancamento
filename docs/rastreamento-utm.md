@@ -19,7 +19,7 @@ Base da URL: `https://live.alinefilgueiras.com.br/`
 |---|---|---|
 | `utm_source` | de onde vem | `instagram`, `facebook` |
 | `utm_medium` | tipo de mídia | orgânico: `bio`, `stories`, `reels`, `post` · pago: `paid_social` |
-| `utm_campaign` | a campanha | `live-por-dentro-da-face` |
+| `utm_campaign` | a campanha | aula: `live-por-dentro-da-face` · kit (`/info`): `kit-mapa-intercorrencias` |
 | `utm_content` | qual criativo/link | `teaser-dissecacao`, `depoimento`, `oferta` (livre) |
 
 Regras: tudo minúsculo, sem espaço nem acento (use hífen). Mantenha os mesmos nomes sempre.
@@ -33,6 +33,12 @@ Regras: tudo minúsculo, sem espaço nem acento (use hífen). Mantenha os mesmos
   `https://live.alinefilgueiras.com.br/?utm_source=instagram&utm_medium=reels&utm_campaign=live-por-dentro-da-face&utm_content=dissecacao`
 
 (Troque `utm_content` conforme o criativo.)
+
+**Kit Mapa das Intercorrências (`/info`):** mesma convenção, com base
+`https://live.alinefilgueiras.com.br/info` e `utm_campaign=kit-mapa-intercorrencias`. Ex.:
+`https://live.alinefilgueiras.com.br/info?utm_source=instagram&utm_medium=stories&utm_campaign=kit-mapa-intercorrencias&utm_content=mapa`.
+No Meta Ads, separe frio e remarketing pelo nome do conjunto/anúncio (vai no `{{ad.name}}`) pra
+comparar a `/info` com a LP da aula.
 
 ## Meta Ads (anúncios pagos)
 No nível do anúncio, campo **"Parâmetros de URL"**, cole (com dinâmicos):
