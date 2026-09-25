@@ -130,7 +130,8 @@ conduta imediata. De bônus, a aula ao vivo Por Dentro da Face (06/10)."
 > online, cerca de 90 minutos. O acesso é pelo grupo de WhatsApp e não há gravação. O mapa mostra onde
 > está o risco e o que fazer. A aula mostra por quê.
 >
-> **Formato:** PDF digital de 10 páginas + card em PNG. **Garantia:** 7 dias.
+> **Formato:** PDF digital de 10 páginas + card em PNG, com acesso enviado pelo WhatsApp.
+> **Garantia:** 7 dias.
 >
 > *Material educativo. Organiza informações publicadas na literatura para consulta rápida e não
 > substitui formação, protocolos clínicos oficiais, orientação do seu conselho profissional ou
@@ -143,8 +144,8 @@ conduta imediata. De bônus, a aula ao vivo Por Dentro da Face (06/10)."
 > Sua compra do *Mapa das Intercorrências* foi confirmada. Seja muito bem-vinda.
 >
 > *1. Seu kit*
-> O acesso já foi enviado para o seu e-mail. Se não encontrar, confira o spam ou me responda aqui
-> que eu te ajudo.
+> Aqui está o acesso ao seu kit: {link do kit}
+> Se tiver qualquer dificuldade pra abrir, me responda aqui que eu te ajudo.
 >
 > Pra aproveitar desde o primeiro dia:
 > • Imprima as pranchas 01 e 03 e deixe na parede do consultório. Numa emergência, ninguém procura
@@ -166,8 +167,8 @@ conduta imediata. De bônus, a aula ao vivo Por Dentro da Face (06/10)."
 
 - [ ] Configurar `/info/obrigado` como redirecionamento pós-compra na oferta da Ticto.
 - [ ] Confirmar que o "de R$109,90" do Mapa é o mesmo exibido no bump da Ticto.
-- [ ] Confirmar a forma de entrega do kit (e-mail ou área de membros) e ajustar o texto de
-  `/info/obrigado`, da FAQ e do template de WhatsApp, se for diferente.
+- [x] Forma de entrega do kit: **pelo WhatsApp** (já refletido em `/info/obrigado`, na oferta, na
+  FAQ, no template acima e nos docs do agente).
 - [ ] Coletar prints de quem comprou o bump e trocar a prova social.
 - [ ] Depois de 06/10: definir preço e checkout do kit sozinho na fase `soKit`.
 

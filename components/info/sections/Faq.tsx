@@ -19,7 +19,7 @@ const FAQS: Item[] = [
   },
   {
     q: "Como recebo o kit?",
-    a: "Depois da confirmação do pagamento, você recebe o acesso ao PDF de 10 páginas, em formato paisagem, e ao card da paciente em PNG, no formato de tela do celular.",
+    a: "Pelo WhatsApp. Depois da confirmação do pagamento, você recebe no seu WhatsApp o acesso ao PDF de 10 páginas, em formato paisagem, e ao card da paciente em PNG, no formato de tela do celular.",
   },
   {
     q: "Posso imprimir?",

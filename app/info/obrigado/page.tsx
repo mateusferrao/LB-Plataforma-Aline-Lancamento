@@ -33,7 +33,7 @@ export default function ObrigadoInfo() {
           </h1>
 
           <p className="mx-auto mt-5 max-w-[480px] text-[1.05rem] leading-[1.6] text-fg-soft">
-            O acesso ao kit chega no seu e-mail em instantes. Imprima as pranchas 01 e 03 e
+            O acesso ao kit chega no seu WhatsApp em instantes. Imprima as pranchas 01 e 03 e
             deixe à vista no consultório, e coloque seu contato no card da paciente antes do
             próximo atendimento.
           </p>
@@ -71,7 +71,7 @@ export default function ObrigadoInfo() {
           </SoComBonus>
 
           <p className="mt-10 text-[13.5px] text-fg-faint">
-            Não recebeu o e-mail ou ficou com dúvida?{" "}
+            Não recebeu o kit no WhatsApp ou ficou com dúvida?{" "}
             <a
               href={TIME_WHATSAPP_URL}
               target="_blank"

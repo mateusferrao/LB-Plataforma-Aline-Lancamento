@@ -9,7 +9,7 @@ import { SoComBonus } from "@/components/info/SoComBonus";
 // tiram o "e depois que eu pagar?". O 3º passo só existe enquanto há aula.
 const PASSOS = [
   { t: "Garanta no Pix ou no cartão", d: "Em até 12x, direto no checkout." },
-  { t: "Receba o kit", d: "O acesso ao PDF e ao card da paciente é liberado após a confirmação do pagamento." },
+  { t: "Receba o kit no WhatsApp", d: "O acesso ao PDF e ao card da paciente chega no seu WhatsApp após a confirmação do pagamento." },
 ];
 const PASSO_AULA = {
   t: "Entre no grupo da aula",
