@@ -12,7 +12,7 @@ const SEE = [
   "Como o preenchedor se acomoda na face depois de aplicado, e não o que promete o rótulo.",
 ];
 
-export function Solution({ comVsl }: { comVsl: boolean }) {
+export function Solution() {
   return (
     <>
       <section className="py-16 sm:py-[92px]">
@@ -66,7 +66,6 @@ export function Solution({ comVsl }: { comVsl: boolean }) {
               </p>
 
               <CtaButton
-                requireVsl={comVsl}
                 className="mt-8 w-full justify-center sm:w-auto sm:justify-start"
               >
                 Quero minha vaga

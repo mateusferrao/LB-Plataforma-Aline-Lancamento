@@ -4,8 +4,8 @@ import { useSyncExternalStore } from "react";
 
 // Estado do fluxo "emitir ingresso antes de ver o preço": o CTA da página abre
 // o modal, a visitante preenche nome/área, vê o ingresso emitido com o preço e
-// só então vai pro checkout. Mesmo padrão do useVslGate (singleton de módulo +
-// useSyncExternalStore, sem Context).
+// só então vai pro checkout. Singleton de módulo + useSyncExternalStore, sem
+// Context (o projeto não usa Context em lugar nenhum).
 //
 // Os dados ficam SÓ no navegador (localStorage) — é o que a microcopy do modal
 // promete. Nada é enviado pra servidor nem pro pixel (o evento Lead vai sem
@@ -113,7 +113,9 @@ function getSnapshot(): State {
   return state;
 }
 
-// Referência estável — ver o comentário equivalente em useVslGate.
+// Referência estável (mesmo objeto sempre) — getServerSnapshot precisa
+// devolver sempre a mesma referência, senão o useSyncExternalStore entende
+// que o snapshot mudou a cada chamada e entra em loop de re-render.
 const SERVER_SNAPSHOT: State = { aberto: false, etapa: "form", ingresso: null };
 
 function getServerSnapshot(): State {

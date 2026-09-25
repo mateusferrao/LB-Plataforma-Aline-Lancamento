@@ -27,7 +27,7 @@ const PASSOS = [
   { t: "Dia 6, às 20h, entre na sala", d: "Pelo link privado enviado no grupo." },
 ];
 
-export function Offer({ comVsl }: { comVsl: boolean }) {
+export function Offer() {
   return (
     <section className="bg-bg-2 py-16 sm:py-[92px]">
       <Container narrow>
@@ -84,7 +84,6 @@ export function Offer({ comVsl }: { comVsl: boolean }) {
 
             <CtaButton
               variant="accent"
-              requireVsl={comVsl}
               className="mt-4 w-full justify-center"
             >
               Emitir meu ingresso

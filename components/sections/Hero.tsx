@@ -8,9 +8,9 @@ import { UrgenciaFina } from "@/components/UrgenciaFina";
 import { VslPlayer } from "@/components/VslPlayer";
 import { withBasePath } from "@/lib/basePath";
 
-// `comVsl` decide a variante de teste A/B: com vídeo (Hero trava o CTA até o
-// fim da VSL) ou sem vídeo (foto estática, CTA nunca travado — sem vídeo,
-// não haveria como o gate liberar).
+// `comVsl` decide a variante de teste A/B: com vídeo (VSL no Hero) ou sem
+// vídeo (foto estática). Nas duas o CTA fica liberado desde o início — a
+// compra não depende de assistir o vídeo.
 export function Hero({ comVsl }: { comVsl: boolean }) {
   return (
     <section className="pt-10 pb-20 sm:pb-[78px]">
@@ -44,7 +44,6 @@ export function Hero({ comVsl }: { comVsl: boolean }) {
 
             <CtaButton
               showPrice
-              requireVsl={comVsl}
               className="w-full justify-center sm:w-auto sm:justify-start"
             >
               Quero minha vaga
@@ -60,9 +59,8 @@ export function Hero({ comVsl }: { comVsl: boolean }) {
           </div>
 
           {comVsl ? (
-            // No mobile (1 coluna) o vídeo vem ANTES do texto/CTA — o botão diz
-            // "assista o vídeo acima", então ele precisa estar acima de verdade.
-            // No desktop (grid 2 colunas) volta pra direita, ordem natural.
+            // No mobile (1 coluna) o vídeo vem ANTES do texto/CTA, logo no
+            // topo. No desktop (grid 2 colunas) volta pra direita, ordem natural.
             <div className="relative order-first mx-auto aspect-[9/16] w-full max-w-[420px] md:order-none md:self-center">
               <VslPlayer className="absolute inset-0" />
             </div>

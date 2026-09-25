@@ -10,7 +10,7 @@ import { VagasBadge } from "@/components/VagasBadge";
 // - Desktop: barra discreta que aparece só após rolar além do Hero e some perto
 //   do rodapé; traz poucas vagas + reserva + CTA num bloco centralizado e arejado.
 //   (A prova social "X pessoas vendo" fica no card de oferta, pra não poluir aqui.)
-export function StickyCta({ comVsl }: { comVsl: boolean }) {
+export function StickyCta() {
   const [mostrarDesktop, setMostrarDesktop] = useState(false);
 
   useEffect(() => {
@@ -41,7 +41,7 @@ export function StickyCta({ comVsl }: { comVsl: boolean }) {
           <VagasBadge>Poucas vagas</VagasBadge>
           <ReservaTimer />
         </div>
-        <CtaButton showPrice requireVsl={comVsl} className="w-full justify-center">
+        <CtaButton showPrice className="w-full justify-center">
           Quero minha vaga
         </CtaButton>
       </div>
@@ -61,7 +61,7 @@ export function StickyCta({ comVsl }: { comVsl: boolean }) {
             <VagasBadge plain>Poucas vagas</VagasBadge>
             <ReservaTimer />
           </div>
-          <CtaButton showPrice requireVsl={comVsl} className="shrink-0">
+          <CtaButton showPrice className="shrink-0">
             Quero minha vaga
           </CtaButton>
         </div>

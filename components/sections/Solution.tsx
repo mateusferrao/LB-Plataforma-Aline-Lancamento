@@ -13,7 +13,7 @@ const SEE = [
   "O plano exato de como o preenchedor se acomoda na face depois de aplicado, não a expectativa do rótulo.",
 ];
 
-export function Solution({ comVsl }: { comVsl: boolean }) {
+export function Solution() {
   return (
     <>
       <hr className="border-line" />
@@ -68,7 +68,6 @@ export function Solution({ comVsl }: { comVsl: boolean }) {
 
               <CtaButton
                 showPrice
-                requireVsl={comVsl}
                 className="mt-8 w-full justify-center sm:w-auto sm:justify-start"
               >
                 Quero minha vaga

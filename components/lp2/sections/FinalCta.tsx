@@ -5,7 +5,7 @@ import { CtaButton } from "@/components/lp2/CtaButton";
 import { UrgenciaFina } from "@/components/lp2/UrgenciaFina";
 import { withBasePath } from "@/lib/basePath";
 
-export function FinalCta({ comVsl }: { comVsl: boolean }) {
+export function FinalCta() {
   return (
     <section className="relative overflow-hidden py-20 text-center sm:py-[112px]">
       {/* FOTO: aline-final-branco-bw.jpg — vestido branco, olhar direto (P&B via grayscale).
@@ -34,7 +34,6 @@ export function FinalCta({ comVsl }: { comVsl: boolean }) {
         <Countdown align="center" />
 
         <CtaButton
-          requireVsl={comVsl}
           className="mt-8 w-full justify-center sm:w-auto"
         >
           Quero minha vaga
