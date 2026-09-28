@@ -28,7 +28,7 @@ export default function ObrigadoInfo() {
             Compra confirmada
           </span>
 
-          <h1 className="mt-4 font-serif text-[2.1rem] leading-[1.15] text-fg sm:text-[2.6rem]">
+          <h1 className="mt-4 text-balance font-sans font-semibold text-[1.9rem] leading-[1.15] tracking-[-0.015em] text-fg sm:text-[2.4rem]">
             Seu Protocolo de Resgate Vascular está garantido.
           </h1>
 

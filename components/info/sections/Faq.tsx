@@ -1,7 +1,7 @@
 "use client";
 
 import { Container } from "@/components/Container";
-import { Titulo } from "@/components/fresh/Titulo";
+import { Titulo } from "@/components/Titulo";
 import { useOfertaKit } from "@/lib/useOfertaKit";
 
 // WhatsApp do time (mesmo número do botão flutuante), com contexto de quem já

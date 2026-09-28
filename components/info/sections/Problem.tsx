@@ -1,6 +1,6 @@
 import { Container } from "@/components/Container";
 import { Reveal } from "@/components/Reveal";
-import { Titulo } from "@/components/fresh/Titulo";
+import { Titulo } from "@/components/Titulo";
 
 // As 4 dúvidas que paralisam na hora. Cada uma tem resposta literal no
 // protocolo da Aline (calor e nunca gelo; 1 frasco por hora; alta após 5

@@ -14,7 +14,7 @@ export function NuncaGelo() {
             <span className="text-[12px] font-semibold tracking-[0.24em] uppercase opacity-80">
               Passo 2 do protocolo
             </span>
-            <h2 className="mt-4 text-balance font-serif font-semibold text-[2rem] leading-[1.1] sm:text-[2.5rem]">
+            <h2 className="mt-4 text-balance font-sans font-semibold text-[1.75rem] leading-[1.15] tracking-[-0.015em] sm:text-[2.25rem]">
               O primeiro impulso é pegar gelo. É o que a Aline proíbe.
             </h2>
           </div>

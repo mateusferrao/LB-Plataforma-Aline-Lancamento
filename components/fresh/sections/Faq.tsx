@@ -1,5 +1,5 @@
 import { Container } from "@/components/Container";
-import { Titulo } from "@/components/fresh/Titulo";
+import { Titulo } from "@/components/Titulo";
 
 // Perguntas da /fresh. Só fatos confirmados (playbook + decisões de 28/09):
 // aula online com imagens das dissecções da Aline, sem gravação, 7 dias de

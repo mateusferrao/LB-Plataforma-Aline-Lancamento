@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Container } from "@/components/Container";
 import { CtaButton } from "@/components/lp2/CtaButton";
 import { Reveal } from "@/components/Reveal";
-import { Titulo } from "@/components/fresh/Titulo";
+import { Titulo } from "@/components/Titulo";
 import { ANCORA_CURSO, ANCORA_ROTULO } from "@/components/fresh/ancora";
 import { withBasePath } from "@/lib/basePath";
 

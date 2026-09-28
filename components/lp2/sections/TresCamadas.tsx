@@ -1,5 +1,6 @@
 import { Container } from "@/components/Container";
 import { Reveal } from "@/components/Reveal";
+import { Titulo } from "@/components/Titulo";
 
 // As "3 camadas" da headline do Hero: técnica, anatomia e resultado. A maioria
 // do público já fez curso (já tem a técnica); a aula entrega as outras duas,
@@ -33,16 +34,9 @@ export function TresCamadas() {
   return (
     <section className="bg-bg-2 py-16 sm:py-[92px]">
       <Container narrow>
-        <Reveal>
-          <span className="text-[12px] font-semibold tracking-[0.24em] text-wine-ink uppercase">
-            As 3 camadas
-          </span>
-          <h2 className="mt-[18px] text-balance font-serif font-semibold text-[1.95rem] leading-[1.12] sm:text-[2.6rem]">
-            <span className="titulo-grifo">
-              Técnica todo curso ensina. Anatomia e resultado, quase nenhum.
-            </span>
-          </h2>
-        </Reveal>
+        <Titulo eyebrow="As 3 camadas" destaque="Anatomia e resultado, quase nenhum.">
+          Técnica todo curso ensina.
+        </Titulo>
       </Container>
 
       <Container>

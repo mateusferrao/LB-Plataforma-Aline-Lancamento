@@ -1,6 +1,6 @@
 import { Container } from "@/components/Container";
 import { Reveal } from "@/components/Reveal";
-import { Titulo } from "@/components/fresh/Titulo";
+import { Titulo } from "@/components/Titulo";
 
 // "Isso é pra mim?" com os perfis da pesquisa de público (quem já aplica,
 // quem está começando e quem quer passar mais segurança à paciente).

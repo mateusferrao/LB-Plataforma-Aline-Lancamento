@@ -1,7 +1,7 @@
 import { Container } from "@/components/Container";
 import { Reveal } from "@/components/Reveal";
 import { VagasBadge } from "@/components/VagasBadge";
-import { Titulo } from "@/components/fresh/Titulo";
+import { Titulo } from "@/components/Titulo";
 import { ANCORA_SERINGA, ANCORA_SERINGA_SO_KIT } from "@/components/info/ancora";
 import { BonusCountdown } from "@/components/info/BonusCountdown";
 import { CtaButton } from "@/components/info/CtaButton";

@@ -16,21 +16,18 @@ export function Hero({ comVsl }: { comVsl: boolean }) {
       <Container>
         <div className="grid grid-cols-1 items-stretch gap-9 sm:gap-[54px] md:grid-cols-[1.12fr_0.88fr]">
           <div>
-            <div className="flex items-center gap-3.5">
-              <span className="h-px w-[42px] bg-wine-ink" aria-hidden="true" />
-              <span className="text-[12px] font-semibold tracking-[0.24em] text-wine-ink uppercase">
-                Aula ao vivo · 6 de outubro · 20h · online
-              </span>
-            </div>
+            <span className="inline-flex items-center rounded-full border border-wine-ink/50 px-3.5 py-1.5 text-[11.5px] font-semibold tracking-[0.2em] text-wine-ink uppercase">
+              Ao vivo · 06/10 · 20h · online
+            </span>
 
-            <h1 className="mt-5 text-balance font-serif font-semibold text-[2rem] leading-[1.12] tracking-[-0.012em] sm:text-[2.6rem] lg:text-[3rem]">
-              {/* Headline em dois níveis: a promessa grifada e, no segundo nível, o
-                  que é e quem conduz — tráfego frio de anúncio lê só o H1.
-                  Tamanho menor que o das outras seções porque a frase é longa e
-                  o CTA precisa caber na primeira tela do mobile. */}
+            <h1 className="mt-5 text-balance font-sans font-semibold text-[1.9rem] leading-[1.15] tracking-[-0.015em] text-fg sm:text-[2.4rem] lg:text-[2.6rem]">
+              {/* Headline em dois níveis: a promessa (grifo só na parte final, padrão
+                  da /fresh) e, no segundo nível, o que é e quem conduz — tráfego
+                  frio de anúncio lê só o H1. Sem pré-headline: a frase já é longa
+                  e o CTA precisa caber na primeira tela do mobile. */}
+              Entenda as 3 camadas que ninguém te mostrou e{" "}
               <span className="titulo-grifo">
-                Entenda as 3 camadas que ninguém te mostrou e pare de ter resultado
-                diferente em cada rosto.
+                pare de ter resultado diferente em cada rosto.
               </span>{" "}
               <span className="mt-5 block text-[1.3rem] leading-[1.3] font-medium tracking-normal text-fg sm:text-[1.6rem] lg:text-[1.8rem]">
                 Em um evento ao vivo, a Dra. Aline mostra as 3 camadas: técnica, anatomia e

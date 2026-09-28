@@ -3,6 +3,7 @@ import { Container } from "@/components/Container";
 import { Countdown } from "@/components/Countdown";
 import { CtaButton } from "@/components/lp2/CtaButton";
 import { UrgenciaFina } from "@/components/lp2/UrgenciaFina";
+import { Titulo } from "@/components/Titulo";
 import { withBasePath } from "@/lib/basePath";
 import { ANCORA_REFAZER } from "@/components/fresh/ancora";
 
@@ -23,14 +24,10 @@ export function FinalCta() {
       />
 
       <Container narrow className="relative mx-auto flex flex-col items-center">
-        <span className="text-[12px] font-semibold tracking-[0.24em] text-wine-ink uppercase">
-          6 de outubro · 20h
-        </span>
-        <h2 className="mt-[18px] mb-6 max-w-[580px] text-balance font-serif font-semibold text-[1.95rem] leading-[1.2] text-fg sm:text-[2.5rem]">
-          Na próxima vez que chegar perto de uma área de risco,{" "}
-          <span className="text-wine-bright">aplique com calma.</span>
-        </h2>
-        <p className="mb-8 max-w-[520px] text-[1.08rem] leading-[1.55] text-fg-soft">
+        <Titulo eyebrow="6 de outubro · 20h" destaque="aplique com calma." center>
+          Na próxima vez que chegar perto de uma área de risco,
+        </Titulo>
+        <p className="mt-6 mb-8 max-w-[520px] text-[1.08rem] leading-[1.55] text-fg-soft">
           {ANCORA_REFAZER}
         </p>
 

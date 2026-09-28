@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Container } from "@/components/Container";
-import { Reveal } from "@/components/Reveal";
+import { Titulo } from "@/components/Titulo";
 import { withBasePath } from "@/lib/basePath";
 
 // Prints REAIS de alunas (enviados pela Aline). Usamos a imagem do print, mais
@@ -68,14 +68,9 @@ export function SocialProof() {
   return (
     <section className="overflow-hidden bg-bg-2 py-16 sm:py-[92px]">
       <Container narrow>
-        <Reveal>
-          <span className="text-[12px] font-semibold tracking-[0.24em] text-wine-ink uppercase">
-            Quem já estuda com a Aline
-          </span>
-          <h2 className="mt-[18px] font-serif font-semibold text-[1.95rem] sm:text-[2.6rem]">
-            <span className="titulo-grifo">O que elas dizem depois de sentar nessa sala.</span>
-          </h2>
-        </Reveal>
+        <Titulo eyebrow="Quem já estuda com a Aline" destaque="sentar nessa sala.">
+          O que elas dizem depois de
+        </Titulo>
       </Container>
 
       <Container>

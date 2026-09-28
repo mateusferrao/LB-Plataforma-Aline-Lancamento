@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Container } from "@/components/Container";
 import { Reveal } from "@/components/Reveal";
-import { Titulo } from "@/components/fresh/Titulo";
+import { Titulo } from "@/components/Titulo";
 import { withBasePath } from "@/lib/basePath";
 
 // "Show over tell": páginas reais do protocolo (render de docs/kit-protocolo,

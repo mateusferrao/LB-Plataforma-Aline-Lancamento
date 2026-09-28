@@ -1,8 +1,11 @@
 import { Reveal } from "@/components/Reveal";
 
-// Eyebrow + H2 das seções da /fresh. O `destaque` (2 ou 3 palavras) fica só com
-// o texto vermelho: o grifo marsala (titulo-grifo) é exclusivo do H1 do Hero,
-// pra headline ser o único título com bloco de cor na página.
+// Eyebrow + H2 das seções de todas as LPs (padrão da /fresh). O `destaque` (as
+// palavras finais) fica só com o texto vermelho: o grifo marsala (titulo-grifo)
+// é exclusivo do H1 do Hero, pra headline ser o único título com bloco de cor.
+// Fonte: a mesma do H1 da /fresh (Inter semibold, espaçamento apertado) — vale
+// pra todo H1/H2 das LPs. A Fraunces fica nos títulos menores (h3, FAQ,
+// números e ingresso).
 export function Titulo({
   eyebrow,
   children,
@@ -20,7 +23,7 @@ export function Titulo({
         {eyebrow}
       </span>
       <h2
-        className={`mt-[18px] text-balance font-serif font-semibold text-[1.95rem] leading-[1.2] text-fg sm:text-[2.5rem] ${
+        className={`mt-[18px] text-balance font-sans font-semibold text-[1.75rem] leading-[1.18] tracking-[-0.015em] text-fg sm:text-[2.25rem] ${
           center ? "mx-auto max-w-[620px]" : ""
         }`}
       >

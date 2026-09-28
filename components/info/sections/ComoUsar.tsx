@@ -1,6 +1,6 @@
 import { Container } from "@/components/Container";
 import { Reveal } from "@/components/Reveal";
-import { Titulo } from "@/components/fresh/Titulo";
+import { Titulo } from "@/components/Titulo";
 
 // As 3 peças de uso (pág. 3 do protocolo). Reduz a complexidade percebida: não
 // é um curso pra assistir, são ferramentas prontas pro dia em que precisar.

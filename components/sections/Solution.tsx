@@ -3,6 +3,7 @@ import { Container } from "@/components/Container";
 import { CtaButton } from "@/components/CtaButton";
 import { ParcelaLine } from "@/components/ParcelaLine";
 import { Reveal } from "@/components/Reveal";
+import { Titulo } from "@/components/Titulo";
 import { withBasePath } from "@/lib/basePath";
 
 const SEE = [
@@ -33,14 +34,9 @@ export function Solution() {
             </Reveal>
 
             <Reveal>
-              <span className="text-[12px] font-semibold tracking-[0.24em] text-wine-ink uppercase">
-                Por dentro da face
-              </span>
-              <h2 className="mt-[18px] text-balance font-serif font-semibold text-[1.95rem] leading-[1.12] sm:text-[2.6rem]">
-                <span className="titulo-grifo">
-                  Fui até a mesa de dissecção pra te mostrar o que a pele esconde.
-                </span>
-              </h2>
+              <Titulo eyebrow="Por dentro da face" destaque="o que a pele esconde.">
+                Fui até a mesa de dissecção pra te mostrar
+              </Titulo>
               <p className="mt-[22px] max-w-[600px] text-[1.12rem] leading-[1.6] text-fg-soft">
                 Na aula ao vivo, a Aline mostra o que existe embaixo da pele. Os planos, as
                 estruturas e os limites que mudam a sua conduta na cadeira. É o mesmo rigor

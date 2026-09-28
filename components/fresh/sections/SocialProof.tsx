@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Container } from "@/components/Container";
-import { Titulo } from "@/components/fresh/Titulo";
+import { Titulo } from "@/components/Titulo";
 import { withBasePath } from "@/lib/basePath";
 
 // Prints REAIS de alunas (enviados pela Aline). Usamos a imagem do print, mais

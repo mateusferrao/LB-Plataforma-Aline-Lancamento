@@ -1,6 +1,6 @@
 import { Container } from "@/components/Container";
 import { Reveal } from "@/components/Reveal";
-import { Titulo } from "@/components/fresh/Titulo";
+import { Titulo } from "@/components/Titulo";
 
 // O que ela leva da noite, sempre começando pelo resultado. Base: o que a aula
 // mostra segundo o playbook (docs/agente-ia/01-playbook-vendas.md, seção 6).

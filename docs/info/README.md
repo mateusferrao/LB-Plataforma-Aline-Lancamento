@@ -9,7 +9,7 @@
 
 > **28/09/2026: padrão da `/fresh`.** A `/info` passou a seguir a `/fresh` (`docs/fresh/README.md`):
 > headline de resultado (pré-headline com a dor, H1 em Inter com o grifo só na parte final),
-> títulos das seções com destaque só em cor (`components/fresh/Titulo`), seção nova "O que muda na
+> títulos das seções com destaque só em cor (`components/Titulo`), seção nova "O que muda na
 > sua cadeira", e o CTA **"Quero o Protocolo + a aula"**, que abre o mesmo modal da `/lp2`/`/fresh`
 > (`components/info/IngressoInfo.tsx`). O Protocolo é o produto principal em todos os textos; o
 > ingresso é o da aula de presente, e a página avisa isso antes do clique (linha abaixo do CTA,

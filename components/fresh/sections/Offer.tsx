@@ -3,7 +3,7 @@ import { Countdown } from "@/components/Countdown";
 import { CtaButton } from "@/components/lp2/CtaButton";
 import { Reveal } from "@/components/Reveal";
 import { VagasBadge } from "@/components/VagasBadge";
-import { Titulo } from "@/components/fresh/Titulo";
+import { Titulo } from "@/components/Titulo";
 import { ANCORA_SERINGA } from "@/components/fresh/ancora";
 import { OfertaPreco } from "@/components/lp2/OfertaPreco";
 

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Container } from "@/components/Container";
 import { Reveal } from "@/components/Reveal";
-import { Titulo } from "@/components/fresh/Titulo";
+import { Titulo } from "@/components/Titulo";
 import { withBasePath } from "@/lib/basePath";
 
 // Ponte com a dor nº1 da pesquisa (a paciente, a confiança), sem prometer mais

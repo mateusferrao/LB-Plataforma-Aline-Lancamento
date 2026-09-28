@@ -1,6 +1,6 @@
 import { Container } from "@/components/Container";
 import { Reveal } from "@/components/Reveal";
-import { Titulo } from "@/components/fresh/Titulo";
+import { Titulo } from "@/components/Titulo";
 
 // Dor na voz da pesquisa de público (abr/2025, 340 respostas): as frases entre
 // aspas são reais. A palavra que elas usam é "insegurança", não "intercorrência".

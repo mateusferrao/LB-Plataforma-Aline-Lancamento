@@ -32,7 +32,7 @@ export function Autoridade() {
             <span className="text-[12px] font-semibold tracking-[0.24em] text-wine-ink uppercase">
               Quem conduz
             </span>
-            <h2 className="mt-3.5 mb-4 font-serif font-semibold text-[2.1rem] text-fg">
+            <h2 className="mt-3.5 mb-4 font-sans font-semibold text-[1.9rem] tracking-[-0.015em] text-fg sm:text-[2.1rem]">
               Dra. Aline Filgueiras
             </h2>
             <p className="max-w-[520px] text-fg-soft">

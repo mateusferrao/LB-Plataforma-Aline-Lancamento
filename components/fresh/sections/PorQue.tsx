@@ -1,6 +1,6 @@
 import { Container } from "@/components/Container";
 import { Reveal } from "@/components/Reveal";
-import { Titulo } from "@/components/fresh/Titulo";
+import { Titulo } from "@/components/Titulo";
 
 // O "porquê" da promessa: a insegurança vem de aplicar sem saber o que está
 // embaixo da pele. Comparação em termos gerais (vs. status quo). A coluna do

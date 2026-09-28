@@ -1,6 +1,6 @@
 import { Container } from "@/components/Container";
 import { Reveal } from "@/components/Reveal";
-import { Titulo } from "@/components/fresh/Titulo";
+import { Titulo } from "@/components/Titulo";
 
 // Percepção de resultado (par do components/fresh/sections/OQueVoceLeva): o que
 // muda na cadeira, sempre começando pelo resultado, antes de mostrar o material.

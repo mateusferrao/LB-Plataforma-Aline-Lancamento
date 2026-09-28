@@ -1,6 +1,6 @@
 import { Container } from "@/components/Container";
 import { Reveal } from "@/components/Reveal";
-import { Titulo } from "@/components/fresh/Titulo";
+import { Titulo } from "@/components/Titulo";
 
 // "Isso é pra mim?" + o "não é pra você", que filtra pela atitude e reforça o
 // valor de quem fica. Perfis e frases da pesquisa de público.

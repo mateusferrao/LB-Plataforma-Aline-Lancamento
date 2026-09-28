@@ -1,6 +1,6 @@
 import { Container } from "@/components/Container";
 import { Reveal } from "@/components/Reveal";
-import { Titulo } from "@/components/fresh/Titulo";
+import { Titulo } from "@/components/Titulo";
 
 // Ponte com a dor nº 1 da pesquisa (captação/paciente) sem prometer agenda nem
 // faturamento: a segurança de quem aplica é o que a paciente percebe.
