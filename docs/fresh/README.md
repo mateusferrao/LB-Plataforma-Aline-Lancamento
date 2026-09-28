@@ -38,6 +38,11 @@ online?", sem afirmar laboratório) e a menção a certificado. O "não é pra v
 escassez. As seções que dependiam de confirmação da Aline (roteiro
 em blocos, detalhes dos cursos) foram escritas só com fatos já confirmados.
 
+**Âncora da aula no ingresso (28/09, noite):** a equipe confirmou que o valor
+da aula é R$197 (`AULA_VALOR_DE` em `lib/lotes.ts`). O ingresso emitido da `/fresh` passa a mostrar
+~~de R$197~~ **R$67** ao lado do comparativo com o curso internacional, igual ao "de/por" da `/lp2`.
+A página continua sem nenhum valor. Isso substitui a decisão D5 abaixo, na parte do "sai o de R$197".
+
 Base: skill *copywriting* (coreyhaines31/marketingskills), com o Human Action Model (desconforto →
 visão → caminho), o teste "Now you can…", o Perception Gap, "uma ideia por seção" e "clareza acima
 de esperteza". Também usei a pesquisa de público da Aline (abr/2025), as LPs atuais (`/`, `/lp2`,

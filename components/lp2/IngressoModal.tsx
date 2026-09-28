@@ -76,8 +76,9 @@ const TEXTOS_AULA: TextosIngresso = {
 // Montado uma vez por página (app/lp2/page.tsx, components/fresh/FreshPage.tsx,
 // components/info/IngressoInfo.tsx).
 //
-// `mostrarDesconto=false` esconde o "de/por" do lote (a /fresh não usa o
-// precoDe) e deixa só a reserva da vaga. `ancora` entra acima da reserva.
+// `mostrarDesconto=false` esconde o bloco de desconto do lote e deixa só a
+// reserva da vaga: a /fresh e a /info mostram o "de" dentro do `ancora`, que
+// entra acima da reserva.
 export function IngressoModal({
   mostrarDesconto = true,
   ancora,

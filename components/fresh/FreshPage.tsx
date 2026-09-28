@@ -18,7 +18,8 @@ import { FinalCta } from "@/components/fresh/sections/FinalCta";
 // LP /fresh (plano em docs/fresh/README.md). Vende segurança e resultado; o
 // cadáver fresh frozen é o porquê e a âncora de valor. As duas rotas
 // (app/fresh e app/fresh/sem-vsl) usam esta página e só mudam o `comVsl`.
-// O ingresso é o da /lp2, sem o "de/por" e com o comparativo AncoraIngresso.
+// O ingresso é o da /lp2 com o comparativo AncoraIngresso (curso internacional
+// + o "de R$197" da aula), sem o bloco de desconto da /lp2 pra não empilhar.
 export function FreshPage({ comVsl }: { comVsl: boolean }) {
   return (
     <>

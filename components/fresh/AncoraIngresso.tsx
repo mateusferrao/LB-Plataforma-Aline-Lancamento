@@ -8,15 +8,17 @@ import {
   ANCORA_VALOR,
 } from "@/components/fresh/ancora";
 
-// Comparativo visual do ingresso emitido da /fresh. O riscado fica no produto
-// de referência (o curso internacional presencial), nunca num "de/por" da
-// própria aula — a aula nunca custou R$35 mil. O percentual sai do preço do
-// lote ativo, então acompanha qualquer mudança em lib/lotes.ts.
+// Comparativo visual do ingresso emitido da /fresh. Duas âncoras, cada uma no
+// seu lugar: o curso internacional presencial (referência de mercado, nunca
+// atribuída à aula) e o "de" da própria aula (precoDe do lote, o mesmo "De
+// R$197 por R$67" da /lp2, fonte AULA_VALOR_DE em lib/lotes.ts). O percentual
+// do selo sai do preço do lote ativo, então acompanha qualquer mudança lá.
 export function AncoraIngresso() {
   const { lote, montado } = useLoteAtivo();
   if (!montado || !lote) return null;
 
   const pct = (lote.price / ANCORA_VALOR) * 100;
+  const temDe = !!(lote.precoDe && lote.precoDeLabel && lote.precoDe > lote.price);
   const selo = pct < 1 ? "Menos de 1% do valor" : `Cerca de ${Math.ceil(pct)}% do valor`;
 
   return (
@@ -42,8 +44,15 @@ export function AncoraIngresso() {
             com as imagens das dissecções da Aline
           </div>
         </div>
-        <div className="shrink-0 font-serif text-[2rem] leading-none font-semibold whitespace-nowrap text-fg">
-          {lote.priceLabel}
+        <div className="shrink-0 text-right">
+          {temDe && (
+            <s className="block text-[0.95rem] whitespace-nowrap text-fg-faint">
+              de {lote.precoDeLabel}
+            </s>
+          )}
+          <div className="font-serif text-[2rem] leading-none font-semibold whitespace-nowrap text-fg">
+            {lote.priceLabel}
+          </div>
         </div>
       </div>
 
