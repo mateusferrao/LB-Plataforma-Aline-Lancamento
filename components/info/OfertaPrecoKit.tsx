@@ -3,8 +3,8 @@
 import { useOfertaKit } from "@/lib/useOfertaKit";
 
 // Topo do card de oferta da /info (par do components/lp2/OfertaPreco). Com a
-// aula de presente, sem valor em R$: o card convida a emitir o ingresso, e o
-// preço aparece no ingresso emitido. Depois da aula (sem ingresso), mostra o
+// aula de presente, sem valor em R$: o card nomeia o Protocolo como produto e
+// avisa que o valor aparece ao emitir o ingresso da aula. Depois da aula (sem ingresso), mostra o
 // preço da fase; sem checkout, "em breve".
 export function OfertaPrecoKit() {
   const { fase, montado } = useOfertaKit();
@@ -15,7 +15,7 @@ export function OfertaPrecoKit() {
         <div className="text-[12px] tracking-[0.16em] uppercase opacity-90">
           Protocolo de Resgate Vascular
         </div>
-        <div className="my-1.5 font-serif text-[2.2rem] leading-tight">Nova oferta em breve</div>
+        <div className="my-1.5 font-serif text-[1.9rem] leading-tight sm:text-[2.1rem]">Nova oferta em breve</div>
       </>
     );
   }
@@ -37,11 +37,13 @@ export function OfertaPrecoKit() {
   return (
     <>
       <div className="text-[12px] tracking-[0.16em] uppercase opacity-90">
-        Protocolo + aula ao vivo de presente
+        + aula ao vivo de presente
       </div>
-      <div className="my-1.5 font-serif text-[2.4rem] leading-tight">Emita seu ingresso</div>
+      <div className="my-1.5 font-serif text-[1.9rem] leading-tight sm:text-[2.1rem]">
+        Protocolo de Resgate Vascular
+      </div>
       <div className="text-[0.95rem] opacity-90">
-        O valor aparece assim que você emitir. Leva 10 segundos.
+        O valor aparece quando você emite o ingresso da aula. Leva 10 segundos.
       </div>
     </>
   );

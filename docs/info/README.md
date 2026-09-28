@@ -10,8 +10,10 @@
 > **28/09/2026: padrão da `/fresh`.** A `/info` passou a seguir a `/fresh` (`docs/fresh/README.md`):
 > headline de resultado (pré-headline com a dor, H1 em Inter com o grifo só na parte final),
 > títulos das seções com destaque só em cor (`components/fresh/Titulo`), seção nova "O que muda na
-> sua cadeira", e o CTA **"Emitir meu ingresso"**, que abre o mesmo modal da `/lp2`/`/fresh`
-> (`components/info/IngressoInfo.tsx`). **O preço (R$97) só aparece no ingresso emitido**, ao lado
+> sua cadeira", e o CTA **"Quero o Protocolo + a aula"**, que abre o mesmo modal da `/lp2`/`/fresh`
+> (`components/info/IngressoInfo.tsx`). O Protocolo é o produto principal em todos os textos; o
+> ingresso é o da aula de presente, e a página avisa isso antes do clique (linha abaixo do CTA,
+> card e passos da oferta, FAQ). **O preço (R$97) só aparece no ingresso emitido**, ao lado
 > do comparativo `components/info/AncoraIngresso.tsx`. Saiu o "de R$109,90" do Protocolo: o único
 > valor riscado é o da aula vendida sozinha (R$67, real). Checkout novo: `O841FD9F7`.
 
@@ -45,7 +47,9 @@ que uma seringa de preenchedor") no card da oferta e no ingresso, e o **custo de
 protocolo** ("Uma hora de dúvida, um frasco a mais ou uma paciente que perde a confiança custam mais
 do que o protocolo inteiro") no CTA final.
 
-**Fluxo do CTA:** até 06/10 às 20h, o botão abre o ingresso (nome + área, dados só no navegador),
+**Fluxo do CTA:** até 06/10 às 20h, o botão ("Quero o Protocolo + a aula", com a linha "No próximo
+passo, você emite o ingresso da aula de presente e vê o valor" logo abaixo) abre o ingresso ("Seu
+Protocolo está separado · falta só o ingresso da aula"; nome + área, dados só no navegador),
 que mostra o preço, o comparativo e a reserva da vaga na aula, e só então leva ao checkout. Depois
 da aula (fase `soKit`) não há ingresso: o botão vai direto ao `checkoutUrl` da fase (ou fica "Em
 breve" enquanto ele não existir). Eventos: `AbrirIngresso` no botão da página, `Lead` ao emitir e
@@ -210,8 +214,9 @@ Base: skill *copywriting*.
 - **B:** Se a cor mudar no meio da aplicação, você vai saber exatamente o próximo passo.
 - **C (hook):** O primeiro impulso numa oclusão é pegar gelo. É exatamente o que a Aline proíbe.
 
-**CTA:** "Emitir meu ingresso" (abre o ingresso); depois de 06/10, "Quero o Protocolo de Resgate
-Vascular" (direto ao checkout).
+**CTA:** "Quero o Protocolo + a aula" (abre o ingresso da aula de presente, avisado logo abaixo do
+botão); no ingresso, "Garantir meu Protocolo + ingresso" leva ao checkout. Depois de 06/10, "Quero o
+Protocolo de Resgate Vascular" (direto ao checkout).
 
 ### 4.5 Seções da LP (com o porquê)
 

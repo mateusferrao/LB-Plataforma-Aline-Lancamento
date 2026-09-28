@@ -4,7 +4,6 @@ import { ANCORA_REFAZER } from "@/components/info/ancora";
 import { BonusCountdown } from "@/components/info/BonusCountdown";
 import { CtaButton } from "@/components/info/CtaButton";
 import { LinhaGarantia } from "@/components/info/LinhaGarantia";
-import { SoComBonus } from "@/components/info/SoComBonus";
 import { withBasePath } from "@/lib/basePath";
 
 // Fechamento no padrão da /fresh: H2 com o resultado (destaque só em cor), a
@@ -28,9 +27,7 @@ export function FinalCta() {
 
       <Container narrow className="relative mx-auto flex flex-col items-center">
         <span className="text-[12px] font-semibold tracking-[0.24em] text-wine-ink uppercase">
-          <SoComBonus senao="Protocolo de Resgate Vascular">
-            Protocolo + aula · 6 de outubro · 20h
-          </SoComBonus>
+          Protocolo de Resgate Vascular
         </span>
         <h2 className="mt-[18px] mb-6 max-w-[580px] text-balance font-serif font-semibold text-[1.95rem] leading-[1.2] text-fg sm:text-[2.5rem]">
           Se a cor mudar na sua cadeira,{" "}

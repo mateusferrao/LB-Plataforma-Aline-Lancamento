@@ -38,9 +38,9 @@ const FAQS: Item[] = [
     a: "Não. É material educativo com a conduta que a Dra. Aline utiliza. Ele não substitui formação, protocolos oficiais nem a orientação do seu conselho. O que ele faz é deixar o passo a passo na sua mão, pra você não depender só da memória numa emergência.",
   },
   {
-    q: "Por que emitir um ingresso?",
+    q: "Por que eu emito um ingresso se estou comprando o Protocolo?",
     soComBonus: true,
-    a: "Porque o Protocolo vem com a sua vaga na aula ao vivo de presente. Você escreve como quer aparecer, vê o seu ingresso com o valor e confirma no checkout. Leva 10 segundos, e seus dados ficam só no seu navegador.",
+    a: "Porque, até 6 de outubro, o Protocolo vem com uma vaga na aula ao vivo de presente, e o ingresso é dessa vaga. Você escreve como quer aparecer, vê o valor do Protocolo com a aula e confirma no checkout. Leva 10 segundos, e seus dados ficam só no seu navegador."
   },
   {
     q: "Como funciona a aula de presente?",

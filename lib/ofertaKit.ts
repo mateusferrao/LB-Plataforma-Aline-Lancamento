@@ -8,8 +8,9 @@
 //  Regras:
 //   - Fase "comBonus": kit + aula ao vivo de presente, até a chegada da aula
 //     (LIVE_DATE_ISO). A aula não tem gravação, então o bônus acaba com ela.
-//     O CTA abre o ingresso (padrão da /fresh): o preço só aparece no
-//     ingresso emitido, e o botão dele leva ao checkoutUrl.
+//     O CTA vende o Protocolo e abre o ingresso da aula de presente (padrão
+//     da /fresh): o preço só aparece no ingresso emitido, e o botão dele leva
+//     ao checkoutUrl. A linha abaixo do CTA avisa desse passo.
 //   - Fase "soKit": depois da aula, só o kit. Sem aula não há ingresso: o CTA
 //     vai direto ao checkout. Sem `checkoutUrl` o botão fica bloqueado
 //     ("Em breve") — preencha quando existir o checkout só do kit.
@@ -66,7 +67,7 @@ export const FASES: FaseKit[] = [
     priceLabel: "R$97",
     parcela12x: "R$10,03",
     checkoutUrl: "https://payment.ticto.app/O841FD9F7",
-    ctaLabel: "Emitir meu ingresso",
+    ctaLabel: "Quero o Protocolo + a aula",
     itens: [ITEM_PROTOCOLO, ITEM_AULA],
   },
   {

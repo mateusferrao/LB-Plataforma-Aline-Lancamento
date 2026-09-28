@@ -35,10 +35,15 @@ export type OfertaIngresso = {
 // Textos e rastreio do ingresso. Os padrões são os da aula (/lp2 e /fresh).
 export type TextosIngresso = {
   formEyebrow: string;
+  formTitulo: string;
   formSubtitulo: string;
+  formBotao: string;
+  emitido: string;
   titulo: string;
   subtitulo: string;
-  selo: string;
+  // Sem selo, o título do cartão ocupa a largura toda.
+  selo?: string;
+  confirmar: string;
   detalhes: [string, string][];
   reserva: string;
   // content_name do Lead/ClickCheckout e campos extras dos eventos.
@@ -48,10 +53,14 @@ export type TextosIngresso = {
 
 const TEXTOS_AULA: TextosIngresso = {
   formEyebrow: "Ao vivo · 6 de outubro · vagas limitadas",
+  formTitulo: "Emita seu ingresso",
   formSubtitulo: "Preencha como você quer aparecer no seu ingresso da aula ao vivo.",
+  formBotao: "Emitir meu ingresso",
+  emitido: "Seu ingresso foi emitido",
   titulo: "Por Dentro da Face",
   subtitulo: "Aula online e ao vivo",
   selo: "Vagas limitadas",
+  confirmar: "Confirmar meu ingresso",
   detalhes: [
     ["Data", "06/10"],
     ["Horário", "20h"],
@@ -218,7 +227,7 @@ function FormIngresso({
           id={tituloId}
           className="mt-3 font-serif font-semibold text-[1.9rem] leading-tight text-fg"
         >
-          Emita seu ingresso
+          {textos.formTitulo}
         </h2>
         <p className="mx-auto mt-2 max-w-[340px] text-[1rem] leading-[1.5] text-fg-soft">
           {textos.formSubtitulo}
@@ -281,7 +290,7 @@ function FormIngresso({
         type="submit"
         className="mt-8 w-full rounded-[2px] bg-wine px-6 py-[18px] font-sans text-[1.02rem] font-semibold text-on-wine transition-colors hover:bg-wine-hover"
       >
-        Emitir meu ingresso
+        {textos.formBotao}
       </button>
       <p className="mt-3 text-center text-[11.5px] tracking-[0.08em] text-fg-faint uppercase">
         Leva 10 segundos · seus dados ficam só no seu navegador
@@ -324,7 +333,7 @@ function IngressoEmitido({
         id={tituloId}
         className="text-center text-[11.5px] font-semibold tracking-[0.2em] text-wine-ink uppercase"
       >
-        Seu ingresso foi emitido
+        {textos.emitido}
       </h2>
 
       {/* Ingresso: cartão creme sobre o modal escuro, com "picote" no meio. */}
@@ -339,9 +348,11 @@ function IngressoEmitido({
                 {textos.subtitulo}
               </div>
             </div>
-            <span className="shrink-0 rounded-[3px] border border-wine px-2 py-1 text-[10px] font-semibold tracking-[0.14em] text-wine uppercase">
-              {textos.selo}
-            </span>
+            {textos.selo && (
+              <span className="shrink-0 rounded-[3px] border border-wine px-2 py-1 text-[10px] font-semibold tracking-[0.14em] text-wine uppercase">
+                {textos.selo}
+              </span>
+            )}
           </div>
 
           <div className="mt-5 text-[10.5px] font-semibold tracking-[0.18em] text-bg/60 uppercase">
@@ -462,7 +473,7 @@ function IngressoEmitido({
           }}
           className="mt-5 block w-full rounded-[2px] bg-wine px-6 py-[18px] text-center font-sans text-[1.02rem] font-semibold text-on-wine transition-colors hover:bg-wine-hover"
         >
-          Confirmar meu ingresso
+          {textos.confirmar}
         </a>
       ) : (
         montado && (

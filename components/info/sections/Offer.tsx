@@ -10,10 +10,14 @@ import { OfertaPrecoKit } from "@/components/info/OfertaPrecoKit";
 import { SoComBonus } from "@/components/info/SoComBonus";
 
 // Do clique ao kit. Tráfego frio compra sem conhecer o processo; os passos
-// tiram o "e depois que eu pagar?". Com a aula de presente, começa pelo
-// ingresso (padrão da /fresh) e o 3º passo é a sala; depois da aula, só o kit.
+// tiram o "e depois que eu pagar?". Com a aula de presente, explicam antes do
+// clique que ele leva ao ingresso da aula (padrão da /fresh) e o 3º passo é a
+// sala; depois da aula, só o kit.
 const PASSOS_COM_BONUS = [
-  { t: "Emita seu ingresso", d: "Leva 10 segundos, direto no site." },
+  {
+    t: "Emita o ingresso da aula de presente",
+    d: "Leva 10 segundos, direto no site. É nele que você vê o valor.",
+  },
   {
     t: "Confirme no Pix ou no cartão",
     d: "Em até 12x. O PDF, a prancha, a ficha e os cards chegam no seu WhatsApp na hora.",
@@ -41,7 +45,7 @@ export function Offer() {
             </Titulo>
           }
         >
-          <Titulo eyebrow="Seu ingresso" destaque="e a aula ao vivo de presente.">
+          <Titulo eyebrow="O que você leva" destaque="e a aula ao vivo de presente.">
             O Protocolo inteiro,
           </Titulo>
         </SoComBonus>
@@ -60,7 +64,7 @@ export function Offer() {
 
           <Reveal
             delay={90}
-            className="flex flex-col justify-center rounded-[6px] bg-wine px-8 py-9 text-center text-on-wine"
+            className="flex flex-col justify-center rounded-[6px] bg-wine px-6 py-9 text-center text-on-wine sm:px-8"
           >
             <OfertaPrecoKit />
 

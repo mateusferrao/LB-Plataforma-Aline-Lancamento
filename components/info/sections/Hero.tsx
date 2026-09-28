@@ -29,9 +29,7 @@ export function Hero() {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-[1.12fr_0.88fr] md:gap-x-[54px] md:gap-y-0">
           <div className="md:col-start-1 md:row-start-1">
             <span className="inline-flex items-center rounded-full border border-wine-ink/50 px-3.5 py-1.5 text-[11.5px] font-semibold tracking-[0.2em] text-wine-ink uppercase">
-              <SoComBonus senao="Protocolo clínico · Dra. Aline Filgueiras">
-                Protocolo + aula · 06/10 · 20h
-              </SoComBonus>
+              Protocolo de oclusão e necrose
             </span>
 
             <p className="mt-6 border-l-2 border-wine-ink pl-3 text-[1.02rem] leading-[1.45] font-medium text-fg-soft sm:text-[1.08rem]">
