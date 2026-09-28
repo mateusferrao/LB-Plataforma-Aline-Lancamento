@@ -30,7 +30,7 @@ export function Hero({ comVsl }: { comVsl: boolean }) {
             </span>
 
             <p className="mt-6 border-l-2 border-wine-ink pl-3 text-[1.02rem] leading-[1.45] font-medium text-fg-soft sm:text-[1.08rem]">
-              Pra quem já aplica harmonização e ainda sente insegurança em alguns
+              Pra quem já aplica ou quer aplicar e ainda sente insegurança em alguns
               procedimentos
             </p>
 
