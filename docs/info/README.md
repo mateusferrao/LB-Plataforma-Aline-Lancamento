@@ -16,7 +16,7 @@
 > card e passos da oferta, FAQ). **O preço (R$97) só aparece no ingresso emitido**, ao lado
 > do comparativo `components/info/AncoraIngresso.tsx`. A âncora é o **total de R$176,90**
 > (Protocolo "de R$109,90" + aula R$67), **só no ingresso emitido**: "de R$176,90 por R$97 · 45%
-> de desconto". A página não mostra nenhum valor nem comparação de preço. Checkout novo: `O841FD9F7`.
+> de desconto". A página não mostra nenhum valor em R$; só a comparação com a seringa, na oferta. Checkout novo: `O841FD9F7`.
 
 O Protocolo é vendido de duas formas:
 - **Order bump** (R$29,90, "de R$109,90") no checkout da aula **Por Dentro da Face** (R$67,
@@ -43,9 +43,10 @@ Endereços e arquivos:
 
 Checkout: `https://payment.ticto.app/O841FD9F7` (trocado em 28/09; antes `O74848DBC`).
 
-**Âncoras (textos em `components/info/ancora.ts`):** a ancoragem de preço (**total de R$176,90** e
-**seringa**, "O Protocolo e a aula custam menos que uma seringa de preenchedor") fica **só no
-ingresso emitido**. Na página, só o **custo de não ter o protocolo**, sem número ("Uma hora de dúvida, um frasco a mais ou uma paciente que perde a confiança custam mais
+**Âncoras (textos em `components/info/ancora.ts`):** a ancoragem com valores (**total de R$176,90**)
+fica **só no ingresso emitido**. A **seringa** ("O Protocolo e a aula custam menos que uma seringa de
+preenchedor", sem número) fica na oferta e no ingresso, e o **custo de não ter o
+protocolo**, sem número ("Uma hora de dúvida, um frasco a mais ou uma paciente que perde a confiança custam mais
 do que o protocolo inteiro") no CTA final.
 
 **Fluxo do CTA:** até 06/10 às 20h, o botão ("Quero o Protocolo + a aula", com a linha "No próximo
