@@ -18,8 +18,8 @@
 //     mesmo "de R$109,90" do order bump na Ticto; o da aula é o preço real do
 //     ingresso (R$67). A âncora é o total (R$176,90): total "de" e % de
 //     desconto são calculados (valorDeTotal / descontoPct), nunca escritos à mão.
-//     Na página o total aparece riscado sem o preço final; o "por" só aparece
-//     no ingresso emitido.
+//     A ancoragem (itens riscados, total e "por") só aparece no ingresso
+//     emitido; a página não mostra nenhum valor.
 //   - O preço do kit + aula nunca pode ficar abaixo de R$96,90 (aula R$67 +
 //     bump R$29,90): quem já comprou não pode ter pago mais caro.
 // ============================================================================

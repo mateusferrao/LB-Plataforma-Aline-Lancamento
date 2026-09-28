@@ -15,8 +15,8 @@
 > ingresso é o da aula de presente, e a página avisa isso antes do clique (linha abaixo do CTA,
 > card e passos da oferta, FAQ). **O preço (R$97) só aparece no ingresso emitido**, ao lado
 > do comparativo `components/info/AncoraIngresso.tsx`. A âncora é o **total de R$176,90**
-> (Protocolo "de R$109,90" + aula R$67): na página ele aparece riscado sem o preço final; no
-> ingresso, "de R$176,90 por R$97 · 45% de desconto". Checkout novo: `O841FD9F7`.
+> (Protocolo "de R$109,90" + aula R$67), **só no ingresso emitido**: "de R$176,90 por R$97 · 45%
+> de desconto". A página não mostra nenhum valor nem comparação de preço. Checkout novo: `O841FD9F7`.
 
 O Protocolo é vendido de duas formas:
 - **Order bump** (R$29,90, "de R$109,90") no checkout da aula **Por Dentro da Face** (R$67,
@@ -36,17 +36,16 @@ Endereços e arquivos:
 
 | | Na página | No ingresso emitido |
 |---|---|---|
-| Protocolo de Resgate Vascular | ~~R$109,90~~ (mesmo "de" do bump na Ticto) | ~~R$109,90~~ |
-| Aula ao vivo Por Dentro da Face | ~~R$67~~ de presente (preço real do ingresso) | ~~R$67~~ de presente |
-| **Valor total** | ~~R$176,90~~ ("seu valor com desconto aparece no ingresso") | ~~R$176,90~~ |
-| **Você paga** | não aparece | **R$97** ou 12x de R$10,03 (45% de desconto) |
+| Protocolo de Resgate Vascular | sem valor | ~~R$109,90~~ (mesmo "de" do bump na Ticto) |
+| Aula ao vivo Por Dentro da Face | "de presente", sem valor | ~~R$67~~ de presente (preço real do ingresso) |
+| **Valor total** | não aparece | ~~R$176,90~~ |
+| **Você paga** | não aparece ("o valor aparece quando você emite o ingresso") | **R$97** ou 12x de R$10,03 (45% de desconto) |
 
 Checkout: `https://payment.ticto.app/O841FD9F7` (trocado em 28/09; antes `O74848DBC`).
 
-**Âncoras (uma por lugar, textos em `components/info/ancora.ts`):** o **total de R$176,90** (lista e
-card da oferta, ingresso), a aula de R$67 de presente (Hero e bônus), a **seringa** ("O Protocolo e a aula custam menos
-que uma seringa de preenchedor") no card da oferta e no ingresso, e o **custo de não ter o
-protocolo** ("Uma hora de dúvida, um frasco a mais ou uma paciente que perde a confiança custam mais
+**Âncoras (textos em `components/info/ancora.ts`):** a ancoragem de preço (**total de R$176,90** e
+**seringa**, "O Protocolo e a aula custam menos que uma seringa de preenchedor") fica **só no
+ingresso emitido**. Na página, só o **custo de não ter o protocolo**, sem número ("Uma hora de dúvida, um frasco a mais ou uma paciente que perde a confiança custam mais
 do que o protocolo inteiro") no CTA final.
 
 **Fluxo do CTA:** até 06/10 às 20h, o botão ("Quero o Protocolo + a aula", com a linha "No próximo

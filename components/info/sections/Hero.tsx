@@ -4,14 +4,13 @@ import { Container } from "@/components/Container";
 import { CtaButton } from "@/components/info/CtaButton";
 import { LinhaGarantia } from "@/components/info/LinhaGarantia";
 import { SoComBonus } from "@/components/info/SoComBonus";
-import { formatBRL, ITEM_AULA } from "@/lib/ofertaKit";
 import { withBasePath } from "@/lib/basePath";
 
 // Hero da /info no padrão da /fresh (components/fresh/sections/Hero.tsx):
 // pré-headline com a dor, H1 com o resultado (grifo só na parte final),
 // subtítulo com a entrega, bullets que começam pelo que muda na cadeira, e o
-// CTA que abre o ingresso. Sem valor em R$ da oferta: o preço só aparece no
-// ingresso emitido. Imagem = mockup do próprio produto (prova na primeira dobra).
+// CTA que abre o ingresso. Sem nenhum valor em R$ nem âncora de preço: a
+// ancoragem e o preço só aparecem no ingresso emitido. Imagem = mockup do próprio produto (prova na primeira dobra).
 // Compliance: nenhum nome de medicamento na LP (política da Meta).
 //
 // Ordem no celular: texto → mockup → bullets/CTA (a headline nunca fica abaixo
@@ -73,8 +72,8 @@ export function Hero() {
               ))}
               <SoComBonus>
                 <Bullet>
-                  De presente até 06/10: a aula ao vivo Por Dentro da Face, que sozinha custa{" "}
-                  {formatBRL(ITEM_AULA.valorDe)}
+                  De presente até 06/10: a aula ao vivo Por Dentro da Face, com as imagens das
+                  dissecções da Aline em cadáver fresh frozen
                 </Bullet>
               </SoComBonus>
             </ul>

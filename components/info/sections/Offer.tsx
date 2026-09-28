@@ -2,7 +2,6 @@ import { Container } from "@/components/Container";
 import { Reveal } from "@/components/Reveal";
 import { VagasBadge } from "@/components/VagasBadge";
 import { Titulo } from "@/components/fresh/Titulo";
-import { ANCORA_SERINGA, ANCORA_SERINGA_SO_KIT } from "@/components/info/ancora";
 import { BonusCountdown } from "@/components/info/BonusCountdown";
 import { CtaButton } from "@/components/info/CtaButton";
 import { OfertaItens } from "@/components/info/OfertaItens";
@@ -32,8 +31,8 @@ const PASSOS_SO_KIT = [
   },
 ];
 
-// Oferta da /info no padrão da /fresh: sem valor em R$ no card. O botão abre o
-// ingresso, que revela o preço ao lado do valor da aula de presente.
+// Oferta da /info no padrão da /fresh: sem valor em R$ nem âncora de preço na
+// página. O botão abre o ingresso, que mostra a ancoragem (de R$176,90) e o preço.
 export function Offer() {
   return (
     <section className="bg-bg-2 py-16 sm:py-[92px]">
@@ -56,8 +55,7 @@ export function Offer() {
           <Reveal className="grid content-center">
             <OfertaItens />
             <p className="mt-6 max-w-[460px] font-serif text-[1.16rem] leading-[1.45] text-wine-ink italic">
-              <SoComBonus senao={ANCORA_SERINGA_SO_KIT}>{ANCORA_SERINGA}</SoComBonus> E é o que
-              você vai querer ter na mão se a cor mudar.
+              Se a cor mudar, você não decide no susto: segue o próximo passo da prancha.
             </p>
             <BonusCountdown className="mt-8" />
           </Reveal>

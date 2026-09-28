@@ -4,7 +4,6 @@ import { Reveal } from "@/components/Reveal";
 import { Titulo } from "@/components/fresh/Titulo";
 import { BonusCountdown } from "@/components/info/BonusCountdown";
 import { SoComBonus } from "@/components/info/SoComBonus";
-import { formatBRL, ITEM_AULA } from "@/lib/ofertaKit";
 import { withBasePath } from "@/lib/basePath";
 
 const DETALHES = [
@@ -14,8 +13,8 @@ const DETALHES = [
   "Acesso pelo grupo do WhatsApp",
 ];
 
-// Overdelivery: a aula entra de presente, pelo valor real do ingresso vendido
-// sozinho (ITEM_AULA.valorDe), sem âncora inventada. O protocolo mostra o que
+// Overdelivery: a aula entra de presente. Sem valor em R$ aqui: o valor dela
+// (ITEM_AULA.valorDe) só aparece na ancoragem do ingresso emitido. O protocolo mostra o que
 // fazer; a aula mostra, por dentro, onde tudo acontece. Formato como na /fresh:
 // aula de estúdio com as imagens das dissecções da Aline (nunca "direto da mesa
 // de dissecção"). Some sozinha depois da aula. (Sem "tira-dúvidas": a aula não tem.)
@@ -62,12 +61,6 @@ export function BonusAula() {
                     </li>
                   ))}
                 </ul>
-
-                <p className="mt-6 text-[1rem] text-fg-soft">
-                  Valor do ingresso vendido sozinho:{" "}
-                  <s className="text-fg-faint">{formatBRL(ITEM_AULA.valorDe)}</s>{" "}
-                  <span className="font-semibold text-fg">· pra você, de presente</span>
-                </p>
 
                 <BonusCountdown className="mt-7" />
               </Reveal>
