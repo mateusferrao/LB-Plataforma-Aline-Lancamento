@@ -34,7 +34,7 @@ const PASSOS_SO_KIT = [
 
 // Oferta da /info no padrão da /fresh: sem valor em R$ na página, só a
 // comparação com a seringa. O botão abre o ingresso, que mostra a ancoragem
-// (de R$176,90) e o preço.
+// (de R$306,90) e o preço.
 export function Offer() {
   return (
     <section className="bg-bg-2 py-16 sm:py-[92px]">

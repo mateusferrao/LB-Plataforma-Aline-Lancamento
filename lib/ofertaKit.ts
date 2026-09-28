@@ -15,8 +15,9 @@
 //     vai direto ao checkout. Sem `checkoutUrl` o botão fica bloqueado
 //     ("Em breve") — preencha quando existir o checkout só do kit.
 //   - `valorDe` de cada item é o preço "de" mostrado riscado. O do Protocolo é o
-//     mesmo "de R$109,90" do order bump na Ticto; o da aula é o preço real do
-//     ingresso (R$67). A âncora é o total (R$176,90): total "de" e % de
+//     mesmo "de R$109,90" do order bump na Ticto; o da aula é o valor "de" dela
+//     (AULA_VALOR_DE em lib/lotes.ts, R$197, o mesmo "de" da /lp2). A âncora é
+//     o total (R$306,90): total "de" e % de
 //     desconto são calculados (valorDeTotal / descontoPct), nunca escritos à mão.
 //     A ancoragem (itens riscados, total e "por") só aparece no ingresso
 //     emitido; a página não mostra nenhum valor.
@@ -24,7 +25,7 @@
 //     bump R$29,90): quem já comprou não pode ter pago mais caro.
 // ============================================================================
 
-import { LIVE_DATE_ISO } from "@/lib/lotes";
+import { AULA_VALOR_DE, LIVE_DATE_ISO } from "@/lib/lotes";
 
 // Entrega: imediata, pelo WhatsApp, logo após a confirmação do pagamento.
 
@@ -58,7 +59,7 @@ const ITEM_PROTOCOLO: ItemOferta = {
 export const ITEM_AULA: ItemOferta = {
   titulo: "Aula ao vivo Por Dentro da Face",
   detalhe: "6 de outubro, 20h, online, ~90 minutos, sem gravação",
-  valorDe: 67,
+  valorDe: AULA_VALOR_DE,
   bonus: true,
 };
 

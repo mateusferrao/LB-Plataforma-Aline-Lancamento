@@ -32,6 +32,11 @@ export type Lote = {
   precoDeLabel?: string;
 };
 
+// Valor "de" da aula (âncora): o "De R$197 por R$67" do ingresso da /lp2 e o
+// valor da aula de presente no ingresso da /info (lib/ofertaKit.ts). Não é o
+// preço cobrado (esse é o `price` do lote).
+export const AULA_VALOR_DE = 197;
+
 export const LOTES: Lote[] = [
   {
     n: 1,
@@ -41,8 +46,8 @@ export const LOTES: Lote[] = [
     startsAt: "2026-09-12T00:00:00-03:00",
     endsAt: "2026-10-06T20:00:00-03:00",
     checkoutUrl: "https://payment.ticto.app/O072A87DC",
-    precoDe: 197,
-    precoDeLabel: "R$197",
+    precoDe: AULA_VALOR_DE,
+    precoDeLabel: `R$${AULA_VALOR_DE}`,
   },
 ];
 

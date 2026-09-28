@@ -14,9 +14,9 @@
 > (`components/info/IngressoInfo.tsx`). O Protocolo é o produto principal em todos os textos; o
 > ingresso é o da aula de presente, e a página avisa isso antes do clique (linha abaixo do CTA,
 > card e passos da oferta, FAQ). **O preço (R$97) só aparece no ingresso emitido**, ao lado
-> do comparativo `components/info/AncoraIngresso.tsx`. A âncora é o **total de R$176,90**
-> (Protocolo "de R$109,90" + aula R$67), **só no ingresso emitido**: "de R$176,90 por R$97 · 45%
-> de desconto". A página não mostra nenhum valor em R$; só a comparação com a seringa, na oferta. Checkout novo: `O841FD9F7`.
+> do comparativo `components/info/AncoraIngresso.tsx`. A âncora é o **total de R$306,90**
+> (Protocolo "de R$109,90" + aula "de R$197", o mesmo "de" da `/lp2`), **só no ingresso emitido**:
+> "de R$306,90 por R$97 · 68% de desconto". A página não mostra nenhum valor em R$; só a comparação com a seringa, na oferta. Checkout novo: `O841FD9F7`.
 
 O Protocolo é vendido de duas formas:
 - **Order bump** (R$29,90, "de R$109,90") no checkout da aula **Por Dentro da Face** (R$67,
@@ -37,13 +37,13 @@ Endereços e arquivos:
 | | Na página | No ingresso emitido |
 |---|---|---|
 | Protocolo de Resgate Vascular | sem valor | ~~R$109,90~~ (mesmo "de" do bump na Ticto) |
-| Aula ao vivo Por Dentro da Face | "de presente", sem valor | ~~R$67~~ de presente (preço real do ingresso) |
-| **Valor total** | não aparece | ~~R$176,90~~ |
-| **Você paga** | não aparece ("o valor aparece quando você emite o ingresso") | **R$97** ou 12x de R$10,03 (45% de desconto) |
+| Aula ao vivo Por Dentro da Face | "de presente", sem valor | ~~R$197~~ de presente (`AULA_VALOR_DE` em `lib/lotes.ts`, o "de" da `/lp2`) |
+| **Valor total** | não aparece | ~~R$306,90~~ |
+| **Você paga** | não aparece ("o valor aparece quando você emite o ingresso") | **R$97** ou 12x de R$10,03 (68% de desconto) |
 
 Checkout: `https://payment.ticto.app/O841FD9F7` (trocado em 28/09; antes `O74848DBC`).
 
-**Âncoras (textos em `components/info/ancora.ts`):** a ancoragem com valores (**total de R$176,90**)
+**Âncoras (textos em `components/info/ancora.ts`):** a ancoragem com valores (**total de R$306,90**)
 fica **só no ingresso emitido**. A **seringa** ("O Protocolo e a aula custam menos que uma seringa de
 preenchedor", sem número) fica na oferta e no ingresso, e o **custo de não ter o
 protocolo**, sem número ("Uma hora de dúvida, um frasco a mais ou uma paciente que perde a confiança custam mais
@@ -195,7 +195,7 @@ Base: skill *copywriting*.
 >   cuidados até cicatrizar. Você coloca seu nome e WhatsApp e envia.
 > - **Checklist da maleta:** tudo o que o protocolo usa, pra conferir antes de atender.
 >
-> **De presente para quem garantir até 06/10: aula ao vivo Por Dentro da Face (valor R$67).** A
+> **De presente para quem garantir até 06/10: aula ao vivo Por Dentro da Face (valor R$197).** A
 > Dra. Aline mostra, nas imagens das dissecções que ela fez em cadáver fresh frozen, o que existe
 > embaixo da pele. 6 de outubro de
 > 2026, às 20h (Brasília), online, cerca de 90 minutos, sem gravação. O protocolo mostra o que

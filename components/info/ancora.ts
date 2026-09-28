@@ -1,5 +1,5 @@
 // Frases de âncora da /info — FONTE ÚNICA. A ancoragem com valores (total "de"
-// R$176,90 = Protocolo R$109,90 + aula R$67, calculado em lib/ofertaKit.ts) fica
+// R$306,90 = Protocolo R$109,90 + aula R$197, calculado em lib/ofertaKit.ts) fica
 // SÓ no ingresso emitido; a página não mostra nenhum R$. A seringa (sem número)
 // fica na oferta e no ingresso; o custo de não ter o protocolo, no CTA final.
 // Sem número de marca: "menos que uma seringa" vale pra qualquer preenchedor.

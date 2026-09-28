@@ -22,7 +22,7 @@ export function AncoraIngresso() {
               {item.bonus ? "Aula ao vivo Por Dentro da Face" : "Protocolo de Resgate Vascular"}
             </div>
             <div className="mt-0.5 text-[0.78rem] text-fg-faint">
-              {item.bonus ? "ingresso vendido sozinho · 06/10" : "PDF, prancha, ficha e 2 cards · na hora"}
+              {item.bonus ? "valor do ingresso · 06/10, 20h" : "PDF, prancha, ficha e 2 cards · na hora"}
             </div>
           </div>
           <div className="shrink-0 text-right">
