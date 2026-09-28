@@ -2,8 +2,8 @@ import { Container } from "@/components/Container";
 import { Reveal } from "@/components/Reveal";
 import { Titulo } from "@/components/fresh/Titulo";
 
-// "Isso é pra mim?" + o filtro honesto do "não é pra você", que reduz reembolso
-// e aumenta a confiança de quem fica. Perfis da pesquisa de público.
+// "Isso é pra mim?" + o "não é pra você", que filtra pela atitude e reforça o
+// valor de quem fica. Perfis e frases da pesquisa de público.
 const E = [
   "Já fez curso e ainda hesita em algumas regiões.",
   "Está começando e quer aprender no lugar certo, antes de pegar vício.",
@@ -11,10 +11,13 @@ const E = [
   "Quer explicar pra paciente o que está fazendo, com segurança.",
 ];
 
+// O "não é pra você" filtra pela atitude, não pelo formato: valoriza a aula
+// (quem entra quer ir além do protocolo) e mantém só o aviso honesto da data.
 const NAO = [
-  "Procura um curso prático, com certificado.",
-  "Quer aprender captação ou marketing. Esta aula é sobre segurança na aplicação.",
-  "Não consegue estar ao vivo no dia 6, às 20h. Não tem gravação.",
+  "Acha que mais um protocolo decorado vai resolver a insegurança.",
+  "Prefere continuar evitando algumas regiões a entender o que existe nelas.",
+  "Está satisfeita em aplicar só o básico, do mesmo jeito em todo rosto.",
+  "Não pode estar ao vivo no dia 6, às 20h. É uma noite só, sem gravação.",
 ];
 
 export function ParaQuem() {

@@ -31,7 +31,7 @@ const FAQS = [
   },
   {
     q: "Tem gravação? Dá certificado?",
-    a: "Não e não. A aula é ao vivo, uma vez só, e não emite certificado. O valor está em estar na sala e tirar a sua dúvida na hora.",
+    a: "Não e não. A aula é ao vivo, uma vez só, e não emite certificado. É uma noite só, pra quem estiver na sala.",
   },
   {
     q: "Como recebo o acesso à sala?",

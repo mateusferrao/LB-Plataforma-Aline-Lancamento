@@ -12,7 +12,6 @@ const INCLUI = [
     t: "Aula ao vivo de ~90 minutos com a Dra. Aline",
     d: "Com as imagens das dissecções dela em cadáver fresh frozen",
   },
-  { t: "Tira-dúvidas ao vivo, na hora", d: "Sua pergunta respondida, só quem está na sala" },
   { t: "Link privado, exclusivo pra inscritos", d: "Enviado no grupo do WhatsApp antes da aula" },
 ];
 
