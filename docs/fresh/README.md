@@ -6,9 +6,15 @@ A âncora de valor tem fonte única em `components/fresh/ancora.ts`.
 
 **O que foi ao ar (28/09):** headline curta com foco em fresh frozen; no celular, headline → vídeo → CTA;
 barra fixa sem cronômetro de reserva; o CTA abre o ingresso da `/lp2` (mesmo modal, sem o "de R$197",
-com a âncora do curso da Aline e o cronômetro de reserva dentro do ingresso); preço visível na página;
+com a âncora do curso da Aline e o cronômetro de reserva dentro do ingresso); **o valor da aula só
+aparece no ingresso emitido, igual à `/lp2`** (na página, "R$35 mil × uma fração disso");
 fisioterapeutas no "pra quem é" e no ingresso; sem gravação; nenhuma frase "direto da mesa de
-dissecção"; nenhuma imagem de peça anatômica. As seções que dependiam de confirmação da Aline (roteiro
+dissecção"; nenhuma imagem de peça anatômica.
+
+**Ajustes de 28/09 (depois do primeiro deploy):** a headline passou a terminar em "pra você aplicar sem
+medo e com resultado" (em vez de "sem medo de intercorrência"), com o destaque em `--wine-bright`
+(#b8322c, o vermelho do botão clareado pra ficar legível sobre o preto). O valor da aula saiu da página
+inteira, inclusive do subtexto do contador (`Countdown semPreco`), e só aparece no ingresso emitido. As seções que dependiam de confirmação da Aline (roteiro
 em blocos, detalhes dos cursos) foram escritas só com fatos já confirmados.
 
 Base: skill *copywriting* (coreyhaines31/marketingskills), com o Human Action Model (desconforto →

@@ -41,8 +41,8 @@ export function StickyCta() {
             06/10 · 20h · ao vivo
           </span>
         </div>
-        <CtaButton showPrice className="w-full justify-center">
-          Quero meu ingresso
+        <CtaButton className="w-full justify-center">
+          Emitir meu ingresso
         </CtaButton>
       </div>
 
@@ -62,8 +62,8 @@ export function StickyCta() {
               6 de outubro · 20h · ao vivo
             </span>
           </div>
-          <CtaButton showPrice className="shrink-0">
-            Quero meu ingresso
+          <CtaButton className="shrink-0">
+            Emitir meu ingresso
           </CtaButton>
         </div>
       </div>

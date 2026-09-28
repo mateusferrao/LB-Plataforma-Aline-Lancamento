@@ -30,9 +30,12 @@ const UNITS: { key: keyof Remaining; label: string }[] = [
 export function Countdown({
   className = "",
   align = "left",
+  semPreco = false,
 }: {
   className?: string;
   align?: "left" | "center";
+  // true = sem o valor no subtexto (a /fresh só revela o preço no ingresso emitido).
+  semPreco?: boolean;
 }) {
   const { lote, montado } = useLoteAtivo();
   // Alvo dos tiles = chegada da aula ao vivo, fixo (não depende do lote ativo).
@@ -102,7 +105,11 @@ export function Countdown({
 
       {/* Subtexto do preço; min-height reservada pra não pular na hidratação. */}
       <p className="min-h-[1.5em] max-w-[520px] text-[0.98rem] leading-[1.5] text-fg-soft">
-        {montado && lote ? `${lote.priceLabel} até a aula. Vagas por tempo limitado.` : ""}
+        {montado && lote
+          ? semPreco
+            ? "Inscrições até a hora da aula. Vagas por tempo limitado."
+            : `${lote.priceLabel} até a aula. Vagas por tempo limitado.`
+          : ""}
       </p>
     </div>
   );

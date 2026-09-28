@@ -2,8 +2,7 @@ import Image from "next/image";
 import { Container } from "@/components/Container";
 import { Countdown } from "@/components/Countdown";
 import { CtaButton } from "@/components/lp2/CtaButton";
-import { ParcelaLine } from "@/components/ParcelaLine";
-import { UrgenciaFina } from "@/components/UrgenciaFina";
+import { UrgenciaFina } from "@/components/lp2/UrgenciaFina";
 import { withBasePath } from "@/lib/basePath";
 
 export function FinalCta() {
@@ -31,12 +30,11 @@ export function FinalCta() {
           <span className="titulo-grifo">aplique com calma.</span>
         </h2>
 
-        <Countdown align="center" />
+        <Countdown semPreco align="center" />
 
-        <CtaButton showPrice className="mt-8 w-full justify-center sm:w-auto">
-          Quero meu ingresso
+        <CtaButton className="mt-8 w-full justify-center sm:w-auto">
+          Emitir meu ingresso
         </CtaButton>
-        <ParcelaLine className="mt-2" />
         <UrgenciaFina className="mt-3.5 text-[13.5px] tracking-[0.02em] text-fg-faint" />
       </Container>
     </section>

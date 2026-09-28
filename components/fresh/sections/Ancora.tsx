@@ -1,14 +1,14 @@
 import Image from "next/image";
 import { Container } from "@/components/Container";
 import { CtaButton } from "@/components/lp2/CtaButton";
-import { ParcelaLine } from "@/components/ParcelaLine";
 import { Reveal } from "@/components/Reveal";
 import { Titulo } from "@/components/fresh/Titulo";
 import { ANCORA_CURSO } from "@/components/fresh/ancora";
 import { withBasePath } from "@/lib/basePath";
-import { LOTE_TETO } from "@/lib/lotes";
 
 // Âncora de valor: o curso internacional de fresh frozen da própria Aline.
+// Sem o valor da aula na página (igual à /lp2): o R$67 só aparece no ingresso
+// emitido, ao lado dos R$35 mil.
 // Mostra valor e autoridade ao mesmo tempo (ela não só fez, ela ensina).
 // A frase do hands-on protege a promessa: é aula, não curso prático.
 export function Ancora() {
@@ -48,7 +48,10 @@ export function Ancora() {
                       Esta aula ao vivo
                     </div>
                     <div className="mt-1.5 font-serif text-[1.7rem] leading-tight text-fg">
-                      {LOTE_TETO.priceLabel}
+                      Uma fração disso
+                    </div>
+                    <div className="mt-1 text-[0.85rem] text-fg-faint">
+                      Emita seu ingresso pra ver o valor
                     </div>
                   </div>
                 </div>
@@ -65,13 +68,9 @@ export function Ancora() {
                   curso um dia.
                 </p>
 
-                <CtaButton
-                  showPrice
-                  className="mt-8 w-full justify-center sm:w-auto sm:justify-start"
-                >
-                  Quero meu ingresso
+                <CtaButton className="mt-8 w-full justify-center sm:w-auto sm:justify-start">
+                  Emitir meu ingresso
                 </CtaButton>
-                <ParcelaLine className="mt-2 text-center sm:text-left" />
               </Reveal>
             </div>
           </div>

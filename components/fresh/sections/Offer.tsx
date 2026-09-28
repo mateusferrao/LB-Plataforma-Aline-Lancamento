@@ -1,12 +1,10 @@
-"use client";
-
 import { Container } from "@/components/Container";
 import { Countdown } from "@/components/Countdown";
 import { CtaButton } from "@/components/lp2/CtaButton";
 import { Reveal } from "@/components/Reveal";
 import { VagasBadge } from "@/components/VagasBadge";
 import { Titulo } from "@/components/fresh/Titulo";
-import { useLoteAtivo } from "@/lib/useLoteAtivo";
+import { OfertaPreco } from "@/components/lp2/OfertaPreco";
 
 const INCLUI = [
   {
@@ -24,12 +22,9 @@ const PASSOS = [
   { t: "Dia 6, às 20h, entre na sala", d: "Pelo link privado enviado no grupo." },
 ];
 
-// Oferta da /fresh: o preço aparece na página (a âncora do curso internacional
-// só funciona com o preço visível). O botão abre o ingresso da /lp2.
+// Oferta da /fresh: igual à /lp2, sem valor em R$ no card. O botão abre o
+// ingresso, que revela o preço ao lado da âncora do curso internacional.
 export function Offer() {
-  const { lote, montado } = useLoteAtivo();
-  const encerrado = montado && !lote;
-
   return (
     <section className="bg-bg-2 py-16 sm:py-[92px]">
       <Container narrow>
@@ -58,35 +53,14 @@ export function Offer() {
                 </span>
               </div>
             ))}
-            <Countdown className="mt-8" />
+            <Countdown semPreco className="mt-8" />
           </Reveal>
 
           <Reveal
             delay={90}
             className="flex flex-col justify-center rounded-[6px] bg-wine px-8 py-9 text-center text-on-wine"
           >
-            {encerrado ? (
-              <>
-                <div className="text-[12px] tracking-[0.16em] uppercase opacity-90">
-                  Inscrições encerradas
-                </div>
-                <div className="my-1.5 font-serif text-[2.4rem] leading-tight">
-                  Próxima turma em breve
-                </div>
-              </>
-            ) : (
-              <>
-                <div className="text-[12px] tracking-[0.16em] uppercase opacity-90">
-                  Ao vivo · 6 de outubro · 20h
-                </div>
-                <div className="my-1.5 font-serif text-[2.7rem] leading-none">
-                  {montado && lote ? lote.priceLabel : ""}
-                </div>
-                <div className="min-h-[1.4em] text-[0.95rem] opacity-90">
-                  {montado && lote ? `ou 12x de ${lote.parcela12x} no cartão` : ""}
-                </div>
-              </>
-            )}
+            <OfertaPreco />
 
             <div className="mt-6 flex flex-col items-center gap-3 border-t border-on-wine/15 pt-6">
               <VagasBadge tone="onAccent" />

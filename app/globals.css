@@ -23,6 +23,7 @@
   --wine: #7e1e1c;
   --wine-hover: #99302c;
   --wine-ink: #cf8079; /* marsala legível sobre preto — eyebrows, fios, marcadores */
+  --wine-bright: #b8322c; /* vermelho do botão clareado pra título grande sobre preto (contraste ~3.3:1) */
   --on-wine: #ffffff;
 
   /* Linhas */
@@ -41,6 +42,7 @@
   --color-wine: var(--wine);
   --color-wine-hover: var(--wine-hover);
   --color-wine-ink: var(--wine-ink);
+  --color-wine-bright: var(--wine-bright);
   --color-on-wine: var(--on-wine);
   --color-line: var(--line);
   --color-line-soft: var(--line-soft);

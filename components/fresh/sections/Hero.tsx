@@ -2,11 +2,9 @@ import Image from "next/image";
 import { AnimatedNumber } from "@/components/AnimatedNumber";
 import { Container } from "@/components/Container";
 import { CtaButton } from "@/components/lp2/CtaButton";
-import { ParcelaLine } from "@/components/ParcelaLine";
-import { UrgenciaFina } from "@/components/UrgenciaFina";
+import { UrgenciaFina } from "@/components/lp2/UrgenciaFina";
 import { VslPlayer } from "@/components/VslPlayer";
 import { withBasePath } from "@/lib/basePath";
-import { LOTE_TETO } from "@/lib/lotes";
 import { ANCORA_CURSO } from "@/components/fresh/ancora";
 
 // Hero da /fresh. Headline no padrão de página de vendas (sem o bloco grifado):
@@ -18,7 +16,7 @@ import { ANCORA_CURSO } from "@/components/fresh/ancora";
 const BULLETS = [
   "Saiba até onde ir perto das áreas de risco e aplique sem hesitar",
   "Entenda por que a mesma técnica fica linda numa paciente e sem graça na outra",
-  `O curso internacional de fresh frozen da Aline custa ${ANCORA_CURSO}. Esta aula, ${LOTE_TETO.priceLabel}, sem viajar`,
+  `O curso internacional de fresh frozen da Aline custa ${ANCORA_CURSO}. Esta aula ao vivo custa uma fração disso, sem viajar`,
 ];
 
 export function Hero({ comVsl }: { comVsl: boolean }) {
@@ -38,7 +36,7 @@ export function Hero({ comVsl }: { comVsl: boolean }) {
 
             <h1 className="mt-3 text-balance font-sans font-semibold text-[1.9rem] leading-[1.15] tracking-[-0.015em] text-fg sm:text-[2.4rem] lg:text-[2.6rem]">
               A segurança de um curso internacional em cadáver fresh frozen,{" "}
-              <span className="text-wine-ink">pra você aplicar sem medo de intercorrência.</span>
+              <span className="text-wine-bright">pra você aplicar sem medo e com resultado.</span>
             </h1>
 
             <p className="mt-5 max-w-[560px] text-[1.08rem] leading-[1.55] text-fg-soft">
@@ -84,13 +82,9 @@ export function Hero({ comVsl }: { comVsl: boolean }) {
               ))}
             </ul>
 
-            <CtaButton
-              showPrice
-              className="mt-7 w-full justify-center sm:w-auto sm:justify-start"
-            >
-              Quero meu ingresso
+            <CtaButton className="mt-7 w-full justify-center sm:w-auto sm:justify-start">
+              Emitir meu ingresso
             </CtaButton>
-            <ParcelaLine className="mt-2 text-center sm:text-left" />
             <UrgenciaFina className="mt-3 text-center text-[13.5px] tracking-[0.02em] text-fg-faint sm:text-left" />
 
             <div className="mt-9 grid grid-cols-3 gap-4 border-t border-line pt-7 sm:gap-7">
