@@ -34,6 +34,11 @@ ao checkout. (Quer que eu te mande o link?)
 > **emitir o ingresso** (nome e área, leva 10 segundos) antes de mostrar o valor, que aparece como
 > **de R$197 por R$67**, e o "Confirmar meu ingresso" leva ao checkout. Se a lead citar esse passo
 > ou esse de/por, é a mesma aula e o mesmo checkout.
+>
+> A versão `/fresh` (e `/fresh/sem-vsl`) também pede pra emitir o ingresso, mas mostra o preço de
+> **R$67** direto na página, **sem "de/por"**, comparando com o curso internacional de fresh frozen da
+> Aline (cerca de R$35 mil). A aula é de estúdio, com as imagens das dissecções da Aline. É a mesma aula
+> e o mesmo checkout.
 
 ### 6. Tem gravação ou replay?
 Não. A aula é **ao vivo, uma vez só, sem gravação**. E isso é de propósito: o valor está em estar

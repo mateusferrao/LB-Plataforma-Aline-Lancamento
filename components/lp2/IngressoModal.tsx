@@ -20,8 +20,17 @@ import { RESERVA_DURACAO_MS, two, useReservaRestante } from "@/components/Reserv
 // Modal do fluxo "emitir ingresso antes de ver o preço" (aberto pelo CtaButton).
 // Etapa 1: tratamento + nome + área. Etapa 2: ingresso emitido com o nome da
 // visitante, o preço do lote ativo e o botão que leva ao checkout da Ticto.
-// Montado uma vez por página (app/lp2/page.tsx).
-export function IngressoModal() {
+// Montado uma vez por página (app/lp2/page.tsx, components/fresh/FreshPage.tsx).
+//
+// `mostrarDesconto=false` esconde o "de/por" do lote (a /fresh não usa o
+// precoDe) e deixa só a reserva da vaga. `ancora` entra acima da reserva.
+export function IngressoModal({
+  mostrarDesconto = true,
+  ancora,
+}: {
+  mostrarDesconto?: boolean;
+  ancora?: React.ReactNode;
+} = {}) {
   const { aberto, etapa, ingresso } = useIngresso();
   const tituloId = useId();
   const painelRef = useRef<HTMLDivElement>(null);
@@ -78,7 +87,12 @@ export function IngressoModal() {
         </button>
 
         {etapa === "ingresso" && ingresso ? (
-          <IngressoEmitido ingresso={ingresso} tituloId={tituloId} />
+          <IngressoEmitido
+            ingresso={ingresso}
+            tituloId={tituloId}
+            mostrarDesconto={mostrarDesconto}
+            ancora={ancora}
+          />
         ) : (
           <FormIngresso inicial={ingresso} tituloId={tituloId} />
         )}
@@ -229,15 +243,20 @@ const BARRAS = [2, 1, 3, 1, 1, 2, 1, 3, 2, 1, 1, 3, 1, 2, 2, 1, 3, 1, 1, 2, 1, 1
 function IngressoEmitido({
   ingresso,
   tituloId,
+  mostrarDesconto,
+  ancora,
 }: {
   ingresso: Ingresso;
   tituloId: string;
+  mostrarDesconto: boolean;
+  ancora?: React.ReactNode;
 }) {
   const { lote, montado } = useLoteAtivo();
   const restanteMs = useReservaRestante();
   const expirado = restanteMs !== null && restanteMs <= 0;
   const progresso = restanteMs === null ? 1 : restanteMs / RESERVA_DURACAO_MS;
-  const temDesconto = !!(lote?.precoDe && lote.precoDeLabel && lote.precoDe > lote.price);
+  const temDesconto =
+    mostrarDesconto && !!(lote?.precoDe && lote.precoDeLabel && lote.precoDe > lote.price);
   const pctDesconto =
     lote?.precoDe && temDesconto ? Math.round((1 - lote.price / lote.precoDe) * 100) : 0;
 
@@ -327,6 +346,7 @@ function IngressoEmitido({
           (sessionStorage, não reinicia no refresh). Sem precoDe no lote, vira
           só a reserva da vaga. */}
       <div className="mt-5 rounded-[8px] border border-line bg-bg-3 px-5 py-5 text-center">
+        {ancora && <div className="mb-4 border-b border-line pb-4">{ancora}</div>}
         {montado && lote && temDesconto && (
           <div className="mb-4">
             <p className="text-[1.05rem] text-fg">Você emitiu seu ingresso e ganhou</p>

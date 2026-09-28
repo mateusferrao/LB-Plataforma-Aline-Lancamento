@@ -34,6 +34,12 @@ Regras: tudo minúsculo, sem espaço nem acento (use hífen). Mantenha os mesmos
 
 (Troque `utm_content` conforme o criativo.)
 
+**LP `/fresh` (cadáver fresh frozen, teste contra a `/`):** mesma `utm_campaign` da aula
+(`live-por-dentro-da-face`), trocando só o caminho: `https://live.alinefilgueiras.com.br/fresh` (com VSL) ou
+`https://live.alinefilgueiras.com.br/fresh/sem-vsl` (sem VSL). Ex.:
+`https://live.alinefilgueiras.com.br/fresh?utm_source=facebook&utm_medium=paid_social&utm_campaign={{campaign.name}}&utm_content={{ad.name}}`.
+O GA4 separa as variantes pelo caminho da página.
+
 **Kit Mapa das Intercorrências (`/info`):** mesma convenção, com base
 `https://live.alinefilgueiras.com.br/info` e `utm_campaign=kit-mapa-intercorrencias`. Ex.:
 `https://live.alinefilgueiras.com.br/info?utm_source=instagram&utm_medium=stories&utm_campaign=kit-mapa-intercorrencias&utm_content=mapa`.

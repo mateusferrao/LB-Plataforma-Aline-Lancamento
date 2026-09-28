@@ -11,6 +11,9 @@ type Props = {
   children: React.ReactNode;
   variant?: "dark" | "accent";
   className?: string;
+  // Quando true, anexa " · R$XX" do lote ativo ao final do texto (a /fresh
+  // mostra o preço na página; a /lp2 só revela no ingresso emitido).
+  showPrice?: boolean;
 };
 
 // Com inscrições abertas, o botão NÃO vai direto pro checkout: abre o modal de
@@ -22,6 +25,7 @@ export function CtaButton({
   children,
   variant = "dark",
   className = "",
+  showPrice = false,
 }: Props) {
   const { lote, montado } = useLoteAtivo();
   // Fora da janela de inscrições: antes de abrir ou depois da aula já ter
@@ -67,6 +71,14 @@ export function CtaButton({
   } else {
     href = "#ingresso";
     abreIngresso = true;
+    label = (
+      <>
+        {children}
+        {showPrice && montado && lote && (
+          <span className="font-serif text-[1.16rem]">· {lote.priceLabel}</span>
+        )}
+      </>
+    );
     track = () => {
       trackCustom("AbrirIngresso", { content_name: "Ingresso Por Dentro da Face" });
       gaEvent("open_ingresso", {});

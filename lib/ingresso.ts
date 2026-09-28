@@ -22,6 +22,7 @@ export const AREAS = [
   "Enfermagem",
   "Farmácia",
   "Estética",
+  "Fisioterapia",
   "Outra",
 ] as const;
 export type Area = (typeof AREAS)[number];
