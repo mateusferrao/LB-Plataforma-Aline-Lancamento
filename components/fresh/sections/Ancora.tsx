@@ -10,7 +10,6 @@ import { withBasePath } from "@/lib/basePath";
 // referência genérica de mercado (sem atribuir o valor ao curso da Aline).
 // Sem o valor da aula na página (igual à /lp2): o R$67 só aparece no ingresso
 // emitido, no comparativo com o preço riscado (components/fresh/AncoraIngresso).
-// O aviso de que não substitui o hands-on fica na FAQ ("Substitui um curso presencial?").
 export function Ancora() {
   return (
     <>

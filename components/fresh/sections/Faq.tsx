@@ -2,24 +2,21 @@ import { Container } from "@/components/Container";
 import { Titulo } from "@/components/fresh/Titulo";
 
 // Perguntas da /fresh. Só fatos confirmados (playbook + decisões de 28/09):
-// aula de estúdio com imagens das dissecções da Aline, sem gravação, sem
-// certificado, 7 dias de garantia.
+// aula online com imagens das dissecções da Aline, sem gravação, 7 dias de
+// garantia. Enquadradas pra reforçar o valor da noite, nunca pra diminuí-la
+// (sem comparar com presencial, sem tira-dúvidas, sem "não é").
 const FAQS = [
   {
     q: "O que é cadáver fresh frozen?",
     a: "É um cadáver congelado sem passar por fixação química, como o formol. Por isso o tecido mantém cor, textura e mobilidade muito próximas às do rosto vivo. É o material que os cursos internacionais de anatomia facial usam, e é onde a Aline estudou e hoje ensina.",
   },
   {
-    q: "A aula é transmitida de dentro de um laboratório?",
-    a: "Não. É uma aula ao vivo de estúdio. A Aline mostra as fotos e os vídeos das dissecções que ela fez em cadáver fresh frozen e explica, estrutura por estrutura, o que muda a sua segurança na aplicação.",
+    q: "Como eu vejo a face por dentro numa aula online?",
+    a: "Ao vivo, a Aline mostra as fotos e os vídeos das dissecções que ela fez em cadáver fresh frozen e explica, estrutura por estrutura, o que muda a sua segurança na aplicação. É o olhar de quem esteve na mesa de dissecção, trazido pra sua tela.",
   },
   {
     q: "Vou ver imagens de dissecção?",
     a: "Sim. A aula usa imagens reais das dissecções da Aline, porque é assim que você enxerga como a face é por dentro. São imagens de estudo, mostradas com respeito e com a explicação de cada estrutura.",
-  },
-  {
-    q: "Substitui um curso presencial em fresh frozen?",
-    a: "Não. Esta aula não é prática e não substitui o hands-on. Ela te dá, numa noite, a leitura da face que faltava pra aplicar com mais segurança agora.",
   },
   {
     q: "Já fiz curso de harmonização. Vai repetir o que eu sei?",
@@ -30,8 +27,8 @@ const FAQS = [
     a: "Aproveita, e muito. Quanto antes você entende a face por dentro, menos vícios carrega. Serve pra quem já aplica e pra quem quer começar no lugar certo.",
   },
   {
-    q: "Tem gravação? Dá certificado?",
-    a: "Não e não. A aula é ao vivo, uma vez só, e não emite certificado. É uma noite só, pra quem estiver na sala.",
+    q: "Tem gravação?",
+    a: "Não. A aula acontece ao vivo, uma noite só, pra quem estiver na sala no dia 6, às 20h. Por isso as vagas são limitadas.",
   },
   {
     q: "Como recebo o acesso à sala?",

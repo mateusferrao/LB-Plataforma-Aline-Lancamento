@@ -28,7 +28,14 @@ seringa de preenchedor") no card da oferta e no comparativo do ingresso, e o **c
 retoque, um produto desperdiçado ou uma paciente que não volta custa mais do que esta noite") no CTA
 final. Os textos ficam em `components/fresh/ancora.ts`. Próximo teste sugerido, nos criativos e não na
 LP: seringa × curso internacional × refazer, com o mesmo público. O ângulo com menor custo por compra
-sobe para o Hero. As seções que dependiam de confirmação da Aline (roteiro
+sobe para o Hero.
+
+**Sem nada que diminua a aula (28/09).** Saíram da página: o aviso "não é curso prático / não substitui o
+hands-on" (na seção de valor e na FAQ), o tira-dúvidas (a aula não tem tira-dúvidas individual), a FAQ
+"é transmitida de dentro de um laboratório? Não" (virou "Como eu vejo a face por dentro numa aula
+online?", sem afirmar laboratório) e a menção a certificado. O "não é pra você" filtra pela atitude. O
+único "não" que ficou é o da gravação, porque evita reembolso de quem não pode assistir e reforça a
+escassez. As seções que dependiam de confirmação da Aline (roteiro
 em blocos, detalhes dos cursos) foram escritas só com fatos já confirmados.
 
 Base: skill *copywriting* (coreyhaines31/marketingskills), com o Human Action Model (desconforto →

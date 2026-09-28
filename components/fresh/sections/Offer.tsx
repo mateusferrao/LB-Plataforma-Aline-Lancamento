@@ -28,7 +28,7 @@ export function Offer() {
   return (
     <section className="bg-bg-2 py-16 sm:py-[92px]">
       <Container narrow>
-        <Titulo eyebrow="Seu ingresso" destaque="e não tem gravação.">
+        <Titulo eyebrow="Seu ingresso" destaque="uma vez só.">
           É uma noite ao vivo,
         </Titulo>
       </Container>
