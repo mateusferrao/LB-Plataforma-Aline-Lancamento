@@ -14,7 +14,14 @@ dissecção"; nenhuma imagem de peça anatômica.
 **Ajustes de 28/09 (depois do primeiro deploy):** a headline passou a terminar em "pra você aplicar sem
 medo e com resultado" (em vez de "sem medo de intercorrência"), com o destaque em `--wine-bright`
 (#b8322c, o vermelho do botão clareado pra ficar legível sobre o preto). O valor da aula saiu da página
-inteira, inclusive do subtexto do contador (`Countdown semPreco`), e só aparece no ingresso emitido. As seções que dependiam de confirmação da Aline (roteiro
+inteira, inclusive do subtexto do contador (`Countdown semPreco`), e só aparece no ingresso emitido.
+
+**Âncora genérica (28/09):** a página não atribui mais os R$35 mil ao curso da Aline. O texto diz que
+"um curso internacional em cadáver fresh frozen chega a custar cerca de R$35 mil" (o curso dela está
+nessa faixa; cursos nos EUA cobram US$3.500+ só de inscrição, fora viagem). No ingresso emitido, o
+comparativo é visual (`components/fresh/AncoraIngresso.tsx`): o curso internacional aparece com o valor
+riscado, o ingresso de R$67 em destaque e o selo "Menos de 1% do valor · sem viajar". O riscado fica no
+produto de referência, nunca num "de/por" da própria aula. As seções que dependiam de confirmação da Aline (roteiro
 em blocos, detalhes dos cursos) foram escritas só com fatos já confirmados.
 
 Base: skill *copywriting* (coreyhaines31/marketingskills), com o Human Action Model (desconforto →

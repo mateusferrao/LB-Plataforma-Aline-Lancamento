@@ -1,7 +1,6 @@
 import { Footer } from "@/components/Footer";
 import { IngressoModal } from "@/components/lp2/IngressoModal";
-import { ANCORA_CURSO } from "@/components/fresh/ancora";
-import { LOTE_TETO } from "@/lib/lotes";
+import { AncoraIngresso } from "@/components/fresh/AncoraIngresso";
 import { StickyCta } from "@/components/fresh/StickyCta";
 import { Hero } from "@/components/fresh/sections/Hero";
 import { Problema } from "@/components/fresh/sections/Problema";
@@ -19,7 +18,7 @@ import { FinalCta } from "@/components/fresh/sections/FinalCta";
 // LP /fresh (plano em docs/fresh/README.md). Vende segurança e resultado; o
 // cadáver fresh frozen é o porquê e a âncora de valor. As duas rotas
 // (app/fresh e app/fresh/sem-vsl) usam esta página e só mudam o `comVsl`.
-// O ingresso é o da /lp2, sem o "de/por" e com a âncora do curso da Aline.
+// O ingresso é o da /lp2, sem o "de/por" e com o comparativo AncoraIngresso.
 export function FreshPage({ comVsl }: { comVsl: boolean }) {
   return (
     <>
@@ -42,15 +41,7 @@ export function FreshPage({ comVsl }: { comVsl: boolean }) {
       <StickyCta />
       <IngressoModal
         mostrarDesconto={false}
-        ancora={
-          <p className="text-[0.98rem] leading-[1.5] text-fg-soft">
-            O curso internacional de fresh frozen da Aline custa {ANCORA_CURSO}.
-            <br />
-            <strong className="font-semibold text-fg">
-              Esta aula ao vivo, com as imagens das dissecções dela: {LOTE_TETO.priceLabel}.
-            </strong>
-          </p>
-        }
+        ancora={<AncoraIngresso />}
       />
     </>
   );

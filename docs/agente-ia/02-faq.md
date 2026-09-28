@@ -36,9 +36,10 @@ ao checkout. (Quer que eu te mande o link?)
 > ou esse de/por, é a mesma aula e o mesmo checkout.
 >
 > A versão `/fresh` (e `/fresh/sem-vsl`) também pede pra emitir o ingresso antes do valor. No ingresso
-> emitido, o valor aparece como **R$67**, **sem "de/por"**, comparado com o curso internacional de fresh
-> frozen da Aline (cerca de R$35 mil). A aula é de estúdio, com as imagens das dissecções da Aline. É a mesma aula
-> e o mesmo checkout.
+> emitido aparece **R$67**, sem "de/por" da própria aula, ao lado de um comparativo com o valor riscado de
+> um curso internacional presencial em cadáver fresh frozen (cerca de R$35 mil). **Não diga que esse é o
+> preço do curso da Aline.** A aula é de estúdio, com as imagens das dissecções da Aline. É a mesma aula e o
+> mesmo checkout.
 
 ### 6. Tem gravação ou replay?
 Não. A aula é **ao vivo, uma vez só, sem gravação**. E isso é de propósito: o valor está em estar

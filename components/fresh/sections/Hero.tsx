@@ -16,7 +16,7 @@ import { ANCORA_CURSO } from "@/components/fresh/ancora";
 const BULLETS = [
   "Saiba até onde ir perto das áreas de risco e aplique sem hesitar",
   "Entenda por que a mesma técnica fica linda numa paciente e sem graça na outra",
-  `O curso internacional de fresh frozen da Aline custa ${ANCORA_CURSO}. Esta aula ao vivo custa uma fração disso, sem viajar`,
+  `Um curso internacional em cadáver fresh frozen chega a custar ${ANCORA_CURSO}. Esta aula ao vivo custa uma fração disso, sem viajar`,
 ];
 
 export function Hero({ comVsl }: { comVsl: boolean }) {

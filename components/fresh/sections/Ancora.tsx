@@ -3,13 +3,13 @@ import { Container } from "@/components/Container";
 import { CtaButton } from "@/components/lp2/CtaButton";
 import { Reveal } from "@/components/Reveal";
 import { Titulo } from "@/components/fresh/Titulo";
-import { ANCORA_CURSO } from "@/components/fresh/ancora";
+import { ANCORA_CURSO, ANCORA_ROTULO } from "@/components/fresh/ancora";
 import { withBasePath } from "@/lib/basePath";
 
-// Âncora de valor: o curso internacional de fresh frozen da própria Aline.
+// Âncora de valor: um curso internacional em cadáver fresh frozen, como
+// referência genérica de mercado (sem atribuir o valor ao curso da Aline).
 // Sem o valor da aula na página (igual à /lp2): o R$67 só aparece no ingresso
-// emitido, ao lado dos R$35 mil.
-// Mostra valor e autoridade ao mesmo tempo (ela não só fez, ela ensina).
+// emitido, no comparativo com o preço riscado (components/fresh/AncoraIngresso).
 // A frase do hands-on protege a promessa: é aula, não curso prático.
 export function Ancora() {
   return (
@@ -37,7 +37,7 @@ export function Ancora() {
                 <div className="mt-8 grid grid-cols-2 gap-px overflow-hidden rounded-[4px] border border-line bg-line">
                   <div className="bg-bg-3 px-5 py-5">
                     <div className="text-[11.5px] tracking-[0.12em] text-fg-faint uppercase">
-                      Curso internacional da Aline
+                      {ANCORA_ROTULO}
                     </div>
                     <div className="mt-1.5 font-serif text-[1.7rem] leading-tight text-fg-soft">
                       {ANCORA_CURSO}
@@ -57,8 +57,8 @@ export function Ancora() {
                 </div>
 
                 <p className="mt-7 max-w-[600px] text-[1.1rem] leading-[1.6] text-fg-soft">
-                  A Aline estudou em cadáver fresh frozen nos EUA e hoje dá esse curso
-                  fora do país. No dia 6, ela traz pra sua tela, nas imagens das dissecções
+                  É quanto um curso internacional presencial chega a custar. A Aline estudou
+                  em cadáver fresh frozen nos EUA e hoje dá cursos internacionais. No dia 6, ela traz pra sua tela, nas imagens das dissecções
                   dela, o que muda a segurança de quem aplica. Sem passagem, sem visto e sem
                   pagar em dólar ou euro.
                 </p>
