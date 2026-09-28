@@ -14,9 +14,12 @@
 //   - Fase "soKit": depois da aula, só o kit. Sem aula não há ingresso: o CTA
 //     vai direto ao checkout. Sem `checkoutUrl` o botão fica bloqueado
 //     ("Em breve") — preencha quando existir o checkout só do kit.
-//   - Sem "de/por" do próprio Protocolo (padrão da /fresh): o único valor
-//     riscado é o do ingresso da aula (`valorDe` do item bônus), que é o preço
-//     real dela vendida sozinha (R$67).
+//   - `valorDe` de cada item é o preço "de" mostrado riscado. O do Protocolo é o
+//     mesmo "de R$109,90" do order bump na Ticto; o da aula é o preço real do
+//     ingresso (R$67). A âncora é o total (R$176,90): total "de" e % de
+//     desconto são calculados (valorDeTotal / descontoPct), nunca escritos à mão.
+//     Na página o total aparece riscado sem o preço final; o "por" só aparece
+//     no ingresso emitido.
 //   - O preço do kit + aula nunca pode ficar abaixo de R$96,90 (aula R$67 +
 //     bump R$29,90): quem já comprou não pode ter pago mais caro.
 // ============================================================================
@@ -28,8 +31,8 @@ import { LIVE_DATE_ISO } from "@/lib/lotes";
 export type ItemOferta = {
   titulo: string;
   detalhe: string;
-  // Só no bônus: valor real dele vendido sozinho, mostrado riscado ("de presente").
-  valorDe?: number;
+  valorDe: number;
+  // true = sai "de presente" (o valor aparece riscado, sem somar ao preço).
   bonus?: boolean;
 };
 
@@ -49,6 +52,7 @@ const ITEM_PROTOCOLO: ItemOferta = {
   titulo: "Protocolo de Resgate Vascular: oclusão e necrose",
   detalhe:
     "Protocolo em PDF, prancha de parede, ficha hora a hora e 2 cards para a paciente",
+  valorDe: 109.9,
 };
 
 export const ITEM_AULA: ItemOferta = {
@@ -90,6 +94,17 @@ export function faseKitEm(ts: number): FaseKit | null {
     FASES.find((f) => ts >= Date.parse(f.startsAt) && ts < Date.parse(f.endsAt)) ??
     null
   );
+}
+
+/** Soma dos valores "de" de todos os itens (bônus incluso). */
+export function valorDeTotal(fase: FaseKit): number {
+  return fase.itens.reduce((s, i) => s + i.valorDe, 0);
+}
+
+/** % de desconto do preço sobre o total "de", arredondado. */
+export function descontoPct(fase: FaseKit): number {
+  const de = valorDeTotal(fase);
+  return de > fase.price ? Math.round((1 - fase.price / de) * 100) : 0;
 }
 
 /** R$ no padrão brasileiro, sem centavos quando inteiro: 67 → "R$67", 109.9 → "R$109,90". */

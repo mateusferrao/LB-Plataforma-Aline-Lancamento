@@ -1,50 +1,51 @@
 "use client";
 
-import { formatBRL, ITEM_AULA } from "@/lib/ofertaKit";
+import { descontoPct, formatBRL, valorDeTotal } from "@/lib/ofertaKit";
 import { useOfertaKit } from "@/lib/useOfertaKit";
 import { ANCORA_SERINGA } from "@/components/info/ancora";
 
-// Comparativo do ingresso emitido da /info (par do components/fresh/AncoraIngresso).
-// O riscado fica só na aula, pelo preço real dela vendida sozinha; o Protocolo
-// não tem "de/por". O preço sai da fase ativa (lib/ofertaKit.ts).
+// Comparativo do ingresso emitido da /info (par do components/fresh/AncoraIngresso):
+// cada item com o valor "de" riscado, o total "de" riscado e o preço da fase
+// em destaque, com o % de desconto calculado. Tudo sai de lib/ofertaKit.ts.
 export function AncoraIngresso() {
   const { fase, montado } = useOfertaKit();
-  if (!montado || fase?.id !== "comBonus" || !ITEM_AULA.valorDe) return null;
+  if (!montado || fase?.id !== "comBonus") return null;
 
-  const aula = formatBRL(ITEM_AULA.valorDe);
+  const pct = descontoPct(fase);
 
   return (
     <div className="text-left">
-      <div className="flex items-start justify-between gap-4">
-        <div>
-          <div className="text-[0.92rem] leading-snug text-fg-soft">Protocolo de Resgate Vascular</div>
-          <div className="mt-0.5 text-[0.78rem] text-fg-faint">
-            PDF, prancha, ficha e 2 cards · na hora
+      {fase.itens.map((item) => (
+        <div key={item.titulo} className="mt-3 flex items-start justify-between gap-4 first:mt-0">
+          <div>
+            <div className="text-[0.92rem] leading-snug text-fg-soft">
+              {item.bonus ? "Aula ao vivo Por Dentro da Face" : "Protocolo de Resgate Vascular"}
+            </div>
+            <div className="mt-0.5 text-[0.78rem] text-fg-faint">
+              {item.bonus ? "ingresso vendido sozinho · 06/10" : "PDF, prancha, ficha e 2 cards · na hora"}
+            </div>
+          </div>
+          <div className="shrink-0 text-right">
+            <s className="text-[0.95rem] whitespace-nowrap text-fg-faint">{formatBRL(item.valorDe)}</s>
+            {item.bonus && (
+              <div className="mt-0.5 text-[0.78rem] font-semibold text-wine-ink">de presente</div>
+            )}
           </div>
         </div>
-        <span className="shrink-0 text-[0.85rem] font-semibold text-fg-soft">incluso</span>
-      </div>
+      ))}
 
-      <div className="mt-3 flex items-start justify-between gap-4">
-        <div>
-          <div className="text-[0.92rem] leading-snug text-fg-soft">Aula ao vivo Por Dentro da Face</div>
-          <div className="mt-0.5 text-[0.78rem] text-fg-faint">
-            valor do ingresso vendido sozinho
-          </div>
-        </div>
-        <div className="shrink-0 text-right">
-          <s className="font-serif text-[1.3rem] leading-none whitespace-nowrap text-fg-faint decoration-wine-bright decoration-2">
-            {aula}
-          </s>
-          <div className="mt-1 text-[0.78rem] font-semibold text-wine-ink">de presente</div>
-        </div>
+      <div className="mt-3 flex items-baseline justify-between gap-4">
+        <div className="text-[0.92rem] text-fg-soft">Valor total</div>
+        <s className="font-serif text-[1.3rem] leading-none whitespace-nowrap text-fg-faint decoration-wine-bright decoration-2">
+          {formatBRL(valorDeTotal(fase))}
+        </s>
       </div>
 
       <div className="my-3.5 border-t border-dashed border-line" aria-hidden="true" />
 
       <div className="flex items-center justify-between gap-4">
         <div>
-          <div className="text-[1rem] font-semibold text-fg">Você leva os dois por</div>
+          <div className="text-[1rem] font-semibold text-fg">No seu ingresso, por</div>
           <div className="mt-0.5 text-[0.82rem] text-fg-soft">
             ou 12x de {fase.parcela12x} no cartão
           </div>
@@ -56,7 +57,7 @@ export function AncoraIngresso() {
 
       <div className="mt-4 flex justify-center">
         <span className="rounded-full bg-wine px-3.5 py-1.5 text-[11px] font-semibold tracking-[0.14em] text-on-wine uppercase">
-          Aula de {aula} de presente · só até 06/10
+          {pct > 0 ? `${pct}% de desconto · ` : ""}só até 06/10
         </span>
       </div>
       <p className="mt-3 text-center font-serif text-[1.02rem] leading-snug text-fg italic">

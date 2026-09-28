@@ -1,24 +1,24 @@
 "use client";
 
-import { FASES, formatBRL } from "@/lib/ofertaKit";
+import { FASES, formatBRL, valorDeTotal } from "@/lib/ofertaKit";
 import { useOfertaKit } from "@/lib/useOfertaKit";
 
-// Lista do que a pessoa leva. Sem "de/por" do Protocolo (padrão da /fresh): o
-// único valor riscado é o da aula de presente, pelo preço real dela vendida
-// sozinha (lib/ofertaKit.ts). Antes de montar, usa a 1ª fase (a vigente na
-// campanha), igual ao HTML estático, pra não haver salto nem erro de hidratação.
+// Lista do que a pessoa leva, com o valor "de" riscado ao lado de cada item e
+// o total "de" embaixo (lib/ofertaKit.ts). O preço final não aparece aqui: com
+// a aula de presente, ele só aparece no ingresso emitido. Antes de montar, usa
+// a 1ª fase (a vigente na campanha), igual ao HTML estático, pra não haver
+// salto nem erro de hidratação.
 export function OfertaItens() {
   const { fase, montado } = useOfertaKit();
-  const itens = (montado ? fase : FASES[0])?.itens ?? [];
+  const f = (montado ? fase : FASES[0]) ?? null;
+  const itens = f?.itens ?? [];
 
   return (
     <div className="grid content-center">
-      {itens.map((item, i) => (
+      {itens.map((item) => (
         <div
           key={item.titulo}
-          className={`grid grid-cols-[22px_1fr_auto] gap-x-4 py-[19px] ${
-            i < itens.length - 1 ? "border-b border-line" : ""
-          }`}
+          className="grid grid-cols-[22px_1fr_auto] gap-x-4 border-b border-line py-[19px]"
         >
           <span
             className="mt-[11px] h-1.5 w-1.5 shrink-0 rounded-[1px] bg-wine-ink"
@@ -33,18 +33,30 @@ export function OfertaItens() {
             {item.titulo}
             <small className="mt-1 block text-[0.87rem] text-fg-faint">{item.detalhe}</small>
           </span>
-          {item.bonus && item.valorDe ? (
-            <span className="text-right text-[0.95rem] whitespace-nowrap">
-              <s className="text-fg-faint">{formatBRL(item.valorDe)}</s>
+          <span className="text-right text-[0.95rem] whitespace-nowrap">
+            <s className="text-fg-faint">{formatBRL(item.valorDe)}</s>
+            {item.bonus && (
               <span className="mt-0.5 block text-[0.85rem] font-semibold text-wine-ink">
                 de presente
               </span>
-            </span>
-          ) : (
-            <span />
-          )}
+            )}
+          </span>
         </div>
       ))}
+      {f && itens.length > 1 && (
+        <div className="grid grid-cols-[22px_1fr_auto] gap-x-4 py-[19px]">
+          <span />
+          <span className="text-[1.1rem] text-fg">
+            Valor total
+            <small className="mt-1 block text-[0.87rem] text-fg-faint">
+              Seu valor com desconto aparece no ingresso
+            </small>
+          </span>
+          <s className="text-right font-serif text-[1.3rem] whitespace-nowrap text-fg-faint decoration-wine-bright decoration-2">
+            {formatBRL(valorDeTotal(f))}
+          </s>
+        </div>
+      )}
     </div>
   );
 }

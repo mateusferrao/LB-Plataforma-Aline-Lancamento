@@ -65,7 +65,7 @@ export function BonusAula() {
 
                 <p className="mt-6 text-[1rem] text-fg-soft">
                   Valor do ingresso vendido sozinho:{" "}
-                  <s className="text-fg-faint">{formatBRL(ITEM_AULA.valorDe ?? 0)}</s>{" "}
+                  <s className="text-fg-faint">{formatBRL(ITEM_AULA.valorDe)}</s>{" "}
                   <span className="font-semibold text-fg">· pra você, de presente</span>
                 </p>
 

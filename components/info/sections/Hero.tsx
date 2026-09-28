@@ -74,7 +74,7 @@ export function Hero() {
               <SoComBonus>
                 <Bullet>
                   De presente até 06/10: a aula ao vivo Por Dentro da Face, que sozinha custa{" "}
-                  {formatBRL(ITEM_AULA.valorDe ?? 0)}
+                  {formatBRL(ITEM_AULA.valorDe)}
                 </Bullet>
               </SoComBonus>
             </ul>
