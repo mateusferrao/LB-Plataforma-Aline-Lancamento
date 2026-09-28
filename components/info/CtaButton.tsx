@@ -25,7 +25,7 @@ export function CtaButton({ children, variant = "dark", className = "" }: Props)
       ? "bg-wine text-on-wine hover:bg-wine-hover"
       : "bg-fg text-wine hover:bg-white";
 
-  const label = bloqueado ? "Em breve" : (children ?? fase?.ctaLabel ?? "Quero o Mapa + a aula ao vivo");
+  const label = bloqueado ? "Em breve" : (children ?? fase?.ctaLabel ?? "Quero o Protocolo + a aula ao vivo");
 
   return (
     <a
@@ -40,14 +40,14 @@ export function CtaButton({ children, variant = "dark", className = "" }: Props)
           return;
         }
         trackCustom("ClickCheckout", {
-          content_name: "Mapa das Intercorrências",
-          produto: "kit-mapa",
+          content_name: "Protocolo de Resgate Vascular",
+          produto: "kit-protocolo",
           fase: fase.id,
           value: fase.price,
           currency: "BRL",
         });
         gaEvent("click_checkout", {
-          produto: "kit-mapa",
+          produto: "kit-protocolo",
           fase: fase.id,
           value: fase.price,
           currency: "BRL",

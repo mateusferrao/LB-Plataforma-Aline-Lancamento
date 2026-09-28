@@ -1,20 +1,20 @@
 import { Container } from "@/components/Container";
 import { Reveal } from "@/components/Reveal";
 
-// Os 3 passos saem da página "Como usar este kit" (p. 2 do PDF). Reduz a
-// complexidade percebida: o kit não é mais um curso pra assistir, é um hábito.
+// As 3 peças de uso (pág. 3 do protocolo). Reduz a complexidade percebida: não
+// é um curso pra assistir, são ferramentas prontas pro dia em que precisar.
 const PASSOS = [
   {
-    t: "Imprima e deixe à vista",
-    d: "As pranchas 01 e 03 foram feitas pra parede do consultório. Numa emergência, ninguém procura arquivo no celular.",
+    t: "Imprima a prancha de parede",
+    d: "O protocolo de oclusão inteiro em uma folha, na sala de atendimento. Numa emergência, ninguém procura arquivo no celular.",
   },
   {
-    t: "Revise antes de atender",
-    d: "Um minuto na prancha 04 antes do primeiro atendimento do dia deixa os sinais de alerta frescos na memória.",
+    t: "Deixe fichas impressas",
+    d: "Em cada caso, você anota hora a hora: frascos, coloração e teste de pressão. Sem depender da memória no meio do susto.",
   },
   {
-    t: "Envie o card à paciente",
-    d: "Coloque seu contato no card e envie por WhatsApp depois do procedimento. Ela sabe quando te chamar, e você é avisada cedo.",
+    t: "Envie os cards à paciente",
+    d: "Coloque seu nome e WhatsApp e mande ao liberar a paciente. Ela sabe o que fazer em casa e te manda as fotos.",
   },
 ];
 

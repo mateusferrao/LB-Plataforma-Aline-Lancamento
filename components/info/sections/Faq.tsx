@@ -7,38 +7,43 @@ import { SoAntesDoEnvio } from "@/components/info/SoAntesDoEnvio";
 import { ENVIO_KIT_DATA } from "@/lib/ofertaKit";
 
 // WhatsApp do time (mesmo número do botão flutuante), com contexto de quem já
-// tem o ingresso da aula e quer o Mapa sem pagar a aula duas vezes.
+// tem o ingresso da aula e quer o Protocolo sem pagar a aula duas vezes.
 const WHATSAPP_JA_COMPREI =
   "https://wa.me/5531953491799?text=" +
-  encodeURIComponent("Oi! Já comprei o ingresso da aula Por Dentro da Face e quero o Mapa das Intercorrências.");
+  encodeURIComponent("Oi! Já comprei o ingresso da aula Por Dentro da Face e quero o Protocolo de Resgate Vascular.");
 
 type Item = { q: string; a: React.ReactNode; soComBonus?: boolean };
 
 const FAQS: Item[] = [
   {
     q: "É um curso?",
-    a: "Não. É um kit de referência clínica para consulta rápida: pranchas para imprimir, tabela de zonas, glossário, card da paciente e referências. Ele organiza o que a literatura publicou sobre zonas de risco, sinais de alerta e conduta, pra você ter à vista na hora que precisa.",
+    a: "Não. É o protocolo de conduta que a Dra. Aline utiliza para oclusão e necrose, organizado pra você consultar na hora: um PDF com o passo a passo, a prancha de parede, a ficha de acompanhamento hora a hora e dois cards para a paciente.",
   },
   {
-    q: "Como recebo o kit?",
+    q: "Tem as medicações?",
+    a: "Tem. Para cada fase, as medicações que a Dra. Aline utiliza, com a posologia e o momento de começar. A prescrição segue a sua habilitação profissional e a avaliação de cada paciente.",
+  },
+  {
+    q: "Como recebo?",
     a: (
-      <SoAntesDoEnvio senao="Pelo WhatsApp. Depois da confirmação do pagamento, você recebe no seu WhatsApp o acesso ao PDF de 10 páginas, em formato paisagem, e ao card da paciente em PNG, no formato de tela do celular.">
-        Pelo WhatsApp, no dia {ENVIO_KIT_DATA}. Você recebe no seu WhatsApp o acesso ao PDF de 10
-        páginas, em formato paisagem, e ao card da paciente em PNG, no formato de tela do celular.
+      <SoAntesDoEnvio senao="Pelo WhatsApp. Depois da confirmação do pagamento, você recebe no seu WhatsApp o PDF do protocolo em A4, a prancha de parede e a ficha em arquivos separados pra imprimir, e os dois cards da paciente em PNG, no formato de tela do celular.">
+        Pelo WhatsApp, no dia {ENVIO_KIT_DATA}. Você recebe o PDF do protocolo em A4, a prancha
+        de parede e a ficha em arquivos separados pra imprimir, e os dois cards da paciente em
+        PNG, no formato de tela do celular.
       </SoAntesDoEnvio>
     ),
   },
   {
     q: "Posso imprimir?",
-    a: "Pode e deve. As pranchas 01 e 03 foram feitas pra parede do consultório. O PDF é em formato paisagem: em A4 já fica legível, e em A3 dá pra ler de longe.",
+    a: "Pode e deve. A prancha de parede foi feita pra ficar na sala de atendimento, e a ficha é pra imprimir e preencher em cada caso. Tudo em A4, em impressora comum.",
   },
   {
     q: "Ainda estou começando. Serve pra mim?",
-    a: "Serve. Quanto antes você souber onde o risco se concentra e quais sinais pedem ação, mais segura fica cada aplicação. O Mapa não ensina técnica: ele te ajuda a reconhecer o sinal e saber o que fazer primeiro.",
+    a: "Serve. O melhor momento pra saber o que fazer numa oclusão é antes de precisar. O protocolo não ensina técnica de aplicação: ele te diz o que fazer, e em que ordem, se a cor mudar.",
   },
   {
-    q: "O Mapa substitui protocolo ou formação?",
-    a: "Não. É material educativo. Doses, medicamentos e condutas de tratamento seguem os consensos atualizados e a sua formação. O Mapa deixa o essencial à vista, pra você não depender só da memória numa emergência.",
+    q: "O protocolo substitui formação?",
+    a: "Não. É material educativo com a conduta que a Dra. Aline utiliza. Ele não substitui formação, protocolos oficiais nem a orientação do seu conselho. O que ele faz é deixar o passo a passo na sua mão, pra você não depender só da memória numa emergência.",
   },
   {
     q: "Como funciona a aula de presente?",
@@ -50,7 +55,7 @@ const FAQS: Item[] = [
     soComBonus: true,
     a: (
       <>
-        Sua vaga na aula continua garantida. Se você quer o Mapa também,{" "}
+        Sua vaga na aula continua garantida. Se você quer o Protocolo também,{" "}
         <a
           href={WHATSAPP_JA_COMPREI}
           target="_blank"

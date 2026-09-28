@@ -3,52 +3,44 @@ import { Container } from "@/components/Container";
 import { Reveal } from "@/components/Reveal";
 import { withBasePath } from "@/lib/basePath";
 
-// "Show over tell": as páginas reais do kit (renderizadas do PDF), cada uma com
-// o benefício na frente. Números só os do próprio kit, com a fonte citada.
+// "Show over tell": páginas reais do protocolo (render de docs/kit-protocolo,
+// versão ?lp=1 com os nomes de medicamentos desfocados — política da Meta).
+// Fotos do caso real de necrose NUNCA entram aqui (compliance: sem antes/depois).
 const PAGINAS = [
   {
-    src: "/images/info/prancha-01-zonas.webp",
-    rotulo: "Prancha 01 · Mapa das zonas de risco",
-    titulo: "Onde o risco se concentra",
+    src: "/images/info/protocolo-p06.webp",
+    rotulo: "Prancha de parede · Oclusão",
+    titulo: "Se a cor mudar, siga esta ordem",
     texto:
-      "As 8 regiões de maior atenção, as artérias de cada uma e onde acontecem os casos publicados de perda visual: nariz 56%, glabela 27%, testa 19% e sulco nasogeniano 15%.",
-    fonte:
-      "48 casos publicados entre 2015 e 2018; um caso pode envolver mais de uma região. Beleznay et al., Aesthetic Surgery Journal, 2019.",
+      "O protocolo de oclusão inteiro em uma folha: os 6 passos, as decisões de sim ou não, a régua das 5 horas, as medicações imediatas e o que precisa estar à mão. Feita pra imprimir e deixar na sala de atendimento.",
   },
   {
-    src: "/images/info/tabela-zonas.webp",
-    rotulo: "Complemento da prancha 01",
-    titulo: "Cada zona em detalhe",
+    src: "/images/info/protocolo-p08.webp",
+    rotulo: "Oclusão · Passo 3",
+    titulo: "Hialuronidase por encharcamento",
     texto:
-      "Nível de risco, estruturas de atenção e o que pode acontecer em cada região, numa tabela só.",
+      "Quanto aplicar, em quais regiões e por onde começar: o ponto que você preencheu por último. Depois, como avaliar a coloração e fazer o teste de pressão.",
   },
   {
-    src: "/images/info/prancha-02-planos.webp",
-    rotulo: "Prancha 02 · Profundidade e planos",
-    titulo: "Onde o risco se esconde",
+    src: "/images/info/protocolo-p09.webp",
+    rotulo: "Oclusão · Passos 4 a 6",
+    titulo: "Se não reverter na primeira aplicação",
     texto:
-      "Superficial não é sinônimo de seguro. Na têmpora, a artéria temporal superficial corre logo abaixo da pele. A prancha mostra os planos da face, da pele ao periósteo.",
+      "O que repetir a cada hora, quando entrar o ozônio, quando liberar a paciente para casa, o que ela faz lá e o que avaliar no dia seguinte.",
   },
   {
-    src: "/images/info/prancha-03-protocolo.webp",
-    rotulo: "Prancha 03 · Protocolo de parede",
-    titulo: "Se acontecer, faça assim",
+    src: "/images/info/protocolo-p11.webp",
+    rotulo: "Ficha de acompanhamento",
+    titulo: "Registro hora a hora",
     texto:
-      "Os sinais de alerta, a linha do tempo das intercorrências, a conduta imediata em 5 passos e o checklist do kit de emergência. Feita pra ficar na parede do consultório.",
+      "Uma ficha pra imprimir e preencher em cada caso: horário, frascos, coloração, teste de pressão, liberação e dia seguinte. Você não depende da memória no meio da emergência.",
   },
   {
-    src: "/images/info/prancha-04-normal-ou-alerta.webp",
-    rotulo: "Prancha 04 · Diagnóstico rápido",
-    titulo: "Normal ou alerta?",
+    src: "/images/info/protocolo-p14.webp",
+    rotulo: "Necrose · Passos 3 e 4",
+    titulo: "Da oclusão revertida à cicatrização",
     texto:
-      "Cor, dor, inchaço, temperatura, enchimento capilar, pele e visão: o esperado e o sinal de alerta, lado a lado. Um minuto nela antes do primeiro atendimento deixa os sinais frescos na memória.",
-  },
-  {
-    src: "/images/info/glossario.webp",
-    rotulo: "Glossário e referências",
-    titulo: "Os termos que importam, e de onde vem cada informação",
-    texto:
-      "Oclusão vascular, livedo, enchimento capilar, efeito Tyndall, biofilme e mais 7 termos-chave. No fim, as referências da literatura usadas no kit.",
+      "Os 9 passos do cuidado da necrose: garantir o fluxo, evitar a infecção, o que proibir à paciente, a limpeza, o laser, a alimentação e o filtro solar dos 60 dias. Com o calendário da recuperação.",
   },
 ];
 
@@ -62,12 +54,12 @@ export function Conteudo() {
           </span>
           <h2 className="mt-[18px] text-balance font-serif font-semibold text-[1.95rem] leading-[1.12] sm:text-[2.6rem]">
             <span className="titulo-grifo">
-              O que você precisa ter à vista, em pranchas para imprimir.
+              Tudo o que você precisa ter na mão, da hora zero aos 60 dias.
             </span>
           </h2>
           <p className="mt-[18px] max-w-[560px] text-[1.08rem] leading-[1.55] text-fg-soft">
-            São 10 páginas em PDF, no formato paisagem, mais o card da paciente em PNG. Veja
-            por dentro:
+            Um PDF de 22 páginas em A4, a prancha de parede e a ficha em arquivos separados
+            pra imprimir, e dois cards em PNG pra mandar à paciente. Veja por dentro:
           </p>
         </Reveal>
       </Container>
@@ -77,18 +69,18 @@ export function Conteudo() {
           {PAGINAS.map((p, i) => (
             <Reveal
               key={p.src}
-              className={`grid grid-cols-1 items-center gap-6 md:gap-10 ${
-                i % 2 === 1 ? "md:grid-cols-[0.75fr_1.25fr]" : "md:grid-cols-[1.25fr_0.75fr]"
+              className={`grid grid-cols-1 items-center gap-6 md:gap-12 ${
+                i % 2 === 1 ? "md:grid-cols-[1.1fr_0.9fr]" : "md:grid-cols-[0.9fr_1.1fr]"
               }`}
             >
-              <div className={i % 2 === 1 ? "md:order-last" : ""}>
+              <div className={`mx-auto w-full max-w-[440px] ${i % 2 === 1 ? "md:order-last" : ""}`}>
                 <Image
                   src={withBasePath(p.src)}
                   alt={`${p.rotulo}: ${p.titulo}`}
-                  width={1400}
-                  height={989}
-                  sizes="(min-width: 1060px) 600px, (min-width: 768px) 58vw, 92vw"
-                  className="h-auto w-full rounded-[6px] border border-line-soft"
+                  width={1100}
+                  height={1556}
+                  sizes="(min-width: 768px) 440px, 92vw"
+                  className="h-auto w-full rounded-[4px] border border-line-soft"
                 />
               </div>
               <div>
@@ -99,11 +91,6 @@ export function Conteudo() {
                   {p.titulo}
                 </h3>
                 <p className="mt-3 text-[1.02rem] leading-[1.6] text-fg-soft">{p.texto}</p>
-                {p.fonte && (
-                  <p className="mt-3 text-[0.85rem] leading-[1.5] text-fg-faint italic">
-                    {p.fonte}
-                  </p>
-                )}
               </div>
             </Reveal>
           ))}

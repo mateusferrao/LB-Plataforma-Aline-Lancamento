@@ -3,40 +3,55 @@ import { Container } from "@/components/Container";
 import { Reveal } from "@/components/Reveal";
 import { withBasePath } from "@/lib/basePath";
 
-// Ponte com a dor nº1 da pesquisa (paciente, confiança, "passar segurança à
-// paciente"), sem prometer mais pacientes: o card mostra o cuidado por escrito.
+// Ponte com a dor nº1 da pesquisa (a paciente, a confiança), sem prometer mais
+// pacientes: os cards mostram o cuidado por escrito. Conteúdo dos cards vem só
+// dos protocolos (compressa quente de 1 em 1 hora, fotos, retorno cedo; e os
+// cuidados de casa da necrose).
 export function CardPaciente() {
   return (
     <section className="bg-bg-2 py-16 sm:py-[92px]">
       <Container>
-        <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-[1.1fr_0.9fr] md:gap-14">
+        <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-[1fr_1fr] md:gap-14">
           <Reveal>
             <span className="text-[12px] font-semibold tracking-[0.24em] text-wine-ink uppercase">
-              Incluso no kit · card da paciente
+              Incluso · 2 cards para a paciente
             </span>
             <h2 className="mt-[18px] text-balance font-serif font-semibold text-[1.95rem] leading-[1.12] sm:text-[2.4rem]">
               <span className="titulo-grifo">
-                Sua paciente sai sabendo o que é normal e quando te chamar.
+                Sua paciente vai pra casa sabendo exatamente o que fazer.
               </span>
             </h2>
             <p className="mt-6 max-w-[520px] text-[1.06rem] leading-[1.6] text-fg-soft">
-              O card de cuidados vem em PNG, no formato de tela do celular. Você escreve seu
-              nome e WhatsApp, envia logo depois do procedimento e ela salva a imagem.
+              <strong className="font-semibold text-fg">Card de oclusão:</strong> compressa
+              quente a cada hora, fotos pra você acompanhar e retorno no dia seguinte, cedo.
+            </p>
+            <p className="mt-3 max-w-[520px] text-[1.06rem] leading-[1.6] text-fg-soft">
+              <strong className="font-semibold text-fg">Card de necrose:</strong> os cuidados
+              de casa até cicatrizar, do que não pode encostar na região ao filtro solar dos 60
+              dias.
             </p>
             <p className="mt-4 max-w-[520px] text-[1.06rem] leading-[1.6] text-fg-soft">
-              Você fica sabendo cedo de qualquer alteração, que é quando ainda dá pra agir. E
-              ela vê, por escrito, o cuidado que você teve com ela.
+              Vêm em PNG, no formato de tela do celular. Você escreve seu nome e WhatsApp e
+              envia. Ela vê, por escrito, o cuidado que você teve com ela.
             </p>
           </Reveal>
 
-          <Reveal delay={90} className="mx-auto w-full max-w-[320px]">
+          <Reveal delay={90} className="mx-auto grid w-full max-w-[440px] grid-cols-2 gap-4">
             <Image
-              src={withBasePath("/images/info/card-paciente.webp")}
-              alt="Card de cuidados para a paciente: o que é normal depois do procedimento e quando chamar a profissional imediatamente"
+              src={withBasePath("/images/info/card-oclusao.webp")}
+              alt="Card da paciente para a oclusão: compressa quente a cada 1 hora, nunca gelo, fotos e retorno no dia seguinte"
               width={560}
               height={996}
-              sizes="320px"
-              className="h-auto w-full"
+              sizes="220px"
+              className="h-auto w-full rounded-[10px] border border-line-soft"
+            />
+            <Image
+              src={withBasePath("/images/info/card-necrose.webp")}
+              alt="Card da paciente para a necrose: cuidados de casa até cicatrizar"
+              width={560}
+              height={996}
+              sizes="220px"
+              className="mt-10 h-auto w-full rounded-[10px] border border-line-soft"
             />
           </Reveal>
         </div>

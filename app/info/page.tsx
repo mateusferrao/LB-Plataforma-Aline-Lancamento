@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Hero } from "@/components/info/sections/Hero";
 import { Problem } from "@/components/info/sections/Problem";
+import { NuncaGelo } from "@/components/info/sections/NuncaGelo";
 import { Conteudo } from "@/components/info/sections/Conteudo";
 import { ComoUsar } from "@/components/info/sections/ComoUsar";
 import { CardPaciente } from "@/components/info/sections/CardPaciente";
@@ -14,20 +15,21 @@ import { FinalCta } from "@/components/info/sections/FinalCta";
 import { Footer } from "@/components/Footer";
 import { StickyCta } from "@/components/info/StickyCta";
 
-// /info: LP do kit "Mapa das Intercorrências" como produto principal, com a
-// aula ao vivo Por Dentro da Face de bônus até 06/10. Preço, checkout e fases
-// da oferta vivem em lib/ofertaKit.ts. Estratégia e copy anotada em
-// docs/info/README.md. Sem VSL: o kit não tem vídeo e a urgência real é a
-// data da aula. Componentes próprios em components/info/; Authority e
-// SocialProof são reaproveitados das outras LPs.
+// /info: LP do "Protocolo de Resgate Vascular" (oclusão e necrose, conteúdo da
+// Dra. Aline) como produto principal, com a aula ao vivo Por Dentro da Face de
+// bônus até 06/10. Substituiu o kit "Mapa das Intercorrências" em 28/09/2026
+// (mesmo checkout). Preço, checkout e fases em lib/ofertaKit.ts; estratégia e
+// copy anotada em docs/info/README.md. Sem nomes de medicamento nem fotos de
+// paciente na LP (política da Meta / compliance). Authority e SocialProof são
+// reaproveitados das outras LPs.
 export const metadata: Metadata = {
-  title: "Mapa das Intercorrências na Harmonização Facial · Dra. Aline Filgueiras",
+  title: "Protocolo de Resgate Vascular: oclusão e necrose · Dra. Aline Filgueiras",
   description:
-    "4 pranchas para imprimir com as zonas de risco da face, os sinais de alerta e a conduta imediata. De bônus, a aula ao vivo Por Dentro da Face (06/10).",
+    "O que fazer, minuto a minuto, se uma oclusão acontecer na sua cadeira. Prancha de parede, ficha hora a hora, medicações e cards para a paciente. De bônus, a aula ao vivo Por Dentro da Face (06/10).",
   openGraph: {
-    title: "Mapa das Intercorrências na Harmonização Facial · Dra. Aline Filgueiras",
+    title: "Protocolo de Resgate Vascular · Dra. Aline Filgueiras",
     description:
-      "Saiba em segundos se o que você vê na paciente é normal ou é alerta, e o que fazer nos primeiros minutos.",
+      "O que fazer, minuto a minuto, se uma oclusão acontecer na sua cadeira. Do primeiro gesto à cicatrização.",
     locale: "pt_BR",
     type: "website",
   },
@@ -39,6 +41,7 @@ export default function Info() {
       <main>
         <Hero />
         <Problem />
+        <NuncaGelo />
         <Conteudo />
         <ComoUsar />
         <CardPaciente />

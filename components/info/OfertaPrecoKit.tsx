@@ -15,7 +15,7 @@ export function OfertaPrecoKit() {
     return (
       <>
         <div className="text-[12px] tracking-[0.16em] uppercase opacity-90">
-          Mapa das Intercorrências
+          Protocolo de Resgate Vascular
         </div>
         <div className="my-1.5 font-serif text-[2.2rem] leading-tight">Nova oferta em breve</div>
       </>

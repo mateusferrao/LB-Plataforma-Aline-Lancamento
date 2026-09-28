@@ -5,7 +5,7 @@ import { FASES, faseKitEm } from "@/lib/ofertaKit";
 // Preço do ViewContent = lote ativo no BUILD (é <Script>, não reativo). Calculado
 // no escopo do módulo (uma vez, no build) para não chamar Date.now() no render.
 const VIEW_VALUE = (loteAtivoEm(Date.now()) ?? LOTES[0]).price;
-// Mesma ideia para a /info (kit Mapa das Intercorrências, lib/ofertaKit.ts):
+// Mesma ideia para a /info (Protocolo de Resgate Vascular, lib/ofertaKit.ts):
 // o script é um só no layout, então escolhe o conteúdo pelo pathname.
 const KIT_VIEW_VALUE = (faseKitEm(Date.now()) ?? FASES[0]).price;
 
@@ -29,7 +29,7 @@ export function MetaPixel() {
           fbq('init', '${pixelId}');
           fbq('track', 'PageView');
           fbq('track', 'ViewContent', /\\/info(\\.html)?(\\/|$)/.test(location.pathname) ? {
-            content_name: 'Mapa das Intercorrências',
+            content_name: 'Protocolo de Resgate Vascular',
             content_category: 'kit',
             value: ${KIT_VIEW_VALUE},
             currency: 'BRL'

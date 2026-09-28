@@ -1,13 +1,15 @@
 import { Container } from "@/components/Container";
 import { Reveal } from "@/components/Reveal";
 
-// Dores na voz da pesquisa de público ("medo de errar", "receio de realizar
-// alguns procedimentos"): o medo é de não saber o que fazer, não da técnica.
-// Tom de preparo, nunca de pânico (ver docs/criativos/README.md, compliance).
+// As 4 dúvidas que paralisam na hora. Cada uma tem resposta literal no
+// protocolo da Aline (calor e nunca gelo; 1 frasco por hora; alta após 5
+// protocolos; pústulas = descamação → casquinhas). A pesquisa de público fala
+// em "medo" e "insegurança", então o tom é de preparo, nunca de pânico.
 const PAINS = [
-  "A paciente manda uma foto à noite e você fica em dúvida: é o roxo esperado ou é o começo de um problema?",
-  "Na glabela e no nariz, a mão hesita. Você sabe que ali o risco é maior, mas não tem o mapa à vista.",
-  "O que fazer numa emergência está espalhado em anotações de curso e PDFs no celular. Na hora, ninguém procura arquivo.",
+  "A cor muda no meio da aplicação e você não sabe se massageia, se esquenta ou se esfria.",
+  "Você aplicou a hialuronidase e não reverteu. Repete? Quanto? Por quanto tempo?",
+  "Já se passaram horas. Você manda a paciente pra casa ou não?",
+  "Ela volta no dia seguinte com pústulas, e você não sabe se é piora ou o caminho da cicatrização.",
 ];
 
 export function Problem() {
@@ -23,9 +25,12 @@ export function Problem() {
               Você sabe que é raro. Também sabe que, se acontecer, vai ser na sua cadeira.
             </span>
           </h2>
+          <p className="mt-[18px] max-w-[560px] text-[1.08rem] leading-[1.55] text-fg-soft">
+            E, na hora, as dúvidas chegam todas juntas:
+          </p>
         </Reveal>
 
-        <div className="mt-[38px] grid grid-cols-1 gap-4 sm:grid-cols-3">
+        <div className="mt-[30px] grid grid-cols-1 gap-4 sm:grid-cols-2">
           {PAINS.map((pain, i) => (
             <Reveal
               key={pain}
@@ -40,8 +45,8 @@ export function Problem() {
 
         <Reveal>
           <p className="mt-9 max-w-[600px] font-serif text-[1.28rem] leading-[1.4] text-fg italic">
-            Intercorrência não avisa. O que você controla é o quanto está preparada quando
-            ela chega. Na dúvida, trate como alerta: tempo é tecido.
+            O protocolo responde cada uma delas, na ordem em que elas aparecem. Você não
+            precisa decidir nada no susto: só seguir o próximo passo.
           </p>
         </Reveal>
       </Container>

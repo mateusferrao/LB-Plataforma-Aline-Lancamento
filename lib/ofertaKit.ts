@@ -1,5 +1,7 @@
 // ============================================================================
-//  OFERTA DO KIT "MAPA DAS INTERCORRÊNCIAS" (/info) — FONTE ÚNICA DA VERDADE
+//  OFERTA DO "PROTOCOLO DE RESGATE VASCULAR" (/info) — FONTE ÚNICA DA VERDADE
+//  (substituiu o kit "Mapa das Intercorrências" em 28/09/2026; mesmo checkout,
+//  mesmo preço e mesmo "de" do order bump na Ticto)
 //  Para mudar preço, parcela, checkout ou bônus da /info, edite SÓ o array
 //  FASES abaixo. Mesma lógica de lib/lotes.ts (datas no fuso de Brasília,
 //  commit → deploy sozinho).
@@ -9,7 +11,7 @@
 //     (LIVE_DATE_ISO). A aula não tem gravação, então o bônus acaba com ela.
 //   - Fase "soKit": depois da aula, só o kit. Sem `checkoutUrl` o botão fica
 //     bloqueado ("Em breve") — preencha quando existir o checkout só do kit.
-//   - `valorDe` de cada item é o preço "de" mostrado riscado. O do Mapa é o
+//   - `valorDe` de cada item é o preço "de" mostrado riscado. O do Protocolo é o
 //     mesmo "de R$109,90" do order bump na Ticto; o da aula é o preço real do
 //     ingresso (R$67). Total "de" e % de desconto são calculados (valorDeTotal
 //     / descontoPct), nunca escritos à mão.
@@ -19,7 +21,7 @@
 
 import { LIVE_DATE_ISO } from "@/lib/lotes";
 
-// Envio do kit: até o fim de 01/10 (Brasília), o Mapa ainda não foi enviado e a
+// Envio do kit: até o fim de 01/10 (Brasília), o Protocolo ainda não foi enviado e a
 // /info avisa "chega no seu WhatsApp no dia 01/10". A partir de ENVIO_KIT_ATE_ISO
 // os avisos somem sozinhos e volta o "chega após a confirmação do pagamento"
 // (components/info/SoAntesDoEnvio.tsx). Pra outra data, troque só estas duas.
@@ -46,10 +48,10 @@ export type FaseKit = {
   itens: ItemOferta[];
 };
 
-const ITEM_MAPA: ItemOferta = {
-  titulo: "Mapa das Intercorrências na Harmonização Facial",
+const ITEM_PROTOCOLO: ItemOferta = {
+  titulo: "Protocolo de Resgate Vascular: oclusão e necrose",
   detalhe:
-    "4 pranchas para imprimir, tabela de zonas, glossário, card da paciente em PNG e referências",
+    "Protocolo em PDF, prancha de parede, ficha hora a hora e 2 cards para a paciente",
   valorDe: 109.9,
 };
 
@@ -69,8 +71,8 @@ export const FASES: FaseKit[] = [
     priceLabel: "R$97",
     parcela12x: "R$10,03",
     checkoutUrl: "https://payment.ticto.app/O74848DBC",
-    ctaLabel: "Quero o Mapa + a aula ao vivo",
-    itens: [ITEM_MAPA, ITEM_AULA],
+    ctaLabel: "Quero o Protocolo + a aula ao vivo",
+    itens: [ITEM_PROTOCOLO, ITEM_AULA],
   },
   {
     // Preço do kit sozinho ainda não definido (decidir pelos resultados).
@@ -81,8 +83,8 @@ export const FASES: FaseKit[] = [
     price: 97,
     priceLabel: "R$97",
     parcela12x: "R$10,03",
-    ctaLabel: "Quero o Mapa das Intercorrências",
-    itens: [ITEM_MAPA],
+    ctaLabel: "Quero o Protocolo de Resgate Vascular",
+    itens: [ITEM_PROTOCOLO],
   },
 ];
 

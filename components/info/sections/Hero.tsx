@@ -8,11 +8,13 @@ import { ENVIO_KIT_DATA } from "@/lib/ofertaKit";
 import { SoComBonus } from "@/components/info/SoComBonus";
 import { withBasePath } from "@/lib/basePath";
 
-const CHIPS = ["4 pranchas", "Tabela de zonas", "Glossário", "Card para a paciente"];
+const CHIPS = ["Prancha de parede", "Ficha hora a hora", "Medicações com posologia", "Cards para a paciente"];
 
-// H1 = headline A do plano (docs/info/README.md): passa no teste "Now you can…"
-// e vende a calma de saber o que fazer, não o susto. Imagem = recorte real da
-// capa do kit (rosto com as 8 zonas), prova de produto já na primeira dobra.
+// H1 passa no teste "Now you can…" e é literal no produto: o protocolo é uma
+// sequência minuto a minuto (parar → calor → hialuronidase → 1 frasco/hora →
+// alta → dia seguinte → necrose). Vende preparo, não susto. Imagem = mockup do
+// próprio produto (capa + prancha + card), prova de produto na primeira dobra.
+// Compliance: nenhum nome de medicamento na LP (política da Meta).
 export function Hero() {
   return (
     <section className="pt-10 pb-20 sm:pb-[78px]">
@@ -22,22 +24,20 @@ export function Hero() {
             <div className="flex items-center gap-3.5">
               <span className="h-px w-[42px] bg-wine-ink" aria-hidden="true" />
               <span className="text-[12px] font-semibold tracking-[0.24em] text-wine-ink uppercase">
-                Kit de referência clínica · Dra. Aline Filgueiras
+                Protocolo clínico · Dra. Aline Filgueiras
               </span>
             </div>
 
             <h1 className="mt-5 text-balance font-serif font-semibold text-[2rem] leading-[1.12] tracking-[-0.012em] sm:text-[2.6rem] lg:text-[2.9rem]">
               <span className="titulo-grifo">
-                Saiba em segundos se o que você vê na paciente é normal ou é alerta, e o que
-                fazer nos primeiros minutos.
+                O que fazer, minuto a minuto, se uma oclusão acontecer na sua cadeira.
               </span>
             </h1>
 
             <p className="mt-5 max-w-[560px] text-[1.08rem] leading-[1.55] text-fg-soft">
-              O <strong className="font-semibold text-fg">Mapa das Intercorrências</strong>{" "}
-              reúne em 4 pranchas para imprimir as 8 zonas de risco da face, os sinais de
-              alerta e a conduta imediata. Tudo à vista antes, durante e depois de cada
-              aplicação.
+              O <strong className="font-semibold text-fg">Protocolo de Resgate Vascular</strong>{" "}
+              é o passo a passo de oclusão e necrose que a Dra. Aline usa: do primeiro gesto à
+              hialuronidase hora a hora, as medicações e o cuidado até a cicatrização.
             </p>
 
             <SoComBonus>
@@ -66,24 +66,24 @@ export function Hero() {
             <LinhaGarantia className="mt-3.5 text-[13.5px] tracking-[0.02em] text-fg-faint" />
             <SoAntesDoEnvio>
               <p className="mt-2 text-[13.5px] font-semibold tracking-[0.02em] text-wine-ink">
-                O Mapa chega no seu WhatsApp no dia {ENVIO_KIT_DATA}.
+                O Protocolo chega no seu WhatsApp no dia {ENVIO_KIT_DATA}.
               </p>
             </SoAntesDoEnvio>
           </div>
 
-          <figure className="relative mx-auto w-full max-w-[420px] md:self-center">
-            <div className="relative aspect-[760/1159] overflow-hidden rounded-[4px]">
+          <figure className="relative mx-auto w-full max-w-[460px] md:self-center">
+            <div className="relative aspect-[1200/1500] overflow-hidden rounded-[4px]">
               <Image
-                src={withBasePath("/images/info/hero-mapa.webp")}
-                alt="Prancha 01 do Mapa das Intercorrências: rosto com as 8 zonas de risco numeradas e as artérias da face"
+                src={withBasePath("/images/info/protocolo-mockup.webp")}
+                alt="Protocolo de Resgate Vascular: capa, prancha de parede da oclusão e card da paciente no celular"
                 fill
                 priority
-                sizes="(min-width: 768px) 420px, 90vw"
+                sizes="(min-width: 768px) 460px, 90vw"
                 className="foto-funde-fundo object-cover"
               />
             </div>
             <figcaption className="mt-3 text-center text-[12px] tracking-[0.12em] text-fg-faint uppercase">
-              Prancha 01 · Mapa das zonas de risco
+              PDF + prancha de parede + ficha + cards
             </figcaption>
           </figure>
         </div>

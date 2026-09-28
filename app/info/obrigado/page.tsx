@@ -8,18 +8,18 @@ import { WhatsAppIcon } from "@/components/WhatsAppIcon";
 import { googleCalendarUrl } from "@/lib/calendarLink";
 
 export const metadata: Metadata = {
-  title: "Compra confirmada · Mapa das Intercorrências",
-  description: "Seu Mapa das Intercorrências está garantido.",
+  title: "Compra confirmada · Protocolo de Resgate Vascular",
+  description: "Seu Protocolo de Resgate Vascular está garantido.",
 };
 
 // Configurar esta URL (/info/obrigado) como redirecionamento pós-compra na
-// oferta "Kit + aula" da Ticto. O grupo é o mesmo da aula (app/obrigado): só
+// oferta "Protocolo + aula" da Ticto. O grupo é o mesmo da aula (app/obrigado): só
 // aparece enquanto a aula de bônus faz parte da oferta.
 const GRUPO_WHATSAPP_URL = "https://chat.whatsapp.com/KmL36ic5sFGFYVCJL6vm7g?s=cl&p=i&mlu=4";
 
 const TIME_WHATSAPP_URL =
   "https://wa.me/5531953491799?text=" +
-  encodeURIComponent("Oi! Comprei o Mapa das Intercorrências e fiquei com uma dúvida.");
+  encodeURIComponent("Oi! Comprei o Protocolo de Resgate Vascular e fiquei com uma dúvida.");
 
 export default function ObrigadoInfo() {
   return (
@@ -31,16 +31,15 @@ export default function ObrigadoInfo() {
           </span>
 
           <h1 className="mt-4 font-serif text-[2.1rem] leading-[1.15] text-fg sm:text-[2.6rem]">
-            Seu Mapa das Intercorrências está garantido.
+            Seu Protocolo de Resgate Vascular está garantido.
           </h1>
 
           <p className="mx-auto mt-5 max-w-[480px] text-[1.05rem] leading-[1.6] text-fg-soft">
-            <SoAntesDoEnvio senao="O acesso ao kit chega no seu WhatsApp em instantes.">
-              O kit chega no seu WhatsApp no dia {ENVIO_KIT_DATA}.
+            <SoAntesDoEnvio senao="O acesso ao protocolo chega no seu WhatsApp em instantes.">
+              O protocolo chega no seu WhatsApp no dia {ENVIO_KIT_DATA}.
             </SoAntesDoEnvio>{" "}
-            Imprima as pranchas 01 e 03 e
-            deixe à vista no consultório, e coloque seu contato no card da paciente antes do
-            próximo atendimento.
+            Imprima a prancha de parede e deixe na sala de atendimento, e coloque seu
+            contato nos cards da paciente antes do próximo atendimento.
           </p>
 
           <SoComBonus>
@@ -76,7 +75,7 @@ export default function ObrigadoInfo() {
           </SoComBonus>
 
           <p className="mt-10 text-[13.5px] text-fg-faint">
-            <SoAntesDoEnvio senao="Não recebeu o kit no WhatsApp ou ficou com dúvida?">
+            <SoAntesDoEnvio senao="Não recebeu o protocolo no WhatsApp ou ficou com dúvida?">
               Ficou com alguma dúvida?
             </SoAntesDoEnvio>{" "}
             <a

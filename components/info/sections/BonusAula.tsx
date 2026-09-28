@@ -8,13 +8,14 @@ import { withBasePath } from "@/lib/basePath";
 const DETALHES = [
   "6 de outubro, às 20h (Brasília)",
   "Ao vivo e online, cerca de 90 minutos",
-  "Tira-dúvidas ao vivo, na hora",
+  "Sem gravação: só quem está na sala",
   "Acesso pelo grupo do WhatsApp",
 ];
 
 // Overdelivery: a aula entra de presente, pelo valor real do ingresso (R$67),
-// sem âncora inventada. O mapa mostra onde; a aula mostra por quê — o bônus
-// completa o kit em vez de competir com ele. Some sozinha depois da aula.
+// sem âncora inventada. O protocolo mostra o que fazer; a aula mostra, por
+// dentro, onde tudo acontece — o bônus completa o protocolo em vez de competir
+// com ele. Some sozinha depois da aula. (Sem "tira-dúvidas": a aula não tem.)
 export function BonusAula() {
   return (
     <SoComBonus>
@@ -39,10 +40,11 @@ export function BonusAula() {
                 De presente até 6 de outubro
               </span>
               <h2 className="mt-5 text-balance font-serif font-semibold text-[1.95rem] leading-[1.12] sm:text-[2.4rem]">
-                <span className="titulo-grifo">Você leva o Mapa. A aula ao vivo vem de presente.</span>
+                <span className="titulo-grifo">Você leva o Protocolo. A aula ao vivo vem de presente.</span>
               </h2>
               <p className="mt-6 max-w-[540px] text-[1.06rem] leading-[1.6] text-fg-soft">
-                O mapa mostra onde está o risco e o que fazer. A aula mostra por quê. Na{" "}
+                O protocolo mostra o que fazer se acontecer. A aula mostra, por dentro, onde tudo
+                acontece. Na{" "}
                 <em className="font-serif text-fg">Por Dentro da Face</em>, a Dra. Aline mostra,
                 direto da mesa de dissecção, o que existe embaixo da pele: os planos, as
                 estruturas e os limites que mudam a conduta na cadeira.

@@ -12,10 +12,10 @@ import { ENVIO_KIT_DATA } from "@/lib/ofertaKit";
 const PASSOS = [
   { t: "Garanta no Pix ou no cartão", d: "Em até 12x, direto no checkout." },
   {
-    t: "Receba o kit no WhatsApp",
+    t: "Receba o protocolo no WhatsApp",
     d: (
-      <SoAntesDoEnvio senao="O acesso ao PDF e ao card da paciente chega no seu WhatsApp após a confirmação do pagamento.">
-        O PDF e o card da paciente chegam no seu WhatsApp no dia {ENVIO_KIT_DATA}.
+      <SoAntesDoEnvio senao="O PDF, a prancha, a ficha e os cards chegam no seu WhatsApp após a confirmação do pagamento.">
+        O PDF, a prancha, a ficha e os cards chegam no seu WhatsApp no dia {ENVIO_KIT_DATA}.
       </SoAntesDoEnvio>
     ),
   },
@@ -35,8 +35,8 @@ export function Offer() {
           </span>
           <h2 className="mt-[18px] font-serif font-semibold text-[1.95rem] sm:text-[2.6rem]">
             <span className="titulo-grifo">
-              <SoComBonus senao="O que você precisa ter à vista, num kit só.">
-                O Mapa inteiro, e a aula ao vivo de presente.
+              <SoComBonus senao="O protocolo inteiro, da hora zero aos 60 dias.">
+                O Protocolo inteiro, e a aula ao vivo de presente.
               </SoComBonus>
             </span>
           </h2>
@@ -48,8 +48,7 @@ export function Offer() {
           <Reveal className="grid content-center">
             <OfertaItens />
             <p className="mt-6 max-w-[460px] font-serif text-[1.16rem] leading-[1.45] text-wine-ink italic">
-              Na dúvida, trate como alerta. Com o Mapa na parede, você sabe o que olhar e o que
-              fazer primeiro.
+              Se a cor mudar, você não decide no susto: segue o próximo passo da prancha.
             </p>
           </Reveal>
 
@@ -91,9 +90,10 @@ export function Offer() {
         </Reveal>
 
         <p className="mx-auto mt-10 max-w-[620px] text-center text-[0.9rem] leading-[1.55] text-fg-faint">
-          Material educativo. Organiza informações publicadas na literatura para consulta
-          rápida e não substitui formação, protocolos clínicos oficiais, orientações do seu
-          conselho profissional ou avaliação individual.
+          Material educativo com o protocolo que a Dra. Aline Filgueiras utiliza. Não
+          substitui formação, protocolos clínicos oficiais, orientações do seu conselho
+          profissional ou avaliação individual. Medicações conforme a sua habilitação
+          profissional.
         </p>
       </Container>
     </section>

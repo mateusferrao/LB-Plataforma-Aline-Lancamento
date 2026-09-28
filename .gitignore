@@ -34,3 +34,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Protocolo de Resgate Vascular (produto pago): fonte, fotos de paciente e PDFs
+# ficam SÓ locais. O repositório é público — nada daqui pode ir para o git.
+/docs/kit-protocolo/

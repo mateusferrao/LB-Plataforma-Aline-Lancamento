@@ -59,7 +59,7 @@ export function StickyCta() {
       >
         <div className="mx-auto flex max-w-[1060px] items-center justify-between gap-8 px-10 py-[18px] text-fg-soft">
           <span className="text-[0.98rem]">
-            <span className="font-serif text-fg">Mapa das Intercorrências</span>
+            <span className="font-serif text-fg">Protocolo de Resgate Vascular</span>
             {resumo && <span className="text-fg-faint"> · {resumo}</span>}
           </span>
           <CtaButton className="shrink-0" />

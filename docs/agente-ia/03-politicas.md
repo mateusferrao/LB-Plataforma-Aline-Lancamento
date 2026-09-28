@@ -59,15 +59,19 @@
 - **E-mail de suporte:** suporte.alinefilgueiras@gmail.com.br
 - **Instagram:** @draaline_filgueiras
 
-## 10. Kit "Mapa das Intercorrências" (`/info`)
+## 10. "Protocolo de Resgate Vascular" (`/info` e order bump)
+- **Substituiu o kit "Mapa das Intercorrências" em 28/09/2026.** Quem comprou o Mapa recebe o
+  Protocolo no lugar, em 01/10; se não quiser, garantia de 7 dias.
 - **Preço:** R$97 ou 12x de R$10,03 (cartão) ou Pix, pela Ticto, no site
-  `https://live.alinefilgueiras.com.br/info`.
+  `https://live.alinefilgueiras.com.br/info`. No checkout da aula, order bump de R$29,90.
 - **Bônus:** a aula ao vivo Por Dentro da Face, **só para compras até 06/10/2026, 20h**. Depois
   disso o bônus sai da oferta (a aula não tem gravação).
-- **Natureza:** material educativo de consulta rápida; **não é curso, não emite certificado** e
-  não substitui formação, protocolos oficiais ou avaliação profissional.
-- **Entrega:** o acesso ao kit é enviado **pelo WhatsApp**. Compras até 01/10: envio **no dia 01/10**.
-  A partir de 02/10: após a confirmação do pagamento.
+- **Natureza:** material educativo com o protocolo que a Dra. Aline utiliza; **não é curso, não
+  emite certificado** e não substitui formação, protocolos oficiais ou avaliação profissional.
+- **Medicações:** o agente **nunca** cita nome de medicamento, dose ou conduta clínica na conversa.
+  Pergunta clínica sobre um caso real → escalar para o atendimento humano.
+- **Entrega:** **pelo WhatsApp**. Compras até 01/10: envio **no dia 01/10**. A partir de 02/10:
+  após a confirmação do pagamento.
 - **Garantia:** 7 dias, sem perguntas; reembolso escalado para o atendimento humano.
 - **Quem já tem o ingresso da aula** e quer o kit: escalar para o atendimento humano (não
   encaminhar para a `/info`).

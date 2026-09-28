@@ -91,16 +91,16 @@ Pelo **WhatsApp +55 31 95349-1799** ou pelo **e-mail suporte.alinefilgueiras@gma
 
 ---
 
-## Kit "Mapa das Intercorrências" (página `/info`)
+## "Protocolo de Resgate Vascular" (página `/info`)
 
-> Use só quando a lead perguntar pelo kit ou vier da `/info`. Detalhes em
-> `01-playbook-vendas.md`, seção 8.1.
+> Use só quando a lead perguntar pelo protocolo ou vier da `/info`. Detalhes em
+> `01-playbook-vendas.md`, seção 8.1. Substituiu o kit "Mapa das Intercorrências" em 28/09/2026.
 
-### K1. O que é o Mapa das Intercorrências?
-Um **kit de referência clínica** da Dra. Aline: PDF de 10 páginas com 4 pranchas para imprimir (as
-8 zonas de risco da face, profundidade e planos, o que fazer se acontecer uma intercorrência e o
-"normal ou alerta?" do pós), tabela de zonas, glossário, referências e um card de cuidados pra
-enviar à paciente. **Não é curso**: é material educativo de consulta rápida.
+### K1. O que é o Protocolo de Resgate Vascular?
+É o **protocolo de conduta que a Dra. Aline utiliza para oclusão e necrose**, do primeiro minuto à
+cicatrização: um PDF em A4 com o passo a passo, uma **prancha de parede** pra imprimir, uma **ficha
+de acompanhamento hora a hora** e **2 cards** pra enviar à paciente. **Não é curso**: é material
+educativo pra ter na mão na hora que precisar.
 
 ### K2. Quanto custa?
 **R$97**, ou **12x de R$10,03** no cartão, ou Pix. Quem garante **até 06/10, às 20h**, leva **de
@@ -108,17 +108,22 @@ presente a aula ao vivo Por Dentro da Face**. A compra é no site:
 `https://live.alinefilgueiras.com.br/info`.
 
 ### K3. Como recebo?
-**Pelo WhatsApp.** Quem compra até 01/10 recebe o acesso ao PDF e ao card da paciente em PNG **no dia
-01/10**. A partir de 02/10, o acesso chega no WhatsApp logo depois da confirmação do pagamento. Se comprou até 06/10, a página de obrigado também leva ao grupo de WhatsApp
-da aula.
+**Pelo WhatsApp.** Quem compra até 01/10 recebe os arquivos **no dia 01/10**. A partir de 02/10, o
+acesso chega no WhatsApp logo depois da confirmação do pagamento. Se comprou até 06/10, a página de
+obrigado também leva ao grupo de WhatsApp da aula.
 
-### K4. Já comprei o ingresso da aula. Posso pegar o Mapa?
-Pode, mas não compre pela página do kit, senão você paga a aula duas vezes. Vou te passar para o
-nosso time resolver o acesso ao Mapa. *(Escalar para o atendimento humano.)*
+### K4. Já comprei o ingresso da aula. Posso pegar o Protocolo?
+Pode, mas não compre pela página, senão você paga a aula duas vezes. Vou te passar para o nosso
+time resolver. *(Escalar para o atendimento humano.)*
 
-### K5. O Mapa substitui protocolo ou formação?
-Não. É material educativo: organiza o que a literatura publicou pra você ter à vista. Doses,
-medicamentos e condutas seguem os consensos atualizados e a sua formação.
+### K5. Tem as medicações? Serve pra quem não é médica?
+Tem: as medicações que a Dra. Aline utiliza em cada fase, com a posologia. A prescrição segue a
+habilitação profissional de cada uma. *(Nunca cite nome de medicamento nem dose na conversa.)*
 
-### K6. Tem garantia?
+### K6. Comprei o Mapa das Intercorrências. O que recebo?
+A Aline trocou o Mapa pelo protocolo que ela mesma usa na clínica: você recebe o Protocolo de
+Resgate Vascular no lugar, em 01/10. Se preferir, a garantia de 7 dias continua valendo.
+*(Escalar para o atendimento humano.)*
+
+### K7. Tem garantia?
 Sim: **7 dias após a compra para pedir reembolso, sem perguntas**, pelo WhatsApp ou e-mail.
