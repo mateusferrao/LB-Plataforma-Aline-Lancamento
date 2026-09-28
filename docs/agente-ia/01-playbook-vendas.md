@@ -135,7 +135,9 @@ de Resgate Vascular"*.
 - **Bônus:** quem compra **até 06/10/2026, 20h** leva **de presente a aula ao vivo Por Dentro da
   Face** (a mesma aula, mesmo grupo de WhatsApp, sem gravação). Depois da aula, o bônus sai da
   oferta.
-- **Âncora exibida no site:** Protocolo "de R$109,90" + aula "R$67" = "de R$176,90 por R$97".
+- **Âncora exibida no site:** a aula ao vivo, que custa R$67 sozinha, vem de presente; o Protocolo
+  não tem "de/por". O preço (R$97) só aparece depois que a lead **emite o ingresso** na página
+  (nome e área), igual à `/fresh`; o botão do ingresso leva ao checkout.
 - **Entrega:** **imediata, pelo WhatsApp**, logo após a confirmação do pagamento. Não é por
   e-mail.
 - **Garantia:** 7 dias, sem perguntas (igual à aula).

@@ -1,7 +1,7 @@
 "use client";
 
 import { Container } from "@/components/Container";
-import { Reveal } from "@/components/Reveal";
+import { Titulo } from "@/components/fresh/Titulo";
 import { useOfertaKit } from "@/lib/useOfertaKit";
 
 // WhatsApp do time (mesmo número do botão flutuante), com contexto de quem já
@@ -38,9 +38,14 @@ const FAQS: Item[] = [
     a: "Não. É material educativo com a conduta que a Dra. Aline utiliza. Ele não substitui formação, protocolos oficiais nem a orientação do seu conselho. O que ele faz é deixar o passo a passo na sua mão, pra você não depender só da memória numa emergência.",
   },
   {
+    q: "Por que emitir um ingresso?",
+    soComBonus: true,
+    a: "Porque o Protocolo vem com a sua vaga na aula ao vivo de presente. Você escreve como quer aparecer, vê o seu ingresso com o valor e confirma no checkout. Leva 10 segundos, e seus dados ficam só no seu navegador.",
+  },
+  {
     q: "Como funciona a aula de presente?",
     soComBonus: true,
-    a: "É a aula ao vivo Por Dentro da Face, no dia 6 de outubro, às 20h (Brasília), online, com cerca de 90 minutos. O acesso é pelo grupo do WhatsApp, que você recebe depois da compra. A aula é ao vivo e não tem gravação.",
+    a: "É a aula ao vivo Por Dentro da Face, no dia 6 de outubro, às 20h (Brasília), online, com cerca de 90 minutos. A Dra. Aline mostra as imagens das dissecções que ela fez em cadáver fresh frozen e explica o que muda a segurança de quem aplica. O acesso é pelo grupo do WhatsApp, que você recebe depois da compra. É ao vivo, uma noite só, sem gravação.",
   },
   {
     q: "Já comprei o ingresso da aula. E agora?",
@@ -80,14 +85,9 @@ export function Faq() {
   return (
     <section className="py-16 sm:py-[92px]">
       <Container narrow>
-        <Reveal>
-          <span className="text-[12px] font-semibold tracking-[0.24em] text-wine-ink uppercase">
-            Dúvidas
-          </span>
-          <h2 className="mt-[18px] font-serif font-semibold text-[1.95rem] sm:text-[2.6rem]">
-            <span className="titulo-grifo">Perguntas honestas.</span>
-          </h2>
-        </Reveal>
+        <Titulo eyebrow="Dúvidas" destaque="honestas.">
+          Perguntas
+        </Titulo>
 
         <div className="mt-9 border-t border-line">
           {itens.map((item, i) => (

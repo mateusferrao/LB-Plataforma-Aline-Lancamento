@@ -3,9 +3,10 @@
 import { FASES, formatBRL } from "@/lib/ofertaKit";
 import { useOfertaKit } from "@/lib/useOfertaKit";
 
-// Lista do que a pessoa leva, com o valor "de" riscado ao lado de cada item
-// (lib/ofertaKit.ts). Antes de montar, usa a 1ª fase (a vigente na campanha),
-// igual ao HTML estático, pra não haver salto nem erro de hidratação.
+// Lista do que a pessoa leva. Sem "de/por" do Protocolo (padrão da /fresh): o
+// único valor riscado é o da aula de presente, pelo preço real dela vendida
+// sozinha (lib/ofertaKit.ts). Antes de montar, usa a 1ª fase (a vigente na
+// campanha), igual ao HTML estático, pra não haver salto nem erro de hidratação.
 export function OfertaItens() {
   const { fase, montado } = useOfertaKit();
   const itens = (montado ? fase : FASES[0])?.itens ?? [];
@@ -32,14 +33,16 @@ export function OfertaItens() {
             {item.titulo}
             <small className="mt-1 block text-[0.87rem] text-fg-faint">{item.detalhe}</small>
           </span>
-          <span className="text-right text-[0.95rem] whitespace-nowrap">
-            <s className="text-fg-faint">{formatBRL(item.valorDe)}</s>
-            {item.bonus && (
+          {item.bonus && item.valorDe ? (
+            <span className="text-right text-[0.95rem] whitespace-nowrap">
+              <s className="text-fg-faint">{formatBRL(item.valorDe)}</s>
               <span className="mt-0.5 block text-[0.85rem] font-semibold text-wine-ink">
                 de presente
               </span>
-            )}
-          </span>
+            </span>
+          ) : (
+            <span />
+          )}
         </div>
       ))}
     </div>

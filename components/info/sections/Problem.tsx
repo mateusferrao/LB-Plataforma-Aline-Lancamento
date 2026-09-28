@@ -1,5 +1,6 @@
 import { Container } from "@/components/Container";
 import { Reveal } from "@/components/Reveal";
+import { Titulo } from "@/components/fresh/Titulo";
 
 // As 4 dúvidas que paralisam na hora. Cada uma tem resposta literal no
 // protocolo da Aline (calor e nunca gelo; 1 frasco por hora; alta após 5
@@ -16,21 +17,16 @@ export function Problem() {
   return (
     <section className="py-16 sm:py-[92px]">
       <Container narrow>
+        <Titulo eyebrow="Na hora que importa" destaque="vai ser na sua cadeira.">
+          Você sabe que é raro. Também sabe que, se acontecer,
+        </Titulo>
         <Reveal>
-          <span className="text-[12px] font-semibold tracking-[0.24em] text-wine-ink uppercase">
-            Na hora que importa
-          </span>
-          <h2 className="mt-[18px] text-balance font-serif font-semibold text-[1.95rem] leading-[1.12] sm:text-[2.6rem]">
-            <span className="titulo-grifo">
-              Você sabe que é raro. Também sabe que, se acontecer, vai ser na sua cadeira.
-            </span>
-          </h2>
-          <p className="mt-[18px] max-w-[560px] text-[1.08rem] leading-[1.55] text-fg-soft">
+          <p className="mt-6 max-w-[600px] text-[1.1rem] leading-[1.6] text-fg-soft">
             E, na hora, as dúvidas chegam todas juntas:
           </p>
         </Reveal>
 
-        <div className="mt-[30px] grid grid-cols-1 gap-4 sm:grid-cols-2">
+        <div className="mt-9 grid grid-cols-1 gap-4 sm:grid-cols-2">
           {PAINS.map((pain, i) => (
             <Reveal
               key={pain}

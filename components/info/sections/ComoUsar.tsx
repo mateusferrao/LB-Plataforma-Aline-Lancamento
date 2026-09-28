@@ -1,5 +1,6 @@
 import { Container } from "@/components/Container";
 import { Reveal } from "@/components/Reveal";
+import { Titulo } from "@/components/fresh/Titulo";
 
 // As 3 peças de uso (pág. 3 do protocolo). Reduz a complexidade percebida: não
 // é um curso pra assistir, são ferramentas prontas pro dia em que precisar.
@@ -20,16 +21,11 @@ const PASSOS = [
 
 export function ComoUsar() {
   return (
-    <section className="py-16 sm:py-[92px]">
+    <section className="bg-bg-2 py-16 sm:py-[92px]">
       <Container narrow>
-        <Reveal>
-          <span className="text-[12px] font-semibold tracking-[0.24em] text-wine-ink uppercase">
-            Como usar
-          </span>
-          <h2 className="mt-[18px] text-balance font-serif font-semibold text-[1.95rem] leading-[1.12] sm:text-[2.6rem]">
-            <span className="titulo-grifo">Feito pra ficar à vista, não guardado numa pasta.</span>
-          </h2>
-        </Reveal>
+        <Titulo eyebrow="Como usar" destaque="não guardado numa pasta.">
+          Feito pra ficar à vista,
+        </Titulo>
       </Container>
 
       <Container>

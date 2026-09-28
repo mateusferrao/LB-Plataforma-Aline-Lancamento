@@ -1,8 +1,10 @@
 import Image from "next/image";
 import { Container } from "@/components/Container";
 import { Reveal } from "@/components/Reveal";
+import { Titulo } from "@/components/fresh/Titulo";
 import { BonusCountdown } from "@/components/info/BonusCountdown";
 import { SoComBonus } from "@/components/info/SoComBonus";
+import { formatBRL, ITEM_AULA } from "@/lib/ofertaKit";
 import { withBasePath } from "@/lib/basePath";
 
 const DETALHES = [
@@ -12,10 +14,11 @@ const DETALHES = [
   "Acesso pelo grupo do WhatsApp",
 ];
 
-// Overdelivery: a aula entra de presente, pelo valor real do ingresso (R$67),
-// sem âncora inventada. O protocolo mostra o que fazer; a aula mostra, por
-// dentro, onde tudo acontece — o bônus completa o protocolo em vez de competir
-// com ele. Some sozinha depois da aula. (Sem "tira-dúvidas": a aula não tem.)
+// Overdelivery: a aula entra de presente, pelo valor real do ingresso vendido
+// sozinho (ITEM_AULA.valorDe), sem âncora inventada. O protocolo mostra o que
+// fazer; a aula mostra, por dentro, onde tudo acontece. Formato como na /fresh:
+// aula de estúdio com as imagens das dissecções da Aline (nunca "direto da mesa
+// de dissecção"). Some sozinha depois da aula. (Sem "tira-dúvidas": a aula não tem.)
 export function BonusAula() {
   return (
     <SoComBonus>
@@ -30,45 +33,45 @@ export function BonusAula() {
                 sizes="(min-width: 768px) 320px, 80vw"
                 className="object-cover"
               />
-              <span className="absolute bottom-3 left-3 rounded-[2px] bg-bg/80 px-2.5 py-1 text-[11px] tracking-[0.12em] text-fg-soft uppercase">
+              <span className="absolute bottom-3 left-3 rounded-[2px] bg-bg/80 px-2.5 py-1 text-[11px] font-semibold tracking-[0.14em] text-fg uppercase backdrop-blur-sm">
                 Laboratório de dissecção · EUA
               </span>
             </Reveal>
 
-            <Reveal delay={90}>
-              <span className="inline-block rounded-[2px] bg-wine px-3 py-1 text-[12px] font-semibold tracking-[0.2em] text-on-wine uppercase">
-                De presente até 6 de outubro
-              </span>
-              <h2 className="mt-5 text-balance font-serif font-semibold text-[1.95rem] leading-[1.12] sm:text-[2.4rem]">
-                <span className="titulo-grifo">Você leva o Protocolo. A aula ao vivo vem de presente.</span>
-              </h2>
-              <p className="mt-6 max-w-[540px] text-[1.06rem] leading-[1.6] text-fg-soft">
-                O protocolo mostra o que fazer se acontecer. A aula mostra, por dentro, onde tudo
-                acontece. Na{" "}
-                <em className="font-serif text-fg">Por Dentro da Face</em>, a Dra. Aline mostra,
-                direto da mesa de dissecção, o que existe embaixo da pele: os planos, as
-                estruturas e os limites que mudam a conduta na cadeira.
-              </p>
+            <div>
+              <Titulo eyebrow="De presente até 6 de outubro" destaque="A aula ao vivo vem de presente.">
+                Você leva o Protocolo.
+              </Titulo>
+              <Reveal delay={90}>
+                <p className="mt-6 max-w-[540px] text-[1.06rem] leading-[1.6] text-fg-soft">
+                  O protocolo mostra o que fazer se acontecer. A aula mostra, por dentro, onde
+                  tudo acontece. Na <em className="font-serif text-fg">Por Dentro da Face</em>, a
+                  Dra. Aline, que estudou e dá cursos internacionais em cadáver fresh frozen nos
+                  EUA e na Europa, mostra nas imagens das dissecções dela os planos, as
+                  estruturas e os limites que mudam a conduta na cadeira.
+                </p>
 
-              <ul className="mt-6 grid grid-cols-1 gap-2.5 sm:grid-cols-2">
-                {DETALHES.map((d) => (
-                  <li key={d} className="flex items-start gap-3 text-[0.98rem] text-fg">
-                    <span
-                      className="mt-[9px] h-1.5 w-1.5 shrink-0 rounded-[1px] bg-wine-ink"
-                      aria-hidden="true"
-                    />
-                    {d}
-                  </li>
-                ))}
-              </ul>
+                <ul className="mt-6 grid grid-cols-1 gap-2.5 sm:grid-cols-2">
+                  {DETALHES.map((d) => (
+                    <li key={d} className="flex items-start gap-3 text-[0.98rem] text-fg">
+                      <span
+                        className="mt-[9px] h-1.5 w-1.5 shrink-0 rounded-[1px] bg-wine-ink"
+                        aria-hidden="true"
+                      />
+                      {d}
+                    </li>
+                  ))}
+                </ul>
 
-              <p className="mt-6 text-[1rem] text-fg-soft">
-                Valor do ingresso: <s className="text-fg-faint">R$67</s>{" "}
-                <span className="font-semibold text-fg">· pra você, de presente</span>
-              </p>
+                <p className="mt-6 text-[1rem] text-fg-soft">
+                  Valor do ingresso vendido sozinho:{" "}
+                  <s className="text-fg-faint">{formatBRL(ITEM_AULA.valorDe ?? 0)}</s>{" "}
+                  <span className="font-semibold text-fg">· pra você, de presente</span>
+                </p>
 
-              <BonusCountdown className="mt-7" />
-            </Reveal>
+                <BonusCountdown className="mt-7" />
+              </Reveal>
+            </div>
           </div>
         </Container>
       </section>

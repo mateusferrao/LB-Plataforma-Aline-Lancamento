@@ -7,6 +7,14 @@
 > assim que os arquivos estiverem prontos (mensagem na seção 5.2). **Entrega imediata:** quem
 > compra agora recebe os arquivos no WhatsApp logo após a confirmação do pagamento.
 
+> **28/09/2026: padrão da `/fresh`.** A `/info` passou a seguir a `/fresh` (`docs/fresh/README.md`):
+> headline de resultado (pré-headline com a dor, H1 em Inter com o grifo só na parte final),
+> títulos das seções com destaque só em cor (`components/fresh/Titulo`), seção nova "O que muda na
+> sua cadeira", e o CTA **"Emitir meu ingresso"**, que abre o mesmo modal da `/lp2`/`/fresh`
+> (`components/info/IngressoInfo.tsx`). **O preço (R$97) só aparece no ingresso emitido**, ao lado
+> do comparativo `components/info/AncoraIngresso.tsx`. Saiu o "de R$109,90" do Protocolo: o único
+> valor riscado é o da aula vendida sozinha (R$67, real). Checkout novo: `O841FD9F7`.
+
 O Protocolo é vendido de duas formas:
 - **Order bump** (R$29,90, "de R$109,90") no checkout da aula **Por Dentro da Face** (R$67,
   06/10/2026 às 20h, sem gravação).
@@ -23,13 +31,26 @@ Endereços e arquivos:
 
 ## 1. Oferta
 
-| | Valor "de" | Na oferta |
+| | Na página | No ingresso emitido |
 |---|---|---|
-| Protocolo de Resgate Vascular | R$109,90 (mesmo "de" do bump na Ticto) | incluso |
-| Aula ao vivo Por Dentro da Face | R$67 (preço real do ingresso) | de presente |
-| **Total** | **R$176,90** | **R$97** ou 12x de R$10,03 (45% de desconto) |
+| Protocolo de Resgate Vascular | incluso (sem "de/por") | incluso |
+| Aula ao vivo Por Dentro da Face | ~~R$67~~ de presente (preço real do ingresso) | ~~R$67~~ de presente |
+| **Você paga** | sem valor em R$ ("emita seu ingresso") | **R$97** ou 12x de R$10,03 |
 
-Checkout: `https://payment.ticto.app/O74848DBC`.
+Checkout: `https://payment.ticto.app/O841FD9F7` (trocado em 28/09; antes `O74848DBC`).
+
+**Âncoras (padrão da `/fresh`, uma por lugar, textos em `components/info/ancora.ts`):** a aula de
+R$67 de presente (Hero, bônus, oferta e ingresso), a **seringa** ("O Protocolo e a aula custam menos
+que uma seringa de preenchedor") no card da oferta e no ingresso, e o **custo de não ter o
+protocolo** ("Uma hora de dúvida, um frasco a mais ou uma paciente que perde a confiança custam mais
+do que o protocolo inteiro") no CTA final.
+
+**Fluxo do CTA:** até 06/10 às 20h, o botão abre o ingresso (nome + área, dados só no navegador),
+que mostra o preço, o comparativo e a reserva da vaga na aula, e só então leva ao checkout. Depois
+da aula (fase `soKit`) não há ingresso: o botão vai direto ao `checkoutUrl` da fase (ou fica "Em
+breve" enquanto ele não existir). Eventos: `AbrirIngresso` no botão da página, `Lead` ao emitir e
+`ClickCheckout` no "Confirmar meu ingresso", todos com `content_name: Protocolo de Resgate
+Vascular` e `produto: kit-protocolo`.
 
 **Por que R$97.** Quem comprou aula + bump pagou R$67 + R$29,90 = **R$96,90**. Qualquer preço
 abaixo disso faria essa compradora ter pago mais caro que a nova. **Nunca baixe o protocolo + aula
@@ -169,7 +190,8 @@ Base: skill *copywriting*.
 > - **Checklist da maleta:** tudo o que o protocolo usa, pra conferir antes de atender.
 >
 > **De presente para quem garantir até 06/10: aula ao vivo Por Dentro da Face (valor R$67).** A
-> Dra. Aline mostra, direto da mesa de dissecção, o que existe embaixo da pele. 6 de outubro de
+> Dra. Aline mostra, nas imagens das dissecções que ela fez em cadáver fresh frozen, o que existe
+> embaixo da pele. 6 de outubro de
 > 2026, às 20h (Brasília), online, cerca de 90 minutos, sem gravação. O protocolo mostra o que
 > fazer. A aula mostra, por dentro, onde tudo acontece.
 >
@@ -181,26 +203,30 @@ Base: skill *copywriting*.
 
 ### 4.4 Headlines da LP e alternativas para teste A/B (Hero)
 
-- **A (no ar):** O que fazer, minuto a minuto, se uma oclusão acontecer na sua cadeira.
+- **No ar (28/09, padrão da `/fresh`):** pré-headline "Pra quem já aplica ou quer aplicar e tem medo
+  de não saber o que fazer se a cor mudar" + H1 "O passo a passo que a Dra. Aline usa numa oclusão,
+  *pra você aplicar sem medo e agir com calma se acontecer.*"
+- **A (anterior):** O que fazer, minuto a minuto, se uma oclusão acontecer na sua cadeira.
 - **B:** Se a cor mudar no meio da aplicação, você vai saber exatamente o próximo passo.
 - **C (hook):** O primeiro impulso numa oclusão é pegar gelo. É exatamente o que a Aline proíbe.
 
-**CTA:** "Quero o Protocolo + a aula ao vivo"; depois de 06/10, "Quero o Protocolo de Resgate
-Vascular".
+**CTA:** "Emitir meu ingresso" (abre o ingresso); depois de 06/10, "Quero o Protocolo de Resgate
+Vascular" (direto ao checkout).
 
 ### 4.5 Seções da LP (com o porquê)
 
 | # | Seção | Headline | Por quê |
 |---|---|---|---|
-| 1 | Hero | O que fazer, minuto a minuto, se uma oclusão acontecer na sua cadeira. | Passa no "Now you can…" e é literal no produto. Mockup real na primeira dobra. |
+| 1 | Hero | O passo a passo que a Dra. Aline usa numa oclusão, pra você aplicar sem medo e agir com calma se acontecer. | Resultado no H1 (padrão da `/fresh`), bullets que começam pelo que muda, mockup real na primeira dobra, sem preço. |
 | 2 | Problema | Você sabe que é raro. Também sabe que, se acontecer, vai ser na sua cadeira. | As 4 dúvidas do minuto zero, cada uma respondida pelo protocolo. |
 | 3 | Nunca gelo | O primeiro impulso é pegar gelo. É o que a Aline proíbe. | Entrega uma regra útil de graça e mostra o nível de detalhe do protocolo. |
+| 3b | O que muda | O que muda na sua cadeira a partir de hoje. | Percepção de resultado antes do material (par do "O que você leva" da `/fresh`). |
 | 4 | O que tem dentro | Tudo o que você precisa ter na mão, da hora zero aos 60 dias. | 5 páginas reais (versão `?lp=1`). Sem fotos de paciente e sem nome de medicamento. |
 | 5 | Como usar | Feito pra ficar à vista, não guardado numa pasta. | Prancha, ficha e cards: não é mais um curso pra assistir. |
 | 6 | Cards | Sua paciente vai pra casa sabendo exatamente o que fazer. | Ponte com a dor nº1 (a paciente), sem prometer agenda. |
 | 7 | Bônus | Você leva o Protocolo. A aula ao vivo vem de presente. | O bônus completa o protocolo (o que fazer × por dentro, onde acontece). Sem "tira-dúvidas": a aula não tem. |
-| 8-9 | Autoridade e prova | (reaproveitadas) | — |
-| 10 | Pra quem é | O Protocolo é pra você que… | Perfis da pesquisa. O "não é pra você" deixa claro que não é curso. |
+| 8-9 | Autoridade e prova | (as da `/fresh`) | Foto do laboratório; prints sem promessa de faturamento. |
+| 10 | Pra quem é | O Protocolo é pra você que… | Perfis da pesquisa. O "não é pra você" filtra pela atitude e mantém o aviso de que não é curso nem substitui formação. |
 | 11-13 | Oferta, FAQ, CTA final | — | FAQ nova (medicações, entrega, impressão, iniciante, formação). |
 
 ## 5. WhatsApp

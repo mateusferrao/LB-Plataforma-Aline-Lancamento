@@ -1,16 +1,14 @@
 "use client";
 
-import { descontoPct, formatBRL, valorDeTotal } from "@/lib/ofertaKit";
 import { useOfertaKit } from "@/lib/useOfertaKit";
 
-// Bloco de preço do card de oferta da /info (fundo marsala): "de" riscado,
-// parcela grande, à vista no Pix e o desconto calculado da fase ativa.
-// Alturas reservadas pra não dar layout shift antes de montar.
+// Topo do card de oferta da /info (par do components/lp2/OfertaPreco). Com a
+// aula de presente, sem valor em R$: o card convida a emitir o ingresso, e o
+// preço aparece no ingresso emitido. Depois da aula (sem ingresso), mostra o
+// preço da fase; sem checkout, "em breve".
 export function OfertaPrecoKit() {
   const { fase, montado } = useOfertaKit();
 
-  // Sem checkout na fase (ex.: "soKit" antes de existir o checkout só do kit),
-  // não mostra preço: o botão também fica bloqueado.
   if (montado && !fase?.checkoutUrl) {
     return (
       <>
@@ -22,30 +20,29 @@ export function OfertaPrecoKit() {
     );
   }
 
-  const pct = fase ? descontoPct(fase) : 0;
+  if (montado && fase && fase.id !== "comBonus") {
+    return (
+      <>
+        <div className="text-[12px] tracking-[0.16em] uppercase opacity-90">
+          Protocolo de Resgate Vascular
+        </div>
+        <div className="my-1.5 font-serif text-[2.5rem] leading-none sm:text-[2.7rem]">
+          12x de {fase.parcela12x}
+        </div>
+        <div className="text-[0.95rem] opacity-90">ou {fase.priceLabel} à vista no Pix</div>
+      </>
+    );
+  }
 
   return (
     <>
-      <div className="min-h-[1.4em] text-[0.98rem] opacity-90">
-        {montado && fase && pct > 0 ? (
-          <>
-            De <s>{formatBRL(valorDeTotal(fase))}</s> por
-          </>
-        ) : (
-          ""
-        )}
+      <div className="text-[12px] tracking-[0.16em] uppercase opacity-90">
+        Protocolo + aula ao vivo de presente
       </div>
-      <div className="my-1.5 min-h-[1em] font-serif text-[2.5rem] leading-none sm:text-[2.7rem]">
-        {montado && fase ? `12x de ${fase.parcela12x}` : ""}
+      <div className="my-1.5 font-serif text-[2.4rem] leading-tight">Emita seu ingresso</div>
+      <div className="text-[0.95rem] opacity-90">
+        O valor aparece assim que você emitir. Leva 10 segundos.
       </div>
-      <div className="min-h-[1.4em] text-[0.95rem] opacity-90">
-        {montado && fase ? `ou ${fase.priceLabel} à vista no Pix` : ""}
-      </div>
-      {montado && fase && pct > 0 && (
-        <div className="mx-auto mt-3 inline-block rounded-[2px] bg-on-wine/12 px-3 py-1 text-[12px] font-semibold tracking-[0.14em] uppercase">
-          {pct}% de desconto
-        </div>
-      )}
     </>
   );
 }

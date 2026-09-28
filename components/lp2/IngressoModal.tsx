@@ -17,19 +17,68 @@ import {
 import { useLoteAtivo } from "@/lib/useLoteAtivo";
 import { RESERVA_DURACAO_MS, two, useReservaRestante } from "@/components/ReservaTimer";
 
+// Oferta que o ingresso emitido mostra e leva ao checkout. Sem `oferta`, o
+// modal usa o lote ativo da aula (lib/lotes.ts). A /info passa a do Protocolo
+// (components/info/IngressoInfo.tsx). `dados` null = inscrições encerradas.
+export type OfertaIngresso = {
+  montado: boolean;
+  dados: {
+    price: number;
+    priceLabel: string;
+    parcela12x: string;
+    checkoutUrl: string;
+    precoDe?: number;
+    precoDeLabel?: string;
+  } | null;
+};
+
+// Textos e rastreio do ingresso. Os padrões são os da aula (/lp2 e /fresh).
+export type TextosIngresso = {
+  formEyebrow: string;
+  formSubtitulo: string;
+  titulo: string;
+  subtitulo: string;
+  selo: string;
+  detalhes: [string, string][];
+  reserva: string;
+  // content_name do Lead/ClickCheckout e campos extras dos eventos.
+  contentName: string;
+  rastreio?: Record<string, string>;
+};
+
+const TEXTOS_AULA: TextosIngresso = {
+  formEyebrow: "Ao vivo · 6 de outubro · vagas limitadas",
+  formSubtitulo: "Preencha como você quer aparecer no seu ingresso da aula ao vivo.",
+  titulo: "Por Dentro da Face",
+  subtitulo: "Aula online e ao vivo",
+  selo: "Vagas limitadas",
+  detalhes: [
+    ["Data", "06/10"],
+    ["Horário", "20h"],
+    ["Formato", "Ao vivo"],
+  ],
+  reserva: "Seu lugar na sala fica reservado por",
+  contentName: "Ingresso Por Dentro da Face",
+};
+
 // Modal do fluxo "emitir ingresso antes de ver o preço" (aberto pelo CtaButton).
 // Etapa 1: tratamento + nome + área. Etapa 2: ingresso emitido com o nome da
-// visitante, o preço do lote ativo e o botão que leva ao checkout da Ticto.
-// Montado uma vez por página (app/lp2/page.tsx, components/fresh/FreshPage.tsx).
+// visitante, o preço da oferta e o botão que leva ao checkout da Ticto.
+// Montado uma vez por página (app/lp2/page.tsx, components/fresh/FreshPage.tsx,
+// components/info/IngressoInfo.tsx).
 //
 // `mostrarDesconto=false` esconde o "de/por" do lote (a /fresh não usa o
 // precoDe) e deixa só a reserva da vaga. `ancora` entra acima da reserva.
 export function IngressoModal({
   mostrarDesconto = true,
   ancora,
+  oferta,
+  textos = TEXTOS_AULA,
 }: {
   mostrarDesconto?: boolean;
   ancora?: React.ReactNode;
+  oferta?: OfertaIngresso;
+  textos?: TextosIngresso;
 } = {}) {
   const { aberto, etapa, ingresso } = useIngresso();
   const tituloId = useId();
@@ -92,9 +141,11 @@ export function IngressoModal({
             tituloId={tituloId}
             mostrarDesconto={mostrarDesconto}
             ancora={ancora}
+            oferta={oferta}
+            textos={textos}
           />
         ) : (
-          <FormIngresso inicial={ingresso} tituloId={tituloId} />
+          <FormIngresso inicial={ingresso} tituloId={tituloId} textos={textos} />
         )}
       </div>
     </div>
@@ -129,9 +180,11 @@ function Chip({
 function FormIngresso({
   inicial,
   tituloId,
+  textos,
 }: {
   inicial: Ingresso | null;
   tituloId: string;
+  textos: TextosIngresso;
 }) {
   const [tratamento, setTratamento] = useState<Tratamento>(
     inicial?.tratamento ?? "Só o nome",
@@ -153,13 +206,13 @@ function FormIngresso({
         if (!valido || !area) return;
         emitirIngresso({ tratamento, nome, area });
         // Sem dados pessoais no pixel — só a área, que ajuda a segmentar.
-        track("Lead", { content_name: "Ingresso Por Dentro da Face", area });
-        gaEvent("generate_lead", { area });
+        track("Lead", { content_name: textos.contentName, area, ...textos.rastreio });
+        gaEvent("generate_lead", { area, ...textos.rastreio });
       }}
     >
       <div className="text-center">
         <span className="text-[11.5px] font-semibold tracking-[0.2em] text-wine-ink uppercase">
-          Ao vivo · 6 de outubro · vagas limitadas
+          {textos.formEyebrow}
         </span>
         <h2
           id={tituloId}
@@ -168,7 +221,7 @@ function FormIngresso({
           Emita seu ingresso
         </h2>
         <p className="mx-auto mt-2 max-w-[340px] text-[1rem] leading-[1.5] text-fg-soft">
-          Preencha como você quer aparecer no seu ingresso da aula ao vivo.
+          {textos.formSubtitulo}
         </p>
       </div>
 
@@ -245,13 +298,18 @@ function IngressoEmitido({
   tituloId,
   mostrarDesconto,
   ancora,
+  oferta,
+  textos,
 }: {
   ingresso: Ingresso;
   tituloId: string;
   mostrarDesconto: boolean;
   ancora?: React.ReactNode;
+  oferta?: OfertaIngresso;
+  textos: TextosIngresso;
 }) {
-  const { lote, montado } = useLoteAtivo();
+  const doLote = useLoteAtivo();
+  const { dados: lote, montado } = oferta ?? { dados: doLote.lote, montado: doLote.montado };
   const restanteMs = useReservaRestante();
   const expirado = restanteMs !== null && restanteMs <= 0;
   const progresso = restanteMs === null ? 1 : restanteMs / RESERVA_DURACAO_MS;
@@ -275,14 +333,14 @@ function IngressoEmitido({
           <div className="flex items-start justify-between gap-3">
             <div>
               <div className="font-serif text-[1.35rem] leading-tight font-semibold">
-                Por Dentro da Face
+                {textos.titulo}
               </div>
               <div className="mt-1 text-[10.5px] font-semibold tracking-[0.18em] text-bg/60 uppercase">
-                Aula online e ao vivo
+                {textos.subtitulo}
               </div>
             </div>
             <span className="shrink-0 rounded-[3px] border border-wine px-2 py-1 text-[10px] font-semibold tracking-[0.14em] text-wine uppercase">
-              Vagas limitadas
+              {textos.selo}
             </span>
           </div>
 
@@ -295,11 +353,7 @@ function IngressoEmitido({
           <div className="mt-0.5 text-[1rem] font-medium text-wine">{ingresso.area}</div>
 
           <div className="mt-5 grid grid-cols-3 gap-3">
-            {[
-              ["Data", "06/10"],
-              ["Horário", "20h"],
-              ["Formato", "Ao vivo"],
-            ].map(([rotulo, valor]) => (
+            {textos.detalhes.map(([rotulo, valor]) => (
               <div key={rotulo}>
                 <div className="text-[10px] font-semibold tracking-[0.16em] text-bg/60 uppercase">
                   {rotulo}
@@ -367,7 +421,7 @@ function IngressoEmitido({
         ) : (
           <>
             <p className="text-[1rem] text-fg-soft">
-              {temDesconto ? "Desconto válido por" : "Seu lugar na sala fica reservado por"}
+              {temDesconto ? "Desconto válido por" : textos.reserva}
             </p>
             <div
               className="mt-1 font-serif text-[2.2rem] leading-none text-wine-ink tabular-nums"
@@ -399,11 +453,12 @@ function IngressoEmitido({
           data-checkout
           onClick={() => {
             trackCustom("ClickCheckout", {
-              content_name: "Ingresso Por Dentro da Face",
+              content_name: textos.contentName,
+              ...textos.rastreio,
               value: lote.price,
               currency: "BRL",
             });
-            gaEvent("click_checkout", { value: lote.price, currency: "BRL" });
+            gaEvent("click_checkout", { ...textos.rastreio, value: lote.price, currency: "BRL" });
           }}
           className="mt-5 block w-full rounded-[2px] bg-wine px-6 py-[18px] text-center font-sans text-[1.02rem] font-semibold text-on-wine transition-colors hover:bg-wine-hover"
         >

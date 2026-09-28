@@ -1,16 +1,17 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { VagasBadge } from "@/components/VagasBadge";
 import { CtaButton } from "@/components/info/CtaButton";
-import { useOfertaKit } from "@/lib/useOfertaKit";
+import { SoComBonus } from "@/components/info/SoComBonus";
 
-// CTA fixo da /info. Sem timer de reserva nem "poucas vagas": o kit é digital
-// e a única urgência real é a data da aula de bônus.
+// CTA fixo da /info, no padrão da /fresh (components/fresh/StickyCta.tsx): sem
+// preço e sem cronômetro de reserva (a reserva aparece dentro do ingresso
+// emitido). A urgência é só a real: a data da aula de presente.
 // - Mobile: sempre visível.
 // - Desktop: aparece depois do Hero e some perto do rodapé.
 export function StickyCta() {
   const [mostrarDesktop, setMostrarDesktop] = useState(false);
-  const { fase, montado } = useOfertaKit();
 
   useEffect(() => {
     const onScroll = () => {
@@ -29,22 +30,20 @@ export function StickyCta() {
     };
   }, []);
 
-  const resumo =
-    montado && fase?.checkoutUrl
-      ? fase.id === "comBonus"
-        ? `${fase.priceLabel} · aula ao vivo de presente até 06/10`
-        : `${fase.priceLabel} ou 12x de ${fase.parcela12x}`
-      : "";
-
   return (
     <>
       <div
         data-fixed-bottom-bar="true"
         className="fixed inset-x-0 bottom-0 z-40 border-t border-line bg-bg/95 px-4 py-2.5 backdrop-blur-sm sm:hidden"
       >
-        <p className="mb-2 min-h-[1.4em] text-center text-[12.5px] tracking-[0.02em] text-fg-soft">
-          {resumo}
-        </p>
+        <div className="mb-2 flex items-center justify-between gap-2">
+          <SoComBonus senao={<VagasBadge>Garantia de 7 dias</VagasBadge>}>
+            <VagasBadge>Aula de presente até 06/10</VagasBadge>
+          </SoComBonus>
+          <span className="text-[11px] font-semibold tracking-[0.12em] text-fg-soft uppercase">
+            Protocolo na hora
+          </span>
+        </div>
         <CtaButton className="w-full justify-center" />
       </div>
 
@@ -58,10 +57,14 @@ export function StickyCta() {
         }`}
       >
         <div className="mx-auto flex max-w-[1060px] items-center justify-between gap-8 px-10 py-[18px] text-fg-soft">
-          <span className="text-[0.98rem]">
-            <span className="font-serif text-fg">Protocolo de Resgate Vascular</span>
-            {resumo && <span className="text-fg-faint"> · {resumo}</span>}
-          </span>
+          <div className="flex items-center gap-7">
+            <SoComBonus>
+              <VagasBadge plain>Aula de presente até 06/10</VagasBadge>
+            </SoComBonus>
+            <span className="text-[12px] font-semibold tracking-[0.12em] uppercase">
+              Protocolo de Resgate Vascular · acesso imediato
+            </span>
+          </div>
           <CtaButton className="shrink-0" />
         </div>
       </div>

@@ -1,5 +1,7 @@
 "use client";
 
+import { abrirIngresso } from "@/lib/ingresso";
+import { FASES } from "@/lib/ofertaKit";
 import { useOfertaKit } from "@/lib/useOfertaKit";
 import { trackCustom, gaEvent } from "@/lib/analytics";
 
@@ -10,13 +12,17 @@ type Props = {
   className?: string;
 };
 
-// CTA da /info. Mesmo visual do components/CtaButton.tsx, sem gate de VSL (a
-// /info não tem vídeo). O href vem da fase ativa do kit; o repasse de UTM pro
-// checkout é do ticto-echo, montado no layout. Sem checkoutUrl na fase (ex.:
-// "soKit" antes de existir o checkout só do kit), o botão fica bloqueado.
+// CTA da /info, no padrão da /fresh: enquanto a aula de presente faz parte da
+// oferta, o botão NÃO vai direto pro checkout — abre o ingresso
+// (components/info/IngressoInfo.tsx), que mostra o preço e leva ao checkout.
+// Depois da aula (fase "soKit"), sem ingresso, o botão vai direto ao
+// checkoutUrl da fase; sem checkoutUrl, fica bloqueado ("Em breve"). O repasse
+// de UTM pro checkout é do ticto-echo, montado no layout.
 export function CtaButton({ children, variant = "dark", className = "" }: Props) {
   const { fase, montado } = useOfertaKit();
   const bloqueado = montado && !fase?.checkoutUrl;
+  // Antes de montar, assume a fase vigente na campanha (ingresso), igual ao HTML estático.
+  const emiteIngresso = !montado || fase?.id === "comBonus";
 
   const base =
     "inline-flex items-center gap-3 rounded-[2px] px-8 py-[19px] font-sans text-[1.02rem] font-semibold transition-[transform,background-color] duration-150 ease-out hover:-translate-y-0.5";
@@ -25,18 +31,30 @@ export function CtaButton({ children, variant = "dark", className = "" }: Props)
       ? "bg-wine text-on-wine hover:bg-wine-hover"
       : "bg-fg text-wine hover:bg-white";
 
-  const label = bloqueado ? "Em breve" : (children ?? fase?.ctaLabel ?? "Quero o Protocolo + a aula ao vivo");
+  const label = bloqueado ? "Em breve" : (children ?? (fase ?? FASES[0]).ctaLabel);
+  const href = bloqueado ? undefined : emiteIngresso ? "#ingresso" : fase?.checkoutUrl;
 
   return (
     <a
-      href={bloqueado ? undefined : (fase?.checkoutUrl ?? "#")}
+      href={href}
       className={`${base} ${palette} ${
         bloqueado ? "cursor-not-allowed opacity-55 hover:translate-y-0" : ""
       } ${className}`}
       aria-disabled={bloqueado || undefined}
+      aria-haspopup={!bloqueado && emiteIngresso ? "dialog" : undefined}
       onClick={(e) => {
         if (!fase?.checkoutUrl) {
           e.preventDefault();
+          return;
+        }
+        if (emiteIngresso) {
+          e.preventDefault();
+          abrirIngresso();
+          trackCustom("AbrirIngresso", {
+            content_name: "Protocolo de Resgate Vascular",
+            produto: "kit-protocolo",
+          });
+          gaEvent("open_ingresso", { produto: "kit-protocolo" });
           return;
         }
         trackCustom("ClickCheckout", {
@@ -53,7 +71,7 @@ export function CtaButton({ children, variant = "dark", className = "" }: Props)
           currency: "BRL",
         });
       }}
-      data-checkout={!bloqueado || undefined}
+      data-checkout={(!bloqueado && !emiteIngresso) || undefined}
     >
       {label}
     </a>

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Container } from "@/components/Container";
 import { Reveal } from "@/components/Reveal";
+import { Titulo } from "@/components/fresh/Titulo";
 import { withBasePath } from "@/lib/basePath";
 
 // "Show over tell": páginas reais do protocolo (render de docs/kit-protocolo,
@@ -46,18 +47,13 @@ const PAGINAS = [
 
 export function Conteudo() {
   return (
-    <section className="bg-bg-2 py-16 sm:py-[92px]">
+    <section className="py-16 sm:py-[92px]">
       <Container narrow>
+        <Titulo eyebrow="O que tem dentro" destaque="da hora zero aos 60 dias.">
+          Tudo o que você precisa ter na mão,
+        </Titulo>
         <Reveal>
-          <span className="text-[12px] font-semibold tracking-[0.24em] text-wine-ink uppercase">
-            O que tem dentro
-          </span>
-          <h2 className="mt-[18px] text-balance font-serif font-semibold text-[1.95rem] leading-[1.12] sm:text-[2.6rem]">
-            <span className="titulo-grifo">
-              Tudo o que você precisa ter na mão, da hora zero aos 60 dias.
-            </span>
-          </h2>
-          <p className="mt-[18px] max-w-[560px] text-[1.08rem] leading-[1.55] text-fg-soft">
+          <p className="mt-6 max-w-[600px] text-[1.1rem] leading-[1.6] text-fg-soft">
             Um PDF de 22 páginas em A4, a prancha de parede e a ficha em arquivos separados
             pra imprimir, e dois cards em PNG pra mandar à paciente. Veja por dentro:
           </p>
