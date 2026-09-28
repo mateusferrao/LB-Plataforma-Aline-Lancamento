@@ -22,10 +22,6 @@ const LEVA = [
     t: "Previsibilidade no preenchimento",
     d: "Você vê em que plano o produto se acomoda depois de aplicado, não a expectativa do rótulo.",
   },
-  {
-    t: "A sua dúvida respondida na hora",
-    d: "Tira-dúvidas ao vivo, só pra quem está na sala.",
-  },
 ];
 
 export function OQueVoceLeva() {

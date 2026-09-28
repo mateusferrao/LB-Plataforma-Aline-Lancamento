@@ -10,7 +10,7 @@ import { withBasePath } from "@/lib/basePath";
 // referência genérica de mercado (sem atribuir o valor ao curso da Aline).
 // Sem o valor da aula na página (igual à /lp2): o R$67 só aparece no ingresso
 // emitido, no comparativo com o preço riscado (components/fresh/AncoraIngresso).
-// A frase do hands-on protege a promessa: é aula, não curso prático.
+// O aviso de que não substitui o hands-on fica na FAQ ("Substitui um curso presencial?").
 export function Ancora() {
   return (
     <>
@@ -61,11 +61,6 @@ export function Ancora() {
                   em cadáver fresh frozen nos EUA e hoje dá cursos internacionais. No dia 6, ela traz pra sua tela, nas imagens das dissecções
                   dela, o que muda a segurança de quem aplica. Sem passagem, sem visto e sem
                   pagar em dólar ou euro.
-                </p>
-                <p className="mt-5 max-w-[600px] border-l-2 border-wine pl-4 text-[1rem] leading-[1.55] text-fg-faint italic">
-                  Não é um curso prático e não substitui o hands-on. É a segurança que faltava
-                  pra você aplicar agora, e o primeiro passo pra quem sonha em fazer esse
-                  curso um dia.
                 </p>
 
                 <CtaButton className="mt-8 w-full justify-center sm:w-auto sm:justify-start">
