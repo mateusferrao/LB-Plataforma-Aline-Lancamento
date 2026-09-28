@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import { Container } from "@/components/Container";
 import { Footer } from "@/components/Footer";
 import { SoComBonus } from "@/components/info/SoComBonus";
-import { SoAntesDoEnvio } from "@/components/info/SoAntesDoEnvio";
-import { ENVIO_KIT_DATA } from "@/lib/ofertaKit";
 import { WhatsAppIcon } from "@/components/WhatsAppIcon";
 import { googleCalendarUrl } from "@/lib/calendarLink";
 
@@ -35,9 +33,7 @@ export default function ObrigadoInfo() {
           </h1>
 
           <p className="mx-auto mt-5 max-w-[480px] text-[1.05rem] leading-[1.6] text-fg-soft">
-            <SoAntesDoEnvio senao="O acesso ao protocolo chega no seu WhatsApp em instantes.">
-              O protocolo chega no seu WhatsApp no dia {ENVIO_KIT_DATA}.
-            </SoAntesDoEnvio>{" "}
+            Os arquivos chegam no seu WhatsApp em instantes.
             Imprima a prancha de parede e deixe na sala de atendimento, e coloque seu
             contato nos cards da paciente antes do próximo atendimento.
           </p>
@@ -75,9 +71,7 @@ export default function ObrigadoInfo() {
           </SoComBonus>
 
           <p className="mt-10 text-[13.5px] text-fg-faint">
-            <SoAntesDoEnvio senao="Não recebeu o protocolo no WhatsApp ou ficou com dúvida?">
-              Ficou com alguma dúvida?
-            </SoAntesDoEnvio>{" "}
+            Não recebeu o protocolo no WhatsApp ou ficou com dúvida?{" "}
             <a
               href={TIME_WHATSAPP_URL}
               target="_blank"

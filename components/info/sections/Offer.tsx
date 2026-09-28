@@ -4,8 +4,6 @@ import { CtaButton } from "@/components/info/CtaButton";
 import { OfertaItens } from "@/components/info/OfertaItens";
 import { OfertaPrecoKit } from "@/components/info/OfertaPrecoKit";
 import { SoComBonus } from "@/components/info/SoComBonus";
-import { SoAntesDoEnvio } from "@/components/info/SoAntesDoEnvio";
-import { ENVIO_KIT_DATA } from "@/lib/ofertaKit";
 
 // Do clique ao kit. Tráfego frio compra sem conhecer o processo; os passos
 // tiram o "e depois que eu pagar?". O 3º passo só existe enquanto há aula.
@@ -13,11 +11,7 @@ const PASSOS = [
   { t: "Garanta no Pix ou no cartão", d: "Em até 12x, direto no checkout." },
   {
     t: "Receba o protocolo no WhatsApp",
-    d: (
-      <SoAntesDoEnvio senao="O PDF, a prancha, a ficha e os cards chegam no seu WhatsApp após a confirmação do pagamento.">
-        O PDF, a prancha, a ficha e os cards chegam no seu WhatsApp no dia {ENVIO_KIT_DATA}.
-      </SoAntesDoEnvio>
-    ),
+    d: "O PDF, a prancha, a ficha e os cards chegam no seu WhatsApp logo após a confirmação do pagamento.",
   },
 ];
 const PASSO_AULA = {

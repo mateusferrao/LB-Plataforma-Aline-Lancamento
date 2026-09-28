@@ -3,8 +3,6 @@ import { Container } from "@/components/Container";
 import { BonusCountdown } from "@/components/info/BonusCountdown";
 import { CtaButton } from "@/components/info/CtaButton";
 import { LinhaGarantia } from "@/components/info/LinhaGarantia";
-import { SoAntesDoEnvio } from "@/components/info/SoAntesDoEnvio";
-import { ENVIO_KIT_DATA } from "@/lib/ofertaKit";
 import { SoComBonus } from "@/components/info/SoComBonus";
 import { withBasePath } from "@/lib/basePath";
 
@@ -64,11 +62,9 @@ export function Hero() {
               <CtaButton className="w-full justify-center sm:w-auto sm:justify-start" />
             </div>
             <LinhaGarantia className="mt-3.5 text-[13.5px] tracking-[0.02em] text-fg-faint" />
-            <SoAntesDoEnvio>
-              <p className="mt-2 text-[13.5px] font-semibold tracking-[0.02em] text-wine-ink">
-                O Protocolo chega no seu WhatsApp no dia {ENVIO_KIT_DATA}.
-              </p>
-            </SoAntesDoEnvio>
+            <p className="mt-2 text-[13.5px] font-semibold tracking-[0.02em] text-wine-ink">
+              Acesso imediato: os arquivos chegam no seu WhatsApp logo após a compra.
+            </p>
           </div>
 
           <figure className="relative mx-auto w-full max-w-[460px] md:self-center">

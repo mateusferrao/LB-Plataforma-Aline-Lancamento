@@ -136,13 +136,13 @@ de Resgate Vascular"*.
   Face** (a mesma aula, mesmo grupo de WhatsApp, sem gravação). Depois da aula, o bônus sai da
   oferta.
 - **Âncora exibida no site:** Protocolo "de R$109,90" + aula "R$67" = "de R$176,90 por R$97".
-- **Entrega:** **pelo WhatsApp**. **Compras até 01/10: envio no dia 01/10.** A partir de 02/10,
-  chega após a confirmação do pagamento. Não é por e-mail.
+- **Entrega:** **imediata, pelo WhatsApp**, logo após a confirmação do pagamento. Não é por
+  e-mail.
 - **Garantia:** 7 dias, sem perguntas (igual à aula).
 - **"Já comprei o ingresso da aula e quero o Protocolo":** **não** mande para a `/info` (ela
   pagaria a aula duas vezes). **Escale para o atendimento humano.**
-- **"Comprei o Mapa das Intercorrências":** quem comprou o Mapa recebe o Protocolo no lugar, em
-  01/10, com mensagem explicando a troca. Se a pessoa não quiser, a garantia de 7 dias vale.
+- **"Comprei o Mapa das Intercorrências":** quem comprou o Mapa recebe o Protocolo no lugar,
+  pelo WhatsApp, com mensagem explicando a troca. Se a pessoa não quiser, a garantia de 7 dias vale.
   Escale para o atendimento humano.
 
 ---

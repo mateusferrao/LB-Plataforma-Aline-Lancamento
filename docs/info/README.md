@@ -4,7 +4,8 @@
 > conseguiu validar o conteúdo) e substituído pelo **Protocolo de Resgate Vascular**, feito só com
 > os dois protocolos que a Aline usa: *Protocolo Intercorrências* (oclusão) e *Protocolo Necrose*.
 > Mesmo checkout, mesmo preço e mesmo "de" do bump. Quem comprou o Mapa recebe o Protocolo no lugar
-> em 01/10 (mensagem na seção 5.2).
+> assim que os arquivos estiverem prontos (mensagem na seção 5.2). **Entrega imediata:** quem
+> compra agora recebe os arquivos no WhatsApp logo após a confirmação do pagamento.
 
 O Protocolo é vendido de duas formas:
 - **Order bump** (R$29,90, "de R$109,90") no checkout da aula **Por Dentro da Face** (R$67,
@@ -109,11 +110,28 @@ Base: skill *copywriting*.
 ### 4.1 Caixa do order bump (checkout da aula)
 
 - **Título:** Sim, quero o Protocolo de Resgate Vascular da Dra. Aline por R$29,90
-- **Descrição:**
+- **Descrição (completa, se a caixa aceitar lista):**
   > Se uma oclusão acontecer na sua cadeira, você vai saber o que fazer no primeiro minuto. É o
-  > protocolo que a Aline usa: do primeiro gesto (e por que nunca usar gelo) à hialuronidase hora
-  > a hora, as medicações com posologia e o cuidado da necrose até a cicatrização. Vem com prancha
-  > de parede, ficha de acompanhamento e 2 cards pra enviar à paciente. Só neste checkout.
+  > protocolo que a Dra. Aline usa, pronto pra usar no dia em que precisar. Você recebe na
+  > hora, no WhatsApp:
+  >
+  > • **Protocolo completo em PDF (22 páginas):** os 6 passos da oclusão (o que fazer nos primeiros
+  > segundos, por que nunca usar gelo, a hialuronidase por encharcamento, o que repetir a cada hora,
+  > quando liberar a paciente) e os 9 passos do cuidado da necrose até a cicatrização
+  > • **Medicações que a Aline utiliza** em cada fase, com posologia e o momento de começar
+  > • **Prancha de parede:** a oclusão inteira em uma folha, pra imprimir e deixar na sala
+  > • **Ficha de acompanhamento hora a hora,** pra preencher em cada caso
+  > • **2 cards pra enviar à paciente** no WhatsApp: o que fazer em casa depois da oclusão e os
+  > cuidados até cicatrizar
+  > • **Calendário da recuperação, checklist da maleta e a evolução de um caso real** acompanhado
+  > pela Aline
+  >
+  > De R$109,90 por R$29,90, só neste checkout.
+
+- **Descrição (compacta, se a caixa for pequena, ~300 caracteres):**
+  > O protocolo de oclusão e necrose que a Dra. Aline usa, do primeiro minuto à cicatrização. Você
+  > recebe: PDF com os passos e as medicações com posologia, prancha de parede pra imprimir, ficha
+  > hora a hora e 2 cards pra enviar à paciente. Chega na hora no seu WhatsApp. R$29,90, só aqui.
 - **Imagem:** `docs/kit-protocolo/out/Imagem-Order-Bump.png` (1080×1080: capa, prancha com as
   medicações desfocadas e card no celular).
 - **Variante B do título (teste):** Adicionar o protocolo de oclusão e necrose que a Aline usa
@@ -155,7 +173,7 @@ Base: skill *copywriting*.
 > 2026, às 20h (Brasília), online, cerca de 90 minutos, sem gravação. O protocolo mostra o que
 > fazer. A aula mostra, por dentro, onde tudo acontece.
 >
-> **Formato:** 5 arquivos digitais enviados pelo WhatsApp. **Garantia:** 7 dias.
+> **Formato:** 5 arquivos digitais, enviados na hora pelo WhatsApp. **Garantia:** 7 dias.
 >
 > *Material educativo com o protocolo que a Dra. Aline Filgueiras utiliza. Não substitui formação,
 > protocolos clínicos oficiais, orientação do seu conselho profissional ou avaliação individual.
@@ -196,8 +214,6 @@ Vascular".
 > *1. Seus arquivos*
 > Aqui estão os 5 arquivos: o protocolo completo, a prancha de parede, a ficha de acompanhamento e
 > os dois cards da paciente: {link}
-> *(Compras até 01/10: troque as duas linhas acima por "Seu protocolo chega aqui no dia 01/10.
-> Assim que for enviado, te aviso por aqui.")*
 >
 > Pra aproveitar desde o primeiro dia:
 > • Imprima a prancha de parede e deixe na sala de atendimento. Numa emergência, ninguém procura
@@ -215,7 +231,7 @@ Vascular".
 >
 > Qualquer dúvida, é só responder esta mensagem.
 
-### 5.2 Troca, para quem comprou o Mapa (bump ou `/info`), enviar em 01/10 com os arquivos
+### 5.2 Troca, para quem comprou o Mapa (bump ou `/info`), enviar já, com os arquivos
 
 > Oi, {nome}. Aqui é da equipe da Dra. Aline Filgueiras.
 >
@@ -240,7 +256,8 @@ Vascular".
 - [ ] **Ticto:** renomear o produto do bump e o da oferta "Protocolo + aula", colar as descrições
   da seção 4, trocar a imagem do bump e o arquivo de entrega.
 - [ ] **Anúncios:** pausar ou trocar os criativos que mostram as pranchas antigas.
-- [ ] **01/10:** enviar a mensagem 5.2 para quem comprou o Mapa.
+- [ ] **Assim que a Ticto estiver atualizada:** enviar a mensagem 5.2 para quem comprou o Mapa
+  (elas esperavam receber em 01/10; mandar antes é ponto a favor).
 - [ ] Coletar prints de quem comprar o Protocolo e trocar a faixa de `SocialProof`.
 - [ ] Depois de 06/10: definir preço e checkout do protocolo sozinho na fase `soKit`.
 

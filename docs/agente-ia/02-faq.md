@@ -108,8 +108,7 @@ presente a aula ao vivo Por Dentro da Face**. A compra é no site:
 `https://live.alinefilgueiras.com.br/info`.
 
 ### K3. Como recebo?
-**Pelo WhatsApp.** Quem compra até 01/10 recebe os arquivos **no dia 01/10**. A partir de 02/10, o
-acesso chega no WhatsApp logo depois da confirmação do pagamento. Se comprou até 06/10, a página de
+**Na hora, pelo WhatsApp.** Os arquivos chegam logo depois da confirmação do pagamento. Se comprou até 06/10, a página de
 obrigado também leva ao grupo de WhatsApp da aula.
 
 ### K4. Já comprei o ingresso da aula. Posso pegar o Protocolo?
@@ -122,7 +121,7 @@ habilitação profissional de cada uma. *(Nunca cite nome de medicamento nem dos
 
 ### K6. Comprei o Mapa das Intercorrências. O que recebo?
 A Aline trocou o Mapa pelo protocolo que ela mesma usa na clínica: você recebe o Protocolo de
-Resgate Vascular no lugar, em 01/10. Se preferir, a garantia de 7 dias continua valendo.
+Resgate Vascular no lugar, pelo WhatsApp. Se preferir, a garantia de 7 dias continua valendo.
 *(Escalar para o atendimento humano.)*
 
 ### K7. Tem garantia?

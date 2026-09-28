@@ -3,8 +3,6 @@
 import { Container } from "@/components/Container";
 import { Reveal } from "@/components/Reveal";
 import { useOfertaKit } from "@/lib/useOfertaKit";
-import { SoAntesDoEnvio } from "@/components/info/SoAntesDoEnvio";
-import { ENVIO_KIT_DATA } from "@/lib/ofertaKit";
 
 // WhatsApp do time (mesmo número do botão flutuante), com contexto de quem já
 // tem o ingresso da aula e quer o Protocolo sem pagar a aula duas vezes.
@@ -25,13 +23,7 @@ const FAQS: Item[] = [
   },
   {
     q: "Como recebo?",
-    a: (
-      <SoAntesDoEnvio senao="Pelo WhatsApp. Depois da confirmação do pagamento, você recebe no seu WhatsApp o PDF do protocolo em A4, a prancha de parede e a ficha em arquivos separados pra imprimir, e os dois cards da paciente em PNG, no formato de tela do celular.">
-        Pelo WhatsApp, no dia {ENVIO_KIT_DATA}. Você recebe o PDF do protocolo em A4, a prancha
-        de parede e a ficha em arquivos separados pra imprimir, e os dois cards da paciente em
-        PNG, no formato de tela do celular.
-      </SoAntesDoEnvio>
-    ),
+    a: "Na hora, pelo WhatsApp. Logo após a confirmação do pagamento, você recebe o PDF do protocolo, a prancha de parede e a ficha em arquivos separados pra imprimir, e os dois cards da paciente em PNG, no formato de tela do celular.",
   },
   {
     q: "Posso imprimir?",
