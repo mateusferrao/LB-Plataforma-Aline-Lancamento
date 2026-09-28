@@ -3,6 +3,8 @@
 import { Container } from "@/components/Container";
 import { Reveal } from "@/components/Reveal";
 import { useOfertaKit } from "@/lib/useOfertaKit";
+import { SoAntesDoEnvio } from "@/components/info/SoAntesDoEnvio";
+import { ENVIO_KIT_DATA } from "@/lib/ofertaKit";
 
 // WhatsApp do time (mesmo número do botão flutuante), com contexto de quem já
 // tem o ingresso da aula e quer o Mapa sem pagar a aula duas vezes.
@@ -19,7 +21,12 @@ const FAQS: Item[] = [
   },
   {
     q: "Como recebo o kit?",
-    a: "Pelo WhatsApp. Depois da confirmação do pagamento, você recebe no seu WhatsApp o acesso ao PDF de 10 páginas, em formato paisagem, e ao card da paciente em PNG, no formato de tela do celular.",
+    a: (
+      <SoAntesDoEnvio senao="Pelo WhatsApp. Depois da confirmação do pagamento, você recebe no seu WhatsApp o acesso ao PDF de 10 páginas, em formato paisagem, e ao card da paciente em PNG, no formato de tela do celular.">
+        Pelo WhatsApp, no dia {ENVIO_KIT_DATA}. Você recebe no seu WhatsApp o acesso ao PDF de 10
+        páginas, em formato paisagem, e ao card da paciente em PNG, no formato de tela do celular.
+      </SoAntesDoEnvio>
+    ),
   },
   {
     q: "Posso imprimir?",

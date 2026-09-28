@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { agora } from "@/lib/lotes";
-import { faseKitEm, type FaseKit } from "@/lib/ofertaKit";
+import { ENVIO_KIT_ATE_ISO, faseKitEm, type FaseKit } from "@/lib/ofertaKit";
 
 export type FaseKitState = {
   fase: FaseKit | null;
@@ -20,6 +20,24 @@ export function useOfertaKit(): FaseKitState {
 
   useEffect(() => {
     const tick = () => setState({ fase: faseKitEm(agora()), montado: true });
+    tick();
+    const id = setInterval(tick, 1000);
+    return () => clearInterval(id);
+  }, []);
+
+  return state;
+}
+
+/**
+ * true enquanto o kit ainda não foi enviado (antes de ENVIO_KIT_ATE_ISO).
+ * `montado` false até a 1ª montagem. Respeita o ?preview= do agora().
+ */
+export function useEnvioKitPendente(): { pendente: boolean; montado: boolean } {
+  const [state, setState] = useState({ pendente: true, montado: false });
+
+  useEffect(() => {
+    const tick = () =>
+      setState({ pendente: agora() < Date.parse(ENVIO_KIT_ATE_ISO), montado: true });
     tick();
     const id = setInterval(tick, 1000);
     return () => clearInterval(id);

@@ -145,6 +145,8 @@ conduta imediata. De bônus, a aula ao vivo Por Dentro da Face (06/10)."
 >
 > *1. Seu kit*
 > Aqui está o acesso ao seu kit: {link do kit}
+> *(Compras até 01/10: troque as duas linhas acima por "Seu kit chega aqui no dia 01/10. Assim que for
+> enviado, te aviso por aqui.")*
 > Se tiver qualquer dificuldade pra abrir, me responda aqui que eu te ajudo.
 >
 > Pra aproveitar desde o primeiro dia:

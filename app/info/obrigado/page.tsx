@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Container } from "@/components/Container";
 import { Footer } from "@/components/Footer";
 import { SoComBonus } from "@/components/info/SoComBonus";
+import { SoAntesDoEnvio } from "@/components/info/SoAntesDoEnvio";
+import { ENVIO_KIT_DATA } from "@/lib/ofertaKit";
 import { WhatsAppIcon } from "@/components/WhatsAppIcon";
 import { googleCalendarUrl } from "@/lib/calendarLink";
 
@@ -33,7 +35,10 @@ export default function ObrigadoInfo() {
           </h1>
 
           <p className="mx-auto mt-5 max-w-[480px] text-[1.05rem] leading-[1.6] text-fg-soft">
-            O acesso ao kit chega no seu WhatsApp em instantes. Imprima as pranchas 01 e 03 e
+            <SoAntesDoEnvio senao="O acesso ao kit chega no seu WhatsApp em instantes.">
+              O kit chega no seu WhatsApp no dia {ENVIO_KIT_DATA}.
+            </SoAntesDoEnvio>{" "}
+            Imprima as pranchas 01 e 03 e
             deixe à vista no consultório, e coloque seu contato no card da paciente antes do
             próximo atendimento.
           </p>
@@ -71,7 +76,9 @@ export default function ObrigadoInfo() {
           </SoComBonus>
 
           <p className="mt-10 text-[13.5px] text-fg-faint">
-            Não recebeu o kit no WhatsApp ou ficou com dúvida?{" "}
+            <SoAntesDoEnvio senao="Não recebeu o kit no WhatsApp ou ficou com dúvida?">
+              Ficou com alguma dúvida?
+            </SoAntesDoEnvio>{" "}
             <a
               href={TIME_WHATSAPP_URL}
               target="_blank"

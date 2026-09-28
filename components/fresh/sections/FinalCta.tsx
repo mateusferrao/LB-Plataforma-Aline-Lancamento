@@ -28,7 +28,7 @@ export function FinalCta() {
         </span>
         <h2 className="mt-[18px] mb-6 max-w-[580px] text-balance font-serif font-semibold text-[1.95rem] leading-[1.2] text-fg sm:text-[2.5rem]">
           Na próxima vez que chegar perto de uma área de risco,{" "}
-          <span className="titulo-grifo">aplique com calma.</span>
+          <span className="text-wine-bright">aplique com calma.</span>
         </h2>
         <p className="mb-8 max-w-[520px] text-[1.08rem] leading-[1.55] text-fg-soft">
           {ANCORA_REFAZER}

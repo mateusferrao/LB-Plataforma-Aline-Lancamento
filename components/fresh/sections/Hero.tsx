@@ -36,7 +36,7 @@ export function Hero({ comVsl }: { comVsl: boolean }) {
 
             <h1 className="mt-3 text-balance font-sans font-semibold text-[1.9rem] leading-[1.15] tracking-[-0.015em] text-fg sm:text-[2.4rem] lg:text-[2.6rem]">
               A segurança de um curso internacional em cadáver fresh frozen,{" "}
-              <span className="text-wine-bright">pra você aplicar sem medo e com resultado.</span>
+              <span className="titulo-grifo">pra você aplicar sem medo e com resultado.</span>
             </h1>
 
             <p className="mt-5 max-w-[560px] text-[1.08rem] leading-[1.55] text-fg-soft">

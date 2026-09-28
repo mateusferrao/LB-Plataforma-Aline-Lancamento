@@ -131,8 +131,9 @@ das Intercorrências"*.
   Face** (a mesma aula, mesmo grupo de WhatsApp, sem gravação). Depois da aula, o bônus sai da
   oferta.
 - **Âncora exibida no site:** Mapa "de R$109,90" + aula "R$67" = "de R$176,90 por R$97".
-- **Entrega:** o acesso ao PDF e ao card chega **pelo WhatsApp** após a confirmação do pagamento
-  (não por e-mail); o grupo da aula aparece na página de obrigado.
+- **Entrega:** o acesso ao PDF e ao card chega **pelo WhatsApp**. **Compras até 01/10: o kit é enviado
+  no dia 01/10** (a página e a de obrigado avisam isso). A partir de 02/10, chega após a confirmação do
+  pagamento. Não é por e-mail. O grupo da aula aparece na página de obrigado.
 - **Garantia:** 7 dias, sem perguntas (igual à aula).
 - **"Já comprei o ingresso da aula e quero o Mapa":** **não** mande para a `/info` (ela pagaria a
   aula duas vezes). **Escale para o atendimento humano**, que resolve o acesso ao kit.

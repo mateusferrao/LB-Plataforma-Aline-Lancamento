@@ -108,8 +108,8 @@ presente a aula ao vivo Por Dentro da Face**. A compra é no site:
 `https://live.alinefilgueiras.com.br/info`.
 
 ### K3. Como recebo?
-**Pelo WhatsApp.** Depois da confirmação do pagamento, o acesso ao PDF e ao card da paciente em PNG
-chega no seu WhatsApp. Se comprou até 06/10, a página de obrigado também leva ao grupo de WhatsApp
+**Pelo WhatsApp.** Quem compra até 01/10 recebe o acesso ao PDF e ao card da paciente em PNG **no dia
+01/10**. A partir de 02/10, o acesso chega no WhatsApp logo depois da confirmação do pagamento. Se comprou até 06/10, a página de obrigado também leva ao grupo de WhatsApp
 da aula.
 
 ### K4. Já comprei o ingresso da aula. Posso pegar o Mapa?

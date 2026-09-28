@@ -1,8 +1,8 @@
 import { Reveal } from "@/components/Reveal";
 
-// Eyebrow + H2 das seções da /fresh. O grifo marsala fica só no `destaque`
-// (2 ou 3 palavras), não na frase inteira: mantém a ligação visual com os
-// criativos sem o peso do título todo grifado das LPs anteriores.
+// Eyebrow + H2 das seções da /fresh. O `destaque` (2 ou 3 palavras) fica só com
+// o texto vermelho: o grifo marsala (titulo-grifo) é exclusivo do H1 do Hero,
+// pra headline ser o único título com bloco de cor na página.
 export function Titulo({
   eyebrow,
   children,
@@ -26,7 +26,7 @@ export function Titulo({
       >
         {children}
         {children && destaque ? " " : null}
-        {destaque && <span className="titulo-grifo">{destaque}</span>}
+        {destaque && <span className="text-wine-bright">{destaque}</span>}
       </h2>
     </Reveal>
   );

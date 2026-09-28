@@ -19,6 +19,13 @@
 
 import { LIVE_DATE_ISO } from "@/lib/lotes";
 
+// Envio do kit: até o fim de 01/10 (Brasília), o Mapa ainda não foi enviado e a
+// /info avisa "chega no seu WhatsApp no dia 01/10". A partir de ENVIO_KIT_ATE_ISO
+// os avisos somem sozinhos e volta o "chega após a confirmação do pagamento"
+// (components/info/SoAntesDoEnvio.tsx). Pra outra data, troque só estas duas.
+export const ENVIO_KIT_DATA = "01/10";
+export const ENVIO_KIT_ATE_ISO = "2026-10-02T00:00:00-03:00";
+
 export type ItemOferta = {
   titulo: string;
   detalhe: string;
