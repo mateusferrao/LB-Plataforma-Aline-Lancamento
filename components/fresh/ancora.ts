@@ -8,3 +8,9 @@ export const ANCORA_VALOR = 35000;
 export const ANCORA_CURTA = "R$35 mil";
 export const ANCORA_CURSO = `cerca de ${ANCORA_CURTA}`;
 export const ANCORA_ROTULO = "Curso internacional em cadáver fresh frozen";
+
+// Âncoras de uso diário (plano em docs/fresh/README.md, seção "Outras âncoras").
+// Sem número de marca: "menos que uma seringa" vale pra qualquer preenchedor.
+export const ANCORA_SERINGA = "O ingresso custa menos que uma seringa de preenchedor.";
+export const ANCORA_REFAZER =
+  "Um retoque, um produto desperdiçado ou uma paciente que não volta custa mais do que esta noite.";

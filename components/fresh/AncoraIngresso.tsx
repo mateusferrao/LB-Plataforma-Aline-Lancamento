@@ -1,7 +1,12 @@
 "use client";
 
 import { useLoteAtivo } from "@/lib/useLoteAtivo";
-import { ANCORA_CURTA, ANCORA_ROTULO, ANCORA_VALOR } from "@/components/fresh/ancora";
+import {
+  ANCORA_CURTA,
+  ANCORA_ROTULO,
+  ANCORA_SERINGA,
+  ANCORA_VALOR,
+} from "@/components/fresh/ancora";
 
 // Comparativo visual do ingresso emitido da /fresh. O riscado fica no produto
 // de referência (o curso internacional presencial), nunca num "de/por" da
@@ -47,6 +52,9 @@ export function AncoraIngresso() {
           {selo} · sem viajar
         </span>
       </div>
+      <p className="mt-3 text-center font-serif text-[1.02rem] leading-snug text-fg italic">
+        {ANCORA_SERINGA}
+      </p>
     </div>
   );
 }

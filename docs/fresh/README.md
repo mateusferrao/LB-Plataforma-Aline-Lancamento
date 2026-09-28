@@ -21,7 +21,14 @@ inteira, inclusive do subtexto do contador (`Countdown semPreco`), e só aparece
 nessa faixa; cursos nos EUA cobram US$3.500+ só de inscrição, fora viagem). No ingresso emitido, o
 comparativo é visual (`components/fresh/AncoraIngresso.tsx`): o curso internacional aparece com o valor
 riscado, o ingresso de R$67 em destaque e o selo "Menos de 1% do valor · sem viajar". O riscado fica no
-produto de referência, nunca num "de/por" da própria aula. As seções que dependiam de confirmação da Aline (roteiro
+produto de referência, nunca num "de/por" da própria aula.
+
+**Outras âncoras (28/09).** Uma por lugar, sem empilhar: a **seringa** ("O ingresso custa menos que uma
+seringa de preenchedor") no card da oferta e no comparativo do ingresso, e o **custo de refazer** ("Um
+retoque, um produto desperdiçado ou uma paciente que não volta custa mais do que esta noite") no CTA
+final. Os textos ficam em `components/fresh/ancora.ts`. Próximo teste sugerido, nos criativos e não na
+LP: seringa × curso internacional × refazer, com o mesmo público. O ângulo com menor custo por compra
+sobe para o Hero. As seções que dependiam de confirmação da Aline (roteiro
 em blocos, detalhes dos cursos) foram escritas só com fatos já confirmados.
 
 Base: skill *copywriting* (coreyhaines31/marketingskills), com o Human Action Model (desconforto →

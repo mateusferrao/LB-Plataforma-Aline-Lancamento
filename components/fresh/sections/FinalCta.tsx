@@ -4,6 +4,7 @@ import { Countdown } from "@/components/Countdown";
 import { CtaButton } from "@/components/lp2/CtaButton";
 import { UrgenciaFina } from "@/components/lp2/UrgenciaFina";
 import { withBasePath } from "@/lib/basePath";
+import { ANCORA_REFAZER } from "@/components/fresh/ancora";
 
 export function FinalCta() {
   return (
@@ -29,6 +30,9 @@ export function FinalCta() {
           Na próxima vez que chegar perto de uma área de risco,{" "}
           <span className="titulo-grifo">aplique com calma.</span>
         </h2>
+        <p className="mb-8 max-w-[520px] text-[1.08rem] leading-[1.55] text-fg-soft">
+          {ANCORA_REFAZER}
+        </p>
 
         <Countdown semPreco align="center" />
 

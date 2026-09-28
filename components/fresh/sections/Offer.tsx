@@ -4,6 +4,7 @@ import { CtaButton } from "@/components/lp2/CtaButton";
 import { Reveal } from "@/components/Reveal";
 import { VagasBadge } from "@/components/VagasBadge";
 import { Titulo } from "@/components/fresh/Titulo";
+import { ANCORA_SERINGA } from "@/components/fresh/ancora";
 import { OfertaPreco } from "@/components/lp2/OfertaPreco";
 
 const INCLUI = [
@@ -53,6 +54,9 @@ export function Offer() {
                 </span>
               </div>
             ))}
+            <p className="mt-6 max-w-[440px] font-serif text-[1.16rem] leading-[1.45] text-wine-ink italic">
+              {ANCORA_SERINGA} E é o que decide se as próximas vão dar resultado.
+            </p>
             <Countdown semPreco className="mt-8" />
           </Reveal>
 
