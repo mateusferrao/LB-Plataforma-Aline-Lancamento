@@ -17,11 +17,79 @@ import {
 import { useLoteAtivo } from "@/lib/useLoteAtivo";
 import { RESERVA_DURACAO_MS, two, useReservaRestante } from "@/components/ReservaTimer";
 
+// Oferta que o ingresso emitido mostra e leva ao checkout. Sem `oferta`, o
+// modal usa o lote ativo da aula (lib/lotes.ts). A /info passa a do Protocolo
+// (components/info/IngressoInfo.tsx). `dados` null = inscrições encerradas.
+export type OfertaIngresso = {
+  montado: boolean;
+  dados: {
+    price: number;
+    priceLabel: string;
+    parcela12x: string;
+    checkoutUrl: string;
+    precoDe?: number;
+    precoDeLabel?: string;
+  } | null;
+};
+
+// Textos e rastreio do ingresso. Os padrões são os da aula (/lp2 e /fresh).
+export type TextosIngresso = {
+  formEyebrow: string;
+  formTitulo: string;
+  formSubtitulo: string;
+  formBotao: string;
+  emitido: string;
+  titulo: string;
+  subtitulo: string;
+  // Sem selo, o título do cartão ocupa a largura toda.
+  selo?: string;
+  confirmar: string;
+  detalhes: [string, string][];
+  reserva: string;
+  // content_name do Lead/ClickCheckout e campos extras dos eventos.
+  contentName: string;
+  rastreio?: Record<string, string>;
+};
+
+const TEXTOS_AULA: TextosIngresso = {
+  formEyebrow: "Ao vivo · 6 de outubro · vagas limitadas",
+  formTitulo: "Emita seu ingresso",
+  formSubtitulo: "Preencha como você quer aparecer no seu ingresso da aula ao vivo.",
+  formBotao: "Emitir meu ingresso",
+  emitido: "Seu ingresso foi emitido",
+  titulo: "Por Dentro da Face",
+  subtitulo: "Aula online e ao vivo",
+  selo: "Vagas limitadas",
+  confirmar: "Confirmar meu ingresso",
+  detalhes: [
+    ["Data", "06/10"],
+    ["Horário", "20h"],
+    ["Formato", "Ao vivo"],
+  ],
+  reserva: "Seu lugar na sala fica reservado por",
+  contentName: "Ingresso Por Dentro da Face",
+};
+
 // Modal do fluxo "emitir ingresso antes de ver o preço" (aberto pelo CtaButton).
 // Etapa 1: tratamento + nome + área. Etapa 2: ingresso emitido com o nome da
-// visitante, o preço do lote ativo e o botão que leva ao checkout da Ticto.
-// Montado uma vez por página (app/lp2/page.tsx).
-export function IngressoModal() {
+// visitante, o preço da oferta e o botão que leva ao checkout da Ticto.
+// Montado uma vez por página (app/lp2/page.tsx, components/fresh/FreshPage.tsx,
+// components/info/IngressoInfo.tsx).
+//
+// `mostrarDesconto=false` esconde o bloco de desconto do lote e deixa só a
+// reserva da vaga: a /fresh e a /info mostram o "de" dentro do `ancora`, que
+// entra acima da reserva.
+export function IngressoModal({
+  mostrarDesconto = true,
+  ancora,
+  oferta,
+  textos = TEXTOS_AULA,
+}: {
+  mostrarDesconto?: boolean;
+  ancora?: React.ReactNode;
+  oferta?: OfertaIngresso;
+  textos?: TextosIngresso;
+} = {}) {
   const { aberto, etapa, ingresso } = useIngresso();
   const tituloId = useId();
   const painelRef = useRef<HTMLDivElement>(null);
@@ -78,9 +146,16 @@ export function IngressoModal() {
         </button>
 
         {etapa === "ingresso" && ingresso ? (
-          <IngressoEmitido ingresso={ingresso} tituloId={tituloId} />
+          <IngressoEmitido
+            ingresso={ingresso}
+            tituloId={tituloId}
+            mostrarDesconto={mostrarDesconto}
+            ancora={ancora}
+            oferta={oferta}
+            textos={textos}
+          />
         ) : (
-          <FormIngresso inicial={ingresso} tituloId={tituloId} />
+          <FormIngresso inicial={ingresso} tituloId={tituloId} textos={textos} />
         )}
       </div>
     </div>
@@ -115,9 +190,11 @@ function Chip({
 function FormIngresso({
   inicial,
   tituloId,
+  textos,
 }: {
   inicial: Ingresso | null;
   tituloId: string;
+  textos: TextosIngresso;
 }) {
   const [tratamento, setTratamento] = useState<Tratamento>(
     inicial?.tratamento ?? "Só o nome",
@@ -139,22 +216,22 @@ function FormIngresso({
         if (!valido || !area) return;
         emitirIngresso({ tratamento, nome, area });
         // Sem dados pessoais no pixel — só a área, que ajuda a segmentar.
-        track("Lead", { content_name: "Ingresso Por Dentro da Face", area });
-        gaEvent("generate_lead", { area });
+        track("Lead", { content_name: textos.contentName, area, ...textos.rastreio });
+        gaEvent("generate_lead", { area, ...textos.rastreio });
       }}
     >
       <div className="text-center">
         <span className="text-[11.5px] font-semibold tracking-[0.2em] text-wine-ink uppercase">
-          Ao vivo · 6 de outubro · vagas limitadas
+          {textos.formEyebrow}
         </span>
         <h2
           id={tituloId}
           className="mt-3 font-serif font-semibold text-[1.9rem] leading-tight text-fg"
         >
-          Emita seu ingresso
+          {textos.formTitulo}
         </h2>
         <p className="mx-auto mt-2 max-w-[340px] text-[1rem] leading-[1.5] text-fg-soft">
-          Preencha como você quer aparecer no seu ingresso da aula ao vivo.
+          {textos.formSubtitulo}
         </p>
       </div>
 
@@ -214,7 +291,7 @@ function FormIngresso({
         type="submit"
         className="mt-8 w-full rounded-[2px] bg-wine px-6 py-[18px] font-sans text-[1.02rem] font-semibold text-on-wine transition-colors hover:bg-wine-hover"
       >
-        Emitir meu ingresso
+        {textos.formBotao}
       </button>
       <p className="mt-3 text-center text-[11.5px] tracking-[0.08em] text-fg-faint uppercase">
         Leva 10 segundos · seus dados ficam só no seu navegador
@@ -229,15 +306,25 @@ const BARRAS = [2, 1, 3, 1, 1, 2, 1, 3, 2, 1, 1, 3, 1, 2, 2, 1, 3, 1, 1, 2, 1, 1
 function IngressoEmitido({
   ingresso,
   tituloId,
+  mostrarDesconto,
+  ancora,
+  oferta,
+  textos,
 }: {
   ingresso: Ingresso;
   tituloId: string;
+  mostrarDesconto: boolean;
+  ancora?: React.ReactNode;
+  oferta?: OfertaIngresso;
+  textos: TextosIngresso;
 }) {
-  const { lote, montado } = useLoteAtivo();
+  const doLote = useLoteAtivo();
+  const { dados: lote, montado } = oferta ?? { dados: doLote.lote, montado: doLote.montado };
   const restanteMs = useReservaRestante();
   const expirado = restanteMs !== null && restanteMs <= 0;
   const progresso = restanteMs === null ? 1 : restanteMs / RESERVA_DURACAO_MS;
-  const temDesconto = !!(lote?.precoDe && lote.precoDeLabel && lote.precoDe > lote.price);
+  const temDesconto =
+    mostrarDesconto && !!(lote?.precoDe && lote.precoDeLabel && lote.precoDe > lote.price);
   const pctDesconto =
     lote?.precoDe && temDesconto ? Math.round((1 - lote.price / lote.precoDe) * 100) : 0;
 
@@ -247,7 +334,7 @@ function IngressoEmitido({
         id={tituloId}
         className="text-center text-[11.5px] font-semibold tracking-[0.2em] text-wine-ink uppercase"
       >
-        Seu ingresso foi emitido
+        {textos.emitido}
       </h2>
 
       {/* Ingresso: cartão creme sobre o modal escuro, com "picote" no meio. */}
@@ -256,15 +343,17 @@ function IngressoEmitido({
           <div className="flex items-start justify-between gap-3">
             <div>
               <div className="font-serif text-[1.35rem] leading-tight font-semibold">
-                Por Dentro da Face
+                {textos.titulo}
               </div>
               <div className="mt-1 text-[10.5px] font-semibold tracking-[0.18em] text-bg/60 uppercase">
-                Aula online e ao vivo
+                {textos.subtitulo}
               </div>
             </div>
-            <span className="shrink-0 rounded-[3px] border border-wine px-2 py-1 text-[10px] font-semibold tracking-[0.14em] text-wine uppercase">
-              Vagas limitadas
-            </span>
+            {textos.selo && (
+              <span className="shrink-0 rounded-[3px] border border-wine px-2 py-1 text-[10px] font-semibold tracking-[0.14em] text-wine uppercase">
+                {textos.selo}
+              </span>
+            )}
           </div>
 
           <div className="mt-5 text-[10.5px] font-semibold tracking-[0.18em] text-bg/60 uppercase">
@@ -276,11 +365,7 @@ function IngressoEmitido({
           <div className="mt-0.5 text-[1rem] font-medium text-wine">{ingresso.area}</div>
 
           <div className="mt-5 grid grid-cols-3 gap-3">
-            {[
-              ["Data", "06/10"],
-              ["Horário", "20h"],
-              ["Formato", "Ao vivo"],
-            ].map(([rotulo, valor]) => (
+            {textos.detalhes.map(([rotulo, valor]) => (
               <div key={rotulo}>
                 <div className="text-[10px] font-semibold tracking-[0.16em] text-bg/60 uppercase">
                   {rotulo}
@@ -327,6 +412,7 @@ function IngressoEmitido({
           (sessionStorage, não reinicia no refresh). Sem precoDe no lote, vira
           só a reserva da vaga. */}
       <div className="mt-5 rounded-[8px] border border-line bg-bg-3 px-5 py-5 text-center">
+        {ancora && <div className="mb-4 border-b border-line pb-4">{ancora}</div>}
         {montado && lote && temDesconto && (
           <div className="mb-4">
             <p className="text-[1.05rem] text-fg">Você emitiu seu ingresso e ganhou</p>
@@ -347,7 +433,7 @@ function IngressoEmitido({
         ) : (
           <>
             <p className="text-[1rem] text-fg-soft">
-              {temDesconto ? "Desconto válido por" : "Seu lugar na sala fica reservado por"}
+              {temDesconto ? "Desconto válido por" : textos.reserva}
             </p>
             <div
               className="mt-1 font-serif text-[2.2rem] leading-none text-wine-ink tabular-nums"
@@ -379,15 +465,16 @@ function IngressoEmitido({
           data-checkout
           onClick={() => {
             trackCustom("ClickCheckout", {
-              content_name: "Ingresso Por Dentro da Face",
+              content_name: textos.contentName,
+              ...textos.rastreio,
               value: lote.price,
               currency: "BRL",
             });
-            gaEvent("click_checkout", { value: lote.price, currency: "BRL" });
+            gaEvent("click_checkout", { ...textos.rastreio, value: lote.price, currency: "BRL" });
           }}
           className="mt-5 block w-full rounded-[2px] bg-wine px-6 py-[18px] text-center font-sans text-[1.02rem] font-semibold text-on-wine transition-colors hover:bg-wine-hover"
         >
-          Confirmar meu ingresso
+          {textos.confirmar}
         </a>
       ) : (
         montado && (

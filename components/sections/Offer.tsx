@@ -2,6 +2,7 @@ import { Container } from "@/components/Container";
 import { CtaButton } from "@/components/CtaButton";
 import { OfertaPreco } from "@/components/OfertaPreco";
 import { Reveal } from "@/components/Reveal";
+import { Titulo } from "@/components/Titulo";
 import { VagasBadge } from "@/components/VagasBadge";
 
 const INCLUDES = [
@@ -19,17 +20,14 @@ const INCLUDES = [
   },
 ];
 
-export function Offer({ comVsl }: { comVsl: boolean }) {
+export function Offer() {
   return (
     <section className="bg-bg-2 py-16 sm:py-[92px]">
       <Container narrow>
         <Reveal>
-          <span className="text-[12px] font-semibold tracking-[0.24em] text-wine-ink uppercase">
-            Seu ingresso
-          </span>
-          <h2 className="mt-[18px] font-serif font-semibold text-[1.95rem] sm:text-[2.6rem]">
-            <span className="titulo-grifo">É uma noite ao vivo, e não vai ter repeteco.</span>
-          </h2>
+          <Titulo eyebrow="Seu ingresso" destaque="e não vai ter repeteco.">
+            É uma noite ao vivo,
+          </Titulo>
           <p className="mt-[18px] max-w-[560px] text-[1.12rem] leading-[1.55] text-fg-soft">
             O rigor de uma temporada de dissecção lá fora, numa noite ao vivo com você.
           </p>
@@ -76,7 +74,6 @@ export function Offer({ comVsl }: { comVsl: boolean }) {
 
             <CtaButton
               variant="accent"
-              requireVsl={comVsl}
               className="mt-4 w-full justify-center"
             >
               Garantir minha vaga

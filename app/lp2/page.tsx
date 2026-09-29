@@ -39,17 +39,17 @@ export default function Lp2() {
         <Hero comVsl={true} />
         <Problem />
         <TresCamadas />
-        <Solution comVsl={true} />
+        <Solution />
         <Authority />
         <SocialProof />
         <ParaQuem />
-        <Offer comVsl={true} />
+        <Offer />
         <Faq />
-        <FinalCta comVsl={true} />
+        <FinalCta />
       </main>
       <Footer />
       <div aria-hidden className="h-[122px] sm:hidden" />
-      <StickyCta comVsl={true} />
+      <StickyCta />
       <IngressoModal />
     </>
   );

@@ -1,5 +1,5 @@
 import { Container } from "@/components/Container";
-import { Reveal } from "@/components/Reveal";
+import { Titulo } from "@/components/Titulo";
 
 // Perguntas enquadradas pra REFORÇAR o valor da noite (não só tirar dúvida).
 // Regra Sugarman: nenhuma resposta introduz objeção nova.
@@ -46,14 +46,9 @@ export function Faq() {
   return (
     <section className="py-16 sm:py-[92px]">
       <Container narrow>
-        <Reveal>
-          <span className="text-[12px] font-semibold tracking-[0.24em] text-wine-ink uppercase">
-            Dúvidas
-          </span>
-          <h2 className="mt-[18px] font-serif font-semibold text-[1.95rem] sm:text-[2.6rem]">
-            <span className="titulo-grifo">Perguntas honestas.</span>
-          </h2>
-        </Reveal>
+        <Titulo eyebrow="Dúvidas" destaque="honestas.">
+          Perguntas
+        </Titulo>
 
         <div className="mt-9 border-t border-line">
           {FAQS.map((item, i) => (

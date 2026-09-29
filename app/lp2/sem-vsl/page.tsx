@@ -14,8 +14,8 @@ import { StickyCta } from "@/components/lp2/StickyCta";
 import { IngressoModal } from "@/components/lp2/IngressoModal";
 
 // /lp2/sem-vsl — versão B do teste de LP na variante SEM VSL (foto estática
-// no Hero, CTAs nunca travados). Estrutura idêntica a app/lp2/page.tsx (COM
-// VSL); só muda o `comVsl`. Par da /sem-vsl da versão A.
+// no Hero). Estrutura idêntica a app/lp2/page.tsx (COM VSL); só muda o
+// `comVsl` do Hero. Par da /sem-vsl da versão A.
 export const metadata: Metadata = {
   title: "Por Dentro da Face · Aula ao vivo com Dra. Aline Filgueiras · 06/10",
   description:
@@ -36,17 +36,17 @@ export default function Lp2SemVsl() {
         <Hero comVsl={false} />
         <Problem />
         <TresCamadas />
-        <Solution comVsl={false} />
+        <Solution />
         <Authority />
         <SocialProof />
         <ParaQuem />
-        <Offer comVsl={false} />
+        <Offer />
         <Faq />
-        <FinalCta comVsl={false} />
+        <FinalCta />
       </main>
       <Footer />
       <div aria-hidden className="h-[122px] sm:hidden" />
-      <StickyCta comVsl={false} />
+      <StickyCta />
       <IngressoModal />
     </>
   );

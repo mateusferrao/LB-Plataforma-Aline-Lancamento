@@ -8,26 +8,27 @@ import { UrgenciaFina } from "@/components/UrgenciaFina";
 import { VslPlayer } from "@/components/VslPlayer";
 import { withBasePath } from "@/lib/basePath";
 
-// `comVsl` decide a variante de teste A/B: com vídeo (Hero trava o CTA até o
-// fim da VSL) ou sem vídeo (foto estática, CTA nunca travado — sem vídeo,
-// não haveria como o gate liberar).
+// `comVsl` decide a variante de teste A/B: com vídeo (VSL no Hero) ou sem
+// vídeo (foto estática). Nas duas o CTA fica liberado desde o início — a
+// compra não depende de assistir o vídeo.
 export function Hero({ comVsl }: { comVsl: boolean }) {
   return (
     <section className="pt-10 pb-20 sm:pb-[78px]">
       <Container>
         <div className="grid grid-cols-1 items-stretch gap-9 sm:gap-[54px] md:grid-cols-[1.12fr_0.88fr]">
           <div>
-            <div className="flex items-center gap-3.5">
-              <span className="h-px w-[42px] bg-wine-ink" aria-hidden="true" />
-              <span className="text-[12px] font-semibold tracking-[0.24em] text-wine-ink uppercase">
-                Aula ao vivo · 6 de outubro · 20h · online
-              </span>
-            </div>
+            <span className="inline-flex items-center rounded-full border border-wine-ink/50 px-3.5 py-1.5 text-[11.5px] font-semibold tracking-[0.2em] text-wine-ink uppercase">
+              Ao vivo · 06/10 · 20h · online
+            </span>
 
-            <h1 className="mt-5 text-balance font-serif font-semibold text-[2.35rem] leading-[1.12] tracking-[-0.012em] sm:text-[3.1rem] lg:text-[3.7rem]">
-              <span className="titulo-grifo">
-                Aplique com a segurança de quem já viu, por dentro, onde estão os riscos da face.
-              </span>
+            <p className="mt-6 border-l-2 border-wine-ink pl-3 text-[1.02rem] leading-[1.45] font-medium text-fg-soft sm:text-[1.08rem]">
+              Pra quem já aplica ou quer aplicar e ainda sente insegurança em alguns
+              procedimentos
+            </p>
+
+            <h1 className="mt-3 text-balance font-sans font-semibold text-[1.9rem] leading-[1.15] tracking-[-0.015em] text-fg sm:text-[2.4rem] lg:text-[2.6rem]">
+              Aplique com a segurança de quem já viu, por dentro,{" "}
+              <span className="titulo-grifo">onde estão os riscos da face.</span>
             </h1>
 
             <p className="mt-6 max-w-[560px] text-[1.2rem] leading-[1.6] text-fg-soft">
@@ -44,7 +45,6 @@ export function Hero({ comVsl }: { comVsl: boolean }) {
 
             <CtaButton
               showPrice
-              requireVsl={comVsl}
               className="w-full justify-center sm:w-auto sm:justify-start"
             >
               Quero minha vaga
@@ -60,9 +60,8 @@ export function Hero({ comVsl }: { comVsl: boolean }) {
           </div>
 
           {comVsl ? (
-            // No mobile (1 coluna) o vídeo vem ANTES do texto/CTA — o botão diz
-            // "assista o vídeo acima", então ele precisa estar acima de verdade.
-            // No desktop (grid 2 colunas) volta pra direita, ordem natural.
+            // No mobile (1 coluna) o vídeo vem ANTES do texto/CTA, logo no
+            // topo. No desktop (grid 2 colunas) volta pra direita, ordem natural.
             <div className="relative order-first mx-auto aspect-[9/16] w-full max-w-[420px] md:order-none md:self-center">
               <VslPlayer className="absolute inset-0" />
             </div>

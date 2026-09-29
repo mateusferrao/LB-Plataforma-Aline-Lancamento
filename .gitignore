@@ -37,3 +37,7 @@ next-env.d.ts
 
 # python
 __pycache__/
+
+# Protocolo de Resgate Vascular (produto pago): fonte, fotos de paciente e PDFs
+# ficam SÓ locais. O repositório é público — nada daqui pode ir para o git.
+/docs/kit-protocolo/

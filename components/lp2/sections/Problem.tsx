@@ -1,5 +1,6 @@
 import { Container } from "@/components/Container";
 import { Reveal } from "@/components/Reveal";
+import { Titulo } from "@/components/Titulo";
 
 // Dores na linguagem da pesquisa de público: a maioria já fez curso de HOF e
 // trava na DECISÃO (ponto certo pra cada caso, resultado que muda de rosto pra
@@ -14,16 +15,9 @@ export function Problem() {
   return (
     <section className="py-16 sm:py-[92px]">
       <Container narrow>
-        <Reveal>
-          <span className="text-[12px] font-semibold tracking-[0.24em] text-wine-ink uppercase">
-            O ponto cego
-          </span>
-          <h2 className="mt-[18px] text-balance font-serif font-semibold text-[1.95rem] leading-[1.12] sm:text-[2.6rem]">
-            <span className="titulo-grifo">
-              Você aprendeu o protocolo. Ninguém te ensinou a decidir quando o rosto foge dele.
-            </span>
-          </h2>
-        </Reveal>
+        <Titulo eyebrow="O ponto cego" destaque="quando o rosto foge dele.">
+          Você aprendeu o protocolo. Ninguém te ensinou a decidir
+        </Titulo>
 
         <div className="mt-[38px] grid grid-cols-1 gap-4 sm:grid-cols-3">
           {PAINS.map((pain, i) => (

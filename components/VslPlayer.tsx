@@ -3,7 +3,6 @@
 import Player from "@vimeo/player";
 import { useEffect, useRef, useState } from "react";
 import { gaEvent, trackCustom } from "@/lib/analytics";
-import { markVslCompleted, setVslRemaining } from "@/lib/useVslGate";
 
 // Iframe com src já pronto (em vez de deixar o SDK criar o iframe via
 // options+url) — isso evita um round-trip extra ao oEmbed do Vimeo antes de
@@ -19,12 +18,6 @@ import { markVslCompleted, setVslRemaining } from "@/lib/useVslGate";
 // pra cima se sobrar banda.
 const VIMEO_SRC =
   "https://player.vimeo.com/video/1225929589?h=5dcbd0a4f6&autoplay=1&muted=1&playsinline=1&background=0&controls=0&title=0&byline=0&portrait=0&dnt=1&preload=auto&initial_quality=720p";
-
-// Se o player do Vimeo falhar (bloqueador de anúncio, instabilidade) ou o
-// evento `ended` nunca chegar por algum motivo, libera o CTA de qualquer
-// forma depois desse tempo. Sem essa salvaguarda, uma falha de terceiro
-// travaria o botão de compra do Hero indefinidamente.
-const SAFETY_TIMEOUT_MS = 3 * 60 * 1000;
 
 // Autoplay mudo pode falhar silenciosamente em alguns celulares (Modo de
 // Baixo Consumo no iOS, configuração de "Reprodução Automática" do Safari,
@@ -119,10 +112,11 @@ export function VslPlayer({ className = "" }: { className?: string }) {
       bufferTimer = undefined;
     }
 
-    function unlock(reason: "complete" | "load_error" | "player_error" | "timeout") {
+    // Fim do vídeo (ou falha do player): para a detecção de travamento e
+    // registra o motivo. O CTA não depende disso — ele fica liberado sempre.
+    function finish(reason: "complete" | "load_error" | "player_error") {
       if (fired.current.complete) return;
       fired.current.complete = true;
-      window.clearTimeout(safety);
       window.clearTimeout(graceTimer);
       window.clearInterval(silenceCheck);
       clearBufferTimer();
@@ -130,26 +124,21 @@ export function VslPlayer({ className = "" }: { className?: string }) {
         trackCustom("VslComplete", {});
         gaEvent("vsl_complete", {});
       } else {
-        trackCustom("VslSafetyUnlock", { reason });
-        gaEvent("vsl_safety_unlock", { reason });
+        trackCustom("VslError", { reason });
+        gaEvent("vsl_error", { reason });
       }
-      trackCustom("VslCtaUnlocked", {});
-      gaEvent("vsl_cta_unlocked", {});
-      markVslCompleted();
     }
-
-    const safety = window.setTimeout(() => unlock("timeout"), SAFETY_TIMEOUT_MS);
 
     const readyTimeout = window.setTimeout(() => {
       readyTimedOut = true;
-      unlock("load_error");
+      finish("load_error");
     }, READY_TIMEOUT_MS);
 
     player
       .ready()
       .then(() => {
         window.clearTimeout(readyTimeout);
-        if (readyTimedOut) return; // já liberou pelo timeout, não inicia mais nada
+        if (readyTimedOut) return; // já encerrou pelo timeout, não inicia mais nada
         // Se o `play` (autoplay) não chegar nesse prazo, o navegador
         // provavelmente bloqueou — mostra o botão de play manual. Checagem
         // única, só pro início: depois disso quem decide é o `bufferstart`/
@@ -169,7 +158,7 @@ export function VslPlayer({ className = "" }: { className?: string }) {
       })
       .catch(() => {
         window.clearTimeout(readyTimeout);
-        unlock("load_error");
+        finish("load_error");
       });
 
     player.on("play", () => {
@@ -205,10 +194,9 @@ export function VslPlayer({ className = "" }: { className?: string }) {
       clearStuck();
     });
 
-    player.on("timeupdate", ({ seconds, duration, percent }) => {
+    player.on("timeupdate", ({ percent }) => {
       clearBufferTimer();
       clearStuck();
-      if (duration > 0) setVslRemaining(duration - seconds);
       if (percent >= 0.25 && !fired.current.p25) {
         fired.current.p25 = true;
         trackCustom("VslProgress25", {});
@@ -226,11 +214,10 @@ export function VslPlayer({ className = "" }: { className?: string }) {
       }
     });
 
-    player.on("ended", () => unlock("complete"));
-    player.on("error", () => unlock("player_error"));
+    player.on("ended", () => finish("complete"));
+    player.on("error", () => finish("player_error"));
 
     return () => {
-      window.clearTimeout(safety);
       window.clearTimeout(readyTimeout);
       window.clearTimeout(graceTimer);
       window.clearInterval(silenceCheck);

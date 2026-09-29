@@ -2,7 +2,6 @@
 
 import { agora, LIVE_DATE_ISO } from "@/lib/lotes";
 import { useLoteAtivo } from "@/lib/useLoteAtivo";
-import { useVslGate } from "@/lib/useVslGate";
 import { trackCustom, gaEvent } from "@/lib/analytics";
 
 const INSTAGRAM_URL = "https://www.instagram.com/draaline_filgueiras";
@@ -13,21 +12,7 @@ type Props = {
   className?: string;
   // Quando true, anexa " · R$XX" do lote ativo ao final do texto.
   showPrice?: boolean;
-  // Quando true, o botão fica travado (aria-disabled, sem navegar) até a
-  // VSL do Hero terminar — em qualquer estado (checkout, aviso ou
-  // encerrado). Passado em todas as instâncias do CtaButton na página.
-  requireVsl?: boolean;
 };
-
-function two(n: number) {
-  return String(n).padStart(2, "0");
-}
-
-function formatRemaining(seconds: number) {
-  const m = Math.floor(seconds / 60);
-  const s = Math.floor(seconds % 60);
-  return `${m}:${two(s)}`;
-}
 
 // O repasse de UTM/params para o checkout é feito pelo script oficial da Ticto
 // (ticto-echo), montado no layout. Aqui apontamos pra URL do LOTE ATIVO e
@@ -38,11 +23,8 @@ export function CtaButton({
   variant = "dark",
   className = "",
   showPrice = false,
-  requireVsl = false,
 }: Props) {
   const { lote, montado } = useLoteAtivo();
-  const { completed: vslCompleted, remainingSeconds } = useVslGate();
-  const locked = requireVsl && !vslCompleted;
   // Fora da janela de inscrições: antes de abrir ou depois da aula já ter
   // chegado. Não dá pra usar só "!lote" pra isso (mesmo teste em ambos os
   // casos) — precisa comparar com a chegada da aula (mesmo critério do
@@ -58,9 +40,8 @@ export function CtaButton({
       ? "bg-wine text-on-wine hover:bg-wine-hover"
       : "bg-fg text-wine hover:bg-white";
 
-  // Resolve o estado "normal" (fora do gate da VSL): destino, se é link
-  // externo, rótulo e o que rastrear no clique. O gate é aplicado por cima,
-  // igual pra qualquer um desses três estados.
+  // Resolve o estado do botão: destino, se é link externo, rótulo e o que
+  // rastrear no clique.
   let href: string;
   let external = false;
   let isCheckout = false;
@@ -106,45 +87,16 @@ export function CtaButton({
     };
   }
 
-  if (locked) {
-    label = (
-      <>
-        Assista o vídeo acima
-        {remainingSeconds !== null && (
-          <span className="font-serif text-[1.02rem] tabular-nums">
-            · libera em {formatRemaining(remainingSeconds)}
-          </span>
-        )}
-      </>
-    );
-  }
-
   return (
-    <>
-      <a
-        href={href}
-        target={external && !locked ? "_blank" : undefined}
-        rel={external && !locked ? "noopener noreferrer" : undefined}
-        className={`${base} ${palette} ${
-          locked ? "cursor-not-allowed opacity-55 hover:translate-y-0" : ""
-        } ${className}`}
-        aria-disabled={locked || undefined}
-        onClick={(e) => {
-          if (locked) {
-            e.preventDefault();
-            return;
-          }
-          track();
-        }}
-        data-checkout={isCheckout || undefined}
-      >
-        {label}
-      </a>
-      {requireVsl && (
-        <span role="status" aria-live="polite" className="sr-only">
-          {vslCompleted ? "Vídeo concluído. Você já pode continuar." : ""}
-        </span>
-      )}
-    </>
+    <a
+      href={href}
+      target={external ? "_blank" : undefined}
+      rel={external ? "noopener noreferrer" : undefined}
+      className={`${base} ${palette} ${className}`}
+      onClick={track}
+      data-checkout={isCheckout || undefined}
+    >
+      {label}
+    </a>
   );
 }

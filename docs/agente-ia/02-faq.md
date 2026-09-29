@@ -34,6 +34,12 @@ ao checkout. (Quer que eu te mande o link?)
 > **emitir o ingresso** (nome e área, leva 10 segundos) antes de mostrar o valor, que aparece como
 > **de R$197 por R$67**, e o "Confirmar meu ingresso" leva ao checkout. Se a lead citar esse passo
 > ou esse de/por, é a mesma aula e o mesmo checkout.
+>
+> A versão `/fresh` (e `/fresh/sem-vsl`) também pede pra emitir o ingresso antes do valor. No ingresso
+> emitido aparece **de R$197 por R$67**, ao lado de um comparativo com o valor riscado de
+> um curso internacional presencial em cadáver fresh frozen (cerca de R$35 mil). **Não diga que esse é o
+> preço do curso da Aline.** A aula é de estúdio, com as imagens das dissecções da Aline. É a mesma aula e o
+> mesmo checkout.
 
 ### 6. Tem gravação ou replay?
 Não. A aula é **ao vivo, uma vez só, sem gravação**. E isso é de propósito: o valor está em estar
@@ -82,3 +88,41 @@ Avançada e Integrativa, e atende em Belo Horizonte e Praia Grande.
 
 ### 16. Como falo com o suporte?
 Pelo **WhatsApp +55 31 95349-1799** ou pelo **e-mail suporte.alinefilgueiras@gmail.com.br**.
+
+---
+
+## "Protocolo de Resgate Vascular" (página `/info`)
+
+> Use só quando a lead perguntar pelo protocolo ou vier da `/info`. Detalhes em
+> `01-playbook-vendas.md`, seção 8.1. Substituiu o kit "Mapa das Intercorrências" em 28/09/2026.
+
+### K1. O que é o Protocolo de Resgate Vascular?
+É o **protocolo de conduta que a Dra. Aline utiliza para oclusão e necrose**, do primeiro minuto à
+cicatrização: um PDF em A4 com o passo a passo, uma **prancha de parede** pra imprimir, uma **ficha
+de acompanhamento hora a hora** e **2 cards** pra enviar à paciente. **Não é curso**: é material
+educativo pra ter na mão na hora que precisar.
+
+### K2. Quanto custa?
+**R$97**, ou **12x de R$10,03** no cartão, ou Pix. Quem garante **até 06/10, às 20h**, leva **de
+presente a aula ao vivo Por Dentro da Face**. A compra é no site:
+`https://live.alinefilgueiras.com.br/info`.
+
+### K3. Como recebo?
+**Na hora, pelo WhatsApp.** Os arquivos chegam logo depois da confirmação do pagamento. Se comprou até 06/10, a página de
+obrigado também leva ao grupo de WhatsApp da aula.
+
+### K4. Já comprei o ingresso da aula. Posso pegar o Protocolo?
+Pode, mas não compre pela página, senão você paga a aula duas vezes. Vou te passar para o nosso
+time resolver. *(Escalar para o atendimento humano.)*
+
+### K5. Tem as medicações? Serve pra quem não é médica?
+Tem: as medicações que a Dra. Aline utiliza em cada fase, com a posologia. A prescrição segue a
+habilitação profissional de cada uma. *(Nunca cite nome de medicamento nem dose na conversa.)*
+
+### K6. Comprei o Mapa das Intercorrências. O que recebo?
+A Aline trocou o Mapa pelo protocolo que ela mesma usa na clínica: você recebe o Protocolo de
+Resgate Vascular no lugar, pelo WhatsApp. Se preferir, a garantia de 7 dias continua valendo.
+*(Escalar para o atendimento humano.)*
+
+### K7. Tem garantia?
+Sim: **7 dias após a compra para pedir reembolso, sem perguntas**, pelo WhatsApp ou e-mail.
