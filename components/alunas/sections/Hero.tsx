@@ -25,54 +25,32 @@ export function Hero() {
               Ao vivo · 06/10 · 20h · online
             </span>
 
-            <p className="mt-5 border-l-2 border-wine-ink pl-3 text-[1.02rem] leading-[1.45] font-medium text-fg-soft sm:text-[1.08rem]">
+            <p className="mt-6 border-l-2 border-wine-ink pl-3 text-[1.02rem] leading-[1.45] font-medium text-fg-soft sm:text-[1.08rem]">
               Exclusivo para quem já estudou com a Aline
             </p>
 
-            <h1 className="mt-3 text-balance font-sans font-semibold text-[1.85rem] leading-[1.15] tracking-[-0.015em] text-fg sm:text-[2.2rem] lg:text-[2.35rem]">
+            <h1 className="mt-3 text-balance font-sans font-semibold text-[1.9rem] leading-[1.15] tracking-[-0.015em] text-fg sm:text-[2.4rem] lg:text-[2.6rem]">
               Você já aprendeu a técnica comigo.{" "}
               <span className="titulo-grifo">
                 Agora vem ver a face por dentro, em cadáver fresh frozen.
               </span>
             </h1>
 
-            <p className="mt-4 max-w-[560px] text-[1.05rem] leading-[1.55] text-fg-soft">
-              Dia 6/10, às 20h, a Dra. Aline mostra ao vivo, nas imagens das dissecções dela,
-              onde estão os riscos da face. E ex-aluna leva o Protocolo de Resgate Vascular de
-              presente.
-            </p>
-
-            {/* Resumo do preço + CTA na 1ª dobra (desktop e celular). O detalhamento
-                completo da ancoragem fica logo abaixo, depois dos bullets. */}
-            <div className="mt-6 flex flex-wrap items-baseline gap-x-3 gap-y-1">
-              <s className="font-serif text-[1.15rem] text-fg-faint">
-                {OFERTA_ALUNAS.valorDeTotalLabel}
-              </s>
-              <span className="font-serif text-[2rem] leading-none font-semibold text-fg">
-                {OFERTA_ALUNAS.priceLabel}
-              </span>
-              <span className="rounded-full bg-wine px-3 py-1 text-[11px] font-semibold tracking-[0.14em] text-on-wine uppercase">
-                {OFERTA_ALUNAS.descontoPct}% off · Protocolo de presente
-              </span>
-            </div>
-
-            <CtaButton className="mt-5 w-full justify-center text-center sm:w-auto sm:justify-start">
-              Garantir meu ingresso de ex-aluna
-            </CtaButton>
-            <p className="mt-2.5 text-center text-[13.5px] tracking-[0.02em] text-fg-soft sm:text-left">
-              Cupom <strong className="font-semibold text-wine-ink">{OFERTA_ALUNAS.cupom}</strong>{" "}
-              já aplicado · ou 12x de {OFERTA_ALUNAS.parcela12x} · reembolso em 7 dias
+            <p className="mt-5 max-w-[560px] text-[1.08rem] leading-[1.55] text-fg-soft">
+              No dia 6 de outubro, às 20h, a Dra. Aline mostra ao vivo, nas imagens das
+              dissecções que ela fez em cadáver fresh frozen, onde estão os riscos da face. E
+              quem já foi aluna leva de presente o Protocolo de Resgate Vascular.
             </p>
           </div>
 
-          <div className="relative mx-auto aspect-[4/5] w-full max-w-[400px] overflow-hidden rounded-[4px] border border-line-soft bg-surface md:col-start-2 md:row-span-2 md:row-start-1 md:mt-2 md:self-start">
+          <div className="relative mx-auto aspect-[3/4] w-full max-w-[420px] overflow-hidden rounded-[4px] border border-line-soft bg-surface md:col-start-2 md:row-span-2 md:row-start-1 md:self-center">
             <Image
               src={withBasePath("/images/fresh/lab-luvas.webp")}
               alt="Dra. Aline Filgueiras calçando as luvas no laboratório de dissecção"
               fill
               priority
-              sizes="(min-width: 768px) 400px, 90vw"
-              className="object-cover object-top"
+              sizes="(min-width: 768px) 420px, 90vw"
+              className="object-cover"
             />
             <span className="absolute bottom-3 left-3 rounded-[2px] bg-bg/80 px-2.5 py-1 text-[11px] font-semibold tracking-[0.14em] text-fg uppercase backdrop-blur-sm">
               Laboratório de dissecção · EUA
@@ -80,7 +58,7 @@ export function Hero() {
           </div>
 
           <div className="md:col-start-1 md:row-start-2">
-            <ul className="list-none p-0 md:mt-10">
+            <ul className="list-none p-0 md:mt-6">
               {BULLETS.map((b) => (
                 <li
                   key={b}
@@ -97,8 +75,16 @@ export function Hero() {
             <div className="mt-7 max-w-[460px] rounded-[6px] border border-line bg-bg-2 px-5 py-4">
               <PrecoPresente />
             </div>
-            <p className="mt-3 text-[13.5px] tracking-[0.02em] text-fg-faint">
-              O presente vale até a aula começar · sem gravação
+
+            <CtaButton className="mt-5 w-full justify-center sm:w-auto sm:justify-start">
+              Garantir meu ingresso de ex-aluna
+            </CtaButton>
+            <p className="mt-3 text-center text-[13.5px] tracking-[0.02em] text-fg-faint sm:text-left">
+              O presente vale até a aula começar · reembolso em 7 dias · sem gravação
+            </p>
+            <p className="mt-1.5 text-center text-[13.5px] tracking-[0.02em] text-fg-soft sm:text-left">
+              O cupom <strong className="font-semibold text-wine-ink">{OFERTA_ALUNAS.cupom}</strong>{" "}
+              já entra aplicado no checkout.
             </p>
 
             <Countdown className="mt-8" />
