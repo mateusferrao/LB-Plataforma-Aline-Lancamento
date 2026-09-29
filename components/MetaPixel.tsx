@@ -1,6 +1,7 @@
 import Script from "next/script";
 import { LOTES, loteAtivoEm } from "@/lib/lotes";
 import { FASES, faseKitEm } from "@/lib/ofertaKit";
+import { OFERTA_ALUNAS } from "@/lib/ofertaAlunas";
 
 // Preço do ViewContent = lote ativo no BUILD (é <Script>, não reativo). Calculado
 // no escopo do módulo (uma vez, no build) para não chamar Date.now() no render.
@@ -28,7 +29,12 @@ export function MetaPixel() {
           document,'script','https://connect.facebook.net/en_US/fbevents.js');
           fbq('init', '${pixelId}');
           fbq('track', 'PageView');
-          fbq('track', 'ViewContent', /\\/info(\\.html)?(\\/|$)/.test(location.pathname) ? {
+          fbq('track', 'ViewContent', /\\/alunas(\\.html)?(\\/|$)/.test(location.pathname) ? {
+            content_name: '${OFERTA_ALUNAS.contentName}',
+            content_category: 'live',
+            value: ${OFERTA_ALUNAS.price},
+            currency: 'BRL'
+          } : /\\/info(\\.html)?(\\/|$)/.test(location.pathname) ? {
             content_name: 'Protocolo de Resgate Vascular',
             content_category: 'kit',
             value: ${KIT_VIEW_VALUE},

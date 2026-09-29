@@ -149,6 +149,13 @@ de Resgate Vascular"*.
 
 ---
 
+### 8.2 Ex-alunas (página `/alunas`)
+
+Oferta **só para ex-alunas** da Aline (cursos presenciais e online), pelo link enviado no WhatsApp: o
+ingresso a **R$67** (o mesmo preço de todo mundo) com o **Protocolo de Resgate Vascular de presente**,
+até 06/10 às 20h. **Quem já comprou a aula não ganha o presente**, mas pode levar o Protocolo por
+**R$29,90**. Detalhes em `docs/alunas/README.md` e na FAQ (A1, A2).
+
 ## 9. Fluxo de conversa (com o objetivo de cada etapa)
 
 1. **Abertura / acolhimento** — entender que a pessoa tem interesse na aula.

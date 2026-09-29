@@ -40,6 +40,11 @@ Regras: tudo minúsculo, sem espaço nem acento (use hífen). Mantenha os mesmos
 `https://live.alinefilgueiras.com.br/fresh?utm_source=facebook&utm_medium=paid_social&utm_campaign={{campaign.name}}&utm_content={{ad.name}}`.
 O GA4 separa as variantes pelo caminho da página.
 
+**Ex-alunas (`/alunas`):** o link vai só na mensagem de WhatsApp da lista de ex-alunas:
+`https://live.alinefilgueiras.com.br/alunas?utm_source=whatsapp&utm_medium=lista-alunas&utm_campaign=live-por-dentro-da-face&utm_content=gancho-a`
+(troque o `utm_content` pelo gancho ou lembrete: `gancho-a`, `gancho-b`, `gancho-c`, `lembrete-1`,
+`ultimo-dia`).
+
 **Kit Mapa das Intercorrências (`/info`):** mesma convenção, com base
 `https://live.alinefilgueiras.com.br/info` e `utm_campaign=kit-mapa-intercorrencias`. Ex.:
 `https://live.alinefilgueiras.com.br/info?utm_source=instagram&utm_medium=stories&utm_campaign=kit-mapa-intercorrencias&utm_content=mapa`.

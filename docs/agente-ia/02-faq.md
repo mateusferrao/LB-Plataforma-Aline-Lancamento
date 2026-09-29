@@ -126,3 +126,19 @@ Resgate Vascular no lugar, pelo WhatsApp. Se preferir, a garantia de 7 dias cont
 
 ### K7. Tem garantia?
 Sim: **7 dias após a compra para pedir reembolso, sem perguntas**, pelo WhatsApp ou e-mail.
+
+## Ex-alunas (página `/alunas`)
+
+### A1. Sou ex-aluna da Aline. Tenho alguma condição?
+Sim. Quem já estudou com a Aline (curso presencial ou online) recebeu por WhatsApp um link exclusivo:
+o ingresso da aula ao vivo pelo mesmo valor, **R$67**, com o **Protocolo de Resgate Vascular de
+presente**. O presente vale até a aula começar (06/10, 20h). Se ela não achar o link, **escalar para o
+atendimento humano**.
+
+### A2. Já comprei a aula. Ganho o Protocolo de presente?
+Não. O presente vale para ingressos comprados pelo link de ex-aluna. Quem já tem o ingresso pode levar o
+Protocolo por **R$29,90**, o mesmo valor do checkout. Mande o link desse checkout se ele já existir; se
+não, escale para o atendimento humano.
+
+---
+

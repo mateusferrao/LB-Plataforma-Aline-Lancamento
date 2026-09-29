@@ -10,6 +10,8 @@ const NUMERO_WHATSAPP = "5531953491799";
 const MENSAGEM = "Oi! Fiquei com uma dúvida antes de comprar a aula Por Dentro da Face.";
 // Na /info (Protocolo de Resgate Vascular) a dúvida é sobre o protocolo, não a aula.
 const MENSAGEM_KIT = "Oi! Fiquei com uma dúvida antes de comprar o Protocolo de Resgate Vascular.";
+// Na /alunas quem escreve é ex-aluna, sobre a aula com o Protocolo de presente.
+const MENSAGEM_ALUNAS = "Oi! Sou ex-aluna da Aline e fiquei com uma dúvida sobre a aula com o Protocolo de presente.";
 const whatsappUrl = (msg: string) =>
   `https://wa.me/${NUMERO_WHATSAPP}?text=${encodeURIComponent(msg)}`;
 
@@ -42,7 +44,14 @@ export function WhatsAppFloatingButton() {
   // mesmo padrão do Countdown/useLoteAtivo/ObrigadoSaudacao nesta sessão).
   const [bottom, setBottom] = useState(MARGEM_PADRAO);
   const pathname = usePathname();
-  const href = whatsappUrl(/^\/info(\.html)?(\/|$)/.test(pathname ?? "") ? MENSAGEM_KIT : MENSAGEM);
+  const caminho = pathname ?? "";
+  const href = whatsappUrl(
+    /^\/alunas(\.html)?(\/|$)/.test(caminho)
+      ? MENSAGEM_ALUNAS
+      : /^\/info(\.html)?(\/|$)/.test(caminho)
+        ? MENSAGEM_KIT
+        : MENSAGEM,
+  );
 
   useEffect(() => {
     const recalcular = () => setBottom(calcularBottom());
