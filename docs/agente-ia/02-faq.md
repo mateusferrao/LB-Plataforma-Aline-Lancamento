@@ -132,7 +132,7 @@ Sim: **7 dias após a compra para pedir reembolso, sem perguntas**, pelo WhatsAp
 ### A1. Sou ex-aluna da Aline. Tenho alguma condição?
 Sim. Quem já estudou com a Aline (curso presencial ou online) recebeu por WhatsApp um link exclusivo:
 o ingresso da aula ao vivo pelo mesmo valor, **R$67**, com o **Protocolo de Resgate Vascular de
-presente**. O presente vale até a aula começar (06/10, 20h). Se ela não achar o link, **escalar para o
+presente** (na página: "de R$306,90 por R$67", aula "de R$197" + Protocolo "de R$109,90"). O presente vale até a aula começar (06/10, 20h). Se ela não achar o link, **escalar para o
 atendimento humano**.
 
 ### A2. Já comprei a aula. Ganho o Protocolo de presente?

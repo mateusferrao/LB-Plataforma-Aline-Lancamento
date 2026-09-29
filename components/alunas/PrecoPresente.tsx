@@ -1,32 +1,57 @@
 import { OFERTA_ALUNAS } from "@/lib/ofertaAlunas";
 
-// Bloco de preço da /alunas: aula pelo preço de todo mundo + Protocolo riscado
-// "de presente". Sem "de/por" da aula: o benefício é o presente, não desconto.
+// Ancoragem da /alunas: aula "de R$197" + Protocolo "de R$109,90" (presente de
+// ex-aluna) = "de R$306,90 por R$67". Valores e % vêm de lib/ofertaAlunas.ts.
 export function PrecoPresente({ onWine = false }: { onWine?: boolean }) {
-  const faint = onWine ? "opacity-80" : "text-fg-faint";
+  const faint = onWine ? "opacity-75" : "text-fg-faint";
+  const strong = onWine ? "" : "text-fg";
+  const item = (rotulo: string, valor: string, extra?: string) => (
+    <div className="flex items-baseline justify-between gap-4">
+      <span className={strong}>
+        {rotulo}
+        {extra && (
+          <span className="ml-2 text-[0.72rem] font-semibold tracking-[0.12em] uppercase opacity-90">
+            {extra}
+          </span>
+        )}
+      </span>
+      <s className={`shrink-0 font-serif text-[1.05rem] whitespace-nowrap ${faint}`}>{valor}</s>
+    </div>
+  );
+
   return (
     <div className="text-left">
+      <div className="grid gap-2">
+        {item("Aula ao vivo Por Dentro da Face", OFERTA_ALUNAS.aulaValorDeLabel)}
+        {item("Protocolo de Resgate Vascular", OFERTA_ALUNAS.protocoloValorDeLabel, "de presente")}
+      </div>
+
+      <div className={`my-3.5 border-t border-dashed ${onWine ? "border-on-wine/30" : "border-line"}`} />
+
       <div className="flex items-baseline justify-between gap-4">
-        <span className={onWine ? "" : "text-fg"}>Ingresso da aula ao vivo</span>
-        <span
-          className={`font-serif text-[1.6rem] leading-none font-semibold whitespace-nowrap ${onWine ? "" : "text-fg"}`}
-        >
+        <span className={faint}>Valor total</span>
+        <s className={`font-serif text-[1.1rem] whitespace-nowrap ${faint}`}>
+          {OFERTA_ALUNAS.valorDeTotalLabel}
+        </s>
+      </div>
+      <div className="mt-1.5 flex items-center justify-between gap-4">
+        <span className={`font-semibold ${strong}`}>Pra você, ex-aluna</span>
+        <span className={`font-serif text-[2.1rem] leading-none font-semibold whitespace-nowrap ${strong}`}>
           {OFERTA_ALUNAS.priceLabel}
         </span>
       </div>
-      <div className="mt-2.5 flex items-baseline justify-between gap-4">
-        <span className={onWine ? "" : "text-fg"}>Protocolo de Resgate Vascular</span>
-        <span className="whitespace-nowrap">
-          <s className={`mr-2 font-serif text-[1.05rem] ${faint}`}>
-            {OFERTA_ALUNAS.protocoloValorDeLabel}
-          </s>
-          <span className="text-[0.82rem] font-semibold tracking-[0.12em] uppercase">
-            de presente
-          </span>
+
+      <div className="mt-3 flex flex-wrap items-center justify-between gap-2">
+        <span
+          className={`rounded-full px-3 py-1 text-[11px] font-semibold tracking-[0.14em] uppercase ${
+            onWine ? "bg-on-wine/15" : "bg-wine text-on-wine"
+          }`}
+        >
+          {OFERTA_ALUNAS.descontoPct}% de desconto
         </span>
-      </div>
-      <div className={`mt-3 text-[0.9rem] ${faint}`}>
-        ou 12x de {OFERTA_ALUNAS.parcela12x} no cartão · Pix à vista
+        <span className={`text-[0.88rem] ${faint}`}>
+          ou 12x de {OFERTA_ALUNAS.parcela12x} · Pix à vista
+        </span>
       </div>
     </div>
   );

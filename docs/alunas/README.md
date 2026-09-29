@@ -19,6 +19,7 @@ Base: skills *offers*, *copywriting*, *marketing-psychology* e *sms*.
 | Decisão | Por quê |
 |---|---|
 | **Aula a R$67 + Protocolo de presente** | O benefício de ex-aluna é o presente, não um desconto. A aula não fica mais barata que o preço público, e um brinde de fidelidade é defensável se alguém de fora descobrir. A skill *offers* diz que desconto só se justifica para recompensar quem já é cliente. |
+| **Âncora: "de R$306,90 por R$67", 78% de desconto** | Aula "de R$197" (`AULA_VALOR_DE`, o mesmo "de" da `/lp2` e da `/info`) + Protocolo "de R$109,90" (o "de" do order bump). É a mesma conta da `/info`, calculada em `lib/ofertaAlunas.ts`, e aparece no Hero e no card da oferta. |
 | **Oferta nova na Ticto**, "Aula + Protocolo (ex-alunas)", R$67, **sem bump** | Entrega os dois automaticamente e permite medir o resultado dessa lista separado das outras. |
 | **Preço na página e CTA direto ao checkout**, sem o ingresso emitido | É o público mais quente da marca. O ingresso serve para segurar tráfego frio; aqui ele só acrescentaria um passo. |
 | **Quem já comprou a aula não ganha o presente** | A FAQ responde com honestidade e oferece o Protocolo por R$29,90, o mesmo valor do order bump. |
@@ -36,8 +37,8 @@ Base: skills *offers*, *copywriting*, *marketing-psychology* e *sms*.
    - pré-headline: "Exclusivo para quem já estudou com a Aline";
    - H1: "Você já aprendeu a técnica comigo. *Agora vem ver a face por dentro, em cadáver fresh
      frozen.*" (grifo na parte final);
-   - o preço com o Protocolo riscado de presente, o CTA "Garantir meu ingresso de ex-aluna" e o
-     contador.
+   - a ancoragem (aula ~~R$197~~ + Protocolo ~~R$109,90~~ de presente = ~~R$306,90~~, **R$67**, 78% de
+     desconto), o CTA "Garantir meu ingresso de ex-aluna" e o contador.
 2. **"Enquanto você aplicava, a Aline foi mais fundo":** a Aline de agora, com a dissecção em fresh
    frozen nos EUA e os cursos internacionais.
 3. **"O que muda na sua cadeira":** a mesma seção da `/fresh`.
@@ -73,8 +74,9 @@ opção de sair.
 > rosto responde de um jeito.
 >
 > Pra quem já estudou com ela, o ingresso vem com um presente: o *Protocolo de Resgate Vascular*, o
-> passo a passo de oclusão e necrose que ela usa, do primeiro minuto à cicatrização. Separado, ele
-> custa R$109,90. Pra você, vai junto com o ingresso de R$67.
+> passo a passo de oclusão e necrose que ela usa, do primeiro minuto à cicatrização.
+>
+> Aula (R$197) + Protocolo (R$109,90) = ~~R$306,90~~. *Pra você, ex-aluna: R$67.*
 >
 > O presente vale até a aula começar:
 > https://live.alinefilgueiras.com.br/alunas?utm_source=whatsapp&utm_medium=lista-alunas&utm_campaign=live-por-dentro-da-face&utm_content=gancho-a
