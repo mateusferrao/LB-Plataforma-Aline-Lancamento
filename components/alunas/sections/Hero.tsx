@@ -4,6 +4,7 @@ import { Countdown } from "@/components/Countdown";
 import { CtaButton } from "@/components/alunas/CtaButton";
 import { PrecoPresente } from "@/components/alunas/PrecoPresente";
 import { withBasePath } from "@/lib/basePath";
+import { OFERTA_ALUNAS } from "@/lib/ofertaAlunas";
 
 // Hero da /alunas (padrão da /fresh: pré-headline, H1 em Inter com o grifo só
 // na parte final). Público quente: a pré-headline reconhece quem ela é
@@ -80,6 +81,10 @@ export function Hero() {
             </CtaButton>
             <p className="mt-3 text-center text-[13.5px] tracking-[0.02em] text-fg-faint sm:text-left">
               O presente vale até a aula começar · reembolso em 7 dias · sem gravação
+            </p>
+            <p className="mt-1.5 text-center text-[13.5px] tracking-[0.02em] text-fg-soft sm:text-left">
+              O cupom <strong className="font-semibold text-wine-ink">{OFERTA_ALUNAS.cupom}</strong>{" "}
+              já entra aplicado no checkout.
             </p>
 
             <Countdown className="mt-8" />

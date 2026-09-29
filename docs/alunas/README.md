@@ -6,8 +6,12 @@ ao vivo **Por Dentro da Face** (06/10/2026, 20h) pelo **mesmo preço de todo mun
 
 - **Página:** `https://live.alinefilgueiras.com.br/alunas` (`app/alunas/page.tsx`). É `noindex` e
   **não entra em anúncio**: o link vai só na mensagem de WhatsApp.
-- **Obrigado:** `https://live.alinefilgueiras.com.br/alunas/obrigado`. É o redirecionamento
-  pós-compra da oferta nova na Ticto.
+- **Checkout:** o mesmo da `/info` ("Protocolo + aula", **R$96,90** na Ticto), com o cupom
+  **EXALUNAS** (−R$29,90) já aplicado pelo link: `https://payment.ticto.app/O841FD9F7?coupon=EXALUNAS`,
+  o que dá **R$67**. A página também mostra o código perto dos botões, caso ele não entre sozinho.
+- **Obrigado:** o pós-compra é o da oferta da `/info` (`/info/obrigado`), que fala do Protocolo e do
+  grupo da aula. A `/alunas/obrigado` fica pronta, mas sem uso. Para usá-la, seria preciso uma oferta
+  separada na Ticto.
 - **Oferta (fonte única):** `lib/ofertaAlunas.ts`
 - **Componentes:** `components/alunas/`. Reaproveita `components/Titulo.tsx`, a seção
   `OQueVoceLeva` e as âncoras da `/fresh` (`components/fresh/ancora.ts`).
@@ -20,7 +24,7 @@ Base: skills *offers*, *copywriting*, *marketing-psychology* e *sms*.
 |---|---|
 | **Aula a R$67 + Protocolo de presente** | O benefício de ex-aluna é o presente, não um desconto. A aula não fica mais barata que o preço público, e um brinde de fidelidade é defensável se alguém de fora descobrir. A skill *offers* diz que desconto só se justifica para recompensar quem já é cliente. |
 | **Âncora: "de R$306,90 por R$67", 78% de desconto** | Aula "de R$197" (`AULA_VALOR_DE`, o mesmo "de" da `/lp2` e da `/info`) + Protocolo "de R$109,90" (o "de" do order bump). É a mesma conta da `/info`, calculada em `lib/ofertaAlunas.ts`, e aparece no Hero e no card da oferta. |
-| **Oferta nova na Ticto**, "Aula + Protocolo (ex-alunas)", R$67, **sem bump** | Entrega os dois automaticamente e permite medir o resultado dessa lista separado das outras. |
+| **Checkout da `/info` + cupom EXALUNAS** (R$96,90 − R$29,90 = R$67) | Não precisa de oferta nova: entrega os dois (aula e Protocolo) automaticamente. As vendas da lista são medidas pelo uso do cupom e pelas UTMs `lista-alunas`. **Risco:** o cupom vale para esse checkout inteiro, então quem receber o código repassado também paga R$67. |
 | **Preço na página e CTA direto ao checkout**, sem o ingresso emitido | É o público mais quente da marca. O ingresso serve para segurar tráfego frio; aqui ele só acrescentaria um passo. |
 | **Quem já comprou a aula não ganha o presente** | A FAQ responde com honestidade e oferece o Protocolo por R$29,90, o mesmo valor do order bump. |
 | **A urgência é real:** o presente vale até a aula começar (06/10, 20h) | Nada de cronômetro de sessão. Depois das 20h, o botão vira "quero saber da próxima turma". |
@@ -28,8 +32,9 @@ Base: skills *offers*, *copywriting*, *marketing-psychology* e *sms*.
 **Pontos de atenção:**
 - A página é pública para quem tem o link. Se o link circular, alguém de fora consegue comprar. É um
   vazamento aceitável, porque o preço da aula é o mesmo de sempre.
-- **Enquanto `checkoutUrl` estiver vazio, todos os botões mostram "Em breve".** A página pode ir ao ar
-  antes da oferta existir na Ticto.
+- **Teste obrigatório antes do disparo:** clique num botão da página publicada, confira se o
+  checkout abre em **R$67** com o cupom aplicado e se as UTMs aparecem na URL (o ticto-echo acrescenta
+  as UTMs ao link, que já tem o `?coupon=`).
 
 ## 2. Estrutura da página
 
@@ -125,12 +130,9 @@ opção de sair.
 
 ## 5. Pendências
 
-- [ ] **Ticto:** criar a oferta "Aula + Protocolo (ex-alunas)":
-  - R$67, com 12x de R$6,92 (confirmar a parcela na Ticto);
-  - sem order bump, entregando o ingresso e os arquivos do Protocolo;
-  - redirecionamento para `/alunas/obrigado`.
-
-  Depois, preencher `checkoutUrl` em `lib/ofertaAlunas.ts`.
+- [x] **Checkout:** o da `/info` + cupom EXALUNAS (`lib/ofertaAlunas.ts`).
+- [ ] **Testar o clique na página publicada:** R$67 no checkout, cupom aplicado e UTMs na URL.
+  Confirmar também a parcela de 12x (a página diz R$6,92).
 - [ ] **Ticto:** criar um checkout só do Protocolo por R$29,90, válido até 06/10 às 20h. Preencher
   `protocoloAvulsoUrl` em `lib/ofertaAlunas.ts` (a FAQ passa a mostrar o link) e usar o mesmo link na
   mensagem 2.

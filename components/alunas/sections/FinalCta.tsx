@@ -3,6 +3,7 @@ import { Container } from "@/components/Container";
 import { Countdown } from "@/components/Countdown";
 import { CtaButton } from "@/components/alunas/CtaButton";
 import { withBasePath } from "@/lib/basePath";
+import { OFERTA_ALUNAS } from "@/lib/ofertaAlunas";
 
 export function FinalCta() {
   return (
@@ -29,7 +30,7 @@ export function FinalCta() {
           Garantir meu ingresso de ex-aluna
         </CtaButton>
         <p className="mt-3.5 text-[13.5px] tracking-[0.02em] text-fg-faint">
-          Protocolo de Resgate Vascular de presente · reembolso em 7 dias · sem gravação
+          Cupom {OFERTA_ALUNAS.cupom} já aplicado · Protocolo de presente · reembolso em 7 dias
         </p>
       </Container>
     </section>

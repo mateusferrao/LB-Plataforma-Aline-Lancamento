@@ -5,6 +5,7 @@ import { PrecoPresente } from "@/components/alunas/PrecoPresente";
 import { Reveal } from "@/components/Reveal";
 import { Titulo } from "@/components/Titulo";
 import { VagasBadge } from "@/components/VagasBadge";
+import { OFERTA_ALUNAS } from "@/lib/ofertaAlunas";
 
 const INCLUI = [
   ["Aula ao vivo de ~90 minutos com a Dra. Aline", "Com as imagens das dissecções dela em cadáver fresh frozen"],
@@ -58,6 +59,10 @@ export function Oferta() {
             <CtaButton variant="accent" className="mt-4 w-full justify-center">
               Garantir meu ingresso de ex-aluna
             </CtaButton>
+            <div className="mt-3 text-center text-[0.9rem] opacity-90">
+              Cupom <strong className="font-semibold">{OFERTA_ALUNAS.cupom}</strong> já aplicado no
+              checkout
+            </div>
             <div className="mt-6 flex items-start gap-2.5 text-left text-[0.96rem] opacity-90">
               <span className="font-serif text-[1.2rem] italic leading-none">✓</span>
               <span>Risco zero: você tem 7 dias pra pedir reembolso, sem perguntas.</span>
