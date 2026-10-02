@@ -1,10 +1,12 @@
 import { Container } from "@/components/Container";
 import { Titulo } from "@/components/Titulo";
 import { OFERTA_ALUNAS } from "@/lib/ofertaAlunas";
+import { GARANTIA } from "@/lib/ofertaFresh";
 
 // Perguntas da /alunas. Quem já comprou a aula NÃO ganha o presente
 // (decisão de 29/09); a resposta é honesta e oferece o Protocolo pelo mesmo
-// preço do order bump, quando o link existir.
+// preço do order bump, quando o link existir. Gravação e garantia seguem as
+// decisões de 01/10 (mesmos textos da /fresh, lib/ofertaFresh.ts).
 const FAQS: { q: string; a: React.ReactNode }[] = [
   {
     q: "Fiz curso online com a Aline. Vale pra mim?",
@@ -38,15 +40,15 @@ const FAQS: { q: string; a: React.ReactNode }[] = [
   },
   {
     q: "Tem gravação?",
-    a: "Não. A aula acontece ao vivo, uma noite só, pra quem estiver na sala no dia 6, às 20h. Por isso as vagas são limitadas.",
+    a: "A aula ao vivo não tem replay avulso: ela acontece uma noite só, pra quem estiver na sala no dia 6, às 20h. Quem estiver lá conhece a condição especial da Filgueiras Academy, e a gravação entra por lá.",
   },
   {
     q: "Posso parcelar?",
     a: "Pode: no cartão em até 12x (com a taxa do gateway) ou à vista no Pix.",
   },
   {
-    q: "E se não for pra mim?",
-    a: "Você tem 7 dias após a compra pra pedir reembolso, por WhatsApp ou e-mail. Sem perguntas.",
+    q: `Como funciona a ${GARANTIA.nome}?`,
+    a: `${GARANTIA.curta} É só pedir pelo WhatsApp ${GARANTIA.whatsapp} ou pelo e-mail ${GARANTIA.email}.`,
   },
 ];
 

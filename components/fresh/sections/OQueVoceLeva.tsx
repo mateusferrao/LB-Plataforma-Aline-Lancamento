@@ -24,7 +24,15 @@ const LEVA = [
   },
 ];
 
-export function OQueVoceLeva() {
+// Só na /fresh (decisões de 02/10): o status que o fresh frozen dá. A /alunas
+// usa a lista sem este item.
+const DIFERENCIAL = {
+  t: "Um diferencial caro e difícil de ter",
+  d: "Você passa a falar com a paciente de quem já viu a face por dentro, em fresh frozen, e cobra pelo que entrega.",
+};
+
+export function OQueVoceLeva({ comDiferencial = false }: { comDiferencial?: boolean }) {
+  const itens = comDiferencial ? [...LEVA, DIFERENCIAL] : LEVA;
   return (
     <section className="bg-bg-2 py-16 sm:py-[92px]">
       <Container narrow>
@@ -33,7 +41,7 @@ export function OQueVoceLeva() {
         </Titulo>
 
         <ul className="mt-9 list-none border-t border-line p-0">
-          {LEVA.map((item, i) => (
+          {itens.map((item, i) => (
             <Reveal
               as="li"
               key={item.t}

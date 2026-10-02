@@ -43,7 +43,8 @@ O GA4 separa as variantes pelo caminho da página.
 **Ex-alunas (`/alunas`):** o link vai só na mensagem de WhatsApp da lista de ex-alunas:
 `https://live.alinefilgueiras.com.br/alunas?utm_source=whatsapp&utm_medium=lista-alunas&utm_campaign=live-por-dentro-da-face&utm_content=gancho-a`
 (troque o `utm_content` pelo gancho ou lembrete: `gancho-a`, `gancho-b`, `gancho-c`, `lembrete-1`,
-`ultimo-dia`).
+`ultimo-dia`; mensagens 3–5 de 01/10: `m3-reativacao`, `m4-vespera`, `m5-manha`, `m5-tarde`,
+`m5-ultima`).
 
 **Kit Mapa das Intercorrências (`/info`):** mesma convenção, com base
 `https://live.alinefilgueiras.com.br/info` e `utm_campaign=kit-mapa-intercorrencias`. Ex.:

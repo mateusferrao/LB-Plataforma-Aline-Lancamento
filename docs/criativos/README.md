@@ -30,6 +30,14 @@ prova de por que a Aline consegue entregar isso (legenda da foto, linha de autor
 O 06 e o 07 são as versões anteriores do 01 e do 03, mantidas a pedido. Eles partem da
 dor e da crença, não do desejo, e servem de contraponto no teste (seção 6).
 
+
+> **Atualização de 02/10 (Hormozi):** o criativo que mais vende **usa** fresh frozen no anúncio: o
+> story "Por dentro da *face* · uma aula ao vivo de anatomia em fresh frozen · 06/10 às 20h", com a
+> foto da Aline e a anatomia ilustrada sobre metade do rosto. A regra acima ("fresh frozen nunca
+> aparece") deixou de valer para o gancho: fresh frozen pode ser o gancho e o mecanismo, desde que a
+> LP feche no resultado (segurança, paciente, diferencial). Ilustração sobre pessoa viva pode; foto
+> real de peça ou de cadáver continua proibida. A LP `/fresh` foi alinhada a esse criativo
+> (`docs/fresh/README.md`, rodada 2).
 ---
 
 ## 1. Material de origem

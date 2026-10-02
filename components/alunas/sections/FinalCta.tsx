@@ -4,6 +4,7 @@ import { Countdown } from "@/components/Countdown";
 import { CtaButton } from "@/components/alunas/CtaButton";
 import { withBasePath } from "@/lib/basePath";
 import { OFERTA_ALUNAS } from "@/lib/ofertaAlunas";
+import { GARANTIA } from "@/lib/ofertaFresh";
 
 export function FinalCta() {
   return (
@@ -30,7 +31,10 @@ export function FinalCta() {
           Garantir meu ingresso de ex-aluna
         </CtaButton>
         <p className="mt-3.5 text-[13.5px] tracking-[0.02em] text-fg-faint">
-          Cupom {OFERTA_ALUNAS.cupom} já aplicado · Protocolo de presente · reembolso em 7 dias
+          Cupom {OFERTA_ALUNAS.cupom} já aplicado · Protocolo de presente · {GARANTIA.nome}
+        </p>
+        <p className="mt-5 max-w-[420px] font-serif text-[1.05rem] leading-[1.45] text-fg-soft italic">
+          Vem com uma colega ex-aluna: o mesmo link vale pra ela.
         </p>
       </Container>
     </section>

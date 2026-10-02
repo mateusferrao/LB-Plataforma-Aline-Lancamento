@@ -1,11 +1,11 @@
 import Image from "next/image";
 import { Container } from "@/components/Container";
 import { Countdown } from "@/components/Countdown";
-import { CtaButton } from "@/components/lp2/CtaButton";
-import { UrgenciaFina } from "@/components/lp2/UrgenciaFina";
+import { CtaButton } from "@/components/CtaButton";
 import { Titulo } from "@/components/Titulo";
 import { withBasePath } from "@/lib/basePath";
 import { ANCORA_REFAZER } from "@/components/fresh/ancora";
+import { GARANTIA } from "@/lib/ofertaFresh";
 
 export function FinalCta() {
   return (
@@ -31,12 +31,14 @@ export function FinalCta() {
           {ANCORA_REFAZER}
         </p>
 
-        <Countdown semPreco align="center" />
+        <Countdown align="center" />
 
-        <CtaButton className="mt-8 w-full justify-center sm:w-auto">
-          Emitir meu ingresso
+        <CtaButton showPrice className="mt-8 w-full justify-center sm:w-auto">
+          Garantir meu ingresso
         </CtaButton>
-        <UrgenciaFina className="mt-3.5 text-[13.5px] tracking-[0.02em] text-fg-faint" />
+        <p className="mt-3.5 max-w-[460px] text-[13.5px] tracking-[0.02em] text-fg-faint">
+          {GARANTIA.linha}
+        </p>
       </Container>
     </section>
   );

@@ -6,16 +6,21 @@
 
 ---
 
-## 1. Reembolso e garantia
-- **Prazo:** 7 dias após a compra.
-- **Condição:** sem perguntas ("risco zero").
+## 1. Reembolso e garantia ("Garantia de Presença", desde 01/10)
+- **Camada 1:** até **7 dias após a compra**, sem perguntas ("risco zero").
+- **Camada 2:** quem **esteve ao vivo** na aula e achou que não valeu pode pedir até **24h depois
+  da aula** (até 07/10/2026, 20h), mesmo que os 7 dias já tenham passado.
 - **Como solicitar:** pelo **WhatsApp +55 31 95349-1799** ou pelo **e-mail
   suporte.alinefilgueiras@gmail.com.br**.
 - Pedidos de reembolso devem ser **escalados para o atendimento humano**.
+- **Pendente (equipe):** definir como a presença é confirmada na camada 2 (lista de participantes
+  da sala / nome usado no login). Até lá, o atendimento humano decide caso a caso.
 
 ## 2. Formato da aula (gravação e comparecimento)
 - Aula **ao vivo e online**, **06/10/2026 às 20h (horário de Brasília)**, ~90 minutos.
-- **Não há gravação nem replay.** É uma noite só.
+- **Não há replay avulso.** É uma noite só. A única gravação é a que entra na **condição especial
+  da Filgueiras Academy**, apresentada na sala. O agente não detalha a condição nem cita preço,
+  formato ou prazo da plataforma.
 - Quem não puder comparecer ao vivo **não tem acesso posterior**; dentro dos 7 dias, cabe reembolso.
 
 ## 3. Acesso à sala

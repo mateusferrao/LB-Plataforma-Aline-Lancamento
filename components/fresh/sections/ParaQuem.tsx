@@ -17,7 +17,7 @@ const NAO = [
   "Acha que mais um protocolo decorado vai resolver a insegurança.",
   "Prefere continuar evitando algumas regiões a entender o que existe nelas.",
   "Está satisfeita em aplicar só o básico, do mesmo jeito em todo rosto.",
-  "Não pode estar ao vivo no dia 6, às 20h. É uma noite só, sem gravação.",
+  "Não pode estar ao vivo no dia 6, às 20h. É uma noite só, e a gravação só existe dentro da plataforma.",
 ];
 
 export function ParaQuem() {

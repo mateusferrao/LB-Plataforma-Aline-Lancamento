@@ -35,15 +35,16 @@ ao checkout. (Quer que eu te mande o link?)
 > **de R$197 por R$67**, e o "Confirmar meu ingresso" leva ao checkout. Se a lead citar esse passo
 > ou esse de/por, é a mesma aula e o mesmo checkout.
 >
-> A versão `/fresh` (e `/fresh/sem-vsl`) também pede pra emitir o ingresso antes do valor. No ingresso
-> emitido aparece **de R$197 por R$67**, ao lado de um comparativo com o valor riscado de
-> um curso internacional presencial em cadáver fresh frozen (cerca de R$35 mil). **Não diga que esse é o
-> preço do curso da Aline.** A aula é de estúdio, com as imagens das dissecções da Aline. É a mesma aula e o
-> mesmo checkout.
+> A versão `/fresh` (e `/fresh/sem-vsl`), desde 01/10, mostra o preço na página (**de R$197 por
+> R$67**) e o botão vai direto ao checkout, sem emitir ingresso. A página compara com o valor de um
+> curso internacional presencial em cadáver fresh frozen (cerca de R$35 mil). **Não diga que esse é o
+> preço do curso da Aline.** A aula é de estúdio, com as imagens das dissecções da Aline. É a mesma
+> aula e o mesmo checkout.
 
 ### 6. Tem gravação ou replay?
-Não. A aula é **ao vivo, uma vez só, sem gravação**. E isso é de propósito: o valor está em estar
-presente. Você tira suas dúvidas na hora e sai com uma leitura nova da anatomia.
+A aula ao vivo **não tem replay avulso**: é uma noite só, pra quem estiver na sala no dia 6, às 20h.
+Quem estiver lá conhece a **condição especial da Filgueiras Academy**, e a gravação entra por lá.
+*(Nunca detalhe a condição nem cite preço, formato ou prazo da plataforma.)*
 
 ### 7. Dá certificado?
 Essa aula **não emite certificado**. O que ela te entrega é prático e vale mais no dia a dia: uma
@@ -51,12 +52,14 @@ leitura nova da face que você já leva pra sua cadeira na semana seguinte, apli
 firme.
 
 ### 8. E se eu não conseguir assistir ao vivo?
-A aula é ao vivo, uma vez só, e não tem replay. Se por algum motivo não der certo, você tem **7 dias
+A aula é ao vivo, uma vez só, sem replay avulso. Se por algum motivo não der certo, você tem **7 dias
 após a compra para pedir reembolso, sem perguntas** — então o risco de garantir a vaga é zero.
 
-### 9. Como funciona a garantia / reembolso?
-Você tem **7 dias após a compra para pedir reembolso, sem perguntas**. É só falar com a gente pelo
-**WhatsApp (+55 31 95349-1799)** ou pelo **e-mail suporte.alinefilgueiras@gmail.com.br**.
+### 9. Como funciona a garantia / reembolso? (Garantia de Presença, desde 01/10)
+Duas camadas: **7 dias após a compra, sem perguntas**; e, se você **esteve ao vivo** e achou que não
+valeu, pode pedir **até 24h depois da aula**, mesmo que os 7 dias já tenham passado. É só falar com a
+gente pelo **WhatsApp (+55 31 95349-1799)** ou pelo **e-mail suporte.alinefilgueiras@gmail.com.br**.
+*(Pedidos de reembolso: escalar para o atendimento humano.)*
 
 ### 10. Pra quem é essa aula?
 Para **biomédicas, dentistas, enfermeiras, farmacêuticas e esteticistas** que já aplicam (ou vão

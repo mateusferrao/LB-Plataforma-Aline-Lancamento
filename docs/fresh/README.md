@@ -43,7 +43,83 @@ da aula é R$197 (`AULA_VALOR_DE` em `lib/lotes.ts`). O ingresso emitido da `/fr
 ~~de R$197~~ **R$67** ao lado do comparativo com o curso internacional, igual ao "de/por" da `/lp2`.
 A página continua sem nenhum valor. Isso substitui a decisão D5 abaixo, na parte do "sai o de R$197".
 
-Base: skill *copywriting* (coreyhaines31/marketingskills), com o Human Action Model (desconforto →
+---
+
+## Decisões de 01/10 (Hormozi) · o que mudou e por quê
+
+Base: os três livros do Alex Hormozi lidos por inteiro ($100M Offers, $100M Leads, $100M Money
+Models; digests com referência de linha ficaram fora do repositório) e os números do Meta Ads dos
+últimos 30 dias: **R$2.275 gastos, 54 compras, CPA médio ~R$42**, subindo campanha a campanha
+(R$14 → R$28 → R$47 → R$64 → R$74 nas duas ativas, "Teste Criativo"). Num recorte: 123 visitas →
+13 ingressos emitidos → 5 checkouts → 2 pagamentos → 2 compras. Nunca foi lido por rota.
+
+**Diagnóstico.** Com ticket de R$67 e CPA de R$42–74, o front-end sozinho fica em ~1–1,4:1
+(Leads: quem trava abaixo de 3:1 não escala). A aula é a oferta de atração; o bump e a condição da
+plataforma na sala decidem o lucro (Money Models: pagar aquisição + entrega em 30 dias). CPA
+subindo é saturação: a ordem de variação do Offers é criativo → texto → embalagem → estrutura. E
+a primeira dobra não espelhava o anúncio (Leads: "make your landing pages match your ads").
+
+| O que mudou | Princípio | Onde |
+|---|---|---|
+| **H1 espelha os anúncios ativos** (insegurança na hora de aplicar → ver por dentro). "Não é falta de coragem" é a frase da Aline no vídeo do consultório. Fresh frozen vai pro subtítulo. | Leads: LP = continuação do anúncio, "click to close" | `components/fresh/sections/Hero.tsx`, `app/fresh/metadata.ts` |
+| **Preço na página e CTA direto ao checkout.** Sai o modal de emitir ingresso da /fresh (fica só na /lp2, que é o controle). | Money Models: estranho entende preço, não valor; Leads: cada passo é um ponto de queda | `FreshPage.tsx`, `StickyCta.tsx`, `Ancora.tsx`, `Offer.tsx`, `components/fresh/OfertaPreco.tsx` |
+| **Um ingresso só (R$67); o Protocolo continua como order bump (R$29,90) e a página o pré-vende** ("opcional, no checkout"). Dois pacotes na página foram descartados: o bump já está no momento certo (depois da decisão) e antecipar o pacote faria a visitante dizer "não" duas vezes. | Money Models: upsell "no exato momento" do próximo problema; "hint at your next offer early" | `lib/ofertaFresh.ts` (`BUMP`), `Offer.tsx`, `Faq.tsx` |
+| **Garantia de Presença**, com nome e duas camadas: 7 dias após a compra (como sempre) e, pra quem esteve ao vivo, até 24h depois da aula. Repetida no card, no Hero, no final e na FAQ. | Offers: "se não X em Y, fazemos Z" + nome; conversão 2–4× (Fladlien) | `lib/ofertaFresh.ts` (`GARANTIA`), `sections/Garantia.tsx` |
+| **Objeção nº 1 ("ao vivo / sem gravação") tratada com honestidade:** não há replay avulso; a gravação entra só na condição especial da Filgueiras Academy, apresentada na sala. A LP cita a plataforma em uma linha, sem preço. | Offers: resolver todo obstáculo apresentado; Money Models: antecipar a próxima oferta | `Faq.tsx`, `ParaQuem.tsx`, `Offer.tsx` (`PLATAFORMA_LINHA`) |
+| **Oferta e garantia sobem** pra logo depois de "o que muda na sua cadeira". | Tráfego frio vê preço e risco zero antes de rolar o resto | `FreshPage.tsx` |
+
+**O que ficou como estava, de propósito:** "poucas vagas" sem número (não há capacidade declarada),
+nenhum bônus novo, nenhuma gravação avulsa, âncora do curso internacional como referência genérica,
+"de R$197" como único "de" (confirmado pela equipe em 28/09).
+
+**Pendências operacionais desta decisão:**
+- Definir como a equipe confirma presença pra segunda camada da garantia (lista da sala / nome no
+  login) e registrar em `docs/agente-ia/03-politicas.md`.
+- Ticto → aba Rastreamento de cada venda → compras por LP de origem e **taxa de aceite do bump**
+  (vendas com Protocolo ÷ vendas). GA4 → exploração por `page_path`. Meta → URL de cada campanha.
+- Concentrar as campanhas em duas rotas (`/` controle × `/fresh`) e pausar `/lp2`, `/sem-vsl` e
+  `/fresh/sem-vsl` enquanto o volume for ~R$75/dia.
+
+**Próximo lançamento (desenho, não implementado):** testar uma isca antes do ingresso (Leads: "one
+step" ou "reveal problem"; ex.: a regra "nunca gelo" em vídeo curto) ou um giveaway "bolsa na
+plataforma"; versão premium real pra ancorar; plano de pagamento como primeiro downsell e Protocolo
+avulso como segundo (precisa do checkout `protocoloAvulsoUrl`); programa de indicação bilateral pras
+ex-alunas (valor ≈ CAC); calendário whisper → tease → shout; testar 2–3 nomes da aula por enquete.
+
+### Rodada 2 (02/10) · fresh frozen de volta na primeira dobra
+
+**Por quê:** o criativo que mais vende é o story "Por dentro da *face* · uma aula ao vivo de
+anatomia em fresh frozen" (foto da Aline com a anatomia ilustrada sobre metade do rosto). Ele só
+tem chamada (contraste + incomum), sem nenhum elemento de valor e sem preço. A LP precisa confirmar
+o anúncio e entregar o valor que ele não entrega (Leads: "make your landing pages match your ads";
+todo anúncio = chamada + valor + CTA). O H1 da rodada 1 tinha tirado o fresh frozen da dobra.
+
+| Peça | Texto | Princípio |
+|---|---|---|
+| Faixa | Aula ao vivo de anatomia em fresh frozen · 06/10 · 20h | Igual ao anúncio |
+| Pré-headline | Pra quem aplica (ou vai aplicar) harmonização | Filtro da profissional (label) |
+| H1 | A face por dentro, em cadáver fresh frozen, numa noite e sem viajar. *Pra você parar de aplicar no escuro e a paciente sentir a sua segurança.* | Tempo e esforço a zero (Offers, "leve o fundo a zero"); a cena da dor; status visto pela paciente |
+| Subtítulo | A Aline estuda e dá cursos de fresh frozen nos EUA e na Europa; um curso desses chega a R$35 mil (genérico); ao vivo, por R$67, a artéria a milímetros da agulha | Âncora com número específico; probabilidade percebida |
+| Bullets | risco antes da agulha · segurança que a paciente percebe e indica · diferencial caro e difícil de ter, cobrar pelo que entrega | Segurança → status → valor, sem número de ganho |
+
+- **"Vender mais" só como:** status (a paciente percebe, volta e indica), cobrar pelo que entrega
+  (frase do playbook, FAQ 13) e diferencial de mercado ("caro e difícil de ter", sustentado pelos
+  preços de cursos presenciais da seção 6.4). Proibido: número de faturamento, agenda cheia.
+- **A ponte com a paciente** virou seção de três passos e subiu pra logo depois do "por que".
+- **"O que muda na sua cadeira"** ganhou o item "Um diferencial caro e difícil de ter" (só na
+  /fresh; a /alunas usa a lista sem ele).
+- **Imagem:** na variante sem VSL, a mídia do Hero é a própria arte do criativo
+  (`public/images/fresh/criativo-por-dentro-da-face.webp`). **Exceção registrada à regra da seção
+  8:** é ilustração anatômica sobre uma pessoa viva, já aprovada na Meta, não foto de peça ou de
+  cadáver. Foto real de peça continua proibida.
+- **Descartados:** H1 só de segurança (sem tempo, esforço nem número; "segurança" é palavra de todo
+  curso); "pouca gente no Brasil viu" (sem fonte); âncora como promessa no H1.
+- **Variante pra testar depois:** "Você aplica perto de artérias que só viu desenhadas? *Numa
+  noite, a Aline te mostra a face em fresh frozen. R$67.*"
+
+---
+
+Base original (28/09): skill *copywriting* (coreyhaines31/marketingskills), com o Human Action Model (desconforto →
 visão → caminho), o teste "Now you can…", o Perception Gap, "uma ideia por seção" e "clareza acima
 de esperteza". Também usei a pesquisa de público da Aline (abr/2025), as LPs atuais (`/`, `/lp2`,
 `/info`), o playbook do agente e os docs dos criativos.

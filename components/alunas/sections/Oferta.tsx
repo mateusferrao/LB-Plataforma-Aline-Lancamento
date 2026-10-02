@@ -6,6 +6,7 @@ import { Reveal } from "@/components/Reveal";
 import { Titulo } from "@/components/Titulo";
 import { VagasBadge } from "@/components/VagasBadge";
 import { OFERTA_ALUNAS } from "@/lib/ofertaAlunas";
+import { GARANTIA } from "@/lib/ofertaFresh";
 
 const INCLUI = [
   ["Aula ao vivo de ~90 minutos com a Dra. Aline", "Com as imagens das dissecções dela em cadáver fresh frozen"],
@@ -65,13 +66,21 @@ export function Oferta() {
             </div>
             <div className="mt-6 flex items-start gap-2.5 text-left text-[0.96rem] opacity-90">
               <span className="font-serif text-[1.2rem] italic leading-none">✓</span>
-              <span>Risco zero: você tem 7 dias pra pedir reembolso, sem perguntas.</span>
+              <span>
+                <strong className="font-semibold">{GARANTIA.nome}:</strong> {GARANTIA.curta}
+              </span>
             </div>
             <div className="mt-3 text-left text-[0.92rem] opacity-80">
-              O presente vale até às 20h do dia 6. É uma noite só, sem gravação.
+              O presente vale até às 20h do dia 6. É uma noite só, sem replay avulso.
             </div>
           </Reveal>
         </div>
+
+        <Reveal>
+          <p className="mx-auto mt-10 max-w-[560px] text-center font-serif text-[1.08rem] leading-[1.5] text-fg-soft italic">
+            Vem com uma colega ex-aluna: o mesmo link vale pra ela.
+          </p>
+        </Reveal>
 
         <Reveal className="mt-12 grid grid-cols-1 gap-px overflow-hidden rounded-[4px] border border-line bg-line sm:grid-cols-3">
           {PASSOS.map(([t, d], i) => (

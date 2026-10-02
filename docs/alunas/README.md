@@ -36,6 +36,18 @@ Base: skills *offers*, *copywriting*, *marketing-psychology* e *sms*.
   checkout abre em **R$67** com o cupom aplicado e se as UTMs aparecem na URL (o ticto-echo acrescenta
   as UTMs ao link, que já tem o `?coupon=`).
 
+## 1b. Ajustes de 01/10 (Hormozi)
+
+Dois disparos já foram feitos pra lista inteira, com resultado fraco. Mudanças, com o princípio:
+
+| Mudança | Por quê |
+|---|---|
+| **O presente vem primeiro** no bloco de preço (`components/alunas/PrecoPresente.tsx`): "Protocolo de Resgate Vascular · grátis", depois o ingresso, depois o total riscado e o %. Mesmos números. | Money Models: "focus on the bonus, not the membership"; "grátis" converte mais que "% off". |
+| **Garantia de Presença** no lugar do "7 dias" solto (card, FAQ e CTA final). Termos em `lib/ofertaFresh.ts`. | Offers: garantia com nome e estrutura "se não X em Y, fazemos Z". |
+| **"Tem gravação?"** com a resposta honesta: sem replay avulso; a gravação entra na condição da plataforma, apresentada na sala. | Offers: resolver a objeção apresentada (é a nº 1 no WhatsApp). |
+| **Pedido de indicação** em uma linha, na oferta e no final: "Vem com uma colega ex-aluna: o mesmo link vale pra ela." Sem incentivo novo (nenhum foi autorizado). | Leads: pedir indicação na hora da compra, como oferta. |
+| **Mensagens 3–5** (seção 3b): reativação em 9 palavras pra quem não clicou, tease na véspera e três toques no dia. | Leads: whisper → tease → shout; "Are you still looking to…?"; Offers: as últimas 4 horas fazem 50–60% das vendas. |
+
 ## 2. Estrutura da página
 
 1. **Hero:**
@@ -105,6 +117,49 @@ opção de sair.
 - Pela API oficial do WhatsApp ou por uma ferramenta de disparo, **em lotes**, com o nome da pessoa.
   Nunca mil mensagens de uma vez pelo mesmo número, porque o WhatsApp bane o número.
 - O "responde SAIR" atende a LGPD: são ex-clientes, mas a saída precisa ser fácil.
+
+## 3b. Mensagens 3–5 · depois dos dois primeiros disparos (01/10)
+
+Regras: só pra quem **não clicou** nos disparos anteriores (quem clicou e não comprou recebe só a
+M5); dar antes de pedir (a M3 entrega a regra do gelo inteira); um link por mensagem; "responde
+SAIR" em todas; lotes, nunca a lista de uma vez.
+
+**M3 · 02/10 · reativação (dá a dica, depois pergunta em 9 palavras):**
+> *NUNCA USE GELO NUMA OCLUSÃO.*
+>
+> Oi, {primeiro nome}. Aqui é da equipe da Dra. Aline. Uma regra do Protocolo dela que vale guardar:
+> se a cor mudar no meio da aplicação, o primeiro impulso é pegar gelo, e é exatamente o que ela
+> proíbe. A oclusão precisa de vasodilatação, não de frio.
+>
+> Esse Protocolo inteiro vai de presente pra quem já foi aluna e garantir o ingresso da aula ao
+> vivo do dia 6, às 20h.
+>
+> Você ainda quer ver a face por dentro, {primeiro nome}?
+> https://live.alinefilgueiras.com.br/alunas?utm_source=whatsapp&utm_medium=lista-alunas&utm_campaign=live-por-dentro-da-face&utm_content=m3-reativacao
+>
+> (Se não quiser receber nossas mensagens, responde SAIR.)
+
+**M4 · 05/10 · véspera (o que ela vai ver + prazo do presente):**
+> *AMANHÃ, 20H: O QUE A ALINE VIU POR DENTRO.*
+>
+> {primeiro nome}, amanhã a Aline mostra ao vivo, nas imagens das dissecções que fez em cadáver
+> fresh frozen, até onde ir perto das áreas de risco e por que a mesma técnica fica linda numa
+> paciente e sem graça na outra.
+>
+> Pra ex-aluna, o ingresso (R$67) vem com o Protocolo de Resgate Vascular de presente. O presente
+> vale até a aula começar, amanhã às 20h.
+>
+> Vem com uma colega ex-aluna: o mesmo link vale pra ela.
+> {link, utm_content=m4-vespera}
+
+**M5 · 06/10 · dia da aula, três toques (só pra quem ainda não comprou):**
+- **9h:** *HOJE, 20H.* "A aula ao vivo da Aline é hoje. O Protocolo de presente vale até ela
+  começar. Garantia de Presença: se você estiver ao vivo e achar que não valeu, devolvemos."
+  {link, utm_content=m5-manha}
+- **17h:** *FALTAM 3 HORAS.* "Às 20h fecham as inscrições e o presente sai. Sem replay avulso."
+  {link, utm_content=m5-tarde}
+- **19h30:** *ÚLTIMA CHAMADA.* "Começa em 30 minutos. É a última mensagem sobre a aula."
+  {link, utm_content=m5-ultima}
 
 ## 4. Mensagem 2 · no grupo da aula, para quem não levou o Protocolo
 

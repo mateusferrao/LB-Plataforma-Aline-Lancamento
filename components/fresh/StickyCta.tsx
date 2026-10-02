@@ -1,12 +1,11 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { CtaButton } from "@/components/lp2/CtaButton";
+import { CtaButton } from "@/components/CtaButton";
 import { VagasBadge } from "@/components/VagasBadge";
 
-// CTA fixo da /fresh. Diferente da /lp2, SEM o cronômetro de reserva: aqui a
-// urgência é só a real (poucas vagas + a data da aula). A reserva aparece
-// dentro do ingresso emitido (components/lp2/IngressoModal.tsx).
+// CTA fixo da /fresh: preço no botão e checkout direto (components/CtaButton.tsx).
+// Sem cronômetro de reserva: a urgência é só a real (poucas vagas + a data).
 // - Mobile: sempre visível.
 // - Desktop: aparece depois do Hero e some perto do rodapé.
 export function StickyCta() {
@@ -41,8 +40,8 @@ export function StickyCta() {
             06/10 · 20h · ao vivo
           </span>
         </div>
-        <CtaButton className="w-full justify-center">
-          Emitir meu ingresso
+        <CtaButton showPrice className="w-full justify-center">
+          Garantir meu ingresso
         </CtaButton>
       </div>
 
@@ -62,8 +61,8 @@ export function StickyCta() {
               6 de outubro · 20h · ao vivo
             </span>
           </div>
-          <CtaButton className="shrink-0">
-            Emitir meu ingresso
+          <CtaButton showPrice className="shrink-0">
+            Garantir meu ingresso
           </CtaButton>
         </div>
       </div>

@@ -1,15 +1,17 @@
 import Image from "next/image";
 import { Container } from "@/components/Container";
-import { CtaButton } from "@/components/lp2/CtaButton";
+import { CtaButton } from "@/components/CtaButton";
 import { Reveal } from "@/components/Reveal";
 import { Titulo } from "@/components/Titulo";
 import { ANCORA_CURSO, ANCORA_ROTULO } from "@/components/fresh/ancora";
 import { withBasePath } from "@/lib/basePath";
+import { LOTES } from "@/lib/lotes";
 
 // Âncora de valor: um curso internacional em cadáver fresh frozen, como
-// referência genérica de mercado (sem atribuir o valor ao curso da Aline).
-// Sem o valor da aula na página (igual à /lp2): o R$67 só aparece no ingresso
-// emitido, no comparativo com o preço riscado (components/fresh/AncoraIngresso).
+// referência genérica de mercado (sem atribuir o valor ao curso da Aline),
+// lado a lado com o preço real da aula (decisões de 01/10: preço na página).
+const LOTE = LOTES[0];
+
 export function Ancora() {
   return (
     <>
@@ -47,10 +49,10 @@ export function Ancora() {
                       Esta aula ao vivo
                     </div>
                     <div className="mt-1.5 font-serif text-[1.7rem] leading-tight text-fg">
-                      Uma fração disso
+                      {LOTE.priceLabel}
                     </div>
                     <div className="mt-1 text-[0.85rem] text-fg-faint">
-                      Emita seu ingresso pra ver o valor
+                      à vista no Pix · ou 12x de {LOTE.parcela12x}
                     </div>
                   </div>
                 </div>
@@ -62,8 +64,8 @@ export function Ancora() {
                   pagar em dólar ou euro.
                 </p>
 
-                <CtaButton className="mt-8 w-full justify-center sm:w-auto sm:justify-start">
-                  Emitir meu ingresso
+                <CtaButton showPrice className="mt-8 w-full justify-center sm:w-auto sm:justify-start">
+                  Garantir meu ingresso
                 </CtaButton>
               </Reveal>
             </div>
