@@ -8,7 +8,7 @@ import { mkdirSync } from "node:fs";
 import path from "node:path";
 
 const dir = path.dirname(fileURLToPath(import.meta.url));
-const TOTAL = 7;
+const TOTAL = 8;
 
 mkdirSync(path.join(dir, "png", "feed"), { recursive: true });
 mkdirSync(path.join(dir, "png", "story"), { recursive: true });
