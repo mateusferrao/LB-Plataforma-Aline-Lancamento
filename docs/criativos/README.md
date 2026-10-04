@@ -26,7 +26,7 @@ prova de por que a Aline consegue entregar isso (legenda da foto, linha de autor
 | 05 | Oferta: uma noite pra aplicar com segurança | Quente |
 | 06 | Crença quebrada: atlas, slide e boneco × rosto real | Frio |
 | 07 | Dor: o risco a milímetros da agulha | Frio |
-| 08 | Método: "O que tira o medo de aplicar é método." Três fotos reais do laboratório (luvas, braço erguido, sala) | Frio |
+| 08 | Método, em citação sóbria: "O que tira o medo de aplicar é método." Foto da Aline calçando as luvas em tela cheia + barra da aula | Frio |
 
 O 08 (04/10) parte da ideia da equipe "o que tira o medo de aplicar não é coragem, é método". A
 copy passou pela skill *copywriting* (marketingskills), que proíbe o "não é X, é Y": a headline afirma
