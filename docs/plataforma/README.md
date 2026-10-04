@@ -34,8 +34,9 @@ Fontes do plano, de 04/10/2026:
 |---|---|
 | Páginas | `/academy/sala` (sobe para a aula) + `/academy` (evergreen, só texto; a VSL nova entra depois) |
 | Oferta | **Filgueiras Academy · Consulta, Agulha e Espelho**, 12 meses |
-| Headline da sala | "Você viu a face por dentro. Agora a paciente precisa sentir isso." (recência, continua o pitch) |
-| Headline da evergreen | "A paciente decide se confia em você três vezes: na consulta, na agulha e no espelho." |
+| Headline da sala | "Uma noite te mostrou a face por dentro. 18 meses fazem a sua mão parar de hesitar." (continua o pitch, com resultado e prazo) |
+| Headline da evergreen | "Aplique sem a mão hesitar. Conduza a consulta sem travar no 'vou pensar'." (dor + resultado, em segunda pessoa) |
+| Os três momentos | "A paciente decide se confia em você três vezes" deixou de ser H1 e virou o título da seção do mecanismo (revisão de 04/10: como headline, era uma tese indireta, em terceira pessoa e sem dor nem resultado) |
 | Preço | R$1.797 cheio · **R$1.497 com o cupom da sala até 08/10, 23h59** · 12x com a taxa do gateway ou Pix |
 | Base da sala (todas) | Gravação da aula de 06/10 + **6 meses a mais de acesso (18 meses)**. O Protocolo saiu: boa parte da sala já tem, e ele virou oferta de entrada |
 | Primeiras N (≤40, conforme o estoque de pranchetas) | + encontro extra ao vivo de análise de casos + prancheta ilustrada pelo correio |
@@ -54,16 +55,17 @@ Fontes do plano, de 04/10/2026:
 ## 3. Estrutura das páginas (a mesma sequência do pitch)
 
 1. **Hero:** faixa, pré-headline, H1 com grifo, subtítulo, os 4 pilares, preço, CTA, garantia e, na sala, cupom e contador até 08/10. No celular, a foto vai para o fim do hero.
-2. **Três momentos:** consulta, agulha e espelho, cada um com a cena da dor e o que a Academy entrega.
-3. **Por que dessa vez é diferente:** a objeção "fiz curso e continuo travada" (36% da pesquisa).
-4. **O que tem dentro:** o destaque do curso de fresh frozen (a evergreen repete o anúncio) + os cursos por pilar, com a contagem de aulas do Memberkit.
-5. **Oferta:** primeiro as âncoras reais, depois o núcleo com o preço. Na sala, a escada de bônus, o cupom e o contador.
-6. **Garantia Mão Segura.**
-7. **Quem conduz:** a história da Aline nas duas inseguranças.
-8. **Prints de alunas da Aline.**
-9. **Pra quem é / não é.**
-10. **FAQ:** a da sala tem perguntas próprias (18 meses, níveis, prancheta, depois de 08/10).
-11. **CTA final** + barra fixa no celular.
+2. **Você se reconhece?:** a dor com as palavras da pesquisa, em segunda pessoa (a mão que hesita, o medo de errar, "você já fez isso?", "vou pensar", "só quer saber preço", "fiz curso e continuo perdida").
+3. **Três momentos:** consulta, agulha e espelho, cada um com a cena da dor e o que a Academy entrega.
+4. **Por que dessa vez é diferente:** a objeção "fiz curso e continuo travada" (36% da pesquisa).
+5. **O que tem dentro:** o destaque do curso de fresh frozen (a evergreen repete o anúncio) + os cursos por pilar, com a contagem de aulas do Memberkit.
+6. **Oferta:** primeiro as âncoras reais, depois o núcleo com o preço. Na sala, a escada de bônus, o cupom e o contador.
+7. **Garantia Mão Segura.**
+8. **Quem conduz:** a história da Aline nas duas inseguranças.
+9. **Prints de alunas da Aline.**
+10. **Pra quem é / não é.**
+11. **FAQ:** a da sala tem perguntas próprias (18 meses, níveis, prancheta, depois de 08/10).
+12. **CTA final** + barra fixa no celular.
 
 **Depois de 08/10, 23h59:** o botão da sala leva à `/academy` e o contador diz que a condição terminou. Para testar, use `?preview=2026-10-09T10:00:00-03:00`.
 

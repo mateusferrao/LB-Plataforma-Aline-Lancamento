@@ -12,6 +12,7 @@ import { OQueTem } from "@/components/academy/sections/OQueTem";
 import { ParaQuem } from "@/components/academy/sections/ParaQuem";
 import { PorQueDiferente } from "@/components/academy/sections/PorQueDiferente";
 import { TresMomentos } from "@/components/academy/sections/TresMomentos";
+import { VoceSeReconhece } from "@/components/academy/sections/VoceSeReconhece";
 
 // Página da Filgueiras Academy · Consulta, Agulha e Espelho. A mesma sequência
 // do pitch de 06/10 (docs/plataforma/README.md), nas duas versões:
@@ -23,6 +24,7 @@ export function AcademyPage({ modo }: { modo: Modo }) {
     <>
       <main>
         <Hero modo={modo} />
+        <VoceSeReconhece />
         <TresMomentos />
         <PorQueDiferente />
         <OQueTem modo={modo} />

@@ -7,7 +7,7 @@ import { AcademyPage } from "@/components/academy/AcademyPage";
 export const metadata: Metadata = {
   title: "Filgueiras Academy · Condição da aula Por Dentro da Face",
   description:
-    "Você viu a face por dentro. Agora a paciente precisa sentir isso. Condição de quem esteve na aula de 06/10, até 08/10 às 23h59.",
+    "Uma noite te mostrou a face por dentro. 18 meses fazem a sua mão parar de hesitar. Condição de quem esteve na aula de 06/10, até 08/10 às 23h59.",
   robots: { index: false, follow: false },
   openGraph: {
     title: "Filgueiras Academy · Condição da aula de 06/10",

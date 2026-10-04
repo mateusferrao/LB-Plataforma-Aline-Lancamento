@@ -36,7 +36,7 @@ export function TresMomentos() {
         <Reveal>
           <p className="mt-5 max-w-[600px] text-[1.08rem] leading-[1.6] text-fg-soft">
             Ela não vê a sua anatomia nem o seu certificado. Ela sente a sua segurança, em três
-            momentos.
+            momentos. É neles que a Academy trabalha.
           </p>
         </Reveal>
       </Container>

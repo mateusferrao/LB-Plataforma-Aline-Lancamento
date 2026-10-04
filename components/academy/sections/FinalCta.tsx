@@ -10,12 +10,12 @@ const COPY = {
   sala: {
     eyebrow: `Até ${SALA.prazoCurto}`,
     h2: "Você viu a face por dentro.",
-    destaque: "Daqui a um ano, a paciente vai sentir isso?",
+    destaque: "Daqui a um ano, a sua mão ainda vai hesitar?",
   },
   evergreen: {
     eyebrow: "Filgueiras Academy",
-    h2: "Consulta, agulha e espelho.",
-    destaque: "A paciente sente as três.",
+    h2: "Mão que não hesita. Consulta que não trava.",
+    destaque: "A paciente sente as duas.",
   },
 } as const;
 

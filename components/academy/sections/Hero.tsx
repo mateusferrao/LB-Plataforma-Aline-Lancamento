@@ -7,26 +7,28 @@ import { withBasePath } from "@/lib/basePath";
 import { GARANTIA_ACADEMY, SALA } from "@/lib/ofertaAcademy";
 
 // Hero no padrão da /fresh (pré-headline, H1 em Inter, grifo só no fim).
-// Sala: continua o que ela acabou de ver (recência). Evergreen: a faixa repete o
-// anúncio de aquisição (curso novo de fresh frozen) e o H1 traz os três momentos.
+// Headline = dor + resultado, em segunda pessoa (revisão de 04/10: a versão
+// anterior era uma tese indireta). Sala: continua o pitch ("uma noite não muda a
+// mão") com resultado e prazo. Evergreen: a faixa repete o anúncio de aquisição e
+// o H1 fala das duas inseguranças, a da agulha e a do "vou pensar".
 // No celular a foto vai pro fim do hero: preço e botão na primeira rolagem.
 const COPY = {
   sala: {
     faixa: `Condição da aula de 06/10 · até ${SALA.prazoCurto}`,
     pre: "Pra quem esteve na aula Por Dentro da Face",
-    h1: "Você viu a face por dentro.",
-    grifo: "Agora a paciente precisa sentir isso.",
-    sub: "Na Filgueiras Academy, a anatomia da aula vira mão segura, e a mão segura vira consulta que fecha. Consulta, agulha e espelho no mesmo lugar, com encontros ao vivo todo mês.",
+    h1: "Uma noite te mostrou a face por dentro.",
+    grifo: "18 meses fazem a sua mão parar de hesitar.",
+    sub: "E a sua consulta parar de travar no \u201cvou pensar\u201d. Na Filgueiras Academy: o curso de fresh frozen, mais de 70 aulas de técnica, a Consulta que Vende e encontros ao vivo todo mês.",
     img: "/images/fresh/lab-bracos-abertos.webp",
     alt: "Dra. Aline Filgueiras no laboratório de dissecção",
     legenda: "Laboratório de dissecção · EUA",
   },
   evergreen: {
     faixa: "Novo: curso online de Fresh Frozen + dissecção, incluído",
-    pre: "Pra quem aplica harmonização facial, ou está se preparando pra aplicar",
-    h1: "A paciente decide se confia em você três vezes:",
-    grifo: "na consulta, na agulha e no espelho.",
-    sub: "A Filgueiras Academy te prepara para as três: os passos da consulta, a anatomia vista por dentro em fresh frozen e mais de 70 aulas práticas de técnica. Com a Dra. Aline e encontros ao vivo todo mês.",
+    pre: "Pra quem aplica harmonização e ainda sente insegurança",
+    h1: "Aplique sem a mão hesitar.",
+    grifo: "Conduza a consulta sem travar no \u201cvou pensar\u201d.",
+    sub: "Na Filgueiras Academy você vê a face por dentro em fresh frozen, domina a técnica em mais de 70 aulas e aprende os passos da consulta. Com a Dra. Aline e encontros ao vivo todo mês.",
     img: "/images/aline-hero-marsala-v2.jpg",
     alt: "Dra. Aline Filgueiras",
     legenda: "Dra. Aline Filgueiras",

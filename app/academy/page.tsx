@@ -6,7 +6,7 @@ import { AcademyPage } from "@/components/academy/AcademyPage";
 export const metadata: Metadata = {
   title: "Filgueiras Academy · Consulta, Agulha e Espelho · Dra. Aline Filgueiras",
   description:
-    "A paciente decide se confia em você três vezes: na consulta, na agulha e no espelho. O novo curso online de Fresh Frozen e dissecção, mais de 70 aulas práticas e a Consulta que Vende, com encontros ao vivo todo mês.",
+    "Aplique sem a mão hesitar. Conduza a consulta sem travar no \u201cvou pensar\u201d. O novo curso online de Fresh Frozen e dissecção, mais de 70 aulas práticas e a Consulta que Vende, com encontros ao vivo todo mês.",
   openGraph: {
     title: "Filgueiras Academy · Consulta, Agulha e Espelho",
     description:
