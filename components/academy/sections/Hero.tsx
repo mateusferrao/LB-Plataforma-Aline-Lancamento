@@ -16,9 +16,9 @@ const COPY = {
   sala: {
     faixa: `Condição da aula de 06/10 · até ${SALA.prazoCurto}`,
     pre: "Pra quem esteve na aula Por Dentro da Face",
-    h1: "Uma noite te mostrou a face por dentro.",
-    grifo: "18 meses fazem a sua mão parar de hesitar.",
-    sub: "E a sua consulta parar de travar no \u201cvou pensar\u201d. Na Filgueiras Academy: o curso de fresh frozen, mais de 70 aulas de técnica, a Consulta que Vende e encontros ao vivo todo mês.",
+    h1: "Você não fez tanto curso pra continuar",
+    grifo: "com medo de aplicar e com a agenda vazia.",
+    sub: "A culpa nunca foi sua. Faltava ver a face por dentro e ter um caminho. Na Filgueiras Academy você tem anatomia, técnica e consulta no mesmo lugar, com encontros ao vivo todo mês.",
     img: "/images/fresh/lab-bracos-abertos.webp",
     alt: "Dra. Aline Filgueiras no laboratório de dissecção",
     legenda: "Laboratório de dissecção · EUA",
