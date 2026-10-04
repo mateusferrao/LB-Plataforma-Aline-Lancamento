@@ -35,7 +35,7 @@ Fontes do plano, de 04/10/2026:
 | Páginas | `/academy/sala` (sobe para a aula) + `/academy` (evergreen, só texto; a VSL nova entra depois) |
 | Oferta | **Filgueiras Academy · Consulta, Agulha e Espelho**, 12 meses |
 | Headline da sala | "Você não fez tanto curso pra continuar com medo de aplicar e com a agenda vazia." (a dor final, as duas pontas; o subtítulo acolhe: "A culpa nunca foi sua…") |
-| Headline da evergreen | "Aplique sem a mão hesitar. Conduza a consulta sem travar no 'vou pensar'." (dor + resultado, em segunda pessoa) |
+| Headline da evergreen | "Você não estudou tanto pra continuar insegura na agulha e com a agenda parada." (mesma linha da sala; "parada" serve a quem já atende) |
 | Os três momentos | "A paciente decide se confia em você três vezes" deixou de ser H1 e virou o título da seção do mecanismo (revisão de 04/10: como headline, era uma tese indireta, em terceira pessoa e sem dor nem resultado) |
 | Preço | R$1.797 cheio · **R$1.497 com o cupom da sala até 08/10, 23h59** · 12x com a taxa do gateway ou Pix |
 | Base da sala (todas) | Gravação da aula de 06/10 + **6 meses a mais de acesso (18 meses)**. O Protocolo saiu: boa parte da sala já tem, e ele virou oferta de entrada |
