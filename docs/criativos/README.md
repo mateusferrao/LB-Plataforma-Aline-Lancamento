@@ -26,6 +26,13 @@ prova de por que a Aline consegue entregar isso (legenda da foto, linha de autor
 | 05 | Oferta: uma noite pra aplicar com segurança | Quente |
 | 06 | Crença quebrada: atlas, slide e boneco × rosto real | Frio |
 | 07 | Dor: o risco a milímetros da agulha | Frio |
+| 08 | Método: "O que tira o medo de aplicar é método." Três fotos reais do laboratório (luvas, braço erguido, sala) | Frio |
+
+O 08 (04/10) parte da ideia da equipe "o que tira o medo de aplicar não é coragem, é método". A
+copy passou pela skill *copywriting* (marketingskills), que proíbe o "não é X, é Y": a headline afirma
+direto ("é método") e o subtítulo diz qual é o método (o que a Aline viu dissecando em fresh frozen),
+pra frase não servir a qualquer concorrente. Variante pra teste, se a equipe quiser a frase original:
+"Coragem não tira o medo de aplicar. Método tira."
 
 O 06 e o 07 são as versões anteriores do 01 e do 03, mantidas a pedido. Eles partem da
 dor e da crença, não do desejo, e servem de contraponto no teste (seção 6).
