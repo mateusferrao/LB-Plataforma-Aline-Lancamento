@@ -69,7 +69,7 @@
 **Âncora:**
 > Pra você ter uma referência: só a parte de técnica, nos meus cursos presenciais, custa de R$2.800 a R$4.800 cada curso. Um curso de fresh frozen fora do Brasil passa de cinco mil dólares, fora passagem e visto.
 >
-> Você não vai pagar R$8.794. A Filgueiras Academy é **R$1.797**, em até 12 vezes de [valor da parcela], ou no Pix.
+> Você não vai pagar R$8.794. A Filgueiras Academy é **R$1.797**, em 12 vezes de **R$185,85**, ou no Pix.
 
 *(Pausa. Ainda sem bônus.)*
 
@@ -134,7 +134,7 @@
 ---
 
 ### Bloco 9 · Respostas rápidas para as perguntas ao vivo
-- **"Está caro."** "Um curso presencial só de toxina custa R$2.800. Aqui você leva o fresh frozen, a plataforma inteira, seis encontros ao vivo e uma aula de casos comigo por R$1.797, em 12x de [valor]. E tem 7 dias e a Garantia Mão Segura."
+- **"Está caro."** "Um curso presencial só de toxina custa R$2.800. Aqui você leva o fresh frozen, a plataforma inteira, seis encontros ao vivo e uma aula de casos comigo por R$1.797, ou 12x de R$185,85. E tem 7 dias e a Garantia Mão Segura."
 - **"Não tenho tempo."** "São doze meses, no seu ritmo, e os encontros ficam gravados. E as cinco primeiras de hoje levam dezoito meses."
 - **"Já fiz curso e não funcionou."** "Quase nunca faltou conteúdo. Faltou ver por dentro e ter alguém junto. Aqui tem seis encontros ao vivo e uma aula de casos comigo."
 - **"Sou iniciante."** "É o melhor momento: você começa pela consulta e pela anatomia, sem vício."
@@ -159,7 +159,7 @@
 
 ## Pendências antes de 06/10
 1. **Títulos e duração das aulas do módulo de anatomia** (pra citar no bloco 4).
-2. **Valor exato da parcela em 12x** e o link do checkout na Ticto.
+2. **O link do checkout na Ticto.**
 3. **Formato da mentoria em grupo** (frequência, duração, por quanto tempo).
 4. **Toxina:** validar com o jurídico e a parte sanitária (é medicamento, e o público inclui esteticistas). Sem quantidade por enquanto. Nunca dizer a marca "Botox".
 5. **A Aline confirma** os "mais de 11 anos de clínica".

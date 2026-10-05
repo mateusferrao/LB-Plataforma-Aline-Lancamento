@@ -39,8 +39,8 @@ export const ACADEMY = {
   precoCheioLabel: formatBRL(PRECO),
   mesesAcesso: 12,
   checkoutUrl: CHECKOUT_BASE,
-  // PENDENTE: parcela exata em 12x com os juros do gateway (conferir no checkout).
-  parcela12x: "",
+  // 12x com os juros do gateway (informado pela equipe em 05/10).
+  parcela12x: "R$185,85",
   contentName: "Filgueiras Academy (evergreen)",
 } as const;
 

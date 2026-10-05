@@ -92,7 +92,7 @@ export function Oferta({ modo }: { modo: Modo }) {
           <p className="text-[1rem] text-fg-soft">Hoje você leva tudo por</p>
           <p className="mt-1 font-serif text-[3.4rem] leading-none text-fg">{ACADEMY.precoCheioLabel}</p>
           <p className="mt-2 text-[0.95rem] text-fg-soft">
-            {ACADEMY.parcela12x ? `ou 12x de ${ACADEMY.parcela12x}` : "em até 12x no cartão"} · ou Pix
+            {ACADEMY.parcela12x ? `à vista no Pix · ou 12x de ${ACADEMY.parcela12x} no cartão` : "em até 12x no cartão · ou Pix"}
           </p>
           {sala && (
             <AteOFim>
