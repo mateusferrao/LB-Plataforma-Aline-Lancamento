@@ -12,14 +12,14 @@ As cinco primeiras seguiam o mesmo molde: linha de abertura em caixa alta, "Aqui
 
 1. **Sem caixa alta e sem "gancho de campanha".** Soa como colega mandando, e não como lista.
 2. **Cada mensagem traz uma coisa nova**, uma por vez: uma pergunta, uma cena, o resumo prático, o presente, o preço comparado, a garantia, o prazo. Quem leu a anterior tem motivo pra ler a próxima.
-3. **A primeira pede uma resposta, e não um clique.** Quem responde abre a janela de 24h do WhatsApp, e o link chega numa mensagem livre, sem template. É engajamento que vira venda.
+3. **A primeira abre com uma pergunta que a leitora se faz sozinha** (onde a mão hesita). O link já vai no corpo, porque não há resposta automática. Responder é opcional, e só convidamos a responder se alguém da equipe puder responder no dia.
 4. **Só o que é verdade e já está no repo.** Datas, preço, garantia e o número de ingressos são reais. Nada de "poucas vagas" com número, nada de promessa de agenda cheia.
 
 ### Princípios do Hormozi aplicados (equação de valor: sonho × probabilidade ÷ (tempo × esforço))
 
 | Mensagem | Alavanca | Princípio |
 |---|---|---|
-| 1 · pergunta | Probabilidade percebida | $100M Leads: dar antes de pedir, e personalizar pela resposta |
+| 1 · pergunta | Probabilidade percebida | $100M Leads: abrir pela dor que ela reconhece ("call out"), e só depois a oferta |
 | 2 · cena | Sonho | Mostrar o resultado (ver por dentro) e a causa (a artéria a milímetros da agulha) |
 | 3 · resumo | Tempo e esforço | Tirar toda dúvida prática de uma vez, pra decidir sem sair do WhatsApp |
 | 4 · presente | Bônus | "Focus on the bonus": o Protocolo é o motivo, com prazo real (some às 20h) |
@@ -36,7 +36,7 @@ Horário de Brasília. Se hoje já passou do horário do disparo 1, mantenha a o
 
 | # | Dia | Hora | Mensagem | `utm_content` |
 |---|---|---|---|---|
-| 1 | 05/10 | 11h | A pergunta (responde um número) | `d1-pergunta` |
+| 1 | 05/10 | 11h | A pergunta (onde a mão hesita) | `d1-pergunta` |
 | 2 | 05/10 | 15h | A artéria e o atlas | `d1-cena` |
 | 3 | 05/10 | 19h30 | O resumo pra decidir à noite | `d1-resumo` |
 | 4 | 06/10 | 9h | O presente expira às 20h | `d0-presente` |
@@ -52,9 +52,9 @@ Horário de Brasília. Se hoje já passou do horário do disparo 1, mantenha a o
 
 ## Disparo 1 · 05/10, 11h · A pergunta
 
-**Objetivo:** a resposta, não o clique. Sem link no corpo. Quem responde recebe o link na hora.
+**Objetivo:** reconhecimento imediato (a leitora se identifica numa das áreas) e clique. Sem resposta automática, o link vai no corpo.
 
-**Texto (com botões de resposta rápida na API oficial, ou "responde só o número"):**
+**Texto (versão com convite à resposta, só se a equipe puder responder hoje):**
 
 > Oi, {primeiro nome}. Aqui é a equipe da Dra. Aline, com uma pergunta de 3 segundos.
 >
@@ -65,25 +65,30 @@ Horário de Brasília. Se hoje já passou do horário do disparo 1, mantenha a o
 > 3. Sulco
 > 4. Ainda não aplico
 >
-> Responde só o número e eu te mando o seu ingresso de ex-aluna pra aula de amanhã, às 20h. A Aline vai mostrar por dentro o que fica embaixo da pele nessas áreas.
+> Se quiser, responde o número aqui que a gente conversa. Amanhã, às 20h, a Aline mostra por dentro o que fica embaixo da pele nessas áreas.
+>
+> Seu ingresso de ex-aluna: R$67, com o Protocolo de Resgate Vascular de presente até a aula começar.
+> {link}
 >
 > (Pra parar de receber, responde SAIR.)
 
+**Texto (versão sem convite, se ninguém vai responder):** igual, trocando "Se quiser, responde o número aqui que a gente conversa. Amanhã" por "Amanhã". A pergunta fica como espelho, e o clique é a única ação.
+
 **Abertura B (para testar em metade da lista):** "{primeiro nome}, sem textão: perto de qual destas áreas a sua mão pensa duas vezes?" (o resto igual).
 
-**Respostas automáticas (mensagem livre, dentro das 24h):**
+**Roteiro para a equipe, se alguém responder (copiar e colar, dentro das 24h, `utm_content=d1-resposta`):**
 
-- **1, 2 ou 3** (troque {região} por Nariz, Glabela ou Sulco):
+- **1, 2 ou 3** (troque {região} por nariz, glabela ou sulco):
   > {Região}, anotado. É uma das áreas que a Aline cita quando fala da mão que hesita, e a aula de amanhã é sobre o que fica embaixo dela.
   >
-  > Seu ingresso de ex-aluna sai por R$67, com o Protocolo de Resgate Vascular de presente até a aula começar: {link, `utm_content=d1-resposta`}
+  > Seu ingresso de ex-aluna sai por R$67, com o Protocolo de Resgate Vascular de presente até a aula começar: {link}
 - **4:**
   > Então você chegou na hora certa. Quanto antes a gente enxerga a anatomia por dentro, menos vício a mão carrega.
   >
-  > A aula é amanhã, às 20h, por R$67, com o Protocolo de Resgate Vascular de presente: {link, `utm_content=d1-resposta`}
-- **Qualquer outro texto:** passar para o agente de IA ou o atendimento (+55 31 95349-1799).
+  > A aula é amanhã, às 20h, por R$67, com o Protocolo de Resgate Vascular de presente: {link}
+- **Qualquer outra dúvida:** responder pelo FAQ de `docs/agente-ia/02-faq.md` ou encaminhar ao +55 31 95349-1799.
 
-**Por que funciona:** nariz, glabela e sulco são as três áreas que a Aline cita no pitch como as que fazem a mão hesitar. A pessoa se identifica sem esforço e a resposta de um número vira lead quente.
+**Por que funciona:** nariz, glabela e sulco são as três áreas que a Aline cita no pitch como as que fazem a mão hesitar. A leitora se reconhece em uma, e a oferta já está logo abaixo.
 
 ---
 
@@ -119,7 +124,7 @@ Horário de Brasília. Se hoje já passou do horário do disparo 1, mantenha a o
 >
 > (Pra parar de receber, responde SAIR.)
 
-**Por que:** é a mensagem que o agente de IA mais teria que repetir no atendimento. Resolve horário, replay, preço e garantia de uma vez, e quem estava "pensando" tem agora tudo na mão. Nenhum detalhe da condição da plataforma (regra do playbook).
+**Por que:** é a mensagem que o atendimento mais teria que repetir. Resolve horário, replay, preço e garantia de uma vez, e quem estava "pensando" tem agora tudo na mão. Nenhum detalhe da condição da plataforma (regra do playbook).
 
 ---
 
@@ -215,7 +220,7 @@ A Aline não consegue gravar. O texto vai assinado por ela, em primeira pessoa, 
 
 1. **Exclua os compradores antes de cada disparo.** Exporte da Ticto (hora da compra) e cruze com a lista. Quem comprou entre o 3 e o 4 não pode receber o 4.
 2. **Quem responder SAIR sai de todos os disparos seguintes**, na hora.
-3. **Quem responder qualquer coisa (exceto SAIR) sai do disparo em massa** e vai pro agente de IA ou pro atendimento humano, que continua a conversa.
+3. **Quem responder qualquer coisa (exceto SAIR) sai do disparo em massa** e vai pro atendimento humano, que continua a conversa. Não há resposta automática: se ninguém puder responder durante o dia, use a versão do disparo 1 sem convite à resposta.
 4. **Em lotes**, nunca a lista inteira de uma vez.
 5. **API oficial:** cadastre cada mensagem como template de categoria *Marketing*. Use `{{1}}` para o primeiro nome. No botão de link, deixe a URL base fixa e a variável só no `utm_content` (`...&utm_content={{1}}`), pra reaproveitar o mesmo template.
 6. **Cuidado com a qualidade da conta:** 8 mensagens em 2 dias é bastante. Se o número de SAIR ou de bloqueios subir num disparo, corte o seguinte. Pela força de cada um, eu cortaria primeiro o 2 e o 4, e manteria o 1, o 7 e o 8.
@@ -235,7 +240,7 @@ A Aline não consegue gravar. O texto vai assinado por ela, em primeira pessoa, 
 - [ ] **A Aline aprova o texto do disparo 5** (primeira pessoa, com a frase sobre "e se tiver uma artéria bem aqui").
 - [ ] **Atualizar o "180"** do disparo 6 com o número real da hora do envio.
 - [ ] **Cancelar a M4 e a M5** do `docs/alunas/README.md`, se estiverem agendadas.
-- [ ] **Template do disparo 1:** decidir se os 4 números viram botões de resposta rápida na API oficial (o limite é de 3 botões visíveis por vez). Se for assim, deixe "Ainda não aplico" como texto livre.
+- [ ] **Quem responde as respostas?** Defina uma pessoa da equipe para 05/10 e 06/10 (o roteiro está no disparo 1). Sem ninguém, use a versão sem convite.
 
 ## Se a lista não for de ex-alunas
 
