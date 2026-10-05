@@ -127,7 +127,7 @@ Durante o pitch, a equipe:
 
 **Antes de 06/10** (em `lib/ofertaAcademy.ts`, salvo onde indicado):
 
-- [ ] **Ticto:** criar o produto e preencher `CHECKOUT_BASE`. Sem ele, os botões mostram "Em breve".
+- [ ] **Ticto:** criar o produto, as duas ofertas (sala e evergreen) e os templates seguindo [`ticto.md`](ticto.md), e preencher `CHECKOUT_SALA` e `CHECKOUT_EVERGREEN`. Sem eles, os botões mostram "Em breve".
 - [ ] **Ticto:** criar o cupom das ex-alunas, que vai só pela lista.
 - [ ] **Memberkit:** criar o plano da oferta e ligá-lo ao produto na Ticto, com 12 meses de acesso. Cursos: Comece por aqui, Toxina, Preenchimento Facial, Bioestimuladores, Anestesia, Intercorrência, Vendas, Marketing, Posicionamento, Dicas Jurídicas, Material de Apoio, Alfa Ômega, **Anatomia** e **Sala de Lapidação**.
 - [ ] **Memberkit:** publicar o curso de Anatomia e mandar os títulos das aulas para a página e o pitch.

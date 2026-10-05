@@ -20,8 +20,12 @@
 
 const PRECO = 1797;
 
-// PENDENTE: produto "Filgueiras Academy · Consulta, Agulha e Espelho" na Ticto.
-const CHECKOUT_BASE = "";
+// PENDENTE: links das duas ofertas do produto "Filgueiras Academy · Consulta,
+// Agulha e Espelho" na Ticto (docs/plataforma/ticto.md). Mesmo preço; a oferta
+// da sala separa quem comprou na noite da aula (contagem dos 10 primeiros) de
+// quem veio pelos anúncios. Depois de 06/10 23h59 a sala usa o link da evergreen.
+const CHECKOUT_EVERGREEN = "";
+const CHECKOUT_SALA = "";
 
 const PRIMEIROS_N = 10;
 const PRIMEIROS_TOPO = 5;
@@ -38,7 +42,7 @@ export const ACADEMY = {
   precoCheio: PRECO,
   precoCheioLabel: formatBRL(PRECO),
   mesesAcesso: 12,
-  checkoutUrl: CHECKOUT_BASE,
+  checkoutUrl: CHECKOUT_EVERGREEN,
   // 12x com os juros do gateway (informado pela equipe em 05/10).
   parcela12x: "R$185,85",
   contentName: "Filgueiras Academy (evergreen)",
@@ -47,7 +51,7 @@ export const ACADEMY = {
 export const SALA = {
   preco: PRECO,
   precoLabel: formatBRL(PRECO),
-  checkoutUrl: CHECKOUT_BASE,
+  checkoutUrl: CHECKOUT_SALA || CHECKOUT_EVERGREEN,
   // Os bônus da sala valem só na noite da aula: até 06/10 às 23h59 (Brasília).
   // Depois disso a página da sala segue vendendo o núcleo, sem os bônus.
   endsAt: "2026-10-06T23:59:59-03:00",
