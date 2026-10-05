@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { agora } from "@/lib/lotes";
-import { ACADEMY, SALA } from "@/lib/ofertaAcademy";
+import { SALA } from "@/lib/ofertaAcademy";
 
 type Restante = { dias: number; horas: number; min: number; seg: number };
 
@@ -23,8 +23,7 @@ const UNIDADES: { key: keyof Restante; label: string }[] = [
   { key: "seg", label: "seg" },
 ];
 
-// Contador real até o fim da condição da sala (08/10 23h59), o mesmo prazo do
-// cupom na Ticto. Nada de cronômetro de sessão.
+// Contador real até o fim dos bônus da sala (08/10 23h59). Nada de cronômetro de sessão.
 export function Prazo({ className = "", align = "left" }: { className?: string; align?: "left" | "center" }) {
   const [r, setR] = useState<Restante | null>(null);
   const [fim, setFim] = useState(false);
@@ -45,7 +44,7 @@ export function Prazo({ className = "", align = "left" }: { className?: string; 
     return (
       <div className={`flex flex-col gap-3 ${alignCls} ${className}`}>
         <p className="font-serif text-[1.4rem] leading-snug text-fg">
-          A condição da sala terminou em {SALA.prazoCurto}.
+          Os bônus da sala terminaram em {SALA.prazoCurto}.
         </p>
       </div>
     );
@@ -54,7 +53,7 @@ export function Prazo({ className = "", align = "left" }: { className?: string; 
   return (
     <div className={`flex flex-col gap-3 ${alignCls} ${className}`}>
       <span className="text-[12px] font-semibold tracking-[0.18em] text-wine-ink uppercase">
-        A condição da sala termina em
+        Os bônus da sala terminam em
       </span>
       <div className="flex gap-2.5" aria-label="Contagem regressiva até o fim da condição da sala">
         {UNIDADES.map(({ key, label }) => (
@@ -74,7 +73,7 @@ export function Prazo({ className = "", align = "left" }: { className?: string; 
         ))}
       </div>
       <p className="text-[0.95rem] leading-[1.5] text-fg-soft">
-        Depois disso, o valor volta a {ACADEMY.precoCheioLabel} e os bônus saem.
+        Depois disso, os bônus da sala saem.
       </p>
     </div>
   );

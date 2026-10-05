@@ -3,7 +3,7 @@ import { Container } from "@/components/Container";
 import { CtaButton, type Modo } from "@/components/academy/CtaButton";
 import { Ticks } from "@/components/academy/Ticks";
 import { withBasePath } from "@/lib/basePath";
-import { ACADEMY, GARANTIA_ACADEMY, SALA } from "@/lib/ofertaAcademy";
+import { GARANTIA_ACADEMY, SALA } from "@/lib/ofertaAcademy";
 
 // Hero enxuto (revisão de 05/10, no molde da página do Mapa de Intercorrência):
 // chamada do público, H1 com a dor final, uma frase de apoio, botão com o preço
@@ -14,7 +14,7 @@ const COPY = {
     pre: "Pra quem esteve na aula Por Dentro da Face",
     h1: "Você não fez tanto curso pra continuar",
     grifo: "com medo de aplicar e com a agenda vazia.",
-    sub: "A culpa nunca foi sua. Faltava ver a face por dentro e ter um caminho. A Filgueiras Academy junta anatomia em fresh frozen, técnica e consulta, com encontro ao vivo todo mês.",
+    sub: "A culpa nunca foi sua. Faltava ver a face por dentro e ter um caminho. A Filgueiras Academy junta anatomia em fresh frozen, técnica e consulta, com encontros ao vivo com a Aline e o time dela.",
     img: "/images/fresh/lab-bracos-abertos.webp",
     alt: "Dra. Aline Filgueiras no laboratório de dissecção",
     legenda: "Laboratório de dissecção · EUA",
@@ -23,7 +23,7 @@ const COPY = {
     pre: "Pra quem aplica ou vai começar a aplicar harmonização",
     h1: "Você não estudou tanto pra continuar",
     grifo: "insegura na agulha e com a agenda parada.",
-    sub: "A culpa nunca foi sua. Faltava ver a face por dentro e ter um caminho. A Filgueiras Academy junta anatomia em fresh frozen, técnica e consulta, com a Dra. Aline e encontro ao vivo todo mês.",
+    sub: "A culpa nunca foi sua. Faltava ver a face por dentro e ter um caminho. A Filgueiras Academy junta anatomia em fresh frozen, técnica e consulta, com encontros ao vivo com a Dra. Aline e o time dela.",
     img: "/images/aline-hero-marsala-v2.jpg",
     alt: "Dra. Aline Filgueiras",
     legenda: "Dra. Aline Filgueiras",
@@ -53,9 +53,8 @@ export function Hero({ modo }: { modo: Modo }) {
             </CtaButton>
             {modo === "sala" && (
               <p className="mt-3 text-[13.5px] text-fg-soft">
-                <span className="line-through decoration-wine-bright">{ACADEMY.precoCheioLabel}</span>{" "}
-                {SALA.precoLabel} com o cupom <strong className="font-semibold text-fg">{SALA.cupom}</strong>, já
-                aplicado pelo botão.
+                Bônus pros <strong className="font-semibold text-fg">{SALA.primeirosN} primeiros</strong> até{" "}
+                {SALA.prazoCurto}.
               </p>
             )}
             <Ticks className="mt-4" itens={["Acesso imediato", "12x ou Pix", garantia]} />

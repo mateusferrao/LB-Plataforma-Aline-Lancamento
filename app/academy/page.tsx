@@ -6,11 +6,11 @@ import { AcademyPage } from "@/components/academy/AcademyPage";
 export const metadata: Metadata = {
   title: "Filgueiras Academy · Consulta, Agulha e Espelho · Dra. Aline Filgueiras",
   description:
-    "Você não estudou tanto pra continuar insegura na agulha e com a agenda parada. O novo curso online de Fresh Frozen e dissecção, mais de 70 aulas práticas e a Consulta que Vende, com encontros ao vivo todo mês.",
+    "Você não estudou tanto pra continuar insegura na agulha e com a agenda parada. O novo curso online de Fresh Frozen e dissecção, mais de 70 aulas práticas e a Consulta que Vende, com 6 encontros ao vivo no ano.",
   openGraph: {
     title: "Filgueiras Academy · Consulta, Agulha e Espelho",
     description:
-      "Novo: curso online de Fresh Frozen + dissecção, incluído. Mais de 70 aulas práticas, a Consulta que Vende e encontros ao vivo todo mês.",
+      "Novo: curso online de Fresh Frozen + dissecção, incluído. Mais de 70 aulas práticas, a Consulta que Vende e 6 encontros ao vivo no ano.",
     locale: "pt_BR",
     type: "website",
   },

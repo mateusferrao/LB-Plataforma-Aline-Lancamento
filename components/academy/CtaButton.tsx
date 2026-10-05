@@ -17,7 +17,7 @@ type Props = {
 };
 
 // CTA das páginas da Academy: direto ao checkout da Ticto (o ticto-echo do
-// layout repassa as UTMs). Na sala, o link já leva o cupom; depois de 08/10
+// layout repassa as UTMs). Um preço só (R$1.797); depois de 08/10
 // 23h59 o botão leva à evergreen. Sem checkout configurado → "Em breve".
 export function CtaButton({ modo, children, variant = "dark", className = "", showPrice = false }: Props) {
   const [encerrado, setEncerrado] = useState(false);

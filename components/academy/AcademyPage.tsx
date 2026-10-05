@@ -28,7 +28,7 @@ export function AcademyPage({ modo }: { modo: Modo }) {
         <Hero modo={modo} />
         <Cena />
         <Virada />
-        <Recebe modo={modo} />
+        <Recebe />
         <ParaQuem />
         <Autoridade />
         <SocialProof />

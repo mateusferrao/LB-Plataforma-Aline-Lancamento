@@ -1,10 +1,9 @@
 import Image from "next/image";
 import { Reveal } from "@/components/Reveal";
 import { Titulo } from "@/components/Titulo";
-import type { Modo } from "@/components/academy/CtaButton";
 import { Secao } from "@/components/academy/Secao";
 import { withBasePath } from "@/lib/basePath";
-import { ACADEMY, SALA } from "@/lib/ofertaAcademy";
+import { ACADEMY } from "@/lib/ofertaAcademy";
 
 // O que tem dentro, em quatro linhas (antes: 4 cards com 15 cursos). Cursos
 // conferidos no Memberkit em 04/10: Full Face, Análise de casos e Fios não entram.
@@ -16,17 +15,19 @@ const ITENS = [
   },
   { t: "Técnica", d: "Mais de 70 aulas de toxina, preenchimento e bioestimuladores, com intercorrências e anestesia." },
   { t: "Consulta", d: "A Consulta que Vende, marketing, posicionamento e as ferramentas prontas: anamnese, termos e precificação." },
-  { t: "Encontros ao vivo", d: "Todo mês na Sala de Lapidação, com as gravações dentro da plataforma." },
+  {
+    t: "Encontros ao vivo",
+    d: "6 no ano, com a Aline ou com o time dela, e uma aula com a Aline pra discussão de casos.",
+  },
 ] as const;
 
-export function Recebe({ modo }: { modo: Modo }) {
-  const meses = modo === "sala" ? SALA.mesesAcesso : ACADEMY.mesesAcesso;
+export function Recebe() {
   return (
     <Secao>
       <Titulo eyebrow="O que você recebe">{ACADEMY.nome}</Titulo>
       <Reveal>
         <p className="mt-4 text-[1.1rem] leading-[1.6] text-fg-soft">
-          {meses} meses de acesso a tudo, no celular ou no computador.
+          {ACADEMY.mesesAcesso} meses de acesso a tudo, no celular ou no computador.
         </p>
         <div className="relative mt-8 aspect-[16/10] w-full overflow-hidden rounded-[4px] border border-line-soft bg-surface">
           <Image

@@ -20,8 +20,8 @@ const COMUNS: Item[] = [
     a: "Não substitui o hands-on, e a Aline não promete isso. É o que faz o hands-on render: você chega na paciente sabendo o que tem embaixo e o que vai dizer.",
   },
   {
-    q: "Como funcionam os encontros mensais?",
-    a: "Ao vivo e online, uma vez por mês, na Sala de Lapidação. As gravações ficam lá dentro.",
+    q: "Como funcionam os encontros ao vivo?",
+    a: "São 6 no ano, online, com a Aline ou com o time dela. As gravações ficam na plataforma. E tem uma aula ao vivo com a Aline pra discussão de casos.",
   },
   {
     q: "Como pago e como recebo o acesso?",
@@ -36,22 +36,22 @@ const COMUNS: Item[] = [
 const SO_SALA: Item[] = [
   {
     q: "Quanto tempo de acesso eu tenho?",
-    a: `${SALA.mesesAcesso} meses: os ${ACADEMY.mesesAcesso} da Academy mais 6 de bônus. A equipe aplica a extensão até ${SALA.extensaoAte}.`,
+    a: `${ACADEMY.mesesAcesso} meses a partir da compra. Os ${SALA.primeirosTopo} primeiros ganham mais 6, e a equipe aplica a extensão até ${SALA.extensaoAte}.`,
   },
   {
-    q: `Como sei se entrei nas primeiras ${SALA.primeirasN} ou nas primeiras ${SALA.primeirasTopo}?`,
-    a: "Pela ordem de confirmação do pagamento. A equipe avisa no WhatsApp e combina o encontro de casos, o envio da prancheta pelo correio e o diagnóstico.",
+    q: `Como sei se estou entre os ${SALA.primeirosN} primeiros?`,
+    a: "Pela ordem de confirmação do pagamento. A equipe avisa no WhatsApp e combina o certificado, o envio da prancheta pelo correio e a entrada na Sala VIP.",
   },
   {
     q: "E depois de 08/10?",
-    a: `A condição da sala acaba às 23h59 de 08/10. Depois a Academy volta a ${ACADEMY.precoCheioLabel}, sem os bônus.`,
+    a: `Os bônus da sala acabam às 23h59 de 08/10, ou antes, quando os ${SALA.primeirosN} primeiros entrarem. A Academy continua por ${ACADEMY.precoCheioLabel}, com o núcleo.`,
   },
 ];
 
 const SO_EVERGREEN: Item[] = [
   {
     q: "Quanto tempo de acesso eu tenho?",
-    a: `${ACADEMY.mesesAcesso} meses a partir da compra, com todos os cursos e os encontros mensais.`,
+    a: `${ACADEMY.mesesAcesso} meses a partir da compra, com todos os cursos e os encontros ao vivo.`,
   },
 ];
 

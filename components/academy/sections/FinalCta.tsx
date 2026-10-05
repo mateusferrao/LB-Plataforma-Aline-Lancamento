@@ -5,7 +5,7 @@ import { ACADEMY, GARANTIA_ACADEMY, SALA } from "@/lib/ofertaAcademy";
 
 // Fechamento: a cena resolvida, o resumo da oferta numa frase, botão e P.S.
 const RESUMO =
-  "Anatomia em fresh frozen, mais de 70 aulas de técnica, a Consulta que Vende e encontro ao vivo todo mês.";
+  "Anatomia em fresh frozen, mais de 70 aulas de técnica, a Consulta que Vende e 6 encontros ao vivo no ano.";
 
 export function FinalCta({ modo }: { modo: Modo }) {
   const sala = modo === "sala";
@@ -19,7 +19,7 @@ export function FinalCta({ modo }: { modo: Modo }) {
         <p className="mt-5 max-w-[560px] text-[1.08rem] leading-[1.6] text-fg-soft">
           {RESUMO}{" "}
           {sala
-            ? `Por ${SALA.precoLabel} até ${SALA.prazoCurto}, com ${SALA.mesesAcesso} meses de acesso.`
+            ? `Por ${SALA.precoLabel}, com os bônus dos ${SALA.primeirosN} primeiros até ${SALA.prazoCurto}.`
             : `Por ${ACADEMY.precoCheioLabel}, em até 12x ou no Pix.`}
         </p>
         <CtaButton modo={modo} showPrice className="mt-8 w-full justify-center sm:w-auto">
@@ -30,7 +30,7 @@ export function FinalCta({ modo }: { modo: Modo }) {
         <p className="mt-12 max-w-[560px] text-left text-[1rem] leading-[1.6] text-fg-soft">
           <strong className="font-semibold text-fg">P.S.</strong>{" "}
           {sala
-            ? `A condição da sala acaba em ${SALA.prazoCurto}. Depois disso, o valor volta a ${ACADEMY.precoCheioLabel} e os bônus saem.`
+            ? `Os bônus da sala saem em ${SALA.prazoCurto}, ou antes, quando os ${SALA.primeirosN} primeiros entrarem.`
             : `Você tem ${GARANTIA_ACADEMY.prazoCondicionalDias} dias pra testar. Se assistir ao módulo de anatomia e a mão não ficar mais segura, a gente devolve.`}
         </p>
         <p className="mt-12 text-[0.85rem] text-fg-faint">
