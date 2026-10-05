@@ -17,8 +17,8 @@ As páginas de venda da plataforma, depois da aula ao vivo **Por Dentro da Face*
 | | **Total pra todo mundo** | **R$8.794** |
 | 10 primeiros | Certificado Filgueiras Academy | incluso |
 | 10 primeiros | Prancheta ilustrada, pelo correio | R$600 |
-| 10 primeiros | Sala VIP de mentoria | R$5.000 |
-| 10 primeiros | Toxina botulínica (quantidade a confirmar; só aparece quando preenchida) | — |
+| 10 primeiros | Mentoria em grupo com a Aline | R$5.000 |
+| 10 primeiros | Toxina botulínica (sem quantidade, por decisão de 05/10) | incluso |
 | | **Total pros 10 primeiros** | **R$14.394** |
 | 5 primeiros | +6 meses de acesso (18 meses), fora da soma | R$899 |
 
@@ -57,7 +57,7 @@ Fontes do plano, de 04/10/2026:
 | Headline da evergreen | "Você não estudou tanto pra continuar insegura na agulha e com a agenda parada." (mesma linha da sala; "parada" serve a quem já atende) |
 | Os três momentos | "A paciente decide se confia em você três vezes" deixou de ser H1 e virou o título da seção do mecanismo (revisão de 04/10: como headline, era uma tese indireta, em terceira pessoa e sem dor nem resultado) |
 | Preço | **R$1.797 para todo mundo** (ajuste de 05/10: sem cupom). 12x com a taxa do gateway ou Pix |
-| Bônus da sala (só até 06/10, 23h59) | **10 primeiros:** certificado, prancheta, Sala VIP de mentoria e toxina (quantidade a confirmar). **5 primeiros:** +6 meses (18 meses). Contam pela hora da compra |
+| Bônus da sala (só até 06/10, 23h59) | **10 primeiros:** certificado, prancheta, mentoria em grupo com a Aline e toxina (sem quantidade). **5 primeiros:** +6 meses (18 meses). Contam pela hora da compra |
 | Encontros ao vivo | **6 no ano**, com a Aline ou com o time dela, gravados na plataforma + 1 aula ao vivo com a Aline para discussão de casos |
 | Garantia | **Garantia Mão Segura:** 7 dias sem perguntas + 30 dias se assistiu ao módulo de anatomia e não sentiu a mão mais segura |
 | Conteúdo | O plano "Filgueiras Academy Anual" + **Anatomia** + **Sala de Lapidação**. Full Face e Análise de casos ficam de fora. Os 4 cursos vazios (Sua Jornada, Além da Técnica, Mentalidade, Espiritualidade) ficam ocultos. Fios não existe |
@@ -88,14 +88,30 @@ As duas páginas foram enxugadas no molde da página do Mapa de Intercorrência 
 
 **Depois de 06/10, 23h59:** os bônus, o contador e a barra do topo somem sozinhos (componente `AteOFim`), e o botão segue no mesmo checkout de R$1.797. Para testar, use `?preview=2026-10-07T10:00:00-03:00`.
 
-## 4. Pitch da aula (versão aprovada)
+## 4. Pitch da aula (versão de 05/10, com a oferta ajustada)
 
-Roteiro completo, bloco a bloco: permissão → o que a aula não resolve → os três momentos → por que é diferente → a pilha do núcleo, com âncora e R$1.797 → os bônus da sala (10 primeiros e 5 primeiros, só até 23h59 da noite da aula) → Garantia Mão Segura → pra quem é → pedido ("escreve ENTREI") → respostas rápidas → fechamento ("daqui a um ano, a paciente vai sentir isso?"). **O roteiro do pitch precisa ser atualizado com a oferta de 05/10.**
+O roteiro completo está em [`pitch-aula-06-10.md`](pitch-aula-06-10.md), com a versão em PDF para a Aline em [`Pitch_Aula_06-10_Aline_Filgueiras.pdf`](Pitch_Aula_06-10_Aline_Filgueiras.pdf).
+
+A sequência:
+
+1. pedir permissão;
+2. o que a aula não resolve;
+3. os três momentos;
+4. por que é diferente;
+5. a pilha do núcleo, item a item ("Pra…" + valor), somando R$8.794, com a âncora e o preço de R$1.797;
+6. os bônus de hoje até 23h59 (10 primeiros, R$14.394; 5 primeiros, 18 meses);
+7. a Garantia Mão Segura;
+8. pra quem é;
+9. o pedido ("escreve ENTREI");
+10. as respostas rápidas;
+11. o fechamento.
+
+Cada slide de ancoragem é uma tabela curta.
 
 Durante o pitch, a equipe:
 
 - fixa o link `/academy/sala` no chat e no grupo;
-- conta as primeiras N e as primeiras 10 pela hora da compra na Ticto e avisa a Aline;
+- conta os 10 primeiros e os 5 primeiros pela hora da compra na Ticto e avisa a Aline;
 - lê em voz alta os nomes de quem escreveu ENTREI.
 
 ## 5. Anúncios de aquisição (revisão de 04/10)
@@ -116,9 +132,9 @@ Durante o pitch, a equipe:
 - [ ] Preencher a parcela exata em 12x (`ACADEMY.parcela12x` e `SALA.parcela12x`).
 - [ ] **Memberkit:** criar o plano da oferta e ligá-lo ao produto na Ticto, com 12 meses de acesso. Cursos: Comece por aqui, Toxina, Preenchimento Facial, Bioestimuladores, Anestesia, Intercorrência, Vendas, Marketing, Posicionamento, Dicas Jurídicas, Material de Apoio, Alfa Ômega, **Anatomia** e **Sala de Lapidação**.
 - [ ] **Memberkit:** publicar o curso de Anatomia e mandar os títulos das aulas para a página e o pitch.
-- [ ] **Toxina dos 10 primeiros:** definir a quantidade (`TOXINA_QTD`) e passar pela revisão jurídica e sanitária (é medicamento, e o público inclui esteticistas). Na página, nunca a marca "Botox".
-- [ ] **Sala VIP de mentoria:** dizer o que é (formato, quem conduz, por quanto tempo) para a página descrever com precisão.
-- [ ] **Calendário dos 6 encontros ao vivo** e da aula de casos com a Aline.
+- [ ] **Toxina dos 10 primeiros:** sem quantidade por enquanto; passar pela revisão jurídica e sanitária (é medicamento, e o público inclui esteticistas). Na página, nunca a marca "Botox".
+- [ ] **Mentoria em grupo com a Aline:** definir o formato (frequência, duração, por quanto tempo).
+- [ ] **Calendário dos 6 encontros ao vivo** e da aula de casos com a Aline (a página e o pitch não citam datas; só dizem que vai ter).
 - [ ] **A Aline confirma:**
   - o 1º curso de dissecção em 2018;
   - os estudos nos EUA e em Portugal;
@@ -131,7 +147,7 @@ Durante o pitch, a equipe:
 
 **Depois de 06/10:**
 
-- [ ] **07/10 a 10/10:** estender para 18 meses os 5 primeiros; enviar prancheta e certificado e liberar a Sala VIP para os 10 primeiros.
+- [ ] **07/10 a 10/10:** estender para 18 meses os 5 primeiros; enviar prancheta, certificado e toxina e abrir a mentoria em grupo para os 10 primeiros.
 - [ ] **Oferta de entrada para o teste do tráfego frio:** Protocolo + aula gravada, com upsell por R$1.797 menos o valor pago, por 72h. Só depois de 08/10.
 - [ ] **VSL nova da evergreen:** gravar e colocar no topo da `/academy`.
 - [ ] **Data do próximo encontro mensal:** é a urgência real da evergreen ("entre até X para o encontro de outubro").

@@ -40,7 +40,7 @@ const SO_SALA: Item[] = [
   },
   {
     q: `Como sei se estou entre os ${SALA.primeirosN} primeiros?`,
-    a: "Pela ordem de confirmação do pagamento. A equipe avisa no WhatsApp e combina o certificado, o envio da prancheta pelo correio e a entrada na Sala VIP.",
+    a: "Pela ordem de confirmação do pagamento. A equipe avisa no WhatsApp e combina o certificado, o envio da prancheta pelo correio, a toxina e a entrada na mentoria em grupo com a Aline.",
   },
   {
     q: `E depois de ${SALA.prazoCurto}?`,

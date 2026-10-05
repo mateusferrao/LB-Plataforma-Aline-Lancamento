@@ -23,13 +23,13 @@ import {
 // primeiros (fora da soma). Um preço só: R$1.797. Embaixo, as âncoras reais.
 function Linha({ nome, detalhe, valor, tag }: { nome: string; detalhe: string; valor?: number; tag?: string }) {
   return (
-    <li className="flex items-baseline justify-between gap-5 border-b border-dashed border-line py-4">
+    <li className="flex items-baseline justify-between gap-5 border-b border-dashed border-line py-3">
       <span>
         <span className="text-[1.03rem] font-semibold text-fg">
           {tag && <span className="mr-2 text-[10.5px] font-semibold tracking-[0.16em] text-wine-ink uppercase">{tag}</span>}
           {nome}
         </span>
-        <small className="mt-1 block text-[0.9rem] leading-[1.45] text-fg-soft">{detalhe}</small>
+        <small className="mt-0.5 block text-[0.9rem] leading-[1.45] text-fg-soft">{detalhe}</small>
       </span>
       {valor ? (
         <span className="shrink-0 text-[0.98rem] text-fg-soft line-through decoration-wine-bright">{brl(valor)}</span>

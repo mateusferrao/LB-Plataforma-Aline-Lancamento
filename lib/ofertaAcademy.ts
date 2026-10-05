@@ -2,8 +2,9 @@
 //  FILGUEIRAS ACADEMY · CONSULTA, AGULHA E ESPELHO — FONTE ÚNICA DA VERDADE
 //  Duas páginas usam esta oferta (plano em docs/plataforma/README.md):
 //   - /academy/sala: quem esteve na aula de 06/10. R$1.797, com os bônus da
-//     sala até 06/10 23h59 (a noite da aula): os 10 primeiros (certificado, prancheta, Sala VIP,
-//     toxina) e, entre eles, os 5 primeiros ganham +6 meses de acesso.
+//     sala até 06/10 23h59 (a noite da aula): os 10 primeiros (certificado,
+//     prancheta, mentoria em grupo com a Aline, toxina) e, entre eles, os 5
+//     primeiros ganham +6 meses de acesso.
 //     noindex, link só na sala e no grupo.
 //   - /academy: evergreen, R$1.797, só o núcleo. Recebe os anúncios.
 //
@@ -24,10 +25,6 @@ const CHECKOUT_BASE = "";
 
 const PRIMEIROS_N = 10;
 const PRIMEIROS_TOPO = 5;
-
-// PENDENTE: quantidade de toxina botulínica do bônus dos 10 primeiros (ex.: "50U").
-// Vazio → o item não aparece na página. Na página, nunca a marca "Botox".
-const TOXINA_QTD = "";
 
 // "R$1.797" (o formatBRL do kit não põe o separador de milhar).
 function formatBRL(v: number) {
@@ -67,64 +64,40 @@ export const SALA = {
 
 type Item = { nome: string; detalhe: string; valor?: number };
 
-// Pilha no formato do $100M Offers: cada item diz o problema que resolve
-// ("Pra…"), não o que ele é. O núcleo ataca as três inseguranças (agulha,
+// Pilha no formato do $100M Offers: cada item diz, numa linha curta, o
+// problema que resolve ("Pra…"). O núcleo ataca as três inseguranças (agulha,
 // consulta, sozinha); cada bônus derruba uma objeção. Valores da equipe (05/10).
 // O núcleo: o que todo mundo leva por R$1.797.
 export const PILHA_ACADEMY: readonly Item[] = [
-  {
-    nome: "Curso online de Fresh Frozen + dissecção",
-    detalhe: "Pra mão parar de hesitar: você vê o que tem embaixo da agulha antes de aplicar.",
-    valor: 1297,
-  },
+  { nome: "Curso online de Fresh Frozen + dissecção", detalhe: "Pra mão parar de hesitar.", valor: 1297 },
   {
     nome: "Plataforma Filgueiras Academy",
-    detalhe:
-      "Pra ter o caminho completo: mais de 70 aulas de toxina, preenchimento e bioestimuladores, e a Consulta que Vende pra ela não sair dizendo “vou pensar”.",
+    detalhe: "Pro caminho completo: 70+ aulas de técnica e a Consulta que Vende.",
     valor: 1497,
   },
   {
     nome: "6 encontros ao vivo no ano",
-    detalhe: "Pra não travar sozinha: você tira a dúvida ao vivo com a Aline ou com o time dela.",
+    detalhe: "Pra não travar sozinha. Com a Aline ou o time dela.",
     valor: 5000,
   },
-  {
-    nome: "1 aula ao vivo com a Aline pra discussão de casos",
-    detalhe: "Pra levar um caso real e ver como ela pensa a conduta.",
-    valor: 1000,
-  },
-  {
-    nome: "Preferência nos cursos presenciais da Aline",
-    detalhe: "Pra quando quiser o hands-on: você garante a vaga antes da turma abrir.",
-  },
+  { nome: "1 aula ao vivo com a Aline pra discussão de casos", detalhe: "Pra ver como ela pensa a conduta.", valor: 1000 },
+  { nome: "Preferência nos cursos presenciais", detalhe: "Pra garantir a vaga quando quiser o hands-on." },
 ];
 
 // Sala: os 10 primeiros, pela hora da compra. Cada um responde a uma objeção.
+// Toxina sem quantidade por enquanto (decisão de 05/10); nunca a marca "Botox".
 export const BONUS_PRIMEIROS: readonly Item[] = [
-  {
-    nome: "Certificado Filgueiras Academy",
-    detalhe: "Pra paciente ver, no consultório, com quem você estudou.",
-  },
-  {
-    nome: "A prancheta ilustrada da Aline, pelo correio",
-    detalhe: "Pra explicar o procedimento na consulta e ela entender o que vai fazer.",
-    valor: 600,
-  },
-  // PENDENTE: o que é a Sala VIP (formato, quem conduz, por quanto tempo).
-  {
-    nome: "Sala VIP de mentoria",
-    detalhe: "Pra ter acompanhamento de perto, no grupo fechado dos 10 primeiros.",
-    valor: 5000,
-  },
-  ...(TOXINA_QTD
-    ? [{ nome: `${TOXINA_QTD} de toxina botulínica`, detalhe: "Pra sua próxima aplicação sair sem o custo do produto." }]
-    : []),
+  { nome: "Certificado Filgueiras Academy", detalhe: "Pra paciente ver com quem você estudou." },
+  { nome: "Prancheta ilustrada da Aline", detalhe: "Pra explicar o procedimento na consulta.", valor: 600 },
+  // PENDENTE: formato da mentoria (frequência, duração, por quanto tempo).
+  { nome: "Mentoria em grupo com a Aline", detalhe: "Pra ter a Aline perto, só com os 10 primeiros.", valor: 5000 },
+  { nome: "Toxina botulínica", detalhe: "Pra sua próxima aplicação." },
 ];
 
 // Sala: entre os 10 primeiros, os 5 primeiros. Fora da soma dos totais.
 export const BONUS_TOPO: Item = {
-  nome: `+6 meses de acesso: ${SALA.mesesTopo} meses no total`,
-  detalhe: "Pra estudar no seu ritmo, sem correr contra o prazo.",
+  nome: `+6 meses de acesso (${SALA.mesesTopo} no total)`,
+  detalhe: "Pra estudar no seu ritmo.",
   valor: Math.round(PRECO / 2), // metade do plano de 12 meses
 };
 
