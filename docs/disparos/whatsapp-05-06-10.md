@@ -52,22 +52,30 @@ Horário de Brasília. Se hoje já passou do horário do disparo 1, mantenha a o
 
 ## Disparo 1 · 05/10, 11h · O fresh frozen que exigia viagem
 
-**Objetivo:** posicionar a aula como acesso a um conhecimento técnico e internacional da Aline, falando com a ex-aluna que já aprendeu a técnica. Sem resposta automática, o link vai no corpo.
+**Objetivo:** posicionar a aula como acesso a um conhecimento técnico e internacional da Aline, para a ex-aluna que já tem a técnica. Sem resposta automática, o link vai no botão.
 
-> {primeiro nome}, você já aprendeu a técnica com a Aline. Falta ver o que fica por baixo.
->
-> Ela fez temporada de dissecção em peças fresh frozen nos Estados Unidos e hoje dá cursos de anatomia na Europa. Quem quer esse conhecimento costuma ter que viajar, e o curso lá fora cobra em dólar.
->
-> Amanhã, às 20h, ela traz esse material pra uma aula online e ao vivo, de uns 90 minutos: os planos, as estruturas e os limites que mudam a conduta na cadeira.
->
-> Ingresso de ex-aluna: R$67, com o Protocolo de Resgate Vascular de presente até a aula começar.
-> {link}
->
-> (Pra parar de receber, responde SAIR.)
+**Texto (versão da equipe, encurtada):**
 
-**Abertura B (para testar em metade da lista):** "{primeiro nome}, a Aline estuda a face em peças fresh frozen nos Estados Unidos. Amanhã, às 20h, você vê o que ela aprendeu sem sair de casa." (segue direto para a linha do ingresso e o link).
+> *🫵 {{nome}}, quero falar com você!*
+>
+> A Dra. Aline fez uma temporada de dissecção em *peças fresh frozen* nos Estados Unidos e quer trazer esse conhecimento direto pra sua tela.
+>
+> Amanhã, às 20h, numa aula online e ao vivo de uns 90 minutos, ela mostra os planos, as estruturas e os limites que mudam a conduta na cadeira. É mais segurança na hora de aplicar.
+>
+> Pra você, ex-aluna, o ingresso sai por *R$67* e leva de brinde o *Protocolo de Resgate Vascular*, pra te guiar numa oclusão e numa necrose.
+>
+> As inscrições fecham quando a aula começa 👇
 
-**Por que:** a ex-aluna já confia na técnica, e o que a aula entrega a mais é o nível que costuma ficar fora do alcance (viagem, dólar). Sem preço de referência aqui, porque a âncora de R$35 mil fica no disparo 6. A aula é descrita como "esse material", nunca como dissecção ao vivo.
+Botão: link do ingresso (`utm_content=d1-fresh`). Rodapé: "Pra parar de receber, responde SAIR."
+
+**Cortes feitos na versão original e por quê:**
+
+- "enchem agenda" saiu: promessa de agenda cheia é proibida nas páginas e nos anúncios, e a Meta pode reprovar o template. "Mais segurança na hora de aplicar" fica.
+- "super desconto" saiu: o ingresso de ex-aluna custa os mesmos R$67 de todo mundo, e o benefício é o Protocolo de brinde (decisão de 29/09 em `docs/alunas/README.md`). Dizer desconto contradiz a página e a FAQ.
+- "vagas limitadas e já estão acabando" virou "as inscrições fecham quando a aula começa": não há número de vagas, e o prazo é a única escassez que dá pra provar.
+- "Dra. Aline ... ela" repetidos e a frase de abertura da oferta foram unidos. O texto caiu de uns 95 para uns 80 palavras.
+
+**Abertura B (para testar em metade da lista):** "*🫵 {{nome}}, você já aprendeu a técnica com a Aline. Falta ver o que fica por baixo.*" (o resto igual).
 
 ---
 
@@ -207,7 +215,7 @@ A Aline não consegue gravar. O texto vai assinado por ela, em primeira pessoa, 
 
 ## Checagem de copy (feita no texto final)
 
-- Sem travessão, sem exclamação, sem emoji.
+- Sem travessão e sem emoji, exceto o 🫵 e o 👇 do disparo 1 (estilo da equipe), que também tem uma exclamação no título.
 - Sem "não é X, é Y", sem lista de negações, sem pergunta respondida pelo próprio texto.
 - No máximo uma lista por mensagem. Só as listas que são listas de verdade (os dados do 3 e os arquivos do 4).
 - Sem número de vagas, sem promessa de agenda, de faturamento ou de resultado clínico, sem nome de medicamento, sem a marca "Botox".
