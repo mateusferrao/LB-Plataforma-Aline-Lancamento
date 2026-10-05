@@ -23,7 +23,7 @@ const UNIDADES: { key: keyof Restante; label: string }[] = [
   { key: "seg", label: "seg" },
 ];
 
-// Contador real até o fim dos bônus da sala (08/10 23h59). Nada de cronômetro de sessão.
+// Contador real até o fim dos bônus da sala (06/10 23h59, a noite da aula). Nada de cronômetro de sessão.
 export function Prazo({ className = "", align = "left" }: { className?: string; align?: "left" | "center" }) {
   const [r, setR] = useState<Restante | null>(null);
   const [fim, setFim] = useState(false);

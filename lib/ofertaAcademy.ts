@@ -2,7 +2,7 @@
 //  FILGUEIRAS ACADEMY · CONSULTA, AGULHA E ESPELHO — FONTE ÚNICA DA VERDADE
 //  Duas páginas usam esta oferta (plano em docs/plataforma/README.md):
 //   - /academy/sala: quem esteve na aula de 06/10. R$1.797, com os bônus da
-//     sala até 08/10 23h59: os 10 primeiros (certificado, prancheta, Sala VIP,
+//     sala até 06/10 23h59 (a noite da aula): os 10 primeiros (certificado, prancheta, Sala VIP,
 //     toxina) e, entre eles, os 5 primeiros ganham +6 meses de acesso.
 //     noindex, link só na sala e no grupo.
 //   - /academy: evergreen, R$1.797, só o núcleo. Recebe os anúncios.
@@ -51,10 +51,11 @@ export const SALA = {
   preco: PRECO,
   precoLabel: formatBRL(PRECO),
   checkoutUrl: CHECKOUT_BASE,
-  // Os bônus da sala valem até 08/10 às 23h59 (horário de Brasília).
-  endsAt: "2026-10-08T23:59:59-03:00",
-  prazoLabel: "quarta, 8 de outubro, às 23h59",
-  prazoCurto: "08/10, 23h59",
+  // Os bônus da sala valem só na noite da aula: até 06/10 às 23h59 (Brasília).
+  // Depois disso a página da sala segue vendendo o núcleo, sem os bônus.
+  endsAt: "2026-10-06T23:59:59-03:00",
+  prazoLabel: "hoje, terça, 6 de outubro, até 23h59",
+  prazoCurto: "06/10, 23h59",
   // Os 5 primeiros: 18 meses. A extensão é feita em lote pela equipe (a Ticto vende 12).
   mesesTopo: 18,
   extensaoAte: "10/10",

@@ -43,8 +43,8 @@ const SO_SALA: Item[] = [
     a: "Pela ordem de confirmação do pagamento. A equipe avisa no WhatsApp e combina o certificado, o envio da prancheta pelo correio e a entrada na Sala VIP.",
   },
   {
-    q: "E depois de 08/10?",
-    a: `Os bônus da sala acabam às 23h59 de 08/10, ou antes, quando os ${SALA.primeirosN} primeiros entrarem. A Academy continua por ${ACADEMY.precoCheioLabel}, com o núcleo.`,
+    q: `E depois de ${SALA.prazoCurto}?`,
+    a: `Os bônus da sala acabam às 23h59 de 06/10, a noite da aula, ou antes, quando os ${SALA.primeirosN} primeiros entrarem. A Academy continua por ${ACADEMY.precoCheioLabel}, com o núcleo.`,
   },
 ];
 

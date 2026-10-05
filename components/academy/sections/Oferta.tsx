@@ -1,5 +1,6 @@
 import { Reveal } from "@/components/Reveal";
 import { Titulo } from "@/components/Titulo";
+import { AteOFim } from "@/components/academy/AteOFim";
 import { CtaButton, type Modo } from "@/components/academy/CtaButton";
 import { PrazoInline } from "@/components/academy/Prazo";
 import { Secao } from "@/components/academy/Secao";
@@ -69,20 +70,22 @@ export function Oferta({ modo }: { modo: Modo }) {
         <Total rotulo={sala ? "Valor total pra todo mundo" : "Valor total"} valor={VALOR_TOTAL.nucleo} />
 
         {sala && (
-          <div className="mt-9">
-            <p className="text-center text-[11.5px] font-semibold tracking-[0.16em] text-wine-ink uppercase">
-              + Só pros {SALA.primeirosN} primeiros, até {SALA.prazoCurto}
-            </p>
-            <ul className="mt-2 list-none p-0">
-              {BONUS_PRIMEIROS.map((i) => (
-                <Linha key={i.nome} {...i} tag="Bônus" />
-              ))}
-            </ul>
-            <Total rotulo={`Valor total pros ${SALA.primeirosN} primeiros`} valor={VALOR_TOTAL.primeiros} />
-            <ul className="mt-6 list-none rounded-[6px] bg-bg-2 px-4">
-              <Linha {...BONUS_TOPO} tag={`E os ${SALA.primeirosTopo} primeiros`} />
-            </ul>
-          </div>
+          <AteOFim>
+            <div className="mt-9">
+              <p className="text-center text-[11.5px] font-semibold tracking-[0.16em] text-wine-ink uppercase">
+                + Só pros {SALA.primeirosN} primeiros, até {SALA.prazoCurto}
+              </p>
+              <ul className="mt-2 list-none p-0">
+                {BONUS_PRIMEIROS.map((i) => (
+                  <Linha key={i.nome} {...i} tag="Bônus" />
+                ))}
+              </ul>
+              <Total rotulo={`Valor total pros ${SALA.primeirosN} primeiros`} valor={VALOR_TOTAL.primeiros} />
+              <ul className="mt-6 list-none rounded-[6px] bg-bg-2 px-4">
+                <Linha {...BONUS_TOPO} tag={`E os ${SALA.primeirosTopo} primeiros`} />
+              </ul>
+            </div>
+          </AteOFim>
         )}
 
         <div className="mt-9 text-center">
@@ -92,9 +95,11 @@ export function Oferta({ modo }: { modo: Modo }) {
             {ACADEMY.parcela12x ? `ou 12x de ${ACADEMY.parcela12x}` : "em até 12x no cartão"} · ou Pix
           </p>
           {sala && (
-            <p className="mt-6 text-[0.98rem] text-fg-soft">
-              Os bônus da sala saem em <PrazoInline className="text-[1.15rem] text-fg" />
-            </p>
+            <AteOFim>
+              <p className="mt-6 text-[0.98rem] text-fg-soft">
+                Os bônus da sala saem em <PrazoInline className="text-[1.15rem] text-fg" />
+              </p>
+            </AteOFim>
           )}
 
           <CtaButton modo={modo} className="mt-6 w-full justify-center">
@@ -105,9 +110,11 @@ export function Oferta({ modo }: { modo: Modo }) {
             itens={["Acesso imediato", "Pix ou cartão", `Garantia de ${GARANTIA_ACADEMY.prazoCondicionalDias} dias`]}
           />
           {sala && (
-            <p className="mt-4 text-[0.86rem] leading-[1.5] text-fg-faint">
-              Os primeiros contam pela ordem de confirmação do pagamento. A equipe avisa no WhatsApp.
-            </p>
+            <AteOFim>
+              <p className="mt-4 text-[0.86rem] leading-[1.5] text-fg-faint">
+                Os primeiros contam pela ordem de confirmação do pagamento. A equipe avisa no WhatsApp.
+              </p>
+            </AteOFim>
           )}
         </div>
       </Reveal>

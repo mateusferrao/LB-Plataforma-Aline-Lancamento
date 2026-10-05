@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Container } from "@/components/Container";
+import { AteOFim } from "@/components/academy/AteOFim";
 import { CtaButton, type Modo } from "@/components/academy/CtaButton";
 import { Ticks } from "@/components/academy/Ticks";
 import { withBasePath } from "@/lib/basePath";
@@ -52,10 +53,12 @@ export function Hero({ modo }: { modo: Modo }) {
               Quero entrar na Academy
             </CtaButton>
             {modo === "sala" && (
-              <p className="mt-3 text-[13.5px] text-fg-soft">
-                Bônus pros <strong className="font-semibold text-fg">{SALA.primeirosN} primeiros</strong> até{" "}
-                {SALA.prazoCurto}.
-              </p>
+              <AteOFim>
+                <p className="mt-3 text-[13.5px] text-fg-soft">
+                  Bônus pros <strong className="font-semibold text-fg">{SALA.primeirosN} primeiros</strong> só até{" "}
+                  {SALA.prazoCurto}.
+                </p>
+              </AteOFim>
             )}
             <Ticks className="mt-4" itens={["Acesso imediato", "12x ou Pix", garantia]} />
           </div>

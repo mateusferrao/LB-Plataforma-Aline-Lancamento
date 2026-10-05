@@ -2,16 +2,16 @@ import type { Metadata } from "next";
 import { AcademyPage } from "@/components/academy/AcademyPage";
 
 // /academy/sala — condição de quem esteve na aula de 06/10 (R$1.797 + bônus dos
-// 10 primeiros até 08/10 23h59). Link só na sala e no grupo: fora do
+// 10 primeiros só até 06/10 23h59, a noite da aula). Link só na sala e no grupo: fora do
 // Google e dos anúncios.
 export const metadata: Metadata = {
   title: "Filgueiras Academy · Condição da aula Por Dentro da Face",
   description:
-    "Você não fez tanto curso pra continuar com medo de aplicar e com a agenda vazia. Condição de quem esteve na aula de 06/10, até 08/10 às 23h59.",
+    "Você não fez tanto curso pra continuar com medo de aplicar e com a agenda vazia. Condição de quem esteve na aula de 06/10: bônus pros 10 primeiros só até 23h59.",
   robots: { index: false, follow: false },
   openGraph: {
     title: "Filgueiras Academy · Condição da aula de 06/10",
-    description: "Até 08/10, 23h59: R$1.797 e os bônus dos 10 primeiros.",
+    description: "Só até 06/10, 23h59: R$1.797 e os bônus dos 10 primeiros.",
     locale: "pt_BR",
     type: "website",
   },

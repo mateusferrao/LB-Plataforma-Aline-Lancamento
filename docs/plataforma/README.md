@@ -2,7 +2,7 @@
 
 As páginas de venda da plataforma, depois da aula ao vivo **Por Dentro da Face** (06/10/2026):
 
-- **`/academy/sala`:** para quem esteve na aula. Custa **R$1.797**, com os bônus dos **10 primeiros** até **08/10, 23h59**. É `noindex`, e o link só circula na sala e no grupo.
+- **`/academy/sala`:** para quem esteve na aula. Custa **R$1.797**, com os bônus dos **10 primeiros** só até **06/10, 23h59** (a noite da aula; ajuste de 05/10). Depois disso a página segue vendendo o núcleo pelo mesmo preço. É `noindex`, e o link só circula na sala e no grupo.
 - **`/academy`:** a evergreen. Custa **R$1.797**, só o núcleo, e recebe os anúncios de aquisição.
 
 **Oferta ajustada pela equipe em 05/10** (`lib/ofertaAcademy.ts`), no formato do $100M Offers: cada item diz o problema que resolve e cada bônus derruba uma objeção.
@@ -57,7 +57,7 @@ Fontes do plano, de 04/10/2026:
 | Headline da evergreen | "Você não estudou tanto pra continuar insegura na agulha e com a agenda parada." (mesma linha da sala; "parada" serve a quem já atende) |
 | Os três momentos | "A paciente decide se confia em você três vezes" deixou de ser H1 e virou o título da seção do mecanismo (revisão de 04/10: como headline, era uma tese indireta, em terceira pessoa e sem dor nem resultado) |
 | Preço | **R$1.797 para todo mundo** (ajuste de 05/10: sem cupom). 12x com a taxa do gateway ou Pix |
-| Bônus da sala (até 08/10, 23h59) | **10 primeiros:** certificado, prancheta, Sala VIP de mentoria e toxina (quantidade a confirmar). **5 primeiros:** +6 meses (18 meses). Contam pela hora da compra |
+| Bônus da sala (só até 06/10, 23h59) | **10 primeiros:** certificado, prancheta, Sala VIP de mentoria e toxina (quantidade a confirmar). **5 primeiros:** +6 meses (18 meses). Contam pela hora da compra |
 | Encontros ao vivo | **6 no ano**, com a Aline ou com o time dela, gravados na plataforma + 1 aula ao vivo com a Aline para discussão de casos |
 | Garantia | **Garantia Mão Segura:** 7 dias sem perguntas + 30 dias se assistiu ao módulo de anatomia e não sentiu a mão mais segura |
 | Conteúdo | O plano "Filgueiras Academy Anual" + **Anatomia** + **Sala de Lapidação**. Full Face e Análise de casos ficam de fora. Os 4 cursos vazios (Sua Jornada, Além da Técnica, Mentalidade, Espiritualidade) ficam ocultos. Fios não existe |
@@ -73,7 +73,7 @@ Fontes do plano, de 04/10/2026:
 
 As duas páginas foram enxugadas no molde da página do Mapa de Intercorrência (Segredos da Otomodelação): coluna única, uma ideia por seção, a dor como cena concreta e a oferta num card só. A página da sala no celular caiu de ~17.100 px para ~11.500 px.
 
-0. **Barra do topo (só na sala):** preço e contador até 08/10, 23h59.
+0. **Barra do topo (só na sala):** os bônus dos 10 primeiros e o contador até 06/10, 23h59.
 1. **Hero:** chamada do público, H1 com grifo, uma frase de apoio, botão com o preço e selos (acesso imediato, 12x ou Pix, garantia). Na sala, a linha dos bônus dos 10 primeiros aparece embaixo do botão. No celular, a foto vai para o fim do hero.
 2. **A cena:** "A paciente está na maca. A seringa, na sua mão." As perguntas que passam pela cabeça e quatro consequências curtas.
 3. **O que muda o jogo:** os três momentos (consulta, agulha e espelho), em dois parágrafos.
@@ -86,11 +86,11 @@ As duas páginas foram enxugadas no molde da página do Mapa de Intercorrência 
 10. **FAQ:** fechada, 7 perguntas na evergreen e 9 na sala.
 11. **Fechamento:** "Da próxima vez que a paciente deitar…", o resumo da oferta numa frase, o botão e o P.S. + barra fixa no celular.
 
-**Depois de 08/10, 23h59:** o botão da sala leva à `/academy` e o contador diz que a condição terminou. Para testar, use `?preview=2026-10-09T10:00:00-03:00`.
+**Depois de 06/10, 23h59:** os bônus, o contador e a barra do topo somem sozinhos (componente `AteOFim`), e o botão segue no mesmo checkout de R$1.797. Para testar, use `?preview=2026-10-07T10:00:00-03:00`.
 
 ## 4. Pitch da aula (versão aprovada)
 
-Roteiro completo, bloco a bloco: permissão → o que a aula não resolve → os três momentos → por que é diferente → a pilha do núcleo, com âncora e R$1.797 → os bônus da sala (10 primeiros e 5 primeiros, até 08/10) → Garantia Mão Segura → pra quem é → pedido ("escreve ENTREI") → respostas rápidas → fechamento ("daqui a um ano, a paciente vai sentir isso?"). **O roteiro do pitch precisa ser atualizado com a oferta de 05/10.**
+Roteiro completo, bloco a bloco: permissão → o que a aula não resolve → os três momentos → por que é diferente → a pilha do núcleo, com âncora e R$1.797 → os bônus da sala (10 primeiros e 5 primeiros, só até 23h59 da noite da aula) → Garantia Mão Segura → pra quem é → pedido ("escreve ENTREI") → respostas rápidas → fechamento ("daqui a um ano, a paciente vai sentir isso?"). **O roteiro do pitch precisa ser atualizado com a oferta de 05/10.**
 
 Durante o pitch, a equipe:
 
@@ -131,7 +131,7 @@ Durante o pitch, a equipe:
 
 **Depois de 06/10:**
 
-- [ ] **09/10:** estender para 18 meses os 5 primeiros; enviar prancheta e certificado e liberar a Sala VIP para os 10 primeiros.
+- [ ] **07/10 a 10/10:** estender para 18 meses os 5 primeiros; enviar prancheta e certificado e liberar a Sala VIP para os 10 primeiros.
 - [ ] **Oferta de entrada para o teste do tráfego frio:** Protocolo + aula gravada, com upsell por R$1.797 menos o valor pago, por 72h. Só depois de 08/10.
 - [ ] **VSL nova da evergreen:** gravar e colocar no topo da `/academy`.
 - [ ] **Data do próximo encontro mensal:** é a urgência real da evergreen ("entre até X para o encontro de outubro").
