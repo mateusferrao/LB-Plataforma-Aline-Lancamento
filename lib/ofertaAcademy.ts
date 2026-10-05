@@ -8,8 +8,10 @@
 //  Regras:
 //   - Preço cheio R$1.797 é o preço real da evergreen (âncora legítima). A sala
 //     paga R$1.497 com o cupom, que a Ticto expira sozinho às 23h59 de 08/10.
-//   - Âncoras só reais: os cursos presenciais da própria Aline (esteira 2025) e o
-//     curso de fresh frozen fora do Brasil. Nada de valor inventado por item.
+//   - Pilha de valor (valores riscados por item): usa a valoração que a própria
+//     equipe publicou na LP de abr/2025 para os módulos que já existiam. Os itens
+//     novos (Anatomia, bônus da sala) têm valor PENDENTE de confirmação. Na página
+//     é "valor", nunca "de R$X por": nenhum item foi vendido avulso por esse preço.
 //   - Os níveis de bônus contam pela hora da compra na Ticto. A página não mostra
 //     contador de vagas (não há dado em tempo real); a contagem é dita na sala.
 //   - Sem checkoutUrl → botão "Em breve". Produto ainda não criado na Ticto.
@@ -29,6 +31,13 @@ const CUPOM_SALA = "SALA0610";
 
 // PENDENTE: número de pranchetas em estoque (nível do meio = primeiras N, até 40).
 const PRIMEIRAS_N = 40;
+
+// PENDENTE (confirmar com a equipe): valores dos itens novos.
+const VALOR_ANATOMIA = 2997;
+const VALOR_ALFA_OMEGA = 497; // em 2025, R$997 era o bloco inteiro de espiritualidade e mentalidade
+const VALOR_ENCONTRO_CASOS = 497;
+const VALOR_PRANCHETA = 197;
+const VALOR_DIAGNOSTICO = 997;
 
 // "R$1.797" (o formatBRL do kit não põe o separador de milhar).
 function formatBRL(v: number) {
@@ -83,10 +92,12 @@ export const NIVEIS_SALA = [
     itens: [
       {
         nome: "A gravação da aula Por Dentro da Face",
+        valor: 67, // o preço do ingresso da aula
         porque: "Pra rever a anatomia de 06/10 quantas vezes precisar.",
       },
       {
         nome: `+6 meses de acesso: ${SALA.mesesAcesso} meses no total`,
+        valor: Math.round(PRECO_CHEIO / 2), // metade do plano de 12 meses
         porque: "Porque a sua rotina não é só estudo. Você vai no seu ritmo.",
       },
     ],
@@ -96,10 +107,12 @@ export const NIVEIS_SALA = [
     itens: [
       {
         nome: "Encontro extra ao vivo de análise de casos",
+        valor: VALOR_ENCONTRO_CASOS,
         porque: "O online precisa de caso real pra virar mão.",
       },
       {
         nome: "A prancheta ilustrada da Aline, pelo correio",
+        valor: VALOR_PRANCHETA,
         porque: "A que ela usa pra explicar o procedimento pra paciente, na consulta.",
       },
     ],
@@ -109,6 +122,7 @@ export const NIVEIS_SALA = [
     itens: [
       {
         nome: "Diagnóstico individual com a Aline",
+        valor: VALOR_DIAGNOSTICO,
         porque: "30 minutos, online, pra olhar o seu momento e montar o seu caminho na Academy.",
       },
     ],
@@ -128,9 +142,42 @@ export const GARANTIA_ACADEMY = {
   email: "suporte.alinefilgueiras@gmail.com.br",
 } as const;
 
-// Âncoras reais (esteira de produtos da Aline, abr/2025).
-export const ANCORAS = [
-  { o: "Curso presencial de toxina (2 dias)", v: "R$2.800 a R$3.500" },
-  { o: "Curso presencial de preenchimento (2 dias)", v: "R$4.400 a R$4.800" },
-  { o: "Curso de fresh frozen fora do Brasil", v: "US$5.500 + passagem e visto" },
+// Pilha de valor do núcleo (12 meses). Valores dos módulos que já existiam: LP
+// de abr/2025 ("Clínica de Excelência" R$2.997, "Consulta que Vende" R$1.497,
+// "Vitrine Estratégica" R$997, ferramentas R$497, Sala de Lapidação R$1.497).
+export const PILHA_ACADEMY = [
+  {
+    nome: "Curso online de Fresh Frozen + dissecção",
+    detalhe: "Novo: a face por dentro, camada por camada",
+    valor: VALOR_ANATOMIA,
+  },
+  {
+    nome: "Mais de 70 aulas práticas",
+    detalhe: "Toxina, preenchimento, bioestimuladores, intercorrências e anestesia",
+    valor: 2997,
+  },
+  { nome: "A Consulta que Vende", detalhe: "Aulas, roleplays e checklist da consulta", valor: 1497 },
+  { nome: "Marketing e posicionamento", detalhe: "Copy pra Reels, Stories e WhatsApp", valor: 997 },
+  {
+    nome: "Ferramentas prontas",
+    detalhe: "Anamnese, termos, precificação, scripts e dicas jurídicas",
+    valor: 497,
+  },
+  {
+    nome: "12 meses de Sala de Lapidação",
+    detalhe: "Encontros ao vivo todo mês, com as gravações na plataforma",
+    valor: 1497,
+  },
+  { nome: "Alfa Ômega", detalhe: "Fé, identidade e propósito", valor: VALOR_ALFA_OMEGA },
 ] as const;
+
+const soma = (itens: readonly { valor: number }[]) => itens.reduce((t, i) => t + i.valor, 0);
+
+export const VALOR_TOTAL = {
+  // Evergreen: o núcleo. Sala: o núcleo + os bônus de todas (nível 1). Os níveis
+  // das mais rápidas aparecem com valor, mas fora da soma.
+  evergreen: formatBRL(soma(PILHA_ACADEMY)),
+  sala: formatBRL(soma(PILHA_ACADEMY) + soma(NIVEIS_SALA[0].itens)),
+} as const;
+
+export { formatBRL as brl };

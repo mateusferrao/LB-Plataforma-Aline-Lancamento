@@ -47,7 +47,7 @@ Fontes do plano, de 04/10/2026:
 | Já alunas | As 28 anuais ganham o curso de anatomia. As ex-alunas pagam R$1.497 com o mesmo prazo, pela lista (outro cupom) |
 | Prova | Prints reais com o rótulo "alunas da Aline", sem dizer que são da plataforma. Sem o print de faturamento. Pedir depoimento às alunas mais engajadas da plataforma |
 | Público | Inclui esteticistas (o "Pra quem é" cita, sem ressalva legal por enquanto) |
-| Âncoras | Só reais: cursos presenciais da Aline (toxina R$2.800–3.500, preenchimento R$4.400–4.800) e fresh frozen fora do Brasil (US$5.500 + passagem e visto) |
+| Ancoragem | Pilha de valor com o valor riscado por item, o total riscado e o preço ao lado (pedido de 05/10, no modelo da página do Mapa de Intercorrência). Os módulos que já existiam usam a valoração da LP de abr/2025. Anatomia, Alfa Ômega e os bônus das mais rápidas têm valor a confirmar. Na página é "valor", nunca "de R$X por". Total: R$10.979 na evergreen, R$11.945 na sala (com a gravação e os +6 meses). Saiu o bloco dos cursos presenciais |
 | Fora da página | Curso presencial nos EUA como próxima oferta; promessa de agenda, faturamento ou resultado clínico |
 | Tráfego frio | Teste A/B: `/academy` × oferta de entrada **Protocolo + aula gravada** → upsell da plataforma por R$1.797 menos o valor pago, por 72h. A gravação nunca é vendida "avulsa" e não entra antes de 08/10, 23h59 |
 | Canais do carrinho | Grupo da aula, agente de IA no WhatsApp (o playbook precisa ser atualizado: hoje ele proíbe falar da plataforma) e disparo para ex-alunas |
@@ -59,7 +59,7 @@ Fontes do plano, de 04/10/2026:
 3. **Três momentos:** consulta, agulha e espelho, cada um com a cena da dor e o que a Academy entrega.
 4. **Por que dessa vez é diferente:** a objeção "fiz curso e continuo travada" (36% da pesquisa).
 5. **O que tem dentro:** o destaque do curso de fresh frozen (a evergreen repete o anúncio) + os cursos por pilar, com a contagem de aulas do Memberkit.
-6. **Oferta:** primeiro as âncoras reais, depois o núcleo com o preço. Na sala, a escada de bônus, o cupom e o contador.
+6. **Oferta:** a pilha de valor (cada item com o valor riscado e o total riscado) ao lado do card de preço. Na sala, os bônus de todas entram na pilha; as mais rápidas vêm abaixo, com valor e fora da soma, e depois o contador.
 7. **Garantia Mão Segura.**
 8. **Quem conduz:** a história da Aline nas duas inseguranças.
 9. **Prints de alunas da Aline.**
@@ -100,6 +100,7 @@ Durante o pitch, a equipe:
 - [ ] Preencher a data do encontro de análise de casos e o prazo do diagnóstico (`SALA.encontroCasosData` e `SALA.diagnosticoAte`). A página só mostra quando estiverem preenchidos.
 - [ ] **Memberkit:** criar o plano da oferta e ligá-lo ao produto na Ticto, com 12 meses de acesso. Cursos: Comece por aqui, Toxina, Preenchimento Facial, Bioestimuladores, Anestesia, Intercorrência, Vendas, Marketing, Posicionamento, Dicas Jurídicas, Material de Apoio, Alfa Ômega, **Anatomia** e **Sala de Lapidação**.
 - [ ] **Memberkit:** publicar o curso de Anatomia e mandar os títulos das aulas para a página e o pitch.
+- [ ] **Confirmar os valores da pilha** (`lib/ofertaAcademy.ts`): curso de Anatomia R$2.997, Alfa Ômega R$497, encontro de casos R$497, prancheta R$197, diagnóstico R$997.
 - [ ] **A Aline confirma:**
   - o 1º curso de dissecção em 2018;
   - os estudos nos EUA e em Portugal;
