@@ -69,6 +69,34 @@ Valor total: R$8.794. Hoje: R$1.797 no Pix ou 12x de R$185,85.
 Garantia Mão Segura: 7 dias sem perguntas, e 30 dias se a sua mão não ficar mais segura.
 ```
 
+### 2.2 Descrição da sala (noite da aula, até 1.000 caracteres)
+
+Este texto vale para a Oferta A · Sala e tem **949 caracteres**. A descrição da Ticto é do produto, não da oferta. Por isso, use este texto no campo de descrição ou de benefícios do **template Sala**, se ele tiver. Se o campo só existir no produto, troque a descrição do produto por esta às 20h de 06/10 e volte para a 2.1 na manhã de 07/10.
+
+```text
+Condição de quem esteve na aula Por Dentro da Face. Os bônus valem só até hoje, 23h59.
+
+Você viu a face por dentro. Agora são 12 meses pra levar isso pra sua mão, com a Dra. Aline Filgueiras.
+
+O que todo mundo leva:
+• Curso online de Fresh Frozen + dissecção (valor R$1.297)
+• Plataforma Filgueiras Academy: mais de 70 aulas e a Consulta que Vende (valor R$1.497)
+• 6 encontros ao vivo no ano, com a Aline ou o time dela (valor R$5.000)
+• 1 aula ao vivo com a Aline pra discussão de casos (valor R$1.000)
+• Preferência nos cursos presenciais da Aline
+
+Só pros 10 primeiros:
+• Certificado Filgueiras Academy
+• Prancheta ilustrada da Aline, pelo correio (valor R$600)
+• Mentoria em grupo com a Aline (valor R$5.000)
+• Toxina botulínica
+E os 5 primeiros levam 18 meses de acesso.
+
+Valor total pros 10 primeiros: R$14.394. Hoje: R$1.797 no Pix ou 12x de R$185,85.
+
+Garantia Mão Segura: 7 dias sem perguntas, e 30 dias se a sua mão não ficar mais segura.
+```
+
 **Versão curta (para campos de até ~300 caracteres):**
 
 > Fresh Frozen + dissecção, mais de 70 aulas de técnica, a Consulta que Vende, 6 encontros ao vivo no ano e uma aula de casos com a Dra. Aline. 12 meses de acesso. Valor total R$8.794, hoje R$1.797 ou 12x de R$185,85. Garantia de 30 dias.
