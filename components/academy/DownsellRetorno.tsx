@@ -10,6 +10,8 @@ import { ANATOMIA, SALA } from "@/lib/ofertaAcademy";
 // aparece na /academy (evergreen), depois da noite da aula, pra quem clicou no
 // checkout há 20 min ou mais, não comprou e voltou. Quem nunca foi ao checkout
 // não vê: o downsell não pode competir com a oferta principal (Hormozi).
+// Fica no topo (celular) e no canto de cima (computador), acima do aviso de
+// cookies e da barra fixa do rodapé, que antes cobriam o botão.
 export function DownsellRetorno() {
   const [aberto, setAberto] = useState(false);
   useEffect(() => {
@@ -28,7 +30,7 @@ export function DownsellRetorno() {
     <div
       role="dialog"
       aria-label="Uma porta menor"
-      className="fixed inset-x-3 top-3 z-50 mx-auto max-w-[460px] rounded-[8px] border-2 border-wine bg-bg-2 p-5 shadow-2xl sm:top-auto sm:bottom-6"
+      className="fixed inset-x-3 top-3 z-[60] mx-auto max-w-[460px] rounded-[8px] border-2 border-wine bg-bg-2 p-5 shadow-2xl sm:inset-x-auto sm:top-6 sm:right-6"
     >
       <button
         type="button"
