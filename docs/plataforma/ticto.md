@@ -279,7 +279,7 @@ O Hormozi chama isto de Money Model: a oferta de atração paga a aquisição, e
 | **Prazo de reembolso** | 30 dias, pelo mesmo motivo da Academy: a Garantia Mão Segura |
 | **Descrição** | O texto da seção 11.3 |
 | **MemberKit** | Um plano novo, "Anatomia em Fresh Frozen", **só com o curso de Anatomia, 6 meses**, ligado a este produto |
-| **Oferta** | `Anatomia · Downsell` · R$497 · cartão (12x, juros pagos pelo comprador) e Pix · sem boleto · sem afiliados · redirecionamento para `/academy/obrigado` |
+| **Oferta** | `Anatomia · Downsell` · R$497 · cartão (12x, juros pagos pelo comprador) e Pix · sem boleto · sem afiliados · redirecionamento para `https://live.alinefilgueiras.com.br/academy/anatomia/obrigado` (página própria, com o upgrade) |
 | **Template** | O selo da Garantia Mão Segura, sem cupom, sem contador, sem bump. Banner: "Curso online de Fresh Frozen + dissecção, com a Dra. Aline. 6 meses de acesso." |
 
 **Conferência:** R$497 em 12x, com juros de 3,49% ao mês pagos pelo comprador, dá **R$51,40** (R$616,82 no total).
@@ -313,6 +313,7 @@ Quem comprou a anatomia pode trocar pela Academy **pagando só a diferença**, e
 - **Na Ticto:** criar no produto da Academy uma terceira oferta, **oculta**, chamada `Academy · Upgrade Anatomia`, por **R$1.300** (12x de R$134,45). Ela fica ligada ao mesmo plano de 12 meses da Academy. Um cupom não funciona aqui, porque o campo de cupom fica desligado no checkout.
 - **Na MemberKit:** quando a compradora fizer o upgrade, o plano da Academy já inclui a anatomia. O plano de 6 meses pode ficar ativo até vencer.
 - **Quando oferecer:**
+  - **na página de obrigado do downsell** (`/academy/anatomia/obrigado`), logo depois da compra. O botão usa o link da oferta oculta, a ser colado em `UPGRADE_ANATOMIA_URL` (`lib/ofertaAcademy.ts`). Sem o link, o botão abre o WhatsApp da equipe com a mensagem pronta;
   - mensagem no WhatsApp no 7º dia depois da compra, quando ela já assistiu às primeiras aulas;
   - nova mensagem no 25º dia, como último aviso.
 
@@ -334,7 +335,7 @@ Mensagem do carrinho abandonado:
 ## Pendências
 
 - [ ] Os dois links do checkout em `lib/ofertaAcademy.ts` (`CHECKOUT_SALA` e `CHECKOUT_EVERGREEN`).
-- [ ] Downsell: aprovar R$497 e os 6 meses, criar o plano "Anatomia em Fresh Frozen" na MemberKit e a oferta oculta de upgrade (R$1.300).
+- [ ] Downsell: aprovar R$497 e os 6 meses, criar o plano "Anatomia em Fresh Frozen" na MemberKit e a oferta oculta de upgrade (R$1.300), e colar o link dela em `UPGRADE_ANATOMIA_URL`.
 - [ ] A Aline confirma os estudos nos EUA e em Portugal, citados na descrição da anatomia.
 - [ ] Confirmar o e-mail de suporte (`@gmail.com.br` × `@gmail.com`).
 - [ ] O preço do bump da evergreen (R$47 sugerido).

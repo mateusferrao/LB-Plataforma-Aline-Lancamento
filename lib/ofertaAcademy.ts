@@ -113,6 +113,23 @@ export const VALOR_TOTAL = {
   primeiros: formatBRL(soma(PILHA_ACADEMY) + soma(BONUS_PRIMEIROS)),
 } as const;
 
+// Downsell (docs/plataforma/ticto.md §11): só o curso de anatomia, 6 meses, para
+// quem não comprou a Academy. Nunca à vista na LP. Upgrade pela diferença em até
+// 30 dias, por uma oferta oculta da Academy na Ticto.
+// PENDENTE: link da oferta oculta "Academy · Upgrade Anatomia" (R$1.300).
+const UPGRADE_ANATOMIA_URL = "";
+
+export const ANATOMIA = {
+  nome: "Por Dentro da Face · Anatomia em Fresh Frozen",
+  preco: 497,
+  precoLabel: formatBRL(497),
+  mesesAcesso: 6,
+  upgradePreco: PRECO - 497,
+  upgradePrecoLabel: formatBRL(PRECO - 497),
+  upgradeDias: 30,
+  upgradeUrl: UPGRADE_ANATOMIA_URL,
+} as const;
+
 // Garantia nomeada (pitch, bloco 6). Duas camadas.
 export const GARANTIA_ACADEMY = {
   nome: "Garantia Mão Segura",
