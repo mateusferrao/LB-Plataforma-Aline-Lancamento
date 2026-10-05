@@ -48,26 +48,26 @@ Este é o guia para criar e configurar o produto inteiro na Ticto. Os campos seg
 
 Hormozi aceita essa troca: uma garantia mais forte aumenta a conversão mais do que aumenta o reembolso, ainda mais com a primeira aula liberada na hora. O que reduz o pedido é a página de obrigado levar a pessoa direto à anatomia.
 
-### 2.1 Descrição do produto
+### 2.1 Descrição do produto (até 1.000 caracteres)
 
-Segue o mesmo formato do Protocolo (`docs/info/README.md` §4.3).
+O campo da Ticto aceita no máximo 1.000 caracteres e não formata o texto: negrito não aparece. Por isso o texto abaixo é puro e tem **863 caracteres** contando as quebras de linha. É só copiar e colar.
 
-> **Pra mão parar de hesitar, a consulta parar de travar e você não estudar sozinha.**
->
-> A paciente decide se confia em você três vezes: na consulta, na agulha e no espelho. A Filgueiras Academy junta, num lugar só, o que muda cada um desses momentos, com a Dra. Aline Filgueiras.
->
-> **O que você recebe (12 meses de acesso):**
-> - **Curso online de Fresh Frozen + dissecção** (valor R$1.297). Pra mão parar de hesitar: você vê o que tem embaixo da agulha antes de aplicar.
-> - **Plataforma Filgueiras Academy** (valor R$1.497). Pro caminho completo: mais de 70 aulas de toxina, preenchimento e bioestimuladores, intercorrências, anestesia, a Consulta que Vende e as ferramentas prontas (anamnese, termos e precificação).
-> - **6 encontros ao vivo no ano** (valor R$5.000). Pra não travar sozinha: com a Aline ou com o time dela, gravados na plataforma.
-> - **1 aula ao vivo com a Aline pra discussão de casos** (valor R$1.000). Pra levar um caso real e ver como ela pensa a conduta.
-> - **Preferência nos cursos presenciais da Aline.** Pra garantir a vaga quando quiser o hands-on.
->
-> **Valor total: R$8.794. Hoje: R$1.797**, à vista no Pix ou em 12x de R$185,85 no cartão.
->
-> **Garantia Mão Segura:** 7 dias pra pedir o dinheiro de volta, sem explicar nada. E se em 30 dias você assistir ao módulo de anatomia e não sentir a mão mais segura, é só escrever que a gente devolve.
->
-> **Acesso:** imediato, pelo e-mail da compra, no celular ou no computador.
+```text
+Pra mão parar de hesitar, a consulta parar de travar e você não estudar sozinha.
+
+A paciente decide se confia em você três vezes: na consulta, na agulha e no espelho. A Filgueiras Academy junta o que muda cada momento, com a Dra. Aline Filgueiras.
+
+O que você recebe (12 meses de acesso):
+• Curso online de Fresh Frozen + dissecção (valor R$1.297): pra ver o que tem embaixo da agulha.
+• Plataforma Filgueiras Academy (valor R$1.497): mais de 70 aulas de toxina, preenchimento e bioestimuladores e a Consulta que Vende.
+• 6 encontros ao vivo no ano (valor R$5.000): com a Aline ou o time dela.
+• 1 aula ao vivo com a Aline pra discussão de casos (valor R$1.000).
+• Preferência nos cursos presenciais da Aline.
+
+Valor total: R$8.794. Hoje: R$1.797 no Pix ou 12x de R$185,85.
+
+Garantia Mão Segura: 7 dias sem perguntas, e 30 dias se a sua mão não ficar mais segura.
+```
 
 **Versão curta (para campos de até ~300 caracteres):**
 
