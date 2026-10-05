@@ -131,6 +131,17 @@ export const ANATOMIA = {
   upgradeUrl: UPGRADE_ANATOMIA_URL,
 } as const;
 
+// Upsell de 1 clique do Flow da Ticto (docs/plataforma/ticto-funil.md): quem
+// compra a anatomia cai em /academy/anatomia/upgrade e pode levar a Academy pela
+// diferença sem preencher nada de novo. PENDENTE: colar aqui, sem alterar, os três
+// trechos que a Ticto mostra em Flow → "<> scripts". Enquanto estiverem vazios, a
+// página usa o link da oferta oculta (ou o WhatsApp) e o "não" leva ao obrigado.
+export const TICTO_UPSELL_ANATOMIA = {
+  script: "",
+  botaoAceitar: "",
+  botaoRecusar: "",
+} as const;
+
 // Garantia nomeada (pitch, bloco 6). Duas camadas.
 export const GARANTIA_ACADEMY = {
   nome: "Garantia Mão Segura",

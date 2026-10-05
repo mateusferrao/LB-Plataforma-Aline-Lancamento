@@ -4,6 +4,8 @@ Este é o guia para criar e configurar o produto inteiro na Ticto. Os campos seg
 
 ## 0. Arquitetura
 
+O funil (upsell de 1 clique, recuperação de carrinho e sequência de WhatsApp) está em [`ticto-funil.md`](ticto-funil.md).
+
 | Peça | O quê | Por quê |
 |---|---|---|
 | **1 produto** (curso digital) | Filgueiras Academy · Consulta, Agulha e Espelho | Um produto só, ligado ao plano da MemberKit |
@@ -280,7 +282,7 @@ O Hormozi chama isto de Money Model: a oferta de atração paga a aquisição, e
 | **Prazo de reembolso** | 30 dias, pelo mesmo motivo da Academy: a Garantia Mão Segura |
 | **Descrição** | O texto da seção 11.3 |
 | **MemberKit** | Um plano novo, "Anatomia em Fresh Frozen", **só com o curso de Anatomia, 6 meses**, ligado a este produto |
-| **Oferta** | `Anatomia · Downsell` · R$797 · cartão (12x, juros pagos pelo comprador) e Pix · sem boleto · sem afiliados · redirecionamento para `https://live.alinefilgueiras.com.br/academy/anatomia/obrigado` (página própria, com o upgrade) |
+| **Oferta** | `Anatomia · Downsell` · R$797 · cartão (12x, juros pagos pelo comprador) e Pix · sem boleto · sem afiliados · redirecionamento para `https://live.alinefilgueiras.com.br/academy/anatomia/obrigado`. Com o Flow ativo, a compradora passa antes pela página de upsell `/academy/anatomia/upgrade` ([`ticto-funil.md`](ticto-funil.md)) |
 | **Template** | O selo da Garantia Mão Segura, sem cupom, sem contador, sem bump. Banner: "Curso online de Fresh Frozen + dissecção, com a Dra. Aline. 6 meses de acesso." |
 
 **Parcela:** **12x de R$82,42**, como aparece na Ticto, com os juros pagos pelo comprador (informado pela equipe em 05/10).
