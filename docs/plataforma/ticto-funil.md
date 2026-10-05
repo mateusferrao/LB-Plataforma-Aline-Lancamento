@@ -293,8 +293,9 @@ A Ticto manda **webhooks** com os eventos de carrinho abandonado, Pix expirado e
 
 ## Pendências
 
-- [ ] **Link do checkout da oferta Anatomia · Downsell**, que vai em `CHECKOUT_ANATOMIA`. É o botão da página `/academy/anatomia`.
-- [ ] **Mentoria:** o link da oferta "Mentoria · Upsell Academy", que vira o fallback; o script do Flow da Academy (`<> scripts`), que vai em `TICTO_UPSELL_ACADEMY`; e a parcela de 12x que a Ticto mostrar.
+- [x] **Link da oferta Anatomia · Downsell:** `https://payment.ticto.app/O39AA5EC7` (em `CHECKOUT_ANATOMIA`, 05/10).
+- [x] **Mentoria:** oferta `O5491F4AA` (fallback) e script do Flow da Academy em `TICTO_UPSELL_ACADEMY` (05/10).
+- [ ] **Mentoria:** a parcela de 12x que a Ticto mostra (na página está a da conta, R$206,54).
 
 - [x] Script do Flow colado em `TICTO_UPSELL_ANATOMIA.scriptSrc` (05/10). Os botões da página usam as classes `ticto-upsell-button` e `ticto-refuse-button`.
 - [x] **Código da oferta de upgrade para o fallback** (`OB97300B4`, em `TICTO_UPSELL_ANATOMIA.fallbackOffer` e `UPGRADE_ANATOMIA_URL`, 05/10): é o trecho depois de `payment.ticto.app/` no link do checkout da oferta Academy · Upgrade Anatomia. Sem cartão salvo (anatomia paga no Pix), a Ticto usa esse código para abrir o checkout do upgrade.
