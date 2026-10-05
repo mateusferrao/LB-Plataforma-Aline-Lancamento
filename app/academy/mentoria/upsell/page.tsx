@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/Container";
+import { MarcaCompra } from "@/components/academy/MarcaCompra";
 import { MENTORIA, TICTO_UPSELL_ACADEMY, brl } from "@/lib/ofertaAcademy";
 
 export const metadata: Metadata = {
@@ -34,6 +35,7 @@ export default function MentoriaUpsell() {
   const umClique = Boolean(TICTO_UPSELL_ACADEMY.scriptSrc);
   return (
     <main className="py-14 sm:py-20">
+      <MarcaCompra />
       <Container narrow>
         {umClique && <script async src={TICTO_UPSELL_ACADEMY.scriptSrc} />}
 
@@ -86,6 +88,15 @@ export default function MentoriaUpsell() {
                 <button type="button" className={`ticto-refuse-button ${RECUSAR}`}>
                   {TEXTO_RECUSAR}
                 </button>
+                {MENTORIA.checkoutUrl && (
+                  <p className="mt-5 text-[0.85rem] text-fg-faint">
+                    O botão não respondeu?{" "}
+                    <a href={MENTORIA.checkoutUrl} className="underline underline-offset-2 hover:text-wine-ink">
+                      Abra o checkout da mentoria
+                    </a>
+                    .
+                  </p>
+                )}
               </>
             ) : (
               <>

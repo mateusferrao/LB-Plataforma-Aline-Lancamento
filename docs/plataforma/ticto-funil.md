@@ -293,6 +293,13 @@ A Ticto manda **webhooks** com os eventos de carrinho abandonado, Pix expirado e
 
 ## Pendências
 
+**Auditoria de 05/10 (configuração, fora do código):**
+
+- [ ] **GA4 não está ativo no site.** O build não recebe `NEXT_PUBLIC_GA4_ID`, então o script do GA4 não carrega em nenhuma página. Passem o ID (`G-…`) para eu colocar no workflow, ou aceitem medir só pelo Pixel e pela Ticto.
+- [ ] **Pixel na Ticto:** conferir se as cinco ofertas (Sala, Evergreen, Upgrade, Anatomia e Mentoria) disparam **Purchase** com o mesmo Pixel da LP. Sem isso, os anúncios não otimizam para compra.
+- [ ] **Oferta Sala (`OEF7AADF6`):** desativar na manhã de 07/10. O link circulou no grupo e, se continuar ativo, quem comprar por ele entra na contagem da Sala e não passa pelo upsell da mentoria.
+- [ ] **Upgrade e prazo de 30 dias:** a Ticto não trava por comprador. Cruzar semanalmente as vendas do Upgrade com as da Anatomia (§1.0).
+
 - [x] **Link da oferta Anatomia · Downsell:** `https://payment.ticto.app/O39AA5EC7` (em `CHECKOUT_ANATOMIA`, 05/10).
 - [x] **Mentoria:** oferta `O5491F4AA` (fallback) e script do Flow da Academy em `TICTO_UPSELL_ACADEMY` (05/10).
 - [ ] **Mentoria:** a parcela de 12x que a Ticto mostra (na página está a da conta, R$206,54).

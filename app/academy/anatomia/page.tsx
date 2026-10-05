@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/Container";
 import { Footer } from "@/components/Footer";
+import { CheckoutLink } from "@/components/academy/CheckoutLink";
 import { Ticks } from "@/components/academy/Ticks";
 import { ACADEMY, ANATOMIA, GARANTIA_ACADEMY } from "@/lib/ofertaAcademy";
 
@@ -63,15 +64,15 @@ export default function AnatomiaDownsell() {
               <p className="mt-2 text-[0.95rem] text-fg-soft">
                 à vista no Pix · ou 12x de {ANATOMIA.parcela12x} no cartão
               </p>
-              <a
+              <CheckoutLink
                 href={href}
-                data-checkout={ANATOMIA.checkoutUrl ? "" : undefined}
-                target={ANATOMIA.checkoutUrl ? undefined : "_blank"}
-                rel="noopener noreferrer"
+                produto="academy-anatomia"
+                contentName="Anatomia (downsell)"
+                valor={ANATOMIA.preco}
                 className="mt-7 inline-flex w-full items-center justify-center rounded-[2px] bg-wine px-8 py-[18px] font-sans text-[1.02rem] font-semibold text-on-wine transition-transform duration-150 ease-out hover:-translate-y-0.5"
               >
                 Quero o curso de anatomia
-              </a>
+              </CheckoutLink>
               <Ticks
                 className="mt-4 justify-center"
                 itens={["Acesso imediato", "Pix ou cartão", `Garantia de ${GARANTIA_ACADEMY.prazoCondicionalDias} dias`]}

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/Container";
+import { MarcaCompra } from "@/components/academy/MarcaCompra";
 import { ACADEMY, ANATOMIA, GARANTIA_ACADEMY, PILHA_ACADEMY, TICTO_UPSELL_ANATOMIA, brl } from "@/lib/ofertaAcademy";
 
 export const metadata: Metadata = {
@@ -35,6 +36,7 @@ export default function AnatomiaUpgrade() {
   const umClique = Boolean(TICTO_UPSELL_ANATOMIA.scriptSrc);
   return (
     <main className="py-14 sm:py-20">
+      <MarcaCompra />
       <Container narrow>
         {/* Script do 1 clique da Ticto. O React 19 leva <script async src> pro <head>. */}
         {umClique && <script async src={TICTO_UPSELL_ANATOMIA.scriptSrc} />}
@@ -107,6 +109,13 @@ export default function AnatomiaUpgrade() {
                 <button type="button" className={`ticto-refuse-button ${RECUSAR}`}>
                   {TEXTO_RECUSAR}
                 </button>
+                <p className="mt-5 text-[0.85rem] text-fg-faint">
+                  O botão não respondeu?{" "}
+                  <a href={ANATOMIA.upgradeUrl} className="underline underline-offset-2 hover:text-wine-ink">
+                    Abra o checkout do upgrade
+                  </a>
+                  .
+                </p>
               </>
             ) : (
               <>

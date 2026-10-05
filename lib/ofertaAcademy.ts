@@ -160,6 +160,7 @@ export const MENTORIA = {
   precoLabel: formatBRL(1997),
   // Pela conta (3,49% ao mês, juros do comprador). Conferir no checkout da Ticto.
   parcela12x: "R$206,54",
+  checkoutUrl: "https://payment.ticto.app/O5491F4AA",
 } as const;
 
 export const TICTO_UPSELL_ACADEMY = {
