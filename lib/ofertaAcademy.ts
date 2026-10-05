@@ -116,8 +116,8 @@ export const VALOR_TOTAL = {
 // Downsell (docs/plataforma/ticto.md §11): só o curso de anatomia, 6 meses, para
 // quem não comprou a Academy. Nunca à vista na LP. Upgrade pela diferença em até
 // 30 dias, por uma oferta oculta da Academy na Ticto.
-// PENDENTE: link da oferta oculta "Academy · Upgrade Anatomia" (R$1.000).
-const UPGRADE_ANATOMIA_URL = "";
+// Oferta oculta "Academy · Upgrade Anatomia" (R$1.000) na Ticto.
+const UPGRADE_ANATOMIA_URL = "https://payment.ticto.app/OB97300B4";
 const PRECO_ANATOMIA = 797; // definido pela equipe em 05/10
 
 export const ANATOMIA = {
@@ -137,10 +137,10 @@ export const ANATOMIA = {
 // botões pelas classes ticto-upsell-button e ticto-refuse-button. O fallbackOffer
 // é o código da oferta de upgrade (o trecho depois de payment.ticto.app/ no link
 // do checkout): sem cartão salvo (ex.: anatomia paga no Pix), a Ticto abre o
-// checkout dessa oferta. PENDENTE: fallbackOffer.
+// checkout dessa oferta.
 export const TICTO_UPSELL_ANATOMIA = {
   scriptSrc: "https://midas.ticto.app/oneclickbuy.js?flow=8a88fef5-7f44-4687-9ca5-05b21b5a8288.120878",
-  fallbackOffer: "",
+  fallbackOffer: "OB97300B4",
 } as const;
 
 // Garantia nomeada (pitch, bloco 6). Duas camadas.
