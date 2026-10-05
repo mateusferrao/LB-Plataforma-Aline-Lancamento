@@ -203,7 +203,7 @@ Caixa do bump da evergreen:
 O Hormozi chama isto de Money Model: a oferta de atração paga a aquisição, e o lucro vem do que entra depois.
 
 1. **Upsell de 1 clique na página de obrigado da evergreen:** a **mentoria em grupo com a Aline** para quem não entrou nos 10 primeiros. É o "vender isso depois" que vocês decidiram. Preço e formato a definir. A compradora não preenche os dados de novo.
-2. **Downsell para quem não comprou a Academy:** o **curso de anatomia separado**, por R$497 (seção 11). Ele substitui o "Protocolo + aula gravada" como downsell. Um downsell só por vez, para a mensagem não se dividir. **Nunca antes de 06/10, 23h59.**
+2. **Downsell para quem não comprou a Academy:** o **curso de anatomia separado**, por R$797 (seção 11). Ele substitui o "Protocolo + aula gravada" como downsell. Um downsell só por vez, para a mensagem não se dividir. **Nunca antes de 06/10, 23h59.**
 
 ---
 
@@ -256,13 +256,14 @@ O Hormozi chama isto de Money Model: a oferta de atração paga a aquisição, e
 | Aula ao vivo de casos com a Aline | ✓ | — |
 | Preferência nos presenciais | ✓ | — |
 | Acesso | 12 meses | **6 meses** |
-| Preço | R$1.797 · 12x R$185,85 | **R$497 · 12x R$51,40** |
+| Preço | R$1.797 · 12x R$185,85 | **R$797 · 12x R$82,42** |
 
-**Por que R$497:**
+**R$797 (definido pela equipe em 05/10):**
 
-- **É um degrau claro abaixo da Academy,** cerca de 28% do preço, e fica 62% abaixo do valor do curso na pilha (R$1.297). Quem recusou pelo preço enxerga uma porta de entrada real.
-- **Não canibaliza a Academy.** A diferença é R$1.300, e por ela a compradora leva a plataforma inteira, 6 encontros ao vivo, a aula de casos e mais 6 meses de acesso, itens que somam R$7.497 na pilha. Quem pode pagar a Academy continua vendo nela o negócio melhor.
-- **R$397** deixaria a anatomia, que é a novidade do lançamento, com cara de produto barato. **R$697** chega perto demais da Academy em 12x (R$72 contra R$186 por mês).
+- **Fica 39% abaixo do valor do curso na pilha (R$1.297)** e corresponde a 44% do preço da Academy. Quem recusou pelo preço ainda enxerga um degrau real: R$82 por mês contra R$186.
+- **Não canibaliza a Academy.** A diferença é de R$1.000, e por ela a compradora leva a plataforma inteira, 6 encontros ao vivo, a aula de casos e mais 6 meses de acesso, itens que somam R$7.497 na pilha.
+- **Facilita o upgrade.** Com a distância menor, a troca pela Academy (seção 11.4) fica mais fácil de aceitar.
+- **O cuidado:** com o downsell mais perto do preço da Academy, ele não pode, de jeito nenhum, aparecer para quem ainda não recusou a Academy (seção 11.5).
 - **Os 6 meses** são o segundo "tirar coisas". Eles também dão motivo para o upgrade (seção 11.4).
 
 ### 11.2 Na Ticto
@@ -279,10 +280,10 @@ O Hormozi chama isto de Money Model: a oferta de atração paga a aquisição, e
 | **Prazo de reembolso** | 30 dias, pelo mesmo motivo da Academy: a Garantia Mão Segura |
 | **Descrição** | O texto da seção 11.3 |
 | **MemberKit** | Um plano novo, "Anatomia em Fresh Frozen", **só com o curso de Anatomia, 6 meses**, ligado a este produto |
-| **Oferta** | `Anatomia · Downsell` · R$497 · cartão (12x, juros pagos pelo comprador) e Pix · sem boleto · sem afiliados · redirecionamento para `https://live.alinefilgueiras.com.br/academy/anatomia/obrigado` (página própria, com o upgrade) |
+| **Oferta** | `Anatomia · Downsell` · R$797 · cartão (12x, juros pagos pelo comprador) e Pix · sem boleto · sem afiliados · redirecionamento para `https://live.alinefilgueiras.com.br/academy/anatomia/obrigado` (página própria, com o upgrade) |
 | **Template** | O selo da Garantia Mão Segura, sem cupom, sem contador, sem bump. Banner: "Curso online de Fresh Frozen + dissecção, com a Dra. Aline. 6 meses de acesso." |
 
-**Conferência:** R$497 em 12x, com juros de 3,49% ao mês pagos pelo comprador, dá **R$51,40** (R$616,82 no total).
+**Parcela:** **12x de R$82,42**, como aparece na Ticto, com os juros pagos pelo comprador (informado pela equipe em 05/10).
 
 ### 11.3 Descrição (até 1.000 caracteres)
 
@@ -299,7 +300,7 @@ O que você recebe:
 • Curso online de Fresh Frozen + dissecção (valor R$1.297)
 • 6 meses de acesso, no celular ou no computador
 
-Hoje: R$497 no Pix ou 12x de R$51,40.
+Hoje: R$797 no Pix ou 12x de R$82,42.
 
 Quer o caminho completo depois? Em até 30 dias você troca pela Filgueiras Academy pagando só a diferença.
 
@@ -310,7 +311,7 @@ Garantia Mão Segura: 7 dias sem perguntas, e 30 dias se você assistir ao curso
 
 Quem comprou a anatomia pode trocar pela Academy **pagando só a diferença**, em até 30 dias. É o "rollover" do Hormozi: o dinheiro do primeiro passo vira crédito no próximo, e a compradora não sente que pagou duas vezes.
 
-- **Na Ticto:** criar no produto da Academy uma terceira oferta, **oculta**, chamada `Academy · Upgrade Anatomia`, por **R$1.300** (12x de R$134,45). Ela fica ligada ao mesmo plano de 12 meses da Academy. Um cupom não funciona aqui, porque o campo de cupom fica desligado no checkout.
+- **Na Ticto:** criar no produto da Academy uma terceira oferta, **oculta**, chamada `Academy · Upgrade Anatomia`, por **R$1.000** (cerca de 12x de R$103,42; conferir no checkout). Ela fica ligada ao mesmo plano de 12 meses da Academy. Um cupom não funciona aqui, porque o campo de cupom fica desligado no checkout.
 - **Na MemberKit:** quando a compradora fizer o upgrade, o plano da Academy já inclui a anatomia. O plano de 6 meses pode ficar ativo até vencer.
 - **Quando oferecer:**
   - **na página de obrigado do downsell** (`/academy/anatomia/obrigado`), logo depois da compra. O botão usa o link da oferta oculta, a ser colado em `UPGRADE_ANATOMIA_URL` (`lib/ofertaAcademy.ts`). Sem o link, o botão abre o WhatsApp da equipe com a mensagem pronta;
@@ -328,14 +329,14 @@ Quem comprou a anatomia pode trocar pela Academy **pagando só a diferença**, e
 
 Mensagem do carrinho abandonado:
 
-> Oi, [nome]! Vi que você chegou até o checkout da Filgueiras Academy e não finalizou. Se o momento não é de entrar na plataforma inteira, tem uma porta menor: o curso online de Fresh Frozen + dissecção, separado, por R$497 (ou 12x de R$51,40), com 6 meses de acesso. É a parte que faz a mão parar de hesitar. E se depois quiser a Academy completa, em até 30 dias você troca pagando só a diferença. Link: [link da oferta Anatomia · Downsell]
+> Oi, [nome]! Vi que você chegou até o checkout da Filgueiras Academy e não finalizou. Se o momento não é de entrar na plataforma inteira, tem uma porta menor: o curso online de Fresh Frozen + dissecção, separado, por R$797 (ou 12x de R$82,42), com 6 meses de acesso. É a parte que faz a mão parar de hesitar. E se depois quiser a Academy completa, em até 30 dias você troca pagando só a diferença. Link: [link da oferta Anatomia · Downsell]
 
 ---
 
 ## Pendências
 
 - [ ] Os dois links do checkout em `lib/ofertaAcademy.ts` (`CHECKOUT_SALA` e `CHECKOUT_EVERGREEN`).
-- [ ] Downsell: aprovar R$497 e os 6 meses, criar o plano "Anatomia em Fresh Frozen" na MemberKit e a oferta oculta de upgrade (R$1.300), e colar o link dela em `UPGRADE_ANATOMIA_URL`.
+- [ ] Downsell: aprovar os 6 meses de acesso, criar o plano "Anatomia em Fresh Frozen" na MemberKit e a oferta oculta de upgrade (R$1.000), e colar o link dela em `UPGRADE_ANATOMIA_URL`.
 - [ ] A Aline confirma os estudos nos EUA e em Portugal, citados na descrição da anatomia.
 - [ ] Confirmar o e-mail de suporte (`@gmail.com.br` × `@gmail.com`).
 - [ ] O preço do bump da evergreen (R$47 sugerido).

@@ -116,16 +116,17 @@ export const VALOR_TOTAL = {
 // Downsell (docs/plataforma/ticto.md §11): só o curso de anatomia, 6 meses, para
 // quem não comprou a Academy. Nunca à vista na LP. Upgrade pela diferença em até
 // 30 dias, por uma oferta oculta da Academy na Ticto.
-// PENDENTE: link da oferta oculta "Academy · Upgrade Anatomia" (R$1.300).
+// PENDENTE: link da oferta oculta "Academy · Upgrade Anatomia" (R$1.000).
 const UPGRADE_ANATOMIA_URL = "";
+const PRECO_ANATOMIA = 797; // definido pela equipe em 05/10
 
 export const ANATOMIA = {
   nome: "Por Dentro da Face · Anatomia em Fresh Frozen",
-  preco: 497,
-  precoLabel: formatBRL(497),
+  preco: PRECO_ANATOMIA,
+  precoLabel: formatBRL(PRECO_ANATOMIA),
   mesesAcesso: 6,
-  upgradePreco: PRECO - 497,
-  upgradePrecoLabel: formatBRL(PRECO - 497),
+  upgradePreco: PRECO - PRECO_ANATOMIA,
+  upgradePrecoLabel: formatBRL(PRECO - PRECO_ANATOMIA),
   upgradeDias: 30,
   upgradeUrl: UPGRADE_ANATOMIA_URL,
 } as const;
