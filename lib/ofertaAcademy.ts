@@ -118,6 +118,8 @@ export const VALOR_TOTAL = {
 // 30 dias, por uma oferta oculta da Academy na Ticto.
 // Oferta oculta "Academy · Upgrade Anatomia" (R$1.000) na Ticto.
 const UPGRADE_ANATOMIA_URL = "https://payment.ticto.app/OB97300B4";
+// PENDENTE: link do checkout da oferta "Anatomia · Downsell" (R$797).
+const CHECKOUT_ANATOMIA = "";
 const PRECO_ANATOMIA = 797; // definido pela equipe em 05/10
 
 export const ANATOMIA = {
@@ -129,6 +131,8 @@ export const ANATOMIA = {
   upgradePrecoLabel: formatBRL(PRECO - PRECO_ANATOMIA),
   upgradeDias: 30,
   upgradeUrl: UPGRADE_ANATOMIA_URL,
+  checkoutUrl: CHECKOUT_ANATOMIA,
+  parcela12x: "R$82,42",
 } as const;
 
 // Upsell de 1 clique do Flow da Ticto (docs/plataforma/ticto-funil.md): quem
@@ -141,6 +145,27 @@ export const ANATOMIA = {
 export const TICTO_UPSELL_ANATOMIA = {
   scriptSrc: "https://midas.ticto.app/oneclickbuy.js?flow=8a88fef5-7f44-4687-9ca5-05b21b5a8288.120878",
   fallbackOffer: "OB97300B4",
+} as const;
+
+// Upsell da Academy (só na oferta Evergreen, docs/plataforma/ticto-funil.md §2):
+// mentoria em grupo com a Aline, 3 meses, 1 encontro ao vivo por mês. É a mesma
+// mentoria que os 10 primeiros da aula levaram de bônus (valor R$5.000 na pilha).
+// Sem downsell depois dela (decisão de 05/10). PENDENTE: o script do Flow da
+// Academy e o código da oferta da mentoria (fallback).
+export const MENTORIA = {
+  nome: "Mentoria em grupo com a Aline",
+  meses: 3,
+  encontros: "1 encontro ao vivo por mês",
+  valor: 5000,
+  preco: 1997,
+  precoLabel: formatBRL(1997),
+  // Pela conta (3,49% ao mês, juros do comprador). Conferir no checkout da Ticto.
+  parcela12x: "R$206,54",
+} as const;
+
+export const TICTO_UPSELL_ACADEMY = {
+  scriptSrc: "",
+  fallbackOffer: "",
 } as const;
 
 // Garantia nomeada (pitch, bloco 6). Duas camadas.

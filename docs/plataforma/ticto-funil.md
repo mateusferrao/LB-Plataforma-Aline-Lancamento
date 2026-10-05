@@ -132,17 +132,105 @@ O rollover é a **Academy vendida pela diferença** para quem já comprou a anat
 
 ---
 
-## 2. Academy: Flow pós-compra (por enquanto, nenhum)
+## 2. Flow da Academy: upsell da mentoria em grupo (só na Evergreen)
 
-- **Oferta Sala:** **sem Flow.** Os 10 primeiros já levam a mentoria em grupo como bônus, e um upsell na mesma noite atrapalharia a entrega dos bônus.
-- **Oferta Evergreen:** **sem Flow por enquanto.** O upsell natural é a **mentoria em grupo com a Aline** para quem não está nos 10 primeiros (o "vender depois"). Quando o formato e o preço estiverem definidos, ele entra aqui com a mesma estrutura do item 1:
-  - página `/academy/mentoria/upsell`, que eu crio;
-  - etapa de upsell no Flow da Academy;
-  - recusa vai para `/academy/obrigado`.
+Decisões de 05/10:
+
+- **O upsell:** mentoria em grupo com a Aline, **3 meses, 1 encontro ao vivo por mês**, por **R$1.997** (valor de R$5.000 na pilha, a mesma mentoria que os 10 primeiros da aula levaram de bônus).
+- **Sem downsell** depois da recusa.
+- **Só na oferta Evergreen.** Na noite da aula, os 10 primeiros já levam a mentoria como bônus, e vender a mesma coisa em seguida confunde quem comprou.
+
+```
+Academy (oferta Evergreen) ─► /academy/mentoria/upsell
+                                ├─ "Sim": cobra R$1.997 (1 clique) ─► /academy/mentoria/obrigado
+                                └─ "Não" ─► /academy/obrigado
+```
+
+### 2.1 Criar o produto da mentoria
+
+1. **Meus Produtos → cadastrar produto:**
+
+   | Campo | Preencher |
+   |---|---|
+   | **Nome** | Mentoria em grupo com a Aline |
+   | **Tipo** | Mentoria |
+   | **URL da página de vendas** | `https://live.alinefilgueiras.com.br/academy/mentoria/upsell` |
+   | **E-mail, WhatsApp, categoria e capa** | Os mesmos da Academy |
+   | **Prazo de reembolso** | **7 dias.** A Garantia Mão Segura é da anatomia e não se aplica aqui. A página da mentoria promete 7 dias |
+   | **Descrição** | `Mentoria em grupo com a Dra. Aline Filgueiras: 3 meses, 1 encontro ao vivo por mês, online. Você leva os casos e as dúvidas do consultório e a Aline responde junto com o grupo. As datas dos encontros são combinadas pela equipe no WhatsApp.` |
+
+2. **Oferta:**
+
+   | Campo | Preencher |
+   |---|---|
+   | **Nome** | Mentoria · Upsell Academy |
+   | **Valor** | R$1.997,00 |
+   | **Pagamento** | Cartão e Pix, sem boleto |
+   | **Parcelamento** | Até 12x com juros pagos pelo comprador. Pela conta, cerca de 12x de R$206,54. Conferir e me mandar o valor que a Ticto mostrar |
+   | **Área de membros** | Opcional: um plano "Mentoria em grupo" na MemberKit, de 3 meses, se as gravações dos encontros ficarem lá. Sem isso, a entrega é pelo WhatsApp |
+   | **Afiliados** | Não |
+   | **Redirecionamento** | `https://live.alinefilgueiras.com.br/academy/mentoria/obrigado` |
+   | **Template** | Selo de 7 dias. Sem cupom, contador, bump e notificações |
+
+3. **Copiar o link da oferta** e me mandar. O código depois de `payment.ticto.app/` vira o fallback do 1 clique.
+
+### 2.2 Criar o Flow (no produto da Academy)
+
+1. **Meus Produtos → Filgueiras Academy 3.0 → Ações → Gerenciar → Flow → novo funil.**
+2. **START:** a oferta **Evergreen**. **Não incluir a oferta Sala.** Confira o texto "carregado para compras da(s) oferta(s): …", que tem que mostrar só a Evergreen.
+3. **Etapa Upsell:**
+   - **Nome:** Upsell · Mentoria
+   - **URL:** `https://live.alinefilgueiras.com.br/academy/mentoria/upsell`
+   - **Produto:** Mentoria em grupo com a Aline
+   - **Oferta:** Mentoria · Upsell Academy
+4. **Aceitou:**
+   - **Tipo:** Página de Obrigado
+   - **Nome:** Obrigado · Mentoria
+   - **URL:** `https://live.alinefilgueiras.com.br/academy/mentoria/obrigado`
+5. **Rejeitou:**
+   - **Tipo:** Página de Obrigado
+   - **Nome:** Obrigado · Academy
+   - **URL:** `https://live.alinefilgueiras.com.br/academy/obrigado`
+6. **Pop-up de desconto na recusa:** desligado.
+7. **`<> scripts`:** me mandar o **script de incorporação**, que tem um `flow=` diferente do da anatomia. Os botões da página já usam as classes `ticto-upsell-button` e `ticto-refuse-button`. Até o script entrar, o "Sim" abre o WhatsApp da equipe e o "Não" leva ao obrigado da Academy.
+8. Salvar e ativar.
+
+### 2.3 As páginas (já no ar)
+
+- **`/academy/mentoria/upsell`:**
+  - título: "Você entrou na Academy. Quer a Aline olhando os seus casos de perto?";
+  - o que ela leva, com o valor de R$5.000 riscado;
+  - R$1.997, ou 12x;
+  - "Sim, quero a mentoria por R$1.997" e "Não, quero seguir só com a Academy";
+  - garantia de 7 dias.
+- **`/academy/mentoria/obrigado`:** os primeiros passos na Academy (começar pela anatomia) e o aviso de que a equipe chama no WhatsApp com as datas dos encontros.
 
 ---
 
-## 3. Recuperação de quem não comprou (WhatsApp)
+## 3. Downsell de quem não quis a Academy: só a anatomia
+
+O Flow só existe **depois** de uma compra, então quem desiste da Academy não passa por ele. O downsell para essa pessoa é feito por três caminhos, todos levando à **página de venda da anatomia**:
+
+**`https://live.alinefilgueiras.com.br/academy/anatomia`**
+
+É uma página fechada: fora do Google e sem link na LP. Ela traz:
+
+- **Título:** "Se a Academy inteira não cabe agora, comece pela parte que muda a sua mão."
+- **O curso:** valor de R$1.297 riscado, 6 meses de acesso.
+- **O preço:** R$797, ou 12x de R$82,42.
+- **A garantia.**
+- **O upgrade:** em até 30 dias, a troca pela Academy pela diferença.
+- **O botão:** vai para o checkout da oferta **Anatomia · Downsell** quando o link estiver em `CHECKOUT_ANATOMIA` (`lib/ofertaAcademy.ts`). Até lá, vai para o WhatsApp da equipe. **Me mandem o link dessa oferta.**
+
+Os três caminhos:
+
+1. **Aviso de retorno na `/academy` (automático, já no ar):**
+   - **Quem vê:** quem clicou no checkout da Academy, saiu sem comprar e voltou ao site **20 minutos ou mais** depois. Vê um aviso: "Voltou? Se a Academy inteira não cabe agora, comece pela parte que muda a sua mão", com o botão para a página da anatomia.
+   - **Quem não vê:** quem comprou, porque as páginas de obrigado marcam isso no navegador; quem nunca foi ao checkout; quem fechou o aviso; e qualquer pessoa antes de 06/10, 23h59.
+2. **WhatsApp da recuperação (item 3.2):** a mensagem de 48 horas leva para a página da anatomia, e não direto para o checkout. Assim, o downsell é apresentado antes do preço.
+3. **Remarketing:** um público de quem visitou a `/academy` e não comprou (excluir compradores pelo pixel). O anúncio aponta para `/academy/anatomia`, nunca antes de 07/10.
+
+### Recuperação de quem não comprou (WhatsApp)
 
 **Onde fica:** menu **Recuperação de compras**:
 
@@ -170,7 +258,7 @@ Só mandar "ainda restam [X]" com a contagem **real**. Se os 10 já fecharam, ti
 |---|---|
 | **1 hora** | Oi, [nome]! Vi que você chegou até o checkout da Filgueiras Academy e não finalizou. Posso te ajudar com alguma dúvida? Se for sobre pagamento, dá pra fazer no Pix ou em 12x de R$185,85. Seu link: [link da oferta Evergreen] |
 | **24 horas** | [nome], uma coisa que pesa pra muita aluna: você tem 7 dias pra pedir o dinheiro de volta sem explicar nada. E se em 30 dias assistir ao módulo de anatomia e não sentir a mão mais segura, a gente devolve. O risco fica com a Aline. [link da oferta Evergreen] |
-| **48 horas**, sem resposta ou se a objeção for preço | A mensagem do downsell (`ticto.md` §11.5): o curso de anatomia separado, R$797 ou 12x de R$82,42, com 6 meses de acesso e a troca pela Academy pela diferença em até 30 dias. [link da oferta Anatomia · Downsell] |
+| **48 horas**, sem resposta ou se a objeção for preço | A mensagem do downsell (`ticto.md` §11.5): o curso de anatomia separado, R$797 ou 12x de R$82,42, com 6 meses de acesso e a troca pela Academy pela diferença em até 30 dias. Link: `https://live.alinefilgueiras.com.br/academy/anatomia` |
 | **Pix emitido e não pago, 30 min** | Oi, [nome]! Seu Pix ainda não foi pago. Segue o código de novo, pra você não precisar refazer a compra: [código Pix] |
 
 Depois da terceira mensagem, parar. Mais do que isso vira insistência e queima a lista para os próximos lançamentos.
@@ -204,6 +292,9 @@ A Ticto manda **webhooks** com os eventos de carrinho abandonado, Pix expirado e
 ---
 
 ## Pendências
+
+- [ ] **Link do checkout da oferta Anatomia · Downsell**, que vai em `CHECKOUT_ANATOMIA`. É o botão da página `/academy/anatomia`.
+- [ ] **Mentoria:** o link da oferta "Mentoria · Upsell Academy", que vira o fallback; o script do Flow da Academy (`<> scripts`), que vai em `TICTO_UPSELL_ACADEMY`; e a parcela de 12x que a Ticto mostrar.
 
 - [x] Script do Flow colado em `TICTO_UPSELL_ANATOMIA.scriptSrc` (05/10). Os botões da página usam as classes `ticto-upsell-button` e `ticto-refuse-button`.
 - [x] **Código da oferta de upgrade para o fallback** (`OB97300B4`, em `TICTO_UPSELL_ANATOMIA.fallbackOffer` e `UPGRADE_ANATOMIA_URL`, 05/10): é o trecho depois de `payment.ticto.app/` no link do checkout da oferta Academy · Upgrade Anatomia. Sem cartão salvo (anatomia paga no Pix), a Ticto usa esse código para abrir o checkout do upgrade.

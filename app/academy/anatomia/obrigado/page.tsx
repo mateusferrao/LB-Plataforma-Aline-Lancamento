@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/Container";
 import { Footer } from "@/components/Footer";
+import { MarcaCompra } from "@/components/academy/MarcaCompra";
 import { WhatsAppIcon } from "@/components/WhatsAppIcon";
 import { ACADEMY, ANATOMIA } from "@/lib/ofertaAcademy";
 
@@ -49,6 +50,7 @@ export default function AnatomiaObrigado() {
   const upgradeHref = ANATOMIA.upgradeUrl || UPGRADE_WHATSAPP_URL;
   return (
     <>
+      <MarcaCompra />
       <main className="py-16 sm:py-24">
         <Container narrow>
           <div className="text-center">

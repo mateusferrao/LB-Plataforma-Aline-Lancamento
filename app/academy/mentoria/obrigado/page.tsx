@@ -1,23 +1,21 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/Container";
 import { Footer } from "@/components/Footer";
-import { MarcaCompra } from "@/components/academy/MarcaCompra";
 import { WhatsAppIcon } from "@/components/WhatsAppIcon";
-import { ACADEMY, SALA } from "@/lib/ofertaAcademy";
+import { MarcaCompra } from "@/components/academy/MarcaCompra";
+import { ACADEMY, MENTORIA } from "@/lib/ofertaAcademy";
 
 export const metadata: Metadata = {
-  title: "Bem-vinda à Filgueiras Academy",
-  description: "Compra confirmada. Veja os seus primeiros passos na Filgueiras Academy.",
+  title: "Bem-vinda à mentoria · Filgueiras Academy",
+  description: "Compra confirmada: Filgueiras Academy e mentoria em grupo com a Aline.",
   robots: { index: false, follow: false },
 };
 
-// Redirecionamento pós-compra das duas ofertas da Academy na Ticto
-// (docs/plataforma/ticto.md). Sem urgência aqui: quem chega já comprou. O
-// objetivo é a primeira vitória rápida (a primeira aula de anatomia), o que
-// reduz pedido de reembolso, e avisar os 10 primeiros sobre os bônus.
+// "Aceitou" do Flow da Academy (docs/plataforma/ticto-funil.md §2): comprou a
+// Academy e a mentoria. Primeiro a vitória rápida (a anatomia), depois a mentoria.
 const TIME_WHATSAPP_URL =
   "https://wa.me/5531953491799?text=" +
-  encodeURIComponent("Oi! Acabei de entrar na Filgueiras Academy e fiquei com uma dúvida.");
+  encodeURIComponent("Oi! Entrei na Academy e na mentoria em grupo com a Aline.");
 
 const PASSOS = [
   {
@@ -29,12 +27,12 @@ const PASSOS = [
     d: "Assista à primeira aula do curso de Fresh Frozen + dissecção ainda hoje. É por ela que tudo começa.",
   },
   {
-    t: "Salve o número da equipe",
-    d: "É por ele que avisamos os encontros ao vivo e a aula de discussão de casos com a Aline.",
+    t: "Fale com a equipe sobre a mentoria",
+    d: `A equipe te chama no WhatsApp com as datas dos encontros (${MENTORIA.encontros.toLowerCase()}, por ${MENTORIA.meses} meses). Salve o número.`,
   },
 ] as const;
 
-export default function AcademyObrigado() {
+export default function MentoriaObrigado() {
   return (
     <>
       <MarcaCompra />
@@ -45,11 +43,11 @@ export default function AcademyObrigado() {
               Compra confirmada
             </span>
             <h1 className="mt-4 text-balance font-sans font-semibold text-[1.9rem] leading-[1.15] tracking-[-0.015em] text-fg sm:text-[2.4rem]">
-              Bem-vinda à {ACADEMY.nome}.
+              Bem-vinda à {ACADEMY.nome} e à mentoria.
             </h1>
             <p className="mx-auto mt-5 max-w-[480px] text-[1.05rem] leading-[1.6] text-fg-soft">
-              Você tem {ACADEMY.mesesAcesso} meses pra estudar no seu ritmo. Faça os três passos abaixo
-              hoje.
+              Você tem {ACADEMY.mesesAcesso} meses de Academy e {MENTORIA.meses} meses de mentoria em grupo com a
+              Aline. Faça os três passos abaixo hoje.
             </p>
           </div>
 
@@ -64,12 +62,6 @@ export default function AcademyObrigado() {
               </li>
             ))}
           </ol>
-
-          <p className="mt-8 rounded-[6px] border border-line px-5 py-4 text-[0.98rem] leading-[1.55] text-fg-soft">
-            <strong className="font-semibold text-fg">Comprou na noite da aula?</strong> Se você está entre
-            os {SALA.primeirosN} primeiros, a equipe te chama no WhatsApp pra combinar o certificado, a
-            prancheta, a toxina e a mentoria em grupo com a Aline.
-          </p>
 
           <div className="mt-10 text-center">
             <a
