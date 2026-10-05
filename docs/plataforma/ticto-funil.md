@@ -22,7 +22,7 @@ LP /academy ou sala ─► Academy R$1.797 ────────────�
                                          ▼  (Flow, pós-compra)
                               /academy/anatomia/upgrade
                               Upsell de 1 clique: Academy por +R$1.000
-                                ├─ aceitou ─► /academy/obrigado
+                                ├─ "Sim": cobra +R$1.000 no cartão (1 clique) ─► /academy/obrigado
                                 └─ recusou ─► /academy/anatomia/obrigado
                                                (+ WhatsApp no 7º e no 25º dia)
 ```
@@ -95,7 +95,7 @@ O rollover é a **Academy vendida pela diferença** para quem já comprou a anat
    - **URL da página de upsell:** `https://live.alinefilgueiras.com.br/academy/anatomia/upgrade`
    - **Produto:** Filgueiras Academy · Consulta, Agulha e Espelho
    - **Oferta:** Academy · Upgrade Anatomia (R$1.000)
-4. **Se aceitar:** ir para `https://live.alinefilgueiras.com.br/academy/obrigado`, a página de quem tem a Academy.
+4. **Se aceitar:** ir para `https://live.alinefilgueiras.com.br/academy/obrigado`, a página de quem tem a Academy. A **compra acontece no próprio botão "Sim"** da página de upsell: o script do 1 clique cobra os R$1.000 no cartão que ela acabou de usar na anatomia, sem abrir checkout nem pedir dados. Só **depois** da cobrança aprovada a Ticto leva para o obrigado.
 5. **Se recusar:** ir para `https://live.alinefilgueiras.com.br/academy/anatomia/obrigado`. **Não** criar etapa de downsell depois do upsell. Abaixo da anatomia não existe oferta que faça sentido, e um terceiro "não" seguido cansa a compradora.
 6. **Desconto em pop-up ao recusar: desligado.** A Ticto oferece um pop-up que baixa o preço do upsell quando a pessoa recusa, e ele quebra a regra acima: alguém levaria a Academy por menos que R$1.797 no total.
 7. Clicar em **`<> scripts`**, na barra superior do Flow, e **copiar os três trechos**:
@@ -104,6 +104,18 @@ O rollover é a **Academy vendida pela diferença** para quem já comprou a anat
    - o **botão de recusar**.
 8. **Mandar os três trechos aqui na conversa.** Eu colo em `lib/ofertaAcademy.ts` (`TICTO_UPSELL_ANATOMIA`) e publico. Sem os scripts, o 1 clique não funciona. Até lá, a página usa o link da oferta oculta, que pede os dados de novo, ou o WhatsApp da equipe.
 9. Salvar e **ativar** o Flow.
+
+### Como ela compra o upgrade, passo a passo
+
+1. Paga a anatomia (R$797) no checkout da Ticto.
+2. A Ticto leva ela para `/academy/anatomia/upgrade`, em vez do obrigado.
+3. Ela clica em **"Sim, quero a Academy completa por mais R$1.000"**. **A compra é esse clique:** o script da Ticto cobra no mesmo cartão, sem novo checkout.
+4. Com a cobrança aprovada, a Ticto leva para `/academy/obrigado` e a MemberKit libera a Academy (12 meses).
+5. Se ela clicar em **"Não, quero ficar só com o curso de anatomia"**, nada é cobrado e ela vai para `/academy/anatomia/obrigado`.
+
+**Enquanto os scripts não estiverem colados na página**, o "Sim" abre o **checkout normal** da oferta Academy · Upgrade Anatomia. Ela preenche os dados e paga ali, e o redirecionamento da oferta leva ao mesmo `/academy/obrigado`. Funciona igual, só que com mais um passo.
+
+**Quem pagou a anatomia no Pix** não tem cartão salvo. No "Sim", a Ticto deve gerar um Pix novo ou abrir o checkout. Testar esse caso antes (seção 4).
 
 ### 1.3 A página de upsell (já no ar)
 
