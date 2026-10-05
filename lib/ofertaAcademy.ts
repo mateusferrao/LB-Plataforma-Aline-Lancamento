@@ -132,14 +132,15 @@ export const ANATOMIA = {
 } as const;
 
 // Upsell de 1 clique do Flow da Ticto (docs/plataforma/ticto-funil.md): quem
-// compra a anatomia cai em /academy/anatomia/upgrade e pode levar a Academy pela
-// diferença sem preencher nada de novo. PENDENTE: colar aqui, sem alterar, os três
-// trechos que a Ticto mostra em Flow → "<> scripts". Enquanto estiverem vazios, a
-// página usa o link da oferta oculta (ou o WhatsApp) e o "não" leva ao obrigado.
+// compra a anatomia cai em /academy/anatomia/upgrade e leva a Academy pela
+// diferença sem preencher nada de novo. O script (Flow → "<> scripts") liga os
+// botões pelas classes ticto-upsell-button e ticto-refuse-button. O fallbackOffer
+// é o código da oferta de upgrade (o trecho depois de payment.ticto.app/ no link
+// do checkout): sem cartão salvo (ex.: anatomia paga no Pix), a Ticto abre o
+// checkout dessa oferta. PENDENTE: fallbackOffer.
 export const TICTO_UPSELL_ANATOMIA = {
-  script: "",
-  botaoAceitar: "",
-  botaoRecusar: "",
+  scriptSrc: "https://midas.ticto.app/oneclickbuy.js?flow=8a88fef5-7f44-4687-9ca5-05b21b5a8288.120878",
+  fallbackOffer: "",
 } as const;
 
 // Garantia nomeada (pitch, bloco 6). Duas camadas.

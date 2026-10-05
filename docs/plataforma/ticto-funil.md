@@ -205,7 +205,9 @@ A Ticto manda **webhooks** com os eventos de carrinho abandonado, Pix expirado e
 
 ## Pendências
 
-- [ ] Os três trechos de `<> scripts` do Flow, que eu colo em `TICTO_UPSELL_ANATOMIA`.
+- [x] Script do Flow colado em `TICTO_UPSELL_ANATOMIA.scriptSrc` (05/10). Os botões da página usam as classes `ticto-upsell-button` e `ticto-refuse-button`.
+- [ ] **Código da oferta de upgrade para o fallback** (`TICTO_UPSELL_ANATOMIA.fallbackOffer`): é o trecho depois de `payment.ticto.app/` no link do checkout da oferta Academy · Upgrade Anatomia. Sem cartão salvo (anatomia paga no Pix), a Ticto usa esse código para abrir o checkout do upgrade.
+- [ ] **Corrigir o START do Flow** para a oferta da anatomia (R$797) e o caminho "Rejeitou" para `/academy/anatomia/obrigado`.
 - [ ] O link da oferta oculta **Academy · Upgrade Anatomia**, que vai em `UPGRADE_ANATOMIA_URL`. É a reserva da página e o link das mensagens do 7º e do 25º dia.
 - [ ] O formato e o preço da mentoria em grupo, para o upsell da evergreen (seção 2).
 - [ ] A ferramenta de WhatsApp, se quiserem automatizar a recuperação (seção 3.4).

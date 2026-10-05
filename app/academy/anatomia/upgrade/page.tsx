@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/Container";
-import { TictoSnippet } from "@/components/academy/TictoSnippet";
 import { ACADEMY, ANATOMIA, GARANTIA_ACADEMY, PILHA_ACADEMY, TICTO_UPSELL_ANATOMIA, brl } from "@/lib/ofertaAcademy";
 
 export const metadata: Metadata = {
@@ -25,12 +24,20 @@ const UPGRADE_WHATSAPP_URL =
 const A_MAIS = PILHA_ACADEMY.slice(1);
 const VALOR_A_MAIS = brl(A_MAIS.reduce((t, i) => t + (i.valor ?? 0), 0) + Math.round(ACADEMY.precoCheio / 2));
 
+const TEXTO_ACEITAR = `Sim, quero a Academy completa por mais ${ANATOMIA.upgradePrecoLabel}`;
+const TEXTO_RECUSAR = "Não, quero ficar só com o curso de anatomia";
+const ACEITAR =
+  "mt-7 inline-flex w-full cursor-pointer items-center justify-center rounded-[2px] bg-wine px-8 py-[18px] font-sans text-[1.02rem] font-semibold text-on-wine transition-transform duration-150 ease-out hover:-translate-y-0.5";
+const RECUSAR =
+  "mt-4 block w-full cursor-pointer bg-transparent text-center text-[0.95rem] text-fg-soft underline underline-offset-2 hover:text-wine-ink";
+
 export default function AnatomiaUpgrade() {
-  const temScripts = Boolean(TICTO_UPSELL_ANATOMIA.script && TICTO_UPSELL_ANATOMIA.botaoAceitar);
+  const umClique = Boolean(TICTO_UPSELL_ANATOMIA.scriptSrc);
   return (
     <main className="py-14 sm:py-20">
       <Container narrow>
-        {temScripts && <TictoSnippet html={TICTO_UPSELL_ANATOMIA.script} />}
+        {/* Script do 1 clique da Ticto. O React 19 leva <script async src> pro <head>. */}
+        {umClique && <script async src={TICTO_UPSELL_ANATOMIA.scriptSrc} />}
 
         <div className="text-center">
           <span className="text-[12px] font-semibold tracking-[0.24em] text-wine-ink uppercase">
@@ -85,10 +92,21 @@ export default function AnatomiaUpgrade() {
             <p className="text-[1rem] text-fg-soft">Agora, só a diferença</p>
             <p className="mt-1 font-serif text-[3.2rem] leading-none text-fg">{ANATOMIA.upgradePrecoLabel}</p>
 
-            {temScripts ? (
+            {umClique ? (
               <>
-                <TictoSnippet html={TICTO_UPSELL_ANATOMIA.botaoAceitar} className="mt-7" />
-                <TictoSnippet html={TICTO_UPSELL_ANATOMIA.botaoRecusar} className="mt-4" />
+                {/* Botões ligados pelo script da Ticto (classes oficiais do Flow). */}
+                <button
+                  type="button"
+                  className={`ticto-upsell-button ${ACEITAR}`}
+                  {...(TICTO_UPSELL_ANATOMIA.fallbackOffer
+                    ? { "data-fallback-offer": TICTO_UPSELL_ANATOMIA.fallbackOffer }
+                    : {})}
+                >
+                  {TEXTO_ACEITAR}
+                </button>
+                <button type="button" className={`ticto-refuse-button ${RECUSAR}`}>
+                  {TEXTO_RECUSAR}
+                </button>
               </>
             ) : (
               <>
@@ -96,15 +114,12 @@ export default function AnatomiaUpgrade() {
                   href={ANATOMIA.upgradeUrl || UPGRADE_WHATSAPP_URL}
                   target={ANATOMIA.upgradeUrl ? undefined : "_blank"}
                   rel="noopener noreferrer"
-                  className="mt-7 inline-flex w-full items-center justify-center rounded-[2px] bg-wine px-8 py-[18px] font-sans text-[1.02rem] font-semibold text-on-wine transition-transform duration-150 ease-out hover:-translate-y-0.5"
+                  className={ACEITAR}
                 >
-                  Sim, quero a Academy completa por mais {ANATOMIA.upgradePrecoLabel}
+                  {TEXTO_ACEITAR}
                 </a>
-                <a
-                  href={OBRIGADO}
-                  className="mt-4 block text-[0.95rem] text-fg-soft underline underline-offset-2 hover:text-wine-ink"
-                >
-                  Não, quero ficar só com o curso de anatomia
+                <a href={OBRIGADO} className={RECUSAR}>
+                  {TEXTO_RECUSAR}
                 </a>
               </>
             )}
