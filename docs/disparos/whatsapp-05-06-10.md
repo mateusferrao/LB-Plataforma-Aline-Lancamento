@@ -11,15 +11,15 @@
 As cinco primeiras seguiam o mesmo molde: linha de abertura em caixa alta, "Aqui é da equipe", bloco de oferta, link. Duas rodadas com esse molde deram resultado fraco. As mudanças:
 
 1. **Sem caixa alta e sem "gancho de campanha".** Soa como colega mandando, e não como lista.
-2. **Cada mensagem traz uma coisa nova**, uma por vez: uma pergunta, uma cena, o resumo prático, o presente, o preço comparado, a garantia, o prazo. Quem leu a anterior tem motivo pra ler a próxima.
-3. **A primeira abre com uma pergunta que a leitora se faz sozinha** (onde a mão hesita). O link já vai no corpo, porque não há resposta automática. Responder é opcional, e só convidamos a responder se alguém da equipe puder responder no dia.
+2. **Cada mensagem traz uma coisa nova**, uma por vez: o acesso técnico, uma cena, o resumo prático, o presente, o preço comparado, a garantia, o prazo. Quem leu a anterior tem motivo pra ler a próxima.
+3. **A primeira abre pelo lado técnico e exclusivo:** o conhecimento de fresh frozen e dos cursos internacionais da Aline, que quase sempre exige viagem. Fala com a ex-aluna que já tem a técnica e quer o próximo nível.
 4. **Só o que é verdade e já está no repo.** Datas, preço, garantia e o número de ingressos são reais. Nada de "poucas vagas" com número, nada de promessa de agenda cheia.
 
 ### Princípios do Hormozi aplicados (equação de valor: sonho × probabilidade ÷ (tempo × esforço))
 
 | Mensagem | Alavanca | Princípio |
 |---|---|---|
-| 1 · pergunta | Probabilidade percebida | $100M Leads: abrir pela dor que ela reconhece ("call out"), e só depois a oferta |
+| 1 · exclusividade | Sonho e probabilidade | Autoridade e acesso raro: o que normalmente exige viagem chega numa noite online |
 | 2 · cena | Sonho | Mostrar o resultado (ver por dentro) e a causa (a artéria a milímetros da agulha) |
 | 3 · resumo | Tempo e esforço | Tirar toda dúvida prática de uma vez, pra decidir sem sair do WhatsApp |
 | 4 · presente | Bônus | "Focus on the bonus": o Protocolo é o motivo, com prazo real (some às 20h) |
@@ -36,7 +36,7 @@ Horário de Brasília. Se hoje já passou do horário do disparo 1, mantenha a o
 
 | # | Dia | Hora | Mensagem | `utm_content` |
 |---|---|---|---|---|
-| 1 | 05/10 | 11h | A pergunta (onde a mão hesita) | `d1-pergunta` |
+| 1 | 05/10 | 11h | O fresh frozen que exigia viagem | `d1-fresh` |
 | 2 | 05/10 | 15h | A artéria e o atlas | `d1-cena` |
 | 3 | 05/10 | 19h30 | O resumo pra decidir à noite | `d1-resumo` |
 | 4 | 06/10 | 9h | O presente expira às 20h | `d0-presente` |
@@ -50,45 +50,24 @@ Horário de Brasília. Se hoje já passou do horário do disparo 1, mantenha a o
 
 ---
 
-## Disparo 1 · 05/10, 11h · A pergunta
+## Disparo 1 · 05/10, 11h · O fresh frozen que exigia viagem
 
-**Objetivo:** reconhecimento imediato (a leitora se identifica numa das áreas) e clique. Sem resposta automática, o link vai no corpo.
+**Objetivo:** posicionar a aula como acesso a um conhecimento técnico e internacional da Aline, falando com a ex-aluna que já aprendeu a técnica. Sem resposta automática, o link vai no corpo.
 
-**Texto (versão com convite à resposta, só se a equipe puder responder hoje):**
-
-> Oi, {primeiro nome}. Aqui é a equipe da Dra. Aline, com uma pergunta de 3 segundos.
+> {primeiro nome}, você já aprendeu a técnica com a Aline. Falta ver o que fica por baixo.
 >
-> Perto de qual destas áreas a sua mão pensa duas vezes?
+> Ela fez temporada de dissecção em peças fresh frozen nos Estados Unidos e hoje dá cursos de anatomia na Europa. Quem quer esse conhecimento costuma ter que viajar, e o curso lá fora cobra em dólar.
 >
-> 1. Nariz
-> 2. Glabela
-> 3. Sulco
-> 4. Ainda não aplico
+> Amanhã, às 20h, ela traz esse material pra uma aula online e ao vivo, de uns 90 minutos: os planos, as estruturas e os limites que mudam a conduta na cadeira.
 >
-> Se quiser, responde o número aqui que a gente conversa. Amanhã, às 20h, a Aline mostra por dentro o que fica embaixo da pele nessas áreas.
->
-> Seu ingresso de ex-aluna: R$67, com o Protocolo de Resgate Vascular de presente até a aula começar.
+> Ingresso de ex-aluna: R$67, com o Protocolo de Resgate Vascular de presente até a aula começar.
 > {link}
 >
 > (Pra parar de receber, responde SAIR.)
 
-**Texto (versão sem convite, se ninguém vai responder):** igual, trocando "Se quiser, responde o número aqui que a gente conversa. Amanhã" por "Amanhã". A pergunta fica como espelho, e o clique é a única ação.
+**Abertura B (para testar em metade da lista):** "{primeiro nome}, a Aline estuda a face em peças fresh frozen nos Estados Unidos. Amanhã, às 20h, você vê o que ela aprendeu sem sair de casa." (segue direto para a linha do ingresso e o link).
 
-**Abertura B (para testar em metade da lista):** "{primeiro nome}, sem textão: perto de qual destas áreas a sua mão pensa duas vezes?" (o resto igual).
-
-**Roteiro para a equipe, se alguém responder (copiar e colar, dentro das 24h, `utm_content=d1-resposta`):**
-
-- **1, 2 ou 3** (troque {região} por nariz, glabela ou sulco):
-  > {Região}, anotado. É uma das áreas que a Aline cita quando fala da mão que hesita, e a aula de amanhã é sobre o que fica embaixo dela.
-  >
-  > Seu ingresso de ex-aluna sai por R$67, com o Protocolo de Resgate Vascular de presente até a aula começar: {link}
-- **4:**
-  > Então você chegou na hora certa. Quanto antes a gente enxerga a anatomia por dentro, menos vício a mão carrega.
-  >
-  > A aula é amanhã, às 20h, por R$67, com o Protocolo de Resgate Vascular de presente: {link}
-- **Qualquer outra dúvida:** responder pelo FAQ de `docs/agente-ia/02-faq.md` ou encaminhar ao +55 31 95349-1799.
-
-**Por que funciona:** nariz, glabela e sulco são as três áreas que a Aline cita no pitch como as que fazem a mão hesitar. A leitora se reconhece em uma, e a oferta já está logo abaixo.
+**Por que:** a ex-aluna já confia na técnica, e o que a aula entrega a mais é o nível que costuma ficar fora do alcance (viagem, dólar). Sem preço de referência aqui, porque a âncora de R$35 mil fica no disparo 6. A aula é descrita como "esse material", nunca como dissecção ao vivo.
 
 ---
 
@@ -220,7 +199,7 @@ A Aline não consegue gravar. O texto vai assinado por ela, em primeira pessoa, 
 
 1. **Exclua os compradores antes de cada disparo.** Exporte da Ticto (hora da compra) e cruze com a lista. Quem comprou entre o 3 e o 4 não pode receber o 4.
 2. **Quem responder SAIR sai de todos os disparos seguintes**, na hora.
-3. **Quem responder qualquer coisa (exceto SAIR) sai do disparo em massa** e vai pro atendimento humano, que continua a conversa. Não há resposta automática: se ninguém puder responder durante o dia, use a versão do disparo 1 sem convite à resposta.
+3. **Quem responder qualquer coisa (exceto SAIR) sai do disparo em massa** e vai pro atendimento humano, que continua a conversa. Não há resposta automática, então combine quem atende nos dois dias.
 4. **Em lotes**, nunca a lista inteira de uma vez.
 5. **API oficial:** cadastre cada mensagem como template de categoria *Marketing*. Use `{{1}}` para o primeiro nome. No botão de link, deixe a URL base fixa e a variável só no `utm_content` (`...&utm_content={{1}}`), pra reaproveitar o mesmo template.
 6. **Cuidado com a qualidade da conta:** 8 mensagens em 2 dias é bastante. Se o número de SAIR ou de bloqueios subir num disparo, corte o seguinte. Pela força de cada um, eu cortaria primeiro o 2 e o 4, e manteria o 1, o 7 e o 8.
@@ -230,17 +209,17 @@ A Aline não consegue gravar. O texto vai assinado por ela, em primeira pessoa, 
 
 - Sem travessão, sem exclamação, sem emoji.
 - Sem "não é X, é Y", sem lista de negações, sem pergunta respondida pelo próprio texto.
-- No máximo uma lista por mensagem. Só as listas que são listas de verdade (as quatro opções do 1, os dados do 3, os arquivos do 4).
+- No máximo uma lista por mensagem. Só as listas que são listas de verdade (os dados do 3 e os arquivos do 4).
 - Sem número de vagas, sem promessa de agenda, de faturamento ou de resultado clínico, sem nome de medicamento, sem a marca "Botox".
 - A aula é descrita como "imagens das dissecções", e nunca como dissecção ao vivo.
 
 ## Pendências
 
-- [ ] **Validar com a Aline** que a aula de amanhã cobre nariz, glabela e sulco por dentro (disparo 1 e as respostas).
+- [ ] **A Aline confirma** a temporada de dissecção em fresh frozen nos EUA e os cursos de anatomia na Europa (disparo 1). O playbook de vendas já afirma os dois, mas o doc da plataforma lista como pendente.
 - [ ] **A Aline aprova o texto do disparo 5** (primeira pessoa, com a frase sobre "e se tiver uma artéria bem aqui").
 - [ ] **Atualizar o "180"** do disparo 6 com o número real da hora do envio.
 - [ ] **Cancelar a M4 e a M5** do `docs/alunas/README.md`, se estiverem agendadas.
-- [ ] **Quem responde as respostas?** Defina uma pessoa da equipe para 05/10 e 06/10 (o roteiro está no disparo 1). Sem ninguém, use a versão sem convite.
+- [ ] **Quem atende as respostas?** Defina uma pessoa da equipe para 05/10 e 06/10. Não há resposta automática.
 
 ## Se a lista não for de ex-alunas
 
