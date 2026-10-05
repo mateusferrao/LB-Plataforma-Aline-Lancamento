@@ -64,7 +64,7 @@ Fontes do plano, de 04/10/2026:
 | Já alunas | As 28 anuais ganham o curso de anatomia. Condição das ex-alunas a redefinir (era R$1.497 pela lista) |
 | Prova | Prints reais com o rótulo "alunas da Aline", sem dizer que são da plataforma. Sem o print de faturamento. Pedir depoimento às alunas mais engajadas da plataforma |
 | Público | Inclui esteticistas (o "Pra quem é" cita, sem ressalva legal por enquanto) |
-| Ancoragem | Pilha de valor com o valor riscado por item e dois totais na sala: R$8.794 (todo mundo) e R$14.394 (10 primeiros). Os +6 meses dos 5 primeiros ficam fora da soma. Na página é "valor", nunca "de R$X por". Embaixo do card, os cursos presenciais da Aline como âncora real |
+| Ancoragem | Pilha de valor com o valor riscado por item e dois totais na sala: R$8.794 (todo mundo) e R$14.394 (10 primeiros). Os +6 meses dos 5 primeiros ficam fora da soma. Na página é "valor", nunca "de R$X por". Os cards com os preços dos presenciais saíram em 05/10 (soltos depois do botão, confundiam); a comparação fica no título da seção e no pitch |
 | Fora da página | Curso presencial nos EUA como próxima oferta; promessa de agenda, faturamento ou resultado clínico |
 | Tráfego frio | Teste A/B: `/academy` × oferta de entrada **Protocolo + aula gravada** → upsell da plataforma por R$1.797 menos o valor pago, por 72h. A gravação nunca é vendida "avulsa" e não entra antes de 08/10, 23h59 |
 | Canais do carrinho | Grupo da aula, agente de IA no WhatsApp (o playbook precisa ser atualizado: hoje ele proíbe falar da plataforma) e disparo para ex-alunas |
@@ -81,7 +81,7 @@ As duas páginas foram enxugadas no molde da página do Mapa de Intercorrência 
 5. **É pra você?:** sim e não.
 6. **Quem conduz:** os números, um parágrafo e a frase do criativo 08.
 7. **Prints de alunas da Aline.**
-8. **Oferta:** um card com a pilha de valor (o valor riscado por item e o total riscado), o preço, o botão e os selos. Na sala, os bônus de todas entram na pilha; as mais rápidas vêm depois do botão, fora da soma. Embaixo, os cursos presenciais da Aline como âncora.
+8. **Oferta:** um card com a pilha do núcleo (o valor riscado por item e o total), o preço, o botão e os selos. Na sala, até 23h59 de 06/10, entram também os bônus dos 10 primeiros, com o total deles, e os +6 meses dos 5 primeiros, fora da soma.
 9. **Garantia Mão Segura:** selo e duas frases.
 10. **FAQ:** fechada, 7 perguntas na evergreen e 9 na sala.
 11. **Fechamento:** "Da próxima vez que a paciente deitar…", o resumo da oferta numa frase, o botão e o P.S. + barra fixa no celular.

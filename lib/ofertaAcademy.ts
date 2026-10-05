@@ -122,11 +122,4 @@ export const GARANTIA_ACADEMY = {
   email: "suporte.alinefilgueiras@gmail.com.br",
 } as const;
 
-// Âncoras reais, embaixo do card da oferta: os cursos presenciais da própria
-// Aline (esteira de abr/2025), só de técnica.
-export const ANCORAS = [
-  { o: "o curso presencial de toxina da Aline, 2 dias, só técnica", v: "R$2.800 a R$3.500" },
-  { o: "o curso presencial de preenchimento da Aline, 2 dias, só técnica", v: "R$4.400 a R$4.800" },
-] as const;
-
 export { formatBRL as brl };

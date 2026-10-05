@@ -7,7 +7,6 @@ import { Secao } from "@/components/academy/Secao";
 import { Ticks } from "@/components/academy/Ticks";
 import {
   ACADEMY,
-  ANCORAS,
   BONUS_PRIMEIROS,
   BONUS_TOPO,
   GARANTIA_ACADEMY,
@@ -20,7 +19,7 @@ import {
 // Oferta num card só (molde da referência), com a oferta ajustada de 05/10:
 // o núcleo com o valor riscado por item e o total de todo mundo; na sala, os
 // bônus dos 10 primeiros com o total deles e, à parte, os +6 meses dos 5
-// primeiros (fora da soma). Um preço só: R$1.797. Embaixo, as âncoras reais.
+// primeiros (fora da soma). Um preço só: R$1.797.
 function Linha({ nome, detalhe, valor, tag }: { nome: string; detalhe: string; valor?: number; tag?: string }) {
   return (
     <li className="flex items-baseline justify-between gap-5 border-b border-dashed border-line py-3">
@@ -117,15 +116,6 @@ export function Oferta({ modo }: { modo: Modo }) {
             </AteOFim>
           )}
         </div>
-      </Reveal>
-
-      <Reveal className="mt-4 grid gap-4 sm:grid-cols-2">
-        {ANCORAS.map((a) => (
-          <div key={a.o} className="rounded-[6px] border border-line px-5 py-5 text-center">
-            <p className="font-sans text-[1.3rem] font-semibold text-fg">{a.v}</p>
-            <p className="mt-1 text-[0.92rem] leading-[1.45] text-fg-soft">{a.o}</p>
-          </div>
-        ))}
       </Reveal>
     </Secao>
   );
