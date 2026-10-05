@@ -1,7 +1,6 @@
 import { Footer } from "@/components/Footer";
 import { SocialProof } from "@/components/fresh/sections/SocialProof";
 import { BarraPrazo } from "@/components/academy/BarraPrazo";
-import { DownsellRetorno } from "@/components/academy/DownsellRetorno";
 import type { Modo } from "@/components/academy/CtaButton";
 import { StickyCta } from "@/components/academy/StickyCta";
 import { Autoridade } from "@/components/academy/sections/Autoridade";
@@ -41,7 +40,6 @@ export function AcademyPage({ modo }: { modo: Modo }) {
       <Footer />
       <div aria-hidden className="h-[110px] sm:hidden" />
       <StickyCta modo={modo} />
-      {modo === "evergreen" && <DownsellRetorno />}
     </>
   );
 }

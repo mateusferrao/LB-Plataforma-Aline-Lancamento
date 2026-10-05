@@ -180,6 +180,8 @@ Banner e texto do topo:
 
 Lista de benefícios: a mesma da Sala, terminando em **"Valor total: R$8.794. Hoje: R$1.797"**, sem a linha dos 10 primeiros.
 
+**URL de Back Redirect** (configurações do template): `https://live.alinefilgueiras.com.br/academy/anatomia`. Quem aperta voltar no checkout sem comprar cai no downsell da anatomia. **Ligar só na manhã de 07/10** e nunca no template da Sala. Detalhes em `ticto-funil.md` §3.
+
 **Banners em imagem:** a central de ajuda não informa as medidas. Quando a equipe abrir o editor do template, me passem os tamanhos pedidos (desktop e celular) que eu gero as artes no mesmo padrão dos criativos.
 
 ---

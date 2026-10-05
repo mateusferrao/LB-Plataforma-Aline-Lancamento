@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Container } from "@/components/Container";
 import { Footer } from "@/components/Footer";
 import { WhatsAppIcon } from "@/components/WhatsAppIcon";
-import { MarcaCompra } from "@/components/academy/MarcaCompra";
 import { ACADEMY, MENTORIA } from "@/lib/ofertaAcademy";
 
 export const metadata: Metadata = {
@@ -35,7 +34,6 @@ const PASSOS = [
 export default function MentoriaObrigado() {
   return (
     <>
-      <MarcaCompra />
       <main className="py-16 sm:py-24">
         <Container narrow>
           <div className="text-center">

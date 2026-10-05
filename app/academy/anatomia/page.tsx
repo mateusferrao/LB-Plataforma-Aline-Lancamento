@@ -12,8 +12,8 @@ export const metadata: Metadata = {
 };
 
 // Downsell de quem não quis a Academy (docs/plataforma/ticto-funil.md §3). Página
-// fechada: sem link na LP, fora do Google. Chega por três caminhos: o aviso de
-// retorno na /academy, o WhatsApp da recuperação e o remarketing. Hormozi: o
+// fechada: sem link na LP, fora do Google. Chega por três caminhos: o back redirect
+// do checkout Evergreen na Ticto, o WhatsApp da recuperação e o remarketing. Hormozi: o
 // downsell tira coisas (só a anatomia, 6 meses), não baixa o preço da Academy.
 const WHATS_URL =
   "https://wa.me/5531953491799?text=" +

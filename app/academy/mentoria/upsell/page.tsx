@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/Container";
-import { MarcaCompra } from "@/components/academy/MarcaCompra";
 import { MENTORIA, TICTO_UPSELL_ACADEMY, brl } from "@/lib/ofertaAcademy";
 
 export const metadata: Metadata = {
@@ -35,7 +34,6 @@ export default function MentoriaUpsell() {
   const umClique = Boolean(TICTO_UPSELL_ACADEMY.scriptSrc);
   return (
     <main className="py-14 sm:py-20">
-      <MarcaCompra />
       <Container narrow>
         {umClique && <script async src={TICTO_UPSELL_ACADEMY.scriptSrc} />}
 

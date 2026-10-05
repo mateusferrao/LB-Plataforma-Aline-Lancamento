@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import { agora } from "@/lib/lotes";
-import { marcarCliqueCheckout } from "@/lib/funilAcademy";
 import { ACADEMY, SALA } from "@/lib/ofertaAcademy";
 import { gaEvent, trackCustom } from "@/lib/analytics";
 
@@ -56,7 +55,6 @@ export function CtaButton({ modo, children, variant = "dark", className = "", sh
       data-checkout
       className={`${base} ${palette} ${className}`}
       onClick={() => {
-        marcarCliqueCheckout();
         trackCustom("ClickCheckout", { content_name: contentName, value: preco, currency: "BRL" });
         gaEvent("click_checkout", { value: preco, currency: "BRL", produto: `academy-${modo}` });
       }}

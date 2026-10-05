@@ -108,18 +108,15 @@ Abra `/academy/sala?utm_source=teste&utm_campaign=sala` numa janela anônima. O 
 
 ---
 
-## 6. Aviso de retorno (downsell automático)
+## 6. Back redirect (downsell automático)
 
-Com o preview, dá para testar sem esperar o dia 07. Para não esperar os 20 minutos, use o atalho do 6.2.
+Só a partir de 07/10, depois que a URL de Back Redirect estiver ligada no template da Evergreen.
 
-1. [ ] Janela anônima → `/academy?preview=2026-10-07T10:00:00-03:00` → clicar em "Quero entrar na Academy" → fechar o checkout **sem pagar**.
-2. [ ] **Atalho dos 20 minutos:** no computador, abra o console (F12 → Console) na `/academy` e cole:
-   `localStorage.setItem('fa_checkout_academy', String(Date.now() - 30*60000))`
-3. [ ] Recarregar `/academy?preview=2026-10-07T10:00:00-03:00` e esperar uns 4 segundos. **Esperado:** aparece o aviso "Voltou? Se a Academy inteira não cabe agora…" com o botão "Ver o curso de anatomia", que leva a `/academy/anatomia`.
-4. [ ] Fechar no **×** e recarregar. **Esperado:** o aviso **não** volta.
-5. [ ] **Noite da aula:** limpar com `localStorage.clear()`, repetir o passo 2 e abrir `/academy?preview=2026-10-06T21:30:00-03:00`. **Esperado:** o aviso **não** aparece.
-6. [ ] **Quem comprou:** abrir `/academy/obrigado` uma vez, repetir o passo 2 e voltar à `/academy?preview=2026-10-07T10:00:00-03:00`. **Esperado:** o aviso **não** aparece.
-7. [ ] **Quem nunca foi ao checkout:** janela anônima nova → `/academy?preview=2026-10-07T10:00:00-03:00`. **Esperado:** sem aviso.
+1. [ ] Janela anônima → `/academy` → clicar em "Quero entrar na Academy" → no checkout, **não pagar** e apertar **voltar** (no celular, o gesto ou botão de voltar). **Esperado:** abre `/academy/anatomia`, com o preço de R$797.
+2. [ ] Repetir no **celular** (Instagram e WhatsApp abrem o link no navegador interno; testar pelos dois). **Esperado:** o mesmo.
+3. [ ] **Sala não redireciona:** abrir o checkout da Sala (`https://payment.ticto.app/OEF7AADF6`) e apertar voltar. **Esperado:** volta para a página anterior, sem cair na anatomia.
+4. [ ] **Anatomia não redireciona em loop:** no checkout da anatomia, apertar voltar. **Esperado:** volta para `/academy/anatomia`, sem redirecionamento.
+5. [ ] **Site limpo:** a `/academy` não mostra mais nenhum aviso "Voltou?" em nenhum momento.
 
 ---
 

@@ -224,9 +224,12 @@ O Flow só existe **depois** de uma compra, então quem desiste da Academy não 
 
 Os três caminhos:
 
-1. **Aviso de retorno na `/academy` (automático, já no ar):**
-   - **Quem vê:** quem clicou no checkout da Academy, saiu sem comprar e voltou ao site **20 minutos ou mais** depois. Vê um aviso: "Voltou? Se a Academy inteira não cabe agora, comece pela parte que muda a sua mão", com o botão para a página da anatomia.
-   - **Quem não vê:** quem comprou, porque as páginas de obrigado marcam isso no navegador; quem nunca foi ao checkout; quem fechou o aviso; e qualquer pessoa antes de 06/10, 23h59.
+1. **Back redirect no checkout da Evergreen (Ticto, nativo):**
+   - **Onde:** Ticto → template de checkout da **Oferta B (Evergreen)** → **URL de Back Redirect** = `https://live.alinefilgueiras.com.br/academy/anatomia`.
+   - **Quem vê:** quem abriu o checkout da Academy e apertou **voltar** sem comprar. Cai direto na página da anatomia (R$797), com o upgrade pela diferença.
+   - **Quando ligar:** só na **manhã de 07/10**. Antes disso, quem volta do checkout precisa ver a oferta da noite com os bônus, não o downsell.
+   - **Onde não colocar:** no template da **Sala** (Oferta A) nem nos templates da anatomia, do upgrade e da mentoria. Na Sala, quem volta tem que voltar para a oferta com bônus.
+   - **Quem não pega:** quem fecha a aba em vez de voltar. Esse público é coberto pelo WhatsApp (caminho 2) e pelo remarketing (caminho 3).
 2. **WhatsApp da recuperação (item 3.2):** a mensagem de 48 horas leva para a página da anatomia, e não direto para o checkout. Assim, o downsell é apresentado antes do preço.
 3. **Remarketing:** um público de quem visitou a `/academy` e não comprou (excluir compradores pelo pixel). O anúncio aponta para `/academy/anatomia`, nunca antes de 07/10.
 
@@ -298,6 +301,7 @@ A Ticto manda **webhooks** com os eventos de carrinho abandonado, Pix expirado e
 - [ ] **GA4 não está ativo no site.** O build não recebe `NEXT_PUBLIC_GA4_ID`, então o script do GA4 não carrega em nenhuma página. Passem o ID (`G-…`) para eu colocar no workflow, ou aceitem medir só pelo Pixel e pela Ticto.
 - [ ] **Pixel na Ticto:** conferir se as cinco ofertas (Sala, Evergreen, Upgrade, Anatomia e Mentoria) disparam **Purchase** com o mesmo Pixel da LP. Sem isso, os anúncios não otimizam para compra.
 - [ ] **Oferta Sala (`OEF7AADF6`):** desativar na manhã de 07/10. O link circulou no grupo e, se continuar ativo, quem comprar por ele entra na contagem da Sala e não passa pelo upsell da mentoria.
+- [ ] **Back redirect:** na manhã de 07/10, ligar a URL de Back Redirect no template da Evergreen apontando para `/academy/anatomia` (§3, caminho 1). Substitui o aviso "Voltou?" que saiu do site.
 - [ ] **Upgrade e prazo de 30 dias:** a Ticto não trava por comprador. Cruzar semanalmente as vendas do Upgrade com as da Anatomia (§1.0).
 
 - [x] **Link da oferta Anatomia · Downsell:** `https://payment.ticto.app/O39AA5EC7` (em `CHECKOUT_ANATOMIA`, 05/10).
