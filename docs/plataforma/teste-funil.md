@@ -8,7 +8,7 @@ Este é o roteiro para testar tudo antes de 06/10. Siga na ordem e marque cada i
 
 ## 0. Preparação
 
-- [ ] **Bloqueio: os links das ofertas Sala e Evergreen da Academy.** Me mandem os dois (`payment.ticto.app/…`) para eu colocar em `CHECKOUT_SALA` e `CHECKOUT_EVERGREEN`. Sem eles, os botões da `/academy` e da `/academy/sala` mostram "Em breve", e os testes 3 e 4 não rodam.
+- [x] Links das ofertas da Academy no ar (05/10): **Sala** `OEF7AADF6` e **Evergreen** `ODB726458`.
 - [ ] **Uma janela anônima nova para cada teste de compra.** O aviso de downsell usa a memória do navegador, e uma janela normal mistura os testes.
 - [ ] **Um celular e um computador.** Faça pelo menos os testes 1, 4 e 6 no celular.
 - [ ] **Um cartão de crédito real e um app de banco com Pix.** A Ticto não tem modo de teste: são compras reais, reembolsadas no teste 9.

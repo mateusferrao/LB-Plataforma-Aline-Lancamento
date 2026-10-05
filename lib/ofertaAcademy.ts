@@ -20,12 +20,12 @@
 
 const PRECO = 1797;
 
-// PENDENTE: links das duas ofertas do produto "Filgueiras Academy · Consulta,
+// Links das duas ofertas do produto "Filgueiras Academy · Consulta,
 // Agulha e Espelho" na Ticto (docs/plataforma/ticto.md). Mesmo preço; a oferta
 // da sala separa quem comprou na noite da aula (contagem dos 10 primeiros) de
 // quem veio pelos anúncios. Depois de 06/10 23h59 a sala usa o link da evergreen.
-const CHECKOUT_EVERGREEN = "";
-const CHECKOUT_SALA = "";
+const CHECKOUT_EVERGREEN = "https://payment.ticto.app/ODB726458";
+const CHECKOUT_SALA = "https://payment.ticto.app/OEF7AADF6";
 
 const PRIMEIROS_N = 10;
 const PRIMEIROS_TOPO = 5;
