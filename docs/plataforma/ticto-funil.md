@@ -67,7 +67,7 @@ O rollover é a **Academy vendida pela diferença** para quem já comprou a anat
    - **Telefone e confirmação de e-mail:** iguais aos da Academy.
 4. Salvar e **copiar o link da oferta**. Ele é usado em três lugares:
    - a etapa de upsell do Flow (item 1.2);
-   - as mensagens do 7º e do 25º dia (item 3.3);
+   - as mensagens do 7º e do 25º dia ([`recuperacao-carrinho.md`](recuperacao-carrinho.md) §5);
    - `UPGRADE_ANATOMIA_URL` em `lib/ofertaAcademy.ts`, a reserva da página de upsell. **Me mandem o link** que eu colo e publico.
 5. **Fazer uma compra-teste** e conferir:
    - a parcela;
@@ -230,7 +230,7 @@ Os três caminhos:
    - **Quando ligar:** só na **manhã de 07/10**. Antes disso, quem volta do checkout precisa ver a oferta da noite com os bônus, não o downsell.
    - **Onde não colocar:** no template da **Sala** (Oferta A) nem nos templates da anatomia, do upgrade e da mentoria. Na Sala, quem volta tem que voltar para a oferta com bônus.
    - **Quem não pega:** quem fecha a aba em vez de voltar. Esse público é coberto pelo WhatsApp (caminho 2) e pelo remarketing (caminho 3).
-2. **WhatsApp da recuperação (item 3.2):** a mensagem de 48 horas leva para a página da anatomia, e não direto para o checkout. Assim, o downsell é apresentado antes do preço.
+2. **WhatsApp da recuperação ([`recuperacao-carrinho.md`](recuperacao-carrinho.md), E3):** a mensagem de 48 horas leva para a página da anatomia, e não direto para o checkout. Assim, o downsell é apresentado antes do preço.
 3. **Remarketing:** um público de quem visitou a `/academy` e não comprou (excluir compradores pelo pixel). O anúncio aponta para `/academy/anatomia`, nunca antes de 07/10.
 
 ### Recuperação de quem não comprou (WhatsApp)
@@ -246,32 +246,9 @@ Os três caminhos:
 - O **downsell da anatomia** só entra **a partir de 07/10** e só depois de a pessoa não responder ou dizer que o problema é preço.
 - **Nunca** oferecer a anatomia na noite da aula.
 
-### 3.1 Noite da aula (06/10, até 23h59), oferta Sala
+### 3.1 As mensagens
 
-| Quando | Mensagem |
-|---|---|
-| **Até 10 min** depois do abandono | Oi, [nome]! Aqui é da equipe da Dra. Aline. Vi que você começou a inscrição na Filgueiras Academy e não finalizou. Ficou alguma dúvida? Os bônus dos 10 primeiros vão só até hoje, 23h59, e ainda restam [X]. Seu link: [link da oferta Sala] |
-| **Pix emitido e não pago, 15 min** | Oi, [nome]! Seu Pix da Filgueiras Academy ainda não foi pago. Pra não perder a vaga entre os 10 primeiros, segue o código de novo: [código Pix]. Vale até 23h59. |
-
-Só mandar "ainda restam [X]" com a contagem **real**. Se os 10 já fecharam, tirar a frase.
-
-### 3.2 A partir de 07/10, oferta Evergreen
-
-| Quando | Mensagem |
-|---|---|
-| **1 hora** | Oi, [nome]! Vi que você chegou até o checkout da Filgueiras Academy e não finalizou. Posso te ajudar com alguma dúvida? Se for sobre pagamento, dá pra fazer no Pix ou em 12x de R$185,85. Seu link: [link da oferta Evergreen] |
-| **24 horas** | [nome], uma coisa que pesa pra muita aluna: você tem 7 dias pra pedir o dinheiro de volta sem explicar nada. E se em 30 dias assistir ao módulo de anatomia e não sentir a mão mais segura, a gente devolve. O risco fica com a Aline. [link da oferta Evergreen] |
-| **48 horas**, sem resposta ou se a objeção for preço | A mensagem do downsell (`ticto.md` §11.5): o curso de anatomia separado, R$797 ou 12x de R$82,42, com 6 meses de acesso e a troca pela Academy pela diferença em até 30 dias. Link: `https://live.alinefilgueiras.com.br/academy/anatomia` |
-| **Pix emitido e não pago, 30 min** | Oi, [nome]! Seu Pix ainda não foi pago. Segue o código de novo, pra você não precisar refazer a compra: [código Pix] |
-
-Depois da terceira mensagem, parar. Mais do que isso vira insistência e queima a lista para os próximos lançamentos.
-
-### 3.3 Upgrade de quem comprou a anatomia e recusou o 1 clique
-
-| Quando | Mensagem |
-|---|---|
-| **7º dia** | Oi, [nome]! Como está o curso de anatomia? Lembrando: até o 30º dia da sua compra, você troca pela Filgueiras Academy pagando só a diferença, R$1.000. Entram a plataforma completa, 6 encontros ao vivo, a aula de casos com a Aline e 12 meses de acesso. [link da oferta Academy · Upgrade Anatomia] |
-| **25º dia** | [nome], último aviso: a troca pela Academy pela diferença (R$1.000) vale até [data da compra + 30 dias]. Depois disso, a Academy volta a R$1.797. [link] |
+As mensagens de todas as ofertas (Sala, Evergreen, Anatomia, Upgrade e Mentoria), o calendário de envio e as respostas por objeção estão em [`recuperacao-carrinho.md`](recuperacao-carrinho.md).
 
 ### 3.4 Automatizar (opcional)
 
