@@ -1,41 +1,28 @@
-import { Container } from "@/components/Container";
 import { Reveal } from "@/components/Reveal";
-import { Titulo } from "@/components/Titulo";
+import { Secao } from "@/components/academy/Secao";
 import { GARANTIA_ACADEMY } from "@/lib/ofertaAcademy";
 
-// Garantia nomeada, em duas camadas (pitch, bloco 6). A condicional ataca o
-// "não vou executar" da pesquisa e é verificável pelo progresso no Memberkit.
-const CAMADAS = [
-  { prazo: `Até ${GARANTIA_ACADEMY.prazoIncondicionalDias} dias depois da compra`, texto: "Sem perguntas. Você pede e a gente devolve." },
-  {
-    prazo: `Até ${GARANTIA_ACADEMY.prazoCondicionalDias} dias depois da compra`,
-    texto: "Assistiu ao módulo de anatomia e não sentiu a mão mais segura? Escreve pra gente que devolvemos.",
-  },
-];
-
+// Garantia em um bloco (selo + título + duas frases), como na referência.
 export function Garantia() {
   return (
-    <section className="py-16 sm:py-[80px]">
-      <Container narrow>
-        <Titulo eyebrow={GARANTIA_ACADEMY.nome} destaque="o risco fica com a Aline.">
-          Se a mão não ficar mais segura,
-        </Titulo>
-        <div className="mt-9 grid grid-cols-1 gap-4 sm:grid-cols-2">
-          {CAMADAS.map((c, i) => (
-            <Reveal key={c.prazo} delay={i * 80} className="rounded-[6px] border border-wine/60 bg-bg-2 p-6">
-              <span className="text-[11.5px] font-semibold tracking-[0.18em] text-wine-ink uppercase">{c.prazo}</span>
-              <p className="mt-2.5 text-[1.05rem] leading-[1.5] text-fg">{c.texto}</p>
-            </Reveal>
-          ))}
+    <Secao>
+      <Reveal className="flex flex-col items-center rounded-[6px] border border-line px-6 py-9 text-center">
+        <div className="flex h-[112px] w-[112px] flex-col items-center justify-center rounded-full border-2 border-wine-ink">
+          <span className="font-sans text-[2.3rem] font-semibold leading-none text-fg">
+            {GARANTIA_ACADEMY.prazoCondicionalDias}
+          </span>
+          <span className="mt-1 text-[10.5px] font-semibold tracking-[0.14em] text-fg-soft uppercase">dias de garantia</span>
         </div>
-        <Reveal>
-          <p className="mt-6 max-w-[600px] text-[0.98rem] leading-[1.6] text-fg-soft">
-            Pra pedir, é só falar com a gente no WhatsApp{" "}
-            <span className="text-fg">{GARANTIA_ACADEMY.whatsapp}</span> ou no e-mail{" "}
-            <span className="text-fg">{GARANTIA_ACADEMY.email}</span>.
-          </p>
-        </Reveal>
-      </Container>
-    </section>
+        <h2 className="mt-6 font-sans font-semibold text-[1.6rem] tracking-[-0.015em] text-fg sm:text-[1.9rem]">
+          {GARANTIA_ACADEMY.nome}
+        </h2>
+        <p className="mt-3 max-w-[520px] text-[1.05rem] leading-[1.6] text-fg-soft">
+          {GARANTIA_ACADEMY.incondicional} {GARANTIA_ACADEMY.condicional}
+        </p>
+        <p className="mt-4 text-[0.9rem] text-fg-faint">
+          Pedido pelo WhatsApp {GARANTIA_ACADEMY.whatsapp} ou pelo e-mail {GARANTIA_ACADEMY.email}.
+        </p>
+      </Reveal>
+    </Secao>
   );
 }

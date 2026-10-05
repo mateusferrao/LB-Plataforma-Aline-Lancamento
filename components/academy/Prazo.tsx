@@ -79,3 +79,20 @@ export function Prazo({ className = "", align = "left" }: { className?: string; 
     </div>
   );
 }
+
+// Versão em linha ("02d 04h 31m 12s"), pra barra do topo e o card da oferta.
+export function PrazoInline({ className = "" }: { className?: string }) {
+  const [r, setR] = useState<Restante | null>(null);
+  useEffect(() => {
+    const tick = () => setR(restante(SALA.endsAt));
+    tick();
+    const id = setInterval(tick, 1000);
+    return () => clearInterval(id);
+  }, []);
+  const p = (n: number) => String(n).padStart(2, "0");
+  return (
+    <span className={`font-serif tabular-nums ${className}`}>
+      {r ? `${p(r.dias)}d ${p(r.horas)}h ${p(r.min)}m ${p(r.seg)}s` : "--d --h --m --s"}
+    </span>
+  );
+}

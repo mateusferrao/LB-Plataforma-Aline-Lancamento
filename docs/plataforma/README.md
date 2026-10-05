@@ -52,20 +52,22 @@ Fontes do plano, de 04/10/2026:
 | Tráfego frio | Teste A/B: `/academy` × oferta de entrada **Protocolo + aula gravada** → upsell da plataforma por R$1.797 menos o valor pago, por 72h. A gravação nunca é vendida "avulsa" e não entra antes de 08/10, 23h59 |
 | Canais do carrinho | Grupo da aula, agente de IA no WhatsApp (o playbook precisa ser atualizado: hoje ele proíbe falar da plataforma) e disparo para ex-alunas |
 
-## 3. Estrutura das páginas (a mesma sequência do pitch)
+## 3. Estrutura das páginas (revisão de 05/10)
 
-1. **Hero:** faixa, pré-headline, H1 com grifo, subtítulo, os 4 pilares, preço, CTA, garantia e, na sala, cupom e contador até 08/10. No celular, a foto vai para o fim do hero.
-2. **Você se reconhece?:** a dor com as palavras da pesquisa, em segunda pessoa (a mão que hesita, o medo de errar, "você já fez isso?", "vou pensar", "só quer saber preço", "fiz curso e continuo perdida").
-3. **Três momentos:** consulta, agulha e espelho, cada um com a cena da dor e o que a Academy entrega.
-4. **Por que dessa vez é diferente:** a objeção "fiz curso e continuo travada" (36% da pesquisa).
-5. **O que tem dentro:** o destaque do curso de fresh frozen (a evergreen repete o anúncio) + os cursos por pilar, com a contagem de aulas do Memberkit.
-6. **Oferta:** a pilha de valor (cada item com o valor riscado e o total riscado) ao lado do card de preço. Na sala, os bônus de todas entram na pilha; as mais rápidas vêm abaixo, com valor e fora da soma, e depois o contador.
-7. **Garantia Mão Segura.**
-8. **Quem conduz:** a história da Aline nas duas inseguranças.
-9. **Prints de alunas da Aline.**
-10. **Pra quem é / não é.**
-11. **FAQ:** a da sala tem perguntas próprias (18 meses, níveis, prancheta, depois de 08/10).
-12. **CTA final** + barra fixa no celular.
+As duas páginas foram enxugadas no molde da página do Mapa de Intercorrência (Segredos da Otomodelação): coluna única, uma ideia por seção, a dor como cena concreta e a oferta num card só. A página da sala no celular caiu de ~17.100 px para ~11.500 px.
+
+0. **Barra do topo (só na sala):** preço e contador até 08/10, 23h59.
+1. **Hero:** chamada do público, H1 com grifo, uma frase de apoio, botão com o preço e selos (acesso imediato, 12x ou Pix, garantia). Na sala, o cupom aparece embaixo do botão. No celular, a foto vai para o fim do hero.
+2. **A cena:** "A paciente está na maca. A seringa, na sua mão." As perguntas que passam pela cabeça e quatro consequências curtas.
+3. **O que muda o jogo:** os três momentos (consulta, agulha e espelho), em dois parágrafos.
+4. **O que você recebe:** foto e quatro itens numerados (anatomia, técnica, consulta e encontros ao vivo).
+5. **É pra você?:** sim e não.
+6. **Quem conduz:** os números, um parágrafo e a frase do criativo 08.
+7. **Prints de alunas da Aline.**
+8. **Oferta:** um card com a pilha de valor (o valor riscado por item e o total riscado), o preço, o botão e os selos. Na sala, os bônus de todas entram na pilha; as mais rápidas vêm depois do botão, fora da soma. Embaixo, os cursos presenciais da Aline como âncora.
+9. **Garantia Mão Segura:** selo e duas frases.
+10. **FAQ:** fechada, 7 perguntas na evergreen e 9 na sala.
+11. **Fechamento:** "Da próxima vez que a paciente deitar…", o resumo da oferta numa frase, o botão e o P.S. + barra fixa no celular.
 
 **Depois de 08/10, 23h59:** o botão da sala leva à `/academy` e o contador diz que a condição terminou. Para testar, use `?preview=2026-10-09T10:00:00-03:00`.
 
