@@ -44,9 +44,6 @@ export function FinalCta({ modo }: { modo: Modo }) {
             PS_GARANTIA
           )}
         </p>
-        <p className="mt-12 text-[0.85rem] text-fg-faint">
-          Ensino online para profissionais da estética e da saúde. Não substitui a prática supervisionada.
-        </p>
       </Container>
     </section>
   );
