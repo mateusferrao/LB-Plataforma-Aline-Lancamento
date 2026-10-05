@@ -39,14 +39,50 @@ Nenhuma etapa dá desconto na Academy. Quem pagou R$1.797 nunca vê ninguém pag
 
 ## 1. Flow da anatomia: o upsell de 1 clique para a Academy
 
-### 1.1 Antes
+### 1.0 Criar a oferta do rollover (Academy · Upgrade Anatomia)
+
+O rollover é a **Academy vendida pela diferença** para quem já comprou a anatomia: R$1.797 − R$797 = **R$1.000**. Ele é uma **oferta dentro do produto da Academy**, e não um produto novo, porque libera o mesmo plano de 12 meses na MemberKit.
+
+**Passo a passo:**
+
+1. **Meus Produtos →** Filgueiras Academy · Consulta, Agulha e Espelho **→ Ações → Ofertas → cadastrar nova oferta.**
+2. Preencher a oferta:
+
+   | Campo | Preencher |
+   |---|---|
+   | **Nome da oferta** | Academy · Upgrade Anatomia |
+   | **Valor** | R$1.000,00 |
+   | **Formas de pagamento** | Cartão e Pix. Sem boleto |
+   | **Parcelamento** | Até 12x, com **juros pagos pelo comprador**. Pela conta, dá cerca de 12x de R$103,42. Conferir no checkout, porque a Ticto arredonda (foi o caso dos R$82,42 da anatomia) |
+   | **Área de membros** | O **mesmo plano da Academy na MemberKit (12 meses)** das ofertas Sala e Evergreen. O plano de 6 meses da anatomia continua ativo até vencer e não atrapalha |
+   | **Afiliados** | Não |
+   | **Redirecionamento pós-compra** | `https://live.alinefilgueiras.com.br/academy/obrigado` |
+   | **Template de checkout** | Um template novo, **"Upgrade"** (item 3) |
+
+3. Criar o **template "Upgrade"** (Ações → Templates de checkout → novo template) e ligar à oferta:
+   - **Banner ou texto do topo:** `Upgrade para a Filgueiras Academy: você paga só a diferença do curso de anatomia que já comprou.`
+   - **Lista de benefícios**, se o template tiver o campo: Plataforma Filgueiras Academy (R$1.497) · 6 encontros ao vivo no ano (R$5.000) · aula ao vivo de casos com a Aline (R$1.000) · preferência nos cursos presenciais · 12 meses de acesso em vez de 6. **Hoje: só a diferença, R$1.000.**
+   - **Selo de garantia:** Garantia Mão Segura, 30 dias, com a mesma legenda dos outros templates.
+   - **Cupom:** desligado. **Contador:** não usar. **Order bump:** nenhum. **Notificações:** desligadas, porque é uma compra individual e prova social aqui não faz sentido.
+   - **Telefone e confirmação de e-mail:** iguais aos da Academy.
+4. Salvar e **copiar o link da oferta**. Ele é usado em três lugares:
+   - a etapa de upsell do Flow (item 1.2);
+   - as mensagens do 7º e do 25º dia (item 3.3);
+   - `UPGRADE_ANATOMIA_URL` em `lib/ofertaAcademy.ts`, a reserva da página de upsell. **Me mandem o link** que eu colo e publico.
+5. **Fazer uma compra-teste** e conferir:
+   - a parcela;
+   - o acesso de 12 meses chegando na MemberKit;
+   - o redirecionamento.
+
+**Dois cuidados, porque a Ticto não restringe a oferta por comprador:**
+
+- **O link nunca é publicado.** Ele só aparece na página de upsell, que é `noindex` e só é alcançada depois da compra da anatomia, e no WhatsApp de quem comprou a anatomia. Quem tiver o link consegue comprar a Academy por R$1.000 sem ter a anatomia.
+- **O prazo de 30 dias é controlado pela equipe:** só mandar o link a quem está dentro dos 30 dias da compra da anatomia. Uma vez por semana, cruzar as vendas do **Upgrade** com as da **Anatomia** (Minhas Vendas). Upgrade sem anatomia antes é sinal de link vazado. Nesse caso, falar com a pessoa e trocar o link (desativar a oferta e criar outra).
+
+### 1.1 Antes do Flow
 
 - [ ] O produto **Por Dentro da Face · Anatomia em Fresh Frozen** e a oferta **Anatomia · Downsell** (R$797) criados (`ticto.md` §11.2).
-- [ ] No produto da **Academy**, a oferta oculta **Academy · Upgrade Anatomia** criada:
-  - R$1.000;
-  - 12x com juros pagos pelo comprador, Pix e cartão;
-  - ligada ao plano de 12 meses na MemberKit;
-  - redirecionamento para `/academy/obrigado`.
+- [ ] A oferta **Academy · Upgrade Anatomia** criada (item 1.0).
 - [ ] A página de upsell está no ar em `https://live.alinefilgueiras.com.br/academy/anatomia/upgrade`.
 
 ### 1.2 Na Ticto, passo a passo

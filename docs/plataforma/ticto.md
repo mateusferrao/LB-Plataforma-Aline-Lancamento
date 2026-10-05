@@ -313,7 +313,7 @@ Garantia Mão Segura: 7 dias sem perguntas, e 30 dias se você assistir ao curso
 
 Quem comprou a anatomia pode trocar pela Academy **pagando só a diferença**, em até 30 dias. É o "rollover" do Hormozi: o dinheiro do primeiro passo vira crédito no próximo, e a compradora não sente que pagou duas vezes.
 
-- **Na Ticto:** criar no produto da Academy uma terceira oferta, **oculta**, chamada `Academy · Upgrade Anatomia`, por **R$1.000** (cerca de 12x de R$103,42; conferir no checkout). Ela fica ligada ao mesmo plano de 12 meses da Academy. Um cupom não funciona aqui, porque o campo de cupom fica desligado no checkout.
+- **Na Ticto:** criar no produto da Academy uma terceira oferta, **oculta**, chamada `Academy · Upgrade Anatomia` (passo a passo em [`ticto-funil.md`](ticto-funil.md) §1.0), por **R$1.000** (cerca de 12x de R$103,42; conferir no checkout). Ela fica ligada ao mesmo plano de 12 meses da Academy. Um cupom não funciona aqui, porque o campo de cupom fica desligado no checkout.
 - **Na MemberKit:** quando a compradora fizer o upgrade, o plano da Academy já inclui a anatomia. O plano de 6 meses pode ficar ativo até vencer.
 - **Quando oferecer:**
   - **na página de obrigado do downsell** (`/academy/anatomia/obrigado`), logo depois da compra. O botão usa o link da oferta oculta, a ser colado em `UPGRADE_ANATOMIA_URL` (`lib/ofertaAcademy.ts`). Sem o link, o botão abre o WhatsApp da equipe com a mensagem pronta;
