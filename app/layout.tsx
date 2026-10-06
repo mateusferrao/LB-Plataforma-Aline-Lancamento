@@ -7,6 +7,7 @@ import { TictoEcho } from "@/components/TictoEcho";
 import { UtmifyPixel } from "@/components/UtmifyPixel";
 import { ConsentNotice } from "@/components/ConsentNotice";
 import { WhatsAppFloatingButton } from "@/components/WhatsAppFloatingButton";
+import { RedirecionaAposAula } from "@/components/RedirecionaAposAula";
 
 // Fontes auto-hospedadas (next/font/local) para o build não depender de baixar
 // do Google em CI. Arquivos variáveis (latin) em app/fonts/.
@@ -67,6 +68,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <link rel="preconnect" href="https://i.vimeocdn.com" crossOrigin="anonymous" />
       </head>
       <body className="min-h-screen bg-bg font-sans text-fg antialiased">
+        <RedirecionaAposAula />
         {/* Fallback sem JS: nunca esconder conteúdo se o reveal não puder rodar */}
         <noscript>
           <style>{`.reveal{opacity:1 !important;transform:none !important}`}</style>
