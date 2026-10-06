@@ -1,0 +1,44 @@
+1:"$Sreact.fragment"
+3:I[79520,["/_next/static/chunks/39p3sz1l4tfa3.js"],""]
+6:I[39756,["/_next/static/chunks/39p3sz1l4tfa3.js"],"default"]
+7:I[37457,["/_next/static/chunks/39p3sz1l4tfa3.js"],"default"]
+:HL["/_next/static/chunks/22u_csj69t1dg.css","style"]
+2:["$","style",null,{"children":".reveal{opacity:1 !important;transform:none !important}"}]
+4:T47b,
+          !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+          n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+          n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+          t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+          document,'script','https://connect.facebook.net/en_US/fbevents.js');
+          fbq('init', '2630327520757105');
+          fbq('track', 'PageView');
+          fbq('track', 'ViewContent', /\/alunas(\.html)?(\/|$)/.test(location.pathname) ? {
+            content_name: 'Aula + Protocolo (ex-alunas)',
+            content_category: 'live',
+            value: 67,
+            currency: 'BRL'
+          } : /\/info(\.html)?(\/|$)/.test(location.pathname) ? {
+            content_name: 'Protocolo de Resgate Vascular',
+            content_category: 'kit',
+            value: 97,
+            currency: 'BRL'
+          } : {
+            content_name: 'Ingresso Por Dentro da Face',
+            content_category: 'live',
+            value: 67,
+            currency: 'BRL'
+          });
+        5:["$","img",null,{"height":"1","width":"1","style":{"display":"none"},"src":"https://www.facebook.com/tr?id=2630327520757105&ev=PageView&noscript=1","alt":""}]
+d:X
+0:{"buildId":"3gnIUKRL3ZnSn1o1sWPlD","data":[{"rsc":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/22u_csj69t1dg.css","precedence":"next"}],["$","script","script-0",{"src":"/_next/static/chunks/39p3sz1l4tfa3.js","async":true}]],["$","html",null,{"lang":"pt-BR","className":"fraunces_30c4688f-module__w5tVXq__variable inter_b56408d-module__owDoHa__variable","style":{"colorScheme":"dark"},"children":[["$","head",null,{"children":[["$","link",null,{"rel":"preconnect","href":"https://player.vimeo.com"}],["$","link",null,{"rel":"preconnect","href":"https://i.vimeocdn.com","crossOrigin":"anonymous"}]]}],["$","body",null,{"className":"min-h-screen bg-bg font-sans text-fg antialiased","children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(function(){try{\nvar base=\"\";\nvar p=location.pathname;\nif(base&&p.indexOf(base)===0)p=p.slice(base.length)||\"/\";\nif(!new RegExp(\"^/(sem-vsl|fresh|fresh/sem-vsl|lp2|lp2/sem-vsl|alunas)?(\\\\.html)?/?$\").test(p))return;\nvar pv=new URLSearchParams(location.search).get(\"preview\");\nvar t=pv?Date.parse(pv):Date.now();\nif(!(t>=1791327600000))return;\nlocation.replace(base+\"/academy\"+location.search+location.hash);\n}catch(e){}})();"}}],["$","noscript",null,{"children":"$2"}],[["$","$L3",null,{"id":"meta-pixel","strategy":"afterInteractive","children":"$4"}],["$","noscript",null,{"children":"$5"}]],null,["$","$L3",null,{"src":"https://echo.ticto.app/ticto-echo.min.js","strategy":"afterInteractive"}],[["$","$L3",null,{"src":"https://cdn.utmify.com.br/scripts/utms/latest.js","data-utmify-prevent-xcod-sck":"","data-utmify-prevent-subids":"","strategy":"afterInteractive"}],[["$","$L3",null,{"id":"utmify-pixel-init","strategy":"afterInteractive","children":"window.pixelId = \"6ab0ac90377ee510e2049e7a\";"}],["$","$L3",null,{"src":"https://cdn.utmify.com.br/scripts/pixel/pixel.js","strategy":"afterInteractive"}]]],["$","$L6",null,{"parallelRouterKey":"children","template":["$","$L7",null,{}],"notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],"$L8","$L9"]}]}]],[]]}],"$La","$Lb"]}]]}]]}],"isPartial":"$@c","staleTime":"$d","varyParams":null}],"isUpgradeableISRFallback":false,"a":"$@e","rootVaryParams":null,"needsRuntimeRequest":"$@f"}
+10:I[21011,["/_next/static/chunks/39p3sz1l4tfa3.js"],"ConsentNotice"]
+11:I[10019,["/_next/static/chunks/39p3sz1l4tfa3.js"],"WhatsAppFloatingButton"]
+8:["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}]
+9:["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]
+a:["$","$L10",null,{}]
+b:["$","$L11",null,{}]
+d:300
+f:true
+d:C
+e:0
+c:"$undefined"
