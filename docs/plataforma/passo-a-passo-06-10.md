@@ -73,12 +73,12 @@ O que muda **fora do site** está abaixo, na ordem de horário.
 
 O workflow já manda os templates `aline_recupera_1h`, `24h` e `48h`. Ele está **desativado**. Para ligar:
 
-- [ ] **10.** No nó **Ler evento da Ticto**, colar o token do webhook da Ticto: `const TICTO_TOKEN = 'o-token';`
+- [x] **10.** Token do webhook da Ticto colado no nó **Ler evento da Ticto** (06/10). Testado: evento com token errado é ignorado.
 - [ ] **11.** No nó **Decidir próximo passo**, colar o seu número em `const TELEFONE_TESTE = '5531...';` (todas as mensagens vão só pra você).
 - [ ] **12.** **Save** e **ativar** o workflow.
 - [ ] **13.** **Teste:** abrir numa aba anônima `https://payment.ticto.app/ODB726458`, preencher com um e-mail de teste e o seu telefone, não pagar e esperar 1 minuto. Na Data Table **Aline - Recuperacao de Carrinho** aparece a linha `ativo`. Editar o `proximo_envio` dela para um horário que já passou: em até 10 minutos chega o `aline_recupera_1h`. Repetir para o 24h e o 48h e tocar no botão **Finalizar inscrição**.
 - [ ] **14.** Apagar o `TELEFONE_TESTE` (deixar `''`), **Save**, e apagar as linhas de teste da tabela.
-- [ ] **15.** Na Ticto, conferir que o webhook (`https://n8n.automato.pro/webhook/ticto-recuperacao-aline`) tem **Abandono de carrinho** e **Venda aprovada**.
+- [ ] **15.** Na Ticto, no webhook (`https://n8n.automato.pro/webhook/ticto-recuperacao-aline`): os eventos **Abandono de Carrinho** e **Venda Realizada** já estão marcados. Falta, em **Produtos**, acrescentar **Por Dentro da Face · Anatomia em Fresh Frozen** e **Mentoria em grupo com a Aline** ao lado de Filgueiras Academy 3.0. Sem eles, abandono e compra da anatomia e da mentoria não chegam no n8n.
 - [ ] **16.** Reenviar o `01-playbook-vendas.md` pro agente: a seção 13 ensina a responder os botões ("Tenho uma dúvida", "Falar com a equipe", "Me ajuda a decidir") e o "SAIR". Quem pedir pra sair: a equipe marca `parado` na tabela.
 
 ## Pendências que seguem de antes
