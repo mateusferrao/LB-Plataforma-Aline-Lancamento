@@ -36,7 +36,7 @@ const COMUNS: Item[] = [
 const SO_SALA: Item[] = [
   {
     q: "Quanto tempo de acesso eu tenho?",
-    a: `${ACADEMY.mesesAcesso} meses a partir da compra. Quem entra até ${SALA.prazoCurto} ganha mais 3 (${SALA.mesesTodos} no total), e os ${SALA.primeirosTopo} primeiros ganham mais 6 (${SALA.mesesTopo} no total). A equipe aplica a extensão até ${SALA.extensaoAte}.`,
+    a: `${ACADEMY.mesesAcesso} meses a partir da compra. Quem entra até ${SALA.prazoCurto} ganha mais 3 (${SALA.mesesTodos} no total). A equipe aplica a extensão até ${SALA.extensaoAte}.`,
   },
   {
     q: `Como sei se estou entre os ${SALA.primeirosN} primeiros?`,

@@ -3,8 +3,8 @@
 //  Duas páginas usam esta oferta (plano em docs/plataforma/README.md):
 //   - /academy/sala: quem esteve na aula de 06/10. R$1.797, com os bônus da
 //     sala até 06/10 23h59 (a noite da aula): os 10 primeiros (certificado,
-//     prancheta, mentoria em grupo com a Aline, toxina) e, entre eles, os 5
-//     primeiros ganham +6 meses de acesso.
+//     prancheta, mentoria em grupo com a Aline, toxina) e +3 meses de acesso
+//     pra todo mundo que compra nessa noite (os +6 dos 5 primeiros saíram em 06/10).
 //     noindex, link só na sala e no grupo.
 //   - /academy: evergreen, R$1.797, só o núcleo. Recebe os anúncios.
 //
@@ -12,7 +12,7 @@
 //   - Oferta ajustada pela equipe em 05/10: um preço só (R$1.797), sem cupom.
 //     Valores da pilha passados pela equipe. Na página é "valor", nunca
 //     "de R$X por": nenhum item foi vendido avulso por esse preço.
-//   - Os 10 e os 5 primeiros contam pela hora da compra na Ticto. A página não mostra
+//   - Os 10 primeiros contam pela hora da compra na Ticto. A página não mostra
 //     contador de vagas (não há dado em tempo real); a contagem é dita na sala.
 //   - Sem checkoutUrl → botão "Em breve". Produto ainda não criado na Ticto.
 //   - Nenhuma promessa de agenda, faturamento ou resultado clínico.
@@ -28,7 +28,6 @@ const CHECKOUT_EVERGREEN = "https://payment.ticto.app/ODB726458";
 const CHECKOUT_SALA = "https://payment.ticto.app/OEF7AADF6";
 
 const PRIMEIROS_N = 10;
-const PRIMEIROS_TOPO = 5;
 
 // "R$1.797" (o formatBRL do kit não põe o separador de milhar).
 function formatBRL(v: number) {
@@ -57,13 +56,10 @@ export const SALA = {
   endsAt: "2026-10-06T23:59:59-03:00",
   prazoLabel: "hoje, terça, 6 de outubro, até 23h59",
   prazoCurto: "06/10, 23h59",
-  // Os 5 primeiros: 18 meses. A extensão é feita em lote pela equipe (a Ticto vende 12).
-  mesesTopo: 18,
   // Todo mundo que compra pela sala até o fim dos bônus: +3 meses (decisão de 06/10).
   mesesTodos: 15,
   extensaoAte: "10/10",
   primeirosN: PRIMEIROS_N,
-  primeirosTopo: PRIMEIROS_TOPO,
   parcela12x: ACADEMY.parcela12x,
   contentName: "Filgueiras Academy (sala 06/10)",
 } as const;
@@ -130,13 +126,6 @@ export const BONUS_TODOS: Item = {
   nome: `+3 meses de acesso (${SALA.mesesTodos} no total)`,
   detalhe: "Pra estudar sem correr. Pra todo mundo que entrar hoje, até 23h59.",
   valor: Math.round(PRECO / 4), // um quarto do plano de 12 meses
-};
-
-// Sala: entre os 10 primeiros, os 5 primeiros. Fora da soma dos totais.
-export const BONUS_TOPO: Item = {
-  nome: `+6 meses de acesso (${SALA.mesesTopo} no total)`,
-  detalhe: "Pra estudar no seu ritmo.",
-  valor: Math.round(PRECO / 2), // metade do plano de 12 meses
 };
 
 const soma = (itens: readonly Item[]) => itens.reduce((t, i) => t + (i.valor ?? 0), 0);

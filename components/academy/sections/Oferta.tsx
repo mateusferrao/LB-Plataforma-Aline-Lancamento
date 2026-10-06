@@ -10,7 +10,6 @@ import {
   BONUS_10_ESGOTADO,
   BONUS_PRIMEIROS,
   BONUS_TODOS,
-  BONUS_TOPO,
   GARANTIA_ACADEMY,
   PILHA_ACADEMY,
   SALA,
@@ -20,8 +19,7 @@ import {
 
 // Oferta num card só (molde da referência), com a oferta ajustada de 05/10:
 // o núcleo com o valor riscado por item e o total de todo mundo; na sala, os
-// bônus dos 10 primeiros com o total deles e, à parte, os +6 meses dos 5
-// primeiros (fora da soma). Um preço só: R$1.797. 06/10: na sala, +3 meses pra
+// bônus dos 10 primeiros com o total deles. Um preço só: R$1.797. 06/10: na sala, +3 meses pra
 // todo mundo até 23h59 (com total próprio); o bloco dos 10 primeiros some quando
 // BONUS_10_ESGOTADO. O preço abre pelo 12x, com o Pix e o "menos de R$5 por dia"
 // (R$1.797 / 365 = R$4,92, só vale pro Pix) embaixo.
@@ -101,9 +99,6 @@ export function Oferta({ modo }: { modo: Modo }) {
                 ))}
               </ul>
               <Total rotulo={`Valor total pros ${SALA.primeirosN} primeiros`} valor={VALOR_TOTAL.primeiros} />
-              <ul className="mt-6 list-none rounded-[6px] bg-bg-2 px-4">
-                <Linha {...BONUS_TOPO} tag={`E os ${SALA.primeirosTopo} primeiros`} />
-              </ul>
             </div>
           </AteOFim>
         )}
