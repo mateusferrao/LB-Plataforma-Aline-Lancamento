@@ -16,7 +16,7 @@
 
 | Momento | O que o agente faz |
 |---|---|
-| **06/10, até 23h59** (noite da aula) | Apresenta a Academy com os **bônus dos 10 primeiros**. Link: `https://live.alinefilgueiras.com.br/academy/sala` |
+| **06/10, até 23h59** (noite da aula) | Apresenta a Academy com os **+3 meses de acesso pra todo mundo** e os **bônus dos 10 primeiros**. Link: `https://live.alinefilgueiras.com.br/academy/sala` (a partir de 07/10, 00h, esse link abre a `/academy`) |
 | **A partir de 07/10, 00h** | Academy sem bônus. Link: `https://live.alinefilgueiras.com.br/academy`. O downsell (anatomia) pode entrar, com as regras da seção 6 |
 | **Sempre** | Suporte de quem já comprou (seção 8) |
 
@@ -63,11 +63,17 @@ Diga "vale R$X", **nunca "de R$X por R$Y"** (nenhum item foi vendido avulso por 
 | Item | Pra quê | Vale |
 |---|---|---|
 | Curso online de **Fresh Frozen + dissecção** | Pra mão parar de hesitar | R$1.297 |
-| **Plataforma Filgueiras Academy**: mais de 70 aulas práticas de toxina, preenchimento e bioestimuladores, intercorrências e anestesia, e a **Consulta que Vende** | Pro caminho completo, e pra paciente não sair dizendo "vou pensar" | R$1.497 |
+| **Mais de 70 aulas de técnica**: preenchimento região por região (40 aulas: malar, nariz, olheiras, mandíbula, lábio, mento, têmporas, canto de boca, orelha), bioestimuladores (24), toxina (14), intercorrências (6) e anestesia (3) | Pro caminho completo da agulha | R$1.497 |
+| **Consulta, vendas e posicionamento**: a **Consulta que Vende**, vendas no consultório (6 aulas), marketing nas redes (8) e posicionamento de imagem (4) | Pra paciente não sair dizendo "vou pensar" | incluso |
+| **Material de apoio**: anamnese, termos e precificação prontos | Pra usar na próxima paciente | incluso |
+| **Dicas jurídicas** com o escritório Juk Cattani Advogados Associados (4 aulas) | Pra atender com mais tranquilidade | incluso |
 | **6 encontros ao vivo no ano**, com a Aline ou o time dela, gravados na plataforma | Pra não travar sozinha | R$5.000 |
 | **1 aula ao vivo com a Aline** pra discussão de casos | Pra ver como ela pensa a conduta | R$1.000 |
 | **Preferência nos cursos presenciais** | Pra garantir a vaga antes da turma abrir, quando quiser o hands-on | incluso |
 | **Total** | | **R$8.794** |
+
+**Só na noite da aula (06/10, até 23h59), pra todo mundo que comprar:** **+3 meses de acesso** (15
+no total, vale R$449). A equipe estende até 10/10.
 
 **Só na noite da aula (06/10, até 23h59), pros 10 primeiros pela hora da compra:**
 
@@ -76,7 +82,7 @@ Diga "vale R$X", **nunca "de R$X por R$Y"** (nenhum item foi vendido avulso por 
 - **Mentoria em grupo com a Aline**, só com esses 10 (vale R$5.000)
 - **Toxina botulínica** pra próxima aplicação (sem quantidade definida; só pra quem é habilitada a
   aplicar; **nunca diga a marca "Botox"**)
-- Com o núcleo, a soma vai a **R$14.394**.
+- Com o núcleo e os +3 meses, a soma vai a **R$14.843**.
 
 **Entre os 10, as 5 primeiras:** **+6 meses de acesso** (18 no total).
 
@@ -136,13 +142,14 @@ páginas que só funcionam logo depois de uma compra.
 ## 7. Mentoria em grupo (upsell) e a vaga da colega
 
 - **O que é:** 3 meses de mentoria em grupo com a Aline, **1 encontro ao vivo por mês**, online. A
-  aluna leva os casos e as dúvidas do consultório. É a mesma mentoria que foi bônus dos 10 primeiros
-  da aula.
+  aluna leva os casos e as dúvidas do consultório. (Foi bônus dos 10 primeiros da aula; **não use
+  isso como argumento** com quem vai pagar por ela.)
 - **Como se compra:** só aparece **logo depois da compra da Academy** (fora da noite da aula), numa
   página de 1 clique. **R$1.997** ou 12x no cartão. **Garantia de 7 dias.** O agente **não vende a
   mentoria** e não manda link dela.
 - **Vaga da colega:** quem aceita a mentoria **naquela página, no mesmo dia da compra da Academy**,
-  leva **uma colega da estética ou da saúde** nos encontros, **sem pagar a mais**. A colega entra só
+  leva **uma colega da estética ou da saúde** nos encontros, **sem pagar a mais** (a vaga vale o que a
+  colega pagaria, R$1.997; dividindo, sai R$998,50 pra cada uma). A colega entra só
   na mentoria, sem acesso à Academy. **1 colega por compra.**
   - "Comprei a mentoria, como cadastro a minha colega?" → peça **nome e telefone da colega** e
     escale para o humano, que coloca as duas no grupo.
@@ -169,8 +176,9 @@ tudo começa (é o que a página de obrigado orienta).
 
 **"Quanto tempo tenho de acesso?"**
 - Academy: **12 meses** a partir da compra.
-- As **5 primeiras da noite da aula**: **18 meses**. A extensão é feita pela equipe **até 10/10**;
-  antes disso a plataforma ainda mostra 12. Se depois de 10/10 continuar 12 → humano.
+- Quem comprou **na noite da aula (até 06/10, 23h59)**: **15 meses**. As **5 primeiras**: **18
+  meses**. A extensão é feita pela equipe **até 10/10**; antes disso a plataforma ainda mostra 12.
+  Se depois de 10/10 continuar 12 → humano.
 - Anatomia separada: **6 meses**. Quem fez o upgrade passa a ter os 12 meses da Academy.
 
 **"Quando são os encontros ao vivo / a aula de casos?"** São **6 encontros ao longo do ano** e **uma
@@ -224,9 +232,9 @@ Nenhuma resposta dá desconto.
 
 ## 10. Escassez e urgência (só o que é verdade)
 
-- **Noite da aula:** os bônus valem **até 06/10, 23h59**, e só pros **10 primeiros pela hora da
-  compra** (as **5 primeiras** levam +6 meses). Quando fecharem os 10, acabou, mesmo antes da
-  meia-noite.
+- **Noite da aula:** os **+3 meses valem pra todo mundo até 06/10, 23h59**. Os bônus físicos são só
+  pros **10 primeiros pela hora da compra** (as **5 primeiras** levam +6 meses em vez de +3). Quando
+  fecharem os 10, acabam os bônus deles, mesmo antes da meia-noite; os +3 meses seguem até 23h59.
 - **Nunca diga quantas vagas restam** (o agente não tem a contagem). "A equipe acompanha a contagem
   pela hora da compra."
 - **Depois de 06/10:** a Academy não tem prazo nem vagas. **Não invente urgência.** A única data real

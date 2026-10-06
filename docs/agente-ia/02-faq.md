@@ -64,8 +64,9 @@ A **Garantia Mão Segura**: **7 dias** pra pedir o dinheiro de volta sem explica
 **30 dias** você assistir ao módulo de anatomia e não sentir a mão mais segura, a gente devolve.
 
 ### 11. Quais eram os bônus da noite da aula? Ainda valem?
-Valeram **só na noite de 06/10, até 23h59**, pela ordem de compra:
-- **10 primeiros:** certificado Filgueiras Academy, prancheta ilustrada da Aline (vai pelo correio),
+Valeram **só na noite de 06/10, até 23h59**:
+- **Todo mundo que comprou até 23h59:** mais 3 meses de acesso (15 no total).
+- **10 primeiros** (pela ordem de compra): certificado Filgueiras Academy, prancheta ilustrada da Aline (vai pelo correio),
   mentoria em grupo com a Aline e toxina botulínica.
 - **5 primeiros:** mais 6 meses de acesso (18 no total).
 

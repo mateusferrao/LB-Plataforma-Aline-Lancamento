@@ -60,7 +60,7 @@ Só na noite da aula. Os bônus valem até 23h59 e contam pela hora da compra.
 
 > Oi, [nome]! Aqui é a [atendente], da equipe da Dra. Aline. Vi que você começou a inscrição na Filgueiras Academy e parou no meio. Travou alguma coisa no pagamento ou ficou alguma dúvida? Te ajudo por aqui.
 >
-> Se for o cartão: dá pra pagar no Pix ou em 12x de R$185,85.
+> Se for o cartão: dá pra pagar no Pix ou em 12x de R$185,85. E quem entra hoje, até 23h59, ganha +3 meses de acesso (15 no total).
 > Seu link: [link Sala]
 
 **S2 · 40 min sem resposta · Valor**
@@ -73,6 +73,7 @@ Só na noite da aula. Os bônus valem até 23h59 e contam pela hora da compra.
 > • 1 aula ao vivo com a Aline pra discutir casos (vale R$1.000)
 > • Preferência nos cursos presenciais
 >
+> Só hoje, até 23h59, pra todo mundo: +3 meses de acesso, 15 no total (vale R$449).
 > E só pros 10 primeiros de hoje: certificado, prancheta ilustrada da Aline (vale R$600), mentoria em grupo com a Aline (vale R$5.000) e toxina botulínica. **Restam [X] dos 10.**
 >
 > Somado, passa de R$14 mil. Hoje é R$1.797, ou 12x de R$185,85.
@@ -80,20 +81,20 @@ Só na noite da aula. Os bônus valem até 23h59 e contam pela hora da compra.
 >
 > [link Sala]
 
-*Se os 10 já fecharam:* trocar o parágrafo dos bônus por "Os bônus dos 10 primeiros já fecharam, mas tudo o que está acima continua seu." e tirar o "passa de R$14 mil" (fica "Somado, passa de R$8 mil").
+*Se os 10 já fecharam:* trocar o parágrafo dos 10 primeiros por "Os bônus dos 10 primeiros já fecharam, mas os +3 meses continuam até 23h59." e tirar o "passa de R$14 mil" (fica "Somado, passa de R$9 mil").
 
 **S3 · 23h · Decisão (urgência real)**
 
-> [nome], última mensagem de hoje, prometo. Os bônus fecham às 23h59: certificado, prancheta, mentoria em grupo com a Aline e toxina. Depois disso a Academy continua R$1.797, mas sem eles. Restam [X].
+> [nome], última mensagem de hoje, prometo. Às 23h59 acabam os +3 meses de acesso (15 em vez de 12) e os bônus dos 10 primeiros: certificado, prancheta, mentoria em grupo com a Aline e toxina. Depois disso a Academy continua R$1.797, com 12 meses. Restam [X] dos 10.
 > [link Sala]
 
-*Se os 10 já fecharam:* não mandar a S3. Não existe urgência real para quem não entra mais nos bônus.
+*Se os 10 já fecharam:* mandar só com os +3 meses ("Às 23h59 acabam os +3 meses de acesso: 15 em vez de 12. Depois disso a Academy continua R$1.797, com 12 meses."). É urgência real para todo mundo até 23h59.
 
 **Pix emitido e não pago · 15 min**
 
-> Oi, [nome]! Seu Pix da Filgueiras Academy ainda não foi pago. Pra você não perder o lugar entre os 10 primeiros, segue o código de novo: [código Pix]. Vale até 23h59.
+> Oi, [nome]! Seu Pix da Filgueiras Academy ainda não foi pago. Pra você não perder os +3 meses de acesso e o lugar entre os 10 primeiros, segue o código de novo: [código Pix]. Vale até 23h59.
 
-*(Sem a frase dos 10 primeiros se eles já fecharam.)*
+*(Sem "e o lugar entre os 10 primeiros" se eles já fecharam.)*
 
 **Quem abandonou a Sala e não comprou até 23h59:** em 07/10 entra na sequência da Evergreen (seção 3), começando pela **E2**, com o link da Evergreen. Nada de anatomia antes disso.
 
@@ -207,7 +208,7 @@ Só acontece quando o 1 clique não conseguiu cobrar e abriu o checkout (por exe
 
 > Oi, [nome]! Bem-vinda à Filgueiras Academy. Vi que você abriu a mentoria em grupo com a Aline e não finalizou. Travou no pagamento?
 >
-> Pra você lembrar o que é: 3 meses de mentoria em grupo com a Aline, 1 encontro ao vivo por mês, pra levar os seus casos enquanto você aplica. É a mesma mentoria que, na noite da aula, foi bônus só das 10 primeiras. Vale R$5.000; pra aluna, sai por R$1.997, ou 12x de R$206,54. 7 dias de garantia.
+> Pra você lembrar o que é: 3 meses de mentoria em grupo com a Aline, 1 encontro ao vivo por mês, pra levar os seus casos enquanto você aplica. Pra aluna, sai por R$1.997, ou 12x de R$206,54. 7 dias de garantia.
 >
 > E a vaga da sua colega continua de pé **só até hoje**: fechando a mentoria hoje, uma colega da estética ou da saúde vai com você nos encontros, sem pagar a mais.
 > [link Mentoria]

@@ -60,6 +60,13 @@ export function Oferta({ modo }: { modo: Modo }) {
       <Titulo eyebrow="Tudo o que você leva hoje" center>
         Menos do que um curso presencial de dois dias
       </Titulo>
+      {/* Âncoras do pitch (docs/agente-ia/04-filgueiras-academy.md §3). */}
+      <Reveal>
+        <p className="mx-auto mt-5 max-w-[560px] text-center text-[1.02rem] leading-[1.6] text-fg-soft">
+          Um curso presencial só de técnica com a Aline custa de R$2.800 a R$4.800. Um curso de fresh frozen fora
+          do Brasil passa de US$5.000, fora passagem e visto.
+        </p>
+      </Reveal>
 
       <Reveal className="mt-10 rounded-[8px] border-2 border-wine px-5 py-7 sm:px-8">
         <h3 className="text-center font-sans text-[1.1rem] font-semibold tracking-[0.08em] text-fg uppercase">

@@ -65,9 +65,10 @@ acesso funcionando no primeiro dia.
 |---|---|
 | **Até 06/10, 20h** | Venda do ingresso da aula (R$67). **Encerrada.** |
 | **06/10, 20h** | Aula ao vivo "Por Dentro da Face". **Já aconteceu. Sem replay.** |
-| **06/10, até 23h59** | Academy com os **bônus da noite** (10 primeiros e 5 primeiros), pela página da sala |
+| **06/10, até 23h59** | Academy com os **bônus da noite**: **+3 meses de acesso pra todo mundo** (15 no total), e os bônus dos 10 primeiros e dos 5 primeiros, pela página da sala |
 | **A partir de 07/10** | Academy sem bônus, pela `/academy`. Curso de anatomia separado como downsell, com as regras do 04 |
-| **Até 10/10** | A equipe entrega os bônus dos 10 primeiros e estende o acesso dos 5 primeiros |
+| **A partir de 07/10, 00h** | A página da sala (`/academy/sala`) passa a abrir a `/academy` |
+| **Até 10/10** | A equipe entrega os bônus dos 10 primeiros e estende o acesso de quem comprou na noite (15 meses; 18 pras 5 primeiras) |
 
 Ofertas que **acabaram** com a aula: o ingresso de R$67, a condição de ex-alunas (`/alunas`), o
 order bump do Protocolo no checkout da aula e a aula de presente para quem comprou o Protocolo.

@@ -9,14 +9,15 @@
 ## 1. Filgueiras Academy
 Oferta completa, falas e suporte em `04-filgueiras-academy.md`. Resumo das políticas:
 - **Preço único:** R$1.797, no Pix ou em 12x de R$185,85 no cartão. **Sem desconto nem cupom.**
-- **Bônus da noite da aula:** valeram só em 06/10, até 23h59, pros **10 primeiros pela hora da
-  compra** (certificado, prancheta, mentoria em grupo com a Aline, toxina) e **+6 meses** pras 5
+- **Bônus da noite da aula:** valeram só em 06/10, até 23h59: **+3 meses de acesso pra todo mundo
+  que comprou na noite** (15 no total) e, pros **10 primeiros pela hora da
+  compra**, certificado, prancheta, mentoria em grupo com a Aline e toxina; **+6 meses** pras 5
   primeiras. O agente **nunca confirma** se a pessoa está entre elas.
 - **Garantia Mão Segura:** 7 dias sem perguntas + 30 dias se a mão não ficar mais segura depois do
   módulo de anatomia. Vale pra Academy, pra anatomia separada e pro upgrade. **Mentoria: 7 dias.**
   Reembolso sempre escalado para o humano.
-- **Acesso:** login no e-mail da compra em poucos minutos (Pix: depois de pago). 12 meses (18 pras 5
-  primeiras, estendido pela equipe até 10/10). Anatomia separada: 6 meses.
+- **Acesso:** login no e-mail da compra em poucos minutos (Pix: depois de pago). 12 meses (15 pra quem
+  comprou na noite de 06/10 e 18 pras 5 primeiras, estendido pela equipe até 10/10). Anatomia separada: 6 meses.
 - **Links:** só páginas do site (`/academy/sala` na noite de 06/10, `/academy` depois,
   `/academy/anatomia` só a partir de 07/10 e só depois de um "não"). Nunca checkout da Ticto.
 - **Mentoria (upsell) e vaga da colega:** só na página logo depois da compra da Academy. A vaga da
