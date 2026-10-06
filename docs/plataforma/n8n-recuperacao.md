@@ -29,7 +29,7 @@ Os mesmos três templates para todas as ofertas:
 | Upgrade `OB97300B4` | nome / Upgrade para a Filgueiras Academy | `OB97300B4` |
 | Mentoria `O5491F4AA` | nome / Mentoria em grupo com a Dra. Aline | `O5491F4AA` |
 
-**Botão:** os templates foram aprovados com **URL fixa** (`https://payment.ticto.app/r/PC8C7EF55`), então o fluxo não manda o código da oferta no botão e todas as ofertas levam ao mesmo link. Para cada oferta ter o próprio link, é preciso recriar os templates com URL dinâmica (`https://payment.ticto.app/{{1}}`) e devolver o componente de botão no nó.
+**Botão:** os templates usam o **Magic Link da Ticto** (`https://payment.ticto.app/r/PC8C7EF55`, produto Filgueiras Academy 3.0 → Magic Link), o link único de recuperação: a cliente retoma a compra que deixou aberta, de qualquer oferta do produto (cartão, Pix ou boleto). Por isso o botão é fixo e o fluxo não manda o código da oferta.
 
 Sem nome no webhook, o `{{1}}` vai como "Colega" (a Meta recusa variável vazia). O downsell automático da anatomia às 48h saiu com a troca para templates genéricos; se quiserem de volta, vira um 4º template.
 
