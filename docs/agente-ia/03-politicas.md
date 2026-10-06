@@ -18,9 +18,9 @@
 
 ## 2. Formato da aula (gravação e comparecimento)
 - Aula **ao vivo e online**, **06/10/2026 às 20h (horário de Brasília)**, ~90 minutos.
-- **Não há replay avulso.** É uma noite só. A única gravação é a que entra na **condição especial
-  da Filgueiras Academy**, apresentada na sala. O agente não detalha a condição nem cita preço,
-  formato ou prazo da plataforma.
+- **Não há replay.** É uma noite só, e a gravação não fica disponível, nem avulsa nem na
+  **Filgueiras Academy**. Até 06/10, 21h30, o agente não detalha a condição da Academy nem cita
+  preço, formato ou prazo da plataforma; depois, segue a seção 11.
 - Quem não puder comparecer ao vivo **não tem acesso posterior**; dentro dos 7 dias, cabe reembolso.
 
 ## 3. Acesso à sala
@@ -79,3 +79,21 @@
 - **Garantia:** 7 dias, sem perguntas; reembolso escalado para o atendimento humano.
 - **Quem já tem o ingresso da aula** e quer o kit: escalar para o atendimento humano (não
   encaminhar para a `/info`).
+
+## 11. Filgueiras Academy (a partir de 06/10/2026, 21h30)
+Detalhes, falas e suporte em `04-filgueiras-academy.md`. Resumo das políticas:
+- **Preço único:** R$1.797, no Pix ou em 12x de R$185,85 no cartão. **Sem desconto nem cupom.**
+- **Bônus:** só na noite da aula (até 06/10, 23h59), pros **10 primeiros pela hora da compra**
+  (certificado, prancheta, mentoria em grupo com a Aline, toxina) e **+6 meses** pras 5 primeiras.
+  O agente **nunca confirma** se a pessoa está entre elas nem diz quantas vagas restam.
+- **Garantia Mão Segura:** 7 dias sem perguntas + 30 dias se a mão não ficar mais segura depois do
+  módulo de anatomia. Vale pra Academy, pra anatomia separada e pro upgrade. **Mentoria: 7 dias.**
+  Reembolso sempre escalado para o humano.
+- **Acesso:** login no e-mail da compra em poucos minutos (Pix: depois de pago). 12 meses (18 pras 5
+  primeiras, estendido pela equipe até 10/10). Anatomia separada: 6 meses.
+- **Links:** só páginas do site (`/academy/sala` na noite da aula, `/academy` depois,
+  `/academy/anatomia` só a partir de 07/10 e só depois de um "não"). Nunca checkout da Ticto.
+- **Mentoria (upsell) e vaga da colega:** só na página logo depois da compra da Academy. A vaga da
+  colega vale só pra quem aceita no mesmo dia; cadastro da colega e casos fora da regra → humano.
+- **Upgrade da anatomia:** R$1.000 até o 30º dia da compra da anatomia. O humano confere a data e
+  manda o link.

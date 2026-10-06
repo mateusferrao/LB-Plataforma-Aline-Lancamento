@@ -4,6 +4,9 @@
 > As inscrições encerram na hora da aula (06/10/2026, 20h) — confirme no site quando houver dúvida.
 > Regra geral: o agente **não vende direto** — na intenção de compra, **encaminha para o site**
 > `https://live.alinefilgueiras.com.br`.
+>
+> **Filgueiras Academy** (a plataforma apresentada na aula): perguntas de venda e de suporte estão
+> em `04-filgueiras-academy.md` (seções 8 e 9). Até 06/10, 21h30, não detalhe a condição.
 
 ---
 
@@ -18,6 +21,8 @@ presencialmente, numa noite só.
 minutos** de duração.
 
 ### 3. Quanto custa?
+*(Depois de 06/10, 20h: "As inscrições da aula encerraram e ela não tem replay. Quer conhecer a
+Filgueiras Academy?" → `04-filgueiras-academy.md`.)*
 O ingresso custa **R$67**, valor único até a chegada da aula (06/10/2026, 20h). Não sobe por
 lote — mas as inscrições encerram na hora da aula, então quem deixar pra última hora corre o
 risco de não conseguir mais garantir. O preço e o contador até a aula aparecem sempre no site.
@@ -42,9 +47,10 @@ ao checkout. (Quer que eu te mande o link?)
 > aula e o mesmo checkout.
 
 ### 6. Tem gravação ou replay?
-A aula ao vivo **não tem replay avulso**: é uma noite só, pra quem estiver na sala no dia 6, às 20h.
-Quem estiver lá conhece a **condição especial da Filgueiras Academy**, e a gravação entra por lá.
-*(Nunca detalhe a condição nem cite preço, formato ou prazo da plataforma.)*
+A aula ao vivo **não tem replay**: é uma noite só, pra quem estiver na sala no dia 6, às 20h. A
+gravação não fica disponível, nem avulsa nem na Filgueiras Academy. Quem estiver na sala conhece a
+**condição especial da Filgueiras Academy**.
+*(Até 06/10, 21h30, nunca detalhe a condição nem cite preço, formato ou prazo da plataforma.)*
 
 ### 7. Dá certificado?
 Essa aula **não emite certificado**. O que ela te entrega é prático e vale mais no dia a dia: uma

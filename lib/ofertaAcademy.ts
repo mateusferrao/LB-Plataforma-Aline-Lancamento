@@ -161,6 +161,15 @@ export const MENTORIA = {
   // Pela conta (3,49% ao mês, juros do comprador). Conferir no checkout da Ticto.
   parcela12x: "R$206,54",
   checkoutUrl: "https://payment.ticto.app/O5491F4AA",
+  // Bônus só da página do upsell (decisão de 06/10): quem aceita leva 1 colega da
+  // estética ou da saúde nos encontros, sem pagar a mais. Não muda nada na Ticto
+  // (o 1 clique cobra os mesmos R$1.997); a equipe cadastra a colega depois.
+  // Vale para a mentoria comprada no mesmo dia da Academy.
+  acompanhante: {
+    nome: "+1 vaga pra uma colega",
+    detalhe: "Uma colega da estética ou da saúde participa dos encontros ao vivo com você, pelos 3 meses.",
+    valor: 5000,
+  },
 } as const;
 
 export const TICTO_UPSELL_ACADEMY = {

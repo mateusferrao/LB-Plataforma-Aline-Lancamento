@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 // Academy e a mentoria. Primeiro a vitória rápida (a anatomia), depois a mentoria.
 const TIME_WHATSAPP_URL =
   "https://wa.me/5531953491799?text=" +
-  encodeURIComponent("Oi! Entrei na Academy e na mentoria em grupo com a Aline.");
+  encodeURIComponent("Oi! Entrei na Academy e na mentoria em grupo com a Aline. Quero cadastrar a minha colega na mentoria.");
 
 const PASSOS = [
   {
@@ -26,8 +26,8 @@ const PASSOS = [
     d: "Assista à primeira aula do curso de Fresh Frozen + dissecção ainda hoje. É por ela que tudo começa.",
   },
   {
-    t: "Fale com a equipe sobre a mentoria",
-    d: `A equipe te chama no WhatsApp com as datas dos encontros (${MENTORIA.encontros.toLowerCase()}, por ${MENTORIA.meses} meses). Salve o número.`,
+    t: "Cadastre a sua colega",
+    d: `Mande pra equipe no WhatsApp o nome e o telefone da colega que vai com você. A equipe passa as datas dos encontros (${MENTORIA.encontros.toLowerCase()}, por ${MENTORIA.meses} meses) pra vocês duas.`,
   },
 ] as const;
 

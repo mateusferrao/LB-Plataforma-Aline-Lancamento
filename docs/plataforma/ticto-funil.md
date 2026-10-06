@@ -138,6 +138,11 @@ Decisões de 05/10:
 
 - **O upsell:** mentoria em grupo com a Aline, **3 meses, 1 encontro ao vivo por mês**, por **R$1.997** (valor de R$5.000 na pilha, a mesma mentoria que os 10 primeiros da aula levaram de bônus).
 - **Sem downsell** depois da recusa.
+- **Bônus só da página (06/10): +1 vaga pra uma colega.** Quem aceita a mentoria leva uma colega da estética ou da saúde nos encontros, sem pagar a mais (vale R$5.000 na página, total R$10.000). Nada muda na Ticto: o 1 clique cobra os mesmos R$1.997. Regras para a equipe:
+  - vale para a mentoria comprada **no mesmo dia** da Academy (pelo 1 clique ou pelo checkout de reserva). Depois disso, não;
+  - **1 colega por compra**, profissional da estética ou da saúde. Ela entra só nos encontros da mentoria, sem acesso à Academy;
+  - a compradora manda nome e telefone da colega pelo WhatsApp (a página de obrigado pede isso). A equipe coloca as duas no grupo da mentoria;
+  - reembolso da mentoria tira as duas.
 - **Só na oferta Evergreen.** Na noite da aula, os 10 primeiros já levam a mentoria como bônus, e vender a mesma coisa em seguida confunde quem comprou.
 
 ```

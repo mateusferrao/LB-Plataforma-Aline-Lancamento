@@ -206,9 +206,11 @@ Só acontece quando o 1 clique não conseguiu cobrar e abriu o checkout (por exe
 > Oi, [nome]! Bem-vinda à Filgueiras Academy. Vi que você abriu a mentoria em grupo com a Aline e não finalizou. Travou no pagamento?
 >
 > Pra você lembrar o que é: 3 meses de mentoria em grupo com a Aline, 1 encontro ao vivo por mês, pra levar os seus casos enquanto você aplica. É a mesma mentoria que, na noite da aula, foi bônus só das 10 primeiras. Vale R$5.000; pra aluna, sai por R$1.997, ou 12x de R$206,54. 7 dias de garantia.
+>
+> E a vaga da sua colega continua de pé **só até hoje**: fechando a mentoria hoje, uma colega da estética ou da saúde vai com você nos encontros, sem pagar a mais.
 > [link Mentoria]
 
-*Conferir a parcela da mentoria no checkout da Ticto antes de usar.*
+*Conferir a parcela da mentoria no checkout da Ticto antes de usar. Mandar a M1 só no mesmo dia da compra da Academy: a vaga da colega vale só nesse dia. No dia seguinte, a M1 sai sem o último parágrafo.*
 
 **Pix emitido e não pago · 30 min**
 

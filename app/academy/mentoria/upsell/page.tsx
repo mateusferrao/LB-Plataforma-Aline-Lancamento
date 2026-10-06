@@ -11,11 +11,12 @@ export const metadata: Metadata = {
 // Upsell do Flow da Academy, só na oferta Evergreen (docs/plataforma/ticto-funil.md
 // §2). Aparece logo depois da compra da Academy. Sem downsell depois (decisão de
 // 05/10): o "não" leva ao obrigado da Academy. Os botões ganham o 1 clique quando o
-// script do Flow da Academy for colado em TICTO_UPSELL_ACADEMY.
+// script do Flow da Academy for colado em TICTO_UPSELL_ACADEMY. A vaga da colega
+// (MENTORIA.acompanhante) é bônus só desta página: quem sai sem aceitar não a recebe.
 const OBRIGADO_ACADEMY = "/academy/obrigado";
 const WHATS_URL =
   "https://wa.me/5531953491799?text=" +
-  encodeURIComponent("Oi! Acabei de entrar na Academy e quero a mentoria em grupo com a Aline.");
+  encodeURIComponent("Oi! Acabei de entrar na Academy e quero a mentoria em grupo com a Aline, com a vaga da minha colega.");
 
 const RECEBE = [
   [`${MENTORIA.meses} meses de mentoria em grupo com a Aline`, `${MENTORIA.encontros}, online.`],
@@ -23,7 +24,7 @@ const RECEBE = [
   ["A mesma mentoria dos 10 primeiros da aula", "Na noite da aula, ela foi bônus só pra quem entrou primeiro."],
 ] as const;
 
-const TEXTO_ACEITAR = `Sim, quero a mentoria por ${MENTORIA.precoLabel}`;
+const TEXTO_ACEITAR = `Sim, quero a mentoria e a vaga da colega por ${MENTORIA.precoLabel}`;
 const TEXTO_RECUSAR = "Não, quero seguir só com a Academy";
 const ACEITAR =
   "mt-7 inline-flex w-full cursor-pointer items-center justify-center rounded-[2px] bg-wine px-8 py-[18px] font-sans text-[1.02rem] font-semibold text-on-wine transition-transform duration-150 ease-out hover:-translate-y-0.5";
@@ -60,17 +61,35 @@ export default function MentoriaUpsell() {
               </li>
             ))}
           </ul>
-          <div className="flex items-baseline justify-between gap-5 pt-5">
-            <span className="text-[1rem] text-fg-soft">Valor da mentoria</span>
+
+          <div className="mt-6 rounded-[6px] border border-wine/50 bg-bg-3 px-4 py-5 sm:px-5">
+            <span className="text-[11.5px] font-semibold tracking-[0.14em] text-wine-ink uppercase">
+              Só nesta página
+            </span>
+            <div className="mt-2 flex items-baseline justify-between gap-5">
+              <span className="text-[1.08rem] font-semibold text-fg">Leve uma colega junto, sem pagar a mais</span>
+              <span className="shrink-0 text-[0.98rem] text-fg-soft line-through decoration-wine-bright">
+                {brl(MENTORIA.acompanhante.valor)}
+              </span>
+            </div>
+            <p className="mt-1 text-[0.92rem] leading-[1.5] text-fg-soft">
+              {MENTORIA.acompanhante.detalhe} Se você sair desta página sem aceitar, a vaga dela não volta.
+            </p>
+          </div>
+
+          <div className="flex items-baseline justify-between gap-5 pt-6">
+            <span className="text-[1rem] text-fg-soft">Valor total</span>
             <span className="shrink-0 font-serif text-[1.5rem] text-fg line-through decoration-wine-bright">
-              {brl(MENTORIA.valor)}
+              {brl(MENTORIA.valor + MENTORIA.acompanhante.valor)}
             </span>
           </div>
 
           <div className="mt-8 text-center">
             <p className="text-[1rem] text-fg-soft">Pra quem acabou de entrar na Academy</p>
             <p className="mt-1 font-serif text-[3.2rem] leading-none text-fg">{MENTORIA.precoLabel}</p>
-            <p className="mt-2 text-[0.95rem] text-fg-soft">ou 12x de {MENTORIA.parcela12x} no cartão</p>
+            <p className="mt-2 text-[0.95rem] text-fg-soft">
+              ou 12x de {MENTORIA.parcela12x} no cartão · a vaga da colega já está incluída
+            </p>
 
             {umClique ? (
               <>

@@ -329,7 +329,7 @@ Quem comprou a anatomia pode trocar pela Academy **pagando só a diferença**, e
 - **Onde usar a partir de 07/10:**
   1. **Carrinho abandonado da Ticto:** mensagem no WhatsApp, 24 horas depois do abandono.
   2. **Remarketing** para quem visitou a `/academy` e não comprou.
-  3. **Agente de IA no WhatsApp:** quando a objeção for preço. Hoje o playbook não fala da Academy (`docs/agente-ia/`).
+  3. **Agente de IA no WhatsApp:** quando a objeção for preço, a partir de 07/10 (`docs/agente-ia/04-filgueiras-academy.md`, seção 6).
 
 Mensagem do carrinho abandonado:
 

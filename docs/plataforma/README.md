@@ -142,7 +142,7 @@ Durante o pitch, a equipe:
   - os "11+ anos de clínica";
   - o nome "Garantia Mão Segura".
 - [ ] **Confirmar o conteúdo do "Material de Apoio":** anamnese, termos, precificação e scripts.
-- [ ] **Agente de IA:** atualizar `docs/agente-ia/` para o carrinho (preço, bônus, garantia, objeções) e tirar a afirmação de que a gravação só existe na Academy.
+- [x] **Agente de IA:** `docs/agente-ia/04-filgueiras-academy.md` (venda e suporte da Academy, 06/10), e a afirmação de que a gravação existe na Academy saiu dos outros três arquivos.
 
 **Depois de 06/10:**
 
