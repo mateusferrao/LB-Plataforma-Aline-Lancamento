@@ -20,8 +20,8 @@
 | **A partir de 07/10, 00h** | Academy sem bônus. Link: `https://live.alinefilgueiras.com.br/academy`. O downsell (anatomia) pode entrar, com as regras da seção 6 |
 | **Sempre** | Suporte de quem já comprou (seção 8) |
 
-As inscrições da aula (ingresso de R$67) encerram em **06/10, 20h**. Depois disso, quem pedir a aula
-ouve que ela já aconteceu, sem replay, e conhece a Academy.
+A aula "Por Dentro da Face" **já aconteceu** (06/10, 20h) e **não tem replay**. Quem pedir a aula
+ouve isso e conhece a Academy. Quem comprou o ingresso e quer reembolso: `03-politicas.md`, seção 3.
 
 ---
 
