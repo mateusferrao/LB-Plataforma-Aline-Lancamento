@@ -26,10 +26,11 @@ calha lacrimal (02/10).
   capa. Nos estáticos de venda ela aparece como avatar (`fotos/avatar-aline.jpg`, recortada do
   IMG_2769).
 - **Trilhas:** Pixabay Music, com a Pixabay Content License (uso comercial em anúncio, sem
-  atribuição). Ficam em `privado/trilhas/`, fora do git:
-  - "Emotional Piano Cinematic Cue" (Farran_Ez)
-  - "Documentary Suspense" (leberch)
-  - "Documentary Cinematic" (leberch)
+  atribuição). Ficam em `privado/trilhas/`, fora do git.
+  - "Corporate Inspiring" (Kulakovka): V4, V5 e V6.
+  - "Inspiring Uplifting" (AtlasAudio): V1 e V2, sob a voz.
+  - "Emotional Piano Cinematic Cue" (Farran_Ez): V3.
+  - Em 06/10 saíram a "Documentary Suspense" e a "Documentary Cinematic" (leberch), a pedido: tensas e macabras demais.
 
 ## Os 10 criativos
 
@@ -199,10 +200,16 @@ A montagem é feita com `../video-ugc/montar.py` sobre o 1º quadro do vídeo, p
 | V4 (dor da agulha) | "Já travou com a seringa na mão? Olha o que ninguém te mostrou." | Dor |
 | V5 (venda, bônus) | "Se a paciente te diz “vou pensar” e some, olha isso." | Dor de venda |
 
-## Variantes com gancho UGC (montadas em 06/10, `ugc.py`)
-Os vídeos da Camila chegaram **sem fundo verde** (parede bege). Por isso o formato usado é o de
-corte seco (tier A): ela fala o gancho em tela cheia, com legenda já no frame 0, e o corpo do
-vídeo entra direto. Os cortes foram feitos pelos tempos de cada palavra.
+## Variantes com gancho UGC (`ugc.py`, formato de 06/10)
+O formato segue o exemplo enviado em 06/10:
+- **Camila** recortada (sem fundo) no **canto inferior direito**, sobre uma cena rodando da aula ou do laboratório.
+- **Legenda** em caixa alta, com 2 a 4 palavras por vez e destaque amarelo, sincronizada pelos tempos de cada palavra.
+- **Depois do gancho**, o corpo do vídeo segue normalmente.
+- **Trilha** contínua desde o primeiro segundo, abaixando sob as vozes.
+
+Os vídeos dela chegaram sem fundo verde (parede bege). O fundo sai por IA (rembg, `u2net_human_seg`),
+quadro a quadro, com cache em `privado/ugc/recorte-*`. As fontes horizontais (ugc2 e ugc4) ficam
+aceitáveis nesse formato, porque a pessoa aparece em tamanho menor no canto.
 
 | Variante | Arquivo | Fala usada | Situação |
 |---|---|---|---|
@@ -210,8 +217,8 @@ vídeo entra direto. Os cortes foram feitos pelos tempos de cada palavra.
 | V4-ugc | ugc1 | "Já travou com a seringa na mão? Olha o que ninguém te mostrou." | Pronta |
 | V5-ugc (venda) | ugc3 | "Se a paciente te diz “vou pensar” e some, olha isso." | Pronta |
 | V5-ugc (agenda) | ugc6 | "Se tudo continuar como está pelos próximos seis meses, você vai estar satisfeita com a sua agenda?" (fala fora do roteiro original, sem promessa) | Pronta |
-| V2-C | ugc4 | Só até "…abriu a calha lacrimal por dentro". O resto saiu alarmista ("vocês não têm noção do perigo… alertar vocês") e foi descartado | **Provisória**: a fonte veio horizontal e a imagem fica mole. Regerar na vertical |
-| V3-ugc | ugc2 | Só até "…e ainda estuda dissecção". O resto saiu embolado ("e some dissecção e some") | **Provisória**: fonte horizontal, imagem mole e enquadramento apertado. Regerar na vertical |
+| V2-C | ugc4 | Só até "…abriu a calha lacrimal por dentro". O resto saiu alarmista ("vocês não têm noção do perigo… alertar vocês") e foi descartado | Pronta. A fonte é horizontal, mas no canto não aparece. Regerar na vertical deixaria mais nítido |
+| V3-ugc | ugc2 | Só até "…e ainda estuda dissecção". O resto saiu embolado ("e some dissecção e some"). O corpo pula a 1ª cena, que repetia o gancho em texto | Pronta. A fonte é horizontal, mas no canto não aparece. Regerar na vertical deixaria mais nítido |
 | V2-A | (não veio) | "Se você tem medo de aplicar em calha lacrimal, olha isso." | Falta gravar |
 
 ## Plano de teste

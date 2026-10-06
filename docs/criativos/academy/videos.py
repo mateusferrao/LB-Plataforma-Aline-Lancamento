@@ -5,7 +5,7 @@ Uso:
     python docs/criativos/academy/videos.py V1 V4      # só alguns
 
 Os brutos ficam fora do git, em BRUTOS (padrão: Downloads/Criativos Filgueiras Academy).
-As trilhas (Pixabay, uso comercial) ficam em privado/trilhas/. A saída vai para out/videos/:
+As trilhas (Pixabay, uso comercial) ficam em privado/trilhas/. A "Documentary Suspense" saiu em 06/10 (tensa demais). A saída vai para out/videos/:
 cada vídeo em 9:16 (1080x1920) e 4:5 (1080x1350, crop central).
 
 Os textos na tela são renderizados em HTML pelo Chrome headless, com fundo transparente, para
@@ -134,7 +134,7 @@ FALAS_V1 = [
 
 ROTEIROS = {
     # V1 · Frio · anatomia · remix do vencedor (controle). Gancho original queimado no clipe.
-    "V1-aula-academy": dict(trilha="ambiente.mp3", vol=0.16, cenas=[
+    "V1-aula-academy": dict(trilha="inspiring-uplifting.mp3", vol=0.2, cenas=[
         clip(WA, 0, 35.5, voz=True, textos=[
             T(9.0, 35.5, "chip", '<span class="chip">Trecho de uma aula da Filgueiras Academy</span>'),
             *[T(a, b, "fala", f'<span class="fala">{html.escape(f)}</span>') for a, b, f in FALAS_V1],
@@ -164,7 +164,7 @@ ROTEIROS = {
                          "Com mais de 70 aulas de técnica e a Consulta que Vende.")),
     ]),
     # V4 · Frio · dor e medo. Abre com a cânula na peça pixelada + a pergunta que ela se faz na cadeira.
-    "V4-seringa-na-mao": dict(trilha="pulso-tenso.mp3", vol=0.9, cenas=[
+    "V4-seringa-na-mao": dict(trilha="corporate-inspiring.mp3", vol=0.9, cenas=[
         clip(WA, 19.6, 2.4, **WA_SEM_TEXTO, textos=[
             T(0.0, 2.4, "centro", GANCHO_S("“Tem vaso nesse ponto?”")),
         ]),
@@ -184,7 +184,7 @@ ROTEIROS = {
                          "O curso online de dissecção da Filgueiras Academy. Sem visto e sem passagem.")),
     ]),
     # V5 · Remarketing · venda. Abre com a conversa animada: as mensagens entram uma a uma.
-    "V5-tres-vezes": dict(trilha="pulso-tenso.mp3", vol=0.85, trilha_ss=30, cenas=[
+    "V5-tres-vezes": dict(trilha="corporate-inspiring.mp3", vol=0.9, cenas=[
         cor(3.6, textos=[
             T(0.0, 0.45, "chat", chat(1)),
             T(0.45, 1.0, "chat", chat(2)),
@@ -212,7 +212,7 @@ ROTEIROS = {
                          "Anatomia em fresh frozen, mais de 70 aulas de técnica e a Consulta que Vende.")),
     ]),
     # V6 · Remarketing · Academy completa. Abre com 4 cortes rápidos sob o gancho (movimento no 1º segundo).
-    "V6-o-que-tem-dentro": dict(trilha="piano-esperanca.mp3", vol=0.9, cenas=[
+    "V6-o-que-tem-dentro": dict(trilha="corporate-inspiring.mp3", vol=0.9, cenas=[
         # o mesmo gancho atravessa os 4 cortes
         clip(WA, 20.0, 0.55, **WA_SEM_TEXTO, textos=[T(0.0, 0.55, "centro", GANCHO_V6)]),
         clip("IMG_2775.MOV", 25.0, 0.55, cx=0.5, cy=0.6, z=1.35, textos=[T(0.0, 0.55, "centro", GANCHO_V6)]),
@@ -283,6 +283,10 @@ body { width: 1080px; height: 1920px; overflow: hidden; font-family: "Inter", sa
 .chatv .voce { align-self: flex-end; background: #7e1e1c; border-top-right-radius: 6px; }
 .chatv .fim { font-family: "Fraunces", serif; font-style: italic; font-size: 118px; line-height: 1.1; padding: 22px 32px 14px; white-space: nowrap; }
 .chatv .aviso { align-self: center; margin-top: 10px; font-size: 22px; letter-spacing: .14em; text-transform: uppercase; color: #a69f97; }
+.palbox { position: absolute; left: 150px; right: 180px; top: 700px; text-align: center; }
+.pal { display: inline; color: #fff; font-weight: 700; font-size: 70px; line-height: 1.18; text-transform: uppercase; letter-spacing: .005em;
+  -webkit-text-stroke: 10px #000; paint-order: stroke fill; text-shadow: 0 4px 18px rgba(0,0,0,.45); }
+.pal b { color: #ffd400; font-weight: 700; }
 .num { display: inline-flex; width: 74px; height: 74px; border-radius: 50%; background: #7e1e1c; color: #fff; font-family: "Fraunces", serif; font-size: 44px; align-items: center; justify-content: center; margin-bottom: 18px; }
 .chipbox { position: absolute; left: 150px; right: 180px; top: 560px; text-align: center; }
 .chip { display: inline-block; background: rgba(12,11,10,.78); color: #e7a39c; font-size: 25px; font-weight: 600; letter-spacing: .07em; text-transform: uppercase; padding: 12px 22px; border-radius: 999px; }
@@ -309,6 +313,8 @@ def html_texto(pos, conteudo):
         return f'<div class="chipbox">{conteudo}</div>'
     if pos == "fala":
         return f'<div class="falabox">{conteudo}</div>'
+    if pos == "pal":
+        return f'<div class="palbox">{conteudo}</div>'
     if pos == "chat":
         return f'<div class="chatwrap">{conteudo}</div>'
     # cada parágrafo ganha um <span class="in"> com fundo escuro por linha (lê sobre a parede branca)
@@ -463,18 +469,21 @@ def montar(nome, roteiro):
          "-c", "copy", str(bruto)])
     total = sum(c["dur"] for c in roteiro["cenas"])
     tem_voz = any(c.get("voz") for c in roteiro["cenas"])
-    trilha = TRILHAS / roteiro["trilha"]
-    ss = roteiro.get("trilha_ss", 0)
-    musica = (f"[1:a]atrim={ss}:{ss + total},asetpts=PTS-STARTPTS,aresample=48000,volume={roteiro['vol']},"
+    mixar(nome, bruto, total, roteiro["trilha"], roteiro["vol"], roteiro.get("trilha_ss", 0), tem_voz)
+
+
+def mixar(nome, bruto, total, trilha, vol, ss=0, tem_voz=False):
+    """Põe a trilha no vídeo montado (com ducking sob a voz), normaliza em -14 LUFS e gera 9:16 e 4:5."""
+    musica = (f"[1:a]atrim={ss}:{ss + total},asetpts=PTS-STARTPTS,aresample=48000,volume={vol},"
               f"afade=t=out:st={total - 0.8:.2f}:d=0.8[m]")
     if tem_voz:
-        # a trilha abaixa sozinha quando a Aline fala (sidechain), e a voz fica na frente
+        # a trilha abaixa sozinha quando alguém fala (sidechain), e a voz fica na frente
         mix = (f"{musica};[0:a]asplit=2[voz][sc];[m][sc]sidechaincompress=threshold=0.02:ratio=8:attack=20:release=400[md];"
                f"[voz][md]amix=inputs=2:normalize=0,loudnorm=I=-14:TP=-1.5:LRA=11,aresample=48000[a]")
     else:
         mix = f"{musica};[m]loudnorm=I=-14:TP=-1.5:LRA=11,aresample=48000[a]"
     vertical = VIDS / f"{nome}-9x16.mp4"
-    run([FF, "-y", "-hide_banner", "-loglevel", "error", "-i", str(bruto), "-i", str(trilha),
+    run([FF, "-y", "-hide_banner", "-loglevel", "error", "-i", str(bruto), "-i", str(TRILHAS / trilha),
          "-filter_complex", mix, "-map", "0:v", "-map", "[a]", "-c:v", "copy", "-c:a", "aac", "-b:a", "192k",
          "-ar", "48000", "-movflags", "+faststart", str(vertical)])
     # 4:5 por crop central (os textos ficam entre y=330 e y=1420, dentro do recorte de 285 a 1635)
@@ -482,7 +491,6 @@ def montar(nome, roteiro):
          "-c:v", "libx264", "-preset", "medium", "-crf", "17", "-pix_fmt", "yuv420p", "-c:a", "copy",
          "-movflags", "+faststart", str(VIDS / f"{nome}-4x5.mp4")])
     print(f"   {vertical.relative_to(AQUI)} ({total:.1f}s)")
-
 
 if __name__ == "__main__":
     if not CHROME:
