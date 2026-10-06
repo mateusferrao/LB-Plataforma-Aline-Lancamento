@@ -39,12 +39,12 @@ const SO_SALA: Item[] = [
     a: `${ACADEMY.mesesAcesso} meses a partir da compra. Quem entra até ${SALA.prazoCurto} ganha mais 3 (${SALA.mesesTodos} no total). A equipe aplica a extensão até ${SALA.extensaoAte}.`,
   },
   {
-    q: `Como sei se estou entre os ${SALA.primeirosN} primeiros?`,
-    a: "Pela ordem de confirmação do pagamento. A equipe avisa no WhatsApp e combina o certificado, o envio da prancheta pelo correio, a toxina e a entrada na mentoria em grupo com a Aline.",
+    q: "Quais são os bônus dos primeiros e como recebo?",
+    a: `Os ${SALA.primeirosN} primeiros levam o certificado Filgueiras Academy e a mentoria em grupo com a Aline. As ${SALA.primeirosCinco} primeiras levam também o analisador facial de consulta, e a primeira leva também 2 ml de ácido hialurônico (só pra quem é habilitada a aplicar). A ordem é a da confirmação do pagamento. Depois da compra, a equipe entra em contato pelo WhatsApp pra combinar a entrega de tudo.`,
   },
   {
     q: `E depois de ${SALA.prazoCurto}?`,
-    a: `Os +3 meses acabam às 23h59 de 06/10, a noite da aula. Os bônus dos ${SALA.primeirosN} primeiros acabam antes, quando eles entrarem. Depois, a Academy continua por ${ACADEMY.precoCheioLabel}, com ${ACADEMY.mesesAcesso} meses de acesso.`,
+    a: `Os +3 meses acabam às 23h59 de 06/10, a noite da aula. Os bônus dos primeiros acabam antes, assim que as vagas fecharem. Depois, a Academy continua por ${ACADEMY.precoCheioLabel}, com ${ACADEMY.mesesAcesso} meses de acesso.`,
   },
 ];
 

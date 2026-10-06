@@ -29,7 +29,7 @@ const TRILHAS: { nome: string; titulo: string; cursos: Curso[] }[] = [
   },
   {
     nome: "Consulta",
-    titulo: "Pra paciente confiar antes da agulha",
+    titulo: "Pra paciente dizer sim na consulta e voltar",
     cursos: [
       { t: "A Consulta que Vende", d: "O roteiro da consulta, pra ela não sair com um “vou pensar”." },
       { t: "Vendas", n: 6, d: "Campanhas comerciais e estratégias de consultório." },
@@ -53,12 +53,12 @@ const TRILHAS: { nome: string; titulo: string; cursos: Curso[] }[] = [
 export function Recebe() {
   return (
     <Secao>
-      <Titulo eyebrow="Por dentro da plataforma" destaque="o que tem dentro.">
-        {ACADEMY.nome}:
+      <Titulo eyebrow="Por dentro da Filgueiras Academy" destaque="da anatomia ao fechamento na consulta.">
+        Três trilhas, mais de 80 aulas,
       </Titulo>
       <Reveal>
         <p className="mt-4 text-[1.1rem] leading-[1.6] text-fg-soft">
-          {ACADEMY.mesesAcesso} meses de acesso a tudo, no celular ou no computador. Três trilhas, uma pra cada
+          {ACADEMY.mesesAcesso} meses de acesso a tudo, no celular ou no computador. Uma trilha pra cada
           momento em que a paciente decide se confia em você.
         </p>
       </Reveal>

@@ -19,7 +19,7 @@ const WHATS_URL =
   encodeURIComponent("Oi! Acabei de entrar na Academy e quero a mentoria em grupo com a Aline, com a vaga da minha colega.");
 
 const RECEBE = [
-  [`${MENTORIA.meses} meses de mentoria em grupo com a Aline`, `${MENTORIA.encontros}, online.`],
+  [`${MENTORIA.meses} meses de mentoria em grupo com a Aline`, "Ao vivo, online, em grupo com a Aline."],
   ["Os seus casos na mesa", "Você leva as dúvidas do consultório e a Aline responde junto com o grupo."],
   ["Você aplica com a Aline por perto", "Três meses pra levar o que aparece na cadeira e ajustar a conduta com ela."],
 ] as const;

@@ -5,14 +5,13 @@ import { AteOFim } from "@/components/academy/AteOFim";
 import { CtaButton, VerOfertaButton, type Modo } from "@/components/academy/CtaButton";
 import { ACADEMY, SALA } from "@/lib/ofertaAcademy";
 
-// Barra fixa só no celular. Sem cronômetro de sessão. Na evergreen (tráfego frio)
-// ela leva à oferta, sem preço, até a pessoa chegar no card da oferta; dali em
+// Barra fixa só no celular. Sem cronômetro de sessão. Na evergreen e na sala
+// (desde 06/10) ela leva à oferta, sem preço, até a pessoa chegar no card da oferta; dali em
 // diante vira o botão do checkout com o 12x (decisão de 06/10: valor antes do preço).
 export function StickyCta({ modo }: { modo: Modo }) {
   const sala = modo === "sala";
   const [viuOferta, setViuOferta] = useState(false);
   useEffect(() => {
-    if (sala) return;
     const tick = () => {
       const el = document.getElementById("oferta");
       if (el && el.getBoundingClientRect().top < window.innerHeight * 0.6) setViuOferta(true);
@@ -20,7 +19,7 @@ export function StickyCta({ modo }: { modo: Modo }) {
     tick();
     window.addEventListener("scroll", tick, { passive: true });
     return () => window.removeEventListener("scroll", tick);
-  }, [sala]);
+  }, []);
 
   return (
     <div
@@ -39,8 +38,8 @@ export function StickyCta({ modo }: { modo: Modo }) {
           )}
         </span>
       </div>
-      {sala || viuOferta ? (
-        <CtaButton modo={modo} showPrice={sala} className="w-full justify-center">
+      {viuOferta ? (
+        <CtaButton modo={modo} className="w-full justify-center">
           Quero entrar
         </CtaButton>
       ) : (

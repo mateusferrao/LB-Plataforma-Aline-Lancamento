@@ -14,6 +14,7 @@ const PERGUNTAS = [
 const CONSEQUENCIAS = [
   ["Se a mão hesita,", "a paciente percebe."],
   ["Se você trava na consulta,", "ela diz “vou pensar” e não volta."],
+  ["Se ela sai da consulta sem marcar,", "a sua agenda fica parada."],
   ["O curso ensinou o passo a passo,", "mas ninguém te mostrou a face por dentro."],
   ["E na hora da agulha", "não tem professora do seu lado pra perguntar."],
 ] as const;

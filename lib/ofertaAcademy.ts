@@ -28,6 +28,7 @@ const CHECKOUT_EVERGREEN = "https://payment.ticto.app/ODB726458";
 const CHECKOUT_SALA = "https://payment.ticto.app/OEF7AADF6";
 
 const PRIMEIROS_N = 10;
+const PRIMEIROS_CINCO = 5;
 
 // "R$1.797" (o formatBRL do kit não põe o separador de milhar).
 function formatBRL(v: number) {
@@ -60,6 +61,7 @@ export const SALA = {
   mesesTodos: 15,
   extensaoAte: "10/10",
   primeirosN: PRIMEIROS_N,
+  primeirosCinco: PRIMEIROS_CINCO,
   parcela12x: ACADEMY.parcela12x,
   contentName: "Filgueiras Academy (sala 06/10)",
 } as const;
@@ -91,7 +93,7 @@ export const PILHA_ACADEMY: readonly Item[] = [
   },
   {
     nome: "Consulta, vendas e posicionamento",
-    detalhe: "A Consulta que Vende, vendas no consultório e marketing nas redes. Pra ela não dizer “vou pensar”.",
+    detalhe: "O roteiro pra ela fechar na consulta, em vez de sair dizendo “vou pensar”. Mais vendas no consultório e marketing nas redes.",
   },
   {
     nome: "Material de apoio pronto",
@@ -110,15 +112,26 @@ export const PILHA_ACADEMY: readonly Item[] = [
   { nome: "Preferência nos cursos presenciais", detalhe: "Pra garantir a vaga quando quiser o hands-on." },
 ];
 
-// Sala: os 10 primeiros, pela hora da compra. Cada um responde a uma objeção.
-// Toxina sem quantidade por enquanto (decisão de 05/10); nunca a marca "Botox".
+// Sala, pela hora da compra (escada revista em 06/10): os 10 primeiros levam o
+// certificado e a mentoria (sem número de encontros); as 5 primeiras, também o
+// analisador facial de consulta; a primeira, também 2 ml de ácido hialurônico
+// (só pra quem é habilitada; sem marca). Saíram a prancheta e a toxina. A equipe
+// entra em contato depois da compra pra combinar a entrega de tudo.
 export const BONUS_PRIMEIROS: readonly Item[] = [
   { nome: "Certificado Filgueiras Academy", detalhe: "Pra paciente ver com quem você estudou." },
-  { nome: "Prancheta ilustrada da Aline", detalhe: "Pra explicar o procedimento na consulta.", valor: 600 },
-  // PENDENTE: formato da mentoria (frequência, duração, por quanto tempo).
-  { nome: "Mentoria em grupo com a Aline", detalhe: "Pra ter a Aline perto, só com os 10 primeiros.", valor: 5000 },
-  { nome: "Toxina botulínica", detalhe: "Pra sua próxima aplicação." },
+  { nome: "Mentoria em grupo com a Aline", detalhe: "3 meses com a Aline, ao vivo, só com os 10 primeiros. Você leva os seus casos.", valor: 5000 },
 ];
+export const BONUS_CINCO: Item = {
+  nome: "Analisador facial de consulta",
+  detalhe: "Pra mostrar à paciente, na consulta, o processo de envelhecimento do rosto dela.",
+  valor: 600,
+};
+export const BONUS_PRIMEIRA: Item = {
+  nome: "2 ml de ácido hialurônico",
+  detalhe: "Pra sua próxima aplicação. Só pra quem é habilitada a aplicar.",
+};
+export const ENTREGA_BONUS =
+  "Os bônus são entregues depois da compra: a equipe entra em contato pelo WhatsApp pra combinar o certificado, a entrada na mentoria e o envio do analisador e do ácido hialurônico.";
 
 // Sala: todo mundo que entra até o fim dos bônus (06/10 23h59) ganha +3 meses.
 // Entra na soma da sala. Extensão em lote pela equipe até 10/10, como a dos 5.
@@ -173,13 +186,14 @@ export const TICTO_UPSELL_ANATOMIA = {
 } as const;
 
 // Upsell da Academy (só na oferta Evergreen, docs/plataforma/ticto-funil.md §2):
-// mentoria em grupo com a Aline, 3 meses, 1 encontro ao vivo por mês. É a mesma
+// mentoria em grupo com a Aline, 3 meses, ao vivo (sem número de encontros na página). É a mesma
 // mentoria que os 10 primeiros da aula levaram de bônus (valor R$5.000 na pilha).
 // Sem downsell depois dela (decisão de 05/10). Oferta na Ticto: O5491F4AA.
 export const MENTORIA = {
   nome: "Mentoria em grupo com a Aline",
   meses: 3,
-  encontros: "1 encontro ao vivo por mês",
+  // Sem número de encontros na página (decisão de 06/10).
+  encontros: "ao vivo, online",
   valor: 5000,
   preco: 1997,
   precoLabel: formatBRL(1997),
@@ -213,7 +227,7 @@ export const GARANTIA_ACADEMY = {
     "Se em 30 dias você assistir ao módulo de anatomia e não sentir a mão mais segura, é só escrever que a gente devolve.",
   linha: "Garantia Mão Segura: 7 dias sem perguntas + 30 dias se a mão não ficar mais segura",
   whatsapp: "+55 31 95349-1799",
-  email: "suporte.alinefilgueiras@gmail.com.br",
+  email: "suporte.filgueirasacademy@gmail.com",
 } as const;
 
 export { formatBRL as brl };

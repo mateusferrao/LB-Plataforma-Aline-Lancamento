@@ -43,7 +43,7 @@ export const GARANTIA = {
   // Uma linha, pra baixo dos botões.
   linha: "Garantia de Presença: 7 dias ou até 24h depois da aula, se você esteve ao vivo",
   whatsapp: "+55 31 95349-1799",
-  email: "suporte.alinefilgueiras@gmail.com.br",
+  email: "suporte.filgueirasacademy@gmail.com",
 } as const;
 
 export const PLATAFORMA_LINHA =

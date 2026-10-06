@@ -62,7 +62,7 @@ export default function AnatomiaDownsell() {
               <p className="text-[1rem] text-fg-soft">Hoje</p>
               <p className="mt-1 font-serif text-[3.2rem] leading-none text-fg">{ANATOMIA.precoLabel}</p>
               <p className="mt-2 text-[0.95rem] text-fg-soft">
-                à vista no Pix · ou 12x de {ANATOMIA.parcela12x} no cartão
+                à vista · ou 12x de {ANATOMIA.parcela12x} no cartão
               </p>
               <CheckoutLink
                 href={href}

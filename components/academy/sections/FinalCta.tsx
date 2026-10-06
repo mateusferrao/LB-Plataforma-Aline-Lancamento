@@ -6,7 +6,7 @@ import { ACADEMY, BONUS_10_ESGOTADO, GARANTIA_ACADEMY, SALA } from "@/lib/oferta
 
 // Fechamento: a cena resolvida, o resumo da oferta numa frase, botão e P.S.
 const RESUMO =
-  "Anatomia em fresh frozen, mais de 70 aulas de técnica, a Consulta que Vende, o material de apoio pronto e 6 encontros ao vivo no ano.";
+  "Anatomia em fresh frozen e mais de 70 aulas de técnica pra mão firme. A Consulta que Vende e 6 encontros ao vivo no ano pra paciente fechar com você.";
 
 const PS_GARANTIA = `Você tem ${GARANTIA_ACADEMY.prazoCondicionalDias} dias pra testar. Se assistir ao módulo de anatomia e a mão não ficar mais segura, a gente devolve.`;
 
@@ -22,11 +22,11 @@ export function FinalCta({ modo }: { modo: Modo }) {
         <p className="mt-5 max-w-[560px] text-[1.08rem] leading-[1.6] text-fg-soft">
           {RESUMO}{" "}
           {sala ? (
-            <AteOFim depois={`Em 12x de ${ACADEMY.parcela12x} ou ${ACADEMY.precoCheioLabel} no Pix.`}>
-              {`Por ${SALA.precoLabel}, com +3 meses de acesso pra todo mundo${BONUS_10_ESGOTADO ? "" : ` e os bônus dos ${SALA.primeirosN} primeiros`} só até ${SALA.prazoCurto}.`}
+            <AteOFim depois={`Em 12x de ${ACADEMY.parcela12x} ou ${ACADEMY.precoCheioLabel} à vista.`}>
+              {`Por ${SALA.precoLabel}, com +3 meses de acesso pra todo mundo${BONUS_10_ESGOTADO ? "" : " e os bônus dos primeiros"} só até ${SALA.prazoCurto}.`}
             </AteOFim>
           ) : (
-            `Em 12x de ${ACADEMY.parcela12x} ou ${ACADEMY.precoCheioLabel} no Pix.`
+            `Em 12x de ${ACADEMY.parcela12x} ou ${ACADEMY.precoCheioLabel} à vista.`
           )}
         </p>
         <CtaButton modo={modo} showPrice={sala} className="mt-8 w-full justify-center sm:w-auto">
@@ -40,7 +40,7 @@ export function FinalCta({ modo }: { modo: Modo }) {
             <AteOFim depois={PS_GARANTIA}>
               {BONUS_10_ESGOTADO
                 ? "Os +3 meses de acesso saem hoje, às 23h59. Amanhã a Academy volta a ter 12 meses."
-                : `Os +3 meses saem hoje, às 23h59. Os bônus dos ${SALA.primeirosN} primeiros podem sair antes, quando eles entrarem.`}
+                : "Os +3 meses saem hoje, às 23h59. Os bônus dos primeiros saem antes, assim que as vagas fecharem. Depois da compra, a equipe te chama no WhatsApp pra combinar a entrega."}
             </AteOFim>
           ) : (
             PS_GARANTIA

@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 // Redirecionamento pós-compra das duas ofertas da Academy na Ticto
 // (docs/plataforma/ticto.md). Sem urgência aqui: quem chega já comprou. O
 // objetivo é a primeira vitória rápida (a primeira aula de anatomia), o que
-// reduz pedido de reembolso, e avisar os 10 primeiros sobre os bônus.
+// reduz pedido de reembolso, e avisar os primeiros sobre os bônus.
 const TIME_WHATSAPP_URL =
   "https://wa.me/5531953491799?text=" +
   encodeURIComponent("Oi! Acabei de entrar na Filgueiras Academy e fiquei com uma dúvida.");
@@ -68,8 +68,8 @@ export default function AcademyObrigado() {
           <p className="mt-8 rounded-[6px] border border-line px-5 py-4 text-[0.98rem] leading-[1.55] text-fg-soft">
             <strong className="font-semibold text-fg">Comprou na noite da aula, até {SALA.prazoCurto}?</strong> O seu
             acesso vai para {SALA.mesesTodos} meses: a equipe aplica os +3 meses até {SALA.extensaoAte}. Se você está entre
-            os {SALA.primeirosN} primeiros, a equipe te chama no WhatsApp pra combinar o certificado, a
-            prancheta, a toxina e a mentoria em grupo com a Aline.
+            os primeiros, a equipe te chama no WhatsApp pra combinar a entrega dos bônus: o certificado e a
+            mentoria em grupo com a Aline, o analisador facial de consulta e o ácido hialurônico.
           </p>
           </AteOFim>
 

@@ -18,7 +18,7 @@ export function BarraPrazo() {
   return (
     <div className="border-b border-line bg-bg-2 px-4 py-2.5 text-center text-[13px] text-fg-soft">
       +3 meses de acesso pra todo mundo
-      {BONUS_10_ESGOTADO ? "" : ` e bônus pros ${SALA.primeirosN} primeiros`} até {SALA.prazoCurto} · termina em{" "}
+      {BONUS_10_ESGOTADO ? "" : " e bônus pros primeiros"} até {SALA.prazoCurto} · termina em{" "}
       <PrazoInline className="text-[14px] text-fg" />
     </div>
   );

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Container } from "@/components/Container";
 import { AteOFim } from "@/components/academy/AteOFim";
-import { CtaButton, VerOfertaButton, type Modo } from "@/components/academy/CtaButton";
+import { VerOfertaButton, type Modo } from "@/components/academy/CtaButton";
 import { Ticks } from "@/components/academy/Ticks";
 import { withBasePath } from "@/lib/basePath";
 import { BONUS_10_ESGOTADO, GARANTIA_ACADEMY, SALA } from "@/lib/ofertaAcademy";
@@ -11,22 +11,23 @@ import { BONUS_10_ESGOTADO, GARANTIA_ACADEMY, SALA } from "@/lib/ofertaAcademy";
 // e selos. Os pilares e o card de preço saíram daqui: estão na oferta.
 // No celular a foto vai pro fim do hero. Revisão de 06/10: o H1 da evergreen é o
 // resultado (não a dor) e sai "agenda" (soava como promessa de agenda); a foto da
-// evergreen é a do laboratório (o mecanismo); e o botão leva à oferta, sem preço.
+// evergreen é a do laboratório (o mecanismo); e o botão leva à oferta, sem preço
+// (na sala também, desde 06/10). Mais venda/agenda no H1 (pedido de 06/10).
 const COPY = {
   sala: {
     pre: "Pra quem esteve na aula Por Dentro da Face",
     h1: "Você não fez tanto curso pra continuar",
-    grifo: "com medo de aplicar.",
-    sub: "A culpa nunca foi sua. Faltava ver a face por dentro e ter um caminho. A Filgueiras Academy junta anatomia em fresh frozen, técnica e consulta, com encontros ao vivo com a Aline e o time dela.",
+    grifo: "com medo de aplicar e com a agenda vazia.",
+    sub: "Faltava ver a face por dentro e ter um roteiro pra consulta. Na Filgueiras Academy você estuda a anatomia em fresh frozen, treina a técnica e aprende a Consulta que Vende, com encontros ao vivo com a Aline e o time dela.",
     img: "/images/fresh/lab-bracos-abertos.webp",
     alt: "Dra. Aline Filgueiras no laboratório de dissecção",
     legenda: "Laboratório de dissecção · EUA",
   },
   evergreen: {
     pre: "Pra quem aplica ou vai começar a aplicar harmonização",
-    h1: "Da próxima vez que a paciente deitar,",
-    grifo: "você vai saber o que tem embaixo da agulha.",
-    sub: "A Filgueiras Academy junta num lugar só a anatomia em fresh frozen, mais de 70 aulas de técnica, a consulta e encontros ao vivo com a Dra. Aline e o time dela. Pra você ficar segura na consulta, na agulha e no espelho.",
+    h1: "Saiba o que tem embaixo da agulha",
+    grifo: "e o que dizer pra paciente fechar na consulta.",
+    sub: "Na Filgueiras Academy você estuda a face por dentro em fresh frozen, treina a técnica em mais de 70 aulas e aprende o roteiro da Consulta que Vende. Com encontros ao vivo com a Dra. Aline e o time dela ao longo do ano.",
     img: "/images/fresh/lab-luvas.webp",
     alt: "Dra. Aline Filgueiras calçando as luvas no laboratório de dissecção",
     legenda: "Laboratório de dissecção · EUA",
@@ -51,21 +52,15 @@ export function Hero({ modo }: { modo: Modo }) {
 
             <p className="mt-5 max-w-[560px] text-[1.1rem] leading-[1.55] text-fg-soft">{c.sub}</p>
 
-            {modo === "sala" ? (
-              <CtaButton modo={modo} showPrice className="mt-8 w-full justify-center sm:w-auto">
-                Quero entrar na Academy
-              </CtaButton>
-            ) : (
-              <VerOfertaButton className="mt-8 w-full justify-center sm:w-auto">
-                Ver tudo o que está incluso
-              </VerOfertaButton>
-            )}
+            <VerOfertaButton className="mt-8 w-full justify-center sm:w-auto">
+              Ver tudo o que está incluso
+            </VerOfertaButton>
             {modo === "sala" && (
               <AteOFim>
                 <p className="mt-3 text-[13.5px] text-fg-soft">
                   Até {SALA.prazoCurto}:{" "}
                   <strong className="font-semibold text-fg">+3 meses de acesso pra todo mundo</strong>
-                  {BONUS_10_ESGOTADO ? "." : <> e bônus pros {SALA.primeirosN} primeiros.</>}
+                  {BONUS_10_ESGOTADO ? "." : <> e bônus pros primeiros.</>}
                 </p>
               </AteOFim>
             )}

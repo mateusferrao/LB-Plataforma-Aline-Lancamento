@@ -8,7 +8,10 @@ import { Ticks } from "@/components/academy/Ticks";
 import {
   ACADEMY,
   BONUS_10_ESGOTADO,
+  BONUS_CINCO,
+  BONUS_PRIMEIRA,
   BONUS_PRIMEIROS,
+  ENTREGA_BONUS,
   BONUS_TODOS,
   GARANTIA_ACADEMY,
   PILHA_ACADEMY,
@@ -22,7 +25,7 @@ import {
 // bônus dos 10 primeiros com o total deles. Um preço só: R$1.797. 06/10: na sala, +3 meses pra
 // todo mundo até 23h59 (com total próprio); o bloco dos 10 primeiros some quando
 // BONUS_10_ESGOTADO. O preço abre pelo 12x, com o Pix e o "menos de R$5 por dia"
-// (R$1.797 / 365 = R$4,92, só vale pro Pix) embaixo.
+// (R$1.797 / 365 = R$4,92, à vista) embaixo.
 function Linha({ nome, detalhe, valor, tag }: { nome: string; detalhe: string; valor?: number; tag?: string }) {
   return (
     <li className="flex items-baseline justify-between gap-5 border-b border-dashed border-line py-3">
@@ -55,14 +58,14 @@ export function Oferta({ modo }: { modo: Modo }) {
   const sala = modo === "sala";
   return (
     <Secao id="oferta">
-      <Titulo eyebrow="Tudo o que você leva hoje" center>
+      <Titulo eyebrow={sala ? "Tudo o que você leva hoje" : "Tudo o que você leva"} center>
         Menos do que um curso presencial de dois dias
       </Titulo>
-      {/* Âncoras do pitch (docs/agente-ia/04-filgueiras-academy.md §3). */}
+      {/* Âncora genérica (06/10: sem citar o curso da Aline e sem número sem fonte). */}
       <Reveal>
         <p className="mx-auto mt-5 max-w-[560px] text-center text-[1.02rem] leading-[1.6] text-fg-soft">
-          Um curso presencial só de técnica com a Aline custa de R$2.800 a R$4.800. Um curso de fresh frozen fora
-          do Brasil passa de US$5.000, fora passagem e visto.
+          Um hands-on de técnica de dois dias custa milhares de reais, fora deslocamento e hospedagem. Um curso de
+          fresh frozen fora do Brasil passa de US$5.000, sem contar passagem e visto.
         </p>
       </Reveal>
 
@@ -99,20 +102,25 @@ export function Oferta({ modo }: { modo: Modo }) {
                 ))}
               </ul>
               <Total rotulo={`Valor total pros ${SALA.primeirosN} primeiros`} valor={VALOR_TOTAL.primeiros} />
+              <ul className="mt-6 list-none rounded-[6px] bg-bg-2 px-4">
+                <Linha {...BONUS_CINCO} tag={`E as ${SALA.primeirosCinco} primeiras`} />
+                <Linha {...BONUS_PRIMEIRA} tag="E a primeira" />
+              </ul>
+              <p className="mt-4 text-center text-[0.88rem] leading-[1.5] text-fg-soft">{ENTREGA_BONUS}</p>
             </div>
           </AteOFim>
         )}
 
         <div className="mt-9 text-center">
-          <p className="text-[1rem] text-fg-soft">Hoje você leva tudo por</p>
+          <p className="text-[1rem] text-fg-soft">{sala ? "Hoje você leva tudo por" : "Você leva tudo por"}</p>
           <p className="mt-2 font-serif text-fg">
             <span className="text-[1.5rem]">12x de </span>
             <span className="text-[3.2rem] leading-none">{ACADEMY.parcela12x}</span>
           </p>
           <p className="mt-2 text-[0.98rem] text-fg-soft">
-            ou <strong className="font-semibold text-fg">{ACADEMY.precoCheioLabel}</strong> à vista no Pix
+            ou <strong className="font-semibold text-fg">{ACADEMY.precoCheioLabel}</strong> à vista
           </p>
-          <p className="mt-1 text-[0.9rem] text-fg-faint">No Pix, dá menos de R$5 por dia ao longo do ano.</p>
+          <p className="mt-1 text-[0.9rem] text-fg-faint">Dá menos de R$5 por dia ao longo do ano.</p>
           {sala && (
             <AteOFim>
               <p className="mt-6 text-[0.98rem] text-fg-soft">
@@ -134,7 +142,7 @@ export function Oferta({ modo }: { modo: Modo }) {
               <p className="mt-4 text-[0.86rem] leading-[1.5] text-fg-faint">
                 {BONUS_10_ESGOTADO
                   ? `Os ${SALA.primeirosN} primeiros já entraram. Os +3 meses valem pra toda compra confirmada até 23h59; a equipe aplica até ${SALA.extensaoAte}.`
-                  : `Os primeiros contam pela ordem de confirmação do pagamento. Os +3 meses valem pra toda compra até 23h59. A equipe avisa no WhatsApp e aplica até ${SALA.extensaoAte}.`}
+                  : `Os primeiros contam pela ordem de confirmação do pagamento. Os +3 meses valem pra toda compra até 23h59 e a equipe aplica até ${SALA.extensaoAte}.`}
               </p>
             </AteOFim>
           )}
