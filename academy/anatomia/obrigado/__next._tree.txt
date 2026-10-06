@@ -2,4 +2,4 @@
 :HL["/_next/static/media/fraunces_latin-s.p.1v4l5w6-86t-v.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/media/fraunces_latin_italic-s.p.0by3gh2t3oa9b.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/media/inter_latin-s.p.0gsaq8ukbf34m.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-0:{"tree":{"name":"","param":null,"prefetchHints":4112,"slots":{"children":{"name":"academy","param":null,"prefetchHints":4160,"slots":{"children":{"name":"anatomia","param":null,"prefetchHints":4192,"slots":{"children":{"name":"obrigado","param":null,"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}}}}}},"staleTime":300,"buildId":"hxqS04wQQ5W0m37jqYZGB"}
+0:{"tree":{"name":"","param":null,"prefetchHints":4112,"slots":{"children":{"name":"academy","param":null,"prefetchHints":4160,"slots":{"children":{"name":"anatomia","param":null,"prefetchHints":4192,"slots":{"children":{"name":"obrigado","param":null,"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}}}}}},"staleTime":300,"buildId":"tznmJRs55kZhaViL9I0Hq"}
