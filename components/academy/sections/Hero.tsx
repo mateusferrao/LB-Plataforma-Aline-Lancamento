@@ -25,8 +25,8 @@ const COPY = {
   },
   evergreen: {
     pre: "Pra quem aplica ou vai começar a aplicar harmonização",
-    h1: "Saiba o que tem embaixo da agulha",
-    grifo: "e o que dizer pra paciente fechar na consulta.",
+    h1: "Você não estudou tanto pra continuar",
+    grifo: "insegura na agulha e com a agenda parada.",
     sub: "Na Filgueiras Academy você estuda a face por dentro em fresh frozen, treina a técnica em mais de 70 aulas e aprende o roteiro da Consulta que Vende. Com encontros ao vivo com a Dra. Aline e o time dela ao longo do ano.",
     img: "/images/fresh/lab-luvas.webp",
     alt: "Dra. Aline Filgueiras calçando as luvas no laboratório de dissecção",

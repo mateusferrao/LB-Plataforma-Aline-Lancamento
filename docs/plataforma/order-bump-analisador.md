@@ -1,4 +1,6 @@
-# Order bump · Analisador Facial de Consulta (a partir de 07/10)
+# Order bump · Analisador Facial de Consulta (EM ESPERA)
+
+> **06/10: decidido não colocar o order bump por enquanto.** O analisador segue só como bônus das 5 primeiras da noite da aula. Este arquivo fica como referência caso ele volte.
 
 O analisador é bônus das **5 primeiras** da noite da aula, até 06/10 às 23h59. A partir de 07/10, depois da sala, ele passa a ser vendido como **order bump** no checkout da Academy (oferta Evergreen). Assim quem compra amanhã também pode levar, sem tirar a exclusividade da noite.
 
