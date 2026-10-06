@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Estáticos · Filgueiras Academy</title>
+<!--
+  4 estáticos de tráfego da Filgueiras Academy (destino: /academy), cada um em feed
+  1080x1350 (4:5) e story 1080x1920 (9:16). As stories são clones dos feeds com a
+  classe .story. Mesma identidade da LP e de ../criativos.html.
+  Sem preço em nenhuma peça (decisão de 06/10). Copy da LP sempre que possível.
+  O E3 usa um frame da aula com a peça pixelada, que fica em privado/ (fora do git).
+  Para gerar os PNGs: node docs/criativos/academy/render.mjs
+-->
+<style>
+  @font-face { font-family: "Fraunces"; src: url("../../../app/fonts/fraunces-latin.woff2") format("woff2"); font-weight: 400 700; font-style: normal; }
+  @font-face { font-family: "Fraunces"; src: url("../../../app/fonts/fraunces-latin-italic.woff2") format("woff2"); font-weight: 400 700; font-style: italic; }
+  @font-face { font-family: "Inter"; src: url("../../../app/fonts/inter-latin.woff2") format("woff2"); font-weight: 400 600; }
+
+  :root {
+    --bg: #0c0b0a; --bg-2: #141110; --bg-3: #1b1613; --surface: #221b17;
+    --fg: #f5f1ea; --fg-soft: #a69f97; --fg-faint: #726b63;
+    --wine: #7e1e1c; --wine-ink: #cf8079;
+    --line: rgba(245,241,234,.14); --line-soft: rgba(245,241,234,.08);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #2a2522; font-family: "Inter", sans-serif; color: var(--fg-soft); display: flex; flex-direction: column; align-items: center; gap: 48px; padding: 48px 0; }
+  body.only { padding: 0; gap: 0; background: var(--bg); }
+
+  .ad { width: 1080px; height: 1350px; position: relative; overflow: hidden; background: var(--bg); }
+  .grifo { background: var(--wine); color: var(--fg); box-decoration-break: clone; -webkit-box-decoration-break: clone; padding: .02em .16em; }
+  .eyebrow { font-size: 22px; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; color: var(--wine-ink); }
+  .logo { height: 46px; filter: invert(1) brightness(1.05) sepia(.12); opacity: .92; }
+  .cta { display: inline-flex; align-items: center; gap: 16px; background: var(--wine); color: #fff; font-weight: 600; font-size: 29px; padding: 24px 38px; border-radius: 999px; letter-spacing: .01em; white-space: nowrap; }
+  .cta .seta { font-size: 30px; }
+  .rodape { position: absolute; left: 72px; right: 72px; bottom: 60px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+  .info { font-size: 22px; color: var(--fg-soft); letter-spacing: .02em; line-height: 1.45; text-align: right; }
+  .info b { color: var(--fg); font-weight: 600; }
+  .legenda { position: absolute; font-size: 19px; letter-spacing: .16em; text-transform: uppercase; color: rgba(245,241,234,.8); display: flex; align-items: center; gap: 12px; }
+  .legenda::before { content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--wine-ink); }
+  .grao::after { content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .07; mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>"); }
+  .foto { position: absolute; inset: 0; background-size: cover; background-repeat: no-repeat; }
+  .veu { position: absolute; inset: 0; }
+  .topo { position: absolute; top: 64px; left: 72px; right: 72px; display: flex; justify-content: space-between; align-items: center; }
+  h1 { color: var(--fg); font-weight: 600; letter-spacing: -.012em; }
+  h1 .grifo { line-height: 1.42; }
+
+  /* ---------- E1 · embaixo da agulha (foto cheia da mesa com a luz cirúrgica) ---------- */
+  .e1 .foto { background-image: url("fotos/mesa-luz.jpg"); background-position: center 62%; filter: saturate(.6) contrast(1.05) brightness(.95); }
+  .e1 .veu { background: linear-gradient(180deg, rgba(12,11,10,.8) 0%, rgba(12,11,10,0) 20%, rgba(12,11,10,0) 36%, rgba(12,11,10,.88) 56%, var(--bg) 70%); }
+  .e1 .legenda { top: 560px; right: 72px; }
+  .e1 .texto { position: absolute; left: 72px; right: 72px; top: 630px; }
+  .e1 .pergunta { font-family: "Fraunces", serif; font-style: italic; font-size: 78px; line-height: 1.04; color: var(--fg); letter-spacing: -.01em; }
+  .e1 .pergunta small { display: block; margin-top: 16px; font-family: "Inter", sans-serif; font-style: normal; font-size: 32px; line-height: 1.35; color: var(--fg-soft); letter-spacing: 0; }
+  .e1 h1 { margin-top: 40px; font-size: 54px; line-height: 1.14; }
+  .e1 p { margin-top: 26px; font-size: 27px; line-height: 1.45; max-width: 900px; }
+  .e1 p b { color: var(--fg); font-weight: 600; }
+
+  /* ---------- assinatura com avatar (E2, E4) ---------- */
+  .assina { display: flex; align-items: center; gap: 18px; text-align: left; }
+  .assina img { width: 84px; height: 84px; border-radius: 50%; object-fit: cover; object-position: 50% 50%; border: 3px solid var(--wine); }
+  .assina span { font-size: 21px; line-height: 1.35; color: var(--fg-soft); }
+  .assina b { display: block; color: var(--fg); font-weight: 600; font-size: 23px; }
+
+  /* ---------- E2 · vou pensar (conversa de WhatsApp que morre no "vou pensar") ---------- */
+  .e2 .topo { top: 64px; }
+  .e2 .chat { position: absolute; left: 72px; right: 72px; top: 132px; background: var(--bg-3); border: 1px solid var(--line); border-radius: 22px; overflow: hidden; }
+  .e2 .chat .cab { display: flex; align-items: center; gap: 16px; padding: 20px 26px; background: var(--surface); border-bottom: 1px solid var(--line-soft); }
+  .e2 .chat .cab i { width: 52px; height: 52px; border-radius: 50%; background: #4a413b; display: block; }
+  .e2 .chat .cab b { color: var(--fg); font-size: 24px; font-weight: 600; display: block; }
+  .e2 .chat .cab small { font-size: 18px; color: var(--fg-faint); }
+  .e2 .msgs { padding: 28px 26px 30px; display: flex; flex-direction: column; gap: 16px; }
+  .e2 .msg { max-width: 76%; padding: 16px 22px 12px; border-radius: 18px; font-size: 27px; line-height: 1.35; color: var(--fg); }
+  .e2 .msg small { display: block; text-align: right; margin-top: 4px; font-size: 16px; color: rgba(245,241,234,.55); }
+  .e2 .ela { align-self: flex-start; background: #2c2521; border-top-left-radius: 4px; }
+  .e2 .voce { align-self: flex-end; background: var(--wine); border-top-right-radius: 4px; }
+  .e2 .voce small { color: rgba(255,255,255,.7); }
+  .e2 .fim { font-family: "Fraunces", serif; font-style: italic; font-size: 44px; padding: 18px 26px 12px; }
+  .e2 .aviso { align-self: center; margin-top: 6px; font-size: 18px; letter-spacing: .14em; text-transform: uppercase; color: var(--fg-faint); }
+  .e2 .texto { position: absolute; left: 72px; right: 72px; top: 790px; }
+  .e2 h1 { font-size: 54px; line-height: 1.16; }
+  .e2 p { margin-top: 26px; font-size: 26px; line-height: 1.5; }
+  .e2 p b { color: var(--fg); font-weight: 600; }
+
+  /* ---------- E3 · tudo num lugar só (grid 2x2) ---------- */
+  .e3 .cab { position: absolute; left: 72px; right: 72px; top: 62px; }
+  .e3 h1 { margin-top: 14px; font-size: 44px; line-height: 1.16; }
+  .e3 h1 .apoio { display: block; color: var(--fg-soft); font-weight: 500; }
+  .e3 .grade { position: absolute; left: 72px; right: 72px; top: 352px; height: 818px; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 18px; }
+  .e3 .cel { position: relative; overflow: hidden; border-radius: 4px; border: 1px solid var(--line-soft); background: var(--surface) center / cover no-repeat; }
+  .e3 .cel::before { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(12,11,10,.92) 0%, rgba(12,11,10,.35) 38%, rgba(12,11,10,0) 60%); }
+  .e3 .cel span { position: absolute; left: 24px; right: 20px; bottom: 22px; font-size: 27px; line-height: 1.25; font-weight: 600; color: var(--fg); }
+  .e3 .cel span i { display: block; font-style: normal; font-size: 17px; letter-spacing: .18em; text-transform: uppercase; color: var(--wine-ink); margin-bottom: 8px; }
+  .e3 .c1 { background-image: url("privado/aula-pixelada.jpg"); background-position: center 72%; }
+  .e3 .c2 { background-image: url("fotos/seringas-detalhe.jpg"); background-position: center 60%; }
+  .e3 .c3 { background-image: url("fotos/luvas-perfil.jpg"); background-position: 62% 30%; }
+  .e3 .c4 { background-image: url("fotos/braco-erguido-2.jpg"); background-position: center 30%; }
+  .e3 .cel { filter: saturate(.7); }
+  .e3 .rodape { bottom: 46px; }
+
+  /* ---------- E4 · agenda parada (a semana com os horários vazios) ---------- */
+  .e4 .cab4 { position: absolute; left: 72px; right: 72px; top: 64px; }
+  .e4 .lista { margin-top: 20px; font-size: 40px; line-height: 1.2; font-weight: 500; color: var(--fg-soft); letter-spacing: -.01em; }
+  .e4 h1 { margin-top: 14px; font-size: 62px; line-height: 1.34; letter-spacing: -.015em; }
+  .e4 .agenda { position: absolute; left: 72px; right: 72px; top: 330px; background: var(--bg-3); border: 1px solid var(--line); border-radius: 18px; padding: 22px 24px 24px; }
+  .e4 .agenda .mes { display: flex; justify-content: space-between; align-items: baseline; font-size: 22px; color: var(--fg-soft); margin-bottom: 16px; }
+  .e4 .agenda .mes b { color: var(--fg); font-size: 26px; font-weight: 600; }
+  .e4 .grade4 { display: grid; grid-template-columns: 64px repeat(6, 1fr); gap: 8px; }
+  .e4 .grade4 .d { text-align: center; font-size: 18px; letter-spacing: .12em; text-transform: uppercase; color: var(--fg-faint); padding-bottom: 4px; }
+  .e4 .grade4 .h { font-size: 18px; color: var(--fg-faint); display: flex; align-items: center; }
+  .e4 .grade4 .s { height: 62px; border: 1.5px dashed rgba(245,241,234,.16); border-radius: 8px; }
+  .e4 .grade4 .x { background: rgba(126,30,28,.55); border: 1px solid var(--wine); border-radius: 8px; font-size: 15px; color: var(--fg); display: flex; align-items: center; justify-content: center; }
+  .e4 .agenda .total { margin-top: 16px; font-size: 21px; color: var(--wine-ink); letter-spacing: .02em; }
+  .e4 .texto { position: absolute; left: 72px; right: 72px; top: 960px; }
+  .e4 p { font-size: 26px; line-height: 1.5; }
+  .e4 p b { color: var(--fg); font-weight: 600; }
+
+  /* ---------- STORY (1080x1920) · área segura: nada nos 250px de cima nem nos 330px de baixo ---------- */
+  .ad.story { height: 1920px; }
+  .story .rodape { bottom: 330px; }
+  .story .topo { top: 250px; }
+
+  .story.e1 .foto { background-position: center 24%; }
+  .story.e1 .veu { background: linear-gradient(180deg, rgba(12,11,10,.85) 0%, rgba(12,11,10,0) 18%, rgba(12,11,10,0) 34%, rgba(12,11,10,.9) 48%, var(--bg) 58%); }
+  .story.e1 .legenda { top: 790px; }
+  .story.e1 .texto { top: 850px; }
+  .story.e1 .pergunta { font-size: 84px; }
+  .story.e1 h1 { font-size: 56px; }
+
+  .story.e2 .topo { top: 250px; }
+  .story.e2 .chat { top: 330px; left: 56px; right: 56px; }
+  .story.e2 .chat .cab { padding: 24px 30px; }
+  .story.e2 .chat .cab i { width: 62px; height: 62px; }
+  .story.e2 .chat .cab b { font-size: 30px; }
+  .story.e2 .chat .cab small { font-size: 22px; }
+  .story.e2 .msgs { padding: 34px 30px 36px; gap: 20px; }
+  .story.e2 .msg { font-size: 34px; }
+  .story.e2 .msg small { font-size: 19px; }
+  .story.e2 .fim { font-size: 62px; }
+  .story.e2 .aviso { font-size: 21px; }
+  .story.e2 .texto { top: 1110px; }
+  .story.e2 h1 { font-size: 62px; }
+  .story.e2 p { font-size: 29px; }
+
+  .story.e3 .cab { top: 260px; }
+  .story.e3 h1 { font-size: 45px; }
+  .story.e3 .grade { top: 590px; height: 860px; }
+  .story.e3 .rodape { bottom: 330px; }
+
+  .story.e4 .cab4 { top: 250px; }
+  .story.e4 .lista { font-size: 42px; }
+  .story.e4 h1 { font-size: 66px; }
+  .story.e4 .agenda { top: 520px; left: 56px; right: 56px; padding: 28px 28px 30px; }
+  .story.e4 .agenda .mes { font-size: 26px; }
+  .story.e4 .agenda .mes b { font-size: 32px; }
+  .story.e4 .grade4 { grid-template-columns: 70px repeat(6, 1fr); gap: 10px; }
+  .story.e4 .grade4 .d, .story.e4 .grade4 .h { font-size: 22px; }
+  .story.e4 .grade4 .s, .story.e4 .grade4 .x { height: 84px; }
+  .story.e4 .grade4 .x { font-size: 18px; }
+  .story.e4 .agenda .total { font-size: 26px; }
+  .story.e4 .texto { top: 1270px; }
+  .story.e4 p { font-size: 30px; }
+</style>
+</head>
+<body>
+
+<!-- E1 · Frio · anatomia, dor da agulha. Pergunta e consequência = Cena da LP; headline = FinalCta da LP. -->
+<section class="ad grao e1" id="c1">
+  <div class="foto"></div><div class="veu"></div>
+  <div class="topo"><img class="logo" src="../../../public/images/logo-ink.png" alt="Filgueiras Academy"><span class="eyebrow" style="color:var(--fg)">Novo · fresh frozen</span></div>
+  <span class="legenda">Laboratório de dissecção · EUA</span>
+  <div class="texto">
+    <p class="pergunta">&ldquo;Tem vaso nesse ponto?&rdquo;<small>Se você pensa isso com a seringa na mão, a paciente percebe.</small></p>
+    <h1>Da próxima vez que ela deitar, <span class="grifo">você sabe o que tem embaixo da agulha.</span></h1>
+    <p>O curso online de dissecção da <b>Dra. Aline Filgueiras</b>: a face por dentro, camada por camada. Sem visto e sem passagem.</p>
+  </div>
+  <div class="rodape">
+    <span class="cta">Quero entrar na Academy <span class="seta">→</span></span>
+    <span class="info"><b>Filgueiras Academy</b><br>online · 12 meses de acesso</span>
+  </div>
+</section>
+
+<!-- E2 · Frio · venda/consulta. Dor da Cena ("vou pensar" e não volta) dramatizada como conversa;
+     headline = Virada da LP; apoio = item Consulta do Recebe. A conversa é ilustrativa (não é print real). -->
+<section class="ad grao e2" id="c2">
+  <div class="topo"><span class="eyebrow">Consulta</span><img class="logo" src="../../../public/images/logo-ink.png" alt="Filgueiras Academy"></div>
+  <div class="chat">
+    <div class="cab"><i></i><span><b>Paciente</b><small>visto por último hoje</small></span></div>
+    <div class="msgs">
+      <div class="msg ela">Oi! Quanto fica o preenchimento labial?<small>19:02</small></div>
+      <div class="msg voce">Te mandei a avaliação, o que eu faria no seu caso e o valor.<small>19:15 ✓✓</small></div>
+      <div class="msg ela fim">Vou pensar.<small>19:41</small></div>
+      <span class="aviso">sem resposta há 9 dias</span>
+    </div>
+  </div>
+  <div class="texto">
+    <h1>A paciente decide se confia em você <span class="grifo">antes da agulha.</span></h1>
+    <p>Na Filgueiras Academy você aprende a <b>Consulta que Vende</b> e leva as ferramentas prontas: anamnese, termos e precificação.</p>
+  </div>
+  <div class="rodape">
+    <span class="cta">Quero entrar na Academy <span class="seta">→</span></span>
+    <span class="assina"><img src="fotos/avatar-aline.jpg" alt=""><span><b>Dra. Aline Filgueiras</b>11+ anos de clínica</span></span>
+  </div>
+</section>
+
+<!-- E3 · Remarketing · Academy completa. Grid static; rótulos = os 4 itens do Recebe da LP. -->
+<section class="ad grao e3" id="c3">
+  <div class="cab">
+    <span class="eyebrow">Filgueiras Academy</span>
+    <h1><span class="apoio">Fez curso e continua travada na agulha e na consulta?</span>Técnica, anatomia e consulta <span class="grifo">num lugar só.</span></h1>
+  </div>
+  <div class="grade">
+    <div class="cel c1"><span><i>Novo</i>Anatomia em fresh frozen</span></div>
+    <div class="cel c2"><span><i>Técnica</i>Mais de 70 aulas</span></div>
+    <div class="cel c3"><span><i>Consulta</i>A Consulta que Vende</span></div>
+    <div class="cel c4"><span><i>Ao vivo</i>6 encontros no ano</span></div>
+  </div>
+  <div class="rodape">
+    <span class="cta">Quero entrar na Academy <span class="seta">→</span></span>
+    <span class="info"><b>12 meses de acesso</b><br>7 dias de garantia</span>
+  </div>
+</section>
+
+<!-- E4 · Remarketing · agenda/venda. Dor do H1 da LP ("agenda parada"), mostrada como a semana vazia;
+     fecho = Virada da LP. Sem promessa de agenda cheia nem de faturamento (regra de lib/ofertaAcademy.ts). -->
+<section class="ad grao e4" id="c4">
+  <div class="cab4">
+    <span class="eyebrow">Agenda parada</span>
+    <p class="lista">Você postou, fez promoção, baixou o preço.</p>
+    <h1><span class="grifo">E a agenda continua parada.</span></h1>
+  </div>
+  <div class="agenda">
+    <div class="mes"><b>Sua semana</b><span>30 horários</span></div>
+    <div class="grade4">
+        <span></span>
+        <span class="d">Seg</span>
+        <span class="d">Ter</span>
+        <span class="d">Qua</span>
+        <span class="d">Qui</span>
+        <span class="d">Sex</span>
+        <span class="d">Sáb</span>
+        <span class="h">9h</span>
+        <span class="s"></span>
+        <span class="s"></span>
+        <span class="s"></span>
+        <span class="s"></span>
+        <span class="s"></span>
+        <span class="s"></span>
+        <span class="h">11h</span>
+        <span class="s"></span>
+        <span class="s"></span>
+        <span class="s"></span>
+        <span class="s"></span>
+        <span class="s"></span>
+        <span class="x">Avaliação</span>
+        <span class="h">14h</span>
+        <span class="s"></span>
+        <span class="s"></span>
+        <span class="x">Retorno</span>
+        <span class="s"></span>
+        <span class="s"></span>
+        <span class="s"></span>
+        <span class="h">16h</span>
+        <span class="s"></span>
+        <span class="s"></span>
+        <span class="s"></span>
+        <span class="s"></span>
+        <span class="s"></span>
+        <span class="s"></span>
+        <span class="h">18h</span>
+        <span class="s"></span>
+        <span class="s"></span>
+        <span class="s"></span>
+        <span class="s"></span>
+        <span class="s"></span>
+        <span class="s"></span>
+    </div>
+    <p class="total">2 de 30 horários preenchidos</p>
+  </div>
+  <div class="texto">
+    <p>A paciente não vê o seu certificado. Ela sente se você sabe o que está fazendo. Na <b>Filgueiras Academy</b>: anatomia em fresh frozen, mais de 70 aulas de técnica e a <b>Consulta que Vende</b>.</p>
+  </div>
+  <div class="rodape">
+    <span class="cta">Quero entrar na Academy <span class="seta">→</span></span>
+    <span class="assina"><img src="fotos/avatar-aline.jpg" alt=""><span><b>Dra. Aline Filgueiras</b>1.000+ alunas formadas</span></span>
+  </div>
+</section>
+
+<script>
+  // Versão story (1080x1920) de cada criativo: mesmo conteúdo, layout de .story.
+  for (const ad of [...document.querySelectorAll(".ad")]) {
+    const story = ad.cloneNode(true);
+    story.id = ad.id.replace("c", "s");
+    story.classList.add("story");
+    document.body.appendChild(story);
+  }
+  // ?only=c1 (feed) ou ?only=s1 (story): renderiza só essa peça, sem margem (render.mjs).
+  const only = new URLSearchParams(location.search).get("only");
+  if (only) {
+    document.body.classList.add("only");
+    document.querySelectorAll(".ad").forEach((a) => { if (a.id !== only) a.style.display = "none"; });
+  }
+</script>
+</body>
+</html>
