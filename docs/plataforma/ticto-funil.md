@@ -255,9 +255,9 @@ Os três caminhos:
 
 As mensagens de todas as ofertas (Sala, Evergreen, Anatomia, Upgrade e Mentoria), o calendário de envio e as respostas por objeção estão em [`recuperacao-carrinho.md`](recuperacao-carrinho.md).
 
-### 3.4 Automatizar (opcional)
+### 3.4 Automação (n8n)
 
-A Ticto manda **webhooks** com os eventos de carrinho abandonado, Pix expirado e compra aprovada. Dá para ligar esses eventos ao WhatsApp e mandar as mensagens acima sozinhas, com uma automação (no n8n, por exemplo). Para isso, preciso saber qual ferramenta de WhatsApp vocês usam para disparo (API oficial, Z-API ou outra).
+As mensagens de 1h, 24h e 48h saem sozinhas pelo n8n: o webhook da Ticto põe o abandono numa fila, e antes de cada mensagem o fluxo confere na MemberKit se ela já comprou. Configuração e testes em [`n8n-recuperacao.md`](n8n-recuperacao.md).
 
 ---
 

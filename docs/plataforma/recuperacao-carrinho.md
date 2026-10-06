@@ -10,6 +10,8 @@ Mensagens de WhatsApp para quem começou a compra e não terminou, nas cinco ofe
 | Academy · Upgrade Anatomia | R$1.000 | `OB97300B4` | 5 |
 | Mentoria em grupo (upsell) | R$1.997 | `O5491F4AA` | 6 |
 
+**Automático:** as mensagens de 1h, 24h e 48h das seções 3 a 6 saem pelo n8n ([`n8n-recuperacao.md`](n8n-recuperacao.md)). À mão ficam o lembrete de Pix com o código, a noite da aula se quiserem reforçar, e as respostas.
+
 **Onde achar quem abandonou:** Ticto → **Recuperação de compras** → **Carrinhos abandonados** (nome, e-mail e telefone; o botão **Ações** abre o WhatsApp) e **Pix emitidos** (código para copiar). O código da oferta mostra de qual seção é a mensagem.
 
 **Campos:** `[nome]` é só o primeiro nome. `[atendente]` é quem manda. `[X]` é a contagem **real** dos 10 primeiros. `[link]` é o link da própria oferta (tabela acima, com `https://payment.ticto.app/` na frente). Nunca colar dado de uma aluna na conversa de outra.
