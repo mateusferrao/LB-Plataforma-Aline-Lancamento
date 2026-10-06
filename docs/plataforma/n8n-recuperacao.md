@@ -2,7 +2,7 @@
 
 Workflow: **Aline · Recuperação de carrinho (Ticto → WhatsApp)**, no n8n (projeto pessoal),
 `https://n8n.automato.pro/workflow/hG8cmJAd7Ry8BFxq`. Ele está **desativado** até você terminar este passo a passo.
-Desde 06/10 o envio é pela **API oficial do WhatsApp** (nó **Enviar template WhatsApp**, credencial "Suporte Filgueiras Academy - WhatsApp account"), com os três templates aprovados de [`templates-whatsapp-oficial.md`](templates-whatsapp-oficial.md). As mensagens de [`recuperacao-carrinho.md`](recuperacao-carrinho.md) continuam valendo para o envio manual da equipe.
+Desde 06/10 o envio é pela **API oficial do WhatsApp** (nó **Enviar template WhatsApp**, credencial **"Automato - WhatsApp account"**: a "Suporte Filgueiras Academy" lê a conta mas a Meta recusa o envio com o erro #200), com os três templates aprovados de [`templates-whatsapp-oficial.md`](templates-whatsapp-oficial.md). As mensagens de [`recuperacao-carrinho.md`](recuperacao-carrinho.md) continuam valendo para o envio manual da equipe.
 
 ## Como funciona
 
@@ -28,6 +28,8 @@ Os mesmos três templates para todas as ofertas:
 | Anatomia `O39AA5EC7` | nome / Curso de Anatomia em Fresh Frozen | `O39AA5EC7` |
 | Upgrade `OB97300B4` | nome / Upgrade para a Filgueiras Academy | `OB97300B4` |
 | Mentoria `O5491F4AA` | nome / Mentoria em grupo com a Dra. Aline | `O5491F4AA` |
+
+**Botão:** os templates foram aprovados com **URL fixa** (`https://payment.ticto.app/r/PC8C7EF55`), então o fluxo não manda o código da oferta no botão e todas as ofertas levam ao mesmo link. Para cada oferta ter o próprio link, é preciso recriar os templates com URL dinâmica (`https://payment.ticto.app/{{1}}`) e devolver o componente de botão no nó.
 
 Sem nome no webhook, o `{{1}}` vai como "Colega" (a Meta recusa variável vazia). O downsell automático da anatomia às 48h saiu com a troca para templates genéricos; se quiserem de volta, vira um 4º template.
 
