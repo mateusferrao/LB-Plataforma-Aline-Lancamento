@@ -21,8 +21,14 @@ const WHATS_URL =
 const RECEBE = [
   [`${MENTORIA.meses} meses de mentoria em grupo com a Aline`, `${MENTORIA.encontros}, online.`],
   ["Os seus casos na mesa", "Você leva as dúvidas do consultório e a Aline responde junto com o grupo."],
-  ["A mesma mentoria dos 10 primeiros da aula", "Na noite da aula, ela foi bônus só pra quem entrou primeiro."],
+  ["Você aplica com a Aline por perto", "Três meses pra levar o que aparece na cadeira e ajustar a conduta com ela."],
 ] as const;
+
+// Revisão de 06/10: sai a linha "a mesma mentoria dos 10 primeiros" (lembrava a
+// compradora de que outras ganharam de graça o que ela vai pagar). A vaga da colega
+// vale o que ela pagaria (R$1.997) e entra a conta "dividindo com a colega".
+const POR_PESSOA = `R$${(MENTORIA.preco / 2).toLocaleString("pt-BR", { minimumFractionDigits: 2 })}`;
+const GARANTIA_MENTORIA = "Garantia Sem Perguntas";
 
 const TEXTO_ACEITAR = `Sim, quero a mentoria e a vaga da colega por ${MENTORIA.precoLabel}`;
 const TEXTO_RECUSAR = "Não, quero seguir só com a Academy";
@@ -75,6 +81,9 @@ export default function MentoriaUpsell() {
             <p className="mt-1 text-[0.92rem] leading-[1.5] text-fg-soft">
               {MENTORIA.acompanhante.detalhe} Se você sair desta página sem aceitar, a vaga dela não volta.
             </p>
+            <p className="mt-2 text-[0.92rem] leading-[1.5] text-fg">
+              Dividindo com a colega, sai <strong className="font-semibold">{POR_PESSOA} pra cada uma</strong>.
+            </p>
           </div>
 
           <div className="flex items-baseline justify-between gap-5 pt-6">
@@ -125,7 +134,9 @@ export default function MentoriaUpsell() {
                 </a>
               </>
             )}
-            <p className="mt-6 text-[0.9rem] leading-[1.5] text-fg-faint">Garantia de 7 dias: se não fizer sentido, você pede o dinheiro de volta.</p>
+            <p className="mt-6 text-[0.9rem] leading-[1.5] text-fg-faint">
+              {GARANTIA_MENTORIA}: 7 dias pra pedir o dinheiro de volta, sem explicar nada.
+            </p>
           </div>
         </section>
       </Container>

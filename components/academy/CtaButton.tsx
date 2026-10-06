@@ -64,3 +64,17 @@ export function CtaButton({ modo, children, variant = "dark", className = "", sh
     </a>
   );
 }
+
+// Evergreen (tráfego frio): o hero e a barra fixa levam à oferta, não ao checkout.
+// O preço só aparece depois da pilha (decisão de 06/10, Hormozi: valor antes do preço).
+export function VerOfertaButton({ children, className = "" }: { children: React.ReactNode; className?: string }) {
+  return (
+    <a
+      href="#oferta"
+      className={`inline-flex items-center gap-3 rounded-[2px] bg-wine px-8 py-[19px] font-sans text-[1.02rem] font-semibold text-on-wine transition-[transform,background-color] duration-150 ease-out hover:-translate-y-0.5 hover:bg-wine-hover ${className}`}
+      onClick={() => gaEvent("click_ver_oferta", { produto: "academy-evergreen" })}
+    >
+      {children}
+    </a>
+  );
+}

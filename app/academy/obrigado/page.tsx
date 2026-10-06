@@ -66,7 +66,8 @@ export default function AcademyObrigado() {
 
           <AteOFim apos={24}>
           <p className="mt-8 rounded-[6px] border border-line px-5 py-4 text-[0.98rem] leading-[1.55] text-fg-soft">
-            <strong className="font-semibold text-fg">Comprou na noite da aula?</strong> Se você está entre
+            <strong className="font-semibold text-fg">Comprou na noite da aula, até {SALA.prazoCurto}?</strong> O seu
+            acesso vai para {SALA.mesesTodos} meses: a equipe aplica os +3 meses até {SALA.extensaoAte}. Se você está entre
             os {SALA.primeirosN} primeiros, a equipe te chama no WhatsApp pra combinar o certificado, a
             prancheta, a toxina e a mentoria em grupo com a Aline.
           </p>

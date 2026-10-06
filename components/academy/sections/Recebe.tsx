@@ -1,63 +1,97 @@
-import Image from "next/image";
 import { Reveal } from "@/components/Reveal";
 import { Titulo } from "@/components/Titulo";
 import { Secao } from "@/components/academy/Secao";
-import { withBasePath } from "@/lib/basePath";
 import { ACADEMY } from "@/lib/ofertaAcademy";
 
-// O que tem dentro, em quatro linhas (antes: 4 cards com 15 cursos). Cursos
-// conferidos no Memberkit em 04/10: Full Face, Análise de casos e Fios não entram.
-const ITENS = [
+// O mapa da plataforma (revisão de 06/10): antes eram 4 linhas genéricas ("mais
+// de 70 aulas"); agora cada trilha mostra o que tem dentro, com os números de
+// aulas conferidos na MemberKit em 06/10. Full Face, Análise de casos e Fios não
+// entram na Academy (conferido em 04/10). O curso de anatomia vai sem número de
+// aulas (estava sendo publicado em 06/10).
+type Curso = { t: string; n?: number; d: string; novo?: boolean };
+
+const TRILHAS: { nome: string; titulo: string; cursos: Curso[] }[] = [
   {
-    t: "Anatomia em fresh frozen",
-    novo: true,
-    d: "O curso online de dissecção: a face por dentro, camada por camada. Sem visto e sem passagem.",
+    nome: "Agulha",
+    titulo: "A face por dentro e a técnica, região por região",
+    cursos: [
+      {
+        t: "Anatomia em Fresh Frozen",
+        novo: true,
+        d: "Dissecção e aplicação em peças fresh frozen: os planos, os vasos e os limites que mudam a conduta. Sem visto e sem passagem.",
+      },
+      { t: "Preenchimento facial", n: 40, d: "Malar, nariz, olheiras, mandíbula, lábio, mento, têmporas, canto de boca e orelha." },
+      { t: "Bioestimuladores de colágeno", n: 24, d: "Da diluição ao planejamento e à aplicação." },
+      { t: "Toxina botulínica", n: 14, d: "Da introdução às demonstrações práticas." },
+      { t: "Intercorrências", n: 6, d: "Pra saber o que fazer se a cor mudar." },
+      { t: "Anestesia", n: 3, d: "Montagem do material e anestesia extraoral." },
+    ],
   },
-  { t: "Técnica", d: "Mais de 70 aulas de toxina, preenchimento e bioestimuladores, com intercorrências e anestesia." },
-  { t: "Consulta", d: "A Consulta que Vende, marketing, posicionamento e as ferramentas prontas: anamnese, termos e precificação." },
   {
-    t: "Encontros ao vivo",
-    d: "6 no ano, com a Aline ou com o time dela, e uma aula com a Aline pra discussão de casos.",
+    nome: "Consulta",
+    titulo: "Pra paciente confiar antes da agulha",
+    cursos: [
+      { t: "A Consulta que Vende", d: "O roteiro da consulta, pra ela não sair com um “vou pensar”." },
+      { t: "Vendas", n: 6, d: "Campanhas comerciais e estratégias de consultório." },
+      { t: "Marketing nas redes", n: 8, d: "Produção de conteúdo pro seu perfil." },
+      { t: "Posicionamento de imagem", n: 4, d: "Como você se apresenta antes de a paciente chegar." },
+      { t: "Dicas jurídicas", n: 4, d: "Com o escritório Juk Cattani Advogados Associados." },
+      { t: "Material de apoio", n: 6, d: "Anamnese, termos e precificação prontos pra usar." },
+    ],
   },
-] as const;
+  {
+    nome: "Espelho",
+    titulo: "A Aline perto, enquanto você aplica",
+    cursos: [
+      { t: "6 encontros ao vivo no ano", d: "Com a Aline ou o time dela. Você leva as dúvidas do consultório; as gravações ficam na plataforma." },
+      { t: "1 aula ao vivo de casos com a Aline", d: "Pra ver como ela pensa a conduta, caso a caso." },
+      { t: "Preferência nos cursos presenciais", d: "Pra garantir a vaga quando quiser o hands-on." },
+    ],
+  },
+];
 
 export function Recebe() {
   return (
     <Secao>
-      <Titulo eyebrow="O que você recebe">{ACADEMY.nome}</Titulo>
+      <Titulo eyebrow="Por dentro da plataforma" destaque="o que tem dentro.">
+        {ACADEMY.nome}:
+      </Titulo>
       <Reveal>
         <p className="mt-4 text-[1.1rem] leading-[1.6] text-fg-soft">
-          {ACADEMY.mesesAcesso} meses de acesso a tudo, no celular ou no computador.
+          {ACADEMY.mesesAcesso} meses de acesso a tudo, no celular ou no computador. Três trilhas, uma pra cada
+          momento em que a paciente decide se confia em você.
         </p>
-        <div className="relative mt-8 aspect-[16/10] w-full overflow-hidden rounded-[4px] border border-line-soft bg-surface">
-          <Image
-            src={withBasePath("/images/fresh/lab-luvas.webp")}
-            alt="Dra. Aline Filgueiras calçando as luvas no laboratório de dissecção"
-            fill
-            sizes="(min-width: 768px) 620px, 90vw"
-            className="object-cover object-[center_30%]"
-          />
-        </div>
       </Reveal>
 
-      <Reveal as="ol" className="mt-9 list-none p-0">
-        {ITENS.map((it, i) => (
-          <li key={it.t} className="grid grid-cols-[36px_1fr] gap-3 py-3.5">
+      {TRILHAS.map((tr, i) => (
+        <Reveal key={tr.nome} className="mt-10">
+          <div className="flex items-baseline gap-3 border-b border-line pb-3">
             <span className="font-serif text-[1.5rem] leading-none text-wine-ink">{i + 1}</span>
             <div>
-              <h3 className="flex flex-wrap items-center gap-2 font-sans text-[1.15rem] font-semibold tracking-[-0.005em] text-fg uppercase">
-                {it.t}
-                {"novo" in it && it.novo && (
-                  <span className="rounded-[2px] bg-wine px-1.5 py-0.5 text-[10.5px] font-semibold tracking-[0.12em] text-on-wine">
-                    NOVO
-                  </span>
-                )}
-              </h3>
-              <p className="mt-1 text-[1rem] leading-[1.55] text-fg-soft">{it.d}</p>
+              <h3 className="font-sans text-[1.2rem] font-semibold tracking-[-0.005em] text-fg uppercase">{tr.nome}</h3>
+              <p className="text-[0.95rem] text-fg-soft">{tr.titulo}</p>
             </div>
-          </li>
-        ))}
-      </Reveal>
+          </div>
+          <ul className="list-none p-0">
+            {tr.cursos.map((c) => (
+              <li key={c.t} className="flex items-baseline justify-between gap-4 border-b border-dashed border-line py-3">
+                <span>
+                  <span className="flex flex-wrap items-center gap-2 text-[1.02rem] font-semibold text-fg">
+                    {c.t}
+                    {c.novo && (
+                      <span className="rounded-[2px] bg-wine px-1.5 py-0.5 text-[10.5px] font-semibold tracking-[0.12em] text-on-wine">
+                        NOVO
+                      </span>
+                    )}
+                  </span>
+                  <small className="mt-0.5 block text-[0.92rem] leading-[1.45] text-fg-soft">{c.d}</small>
+                </span>
+                {c.n ? <span className="shrink-0 text-[0.9rem] text-wine-ink tabular-nums">{c.n} aulas</span> : null}
+              </li>
+            ))}
+          </ul>
+        </Reveal>
+      ))}
     </Secao>
   );
 }

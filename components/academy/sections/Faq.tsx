@@ -36,7 +36,7 @@ const COMUNS: Item[] = [
 const SO_SALA: Item[] = [
   {
     q: "Quanto tempo de acesso eu tenho?",
-    a: `${ACADEMY.mesesAcesso} meses a partir da compra. Os ${SALA.primeirosTopo} primeiros ganham mais 6, e a equipe aplica a extensão até ${SALA.extensaoAte}.`,
+    a: `${ACADEMY.mesesAcesso} meses a partir da compra. Quem entra até ${SALA.prazoCurto} ganha mais 3 (${SALA.mesesTodos} no total), e os ${SALA.primeirosTopo} primeiros ganham mais 6 (${SALA.mesesTopo} no total). A equipe aplica a extensão até ${SALA.extensaoAte}.`,
   },
   {
     q: `Como sei se estou entre os ${SALA.primeirosN} primeiros?`,
@@ -44,7 +44,7 @@ const SO_SALA: Item[] = [
   },
   {
     q: `E depois de ${SALA.prazoCurto}?`,
-    a: `Os bônus da sala acabam às 23h59 de 06/10, a noite da aula, ou antes, quando os ${SALA.primeirosN} primeiros entrarem. A Academy continua por ${ACADEMY.precoCheioLabel}, com o núcleo.`,
+    a: `Os +3 meses acabam às 23h59 de 06/10, a noite da aula. Os bônus dos ${SALA.primeirosN} primeiros acabam antes, quando eles entrarem. Depois, a Academy continua por ${ACADEMY.precoCheioLabel}, com ${ACADEMY.mesesAcesso} meses de acesso.`,
   },
 ];
 

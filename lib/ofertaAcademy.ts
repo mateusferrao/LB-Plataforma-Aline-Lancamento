@@ -59,6 +59,8 @@ export const SALA = {
   prazoCurto: "06/10, 23h59",
   // Os 5 primeiros: 18 meses. A extensão é feita em lote pela equipe (a Ticto vende 12).
   mesesTopo: 18,
+  // Todo mundo que compra pela sala até o fim dos bônus: +3 meses (decisão de 06/10).
+  mesesTodos: 15,
   extensaoAte: "10/10",
   primeirosN: PRIMEIROS_N,
   primeirosTopo: PRIMEIROS_TOPO,
@@ -66,22 +68,46 @@ export const SALA = {
   contentName: "Filgueiras Academy (sala 06/10)",
 } as const;
 
+// Ligar (true) e publicar quando a equipe avisar que o 10º pagamento da sala foi
+// confirmado: a página para de oferecer os bônus dos 10 primeiros e segue com
+// os +3 meses de todo mundo até 23h59.
+export const BONUS_10_ESGOTADO = false;
+
 type Item = { nome: string; detalhe: string; valor?: number };
 
 // Pilha no formato do $100M Offers: cada item diz, numa linha curta, o
 // problema que resolve ("Pra…"). O núcleo ataca as três inseguranças (agulha,
 // consulta, sozinha); cada bônus derruba uma objeção. Valores da equipe (05/10).
 // O núcleo: o que todo mundo leva por R$1.797.
+// Revisão de 06/10: os nomes dizem o que a pessoa leva (números de aulas conferidos
+// na MemberKit em 06/10) e as ferramentas e as aulas jurídicas viraram itens
+// próprios, sem valor novo (a soma não muda).
 export const PILHA_ACADEMY: readonly Item[] = [
-  { nome: "Curso online de Fresh Frozen + dissecção", detalhe: "Pra mão parar de hesitar.", valor: 1297 },
   {
-    nome: "Plataforma Filgueiras Academy",
-    detalhe: "Pro caminho completo: 70+ aulas de técnica e a Consulta que Vende.",
+    nome: "Curso online de Fresh Frozen + dissecção",
+    detalhe: "A face por dentro, camada por camada. Pra mão parar de hesitar.",
+    valor: 1297,
+  },
+  {
+    nome: "Mais de 70 aulas de técnica",
+    detalhe: "Preenchimento região por região, bioestimuladores, toxina, intercorrências e anestesia.",
     valor: 1497,
   },
   {
+    nome: "Consulta, vendas e posicionamento",
+    detalhe: "A Consulta que Vende, vendas no consultório e marketing nas redes. Pra ela não dizer “vou pensar”.",
+  },
+  {
+    nome: "Material de apoio pronto",
+    detalhe: "Anamnese, termos e precificação pra usar na próxima paciente.",
+  },
+  {
+    nome: "Dicas jurídicas com advogados",
+    detalhe: "Aulas do escritório Juk Cattani Advogados Associados. Pra atender com mais tranquilidade.",
+  },
+  {
     nome: "6 encontros ao vivo no ano",
-    detalhe: "Pra não travar sozinha. Com a Aline ou o time dela.",
+    detalhe: "Você leva as dúvidas do consultório e sai com a resposta. Com a Aline ou o time dela.",
     valor: 5000,
   },
   { nome: "1 aula ao vivo com a Aline pra discussão de casos", detalhe: "Pra ver como ela pensa a conduta.", valor: 1000 },
@@ -98,6 +124,14 @@ export const BONUS_PRIMEIROS: readonly Item[] = [
   { nome: "Toxina botulínica", detalhe: "Pra sua próxima aplicação." },
 ];
 
+// Sala: todo mundo que entra até o fim dos bônus (06/10 23h59) ganha +3 meses.
+// Entra na soma da sala. Extensão em lote pela equipe até 10/10, como a dos 5.
+export const BONUS_TODOS: Item = {
+  nome: `+3 meses de acesso (${SALA.mesesTodos} no total)`,
+  detalhe: "Pra estudar sem correr. Pra todo mundo que entrar hoje, até 23h59.",
+  valor: Math.round(PRECO / 4), // um quarto do plano de 12 meses
+};
+
 // Sala: entre os 10 primeiros, os 5 primeiros. Fora da soma dos totais.
 export const BONUS_TOPO: Item = {
   nome: `+6 meses de acesso (${SALA.mesesTopo} no total)`,
@@ -107,10 +141,12 @@ export const BONUS_TOPO: Item = {
 
 const soma = (itens: readonly Item[]) => itens.reduce((t, i) => t + (i.valor ?? 0), 0);
 
-// Dois totais: o de todo mundo (núcleo) e o dos 10 primeiros (núcleo + bônus).
+// Três totais: o núcleo (evergreen), o de todo mundo na sala (núcleo + 3 meses)
+// e o dos 10 primeiros (núcleo + 3 meses + bônus).
 export const VALOR_TOTAL = {
   nucleo: formatBRL(soma(PILHA_ACADEMY)),
-  primeiros: formatBRL(soma(PILHA_ACADEMY) + soma(BONUS_PRIMEIROS)),
+  sala: formatBRL(soma(PILHA_ACADEMY) + (BONUS_TODOS.valor ?? 0)),
+  primeiros: formatBRL(soma(PILHA_ACADEMY) + (BONUS_TODOS.valor ?? 0) + soma(BONUS_PRIMEIROS)),
 } as const;
 
 // Downsell (docs/plataforma/ticto.md §11): só o curso de anatomia, 6 meses, para
@@ -164,11 +200,12 @@ export const MENTORIA = {
   // Bônus só da página do upsell (decisão de 06/10): quem aceita leva 1 colega da
   // estética ou da saúde nos encontros, sem pagar a mais. Não muda nada na Ticto
   // (o 1 clique cobra os mesmos R$1.997); a equipe cadastra a colega depois.
-  // Vale para a mentoria comprada no mesmo dia da Academy.
+  // Vale para a mentoria comprada no mesmo dia da Academy. Valor = o que a colega
+  // pagaria pela mentoria (decisão de 06/10), não o valor de pilha.
   acompanhante: {
     nome: "+1 vaga pra uma colega",
     detalhe: "Uma colega da estética ou da saúde participa dos encontros ao vivo com você, pelos 3 meses.",
-    valor: 5000,
+    valor: 1997,
   },
 } as const;
 
