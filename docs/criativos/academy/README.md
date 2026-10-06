@@ -199,6 +199,21 @@ A montagem é feita com `../video-ugc/montar.py` sobre o 1º quadro do vídeo, p
 | V4 (dor da agulha) | "Já travou com a seringa na mão? Olha o que ninguém te mostrou." | Dor |
 | V5 (venda, bônus) | "Se a paciente te diz “vou pensar” e some, olha isso." | Dor de venda |
 
+## Variantes com gancho UGC (montadas em 06/10, `ugc.py`)
+Os vídeos da Camila chegaram **sem fundo verde** (parede bege). Por isso o formato usado é o de
+corte seco (tier A): ela fala o gancho em tela cheia, com legenda já no frame 0, e o corpo do
+vídeo entra direto. Os cortes foram feitos pelos tempos de cada palavra.
+
+| Variante | Arquivo | Fala usada | Situação |
+|---|---|---|---|
+| V2-B | ugc5 | "Olha o que tem embaixo da pele na calha lacrimal." (corte antes de um "e some" que o gerador emendou) | Pronta |
+| V4-ugc | ugc1 | "Já travou com a seringa na mão? Olha o que ninguém te mostrou." | Pronta |
+| V5-ugc (venda) | ugc3 | "Se a paciente te diz “vou pensar” e some, olha isso." | Pronta |
+| V5-ugc (agenda) | ugc6 | "Se tudo continuar como está pelos próximos seis meses, você vai estar satisfeita com a sua agenda?" (fala fora do roteiro original, sem promessa) | Pronta |
+| V2-C | ugc4 | Só até "…abriu a calha lacrimal por dentro". O resto saiu alarmista ("vocês não têm noção do perigo… alertar vocês") e foi descartado | **Provisória**: a fonte veio horizontal e a imagem fica mole. Regerar na vertical |
+| V3-ugc | ugc2 | Só até "…e ainda estuda dissecção". O resto saiu embolado ("e some dissecção e some") | **Provisória**: fonte horizontal, imagem mole e enquadramento apertado. Regerar na vertical |
+| V2-A | (não veio) | "Se você tem medo de aplicar em calha lacrimal, olha isso." | Falta gravar |
+
 ## Plano de teste
 - **Frio**, um conjunto aberto com V1, V2, V3, V4, E1 e E2. Pares de teste:
   - **V1 × V2:** o mesmo corpo com ganchos diferentes (o original contra a Camila);
