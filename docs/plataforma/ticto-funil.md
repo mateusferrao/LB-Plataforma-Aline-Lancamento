@@ -257,7 +257,7 @@ As mensagens de todas as ofertas (Sala, Evergreen, Anatomia, Upgrade e Mentoria)
 
 ### 3.4 Automação (n8n)
 
-As mensagens de 1h, 24h e 48h saem sozinhas pelo n8n: o webhook da Ticto põe o abandono numa fila, e antes de cada mensagem o fluxo confere na MemberKit se ela já comprou. Configuração e testes em [`n8n-recuperacao.md`](n8n-recuperacao.md).
+As mensagens de 1h, 24h e 48h saem sozinhas pelo n8n: o webhook da Ticto põe o abandono numa fila, e o evento de venda aprovada tira quem comprou. Configuração e testes em [`n8n-recuperacao.md`](n8n-recuperacao.md).
 
 ---
 

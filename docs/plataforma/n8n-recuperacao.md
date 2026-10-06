@@ -7,12 +7,11 @@ As mensagens são as de [`recuperacao-carrinho.md`](recuperacao-carrinho.md).
 ## Como funciona
 
 ```
-Ticto (webhook) ─► Ler evento ─► Abandono? ─► já está na fila? ─► não: entra na fila (Data Table)
-                                └► Compra?  ─► marca "comprou" na fila
+Ticto (webhook) ─► Ler evento ─► Abandono?        ─► já está na fila? ─► não: entra na fila (Data Table)
+                                └► Venda aprovada? ─► marca "comprou" em tudo o que está ativo do e-mail
+                                                    └► registra a compradora (e-mail + produto)
 
-A cada 10 min ─► quem está na hora ─► MemberKit: comprou? ─► sim: marca "comprou" e para
-                                                          └► não: manda a mensagem da vez pelo WhatsApp
-                                                                  e agenda a próxima
+A cada 10 min ─► quem está "ativo" e na hora ─► manda a mensagem da vez pelo WhatsApp e agenda a próxima
 ```
 
 | Produto (oferta) | 1 h | 24 h | 48 h |
@@ -25,8 +24,8 @@ A cada 10 min ─► quem está na hora ─► MemberKit: comprou? ─► sim: m
 **Regras que o fluxo já segue:**
 - Qualquer outra oferta da Ticto (ingresso da aula, protocolo) é ignorada.
 - Há **uma sequência por e-mail e produto**. Se a Ticto mandar o mesmo abandono de novo, ninguém recebe a mensagem 1 duas vezes.
-- **Antes de cada mensagem, o fluxo confere na MemberKit.** Se ela já tem o plano, sai da fila e não recebe mais nada.
-- Se o evento **Compra aprovada** da Ticto estiver ligado ao webhook, a compra também tira a pessoa da fila na hora.
+- **Quem comprou sai da fila pelo evento Venda aprovada da Ticto**, de qualquer oferta da Academy, da anatomia ou da mentoria, na hora da compra. Sem esse evento ligado, o fluxo manda mensagem para quem já pagou.
+- A compradora também fica registrada. Se ela abrir de novo o checkout do mesmo produto depois de comprar, não entra na fila.
 - **Horário:** só envia das **8h às 21h59** (Brasília). Fora disso, a mensagem espera até as 8h. A exceção é a noite da aula (06/10, até 23h59), para os abandonos da Sala.
 - O código Pix **não** vai na mensagem. O lembrete de Pix com o código continua manual, pela tela **Pix emitidos** da Ticto.
 
@@ -35,7 +34,7 @@ A fila fica na Data Table **Aline - Recuperacao de Carrinho** (n8n → Overview 
 | Status | Quer dizer |
 |---|---|
 | `ativo` | Na sequência; `proximo_envio` diz quando sai a próxima mensagem |
-| `comprou` | Achada na MemberKit ou compra aprovada na Ticto. Parou |
+| `comprou` | Compra aprovada na Ticto. Parou (ou nunca começou) |
 | `finalizado` | Recebeu todas as mensagens do produto e não comprou |
 | `sem_telefone` | O webhook veio sem telefone |
 | `erro` | O WhatsApp recusou o envio. O motivo está em `observacao` |
@@ -46,31 +45,12 @@ Para **parar a sequência de alguém** (por exemplo, ela respondeu e a equipe as
 
 ## Passo a passo
 
-### 1. MemberKit: credencial e IDs dos planos
-
-1. No n8n, abra o nó **Consultar MemberKit**. Em **Generic Auth Type**, escolha **Query Auth**. Em **Credential**, clique em **Create new credential**:
-   - **Name:** `api_key`
-   - **Value:** a chave da API da MemberKit (MemberKit → Configurações → API). Cole só no n8n, nunca em conversa ou documento.
-   - Salve com o nome **MemberKit API (api_key)**.
-2. Descubra o ID de cada plano (*membership level*). Abra no navegador, com a sua chave no lugar de `SUA_CHAVE`:
-   `https://memberkit.com.br/api/v1/membership_levels?api_key=SUA_CHAVE`
-   Anote o `id` do plano **da Academy (12 meses)**, do plano **da Anatomia (6 meses)** e, se existir, do plano **da mentoria**.
-3. Abra o nó **Decidir próximo passo** e preencha no topo do código, por exemplo:
-   ```js
-   const NIVEIS_ACADEMY = [12345];
-   const NIVEIS_ANATOMIA = [12346];
-   const NIVEIS_MENTORIA = [];      // vazio se a mentoria não tiver plano na MemberKit
-   ```
-   **Por que isso é importante:**
-   - **Sem os IDs**, qualquer plano ativo conta como compra. Uma ex-aluna com um plano antigo ficaria fora da recuperação.
-   - **Upgrade e mentoria:** sem o ID do plano, a única forma de saber que ela comprou é o evento de compra aprovada da Ticto (passo 3).
-
-### 2. WhatsApp (Evolution)
+### 1. WhatsApp (Evolution)
 
 1. Abra o nó **Enviar WhatsApp**. O n8n ligou sozinho a credencial **Evolution account**. Troque pela conta do **WhatsApp da Aline**, o número de atendimento.
 2. Em **Instance Name**, coloque o nome da instância da Evolution desse número.
 
-### 3. Ticto: o webhook
+### 2. Ticto: o webhook
 
 1. Ticto → **Tictools → Webhook → Novo webhook**:
    - **URL:** `https://n8n.automato.pro/webhook/ticto-recuperacao-aline`
@@ -78,13 +58,13 @@ Para **parar a sequência de alguém** (por exemplo, ela respondeu e a equipe as
    - **Produtos:** Filgueiras Academy (Sala, Evergreen e Upgrade), Anatomia em Fresh Frozen e Mentoria em grupo.
    - **Eventos:**
      - **Abandono de carrinho** (obrigatório);
-     - **Venda aprovada / Compra aprovada** (recomendado: tira da fila na hora);
+     - **Venda aprovada / Compra aprovada** (obrigatório: é o que tira da fila quem comprou);
      - **Pix gerado** (opcional: quem gerou o Pix e não pagou entra na mesma sequência).
 2. Copie o **token** do webhook. No n8n, abra o nó **Ler evento da Ticto** e cole no topo:
    `const TICTO_TOKEN = 'o-token-aqui';`
    Assim, quem não tem o token não consegue colocar ninguém na fila.
 
-### 4. Teste (com o seu número)
+### 3. Teste (com o seu número)
 
 1. No nó **Decidir próximo passo**, coloque o seu número em `const TELEFONE_TESTE = '5531...';`. Com ele preenchido, **todas** as mensagens vão só para você.
 2. **Salve e ative o workflow** (botão **Active** / **Publish**).
@@ -94,11 +74,17 @@ Para **parar a sequência de alguém** (por exemplo, ela respondeu e a equipe as
 5. Na Data Table **Aline - Recuperacao de Carrinho**, a linha aparece com `status = ativo`, `etapa = 0` e `proximo_envio` daqui a 1 hora.
 6. **Para não esperar 1 hora:** edite `proximo_envio` dessa linha para um horário que já passou. Em até 10 minutos chega a **mensagem 1** no seu WhatsApp, e a linha vai para `etapa = 1`, com `proximo_envio` 24 horas depois do abandono.
 7. Repita o passo 6 para receber a **mensagem 2** e a **mensagem 3** (downsell da anatomia).
-8. **Teste da compra:** crie outra linha de teste com o e-mail de uma aluna que já tem a Academy (status `ativo`, `etapa` 0, `proximo_envio` no passado). Ela tem que virar `comprou`, sem mensagem.
+8. **Teste da compra, sem comprar de verdade:** com uma linha de teste `ativo` na tabela, mande um evento de compra falso para o webhook, com o mesmo e-mail e o token. No terminal:
+   ```
+   curl -X POST https://n8n.automato.pro/webhook/ticto-recuperacao-aline \
+     -H 'Content-Type: application/json' \
+     -d '{"status":"authorized","token":"O-TOKEN","customer":{"email":"SEU-EMAIL-DE-TESTE"},"item":{"offer_code":"ODB726458"}}'
+   ```
+   A linha tem que virar `comprou`. Depois, confira na primeira compra real: em Executions, o status que chegou no nó **Ler evento da Ticto** tem que estar na lista `COMPRA` do código (`authorized`, `approved`, `paid`...). Se vier outro nome, me mande que eu incluo.
 9. Repita o passo 3 com o checkout da Anatomia (`O39AA5EC7`) e confira `familia: anatomia`.
 10. **Acabou:** apague o `TELEFONE_TESTE` (deixe `''`), salve e apague as linhas de teste da tabela.
 
-### 5. Operação
+### 4. Operação
 
 - **Respostas:** a equipe responde as conversas no WhatsApp normalmente. Quando assumir uma conversa, troque o status da pessoa para `parado`.
 - **Mensagens manuais:** não mandem à mão as mensagens de 1h, 24h e 48h de [`recuperacao-carrinho.md`](recuperacao-carrinho.md) para quem já está na fila. Ficam manuais o lembrete de Pix com o código e as mensagens do 7º e do 25º dia do upgrade.
@@ -109,4 +95,5 @@ Para **parar a sequência de alguém** (por exemplo, ela respondeu e a equipe as
 
 - **Os nomes dos campos do webhook** foram escritos para a versão 2.0 da Ticto: status `abandoned_cart`, `customer.email`, `customer.phone` e `item.offer_code`. O código aceita variações, mas o teste do passo 4 é o que confirma.
 - **Uma sequência por e-mail e produto, para sempre.** Se ela abandonar a Academy de novo um mês depois, não recebe outra sequência. Para reiniciar, apague a linha dela.
-- **A consulta à MemberKit usa o e-mail.** Se ela comprou com outro e-mail, a MemberKit não acha a compra. O evento de compra aprovada da Ticto também usa o e-mail.
+- **Tudo depende do evento Venda aprovada chegar.** Se o n8n estiver fora do ar na hora da compra, a compradora continua na fila. Depois de qualquer queda do n8n, olhem as linhas `ativo` contra as vendas da Ticto do período.
+- **A compra é reconhecida pelo e-mail.** Se ela comprou com outro e-mail, continua na fila.
