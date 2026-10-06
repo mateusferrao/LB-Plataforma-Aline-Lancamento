@@ -1,8 +1,9 @@
-import Image from "next/image";
+import type { ReactNode } from "react";
 import { Reveal } from "@/components/Reveal";
 import { Titulo } from "@/components/Titulo";
 import { AteOFim } from "@/components/academy/AteOFim";
 import { CtaButton, type Modo } from "@/components/academy/CtaButton";
+import { FotosManual } from "@/components/academy/FotosManual";
 import { PrazoInline } from "@/components/academy/Prazo";
 import { Secao } from "@/components/academy/Secao";
 import { Ticks } from "@/components/academy/Ticks";
@@ -20,14 +21,6 @@ import {
   VALOR_TOTAL,
   brl,
 } from "@/lib/ofertaAcademy";
-import { withBasePath } from "@/lib/basePath";
-
-// Fotos do Manual do Envelhecimento (bônus das 5 primeiras), do Drive da equipe em 06/10.
-const FOTOS_MANUAL = [
-  { src: "/images/manual/manual-rostos.webp", w: 1200, h: 1013, alt: "Manual do Envelhecimento aberto na página do processo de envelhecimento da pele da face, aos 30, 45 e 60 anos" },
-  { src: "/images/manual/manual-pele.webp", w: 800, h: 800, alt: "Página do Manual do Envelhecimento com as camadas da pele aos 30 e aos 60 anos" },
-  { src: "/images/manual/manual-abas.webp", w: 800, h: 800, alt: "Capa do Manual do Envelhecimento com as abas Face, Gordura e Ossos" },
-];
 
 // Oferta num card só (molde da referência), com a oferta ajustada de 05/10:
 // o núcleo com o valor riscado por item e o total de todo mundo; na sala, os
@@ -35,7 +28,7 @@ const FOTOS_MANUAL = [
 // todo mundo até 23h59 (com total próprio); o bloco dos 10 primeiros some quando
 // BONUS_10_ESGOTADO. O preço abre pelo 12x, com o Pix e o "menos de R$5 por dia"
 // (R$1.797 / 365 = R$4,92, à vista) embaixo.
-function Linha({ nome, detalhe, valor, tag }: { nome: string; detalhe: string; valor?: number; tag?: string }) {
+function Linha({ nome, detalhe, valor, tag, extra }: { nome: string; detalhe: string; valor?: number; tag?: string; extra?: ReactNode }) {
   return (
     <li className="flex items-baseline justify-between gap-5 border-b border-dashed border-line py-3">
       <span>
@@ -44,6 +37,7 @@ function Linha({ nome, detalhe, valor, tag }: { nome: string; detalhe: string; v
           {nome}
         </span>
         <small className="mt-0.5 block text-[0.9rem] leading-[1.45] text-fg-soft">{detalhe}</small>
+        {extra}
       </span>
       {valor ? (
         <span className="shrink-0 text-[0.98rem] text-fg-soft line-through decoration-wine-bright">{brl(valor)}</span>
@@ -111,29 +105,10 @@ export function Oferta({ modo }: { modo: Modo }) {
                 ))}
               </ul>
               <Total rotulo={`Valor total pros ${SALA.primeirosN} primeiros`} valor={VALOR_TOTAL.primeiros} />
-              <div className="mt-6 rounded-[6px] bg-bg-2 px-4 pb-1">
-                <ul className="list-none p-0">
-                  <Linha {...BONUS_CINCO} tag={`E as ${SALA.primeirosCinco} primeiras`} />
-                </ul>
-                <figure className="mt-3 mb-1">
-                  <div className="grid grid-cols-2 gap-2">
-                    {FOTOS_MANUAL.map((f, i) => (
-                      <Image
-                        key={f.src}
-                        src={withBasePath(f.src)}
-                        alt={f.alt}
-                        width={f.w}
-                        height={f.h}
-                        sizes={i === 0 ? "(min-width: 768px) 600px, 92vw" : "(min-width: 768px) 300px, 46vw"}
-                        className={`h-auto w-full rounded-[6px] object-cover ${i === 0 ? "col-span-2" : "aspect-square"}`}
-                      />
-                    ))}
-                  </div>
-                </figure>
-                <ul className="list-none p-0">
-                  <Linha {...BONUS_PRIMEIRA} tag="E a primeira" />
-                </ul>
-              </div>
+              <ul className="mt-6 list-none rounded-[6px] bg-bg-2 px-4">
+                <Linha {...BONUS_CINCO} tag={`E as ${SALA.primeirosCinco} primeiras`} extra={<FotosManual />} />
+                <Linha {...BONUS_PRIMEIRA} tag="E a primeira" />
+              </ul>
               <p className="mt-4 text-center text-[0.88rem] leading-[1.5] text-fg-soft">{ENTREGA_BONUS}</p>
             </div>
           </AteOFim>
