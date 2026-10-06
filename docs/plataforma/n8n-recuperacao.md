@@ -64,7 +64,7 @@ Já configurado no nó **Enviar template WhatsApp**: credencial "Suporte Filguei
 1. Ticto → **Tictools → Webhook → Novo webhook**:
    - **URL:** `https://n8n.automato.pro/webhook/ticto-recuperacao-aline`
    - **Versão:** 2.0 (recomendada)
-   - **Produtos:** Filgueiras Academy (Sala, Evergreen e Upgrade), Anatomia em Fresh Frozen e Mentoria em grupo.
+   - **Produto:** Filgueiras Academy 3.0. As 5 ofertas (Sala, Evergreen, Anatomia, Upgrade e Mentoria) ficam dentro dele.
    - **Eventos:**
      - **Abandono de carrinho** (obrigatório);
      - **Venda aprovada / Compra aprovada** (obrigatório: é o que tira da fila quem comprou);
