@@ -69,21 +69,17 @@ O que muda **fora do site** está abaixo, na ordem de horário.
   - a vaga da colega com o "dividindo, sai R$998,50 pra cada uma";
   - a mentoria sem o argumento "foi bônus dos 10 primeiros".
 
-## n8n (recuperação pela Evolution, se for ligado antes da API oficial)
+## n8n · recuperação de carrinho pela API oficial (já ajustado em 06/10)
 
-- [ ] **10.** O workflow está **desativado**. Se forem ligar hoje pela Evolution, ajustem duas mensagens no nó **Decidir próximo passo** (abrir o nó → código → localizar o trecho → trocar → **Save**):
-  - **Mensagem 1 da Sala:** onde está
-    `Os bônus dos 10 primeiros vão só até hoje, 23h59.`
-    troquem por
-    `Quem entra hoje, até 23h59, ganha +3 meses de acesso (15 no total), e os 10 primeiros ainda levam os bônus da noite.`
-  - **Mentoria:** apaguem a frase
-    ` É a mesma mentoria que, na noite da aula, foi bônus só das 10 primeiras. Vale R$5.000;`
-    e deixem `Pra aluna, sai por R$1.997, ou 12x no cartão. 7 dias de garantia.`
-  - Se o MCP do n8n voltar a conectar aqui, eu faço essas trocas.
+O workflow já manda os templates `aline_recupera_1h`, `24h` e `48h`. Ele está **desativado**. Para ligar:
 
-## Meta · WhatsApp Manager (API oficial)
-
-- [ ] **11. Cadastrar os 3 templates** de [`templates-whatsapp-oficial.md`](templates-whatsapp-oficial.md) (o passo a passo está lá). Me mandem o status da análise. Com eles aprovados, faço a revisão crítica do fluxo do n8n para a API oficial.
+- [ ] **10.** No nó **Ler evento da Ticto**, colar o token do webhook da Ticto: `const TICTO_TOKEN = 'o-token';`
+- [ ] **11.** No nó **Decidir próximo passo**, colar o seu número em `const TELEFONE_TESTE = '5531...';` (todas as mensagens vão só pra você).
+- [ ] **12.** **Save** e **ativar** o workflow.
+- [ ] **13.** **Teste:** abrir numa aba anônima `https://payment.ticto.app/ODB726458`, preencher com um e-mail de teste e o seu telefone, não pagar e esperar 1 minuto. Na Data Table **Aline - Recuperacao de Carrinho** aparece a linha `ativo`. Editar o `proximo_envio` dela para um horário que já passou: em até 10 minutos chega o `aline_recupera_1h`. Repetir para o 24h e o 48h e tocar no botão **Finalizar inscrição**.
+- [ ] **14.** Apagar o `TELEFONE_TESTE` (deixar `''`), **Save**, e apagar as linhas de teste da tabela.
+- [ ] **15.** Na Ticto, conferir que o webhook (`https://n8n.automato.pro/webhook/ticto-recuperacao-aline`) tem **Abandono de carrinho** e **Venda aprovada**.
+- [ ] **16.** Reenviar o `01-playbook-vendas.md` pro agente: a seção 13 ensina a responder os botões ("Tenho uma dúvida", "Falar com a equipe", "Me ajuda a decidir") e o "SAIR". Quem pedir pra sair: a equipe marca `parado` na tabela.
 
 ## Pendências que seguem de antes
 

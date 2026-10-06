@@ -1,5 +1,7 @@
 # Templates de recuperação de carrinho · API oficial do WhatsApp (Meta)
 
+> **Aprovados na Meta em 06/10** e ligados no n8n (nó **Enviar template WhatsApp**, ver [`n8n-recuperacao.md`](n8n-recuperacao.md)).
+
 Três templates **genéricos**: servem para quem abandonou qualquer oferta (Academy Sala ou Evergreen, curso de
 anatomia, upgrade ou mentoria). O nome da oferta e o link entram por variável. Fora da janela de 24h, a API
 oficial só aceita template aprovado, e as três mensagens de recuperação (1h, 24h e 48h) caem fora dessa janela.
@@ -97,12 +99,10 @@ Botões: **[Finalizar inscrição]** (URL) · **[Me ajuda a decidir]** (resposta
 6. **Enviar para análise.** A aprovação leva de minutos a 24 horas. Se rejeitar, copie o motivo e me mande.
 7. Repita para os três.
 
-## Depois da aprovação
+## No n8n (feito em 06/10)
 
-- O fluxo do n8n (`n8n-recuperacao.md`) hoje manda **texto livre pela Evolution**. Para a API oficial, ele precisa:
-  - mandar **template** (`type: template`, `name`, `language: pt_BR` e `components` com as variáveis do corpo e o sufixo do botão);
-  - tratar a resposta rápida e o "SAIR".
-- A revisão crítica do fluxo é o próximo passo, assim que os templates forem aprovados.
+- O nó **Decidir próximo passo** escolhe o template pela etapa (1h, 24h, 48h) e monta as variáveis; o **Enviar template WhatsApp** manda o corpo (`{{1}}`, `{{2}}`) e o sufixo do botão de URL.
+- As respostas rápidas e o "SAIR" chegam no número de atendimento (agente de IA), não no n8n. O agente sabe responder (`docs/agente-ia/01-playbook-vendas.md`, seção 13); para tirar alguém da sequência, a equipe marca `parado` na tabela.
 - **O que fica de fora destes três templates** e pode virar um 4º, se quiserem:
   - o **downsell da anatomia** às 48h para quem abandonou a Academy;
   - a **vaga da colega** na recuperação da mentoria, que só vale no mesmo dia.
