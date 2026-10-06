@@ -36,7 +36,7 @@ A fila fica na Data Table **Aline - Recuperacao de Carrinho** (n8n → Overview 
 | `ativo` | Na sequência; `proximo_envio` diz quando sai a próxima mensagem |
 | `comprou` | Compra aprovada na Ticto. Parou (ou nunca começou) |
 | `finalizado` | Recebeu todas as mensagens do produto e não comprou |
-| `sem_telefone` | O webhook veio sem telefone |
+| `sem_telefone` | O abandono veio só com e-mail (sem telefone completo). Não dá pra mandar WhatsApp |
 | `erro` | O WhatsApp recusou o envio. O motivo está em `observacao` |
 
 Para **parar a sequência de alguém** (por exemplo, ela respondeu e a equipe assumiu), troque o status dela para `parado`.
@@ -93,7 +93,10 @@ Para **parar a sequência de alguém** (por exemplo, ela respondeu e a equipe as
 
 ## Limites conhecidos
 
-- **Os nomes dos campos do webhook** foram escritos para a versão 2.0 da Ticto: status `abandoned_cart`, `customer.email`, `customer.phone` e `item.offer_code`. O código aceita variações, mas o teste do passo 4 é o que confirma.
+- **Os campos do webhook** foram conferidos com payloads reais da Ticto (06/10):
+  - **Abandono** (`abandoned_cart`): `name`, `email` e `phone` vêm soltos no topo, e o código da oferta só aparece no `checkout_url`. A Ticto manda `"Não informado"` quando o campo ficou vazio, e o telefone pode vir **incompleto** (a pessoa saiu no meio da digitação).
+  - **Venda** (`authorized`): dados em `customer` (com `phone.ddi`, `ddd` e `number`) e a oferta em `item.offer_code`.
+  - **Abandono sem e-mail válido e sem telefone completo** é ignorado: não há como falar com a pessoa.
 - **Uma sequência por e-mail e produto, para sempre.** Se ela abandonar a Academy de novo um mês depois, não recebe outra sequência. Para reiniciar, apague a linha dela.
 - **Tudo depende do evento Venda aprovada chegar.** Se o n8n estiver fora do ar na hora da compra, a compradora continua na fila. Depois de qualquer queda do n8n, olhem as linhas `ativo` contra as vendas da Ticto do período.
-- **A compra é reconhecida pelo e-mail.** Se ela comprou com outro e-mail, continua na fila.
+- **A compra é reconhecida pelo e-mail ou pelo telefone** do abandono. Se ela comprou com outro e-mail e outro telefone, continua na fila.
