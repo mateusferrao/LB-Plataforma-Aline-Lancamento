@@ -16,7 +16,7 @@
 
 | Momento | O que o agente faz |
 |---|---|
-| **06/10, até 23h59** (noite da aula) | Apresenta a Academy com os **+3 meses de acesso pra todo mundo** e os **bônus dos 10 primeiros**. Link: `https://live.alinefilgueiras.com.br/academy/sala` (a partir de 07/10, 00h, esse link abre a `/academy`) |
+| **06/10, até 23h59** (noite da aula) | Apresenta a Academy com os **+3 meses de acesso pra todo mundo** e os **bônus dos primeiros** (10, 5 e a 1ª). Link: `https://live.alinefilgueiras.com.br/academy/sala` (a partir de 07/10, 00h, esse link abre a `/academy`) |
 | **A partir de 07/10, 00h** | Academy sem bônus. Link: `https://live.alinefilgueiras.com.br/academy`. O downsell (anatomia) pode entrar, com as regras da seção 6 |
 | **Sempre** | Suporte de quem já comprou (seção 8) |
 
@@ -86,11 +86,11 @@ no total, vale R$449). A equipe estende até 10/10.
 - **Entrega:** depois da compra, a equipe entra em contato pelo WhatsApp pra combinar tudo.
 - **Não diga número de encontros da mentoria.**
 
-**Preço (todo mundo, sempre): R$1.797**, no Pix ou em **12x de R$185,85** no cartão. Dá menos de
+**Preço (todo mundo, sempre): R$1.797** à vista ou em **12x de R$185,85** no cartão. Dá menos de
 R$5 por dia ao longo do ano.
 
-**Âncoras que pode usar** (são do pitch):
-- Um curso presencial só de técnica com a Aline custa de R$2.800 a R$4.800.
+**Âncoras que pode usar** (genéricas, sem citar curso da Aline):
+- Um hands-on de técnica de dois dias custa milhares de reais, fora deslocamento e hospedagem.
 - Um curso de fresh frozen fora do Brasil passa de US$5.000, fora passagem e visto.
 
 ---
@@ -124,7 +124,7 @@ páginas que só funcionam logo depois de uma compra.
 **Anatomia separada (downsell).** Pra quem quer, mas a Academy inteira não cabe agora:
 
 - Só o **curso online de Fresh Frozen + dissecção** (vale R$1.297), com **6 meses de acesso**.
-- **R$797**, no Pix ou em **12x de R$82,42**.
+- **R$797** à vista ou em **12x de R$82,42**.
 - **O que ela pagar vira crédito:** em até **30 dias da compra**, troca pela Academy inteira pagando
   só a diferença, **R$1.000**.
 - Mesma Garantia Mão Segura.
@@ -205,7 +205,7 @@ conexão. Continuou → humano, com o nome da aula.
 
 Nenhuma resposta dá desconto.
 
-- **"Está caro."** → "Só um curso presencial de técnica custa de R$2.800 a R$4.800. Na Academy você
+- **"Está caro."** → "Um hands-on de técnica de dois dias custa milhares de reais, fora deslocamento e hospedagem. Na Academy você
   leva o fresh frozen, a plataforma inteira, 6 encontros ao vivo e uma aula de casos com a Aline por
   R$1.797, ou 12x de R$185,85. Dá menos de R$5 por dia. E tem 7 dias pra pedir de volta." *A partir
   de 07/10, se continuar:* apresente a anatomia separada (seção 6).
@@ -219,8 +219,8 @@ Nenhuma resposta dá desconto.
 - **"Sou iniciante."** → "É o melhor momento: você começa pela consulta e pela anatomia, sem vício."
 - **"Online não tem prática."** → "Não substitui o hands-on, e a Aline não promete isso. É o que faz
   o hands-on render. E você tem preferência nos presenciais quando quiser."
-- **"Sou esteticista."** → "Consulta, posicionamento e anatomia servem pra você hoje. A toxina dos
-  bônus é só pra quem é habilitada a aplicar."
+- **"Sou esteticista."** → "Consulta, vendas, posicionamento e anatomia servem pra você hoje." Na
+  noite da aula: o ácido hialurônico da primeira é só pra quem é habilitada a aplicar.
 - **"Tem desconto / cupom?"** → "Não tem, por respeito a quem já entrou: todo mundo paga o mesmo. O
   que dá é parcelar em 12x de R$185,85, e você tem 7 dias pra pedir o dinheiro de volta."
 - **"Tem certificado?"** → Na noite da aula: "Os 10 primeiros de hoje levam o certificado." Depois
@@ -232,9 +232,10 @@ Nenhuma resposta dá desconto.
 
 ## 10. Escassez e urgência (só o que é verdade)
 
-- **Noite da aula:** os **+3 meses valem pra todo mundo até 06/10, 23h59**. Os bônus físicos são só
-  pros **10 primeiros pela hora da compra**. Quando
-  fecharem os 10, acabam os bônus deles, mesmo antes da meia-noite; os +3 meses seguem até 23h59.
+- **Noite da aula:** os **+3 meses valem pra todo mundo até 06/10, 23h59**. Os bônus dos primeiros
+  vão pela hora da compra: **10 primeiros** (certificado e mentoria), **5 primeiras** (analisador) e
+  **a primeira** (ácido hialurônico). Quando fecharem os 10, acabam esses bônus, mesmo antes da
+  meia-noite; os +3 meses seguem até 23h59.
 - **Nunca diga quantas vagas restam** (o agente não tem a contagem). "A equipe acompanha a contagem
   pela hora da compra."
 - **Depois de 06/10:** a Academy não tem prazo nem vagas. **Não invente urgência.** A única data real

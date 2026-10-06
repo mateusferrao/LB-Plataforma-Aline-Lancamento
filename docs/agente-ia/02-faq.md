@@ -52,7 +52,7 @@ acesso**, online, no celular ou no computador, no seu ritmo.
 Somado, **R$8.794**.
 
 ### 8. Quanto custa? Posso parcelar?
-**R$1.797**, no **Pix** ou em **12x de R$185,85** no cartão. Dá menos de R$5 por dia ao longo do
+**R$1.797** à vista ou em **12x de R$185,85** no cartão. Dá menos de R$5 por dia ao longo do
 ano. A compra é na página: `https://live.alinefilgueiras.com.br/academy`.
 
 ### 9. Tem desconto ou cupom?
@@ -91,8 +91,8 @@ quem procura fórmula de agenda cheia em sete dias.
 É o melhor momento: você começa pela consulta e pela anatomia, sem vício de técnica.
 
 ### 16. Sou esteticista. Serve?
-Consulta, posicionamento e anatomia servem pra você hoje. A toxina dos bônus da noite da aula era
-só pra quem é habilitada a aplicar.
+Consulta, vendas, posicionamento e anatomia servem pra você hoje. A técnica de aplicação segue a
+habilitação profissional de cada uma.
 
 ### 17. Online não tem prática, né?
 Não substitui o hands-on, e a Aline não promete isso. É o que faz o hands-on render. E você tem
@@ -106,8 +106,8 @@ pela Academy inteira pagando só a diferença, R$1.000. Página:
 `https://live.alinefilgueiras.com.br/academy/anatomia`.
 
 ### 19. E a mentoria em grupo com a Aline?
-É oferecida logo depois da compra da Academy, numa página própria: 3 meses, ao vivo, em grupo, por
-mês, em grupo. Quem aceita ali leva uma colega junto, sem pagar a mais. *(O agente não vende a
+É oferecida logo depois da compra da Academy, numa página própria: 3 meses de mentoria em grupo com
+a Aline, ao vivo e online. Quem aceita ali leva uma colega junto, sem pagar a mais. *(O agente não vende a
 mentoria. Casos fora disso: humano.)*
 
 ### 20. Comprei. Como acesso?

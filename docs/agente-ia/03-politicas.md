@@ -8,7 +8,7 @@
 
 ## 1. Filgueiras Academy
 Oferta completa, falas e suporte em `04-filgueiras-academy.md`. Resumo das políticas:
-- **Preço único:** R$1.797, no Pix ou em 12x de R$185,85 no cartão. **Sem desconto nem cupom.**
+- **Preço único:** R$1.797 à vista ou em 12x de R$185,85 no cartão. **Sem desconto nem cupom.**
 - **Bônus da noite da aula:** valeram só em 06/10, até 23h59: **+3 meses de acesso pra todo mundo
   que comprou na noite** (15 no total) e, pros **10 primeiros pela hora da
   compra**, certificado e mentoria em grupo com a Aline; pras **5 primeiras**, o analisador facial de
