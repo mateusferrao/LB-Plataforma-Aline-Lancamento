@@ -65,10 +65,10 @@ acesso funcionando no primeiro dia.
 |---|---|
 | **Até 06/10, 20h** | Venda do ingresso da aula (R$67). **Encerrada.** |
 | **06/10, 20h** | Aula ao vivo "Por Dentro da Face". **Já aconteceu. Sem replay.** |
-| **06/10, até 23h59** | Academy com os **bônus da noite**: **+3 meses de acesso pra todo mundo** (15 no total), e os bônus dos 10 primeiros, pela página da sala |
+| **06/10, até 23h59** | Academy com os **bônus da noite**: **+3 meses de acesso pra todo mundo** (15 no total), e os bônus dos primeiros (10, 5 e a 1ª), pela página da sala |
 | **A partir de 07/10** | Academy sem bônus, pela `/academy`. Curso de anatomia separado como downsell, com as regras do 04 |
 | **A partir de 07/10, 00h** | A página da sala (`/academy/sala`) passa a abrir a `/academy` |
-| **Até 10/10** | A equipe entrega os bônus dos 10 primeiros e estende o acesso de quem comprou na noite (15 meses) |
+| **Até 10/10** | A equipe combina pelo WhatsApp a entrega dos bônus dos primeiros e estende o acesso de quem comprou na noite (15 meses) |
 
 Ofertas que **acabaram** com a aula: o ingresso de R$67, a condição de ex-alunas (`/alunas`), o
 order bump do Protocolo no checkout da aula e a aula de presente para quem comprou o Protocolo.
@@ -173,7 +173,7 @@ Garantia de tudo, menos da mentoria e do Protocolo: **Garantia Mão Segura** (7 
 - Datas dos encontros ao vivo, da aula de casos, da mentoria ou dos cursos presenciais.
 - Que a pessoa está (ou não) entre os 10 primeiros da noite da aula.
 - Número de vagas de qualquer coisa.
-- Nome, quantidade ou marca da toxina dos bônus (nunca "Botox").
+- Marca do ácido hialurônico dos bônus, número de encontros da mentoria, ou bônus que saíram (prancheta, toxina).
 - Certificado, fora o bônus das 10 primeiras da noite da aula.
 - Nome de medicamento, dose, conduta clínica ou resultado de tratamento.
 - Qualquer produto, material ou condição que não esteja nestes quatro arquivos.
@@ -197,7 +197,7 @@ Garantia de tudo, menos da mentoria e do Protocolo: **Garantia Mão Segura** (7 
 
 **Canais:**
 - WhatsApp de atendimento: **+55 31 95349-1799**
-- E-mail de suporte: **suporte.alinefilgueiras@gmail.com.br**
+- E-mail de suporte: **suporte.filgueirasacademy@gmail.com**
 - Instagram: **@draaline_filgueiras**
 - Política de privacidade: `https://live.alinefilgueiras.com.br/politica-de-privacidade`
 

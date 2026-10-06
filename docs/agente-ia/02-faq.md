@@ -66,8 +66,11 @@ A **Garantia Mão Segura**: **7 dias** pra pedir o dinheiro de volta sem explica
 ### 11. Quais eram os bônus da noite da aula? Ainda valem?
 Valeram **só na noite de 06/10, até 23h59**:
 - **Todo mundo que comprou até 23h59:** mais 3 meses de acesso (15 no total).
-- **10 primeiros** (pela ordem de compra): certificado Filgueiras Academy, prancheta ilustrada da Aline (vai pelo correio),
-  mentoria em grupo com a Aline e toxina botulínica.
+- **10 primeiros** (pela ordem de compra): certificado Filgueiras Academy e mentoria em grupo com a Aline.
+- **5 primeiras:** também o analisador facial de consulta.
+- **A primeira:** também 2 ml de ácido hialurônico (só pra quem é habilitada a aplicar).
+
+A equipe entra em contato pelo WhatsApp depois da compra pra combinar a entrega.
 
 Depois disso, a Academy segue com tudo da pergunta 7, sem os bônus. *(Nunca confirme se a pessoa
 está entre os 10 ou os 5: "A equipe confere pela hora da compra e te chama".)*
@@ -103,7 +106,7 @@ pela Academy inteira pagando só a diferença, R$1.000. Página:
 `https://live.alinefilgueiras.com.br/academy/anatomia`.
 
 ### 19. E a mentoria em grupo com a Aline?
-É oferecida logo depois da compra da Academy, numa página própria: 3 meses, 1 encontro ao vivo por
+É oferecida logo depois da compra da Academy, numa página própria: 3 meses, ao vivo, em grupo, por
 mês, em grupo. Quem aceita ali leva uma colega junto, sem pagar a mais. *(O agente não vende a
 mentoria. Casos fora disso: humano.)*
 
@@ -151,4 +154,4 @@ A condição de ex-alunas (a aula com o Protocolo de presente) valeu até a aula
 preço da Academy é o mesmo pra todo mundo. *(Se ela insistir que tem um combinado, escale.)*
 
 ### S1. Como falo com o suporte?
-Pelo **WhatsApp +55 31 95349-1799** ou pelo **e-mail suporte.alinefilgueiras@gmail.com.br**.
+Pelo **WhatsApp +55 31 95349-1799** ou pelo **e-mail suporte.filgueirasacademy@gmail.com**.

@@ -11,7 +11,8 @@ Oferta completa, falas e suporte em `04-filgueiras-academy.md`. Resumo das polí
 - **Preço único:** R$1.797, no Pix ou em 12x de R$185,85 no cartão. **Sem desconto nem cupom.**
 - **Bônus da noite da aula:** valeram só em 06/10, até 23h59: **+3 meses de acesso pra todo mundo
   que comprou na noite** (15 no total) e, pros **10 primeiros pela hora da
-  compra**, certificado, prancheta, mentoria em grupo com a Aline e toxina. O agente **nunca
+  compra**, certificado e mentoria em grupo com a Aline; pras **5 primeiras**, o analisador facial de
+  consulta; pra **primeira**, 2 ml de ácido hialurônico. Entrega combinada pela equipe no WhatsApp. O agente **nunca
   confirma** se a pessoa está entre os 10.
 - **Garantia Mão Segura:** 7 dias sem perguntas + 30 dias se a mão não ficar mais segura depois do
   módulo de anatomia. Vale pra Academy, pra anatomia separada e pro upgrade. **Mentoria: 7 dias.**
@@ -35,7 +36,7 @@ Oferta completa, falas e suporte em `04-filgueiras-academy.md`. Resumo das polí
 - **Camada 1:** até **7 dias após a compra**, sem perguntas.
 - **Camada 2:** quem **esteve ao vivo** e achou que não valeu pode pedir até **07/10/2026, 20h**,
   mesmo que os 7 dias já tenham passado.
-- **Como solicitar:** WhatsApp **+55 31 95349-1799** ou e-mail **suporte.alinefilgueiras@gmail.com.br**.
+- **Como solicitar:** WhatsApp **+55 31 95349-1799** ou e-mail **suporte.filgueirasacademy@gmail.com**.
 - Pedidos de reembolso são **sempre escalados para o atendimento humano**, que confirma a presença
   caso a caso.
 
@@ -66,7 +67,7 @@ Oferta completa, falas e suporte em `04-filgueiras-academy.md`. Resumo das polí
   material. Se solicitado, escalar para o atendimento humano.)*
 - **Site:** `https://live.alinefilgueiras.com.br`
 - **WhatsApp de atendimento:** +55 31 95349-1799
-- **E-mail de suporte:** suporte.alinefilgueiras@gmail.com.br
+- **E-mail de suporte:** suporte.filgueirasacademy@gmail.com
 - **Instagram:** @draaline_filgueiras
 
 ## 8. Protocolo de Resgate Vascular (`/info`)

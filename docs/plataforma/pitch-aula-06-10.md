@@ -88,20 +88,23 @@
 > E pros **dez primeiros** eu separei uma coisa a mais:
 >
 > — O **certificado Filgueiras Academy**, pra paciente ver com quem você estudou.
-> — A minha **prancheta ilustrada**, a que eu uso pra explicar o procedimento pra paciente na consulta. Ela vale **R$600** e vai pelo correio.
-> — **Mentoria em grupo comigo**, só com esses dez. Vale **R$5.000**.
-> — E **toxina botulínica** pra sua próxima aplicação.
+> — **Mentoria em grupo comigo**, por três meses, só com esses dez. Você leva os seus casos. Vale **R$5.000**.
 >
-> Pros dez primeiros, a soma vai a **R$14.843**. E você continua pagando **R$1.797**.
+> Pros dez primeiros, a soma vai a **R$14.243**. E você continua pagando **R$1.797**.
 >
-> Os dez primeiros contam pela hora da compra. Quando fechar dez, acabou, mesmo antes da meia-noite.
+> As **cinco primeiras** ainda levam o meu **analisador facial de consulta**, pra mostrar pra paciente o processo de envelhecimento do rosto dela, ali na consulta.
+> E a **primeira** que entrar leva também **2 ml de ácido hialurônico** pra próxima aplicação (só pra quem é habilitada a aplicar).
+>
+> Os primeiros contam pela hora da compra. Quando fechar, acabou, mesmo antes da meia-noite. E depois da compra a minha equipe te chama no WhatsApp pra combinar a entrega de tudo.
 
 **Slide (uma tabela só, curta):**
 
 | Quem | Leva | Valor |
 |---|---|---|
 | Todo mundo até 23h59 | O núcleo + 3 meses de acesso (15 no total) | ~~R$9.243~~ |
-| 10 primeiros (até 23h59) | + certificado, prancheta, mentoria em grupo com a Aline e toxina | ~~R$14.843~~ |
+| 10 primeiros (até 23h59) | + certificado e mentoria em grupo com a Aline | ~~R$14.243~~ |
+| 5 primeiras | + analisador facial de consulta | |
+| 1ª | + 2 ml de ácido hialurônico | |
 | **Hoje** | | **R$1.797** |
 
 **A equipe anuncia a contagem real** ("faltam 4 dos 10").
@@ -138,14 +141,14 @@
 - **"Já fiz curso e não funcionou."** "Quase nunca faltou conteúdo. Faltou ver por dentro e ter alguém junto. Aqui tem seis encontros ao vivo e uma aula de casos comigo."
 - **"Sou iniciante."** "É o melhor momento: você começa pela consulta e pela anatomia, sem vício."
 - **"Online não tem prática."** "Não substitui o hands-on. É o que faz o hands-on render. E você tem preferência nos meus presenciais quando quiser."
-- **"Sou esteticista."** "Consulta, posicionamento e anatomia servem pra você hoje. E se você está migrando, já começa com a base certa." *(A toxina dos 10 primeiros é pra quem é habilitada a aplicar. [validar com o jurídico])*
+- **"Sou esteticista."** "Consulta, posicionamento e anatomia servem pra você hoje. E se você está migrando, já começa com a base certa." *(O ácido hialurônico da 1ª primeiros é pra quem é habilitada a aplicar. [validar com o jurídico])*
 - **"Tem certificado?"** "Os dez primeiros de hoje levam o certificado Filgueiras Academy."
-- **"Como é a mentoria?"** "É em grupo, comigo, só com os dez primeiros." [formato a definir: frequência e duração]
+- **"Como é a mentoria?"** "É em grupo, comigo, por três meses, só com os dez primeiros. Você leva os seus casos." (Sem citar número de encontros.)
 - **"Quando são os encontros?"** "São seis ao longo do ano. A equipe avisa as datas no grupo das alunas."
 - **"Posso pagar no Pix?"** "Pode: Pix ou cartão em até 12x, direto no link."
 
 **Repetição da oferta (a cada 5 a 10 minutos):**
-> Só lembrando: R$1.797 com o fresh frozen, a plataforma, seis encontros ao vivo e uma aula de casos comigo. Dos dez bônus de hoje (certificado, prancheta, mentoria em grupo comigo e toxina), faltam [X]. E todo mundo que entrar hoje leva quinze meses de acesso. Vale até meia-noite. O link está aí.
+> Só lembrando: R$1.797 com o fresh frozen, a plataforma, seis encontros ao vivo e uma aula de casos comigo. Dos dez bônus de hoje (certificado e mentoria em grupo comigo), faltam [X]. As cinco primeiras levam o analisador facial e a primeira, o ácido hialurônico. E todo mundo que entrar hoje leva quinze meses de acesso. Vale até meia-noite. O link está aí.
 
 ---
 
@@ -160,6 +163,6 @@
 1. **Títulos e duração das aulas do módulo de anatomia** (pra citar no bloco 4).
 2. **O link do checkout na Ticto.**
 3. **Formato da mentoria em grupo** (frequência, duração, por quanto tempo).
-4. **Toxina:** validar com o jurídico e a parte sanitária (é medicamento, e o público inclui esteticistas). Sem quantidade por enquanto. Nunca dizer a marca "Botox".
+4. **Ácido hialurônico (1ª):** validar com o jurídico e a parte sanitária (o público inclui esteticistas). Só pra quem é habilitada a aplicar. Sem citar marca. (A toxina e a prancheta saíram em 06/10.)
 5. **A Aline confirma** os "mais de 11 anos de clínica".
-6. **Operação de 07/10 a 10/10:** estender para 15 meses todas as compras da noite (oferta Sala); enviar prancheta, certificado e toxina e abrir a mentoria para os 10 primeiros.
+6. **Operação de 07/10 a 10/10:** estender para 15 meses todas as compras da noite (oferta Sala); enviar o analisador facial (5 primeiras) e o ácido hialurônico (1ª), emitir o certificado e abrir a mentoria para os 10 primeiros.

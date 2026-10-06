@@ -40,7 +40,7 @@ O funil (upsell de 1 clique, recuperação de carrinho e sequência de WhatsApp)
 | **URL da página de vendas** | `https://live.alinefilgueiras.com.br/academy` |
 | **Tipo de produto** | Curso digital |
 | **Categoria** | A mais próxima de Saúde/Estética. Se não houver, Educação |
-| **E-mail de suporte** | `suporte.alinefilgueiras@gmail.com.br`. A Ticto manda um e-mail de validação e o produto só fica vinculado depois da confirmação. **Conferir o domínio:** o mais comum é `@gmail.com` |
+| **E-mail de suporte** | `suporte.filgueirasacademy@gmail.com`. A Ticto manda um e-mail de validação e o produto só fica vinculado depois da confirmação. **Conferir o domínio:** o mais comum é `@gmail.com` |
 | **Contato de suporte (WhatsApp)** | +55 31 95349-1799 |
 | **Imagem de capa** | `docs/plataforma/ticto/capa-produto-1200.jpg` |
 | **Prazo de reembolso** | **30 dias** (veja a nota abaixo) |
@@ -89,12 +89,12 @@ O que todo mundo leva:
 
 Só pros 10 primeiros:
 • Certificado Filgueiras Academy
-• Prancheta ilustrada da Aline, pelo correio (valor R$600)
 • Mentoria em grupo com a Aline (valor R$5.000)
-• Toxina botulínica
+As 5 primeiras: também o analisador facial de consulta. A primeira: também 2 ml de ácido hialurônico.
+A equipe entra em contato pelo WhatsApp depois da compra pra combinar a entrega.
 E todo mundo que compra até 23h59 leva 15 meses de acesso (os +6 meses dos 5 primeiros saíram em 06/10).
 
-Valor total pros 10 primeiros: R$14.843. Hoje: R$1.797 no Pix ou 12x de R$185,85.
+Valor total pros 10 primeiros: R$14.243. Hoje: R$1.797 à vista ou 12x de R$185,85.
 
 Garantia Mão Segura: 7 dias sem perguntas, e 30 dias se a sua mão não ficar mais segura.
 ```
@@ -159,7 +159,7 @@ As duas ofertas são iguais. Só mudam o nome e o template de checkout.
 
 Banner e texto do topo:
 
-> **Bônus dos 10 primeiros, só até 23h59:** certificado Filgueiras Academy · prancheta ilustrada · mentoria em grupo com a Aline · toxina botulínica. E todo mundo que comprar até 23h59 leva 15 meses de acesso.
+> **Bônus dos 10 primeiros, só até 23h59:** certificado Filgueiras Academy e mentoria em grupo com a Aline. 5 primeiras: analisador facial de consulta. A primeira: 2 ml de ácido hialurônico. E todo mundo que comprar até 23h59 leva 15 meses de acesso.
 
 Lista de benefícios ou resumo, se o template tiver o campo:
 
@@ -168,7 +168,7 @@ Lista de benefícios ou resumo, se o template tiver o campo:
 > - 6 encontros ao vivo no ano (R$5.000)
 > - 1 aula ao vivo com a Aline pra discussão de casos (R$1.000)
 > - Preferência nos cursos presenciais
-> - **Valor total: R$8.794. Pros 10 primeiros, com os bônus: R$14.843. Hoje: R$1.797**
+> - **Valor total: R$8.794. Pros 10 primeiros, com os bônus: R$14.243. Hoje: R$1.797**
 
 **Na manhã de 07/10:** tirar o banner dos bônus deste template, ou desativar a Oferta A. A página da sala já troca para o link da evergreen às 23h59 sozinha. Mesmo assim, alguém pode ter guardado o link da sala.
 
@@ -240,7 +240,7 @@ O Hormozi chama isto de Money Model: a oferta de atração paga a aquisição, e
   - a equipe troca o banner do template Sala para "Os bônus dos 10 primeiros já foram. A Academy continua por R$1.797".
 - **De 07/10 a 10/10:**
   - estender para 15 meses todas as compras da oferta Sala;
-  - chamar os 10 primeiros no WhatsApp para pedir o endereço da prancheta e combinar o certificado, a toxina (só para quem é habilitada a aplicar) e a entrada na mentoria em grupo.
+  - chamar as primeiras no WhatsApp: certificado e mentoria (10 primeiros), endereço para o analisador facial (5 primeiras) e o ácido hialurônico (a primeira, só se for habilitada a aplicar).
 
 ---
 
