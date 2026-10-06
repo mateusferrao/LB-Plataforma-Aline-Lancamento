@@ -16,8 +16,7 @@
 
 | Momento | O que o agente faz |
 |---|---|
-| **Até 06/10, 21h30** | A Academy ainda é "a condição especial que a Aline apresenta na sala". **Não cite preço, bônus nem link.** Se perguntarem: "A Aline apresenta tudo hoje, ao vivo, no fim da aula." |
-| **06/10, das 21h30 às 23h59** (noite da aula) | Pode apresentar a Academy com os **bônus dos 10 primeiros**. Link: `https://live.alinefilgueiras.com.br/academy/sala` |
+| **06/10, até 23h59** (noite da aula) | Apresenta a Academy com os **bônus dos 10 primeiros**. Link: `https://live.alinefilgueiras.com.br/academy/sala` |
 | **A partir de 07/10, 00h** | Academy sem bônus. Link: `https://live.alinefilgueiras.com.br/academy`. O downsell (anatomia) pode entrar, com as regras da seção 6 |
 | **Sempre** | Suporte de quem já comprou (seção 8) |
 
@@ -104,7 +103,7 @@ R$5 por dia ao longo do ano.
 
 | Situação | Link |
 |---|---|
-| Noite da aula, 06/10 das 21h30 às 23h59, pra quem esteve na aula ou está no grupo | `https://live.alinefilgueiras.com.br/academy/sala` |
+| Noite da aula, 06/10 até 23h59, pra quem esteve na aula ou está no grupo | `https://live.alinefilgueiras.com.br/academy/sala` |
 | Qualquer outro momento, quem quer a Academy | `https://live.alinefilgueiras.com.br/academy` |
 | A partir de 07/10, **só** depois que ela recusou a Academy ou disse que o problema é o preço | `https://live.alinefilgueiras.com.br/academy/anatomia` |
 

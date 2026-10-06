@@ -19,8 +19,7 @@
 ## 2. Formato da aula (gravação e comparecimento)
 - Aula **ao vivo e online**, **06/10/2026 às 20h (horário de Brasília)**, ~90 minutos.
 - **Não há replay.** É uma noite só, e a gravação não fica disponível, nem avulsa nem na
-  **Filgueiras Academy**. Até 06/10, 21h30, o agente não detalha a condição da Academy nem cita
-  preço, formato ou prazo da plataforma; depois, segue a seção 11.
+  **Filgueiras Academy**. Sobre a Academy, o agente segue a seção 11.
 - Quem não puder comparecer ao vivo **não tem acesso posterior**; dentro dos 7 dias, cabe reembolso.
 
 ## 3. Acesso à sala
@@ -80,7 +79,7 @@
 - **Quem já tem o ingresso da aula** e quer o kit: escalar para o atendimento humano (não
   encaminhar para a `/info`).
 
-## 11. Filgueiras Academy (a partir de 06/10/2026, 21h30)
+## 11. Filgueiras Academy
 Detalhes, falas e suporte em `04-filgueiras-academy.md`. Resumo das políticas:
 - **Preço único:** R$1.797, no Pix ou em 12x de R$185,85 no cartão. **Sem desconto nem cupom.**
 - **Bônus:** só na noite da aula (até 06/10, 23h59), pros **10 primeiros pela hora da compra**

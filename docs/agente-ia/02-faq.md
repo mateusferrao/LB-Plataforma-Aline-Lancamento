@@ -6,7 +6,7 @@
 > `https://live.alinefilgueiras.com.br`.
 >
 > **Filgueiras Academy** (a plataforma apresentada na aula): perguntas de venda e de suporte estão
-> em `04-filgueiras-academy.md` (seções 8 e 9). Até 06/10, 21h30, não detalhe a condição.
+> em `04-filgueiras-academy.md` (seções 8 e 9).
 
 ---
 
@@ -50,7 +50,7 @@ ao checkout. (Quer que eu te mande o link?)
 A aula ao vivo **não tem replay**: é uma noite só, pra quem estiver na sala no dia 6, às 20h. A
 gravação não fica disponível, nem avulsa nem na Filgueiras Academy. Quem estiver na sala conhece a
 **condição especial da Filgueiras Academy**.
-*(Até 06/10, 21h30, nunca detalhe a condição nem cite preço, formato ou prazo da plataforma.)*
+*(Oferta, preço e regras da Academy: `04-filgueiras-academy.md`.)*
 
 ### 7. Dá certificado?
 Essa aula **não emite certificado**. O que ela te entrega é prático e vale mais no dia a dia: uma
