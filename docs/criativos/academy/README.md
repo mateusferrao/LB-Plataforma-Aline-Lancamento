@@ -37,10 +37,10 @@ calha lacrimal (02/10).
 |---|---|---|---|---|
 | **V1** · Aula da Academy | Frio | Anatomia | Remix do vencedor (controle) | "A equipe pediu pra eu não liberar esse vídeo…" + aula real com legenda |
 | **V2** · Camila + aula | Frio | Anatomia | Gancho UGC (IA) sobre o V1 | Ganchos UGC 1a/1b/1c (abaixo). *Aguardando os vídeos da Camila* |
-| **V3** · Paramentação | Frio | Anatomia, fundadora | Close de máscara + paramentação acelerada | "A culpa nunca foi sua. Faltava ver a face por dentro." |
-| **V4** · A seringa na sua mão | Frio | Dor e medo | B-roll + texto da Cena da LP | "A paciente está na maca. A seringa, na sua mão." |
-| **V5** · Três vezes | Remarketing | Venda e consulta | Texto da Virada da LP | "“Vou pensar.” Quantas vezes você ouviu isso este mês?" |
-| **V6** · O que tem dentro | Remarketing | Academy completa | Explicador sem preço | "Fez curso e continua travada na agulha e na consulta?" |
+| **V3** · Paramentação | Frio | Anatomia, fundadora | Abre na aula pixelada + paramentação acelerada | "1.000 alunas formadas. E ela ainda estuda dissecção." |
+| **V4** · A seringa na sua mão | Frio | Dor e medo | Abre na cânula sobre a peça pixelada + perguntas da Cena da LP | "“Tem vaso nesse ponto?”" |
+| **V5** · Três vezes | Remarketing | Venda e consulta | Conversa animada (mensagens entram uma a uma) + Virada da LP | "Vou pensar." → "Quantas vezes você ouviu isso este mês?" |
+| **V6** · O que tem dentro | Remarketing | Academy completa | 4 cortes rápidos sob o gancho + explicador sem preço | "Fez curso e continua travada na agulha e na consulta?" |
 | **E1** · Embaixo da agulha | Frio | Anatomia | Headline + autoridade | "“Tem vaso nesse ponto?” Se você pensa isso com a seringa na mão, a paciente percebe." |
 | **E2** · Vou pensar | Frio | **Venda** | Conversa de WhatsApp (ilustrativa) | A paciente pede o valor, responde "Vou pensar." e some há 9 dias |
 | **E3** · Tudo num lugar só | Remarketing | Academy completa | Grade 2×2 | "Fez curso e continua travada na agulha e na consulta?" |
@@ -101,9 +101,9 @@ descrição ≤30). Botão: **Saiba mais** no frio e **Comprar agora** no remark
 - Título: **A face por dentro, camada por camada** · Descrição: **Filgueiras Academy**
 
 ### V3 · Paramentação (frio)
-> A culpa nunca foi sua. Faltava ver a face por dentro.
+> 1.000 alunas formadas. E ela ainda estuda dissecção.
 >
-> A Dra. Aline Filgueiras tem 11 anos de clínica, mais de 1.000 alunas formadas e continua estudando dissecção fora do país. Agora ela mostra a face por dentro, camada por camada, num curso online. Sem visto e sem passagem.
+> A culpa nunca foi sua. Faltava ver a face por dentro. A Dra. Aline Filgueiras tem 11 anos de clínica e continua estudando dissecção fora do país. Agora ela mostra a face por dentro, camada por camada, num curso online. Sem visto e sem passagem.
 >
 > Ele está dentro da Filgueiras Academy, junto com mais de 70 aulas de técnica e a Consulta que Vende.
 
@@ -176,15 +176,28 @@ descrição ≤30). Botão: **Saiba mais** no frio e **Comprar agora** no remark
 - Título: **Consulta, agulha e espelho** · alt: "A agenda continua parada?"
 - Descrição: **Filgueiras Academy**
 
+## Regra dos ganchos (revisão de 06/10)
+- O texto do gancho aparece **cheio no frame 0** (sem fade). É o quadro do autoplay e da miniatura.
+- Primeiro quadro com **ação ou o que desperta curiosidade** (a aula com a peça pixelada, a conversa entrando), nunca cenário vazio.
+- Gancho grande (~84 a 104px) no centro, com até 8 a 10 palavras. Primeira cena com no máximo 2,5s. Cartão final de 3,6s.
+- Do V3 ao V6 só tem música. A maior alavanca que falta é **voz humana no 1º segundo**: os ganchos UGC abaixo e, quando der, 3s de selfie da própria Aline.
+
 ## Pedidos de UGC (Camila, IA)
-As regras estão em `../video-ugc/README.md` §0: fundo verde #00B140, 1080×1920, fala a partir do
-primeiro quadro, e ela apresenta a Aline sem nunca dar depoimento. A montagem é feita com
-`../video-ugc/montar.py`.
-- **UGC 1 (V2):**
-  - a) "Essa professora mostrou o que tem embaixo da cânula na calha lacrimal."
-  - b) "Se a calha lacrimal te dá medo, escuta essa aula de anatomia."
-  - c) "Olha o que ela mostra da calha lacrimal com a face por dentro."
-- **UGC 2 (variante do V4, opcional):** "Se você já travou com a seringa na mão, olha isso."
+As regras estão em `../video-ugc/README.md` §0:
+- **Gravação:** fundo verde #00B140, selfie vertical 1080×1920, do peito para cima, 2 takes de cada.
+- **Fala:** começa no primeiro quadro, sem "oi" e sem "gente". No fim, ela aponta por cima do ombro, como quem diz "olha".
+- **Papel:** ela apresenta a Aline e nunca dá depoimento ("eu fiz", "minha paciente", profissão).
+
+A montagem é feita com `../video-ugc/montar.py` sobre o 1º quadro do vídeo, pausado.
+
+| Vídeo | Fala exata | Ângulo |
+|---|---|---|
+| V2 (aula da calha lacrimal) | A) "Se você tem medo de aplicar em calha lacrimal, olha isso." | Dor |
+| | B) "Olha o que tem embaixo da pele na calha lacrimal." | Curiosidade |
+| | C) "Essa professora abriu a calha lacrimal por dentro. Presta atenção." | Autoridade |
+| V3 (fundadora) | "Essa professora formou mais de mil alunas e ainda estuda dissecção." | Curiosidade (é verdade: em 19/08 ela era aluna) |
+| V4 (dor da agulha) | "Já travou com a seringa na mão? Olha o que ninguém te mostrou." | Dor |
+| V5 (venda, bônus) | "Se a paciente te diz “vou pensar” e some, olha isso." | Dor de venda |
 
 ## Plano de teste
 - **Frio**, um conjunto aberto com V1, V2, V3, V4, E1 e E2. Pares de teste:

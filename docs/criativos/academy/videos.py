@@ -79,11 +79,33 @@ def cartao(dur, html_cartao):
     return dict(tipo="cartao", dur=dur, html=html_cartao, textos=[])
 
 
+def cor(dur, textos=()):
+    """Fundo sólido (preto da marca) para cenas só de texto/interface, como a conversa do V5."""
+    return dict(tipo="cor", dur=dur, textos=list(textos))
+
+
 def T(a, b, pos, conteudo):
     return (a, b, pos, conteudo)
 
 
 G = lambda s: f'<span class="grifo">{s}</span>'  # noqa: E731
+# Gancho: texto grande no centro, visível já no frame 0 (é o quadro do autoplay e da miniatura).
+GANCHO = lambda s: f'<p class="gancho">{s}</p>'  # noqa: E731
+GANCHO_S = lambda s: f'<p class="gancho serif">{s}</p>'  # noqa: E731
+GANCHO_V6 = GANCHO(f"Fez curso e continua travada {G('na agulha e na consulta?')}")
+
+
+def chat(n):
+    """Conversa de WhatsApp do V5 com as n primeiras mensagens (para aparecerem uma a uma)."""
+    msgs = [
+        '<div class="msg ela">Oi! Quanto fica o preenchimento labial?<small>19:02</small></div>',
+        '<div class="msg voce">Te mandei a avaliação, o que eu faria no seu caso e o valor.<small>19:15 ✓✓</small></div>',
+        '<div class="msg ela fim">Vou pensar.<small>19:41</small></div>',
+        '<span class="aviso">sem resposta há 9 dias</span>',
+    ]
+    return ('<div class="chatv"><div class="cab"><i></i><span><b>Paciente</b><small>visto por último hoje</small></span></div>'
+            f'<div class="msgs">{"".join(msgs[:n])}</div></div>')
+
 CTA = '<span class="cta">Quero entrar na Academy <b>→</b></span>'
 ASSINA = ('<span class="assina"><img src="{avatar}"><span><b>Dra. Aline Filgueiras</b>'
           '1.000+ alunas formadas · 11+ anos de clínica</span></span>')
@@ -96,7 +118,7 @@ def card(titulo, apoio):
 
 # Fala da Aline no clipe da aula (conferida com dois modelos + usuário em 06/10).
 FALAS_V1 = [
-    (0.10, 3.36, "Visão anatômica da região de pálpebra inferior, infraorbital."),
+    (0.00, 3.36, "Visão anatômica da região de pálpebra inferior, infraorbital."),
     (3.36, 7.60, "Eu tenho a tear trough aqui, que já é a minha calha lacrimal."),
     (7.66, 10.50, "Aqui eu tenho a minha região palpebromalar."),
     (10.50, 12.76, "Vou entrar e vou pra minha calha."),
@@ -117,104 +139,105 @@ ROTEIROS = {
             T(9.0, 35.5, "chip", '<span class="chip">Trecho de uma aula da Filgueiras Academy</span>'),
             *[T(a, b, "fala", f'<span class="fala">{html.escape(f)}</span>') for a, b, f in FALAS_V1],
         ]),
-        cartao(5.5, card(
+        cartao(3.8, card(
             f"Essa é uma aula do novo curso de {G('anatomia em fresh frozen')} da Filgueiras Academy.",
             "Mais de 70 aulas de técnica, a Consulta que Vende e 6 encontros ao vivo no ano.")),
     ]),
-    # V3 · Frio · anatomia · fundadora · transformação (paramentação acelerada).
+    # V3 · Frio · fundadora. Abre na aula pixelada (o que mais para a tela) com gancho de curiosidade.
+    # Sem o IMG_2749: nada de frame rindo ou prendendo o cabelo (pedido de 06/10).
     "V3-paramentacao": dict(trilha="piano-esperanca.mp3", vol=0.9, cenas=[
-        # Sem o IMG_2749: nada de frame rindo ou prendendo o cabelo (pedido de 06/10).
-        clip("IMG_2824.MOV", 89.1, 1.9, cx=0.55, cy=0.5, z=1.15, textos=[
-            T(0.0, 1.9, "alto", '<p class="t">A culpa nunca foi sua.</p>'),
-            T(0.0, 1.9, "chip", '<span class="chip">Laboratório de dissecção · EUA</span>'),
+        clip(WA, 21.0, 2.2, **WA_SEM_TEXTO, textos=[
+            T(0.0, 2.2, "centro", GANCHO(f"1.000 alunas formadas. {G('E ela ainda estuda dissecção.')}")),
         ]),
-        clip("IMG_2837.MOV", 4.0, 5.0, speed=6.4, cx=0.5, cy=0.45, z=1.05, textos=[
-            T(0.0, 5.0, "alto", f'<p class="t">A culpa nunca foi sua.<br>{G("Faltava ver a face por dentro.")}</p>'),
+        clip("IMG_2837.MOV", 4.0, 4.6, speed=6.8, cx=0.5, cy=0.45, z=1.05, textos=[
+            T(0.0, 4.6, "alto", f'<p class="t">A culpa nunca foi sua.<br>{G("Faltava ver a face por dentro.")}</p>'),
         ]),
-        clip("IMG_2824.MOV", 60.0, 3.8, cx=0.55, cy=0.5, z=1.15, textos=[
-            T(0.0, 3.8, "alto", '<p class="m">Ela tem 11 anos de clínica e mais de 1.000 alunas formadas.</p>'
-                                f'<p class="t">{G("E continua estudando a face por dentro.")}</p>'),
+        clip("IMG_2824.MOV", 60.0, 3.4, cx=0.55, cy=0.5, z=1.15, textos=[
+            T(0.0, 3.4, "alto", '<p class="m">11 anos de clínica.</p>'
+                                f'<p class="t">{G("Professora internacional de anatomia em fresh frozen.")}</p>'),
         ]),
-        clip(WA, 14.0, 3.6, voz=False, **WA_SEM_TEXTO, textos=[
-            T(0.0, 3.6, "alto", f'<p class="t">Agora ela mostra a face por dentro, {G("camada por camada.")}</p>'
+        clip(WA, 14.0, 3.2, **WA_SEM_TEXTO, textos=[
+            T(0.0, 3.2, "alto", f'<p class="t">Agora ela mostra a face por dentro, {G("camada por camada.")}</p>'
                                 '<p class="m">No curso online de anatomia em fresh frozen. Sem visto e sem passagem.</p>'),
         ]),
-        cartao(5.0, card(f"Anatomia em fresh frozen {G('dentro da Filgueiras Academy.')}",
+        cartao(3.6, card(f"Anatomia em fresh frozen {G('dentro da Filgueiras Academy.')}",
                          "Com mais de 70 aulas de técnica e a Consulta que Vende.")),
     ]),
-    # V4 · Frio · dor e medo · texto da Cena da LP sobre B-roll.
+    # V4 · Frio · dor e medo. Abre com a cânula na peça pixelada + a pergunta que ela se faz na cadeira.
     "V4-seringa-na-mao": dict(trilha="pulso-tenso.mp3", vol=0.9, cenas=[
-        clip("IMG_2824.MOV", 0.5, 3.6, cx=0.66, cy=0.5, z=1.2, textos=[
-            T(0.0, 3.6, "meio", '<p class="t">A paciente está na maca.</p>'),
-            T(1.5, 3.6, "meio2", f'<p class="t">{G("A seringa, na sua mão.")}</p>'),
+        clip(WA, 19.6, 2.4, **WA_SEM_TEXTO, textos=[
+            T(0.0, 2.4, "centro", GANCHO_S("“Tem vaso nesse ponto?”")),
         ]),
-        clip("IMG_2775.MOV", 12.0, 3.0, cx=0.5, cy=0.62, z=1.5, textos=[
-            T(0.0, 3.0, "meio", '<p class="s">“Qual é a profundidade aqui?”</p>'),
+        clip("IMG_2775.MOV", 12.0, 2.6, cx=0.5, cy=0.62, z=1.5, textos=[
+            T(0.0, 2.6, "meio", '<p class="s">“Qual é a profundidade aqui?”</p>'),
         ]),
-        foto("IMG_2778.HEIC", 3.0, z0=1.0, z1=1.12, cy=0.6, textos=[
-            T(0.0, 3.0, "meio", '<p class="s">“Tem vaso nesse ponto?”</p>'),
+        foto("IMG_2778.HEIC", 2.4, z0=1.0, z1=1.12, cy=0.6, textos=[
+            T(0.0, 2.4, "meio", '<p class="s">“E se der intercorrência?”</p>'),
         ]),
-        clip("IMG_2775.MOV", 25.0, 3.0, cx=0.5, cy=0.6, z=1.35, textos=[
-            T(0.0, 3.0, "meio", '<p class="s">“E se der intercorrência?”</p>'),
+        clip("IMG_2826.MOV", 12.0, 3.0, cx=0.62, cy=0.45, z=1.6, textos=[
+            T(0.0, 3.0, "meio", '<p class="t">Se a mão hesita, <br>a paciente percebe.</p>'),
         ]),
-        clip("IMG_2826.MOV", 12.0, 3.2, cx=0.62, cy=0.45, z=1.6, textos=[
-            T(0.0, 3.2, "meio", '<p class="t">Se a mão hesita, <br>a paciente percebe.</p>'),
+        clip("IMG_2824.MOV", 88.6, 3.4, cx=0.55, cy=0.5, z=1.15, textos=[
+            T(0.0, 3.4, "alto", f'<p class="t">Quem já viu a face por dentro {G("sabe o que tem embaixo da agulha.")}</p>'),
         ]),
-        clip("IMG_2824.MOV", 87.6, 3.8, cx=0.55, cy=0.5, z=1.15, textos=[
-            T(0.0, 3.8, "alto", f'<p class="t">Quem já viu a face por dentro {G("sabe o que tem embaixo da agulha.")}</p>'),
-        ]),
-        cartao(5.0, card(f"Anatomia em fresh frozen, {G('camada por camada.')}",
+        cartao(3.6, card(f"Anatomia em fresh frozen, {G('camada por camada.')}",
                          "O curso online de dissecção da Filgueiras Academy. Sem visto e sem passagem.")),
     ]),
-    # V5 · Remarketing · venda/consulta · Virada da LP.
+    # V5 · Remarketing · venda. Abre com a conversa animada: as mensagens entram uma a uma.
     "V5-tres-vezes": dict(trilha="pulso-tenso.mp3", vol=0.85, trilha_ss=30, cenas=[
-        foto("@chat", 3.4, z0=1.0, z1=1.05, textos=[
-            T(0.0, 3.4, "baixo", '<p class="m">Quantas vezes você ouviu isso este mês?</p>'),
+        cor(3.6, textos=[
+            T(0.0, 0.45, "chat", chat(1)),
+            T(0.45, 1.0, "chat", chat(2)),
+            T(1.0, 1.8, "chat", chat(3)),
+            T(1.8, 3.6, "chat", chat(4)),
+            T(2.2, 3.6, "pergunta", '<p class="t menor">Quantas vezes você ouviu isso este mês?</p>'),
         ]),
-        clip("IMG_2824.MOV", 15.0, 3.6, cx=0.55, cy=0.5, z=1.1, textos=[
-            T(0.0, 3.6, "alto", f'<p class="t">A paciente decide se confia em você {G("três vezes.")}</p>'),
+        clip("IMG_2824.MOV", 15.0, 3.2, cx=0.55, cy=0.5, z=1.1, textos=[
+            T(0.0, 3.2, "alto", f'<p class="t">A paciente decide se confia em você {G("três vezes.")}</p>'),
         ]),
-        clip("IMG_2826.MOV", 30.0, 2.2, cx=0.62, cy=0.45, z=1.5, textos=[
-            T(0.0, 2.2, "meio", '<p class="t g1">Na consulta.</p>'),
+        clip("IMG_2826.MOV", 30.0, 1.8, cx=0.62, cy=0.45, z=1.5, textos=[
+            T(0.0, 1.8, "meio", '<p class="t g1">Na consulta.</p>'),
         ]),
-        clip("IMG_2775.MOV", 18.0, 2.2, cx=0.5, cy=0.62, z=1.4, textos=[
-            T(0.0, 2.2, "meio", '<p class="t g1">Na agulha.</p>'),
+        clip("IMG_2775.MOV", 18.0, 1.8, cx=0.5, cy=0.62, z=1.4, textos=[
+            T(0.0, 1.8, "meio", '<p class="t g1">Na agulha.</p>'),
         ]),
-        clip("IMG_2837.MOV", 39.3, 2.2, cx=0.45, cy=0.42, z=1.05, textos=[
-            T(0.0, 2.2, "meio", '<p class="t g1">No espelho.</p>'),
+        clip("IMG_2837.MOV", 39.3, 1.8, cx=0.45, cy=0.42, z=1.05, textos=[
+            T(0.0, 1.8, "meio", '<p class="t g1">No espelho.</p>'),
         ]),
-        clip("IMG_2824.MOV", 60.0, 4.6, cx=0.55, cy=0.5, z=1.15, textos=[
-            T(0.0, 4.6, "alto", '<p class="m">Se a mão hesita, a paciente percebe.</p>'
+        clip("IMG_2824.MOV", 60.0, 4.2, cx=0.55, cy=0.5, z=1.15, textos=[
+            T(0.0, 4.2, "alto", '<p class="m">Se a mão hesita, a paciente percebe.</p>'
                                 f'<p class="t">{G("Se você trava na consulta, ela diz “vou pensar” e não volta.")}</p>'),
         ]),
-        cartao(5.0, card(f"Consulta, agulha e espelho {G('num lugar só.')}",
+        cartao(3.6, card(f"Consulta, agulha e espelho {G('num lugar só.')}",
                          "Anatomia em fresh frozen, mais de 70 aulas de técnica e a Consulta que Vende.")),
     ]),
-    # V6 · Remarketing · Academy completa · explicador sem preço.
+    # V6 · Remarketing · Academy completa. Abre com 4 cortes rápidos sob o gancho (movimento no 1º segundo).
     "V6-o-que-tem-dentro": dict(trilha="piano-esperanca.mp3", vol=0.9, cenas=[
-        clip("IMG_2777.MOV", 30.0, 3.4, cx=0.5, cy=0.5, z=1.0, textos=[
-            T(0.0, 3.4, "alto", f'<p class="t">Fez curso e continua travada {G("na agulha e na consulta?")}</p>'),
+        # o mesmo gancho atravessa os 4 cortes
+        clip(WA, 20.0, 0.55, **WA_SEM_TEXTO, textos=[T(0.0, 0.55, "centro", GANCHO_V6)]),
+        clip("IMG_2775.MOV", 25.0, 0.55, cx=0.5, cy=0.6, z=1.35, textos=[T(0.0, 0.55, "centro", GANCHO_V6)]),
+        clip("IMG_2824.MOV", 89.8, 0.55, cx=0.55, cy=0.5, z=1.15, textos=[T(0.0, 0.55, "centro", GANCHO_V6)]),
+        foto("IMG_2769.JPG", 0.55, z0=1.05, z1=1.08, cy=0.42, textos=[T(0.0, 0.55, "centro", GANCHO_V6)]),
+        clip("IMG_2824.MOV", 40.0, 2.8, cx=0.55, cy=0.5, z=1.15, textos=[
+            T(0.0, 2.8, "alto", f'<p class="t">A Filgueiras Academy junta tudo {G("num lugar só.")}</p>'),
         ]),
-        clip("IMG_2824.MOV", 40.0, 3.0, cx=0.55, cy=0.5, z=1.15, textos=[
-            T(0.0, 3.0, "alto", f'<p class="t">A Filgueiras Academy junta tudo {G("num lugar só.")}</p>'),
-        ]),
-        clip(WA, 20.0, 3.4, **WA_SEM_TEXTO, textos=[
-            T(0.0, 3.4, "alto", '<span class="num">1</span><p class="t">Anatomia em fresh frozen</p>'
+        clip(WA, 20.0, 3.0, **WA_SEM_TEXTO, textos=[
+            T(0.0, 3.0, "alto", '<span class="num">1</span><p class="t">Anatomia em fresh frozen</p>'
                                 '<p class="m">A face por dentro, camada por camada.</p>'),
         ]),
-        clip("IMG_2775.MOV", 25.0, 3.4, cx=0.5, cy=0.6, z=1.35, textos=[
-            T(0.0, 3.4, "alto", '<span class="num">2</span><p class="t">Mais de 70 aulas de técnica</p>'
+        clip("IMG_2775.MOV", 25.0, 3.0, cx=0.5, cy=0.6, z=1.35, textos=[
+            T(0.0, 3.0, "alto", '<span class="num">2</span><p class="t">Mais de 70 aulas de técnica</p>'
                                 '<p class="m">Toxina, preenchimento e bioestimuladores, com intercorrências e anestesia.</p>'),
         ]),
-        clip("IMG_2824.MOV", 87.6, 3.4, cx=0.55, cy=0.5, z=1.15, textos=[
-            T(0.0, 3.4, "alto", '<span class="num">3</span><p class="t">A Consulta que Vende</p>'
+        clip("IMG_2824.MOV", 87.6, 3.0, cx=0.55, cy=0.5, z=1.15, textos=[
+            T(0.0, 3.0, "alto", '<span class="num">3</span><p class="t">A Consulta que Vende</p>'
                                 '<p class="m">Com anamnese, termos e precificação prontos.</p>'),
         ]),
-        foto("IMG_2769.JPG", 3.4, z0=1.05, z1=1.15, cy=0.42, textos=[
-            T(0.0, 3.4, "alto", '<span class="num">4</span><p class="t">6 encontros ao vivo no ano</p>'
+        foto("IMG_2769.JPG", 3.0, z0=1.05, z1=1.15, cy=0.42, textos=[
+            T(0.0, 3.0, "alto", '<span class="num">4</span><p class="t">6 encontros ao vivo no ano</p>'
                                 '<p class="m">E uma aula com a Aline pra discussão de casos.</p>'),
         ]),
-        cartao(5.0, card(f"12 meses de acesso {G('a tudo.')}", "No celular ou no computador. 7 dias de garantia.")),
+        cartao(3.6, card(f"12 meses de acesso {G('a tudo.')}", "No celular ou no computador. 7 dias de garantia.")),
     ]),
 }
 
@@ -239,11 +262,27 @@ body { width: 1080px; height: 1920px; overflow: hidden; font-family: "Inter", sa
 .bloco { position: absolute; left: 150px; right: 180px; }
 .bloco p { margin: 0 0 14px; }
 .in { background: rgba(12,11,10,.76); box-decoration-break: clone; -webkit-box-decoration-break: clone; padding: .05em .22em; }
-.alto { top: 330px; } .meio { top: 760px; } .meio2 { top: 960px; } .baixo { top: 1180px; }
+.alto { top: 330px; } .pergunta { top: 1250px; } .t.menor { font-size: 52px; } .centro { top: 640px; text-align: center; } .meio { top: 760px; } .meio2 { top: 960px; } .baixo { top: 1180px; }
 .t { color: #f5f1ea; font-weight: 600; font-size: 62px; line-height: 1.42; letter-spacing: -.015em; }
 .t .grifo, .t.g1 .in { background: #7e1e1c; box-decoration-break: clone; -webkit-box-decoration-break: clone; padding: .02em .16em; line-height: 1.44; text-shadow: none; }
 .m { color: rgba(245,241,234,.92); font-weight: 500; font-size: 38px; line-height: 1.5; }
 .s { font-family: "Fraunces", serif; font-style: italic; color: #f5f1ea; font-size: 84px; line-height: 1.32; letter-spacing: -.01em; }
+.gancho { color: #f5f1ea; font-weight: 700; font-size: 84px; line-height: 1.36; letter-spacing: -.02em; }
+.gancho .grifo { background: #7e1e1c; box-decoration-break: clone; -webkit-box-decoration-break: clone; padding: .02em .16em; }
+.gancho.serif { font-family: "Fraunces", serif; font-style: italic; font-weight: 500; font-size: 104px; line-height: 1.24; letter-spacing: -.01em; }
+.chatwrap { position: absolute; left: 70px; right: 150px; top: 240px; }
+.chatv { background: #1b1613; border: 1px solid rgba(245,241,234,.14); border-radius: 28px; overflow: hidden; }
+.chatv .cab { display: flex; align-items: center; gap: 20px; padding: 26px 32px; background: #221b17; border-bottom: 1px solid rgba(245,241,234,.08); }
+.chatv .cab i { width: 66px; height: 66px; border-radius: 50%; background: #4a413b; display: block; }
+.chatv .cab b { color: #f5f1ea; font-size: 36px; font-weight: 600; display: block; }
+.chatv .cab small { font-size: 22px; color: #726b63; }
+.chatv .msgs { padding: 34px 30px 38px; display: flex; flex-direction: column; gap: 24px; }
+.chatv .msg { max-width: 84%; padding: 22px 28px 16px; border-radius: 24px; font-size: 44px; line-height: 1.32; color: #f5f1ea; }
+.chatv .msg small { display: block; text-align: right; margin-top: 6px; font-size: 19px; color: rgba(245,241,234,.55); }
+.chatv .ela { align-self: flex-start; background: #2c2521; border-top-left-radius: 6px; }
+.chatv .voce { align-self: flex-end; background: #7e1e1c; border-top-right-radius: 6px; }
+.chatv .fim { font-family: "Fraunces", serif; font-style: italic; font-size: 118px; line-height: 1.1; padding: 22px 32px 14px; white-space: nowrap; }
+.chatv .aviso { align-self: center; margin-top: 10px; font-size: 22px; letter-spacing: .14em; text-transform: uppercase; color: #a69f97; }
 .num { display: inline-flex; width: 74px; height: 74px; border-radius: 50%; background: #7e1e1c; color: #fff; font-family: "Fraunces", serif; font-size: 44px; align-items: center; justify-content: center; margin-bottom: 18px; }
 .chipbox { position: absolute; left: 150px; right: 180px; top: 560px; text-align: center; }
 .chip { display: inline-block; background: rgba(12,11,10,.78); color: #e7a39c; font-size: 25px; font-weight: 600; letter-spacing: .07em; text-transform: uppercase; padding: 12px 22px; border-radius: 999px; }
@@ -270,6 +309,8 @@ def html_texto(pos, conteudo):
         return f'<div class="chipbox">{conteudo}</div>'
     if pos == "fala":
         return f'<div class="falabox">{conteudo}</div>'
+    if pos == "chat":
+        return f'<div class="chatwrap">{conteudo}</div>'
     # cada parágrafo ganha um <span class="in"> com fundo escuro por linha (lê sobre a parede branca)
     conteudo = re.sub(r'(<p class="[^"]*">)(.*?)(</p>)', lambda m: m.group(1) + '<span class="in">' + m.group(2) + '</span>' + m.group(3), conteudo, flags=re.S)
     return f'<div class="bloco {pos}">{conteudo}</div>'
@@ -350,7 +391,9 @@ def overlay_chain(base, textos, pngs, ci, n0):
     for ti, (a, b, _pos, _c) in enumerate(textos):
         idx = n0 + ti
         entradas += ["-loop", "1", "-i", str(pngs[(ci, ti)])]
-        filtros.append(f"[{idx}:v]format=rgba,fade=t=in:st={a}:d=0.18:alpha=1[o{ti}]")
+        # texto que entra em 0s aparece cheio no primeiro quadro (autoplay/miniatura); os outros entram com fade curto
+        fade = f",fade=t=in:st={a}:d=0.18:alpha=1" if a > 0 else ""
+        filtros.append(f"[{idx}:v]format=rgba{fade}[o{ti}]")
         filtros.append(f"[{atual}][o{ti}]overlay=0:0:enable='between(t,{a},{b})'[v{ti}]")
         atual = f"v{ti}"
     return entradas, filtros, atual
@@ -382,6 +425,10 @@ def renderizar_cena(nome, ci, cena, pngs):
         filtros.append(
             f"[0:v]zoompan=z='{z0}+({z1}-{z0})*on/{frames}':x='iw*{cena['cx']}-iw/zoom/2':y='ih*{cena['cy']}-ih/zoom/2':"
             f"d={frames}:s={W}x{H}:fps={FPS},{GRADE if cena['src'] != '@chat' else 'null'},format=yuv420p[b]")
+        n0 = 1
+    elif cena["tipo"] == "cor":
+        cmd += ["-f", "lavfi", "-t", f"{d}", "-i", f"color=c=0x0c0b0a:s={W}x{H}:r={FPS}"]
+        filtros.append("[0:v]format=yuv420p[b]")
         n0 = 1
     else:  # cartão: PNG opaco do HTML
         cmd += ["-loop", "1", "-t", f"{d}", "-i", str(pngs[(ci, None)])]
