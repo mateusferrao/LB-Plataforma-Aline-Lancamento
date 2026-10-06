@@ -92,7 +92,7 @@
 >
 > Pros dez primeiros, a soma vai a **R$14.243**. E você continua pagando **R$1.797**.
 >
-> As **cinco primeiras** ainda levam o meu **analisador facial de consulta**, pra mostrar pra paciente o processo de envelhecimento do rosto dela, ali na consulta.
+> As **cinco primeiras** ainda levam o meu **Manual do Envelhecimento**, pra mostrar pra paciente o processo de envelhecimento do rosto dela, ali na consulta.
 > E a **primeira** que entrar leva também **2 ml de ácido hialurônico** pra próxima aplicação (só pra quem é habilitada a aplicar).
 >
 > Os primeiros contam pela hora da compra. Quando fechar, acabou, mesmo antes da meia-noite. E depois da compra a minha equipe te chama no WhatsApp pra combinar a entrega de tudo.
@@ -103,7 +103,7 @@
 |---|---|---|
 | Todo mundo até 23h59 | O núcleo + 3 meses de acesso (15 no total) | ~~R$9.243~~ |
 | 10 primeiros (até 23h59) | + certificado e mentoria em grupo com a Aline | ~~R$14.243~~ |
-| 5 primeiras | + analisador facial de consulta | |
+| 5 primeiras | + Manual do Envelhecimento | |
 | 1ª | + 2 ml de ácido hialurônico | |
 | **Hoje** | | **R$1.797** |
 
@@ -148,7 +148,7 @@
 - **"Posso pagar no Pix?"** "Pode: Pix ou cartão em até 12x, direto no link."
 
 **Repetição da oferta (a cada 5 a 10 minutos):**
-> Só lembrando: R$1.797 com o fresh frozen, a plataforma, seis encontros ao vivo e uma aula de casos comigo. Dos dez bônus de hoje (certificado e mentoria em grupo comigo), faltam [X]. As cinco primeiras levam o analisador facial e a primeira, o ácido hialurônico. E todo mundo que entrar hoje leva quinze meses de acesso. Vale até meia-noite. O link está aí.
+> Só lembrando: R$1.797 com o fresh frozen, a plataforma, seis encontros ao vivo e uma aula de casos comigo. Dos dez bônus de hoje (certificado e mentoria em grupo comigo), faltam [X]. As cinco primeiras levam o Manual do Envelhecimento e a primeira, o ácido hialurônico. E todo mundo que entrar hoje leva quinze meses de acesso. Vale até meia-noite. O link está aí.
 
 ---
 
@@ -165,4 +165,4 @@
 3. **Formato da mentoria em grupo** (frequência, duração, por quanto tempo).
 4. **Ácido hialurônico (1ª):** validar com o jurídico e a parte sanitária (o público inclui esteticistas). Só pra quem é habilitada a aplicar. Sem citar marca. (A toxina e a prancheta saíram em 06/10.)
 5. **A Aline confirma** os "mais de 11 anos de clínica".
-6. **Operação de 07/10 a 10/10:** estender para 15 meses todas as compras da noite (oferta Sala); enviar o analisador facial (5 primeiras) e o ácido hialurônico (1ª), emitir o certificado e abrir a mentoria para os 10 primeiros.
+6. **Operação de 07/10 a 10/10:** estender para 15 meses todas as compras da noite (oferta Sala); enviar o Manual do Envelhecimento (5 primeiras) e o ácido hialurônico (1ª), emitir o certificado e abrir a mentoria para os 10 primeiros.

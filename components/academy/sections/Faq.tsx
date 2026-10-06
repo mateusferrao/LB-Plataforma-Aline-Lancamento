@@ -40,7 +40,7 @@ const SO_SALA: Item[] = [
   },
   {
     q: "Quais são os bônus dos primeiros e como recebo?",
-    a: `Os ${SALA.primeirosN} primeiros levam o certificado Filgueiras Academy e a mentoria em grupo com a Aline. As ${SALA.primeirosCinco} primeiras levam também o analisador facial de consulta, e a primeira leva também 2 ml de ácido hialurônico (só pra quem é habilitada a aplicar). A ordem é a da confirmação do pagamento. Depois da compra, a equipe entra em contato pelo WhatsApp pra combinar a entrega de tudo.`,
+    a: `Os ${SALA.primeirosN} primeiros levam o certificado Filgueiras Academy e a mentoria em grupo com a Aline. As ${SALA.primeirosCinco} primeiras levam também o Manual do Envelhecimento, e a primeira leva também 2 ml de ácido hialurônico (só pra quem é habilitada a aplicar). A ordem é a da confirmação do pagamento. Depois da compra, a equipe entra em contato pelo WhatsApp pra combinar a entrega de tudo.`,
   },
   {
     q: `E depois de ${SALA.prazoCurto}?`,

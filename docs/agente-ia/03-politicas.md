@@ -11,8 +11,8 @@ Oferta completa, falas e suporte em `04-filgueiras-academy.md`. Resumo das polí
 - **Preço único:** R$1.797 à vista ou em 12x de R$185,85 no cartão. **Sem desconto nem cupom.**
 - **Bônus da noite da aula:** valeram só em 06/10, até 23h59: **+3 meses de acesso pra todo mundo
   que comprou na noite** (15 no total) e, pros **10 primeiros pela hora da
-  compra**, certificado e mentoria em grupo com a Aline; pras **5 primeiras**, o analisador facial de
-  consulta; pra **primeira**, 2 ml de ácido hialurônico. Entrega combinada pela equipe no WhatsApp. O agente **nunca
+  compra**, certificado e mentoria em grupo com a Aline; pras **5 primeiras**, o Manual do Envelhecimento;
+  pra **primeira**, 2 ml de ácido hialurônico. Entrega combinada pela equipe no WhatsApp. O agente **nunca
   confirma** se a pessoa está entre os 10.
 - **Garantia Mão Segura:** 7 dias sem perguntas + 30 dias se a mão não ficar mais segura depois do
   módulo de anatomia. Vale pra Academy, pra anatomia separada e pro upgrade. **Mentoria: 7 dias.**

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Reveal } from "@/components/Reveal";
 import { Titulo } from "@/components/Titulo";
 import { AteOFim } from "@/components/academy/AteOFim";
@@ -19,6 +20,14 @@ import {
   VALOR_TOTAL,
   brl,
 } from "@/lib/ofertaAcademy";
+import { withBasePath } from "@/lib/basePath";
+
+// Fotos do Manual do Envelhecimento (bônus das 5 primeiras), do Drive da equipe em 06/10.
+const FOTOS_MANUAL = [
+  { src: "/images/manual/manual-rostos.webp", w: 1200, h: 1013, alt: "Manual do Envelhecimento aberto na página do processo de envelhecimento da pele da face, aos 30, 45 e 60 anos" },
+  { src: "/images/manual/manual-pele.webp", w: 800, h: 800, alt: "Página do Manual do Envelhecimento com as camadas da pele aos 30 e aos 60 anos" },
+  { src: "/images/manual/manual-abas.webp", w: 800, h: 800, alt: "Capa do Manual do Envelhecimento com as abas Face, Gordura e Ossos" },
+];
 
 // Oferta num card só (molde da referência), com a oferta ajustada de 05/10:
 // o núcleo com o valor riscado por item e o total de todo mundo; na sala, os
@@ -102,10 +111,29 @@ export function Oferta({ modo }: { modo: Modo }) {
                 ))}
               </ul>
               <Total rotulo={`Valor total pros ${SALA.primeirosN} primeiros`} valor={VALOR_TOTAL.primeiros} />
-              <ul className="mt-6 list-none rounded-[6px] bg-bg-2 px-4">
-                <Linha {...BONUS_CINCO} tag={`E as ${SALA.primeirosCinco} primeiras`} />
-                <Linha {...BONUS_PRIMEIRA} tag="E a primeira" />
-              </ul>
+              <div className="mt-6 rounded-[6px] bg-bg-2 px-4 pb-1">
+                <ul className="list-none p-0">
+                  <Linha {...BONUS_CINCO} tag={`E as ${SALA.primeirosCinco} primeiras`} />
+                </ul>
+                <figure className="mt-3 mb-1">
+                  <div className="grid grid-cols-2 gap-2">
+                    {FOTOS_MANUAL.map((f, i) => (
+                      <Image
+                        key={f.src}
+                        src={withBasePath(f.src)}
+                        alt={f.alt}
+                        width={f.w}
+                        height={f.h}
+                        sizes={i === 0 ? "(min-width: 768px) 600px, 92vw" : "(min-width: 768px) 300px, 46vw"}
+                        className={`h-auto w-full rounded-[6px] object-cover ${i === 0 ? "col-span-2" : "aspect-square"}`}
+                      />
+                    ))}
+                  </div>
+                </figure>
+                <ul className="list-none p-0">
+                  <Linha {...BONUS_PRIMEIRA} tag="E a primeira" />
+                </ul>
+              </div>
               <p className="mt-4 text-center text-[0.88rem] leading-[1.5] text-fg-soft">{ENTREGA_BONUS}</p>
             </div>
           </AteOFim>

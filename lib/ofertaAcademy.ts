@@ -114,7 +114,7 @@ export const PILHA_ACADEMY: readonly Item[] = [
 
 // Sala, pela hora da compra (escada revista em 06/10): os 10 primeiros levam o
 // certificado e a mentoria (sem número de encontros); as 5 primeiras, também o
-// analisador facial de consulta; a primeira, também 2 ml de ácido hialurônico
+// Manual do Envelhecimento; a primeira, também 2 ml de ácido hialurônico
 // (só pra quem é habilitada; sem marca). Saíram a prancheta e a toxina. A equipe
 // entra em contato depois da compra pra combinar a entrega de tudo.
 export const BONUS_PRIMEIROS: readonly Item[] = [
@@ -122,8 +122,8 @@ export const BONUS_PRIMEIROS: readonly Item[] = [
   { nome: "Mentoria em grupo com a Aline", detalhe: "3 meses com a Aline, ao vivo, só com os 10 primeiros. Você leva os seus casos.", valor: 5000 },
 ];
 export const BONUS_CINCO: Item = {
-  nome: "Analisador facial de consulta",
-  detalhe: "Pra mostrar à paciente, na consulta, o processo de envelhecimento do rosto dela.",
+  nome: "Manual do Envelhecimento",
+  detalhe: "Um álbum de mesa pra mostrar à paciente, na consulta, como a pele, a gordura e os ossos do rosto dela mudam com o tempo.",
   valor: 600,
 };
 export const BONUS_PRIMEIRA: Item = {
@@ -131,7 +131,7 @@ export const BONUS_PRIMEIRA: Item = {
   detalhe: "Pra sua próxima aplicação. Só pra quem é habilitada a aplicar.",
 };
 export const ENTREGA_BONUS =
-  "Os bônus são entregues depois da compra: a equipe entra em contato pelo WhatsApp pra combinar o certificado, a entrada na mentoria e o envio do analisador e do ácido hialurônico.";
+  "Os bônus são entregues depois da compra: a equipe entra em contato pelo WhatsApp pra combinar o certificado, a entrada na mentoria e o envio do Manual do Envelhecimento e do ácido hialurônico.";
 
 // Sala: todo mundo que entra até o fim dos bônus (06/10 23h59) ganha +3 meses.
 // Entra na soma da sala. Extensão em lote pela equipe até 10/10, como a dos 5.

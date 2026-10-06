@@ -74,7 +74,7 @@ Só na noite da aula. Os bônus valem até 23h59 e contam pela hora da compra.
 > • Preferência nos cursos presenciais
 >
 > Só hoje, até 23h59, pra todo mundo: +3 meses de acesso, 15 no total (vale R$449).
-> E só pros 10 primeiros de hoje: certificado e mentoria em grupo com a Aline (vale R$5.000). As 5 primeiras levam também o analisador facial de consulta, e a primeira, 2 ml de ácido hialurônico. **Restam [X] dos 10.**
+> E só pros 10 primeiros de hoje: certificado e mentoria em grupo com a Aline (vale R$5.000). As 5 primeiras levam também o Manual do Envelhecimento, e a primeira, 2 ml de ácido hialurônico. **Restam [X] dos 10.**
 >
 > Somado, passa de R$14 mil. Hoje é R$1.797, ou 12x de R$185,85.
 > E o risco fica com a gente: 7 dias pra pedir o dinheiro de volta sem explicar nada, e 30 dias se a sua mão não ficar mais segura depois do módulo de anatomia.
@@ -85,7 +85,7 @@ Só na noite da aula. Os bônus valem até 23h59 e contam pela hora da compra.
 
 **S3 · 23h · Decisão (urgência real)**
 
-> [nome], última mensagem de hoje, prometo. Às 23h59 acabam os +3 meses de acesso (15 em vez de 12) e os bônus dos primeiros: certificado e mentoria em grupo com a Aline (10 primeiros), analisador facial (5 primeiras) e ácido hialurônico (a primeira). Depois disso a Academy continua R$1.797, com 12 meses. Restam [X] dos 10.
+> [nome], última mensagem de hoje, prometo. Às 23h59 acabam os +3 meses de acesso (15 em vez de 12) e os bônus dos primeiros: certificado e mentoria em grupo com a Aline (10 primeiros), Manual do Envelhecimento (5 primeiras) e ácido hialurônico (a primeira). Depois disso a Academy continua R$1.797, com 12 meses. Restam [X] dos 10.
 > [link Sala]
 
 *Se os 10 já fecharam:* mandar só com os +3 meses ("Às 23h59 acabam os +3 meses de acesso: 15 em vez de 12. Depois disso a Academy continua R$1.797, com 12 meses."). É urgência real para todo mundo até 23h59.

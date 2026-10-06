@@ -18,7 +18,7 @@ O que muda **fora do site** está abaixo, na ordem de horário.
 
 - [ ] **2. Roteiro e slides da Aline.** Acrescentar o degrau novo no pitch:
   - **todo mundo que entrar hoje até 23h59: +3 meses de acesso (15 em vez de 12);**
-  - os 10 primeiros: certificado e mentoria em grupo; as 5 primeiras: analisador facial de consulta; a 1ª: 2 ml de ácido hialurônico (saíram a prancheta e a toxina).
+  - os 10 primeiros: certificado e mentoria em grupo; as 5 primeiras: Manual do Envelhecimento; a 1ª: 2 ml de ácido hialurônico (saíram a prancheta e a toxina).
   - **Saiu (06/10):** os +6 meses dos 5 primeiros. Se algum slide fala em "5 primeiras" ou "18 meses", tirar. O roteiro (`pitch-aula-06-10.md`) já está ajustado.
 
 - [ ] **3. Ticto · oferta Sala (`OEF7AADF6`).** Se a descrição da oferta ou o checkout citam os bônus, acrescentar: "+3 meses de acesso para quem comprar até 23h59".
@@ -28,7 +28,7 @@ O que muda **fora do site** está abaixo, na ordem de horário.
 - [ ] **4. Mensagem pro grupo do WhatsApp da aula** (para usar depois do pitch):
   > A Filgueiras Academy está aberta, só pra quem está aqui hoje.
   > Até 23h59: **+3 meses de acesso pra todo mundo** (15 meses em vez de 12).
-  > E os 10 primeiros ainda levam o certificado e a mentoria em grupo com a Aline. As 5 primeiras levam também o analisador facial de consulta, e a primeira, 2 ml de ácido hialurônico. Depois da compra, a equipe te chama no WhatsApp pra combinar a entrega.
+  > E os 10 primeiros ainda levam o certificado e a mentoria em grupo com a Aline. As 5 primeiras levam também o Manual do Envelhecimento, e a primeira, 2 ml de ácido hialurônico. Depois da compra, a equipe te chama no WhatsApp pra combinar a entrega.
   > R$1.797, em 12x de R$185,85 ou no Pix, com a Garantia Mão Segura.
   > 👉 https://live.alinefilgueiras.com.br/academy/sala
 

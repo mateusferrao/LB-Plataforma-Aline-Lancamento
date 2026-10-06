@@ -67,7 +67,7 @@ A **Garantia Mão Segura**: **7 dias** pra pedir o dinheiro de volta sem explica
 Valeram **só na noite de 06/10, até 23h59**:
 - **Todo mundo que comprou até 23h59:** mais 3 meses de acesso (15 no total).
 - **10 primeiros** (pela ordem de compra): certificado Filgueiras Academy e mentoria em grupo com a Aline.
-- **5 primeiras:** também o analisador facial de consulta.
+- **5 primeiras:** também o Manual do Envelhecimento.
 - **A primeira:** também 2 ml de ácido hialurônico (só pra quem é habilitada a aplicar).
 
 A equipe entra em contato pelo WhatsApp depois da compra pra combinar a entrega.

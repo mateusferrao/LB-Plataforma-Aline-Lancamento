@@ -79,7 +79,7 @@ no total, vale R$449). A equipe estende até 10/10.
 
 - **10 primeiros:** **certificado Filgueiras Academy** e **mentoria em grupo com a Aline**, 3 meses,
   só com esses 10 (vale R$5.000). Com o núcleo e os +3 meses, a soma vai a **R$14.243**.
-- **5 primeiras:** também o **analisador facial de consulta**, pra mostrar à paciente o processo de
+- **5 primeiras:** também o **Manual do Envelhecimento**, um álbum de mesa (abas Face, Gordura e Ossos) pra mostrar à paciente o processo de
   envelhecimento do rosto dela (vale R$600).
 - **A primeira:** também **2 ml de ácido hialurônico** (só pra quem é habilitada a aplicar; nunca cite
   marca).
@@ -186,7 +186,7 @@ Os encontros ficam **gravados na plataforma**.
 
 **"Fui uma das 10 primeiras. Quando recebo os bônus?"** A equipe confere a hora da compra e entra
 em contato **de 07/10 a 10/10** pelo WhatsApp pra combinar a entrega: o **certificado** e a **mentoria
-em grupo** (10 primeiros), o **analisador facial** (5 primeiras) e o **ácido hialurônico** (a primeira).
+em grupo** (10 primeiros), o **Manual do Envelhecimento** (5 primeiras) e o **ácido hialurônico** (a primeira).
 Não confirme se ela está entre as primeiras:
 "A equipe confere pela hora da compra e te chama." Dúvida depois de 10/10 → humano.
 
@@ -233,7 +233,7 @@ Nenhuma resposta dá desconto.
 ## 10. Escassez e urgência (só o que é verdade)
 
 - **Noite da aula:** os **+3 meses valem pra todo mundo até 06/10, 23h59**. Os bônus dos primeiros
-  vão pela hora da compra: **10 primeiros** (certificado e mentoria), **5 primeiras** (analisador) e
+  vão pela hora da compra: **10 primeiros** (certificado e mentoria), **5 primeiras** (Manual do Envelhecimento) e
   **a primeira** (ácido hialurônico). Quando fecharem os 10, acabam esses bônus, mesmo antes da
   meia-noite; os +3 meses seguem até 23h59.
 - **Nunca diga quantas vagas restam** (o agente não tem a contagem). "A equipe acompanha a contagem

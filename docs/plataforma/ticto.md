@@ -90,7 +90,7 @@ O que todo mundo leva:
 Só pros 10 primeiros:
 • Certificado Filgueiras Academy
 • Mentoria em grupo com a Aline (valor R$5.000)
-As 5 primeiras: também o analisador facial de consulta. A primeira: também 2 ml de ácido hialurônico.
+As 5 primeiras: também o Manual do Envelhecimento. A primeira: também 2 ml de ácido hialurônico.
 A equipe entra em contato pelo WhatsApp depois da compra pra combinar a entrega.
 E todo mundo que compra até 23h59 leva 15 meses de acesso (os +6 meses dos 5 primeiros saíram em 06/10).
 
@@ -159,7 +159,7 @@ As duas ofertas são iguais. Só mudam o nome e o template de checkout.
 
 Banner e texto do topo:
 
-> **Bônus dos 10 primeiros, só até 23h59:** certificado Filgueiras Academy e mentoria em grupo com a Aline. 5 primeiras: analisador facial de consulta. A primeira: 2 ml de ácido hialurônico. E todo mundo que comprar até 23h59 leva 15 meses de acesso.
+> **Bônus dos 10 primeiros, só até 23h59:** certificado Filgueiras Academy e mentoria em grupo com a Aline. 5 primeiras: Manual do Envelhecimento. A primeira: 2 ml de ácido hialurônico. E todo mundo que comprar até 23h59 leva 15 meses de acesso.
 
 Lista de benefícios ou resumo, se o template tiver o campo:
 
@@ -240,7 +240,7 @@ O Hormozi chama isto de Money Model: a oferta de atração paga a aquisição, e
   - a equipe troca o banner do template Sala para "Os bônus dos 10 primeiros já foram. A Academy continua por R$1.797".
 - **De 07/10 a 10/10:**
   - estender para 15 meses todas as compras da oferta Sala;
-  - chamar as primeiras no WhatsApp: certificado e mentoria (10 primeiros), endereço para o analisador facial (5 primeiras) e o ácido hialurônico (a primeira, só se for habilitada a aplicar).
+  - chamar as primeiras no WhatsApp: certificado e mentoria (10 primeiros), endereço para o Manual do Envelhecimento (5 primeiras) e o ácido hialurônico (a primeira, só se for habilitada a aplicar).
 
 ---
 

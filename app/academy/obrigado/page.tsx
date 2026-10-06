@@ -69,7 +69,7 @@ export default function AcademyObrigado() {
             <strong className="font-semibold text-fg">Comprou na noite da aula, até {SALA.prazoCurto}?</strong> O seu
             acesso vai para {SALA.mesesTodos} meses: a equipe aplica os +3 meses até {SALA.extensaoAte}. Se você está entre
             os primeiros, a equipe te chama no WhatsApp pra combinar a entrega dos bônus: o certificado e a
-            mentoria em grupo com a Aline, o analisador facial de consulta e o ácido hialurônico.
+            mentoria em grupo com a Aline, o Manual do Envelhecimento e o ácido hialurônico.
           </p>
           </AteOFim>
 
