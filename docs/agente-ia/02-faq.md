@@ -68,7 +68,6 @@ Valeram **só na noite de 06/10, até 23h59**:
 - **Todo mundo que comprou até 23h59:** mais 3 meses de acesso (15 no total).
 - **10 primeiros** (pela ordem de compra): certificado Filgueiras Academy, prancheta ilustrada da Aline (vai pelo correio),
   mentoria em grupo com a Aline e toxina botulínica.
-- **5 primeiros:** mais 6 meses de acesso (18 no total).
 
 Depois disso, a Academy segue com tudo da pergunta 7, sem os bônus. *(Nunca confirme se a pessoa
 está entre os 10 ou os 5: "A equipe confere pela hora da compra e te chama".)*

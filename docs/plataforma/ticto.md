@@ -92,9 +92,9 @@ Só pros 10 primeiros:
 • Prancheta ilustrada da Aline, pelo correio (valor R$600)
 • Mentoria em grupo com a Aline (valor R$5.000)
 • Toxina botulínica
-E os 5 primeiros levam 18 meses de acesso.
+E todo mundo que compra até 23h59 leva 15 meses de acesso (os +6 meses dos 5 primeiros saíram em 06/10).
 
-Valor total pros 10 primeiros: R$14.394. Hoje: R$1.797 no Pix ou 12x de R$185,85.
+Valor total pros 10 primeiros: R$14.843. Hoje: R$1.797 no Pix ou 12x de R$185,85.
 
 Garantia Mão Segura: 7 dias sem perguntas, e 30 dias se a sua mão não ficar mais segura.
 ```
@@ -115,7 +115,7 @@ Para produto do tipo curso, a Ticto só deixa cadastrar oferta **depois** de lig
 4. **Produto:** Filgueiras Academy · Consulta, Agulha e Espelho.
 5. Ligar as **duas ofertas** (seção 4) ao plano da MemberKit, com 12 meses. O reembolso e o chargeback devem remover o acesso sozinhos, porque a integração trata esses eventos.
 
-**Os 5 primeiros (18 meses):** a Ticto vende 12 meses. A extensão para 18 é manual, feita pela equipe na MemberKit, de 07/10 a 10/10.
+**Compras da noite (15 meses):** a Ticto vende 12 meses. A extensão para 15 é manual, feita pela equipe na MemberKit, de 07/10 a 10/10.
 
 ---
 
@@ -159,7 +159,7 @@ As duas ofertas são iguais. Só mudam o nome e o template de checkout.
 
 Banner e texto do topo:
 
-> **Bônus dos 10 primeiros, só até 23h59:** certificado Filgueiras Academy · prancheta ilustrada · mentoria em grupo com a Aline · toxina botulínica. As 5 primeiras levam também 18 meses de acesso.
+> **Bônus dos 10 primeiros, só até 23h59:** certificado Filgueiras Academy · prancheta ilustrada · mentoria em grupo com a Aline · toxina botulínica. E todo mundo que comprar até 23h59 leva 15 meses de acesso.
 
 Lista de benefícios ou resumo, se o template tiver o campo:
 
@@ -168,7 +168,7 @@ Lista de benefícios ou resumo, se o template tiver o campo:
 > - 6 encontros ao vivo no ano (R$5.000)
 > - 1 aula ao vivo com a Aline pra discussão de casos (R$1.000)
 > - Preferência nos cursos presenciais
-> - **Valor total: R$8.794. Pros 10 primeiros, com os bônus: R$14.394. Hoje: R$1.797**
+> - **Valor total: R$8.794. Pros 10 primeiros, com os bônus: R$14.843. Hoje: R$1.797**
 
 **Na manhã de 07/10:** tirar o banner dos bônus deste template, ou desativar a Oferta A. A página da sala já troca para o link da evergreen às 23h59 sozinha. Mesmo assim, alguém pode ter guardado o link da sala.
 
@@ -239,7 +239,7 @@ O Hormozi chama isto de Money Model: a oferta de atração paga a aquisição, e
   - a Aline anuncia;
   - a equipe troca o banner do template Sala para "Os bônus dos 10 primeiros já foram. A Academy continua por R$1.797".
 - **De 07/10 a 10/10:**
-  - estender para 18 meses os 5 primeiros;
+  - estender para 15 meses todas as compras da oferta Sala;
   - chamar os 10 primeiros no WhatsApp para pedir o endereço da prancheta e combinar o certificado, a toxina (só para quem é habilitada a aplicar) e a entrada na mentoria em grupo.
 
 ---

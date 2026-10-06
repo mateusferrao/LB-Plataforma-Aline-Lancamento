@@ -65,10 +65,10 @@ acesso funcionando no primeiro dia.
 |---|---|
 | **Até 06/10, 20h** | Venda do ingresso da aula (R$67). **Encerrada.** |
 | **06/10, 20h** | Aula ao vivo "Por Dentro da Face". **Já aconteceu. Sem replay.** |
-| **06/10, até 23h59** | Academy com os **bônus da noite**: **+3 meses de acesso pra todo mundo** (15 no total), e os bônus dos 10 primeiros e dos 5 primeiros, pela página da sala |
+| **06/10, até 23h59** | Academy com os **bônus da noite**: **+3 meses de acesso pra todo mundo** (15 no total), e os bônus dos 10 primeiros, pela página da sala |
 | **A partir de 07/10** | Academy sem bônus, pela `/academy`. Curso de anatomia separado como downsell, com as regras do 04 |
 | **A partir de 07/10, 00h** | A página da sala (`/academy/sala`) passa a abrir a `/academy` |
-| **Até 10/10** | A equipe entrega os bônus dos 10 primeiros e estende o acesso de quem comprou na noite (15 meses; 18 pras 5 primeiras) |
+| **Até 10/10** | A equipe entrega os bônus dos 10 primeiros e estende o acesso de quem comprou na noite (15 meses) |
 
 Ofertas que **acabaram** com a aula: o ingresso de R$67, a condição de ex-alunas (`/alunas`), o
 order bump do Protocolo no checkout da aula e a aula de presente para quem comprou o Protocolo.
@@ -171,7 +171,7 @@ Garantia de tudo, menos da mentoria e do Protocolo: **Garantia Mão Segura** (7 
 - Venda do ingresso da aula, a condição de ex-alunas ou a aula de presente do Protocolo: **acabaram**.
 - Desconto, cupom, outro preço, outra parcela ou "condição só pra você".
 - Datas dos encontros ao vivo, da aula de casos, da mentoria ou dos cursos presenciais.
-- Que a pessoa está (ou não) entre os 10 ou os 5 primeiros da noite da aula.
+- Que a pessoa está (ou não) entre os 10 primeiros da noite da aula.
 - Número de vagas de qualquer coisa.
 - Nome, quantidade ou marca da toxina dos bônus (nunca "Botox").
 - Certificado, fora o bônus das 10 primeiras da noite da aula.

@@ -83,16 +83,16 @@
 ---
 
 ### Bloco 5 · Os bônus de hoje, só até meia-noite (2,5 min)
-> Mas você está aqui hoje. Então, pra quem entrar **hoje, até 23h59**, eu separei uma coisa a mais. E é só pros **dez primeiros**.
+> Mas você está aqui hoje. Então, **todo mundo** que entrar **hoje, até 23h59**, leva **mais três meses de acesso**: em vez de doze, você fica **quinze meses** dentro da Academy. Porque eu sei que a sua rotina não é só estudo: tem paciente, tem casa, tem filho.
+>
+> E pros **dez primeiros** eu separei uma coisa a mais:
 >
 > — O **certificado Filgueiras Academy**, pra paciente ver com quem você estudou.
 > — A minha **prancheta ilustrada**, a que eu uso pra explicar o procedimento pra paciente na consulta. Ela vale **R$600** e vai pelo correio.
 > — **Mentoria em grupo comigo**, só com esses dez. Vale **R$5.000**.
 > — E **toxina botulínica** pra sua próxima aplicação.
 >
-> Pros dez primeiros, a soma vai a **R$14.394**. E você continua pagando **R$1.797**.
->
-> E as **cinco primeiras** ainda levam **mais seis meses de acesso**. Em vez de doze, você fica **dezoito meses** dentro da Academy. Porque eu sei que a sua rotina não é só estudo: tem paciente, tem casa, tem filho.
+> Pros dez primeiros, a soma vai a **R$14.843**. E você continua pagando **R$1.797**.
 >
 > Os dez primeiros contam pela hora da compra. Quando fechar dez, acabou, mesmo antes da meia-noite.
 
@@ -100,9 +100,8 @@
 
 | Quem | Leva | Valor |
 |---|---|---|
-| Todo mundo | O núcleo | ~~R$8.794~~ |
-| 10 primeiros (até 23h59) | + certificado, prancheta, mentoria em grupo com a Aline e toxina | ~~R$14.394~~ |
-| 5 primeiros | + 6 meses (18 no total) | |
+| Todo mundo até 23h59 | O núcleo + 3 meses de acesso (15 no total) | ~~R$9.243~~ |
+| 10 primeiros (até 23h59) | + certificado, prancheta, mentoria em grupo com a Aline e toxina | ~~R$14.843~~ |
 | **Hoje** | | **R$1.797** |
 
 **A equipe anuncia a contagem real** ("faltam 4 dos 10").
@@ -128,14 +127,14 @@
 
 **A equipe, durante o pitch e as perguntas:**
 - Fixar o link no chat da aula e no grupo de WhatsApp.
-- Contar os 10 primeiros e os 5 primeiros pela hora da compra na Ticto e avisar a Aline ("faltam X dos 10").
+- Contar os 10 primeiros pela hora da compra na Ticto e avisar a Aline ("faltam X dos 10").
 - Ler em voz alta os nomes de quem escreveu ENTREI.
 
 ---
 
 ### Bloco 9 · Respostas rápidas para as perguntas ao vivo
 - **"Está caro."** "Um curso presencial só de toxina custa R$2.800. Aqui você leva o fresh frozen, a plataforma inteira, seis encontros ao vivo e uma aula de casos comigo por R$1.797, ou 12x de R$185,85. E tem 7 dias e a Garantia Mão Segura."
-- **"Não tenho tempo."** "São doze meses, no seu ritmo, e os encontros ficam gravados. E as cinco primeiras de hoje levam dezoito meses."
+- **"Não tenho tempo."** "São doze meses, no seu ritmo, e os encontros ficam gravados. E quem entra hoje leva quinze meses."
 - **"Já fiz curso e não funcionou."** "Quase nunca faltou conteúdo. Faltou ver por dentro e ter alguém junto. Aqui tem seis encontros ao vivo e uma aula de casos comigo."
 - **"Sou iniciante."** "É o melhor momento: você começa pela consulta e pela anatomia, sem vício."
 - **"Online não tem prática."** "Não substitui o hands-on. É o que faz o hands-on render. E você tem preferência nos meus presenciais quando quiser."
@@ -146,7 +145,7 @@
 - **"Posso pagar no Pix?"** "Pode: Pix ou cartão em até 12x, direto no link."
 
 **Repetição da oferta (a cada 5 a 10 minutos):**
-> Só lembrando: R$1.797 com o fresh frozen, a plataforma, seis encontros ao vivo e uma aula de casos comigo. Dos dez bônus de hoje (certificado, prancheta, mentoria em grupo comigo e toxina), faltam [X]. As cinco primeiras ainda levam dezoito meses. Vale até meia-noite. O link está aí.
+> Só lembrando: R$1.797 com o fresh frozen, a plataforma, seis encontros ao vivo e uma aula de casos comigo. Dos dez bônus de hoje (certificado, prancheta, mentoria em grupo comigo e toxina), faltam [X]. E todo mundo que entrar hoje leva quinze meses de acesso. Vale até meia-noite. O link está aí.
 
 ---
 
@@ -163,4 +162,4 @@
 3. **Formato da mentoria em grupo** (frequência, duração, por quanto tempo).
 4. **Toxina:** validar com o jurídico e a parte sanitária (é medicamento, e o público inclui esteticistas). Sem quantidade por enquanto. Nunca dizer a marca "Botox".
 5. **A Aline confirma** os "mais de 11 anos de clínica".
-6. **Operação de 07/10 a 10/10:** estender para 18 meses os 5 primeiros; enviar prancheta, certificado e toxina e abrir a mentoria para os 10 primeiros.
+6. **Operação de 07/10 a 10/10:** estender para 15 meses todas as compras da noite (oferta Sala); enviar prancheta, certificado e toxina e abrir a mentoria para os 10 primeiros.

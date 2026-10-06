@@ -26,7 +26,7 @@ Abra cada uma no celular e no computador.
 | # | Endereço | O que conferir | Esperado |
 |---|---|---|---|
 | 1.1 | `/academy` | Topo, seções e oferta | Headline "Você não estudou tanto pra continuar insegura na agulha e com a agenda parada". Card com o valor total ~~R$8.794~~ e R$1.797 (12x de R$185,85). Sem bônus dos 10 primeiros. Nenhum "Em breve" depois do item 0 |
-| 1.2 | `/academy/sala?preview=2026-10-06T21:30:00-03:00` | Noite da aula | Barra no topo "Bônus pros 10 primeiros até 06/10, 23h59" com contador. Card com ~~R$8.794~~, os bônus dos 10 primeiros (~~R$14.394~~) e os +6 meses dos 5 primeiros. Contador no card |
+| 1.2 | `/academy/sala?preview=2026-10-06T21:30:00-03:00` | Noite da aula | Barra no topo "+3 meses de acesso pra todo mundo e bônus pros 10 primeiros até 06/10, 23h59" com contador. Card com o núcleo, os +3 meses (~~R$9.243~~) e os bônus dos 10 primeiros (~~R$14.843~~). Contador no card |
 | 1.3 | `/academy/sala?preview=2026-10-07T10:00:00-03:00` | Depois do prazo | **Sem** barra, **sem** bônus, **sem** contador. Fica só o núcleo por R$1.797 |
 | 1.4 | `/academy/anatomia` | Downsell | "Se a Academy inteira não cabe agora…". R$797 (12x de R$82,42), ~~R$1.297~~, 6 meses e o quadro da troca pela diferença (R$1.000) |
 | 1.5 | `/academy/anatomia/upgrade` | Upsell do upgrade | "Você já tem a anatomia. Leve a Academy inteira pagando só R$1.000 a mais". Lista do que entra a mais, ~~R$8.396~~, botões "Sim…" e "Não…" |
@@ -64,7 +64,7 @@ Abra `/academy/sala?utm_source=teste&utm_campaign=sala` numa janela anônima. O 
 3. [ ] **E-mail:** chegam a confirmação da Ticto e o acesso da MemberKit.
 4. [ ] **MemberKit:** o aluno de teste está no plano da Academy de 12 meses, com a Anatomia liberada.
 5. [ ] **Ticto → Minhas Vendas → a venda → Rastreamento:** aparece `teste` / `sala`.
-6. [ ] **Ticto → Minhas Vendas:** dá para ordenar as vendas da Oferta Sala pela hora, que é como a equipe conta os 10 e os 5 primeiros.
+6. [ ] **Ticto → Minhas Vendas:** dá para ordenar as vendas da Oferta Sala pela hora, que é como a equipe conta os 10 primeiros.
 
 ---
 

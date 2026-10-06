@@ -18,8 +18,8 @@ O que muda **fora do site** está abaixo, na ordem de horário.
 
 - [ ] **2. Roteiro e slides da Aline.** Acrescentar o degrau novo no pitch:
   - **todo mundo que entrar hoje até 23h59: +3 meses de acesso (15 em vez de 12);**
-  - os 10 primeiros: certificado, prancheta, mentoria em grupo e toxina;
-  - os 5 primeiros: +6 meses (18 no total), em vez dos +3.
+  - os 10 primeiros: certificado, prancheta, mentoria em grupo e toxina.
+  - **Saiu (06/10):** os +6 meses dos 5 primeiros. Se algum slide fala em "5 primeiras" ou "18 meses", tirar. O roteiro (`pitch-aula-06-10.md`) já está ajustado.
 
 - [ ] **3. Ticto · oferta Sala (`OEF7AADF6`).** Se a descrição da oferta ou o checkout citam os bônus, acrescentar: "+3 meses de acesso para quem comprar até 23h59".
   - Caminho: Produtos → Filgueiras Academy → Ofertas → Sala → Editar → Salvar.
@@ -28,7 +28,7 @@ O que muda **fora do site** está abaixo, na ordem de horário.
 - [ ] **4. Mensagem pro grupo do WhatsApp da aula** (para usar depois do pitch):
   > A Filgueiras Academy está aberta, só pra quem está aqui hoje.
   > Até 23h59: **+3 meses de acesso pra todo mundo** (15 meses em vez de 12).
-  > E os 10 primeiros ainda levam certificado, prancheta ilustrada da Aline, mentoria em grupo com ela e toxina. As 5 primeiras ganham +6 meses (18 no total).
+  > E os 10 primeiros ainda levam certificado, prancheta ilustrada da Aline, mentoria em grupo com ela e toxina.
   > R$1.797, em 12x de R$185,85 ou no Pix, com a Garantia Mão Segura.
   > 👉 https://live.alinefilgueiras.com.br/academy/sala
 
@@ -53,12 +53,9 @@ O que muda **fora do site** está abaixo, na ordem de horário.
 
 - [ ] **8. Extensão do acesso na MemberKit.**
   1. Na **Ticto**: Vendas → filtro pela oferta **Sala (`OEF7AADF6`)** → status **aprovada** → período até **06/10, 23h59** → exportar.
-  2. Separar as **5 primeiras** pela hora da aprovação.
-  3. Na **MemberKit**: para cada aluna da lista, abrir o membro e ajustar a **data de expiração** da matrícula no plano da Academy:
-     - compra + **15 meses** para todas;
-     - compra + **18 meses** para as 5 primeiras.
+  2. Na **MemberKit**: para cada aluna da lista, abrir o membro e ajustar a **data de expiração** da matrícula no plano da Academy para compra + **15 meses**.
      *Não confirmei daqui o nome exato do campo na MemberKit. Se for diferente, o que importa é a data final do acesso.*
-  4. Conferir 3 alunas por amostragem.
+  3. Conferir 3 alunas por amostragem.
 
 ## Agente de IA
 
