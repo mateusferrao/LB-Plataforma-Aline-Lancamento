@@ -1,0 +1,534 @@
+{
+ "_sobre": "Corte da aula de forames (curso de anatomia da Filgueiras Academy). Tempos no vídeo original. Montagem: montar_aula.py",
+ "origem": {
+  "arquivo": "ScreenRecording_10-07-2026_08-44-23_1.mov",
+  "painel_aline": [
+   0,
+   1010
+  ],
+  "painel_ilustracao": [
+   1010,
+   1088
+  ]
+ },
+ "destaques": [
+  "forames",
+  "vascularização",
+  "nobre",
+  "pálpebra",
+  "superior",
+  "supratroclear",
+  "supraorbital",
+  "artéria",
+  "atenção",
+  "cuidado",
+  "evitar",
+  "risco",
+  "oclusão",
+  "olhos"
+ ],
+ "fundo_gancho": {
+  "ini": 0.5
+ },
+ "fundo_cta": {
+  "t": 43.5
+ },
+ "ganchos": {
+  "G1": {
+   "angulo": "risco",
+   "fala": "Aplica na glabela? Olha a artéria que sai de dentro da órbita.",
+   "texto": "APLICA NA GLABELA?",
+   "dur_previa": 3.8
+  },
+  "A1": {
+   "angulo": "agenda",
+   "fala": "Aplica e quer a agenda cheia? Começa sabendo o que passa aqui.",
+   "texto": "PRA QUEM APLICA E QUER AGENDA CHEIA",
+   "dur_previa": 3.9
+  },
+  "A2": {
+   "angulo": "confiança",
+   "fala": "Aplica harmonização? A paciente percebe quando sua mão hesita.",
+   "texto": "APLICA HARMONIZAÇÃO?",
+   "dur_previa": 3.6
+  }
+ },
+ "cta": {
+  "fala": "Essa aula tá na Filgueiras Academy, a plataforma dela. O link tá aqui embaixo.",
+  "texto": "FILGUEIRAS ACADEMY",
+  "sub": "a plataforma da Dra. Aline Filgueiras",
+  "dur_previa": 4.6
+ },
+ "cortes": [
+  {
+   "ini": 17.38,
+   "fim": 21.74,
+   "zoom": 1.0,
+   "cx": 544,
+   "cy": 590,
+   "zoom_aline": 1.0,
+   "palavras": [
+    [
+     17.42,
+     17.68,
+     "da"
+    ],
+    [
+     17.68,
+     17.94,
+     "região"
+    ],
+    [
+     17.94,
+     18.14,
+     "dos"
+    ],
+    [
+     18.14,
+     18.4,
+     "nossos"
+    ],
+    [
+     18.4,
+     18.86,
+     "forames"
+    ],
+    [
+     18.86,
+     19.44,
+     "sai"
+    ],
+    [
+     19.44,
+     20.92,
+     "vascularização"
+    ],
+    [
+     20.92,
+     21.26,
+     "bem"
+    ],
+    [
+     21.26,
+     21.7,
+     "nobre"
+    ]
+   ]
+  },
+  {
+   "ini": 24.12,
+   "fim": 25.05,
+   "zoom": 1.0,
+   "cx": 544,
+   "cy": 590,
+   "zoom_aline": 1.12,
+   "palavras": [
+    [
+     24.16,
+     24.86,
+     "principalmente"
+    ],
+    [
+     24.86,
+     25.0,
+     "de"
+    ]
+   ]
+  },
+  {
+   "ini": 26.3,
+   "fim": 28.58,
+   "zoom": 1.3,
+   "cx": 600,
+   "cy": 420,
+   "zoom_aline": 1.0,
+   "palavras": [
+    [
+     26.36,
+     26.78,
+     "pálpebra"
+    ],
+    [
+     26.78,
+     27.24,
+     "superior"
+    ],
+    [
+     27.24,
+     27.5,
+     "aqui"
+    ],
+    [
+     27.5,
+     27.7,
+     "na"
+    ],
+    [
+     27.7,
+     27.96,
+     "área"
+    ],
+    [
+     27.96,
+     28.3,
+     "dos"
+    ],
+    [
+     28.3,
+     28.54,
+     "olhos,"
+    ]
+   ]
+  },
+  {
+   "ini": 28.66,
+   "fim": 31.46,
+   "zoom": 1.6,
+   "cx": 660,
+   "cy": 360,
+   "zoom_aline": 1.12,
+   "palavras": [
+    [
+     28.68,
+     28.7,
+     "a"
+    ],
+    [
+     28.7,
+     28.84,
+     "gente"
+    ],
+    [
+     28.84,
+     29.68,
+     "tem"
+    ],
+    [
+     29.68,
+     30.26,
+     "o"
+    ],
+    [
+     30.26,
+     30.58,
+     "forame"
+    ],
+    [
+     30.58,
+     31.4,
+     "supratroclear,"
+    ]
+   ]
+  },
+  {
+   "ini": 31.6,
+   "fim": 37.98,
+   "zoom": 1.8,
+   "cx": 664,
+   "cy": 300,
+   "zoom_aline": 1.0,
+   "palavras": [
+    [
+     31.64,
+     31.8,
+     "o"
+    ],
+    [
+     31.8,
+     32.22,
+     "forame"
+    ],
+    [
+     32.22,
+     32.96,
+     "supraorbital"
+    ],
+    [
+     32.96,
+     33.22,
+     "e"
+    ],
+    [
+     33.22,
+     33.42,
+     "de"
+    ],
+    [
+     33.42,
+     33.7,
+     "dentro"
+    ],
+    [
+     33.7,
+     34.02,
+     "dele"
+    ],
+    [
+     34.02,
+     34.36,
+     "sai"
+    ],
+    [
+     34.36,
+     34.64,
+     "a"
+    ],
+    [
+     34.64,
+     35.06,
+     "artéria"
+    ],
+    [
+     35.06,
+     35.8,
+     "supratroclear"
+    ],
+    [
+     35.8,
+     36.36,
+     "e"
+    ],
+    [
+     36.36,
+     36.66,
+     "a"
+    ],
+    [
+     36.66,
+     37.24,
+     "artéria"
+    ],
+    [
+     37.24,
+     37.92,
+     "supraorbital,"
+    ]
+   ]
+  },
+  {
+   "ini": 38.28,
+   "fim": 42.46,
+   "zoom": 1.45,
+   "cx": 660,
+   "cy": 330,
+   "zoom_aline": 1.12,
+   "palavras": [
+    [
+     38.32,
+     38.52,
+     "então"
+    ],
+    [
+     38.52,
+     38.8,
+     "essa"
+    ],
+    [
+     38.8,
+     39.08,
+     "região"
+    ],
+    [
+     39.08,
+     39.34,
+     "aqui"
+    ],
+    [
+     39.34,
+     39.5,
+     "de"
+    ],
+    [
+     39.5,
+     39.74,
+     "fato"
+    ],
+    [
+     39.74,
+     39.96,
+     "é"
+    ],
+    [
+     39.96,
+     40.02,
+     "uma"
+    ],
+    [
+     40.02,
+     40.3,
+     "região"
+    ],
+    [
+     40.3,
+     40.6,
+     "de"
+    ],
+    [
+     40.6,
+     40.84,
+     "bastante"
+    ],
+    [
+     40.84,
+     41.3,
+     "atenção,"
+    ],
+    [
+     41.5,
+     41.62,
+     "de"
+    ],
+    [
+     41.62,
+     41.86,
+     "bastante"
+    ],
+    [
+     41.86,
+     42.42,
+     "cuidado,"
+    ]
+   ]
+  },
+  {
+   "ini": 43.04,
+   "fim": 50.85,
+   "zoom": 1.2,
+   "cx": 600,
+   "cy": 420,
+   "zoom_aline": 1.0,
+   "palavras": [
+    [
+     43.1,
+     43.1,
+     "a"
+    ],
+    [
+     43.1,
+     43.1,
+     "gente"
+    ],
+    [
+     43.1,
+     43.3,
+     "deve"
+    ],
+    [
+     43.3,
+     43.66,
+     "evitar"
+    ],
+    [
+     43.66,
+     43.82,
+     "ao"
+    ],
+    [
+     43.82,
+     44.1,
+     "máximo"
+    ],
+    [
+     44.1,
+     44.32,
+     "os"
+    ],
+    [
+     44.32,
+     44.84,
+     "preenchimentos"
+    ],
+    [
+     44.84,
+     45.04,
+     "nessa"
+    ],
+    [
+     45.04,
+     45.34,
+     "região"
+    ],
+    [
+     45.34,
+     45.52,
+     "por"
+    ],
+    [
+     45.52,
+     45.68,
+     "causa"
+    ],
+    [
+     45.68,
+     45.88,
+     "do"
+    ],
+    [
+     45.88,
+     46.56,
+     "risco"
+    ],
+    [
+     46.56,
+     46.84,
+     "de"
+    ],
+    [
+     46.84,
+     47.34,
+     "oclusão"
+    ],
+    [
+     47.34,
+     47.94,
+     "e"
+    ],
+    [
+     47.94,
+     48.02,
+     "o"
+    ],
+    [
+     48.02,
+     48.22,
+     "nível"
+    ],
+    [
+     48.22,
+     48.68,
+     "de"
+    ],
+    [
+     48.68,
+     49.62,
+     "proximidade"
+    ],
+    [
+     49.62,
+     49.84,
+     "com"
+    ],
+    [
+     49.84,
+     50.02,
+     "a"
+    ],
+    [
+     50.02,
+     50.2,
+     "região"
+    ],
+    [
+     50.2,
+     50.5,
+     "dos"
+    ],
+    [
+     50.5,
+     50.72,
+     "olhos."
+    ]
+   ]
+  }
+ ]
+}
