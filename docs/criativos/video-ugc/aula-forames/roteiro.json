@@ -80,10 +80,41 @@
   }
  },
  "cta": {
-  "fala": "Na plataforma dela tem isso e a consulta que fecha paciente. Toca em saiba mais.",
+  "fala": "Na Filgueiras Academy tem isso e muito mais. Quer atender com mais segurança e fechar mais pacientes? Clique aqui e saiba mais.",
   "texto": "FILGUEIRAS ACADEMY",
   "sub": "7 dias de garantia · acesso imediato",
-  "dur_previa": 5.0
+  "dur_previa": 6.0,
+  "frases": [
+   [
+    "Na Filgueiras Academy tem isso e muito mais.",
+    0.0,
+    2.7
+   ],
+   [
+    "Quer atender com mais segurança e fechar mais pacientes?",
+    2.85,
+    5.6
+   ],
+   [
+    "Clique aqui e saiba mais.",
+    5.8,
+    6.9
+   ]
+  ],
+  "tomada": {
+   "arquivo": "Woman_speaking_in_selfie_video_20261007111138.mp4",
+   "trechos": [
+    [
+     0.76,
+     3.52
+    ],
+    [
+     3.7,
+     7.86
+    ]
+   ],
+   "fundo": "removido com IA (BiRefNet portrait) e trocado por verde"
+  }
  },
  "cortes": [
   {

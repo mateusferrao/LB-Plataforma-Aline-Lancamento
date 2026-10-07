@@ -48,7 +48,7 @@ nada de depoimento ("eu fiz", "minha paciente") e nada de profissão ou nome.
 | G1 | Risco | "Aplica na glabela? Olha a artéria que sai de dentro da órbita." [polegar por cima do ombro no "Olha"] | APLICA NA GLABELA? |
 | N1 | Agenda + onde não aplicar | "Aplica e quer a agenda cheia? Começa sabendo onde não aplicar." [aponta pra trás no "onde"] | PRA QUEM APLICA E QUER AGENDA CHEIA |
 | C1 | Controle | "Quer encher sua agenda e aplicar com mais segurança?" | QUER ENCHER SUA AGENDA? |
-| CTA | Fechamento | "Na plataforma dela tem isso e a consulta que fecha paciente. Toca em saiba mais." [aponta pra baixo no "saiba mais"] | FILGUEIRAS ACADEMY · 7 dias de garantia · acesso imediato |
+| CTA | Fechamento | Gravado (07/10): "Na Filgueiras Academy tem isso e muito mais. Quer atender com mais segurança e fechar mais pacientes? Clique aqui e saiba mais." [aponta pra baixo] | FILGUEIRAS ACADEMY · 7 dias de garantia · acesso imediato |
 
 - **G1:** as artérias supratroclear e supraorbital são ramos da oftálmica e **saem** da órbita.
   "A artéria que vai pro olho" estaria errado. A Aline ou alguém da equipe valida a frase antes
@@ -61,7 +61,10 @@ nada de depoimento ("eu fiz", "minha paciente") e nada de profissão ou nome.
 - **C1:** a frase da equipe, sem mudar nada, pra os dados decidirem. Os riscos que a gente viu:
   a pergunta tem resposta óbvia ("sim") e não abre curiosidade; são dois desejos numa frase só;
   e o filtro ("aplicar") só chega no meio da frase.
-- **CTA:** o gancho prometeu agenda e a aula só entrega segurança. Quem fecha a agenda é o CTA,
+- **CTA gravado:** a equipe trocou o texto do roteiro (abaixo). A pergunta do meio fecha a
+  promessa da agenda; o "e muito mais" é a parte genérica e ficou porque a emenda sem ele soou
+  cortada (corte A, escolhido em 07/10). Pra uma próxima tomada, vale testar o texto do roteiro.
+- **CTA do roteiro:** o gancho prometeu agenda e a aula só entrega segurança. Quem fecha a agenda é o CTA,
   com o que o produto tem de verdade (a Consulta que Vende, pra paciente não sair dizendo "vou
   pensar"). A garantia de 7 dias fica na tela pra caber nos 8s do Veo. O nome "Garantia Mão
   Segura" só entra depois que a Aline confirmar. "Toca em saiba mais" é o nome do botão do
@@ -146,13 +149,39 @@ sem dedos a mais.
 
 ## 4. Montagem
 
+### Tomadas de 07/10
+
+As tomadas do Flow vieram com a parede do quadro inicial atrás (o CTA ainda troca de parede bege
+pra verde-sálvia aos 1,06s). O fundo foi removido com IA, quadro a quadro, e trocado por verde
+liso, pra seguir o caminho normal do chroma key no script.
+
+| Tomada | Trechos aproveitados (s) | Velocidade |
+|---|---|---|
+| N1 · `Mulher_gravando_v_deo_de_an_ncio_20261007103741.mp4` | 1,05–2,95 + 3,26–5,52 (corta 1s mudo no começo e 4s no fim) | 1,15× |
+| CTA · `Woman_speaking_in_selfie_video_20261007111138.mp4` | 0,76–3,52 + 3,70–7,86 (corte A) | 1,15× |
+
+Remoção do fundo (fora do repositório, num ambiente com `pip install "rembg[cpu]"`): o modelo
+BiRefNet portrait preserva os fios soltos melhor que o isnet e o u2net, mas leva uns 30s por
+quadro e estoura a memória se rodar tudo de uma vez. Rode em lotes, a cada 2 quadros, e
+interpole o recorte entre eles, com uma média de 3 quadros pra não tremer.
+
+O pulo de pose do CTA (a mão some aos 1,06s da tomada) cai dentro da animação em que a Camila
+sobe na tela (`ENTRADA_ANIM` = 0,32s), e por isso não aparece.
+
+### Comando
+
 ```
 python3 docs/criativos/video-ugc/montar_aula.py \
   --roteiro docs/criativos/video-ugc/aula-forames/roteiro.json \
   --aula ScreenRecording_10-07-2026_08-44-23_1.mov \
-  --gancho N1 --avatar-gancho camila-n1.mp4 --avatar-cta camila-cta.mp4 \
+  --gancho N1 --avatar-gancho camila-n1-verde.mp4 --vel-gancho 1.15 \
+  --avatar-cta camila-cta-verde.mp4 --vel-cta 1.15 \
   --saida ugc-forames-n1.mp4
 ```
+
+As tomadas entram já cortadas e com fundo verde. `--vel-*` acelera imagem e voz juntas; acima
+de 1,2× a voz fica metálica. As legendas da Camila seguem os tempos de cada frase
+(`frases` no `roteiro.json`, medidos na velocidade normal).
 
 Sem `--avatar-*`, sai a prévia com a foto parada da Camila e sem voz nesses trechos. O script
 lê a cor do fundo no canto do primeiro quadro, recorta o verde, encaixa os três trechos, põe o

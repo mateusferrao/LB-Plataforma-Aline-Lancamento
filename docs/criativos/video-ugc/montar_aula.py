@@ -31,7 +31,8 @@ BASE_H = H - TOPO_H
 AQUI = Path(__file__).resolve().parent
 FOTO_CAMILA = AQUI / "avatar" / "camila-transparente.png"
 AV_LARG, AV_X, AV_Y_EXTRA = 900, (W - 900) // 2 + 40, 80
-SAIDA_ANIM = 0.25  # segundos da Camila deslizando pra fora / pra dentro
+SAIDA_ANIM = 0.25  # segundos da Camila deslizando pra fora no fim do gancho
+ENTRADA_ANIM = 0.32  # segundos dela subindo no CTA (esconde o pulo de pose da tomada de 07/10, aos 0,26s)
 
 X264 = ["-c:v", "libx264", "-preset", "medium", "-crf", "19", "-pix_fmt", "yuv420p", "-r", str(FPS)]
 AAC = ["-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-ac", "2"]
@@ -223,7 +224,7 @@ def montar_camila(aula, fundo_filtro, fundo_ss, avatar, dur_previa, entrada, ass
         chave = f"[1:v]fps={FPS},scale={AV_LARG}:-1,format=yuva420p[p]"
         audio = ["-map", "2:a"]
     if entrada:  # CTA: sobe de baixo
-        y = f"H-h+{AV_Y_EXTRA}+max(0\\,{SAIDA_ANIM}-t)*{H}*3"
+        y = f"H-h+{AV_Y_EXTRA}+max(0\\,{ENTRADA_ANIM}-t)*{H}*3"
     else:  # gancho: desce e sai no fim
         y = f"H-h+{AV_Y_EXTRA}+max(0\\,t-{dur - SAIDA_ANIM:.3f})*{H}*3"
     filtro = (f"[0:v]fps={FPS},{fundo_filtro},scale={W}:{H},setsar=1,trim=duration={dur:.3f}[bg];{chave};"
@@ -248,6 +249,7 @@ def main():
     ap.add_argument("--avatar-cta")
     ap.add_argument("--vel-gancho", type=float, default=1.0,
                     help="acelera a tomada do gancho (ex.: 1.15); os tempos das frases são corrigidos")
+    ap.add_argument("--vel-cta", type=float, default=1.0, help="acelera a tomada do CTA")
     ap.add_argument("--saida", required=True)
     a = ap.parse_args()
 
@@ -280,13 +282,18 @@ def main():
                f"subtitles='{ass_c}':fontsdir='{AQUI}'", *X264, "-c:a", "copy", str(corpo)])
 
         # CTA: o quadro da elipse congelado, mais escuro, com a Camila subindo.
-        dur_cta = duracao(a.avatar_cta) if a.avatar_cta else cta["dur_previa"]
+        av_k = Path(a.avatar_cta) if a.avatar_cta else None
+        if av_k and a.vel_cta != 1.0:
+            av_k = acelerar(av_k, a.vel_cta, pasta)
+        dur_cta = duracao(av_k) if av_k else cta["dur_previa"]
+        pals_k = palavras_espalhadas(cta["fala"], dur_cta, frases=cta.get("frases") if av_k else None,
+                                     escala=1 / a.vel_cta)
         ass_k = pasta / "cta.ass"
         escrever_ass(ass_k, [f"Dialogue: 0,0:00:00.00,{ass_tempo(dur_cta)},Topo,,0,0,0,,{cta['texto']}",
                              f"Dialogue: 0,0:00:00.00,{ass_tempo(dur_cta)},Sub,,0,0,0,,{cta['sub']}"]
-                     + eventos_de_palavras(palavras_espalhadas(cta["fala"], dur_cta), "Fala", set(), dur_cta))
+                     + eventos_de_palavras(pals_k, "Fala", set(), dur_cta))
         fundo_k = "crop=664:1180:1222:0,tpad=stop_mode=clone:stop_duration=30,boxblur=4,eq=brightness=-0.3:saturation=0.8"
-        fim_k, _ = montar_camila(a.aula, fundo_k, ["-ss", f"{r['fundo_cta']['t']}", "-t", "0.1"], a.avatar_cta,
+        fim_k, _ = montar_camila(a.aula, fundo_k, ["-ss", f"{r['fundo_cta']['t']}", "-t", "0.1"], av_k,
                                  cta["dur_previa"], True, ass_k, pasta, "cta")
 
         # Emenda, clique de "play" nas duas viradas e volume no padrão das redes (-14 LUFS).
