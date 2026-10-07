@@ -44,7 +44,33 @@
    "angulo": "agenda + onde não aplicar",
    "fala": "Aplica e quer a agenda cheia? Começa sabendo onde não aplicar.",
    "texto": "PRA QUEM APLICA E QUER AGENDA CHEIA",
-   "dur_previa": 3.8
+   "dur_previa": 3.8,
+   "frases": [
+    [
+     "Aplica e quer a agenda cheia?",
+     0.0,
+     1.75
+    ],
+    [
+     "Começa sabendo onde não aplicar.",
+     2.05,
+     4.05
+    ]
+   ],
+   "tomada": {
+    "arquivo": "Mulher_gravando_v_deo_de_an_ncio_20261007103741.mp4",
+    "trechos": [
+     [
+      1.05,
+      2.95
+     ],
+     [
+      3.26,
+      5.52
+     ]
+    ],
+    "fundo": "removido com IA (BiRefNet portrait) e trocado por verde"
+   }
   },
   "C1": {
    "angulo": "controle (frase da equipe)",

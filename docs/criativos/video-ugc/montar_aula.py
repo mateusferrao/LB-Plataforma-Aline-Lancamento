@@ -132,17 +132,36 @@ def eventos_de_palavras(palavras, estilo, destaques, fim_total):
     return ev
 
 
-def palavras_espalhadas(fala, dur, ini=0.15, fim_folga=0.2, pular=""):
-    """Sem as marcas de tempo da fala da Camila, distribui as palavras pelo trecho.
+def espalhar(texto, ini, fim):
+    pals = texto.split()
+    passo = (fim - ini) / len(pals)
+    return [[ini + i * passo, ini + (i + 1) * passo, p] for i, p in enumerate(pals)]
 
-    As primeiras palavras que repetem o texto fixo da tela (`pular`) não viram legenda."""
-    pals = fala.split()
-    passo = (dur - ini - fim_folga) / len(pals)
-    todas = [[ini + i * passo, ini + (i + 1) * passo, p] for i, p in enumerate(pals)]
+
+def palavras_espalhadas(fala, dur, ini=0.15, fim_folga=0.2, pular="", frases=None, escala=1.0):
+    """Palavras da fala da Camila com tempo, pra legenda.
+
+    Com `frases` ([texto, ini, fim] medidos na tomada em velocidade normal), cada frase ocupa o
+    trecho em que ela é dita; `escala` corrige os tempos quando a tomada é acelerada. Sem
+    `frases`, as palavras são distribuídas por igual no trecho. As primeiras palavras que
+    repetem o texto fixo da tela (`pular`) não viram legenda."""
+    if frases:
+        todas = [p for t, a, b in frases for p in espalhar(t, a * escala, b * escala)]
+    else:
+        todas = espalhar(fala, ini, dur - fim_folga)
     norm = lambda t: t.strip(",.?!").lower()
     fixo = [norm(x) for x in pular.split()]
-    n = len(fixo) if [norm(p) for p in pals[:len(fixo)]] == fixo else 0
+    n = len(fixo) if [norm(p[2]) for p in todas[:len(fixo)]] == fixo else 0
     return todas[n:]
+
+
+def acelerar(video, vel, pasta):
+    """Acelera imagem e voz juntas (atempo mantém o tom da voz). Acima de 1,2× a voz fica metálica."""
+    saida = pasta / f"acelerado-{video.stem}.mp4"
+    rodar(["ffmpeg", "-v", "error", "-y", "-i", str(video), "-filter_complex",
+           f"[0:v]setpts=PTS/{vel},fps={FPS}[v];[0:a]atempo={vel}[a]", "-map", "[v]", "-map", "[a]",
+           *X264, *AAC, str(saida)])
+    return saida
 
 
 # ---------------------------------------------------------------- trechos
@@ -227,6 +246,8 @@ def main():
     ap.add_argument("--gancho", required=True, help="id do gancho no roteiro (G1, A1, A2…)")
     ap.add_argument("--avatar-gancho")
     ap.add_argument("--avatar-cta")
+    ap.add_argument("--vel-gancho", type=float, default=1.0,
+                    help="acelera a tomada do gancho (ex.: 1.15); os tempos das frases são corrigidos")
     ap.add_argument("--saida", required=True)
     a = ap.parse_args()
 
@@ -238,12 +259,17 @@ def main():
         pasta = Path(tmp)
 
         # Gancho: a aula rodando muda atrás (a seta sendo desenhada), escurecida.
-        dur_g = duracao(a.avatar_gancho) if a.avatar_gancho else g["dur_previa"]
+        av_g = Path(a.avatar_gancho) if a.avatar_gancho else None
+        if av_g and a.vel_gancho != 1.0:
+            av_g = acelerar(av_g, a.vel_gancho, pasta)
+        dur_g = duracao(av_g) if av_g else g["dur_previa"]
+        frases = g.get("frases") if av_g else None
+        pals_g = palavras_espalhadas(g["fala"], dur_g, pular=g["texto"], frases=frases, escala=1 / a.vel_gancho)
         ass_g = pasta / "gancho.ass"
         escrever_ass(ass_g, [f"Dialogue: 0,0:00:00.00,{ass_tempo(dur_g)},Topo,,0,0,0,,{g['texto']}"]
-                     + eventos_de_palavras(palavras_espalhadas(g["fala"], dur_g, pular=g["texto"]), "Fala", set(), dur_g))
+                     + eventos_de_palavras(pals_g, "Fala", set(), dur_g))
         fundo_g = "crop=664:1180:1222:0,boxblur=3,eq=brightness=-0.16:saturation=0.9"
-        gancho, _ = montar_camila(a.aula, fundo_g, ["-ss", f"{r['fundo_gancho']['ini']}"], a.avatar_gancho,
+        gancho, _ = montar_camila(a.aula, fundo_g, ["-ss", f"{r['fundo_gancho']['ini']}"], av_g,
                                   g["dur_previa"], False, ass_g, pasta, "gancho")
 
         corpo_bruto, pals, dur_c = montar_corpo(a.aula, r["cortes"], pasta)
