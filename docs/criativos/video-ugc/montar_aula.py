@@ -250,6 +250,7 @@ def main():
     ap.add_argument("--vel-gancho", type=float, default=1.0,
                     help="acelera a tomada do gancho (ex.: 1.15); os tempos das frases são corrigidos")
     ap.add_argument("--vel-cta", type=float, default=1.0, help="acelera a tomada do CTA")
+    ap.add_argument("--som-virada", help="efeito curto (wav/mp3) tocado nas duas viradas; sem ele, nenhum som")
     ap.add_argument("--saida", required=True)
     a = ap.parse_args()
 
@@ -296,13 +297,20 @@ def main():
         fim_k, _ = montar_camila(a.aula, fundo_k, ["-ss", f"{r['fundo_cta']['t']}", "-t", "0.1"], av_k,
                                  cta["dur_previa"], True, ass_k, pasta, "cta")
 
-        # Emenda, clique de "play" nas duas viradas e volume no padrão das redes (-14 LUFS).
+        # Emenda e volume no padrão das redes (-14 LUFS). O som de virada só entra se vier um
+        # arquivo (--som-virada): o bipe sintetizado da 1ª versão soava como apito.
         t1, t2 = dur_g, dur_g + duracao(corpo)
-        clique = "aevalsrc='0.5*sin(2*PI*1800*t)*exp(-70*t)':d=0.09:s=48000,aformat=channel_layouts=stereo"
-        filtro = (f"[0:v][0:a][1:v][1:a][2:v][2:a]concat=n=3:v=1:a=1[v][au];"
-                  f"{clique},asplit[c1][c2];[c1]adelay={int(t1 * 1000)}:all=1[k1];[c2]adelay={int(t2 * 1000)}:all=1[k2];"
-                  f"[au][k1][k2]amix=inputs=3:duration=first:normalize=0,loudnorm=I=-14:TP=-1.5:LRA=11[a]")
-        rodar(["ffmpeg", "-v", "error", "-y", "-i", str(gancho), "-i", str(corpo), "-i", str(fim_k),
+        entradas = ["-i", str(gancho), "-i", str(corpo), "-i", str(fim_k)]
+        filtro = "[0:v][0:a][1:v][1:a][2:v][2:a]concat=n=3:v=1:a=1[v][au];"
+        if a.som_virada:
+            entradas += ["-i", a.som_virada]
+            filtro += (f"[3:a]aformat=sample_rates=48000:channel_layouts=stereo,volume=0.6,asplit[c1][c2];"
+                       f"[c1]adelay={int(t1 * 1000)}:all=1[k1];[c2]adelay={int(t2 * 1000)}:all=1[k2];"
+                       f"[au][k1][k2]amix=inputs=3:duration=first:normalize=0,")
+        else:
+            filtro += "[au]"
+        filtro += "loudnorm=I=-14:TP=-1.5:LRA=11[a]"
+        rodar(["ffmpeg", "-v", "error", "-y", *entradas,
                "-filter_complex", filtro, "-map", "[v]", "-map", "[a]", *X264, *AAC,
                "-movflags", "+faststart", a.saida])
     print(f"{a.saida}: gancho {dur_g:.1f}s + aula {t2 - t1:.1f}s + CTA {dur_cta:.1f}s = {t2 + dur_cta:.1f}s")

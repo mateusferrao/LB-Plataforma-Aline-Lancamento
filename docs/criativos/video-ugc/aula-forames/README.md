@@ -23,7 +23,7 @@ Decisões de 07/10:
 | Tempo | Tela | Som |
 |---|---|---|
 | 0–3,8s | **Gancho.** Aula rodando muda, escurecida e desfocada (a seta subindo da boca pro olho). Camila na metade de baixo. Texto-filtro no topo, legenda da fala sobre o jaleco. No fim ela desliza pra baixo. | Voz da Camila |
-| 3,8–33s | **Aula na vertical.** Ilustração em cima (1080×1170), Aline embaixo (1080×750). 7 cortes sem as pausas, com zoom por corte que acompanha o desenho (1,0× → 1,8× no forame → 1,2×). Legenda em caixa alta, 2 ou 3 palavras, com os termos-chave em amarelo. | Aula, com clique de "play" na virada |
+| 3,8–33s | **Aula na vertical.** Ilustração em cima (1080×1170), Aline embaixo (1080×750). 7 cortes sem as pausas, com zoom por corte que acompanha o desenho (1,0× → 1,8× no forame → 1,2×). Legenda em caixa alta, 2 ou 3 palavras, com os termos-chave em amarelo. | Aula (sem efeito na virada; dá pra pôr um com `--som-virada`) |
 | 33–38s | **CTA.** O quadro da elipse congelado e escuro. A Camila sobe de baixo. "FILGUEIRAS ACADEMY" + "7 dias de garantia · acesso imediato" no topo. | Voz da Camila |
 
 O corpo usa só o trecho de 17,4s a 50,9s do original, porque os primeiros 17s começam no meio
@@ -185,7 +185,7 @@ de 1,2× a voz fica metálica. As legendas da Camila seguem os tempos de cada fr
 
 Sem `--avatar-*`, sai a prévia com a foto parada da Camila e sem voz nesses trechos. O script
 lê a cor do fundo no canto do primeiro quadro, recorta o verde, encaixa os três trechos, põe o
-clique de "play" nas viradas e normaliza o volume em -14 LUFS. Ele precisa de ffmpeg com libass
+som de virada só se você passar `--som-virada arquivo.wav` (o bipe sintetizado da 1ª versão saiu, porque soava como apito) e normaliza o volume em -14 LUFS. Ele precisa de ffmpeg com libass
 e de Pillow.
 
 ## 5. Texto do anúncio
