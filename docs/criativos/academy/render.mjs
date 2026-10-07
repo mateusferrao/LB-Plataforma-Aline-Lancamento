@@ -22,6 +22,8 @@ const PECAS = [
   ["2", "E2-vou-pensar"],
   ["3", "E3-tudo-num-lugar-so"],
   ["4", "E4-agenda-parada"],
+  ["5", "E5a-clean-academy"],
+  ["6", "E5b-clean-fresh-frozen"],
 ];
 
 function screenshot(only, destino, w, h) {

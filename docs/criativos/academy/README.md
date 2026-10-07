@@ -1,6 +1,6 @@
 # Criativos · Filgueiras Academy (out/2026)
 
-10 criativos de tráfego para a **`/academy`** (evergreen): 6 vídeos e 4 estáticos, feitos só com o
+Criativos de tráfego para a **`/academy`** (evergreen): 6 vídeos, 6 estáticos e as variantes com gancho UGC, feitos só com o
 material real do laboratório de dissecção nos EUA (gravado em 19/08/2026) e com o clipe da aula de
 calha lacrimal (02/10).
 
@@ -46,6 +46,8 @@ calha lacrimal (02/10).
 | **E2** · Vou pensar | Frio | **Venda** | Conversa de WhatsApp (ilustrativa) | A paciente pede o valor, responde "Vou pensar." e some há 9 dias |
 | **E3** · Tudo num lugar só | Remarketing | Academy completa | Grade 2×2 | "Fez curso e continua travada na agulha e na consulta?" |
 | **E4** · Agenda parada | Remarketing | **Agenda** | A semana vazia (2 de 30 horários) | "Você postou, fez promoção, baixou o preço. E a agenda continua parada." |
+| **E5a** · Clean · Filgueiras Academy | Frio | Marca | Versão clara (ref. de 07/10): creme, título serifado, linhas finas, retrato de estúdio recortado | "Filgueiras Academy · Anatomia · técnica · consulta" |
+| **E5b** · Clean · Anatomia fresh frozen | Frio | Anatomia | Mesmo layout claro | "Anatomia fresh frozen · online · sem visto e sem passagem" |
 
 A conversa do E2 e a agenda do E4 são **ilustrativas**: mostram a situação de quem lê. Não são print
 de cliente nem depoimento.

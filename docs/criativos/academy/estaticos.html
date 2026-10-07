@@ -160,6 +160,46 @@
   .story.e4 .agenda .total { font-size: 26px; }
   .story.e4 .texto { top: 1270px; }
   .story.e4 p { font-size: 30px; }
+
+  /* ---------- E5 · versão clara e clean (referência de 07/10): creme, título serifado, linhas finas ---------- */
+  .claro { background:
+      radial-gradient(1200px 900px at 12% 8%, #fffdf9 0%, rgba(255,253,249,0) 60%),
+      radial-gradient(900px 700px at 95% 70%, rgba(226,214,200,.55) 0%, rgba(226,214,200,0) 70%),
+      linear-gradient(180deg, #f6f1ea 0%, #efe7dd 100%);
+    color: #2a2320; }
+  .claro .moldura { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+  .claro .moldura path { fill: none; stroke: #7e1e1c; stroke-opacity: .55; stroke-width: 2.2; }
+  .claro .tracos { position: absolute; right: 30px; top: 560px; width: 400px; height: 460px; }
+  .claro .tracos path { fill: none; stroke: #7e1e1c; stroke-opacity: .5; stroke-width: 2.2; stroke-linecap: round; }
+  .claro .tracos .camada { stroke-dasharray: 3 9; stroke-opacity: .55; }
+  .claro .tracos circle { fill: #7e1e1c; fill-opacity: .55; }
+  .claro .foto { position: absolute; inset: auto; left: -60px; bottom: 0; width: 700px; height: auto; background: none;
+    filter: brightness(1.06) contrast(1.02) saturate(.95); }
+  .claro .bloco5 { position: absolute; right: 72px; top: 118px; width: 700px; text-align: right; }
+  .claro .sobre { font-size: 25px; font-weight: 600; letter-spacing: .34em; text-transform: uppercase; color: #2a2320; }
+  .claro .titulo5 { margin-top: 18px; font-family: "Fraunces", serif; font-weight: 400; line-height: .95; letter-spacing: .01em; text-transform: uppercase; }
+  .claro .titulo5 span { display: block; white-space: nowrap; }
+  .claro .titulo5 .l1 { color: #1f1a17; }
+  .claro .titulo5 .l2 { background: linear-gradient(90deg, #6b1817, #9d2c27 60%, #7e1e1c); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .claro .divisor { margin: 30px 0 0 auto; width: 560px; height: 14px; position: relative; }
+  .claro .divisor::before { content: ""; position: absolute; left: 0; right: 0; top: 7px; border-top: 1.5px solid rgba(126,30,28,.55); }
+  .claro .divisor::after { content: ""; position: absolute; left: 50%; top: 2px; width: 10px; height: 10px; background: #7e1e1c; transform: translateX(-50%) rotate(45deg); }
+  .claro .local { margin-top: 22px; font-size: 22px; font-weight: 600; letter-spacing: .14em; white-space: nowrap; text-transform: uppercase; color: #7e1e1c; }
+  .claro .selo5 { position: absolute; right: 72px; bottom: 92px; text-align: right; }
+  .claro .selo5 .caixa { display: inline-block; border: 1.5px solid #7e1e1c; padding: 14px 24px; font-size: 22px; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; color: #2a2320; background: rgba(255,253,249,.6); }
+  .claro .selo5 small { display: block; margin: 14px 0 0 auto; max-width: 330px; font-size: 21px; line-height: 1.45; letter-spacing: .04em; color: #6a5f58; }
+  .claro.grao::after { opacity: .05; mix-blend-mode: multiply; }
+
+  .e5a .titulo5 .l1 { font-size: 104px; } .e5a .titulo5 .l2 { font-size: 118px; }
+  .e5b .titulo5 .l1 { font-size: 112px; } .e5b .titulo5 .l2 { font-size: 80px; margin-top: 8px; }
+
+  /* story (área segura: 250px em cima, 330px embaixo) */
+  .story.claro .bloco5 { top: 300px; }
+  .story.claro .foto { width: 900px; left: -110px; }
+  .story.claro .tracos { top: 860px; right: 20px; transform: scale(1.15); transform-origin: right top; }
+  .story.claro .selo5 { bottom: 380px; }
+  .story.e5a .titulo5 .l1 { font-size: 104px; } .story.e5a .titulo5 .l2 { font-size: 118px; }
+  .story.e5b .titulo5 .l1 { font-size: 112px; } .story.e5b .titulo5 .l2 { font-size: 80px; }
 </style>
 </head>
 <body>
@@ -284,6 +324,58 @@
     <span class="cta">Quero entrar na Academy <span class="seta">→</span></span>
     <span class="assina"><img src="fotos/avatar-aline.jpg" alt=""><span><b>Dra. Aline Filgueiras</b>1.000+ alunas formadas</span></span>
   </div>
+</section>
+
+<!-- E5A · versão clara (referência de 07/10). Sem preço e sem escassez. -->
+<section class="ad claro grao e5a" id="c5">
+  <svg class="moldura" viewBox="0 0 1080 1350" preserveAspectRatio="none">
+    <path d="M 38 820 L 38 170 Q 38 40 168 40 L 1042 40 L 1042 330"/>
+    <path d="M 0 1250 Q 300 1205 640 1228"/>
+  </svg>
+  <img class="foto" src="fotos/aline-estudio-recorte.webp" alt="Dra. Aline Filgueiras">
+  <svg class="tracos" viewBox="0 0 400 460">
+    <path d="M 250 8 C 205 30 190 90 196 140 C 199 160 186 176 170 190 C 158 200 140 214 128 226 C 122 232 126 240 138 242 C 146 243 150 248 146 254 C 142 260 146 266 154 268 C 146 272 144 280 150 286 C 156 292 152 300 150 308 C 148 322 160 338 186 346 C 222 356 262 360 300 340"/>
+    <path d="M 300 340 C 312 380 300 420 290 456"/>
+    <path d="M 206 176 C 216 186 238 188 252 180"/>
+    <path d="M 214 184 L 210 194 M 224 188 L 222 199 M 236 189 L 236 200 M 247 186 L 249 196"/>
+    <path class="camada" d="M 160 300 C 210 290 262 262 316 214"/>
+    <path class="camada" d="M 176 324 C 230 316 286 286 340 238"/>
+    <path class="camada" d="M 198 344 C 252 338 306 310 362 264"/>
+    <circle cx="316" cy="214" r="4"/><circle cx="340" cy="238" r="4"/><circle cx="362" cy="264" r="4"/>
+  </svg>
+  <div class="bloco5">
+    <p class="sobre">Plataforma online</p>
+    <h1 class="titulo5"><span class="l1">Filgueiras</span><span class="l2">Academy</span></h1>
+    <div class="divisor"></div>
+    <p class="local">Anatomia · técnica · consulta</p>
+  </div>
+  <div class="selo5"><span class="caixa">12 meses de acesso</span><small>Dra. Aline Filgueiras<br>1.000+ alunas formadas</small></div>
+</section>
+
+<!-- E5B · versão clara (referência de 07/10). Sem preço e sem escassez. -->
+<section class="ad claro grao e5b" id="c6">
+  <svg class="moldura" viewBox="0 0 1080 1350" preserveAspectRatio="none">
+    <path d="M 38 820 L 38 170 Q 38 40 168 40 L 1042 40 L 1042 330"/>
+    <path d="M 0 1250 Q 300 1205 640 1228"/>
+  </svg>
+  <img class="foto" src="fotos/aline-estudio-recorte.webp" alt="Dra. Aline Filgueiras">
+  <svg class="tracos" viewBox="0 0 400 460">
+    <path d="M 250 8 C 205 30 190 90 196 140 C 199 160 186 176 170 190 C 158 200 140 214 128 226 C 122 232 126 240 138 242 C 146 243 150 248 146 254 C 142 260 146 266 154 268 C 146 272 144 280 150 286 C 156 292 152 300 150 308 C 148 322 160 338 186 346 C 222 356 262 360 300 340"/>
+    <path d="M 300 340 C 312 380 300 420 290 456"/>
+    <path d="M 206 176 C 216 186 238 188 252 180"/>
+    <path d="M 214 184 L 210 194 M 224 188 L 222 199 M 236 189 L 236 200 M 247 186 L 249 196"/>
+    <path class="camada" d="M 160 300 C 210 290 262 262 316 214"/>
+    <path class="camada" d="M 176 324 C 230 316 286 286 340 238"/>
+    <path class="camada" d="M 198 344 C 252 338 306 310 362 264"/>
+    <circle cx="316" cy="214" r="4"/><circle cx="340" cy="238" r="4"/><circle cx="362" cy="264" r="4"/>
+  </svg>
+  <div class="bloco5">
+    <p class="sobre">Filgueiras Academy</p>
+    <h1 class="titulo5"><span class="l1">Anatomia</span><span class="l2">Fresh frozen</span></h1>
+    <div class="divisor"></div>
+    <p class="local">Online · sem visto e sem passagem</p>
+  </div>
+  <div class="selo5"><span class="caixa">Novo na plataforma</span><small>Dra. Aline Filgueiras<br>1.000+ alunas formadas</small></div>
 </section>
 
 <script>
