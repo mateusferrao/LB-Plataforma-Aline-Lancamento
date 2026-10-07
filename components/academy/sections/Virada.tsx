@@ -11,13 +11,16 @@ export function Virada() {
       </Titulo>
       <Reveal>
         <p className="mt-5 text-[1.1rem] leading-[1.6] text-fg-soft">
-          Na consulta, na agulha e no espelho. Ela não vê o seu certificado. Ela sente se você sabe o
-          que está fazendo.
+          Na consulta, na agulha e no espelho. Ela confia em quem explica com segurança o que vai fazer e
+          por quê.
         </p>
         <p className="mt-4 text-[1.1rem] leading-[1.6] text-fg-soft">
           Segurança vem de saber o que tem embaixo da pele e de ter um roteiro pra consulta. Foi isso
           que a Dra. Aline organizou na Filgueiras Academy, a partir do que estudou dissecando a face
           em fresh frozen.
+        </p>
+        <p className="mt-4 text-[1.1rem] leading-[1.6] text-fg-soft">
+          É na consulta que ela decide se fecha. A Consulta que Vende te dá o roteiro, da anamnese ao preço.
         </p>
         <p className="mt-8 font-sans text-[1.35rem] font-semibold tracking-[-0.01em] text-fg uppercase sm:text-[1.6rem]">
           Consulta. Agulha. <span className="text-wine-bright">Espelho.</span>

@@ -12,6 +12,11 @@ const MENSAGEM = "Oi! Fiquei com uma dúvida antes de comprar a aula Por Dentro 
 const MENSAGEM_KIT = "Oi! Fiquei com uma dúvida antes de comprar o Protocolo de Resgate Vascular.";
 // Na /alunas quem escreve é ex-aluna, sobre a aula com o Protocolo de presente.
 const MENSAGEM_ALUNAS = "Oi! Sou ex-aluna da Aline e fiquei com uma dúvida sobre a aula com o Protocolo de presente.";
+// Na Academy (LPs, downsell e obrigados) a dúvida é sobre a plataforma.
+const MENSAGEM_ACADEMY = "Oi! Fiquei com uma dúvida sobre a Filgueiras Academy.";
+// Nas páginas de upsell de 1 clique o botão não aparece: a decisão é sim ou não,
+// e uma saída a mais na tela custa conversão.
+const SEM_BOTAO = /^\/academy\/(anatomia\/upgrade|mentoria\/upsell)(\.html)?\/?$/;
 const whatsappUrl = (msg: string) =>
   `https://wa.me/${NUMERO_WHATSAPP}?text=${encodeURIComponent(msg)}`;
 
@@ -46,7 +51,9 @@ export function WhatsAppFloatingButton() {
   const pathname = usePathname();
   const caminho = pathname ?? "";
   const href = whatsappUrl(
-    /^\/alunas(\.html)?(\/|$)/.test(caminho)
+    /^\/academy(\.html)?(\/|$)/.test(caminho)
+      ? MENSAGEM_ACADEMY
+      : /^\/alunas(\.html)?(\/|$)/.test(caminho)
       ? MENSAGEM_ALUNAS
       : /^\/info(\.html)?(\/|$)/.test(caminho)
         ? MENSAGEM_KIT
@@ -65,6 +72,8 @@ export function WhatsAppFloatingButton() {
       window.removeEventListener("consent-dismissed", recalcular);
     };
   }, []);
+
+  if (SEM_BOTAO.test(caminho)) return null;
 
   return (
     <a

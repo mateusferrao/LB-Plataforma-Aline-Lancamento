@@ -19,8 +19,10 @@ As páginas de venda da plataforma, depois da aula ao vivo **Por Dentro da Face*
 | 10 primeiros | Prancheta ilustrada, pelo correio | R$600 |
 | 10 primeiros | Mentoria em grupo com a Aline | R$5.000 |
 | 10 primeiros | Toxina botulínica (sem quantidade, por decisão de 05/10) | incluso |
-| | **Total pros 10 primeiros** | **R$14.394** |
-| 5 primeiros | +6 meses de acesso (18 meses), fora da soma | R$899 |
+| Todo mundo até 23h59 | +3 meses de acesso (15 meses), na soma (decisão de 06/10) | R$449 |
+| | **Total pros 10 primeiros** | **R$14.843** |
+
+Os +6 meses dos 5 primeiros saíram em 06/10.
 
 Saíram o cupom `SALA0610`, o preço de R$1.497, a gravação da aula, o encontro extra de casos para as 40 primeiras e o diagnóstico 1:1.
 
@@ -57,14 +59,14 @@ Fontes do plano, de 04/10/2026:
 | Headline da evergreen | "Você não estudou tanto pra continuar insegura na agulha e com a agenda parada." (mesma linha da sala; "parada" serve a quem já atende) |
 | Os três momentos | "A paciente decide se confia em você três vezes" deixou de ser H1 e virou o título da seção do mecanismo (revisão de 04/10: como headline, era uma tese indireta, em terceira pessoa e sem dor nem resultado) |
 | Preço | **R$1.797 para todo mundo** (ajuste de 05/10: sem cupom). 12x de R$185,85 (com a taxa do gateway) ou Pix |
-| Bônus da sala (só até 06/10, 23h59) | **10 primeiros:** certificado, prancheta, mentoria em grupo com a Aline e toxina (sem quantidade). **5 primeiros:** +6 meses (18 meses). Contam pela hora da compra |
+| Bônus da sala (só até 06/10, 23h59) | **10 primeiros:** certificado, prancheta, mentoria em grupo com a Aline e toxina (sem quantidade). **Todo mundo até 23h59:** +3 meses (15 meses). Os 10 contam pela hora da compra |
 | Encontros ao vivo | **6 no ano**, com a Aline ou com o time dela, gravados na plataforma + 1 aula ao vivo com a Aline para discussão de casos |
 | Garantia | **Garantia Mão Segura:** 7 dias sem perguntas + 30 dias se assistiu ao módulo de anatomia e não sentiu a mão mais segura |
 | Conteúdo | O plano "Filgueiras Academy Anual" + **Anatomia** + **Sala de Lapidação**. Full Face e Análise de casos ficam de fora. Os 4 cursos vazios (Sua Jornada, Além da Técnica, Mentalidade, Espiritualidade) ficam ocultos. Fios não existe |
 | Já alunas | As 28 anuais ganham o curso de anatomia. Condição das ex-alunas a redefinir (era R$1.497 pela lista) |
 | Prova | Prints reais com o rótulo "alunas da Aline", sem dizer que são da plataforma. Sem o print de faturamento. Pedir depoimento às alunas mais engajadas da plataforma |
 | Público | Inclui esteticistas (o "Pra quem é" cita, sem ressalva legal por enquanto) |
-| Ancoragem | Pilha de valor com o valor riscado por item e dois totais na sala: R$8.794 (todo mundo) e R$14.394 (10 primeiros). Os +6 meses dos 5 primeiros ficam fora da soma. Na página é "valor", nunca "de R$X por". Os cards com os preços dos presenciais saíram em 05/10 (soltos depois do botão, confundiam); a comparação fica no título da seção e no pitch |
+| Ancoragem | Pilha de valor com o valor riscado por item e dois totais na sala: R$9.243 (todo mundo, com os +3 meses) e R$14.843 (10 primeiros). Na página é "valor", nunca "de R$X por". Os cards com os preços dos presenciais saíram em 05/10 (soltos depois do botão, confundiam); a comparação fica no título da seção e no pitch |
 | Fora da página | Curso presencial nos EUA como próxima oferta; promessa de agenda, faturamento ou resultado clínico |
 | Tráfego frio | Teste A/B: `/academy` × oferta de entrada **Protocolo + aula gravada** → upsell da plataforma por R$1.797 menos o valor pago, por 72h. A gravação nunca é vendida "avulsa" e não entra antes de 08/10, 23h59 |
 | Canais do carrinho | Grupo da aula, agente de IA no WhatsApp (o playbook precisa ser atualizado: hoje ele proíbe falar da plataforma) e disparo para ex-alunas |
@@ -81,7 +83,7 @@ As duas páginas foram enxugadas no molde da página do Mapa de Intercorrência 
 5. **É pra você?:** sim e não.
 6. **Quem conduz:** os números, um parágrafo e a frase do criativo 08.
 7. **Prints de alunas da Aline.**
-8. **Oferta:** um card com a pilha do núcleo (o valor riscado por item e o total), o preço, o botão e os selos. Na sala, até 23h59 de 06/10, entram também os bônus dos 10 primeiros, com o total deles, e os +6 meses dos 5 primeiros, fora da soma.
+8. **Oferta:** um card com a pilha do núcleo (o valor riscado por item e o total), o preço, o botão e os selos. Na sala, até 23h59 de 06/10, entram também os bônus dos 10 primeiros, com o total deles, e os +3 meses de todo mundo.
 9. **Garantia Mão Segura:** selo e duas frases.
 10. **FAQ:** fechada, 7 perguntas na evergreen e 9 na sala.
 11. **Fechamento:** "Da próxima vez que a paciente deitar…", o resumo da oferta numa frase, o botão e o P.S. + barra fixa no celular.
@@ -99,7 +101,7 @@ A sequência:
 3. os três momentos;
 4. por que é diferente;
 5. a pilha do núcleo, item a item ("Pra…" + valor), somando R$8.794, com a âncora e o preço de R$1.797;
-6. os bônus de hoje até 23h59 (10 primeiros, R$14.394; 5 primeiros, 18 meses);
+6. os bônus de hoje até 23h59 (todo mundo, +3 meses; 10 primeiros, R$14.843);
 7. a Garantia Mão Segura;
 8. pra quem é;
 9. o pedido ("escreve ENTREI");
@@ -111,7 +113,7 @@ Cada slide de ancoragem é uma tabela curta.
 Durante o pitch, a equipe:
 
 - fixa o link `/academy/sala` no chat e no grupo;
-- conta os 10 primeiros e os 5 primeiros pela hora da compra na Ticto e avisa a Aline;
+- conta os 10 primeiros pela hora da compra na Ticto e avisa a Aline;
 - lê em voz alta os nomes de quem escreveu ENTREI.
 
 ## 5. Anúncios de aquisição (revisão de 04/10)
@@ -127,7 +129,7 @@ Durante o pitch, a equipe:
 
 **Antes de 06/10** (em `lib/ofertaAcademy.ts`, salvo onde indicado):
 
-- [ ] **Ticto:** criar o produto e preencher `CHECKOUT_BASE`. Sem ele, os botões mostram "Em breve".
+- [ ] **Ticto:** criar o produto, as duas ofertas (sala e evergreen) e os templates seguindo [`ticto.md`](ticto.md), e preencher `CHECKOUT_SALA` e `CHECKOUT_EVERGREEN`. Sem eles, os botões mostram "Em breve".
 - [ ] **Ticto:** criar o cupom das ex-alunas, que vai só pela lista.
 - [ ] **Memberkit:** criar o plano da oferta e ligá-lo ao produto na Ticto, com 12 meses de acesso. Cursos: Comece por aqui, Toxina, Preenchimento Facial, Bioestimuladores, Anestesia, Intercorrência, Vendas, Marketing, Posicionamento, Dicas Jurídicas, Material de Apoio, Alfa Ômega, **Anatomia** e **Sala de Lapidação**.
 - [ ] **Memberkit:** publicar o curso de Anatomia e mandar os títulos das aulas para a página e o pitch.
@@ -142,11 +144,11 @@ Durante o pitch, a equipe:
   - os "11+ anos de clínica";
   - o nome "Garantia Mão Segura".
 - [ ] **Confirmar o conteúdo do "Material de Apoio":** anamnese, termos, precificação e scripts.
-- [ ] **Agente de IA:** atualizar `docs/agente-ia/` para o carrinho (preço, bônus, garantia, objeções) e tirar a afirmação de que a gravação só existe na Academy.
+- [x] **Agente de IA:** `docs/agente-ia/04-filgueiras-academy.md` (venda e suporte da Academy, 06/10), e a afirmação de que a gravação existe na Academy saiu dos outros três arquivos.
 
 **Depois de 06/10:**
 
-- [ ] **07/10 a 10/10:** estender para 18 meses os 5 primeiros; enviar prancheta, certificado e toxina e abrir a mentoria em grupo para os 10 primeiros.
+- [ ] **07/10 a 10/10:** estender para 15 meses todas as compras da noite (oferta Sala); enviar prancheta, certificado e toxina e abrir a mentoria em grupo para os 10 primeiros.
 - [ ] **Oferta de entrada para o teste do tráfego frio:** Protocolo + aula gravada, com upsell por R$1.797 menos o valor pago, por 72h. Só depois de 08/10.
 - [ ] **VSL nova da evergreen:** gravar e colocar no topo da `/academy`.
 - [ ] **Data do próximo encontro mensal:** é a urgência real da evergreen ("entre até X para o encontro de outubro").

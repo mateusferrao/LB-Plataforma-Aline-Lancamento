@@ -16,8 +16,12 @@ type Props = {
 // oferta, o botão NÃO vai direto pro checkout — abre o ingresso
 // (components/info/IngressoInfo.tsx), que mostra o preço e leva ao checkout.
 // Depois da aula (fase "soKit"), sem ingresso, o botão vai direto ao
-// checkoutUrl da fase; sem checkoutUrl, fica bloqueado ("Em breve"). O repasse
-// de UTM pro checkout é do ticto-echo, montado no layout.
+// checkoutUrl da fase; sem checkoutUrl, abre o WhatsApp da equipe (06/10: antes
+// ficava bloqueado em "Em breve", um beco sem saída pro tráfego de depois da aula).
+// O repasse de UTM pro checkout é do ticto-echo, montado no layout.
+const WHATS_PROTOCOLO =
+  "https://wa.me/5531953491799?text=" + encodeURIComponent("Oi! Quero o Protocolo de Resgate Vascular.");
+
 export function CtaButton({ children, variant = "dark", className = "" }: Props) {
   const { fase, montado } = useOfertaKit();
   const bloqueado = montado && !fase?.checkoutUrl;
@@ -31,18 +35,21 @@ export function CtaButton({ children, variant = "dark", className = "" }: Props)
       ? "bg-wine text-on-wine hover:bg-wine-hover"
       : "bg-fg text-wine hover:bg-white";
 
-  const label = bloqueado ? "Em breve" : (children ?? (fase ?? FASES[0]).ctaLabel);
-  const href = bloqueado ? undefined : emiteIngresso ? "#ingresso" : fase?.checkoutUrl;
+  const label = bloqueado ? "Quero o Protocolo: falar com a equipe" : (children ?? (fase ?? FASES[0]).ctaLabel);
+  const href = bloqueado ? WHATS_PROTOCOLO : emiteIngresso ? "#ingresso" : fase?.checkoutUrl;
 
   return (
     <a
       href={href}
-      className={`${base} ${palette} ${
-        bloqueado ? "cursor-not-allowed opacity-55 hover:translate-y-0" : ""
-      } ${className}`}
-      aria-disabled={bloqueado || undefined}
+      className={`${base} ${palette} ${className}`}
+      target={bloqueado ? "_blank" : undefined}
+      rel={bloqueado ? "noopener noreferrer" : undefined}
       aria-haspopup={!bloqueado && emiteIngresso ? "dialog" : undefined}
       onClick={(e) => {
+        if (bloqueado) {
+          gaEvent("click_whatsapp", { produto: "kit-protocolo" });
+          return;
+        }
         if (!fase?.checkoutUrl) {
           e.preventDefault();
           return;
