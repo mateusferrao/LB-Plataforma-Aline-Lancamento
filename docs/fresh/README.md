@@ -668,6 +668,9 @@ poucas vagas." **Sem** "de R$197" e **sem** o parágrafo da Filgueiras Academy.
   laboratório, das luvas e das mesas. As instituições costumam proibir imagem de doador, é uma
   questão de respeito ao doador, e a Meta derruba anúncio com esse tipo de imagem. A FAQ avisa com
   honestidade o que aparece na aula.
+  > **Exceção de 06/10:** nos anúncios da Academy, a peça **pixelada** pode aparecer. O clipe da aula
+  > de calha lacrimal já rodou sem reprovação e converteu. Peça sem pixelização continua proibida.
+  > Detalhes em `docs/criativos/academy/README.md`.
 - Nada de antes e depois, de promessa de resultado clínico ou de "zero intercorrência".
 - Nada de promessa financeira (agenda cheia, faturamento).
 - Nada sobre qual profissão "pode" aplicar. O cenário regulatório de 2026 é sensível (ver
