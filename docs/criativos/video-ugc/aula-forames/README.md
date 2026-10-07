@@ -13,17 +13,18 @@ Decisões de 07/10:
 | Origem do corte | Curso de anatomia da Filgueiras Academy (a Camila pode dizer "essa aula tá na plataforma") |
 | Formato do gancho | Green screen: Camila recortada sobre a aula escurecida, com a seta sendo desenhada atrás |
 | Fim | A Camila volta com o CTA |
-| Ganchos | 3 no mesmo corpo de vídeo: G1 (risco), A1 (agenda), A2 (confiança) |
+| Ganchos | 3 no mesmo corpo de vídeo: G1 (risco), N1 (agenda + onde não aplicar) e C1 (frase da equipe, como controle). A1 e A2 saíram |
+| CTA | Fecha a metade "agenda" do gancho com a Consulta que Vende e põe a garantia de 7 dias na tela |
 | Avatar | A Camila como está (a equipe acha que ela já é diferente o bastante da Aline) |
 | Fonte | Só a gravação de tela (`ScreenRecording_10-07-2026_08-44-23_1.mov`, 2098×1180) |
 
-## 1. Estrutura (~37s)
+## 1. Estrutura (~37s a 38s)
 
 | Tempo | Tela | Som |
 |---|---|---|
 | 0–3,8s | **Gancho.** Aula rodando muda, escurecida e desfocada (a seta subindo da boca pro olho). Camila na metade de baixo. Texto-filtro no topo, legenda da fala sobre o jaleco. No fim ela desliza pra baixo. | Voz da Camila |
 | 3,8–33s | **Aula na vertical.** Ilustração em cima (1080×1170), Aline embaixo (1080×750). 7 cortes sem as pausas, com zoom por corte que acompanha o desenho (1,0× → 1,8× no forame → 1,2×). Legenda em caixa alta, 2 ou 3 palavras, com os termos-chave em amarelo. | Aula, com clique de "play" na virada |
-| 33–37,4s | **CTA.** O quadro da elipse congelado e escuro. A Camila sobe de baixo. "FILGUEIRAS ACADEMY" + "a plataforma da Dra. Aline Filgueiras" no topo. | Voz da Camila |
+| 33–38s | **CTA.** O quadro da elipse congelado e escuro. A Camila sobe de baixo. "FILGUEIRAS ACADEMY" + "7 dias de garantia · acesso imediato" no topo. | Voz da Camila |
 
 O corpo usa só o trecho de 17,4s a 50,9s do original, porque os primeiros 17s começam no meio
 de uma frase. A fala que fica:
@@ -45,17 +46,26 @@ nada de depoimento ("eu fiz", "minha paciente") e nada de profissão ou nome.
 | # | Ângulo | Fala | Texto na tela |
 |---|---|---|---|
 | G1 | Risco | "Aplica na glabela? Olha a artéria que sai de dentro da órbita." [polegar por cima do ombro no "Olha"] | APLICA NA GLABELA? |
-| A1 | Agenda | "Aplica e quer a agenda cheia? Começa sabendo o que passa aqui." [aponta pra trás no "aqui"] | PRA QUEM APLICA E QUER AGENDA CHEIA |
-| A2 | Confiança | "Aplica harmonização? A paciente percebe quando sua mão hesita." | APLICA HARMONIZAÇÃO? |
-| CTA | Fechamento | "Essa aula tá na Filgueiras Academy, a plataforma dela. O link tá aqui embaixo." [aponta pra baixo] | FILGUEIRAS ACADEMY |
+| N1 | Agenda + onde não aplicar | "Aplica e quer a agenda cheia? Começa sabendo onde não aplicar." [aponta pra trás no "onde"] | PRA QUEM APLICA E QUER AGENDA CHEIA |
+| C1 | Controle | "Quer encher sua agenda e aplicar com mais segurança?" | QUER ENCHER SUA AGENDA? |
+| CTA | Fechamento | "Na plataforma dela tem isso e a consulta que fecha paciente. Toca em saiba mais." [aponta pra baixo no "saiba mais"] | FILGUEIRAS ACADEMY · 7 dias de garantia · acesso imediato |
 
 - **G1:** as artérias supratroclear e supraorbital são ramos da oftálmica e **saem** da órbita.
   "A artéria que vai pro olho" estaria errado. A Aline ou alguém da equipe valida a frase antes
   de subir.
-- **A1:** liga o desejo da pesquisa (captação, 29%) à headline da `/academy` ("…e com a agenda
-  parada"). É desejo, não promessa: nada de "vai encher sua agenda".
-- **A2:** liga agenda e segurança sem prometer nada. É a tese da oferta (a paciente decide se
-  confia em você na agulha).
+- **N1 (aposta):** o texto na tela leva o desejo (agenda), e a fala abre uma pergunta que só a
+  aula responde. A resposta é a última frase da Aline ("a gente deve evitar ao máximo os
+  preenchimentos nessa região"), aos ~30s, logo antes do CTA. Saber onde não aplicar é o que dá
+  segurança na agulha e o que faz a paciente confiar. É desejo, não promessa: nada de "vai
+  encher sua agenda".
+- **C1:** a frase da equipe, sem mudar nada, pra os dados decidirem. Os riscos que a gente viu:
+  a pergunta tem resposta óbvia ("sim") e não abre curiosidade; são dois desejos numa frase só;
+  e o filtro ("aplicar") só chega no meio da frase.
+- **CTA:** o gancho prometeu agenda e a aula só entrega segurança. Quem fecha a agenda é o CTA,
+  com o que o produto tem de verdade (a Consulta que Vende, pra paciente não sair dizendo "vou
+  pensar"). A garantia de 7 dias fica na tela pra caber nos 8s do Veo. O nome "Garantia Mão
+  Segura" só entra depois que a Aline confirmar. "Toca em saiba mais" é o nome do botão do
+  anúncio.
 
 ## 3. Prompts do Google Flow (Veo)
 
@@ -82,21 +92,23 @@ Em todos:
 > sai de dentro da órbita." On the word "Olha" she points back over her shoulder with her thumb.
 > She ends with a falling, confident intonation and holds still.
 
-**A1:**
+**N1:**
 > She looks into the lens with slightly raised eyebrows and says, fast and natural: "Aplica e
-> quer a agenda cheia? Começa sabendo o que passa aqui." On the word "aqui" she points back over
-> her shoulder with her thumb. Falling, confident intonation at the end.
+> quer a agenda cheia? Começa sabendo onde não aplicar." After the question she makes a short
+> pause, and on the word "onde" she points back over her shoulder with her thumb. Falling,
+> confident intonation at the end.
 
-**A2:**
-> She looks into the lens, serious but warm, and says at a natural pace: "Aplica harmonização?
-> A paciente percebe quando sua mão hesita." Small nod on "hesita", then she holds still.
+**C1:**
+> She looks into the lens, friendly and energetic, and says at a natural pace: "Quer encher sua
+> agenda e aplicar com mais segurança?" She ends with a light questioning intonation and a
+> small nod.
 
 **CTA:**
-> She looks into the lens, calm and friendly, and says: "Essa aula tá na Filgueiras Academy, a
-> plataforma dela. O link tá aqui embaixo." She says "Academy" the English way (a-CA-de-mi). On
-> "aqui embaixo" she points down with her index finger.
+> She looks into the lens, calm and confident, and says: "Na plataforma dela tem isso e a
+> consulta que fecha paciente. Toca em saiba mais." On "saiba mais" she points down with her
+> index finger.
 
-Confira na tomada: "Filgueiras" e "Academy" pronunciados certo, nenhuma legenda inventada pelo
+Confira na tomada: nenhuma legenda inventada pelo
 Veo, fundo verde sem sombra forte e as mãos sem dedos a mais.
 
 ## 4. Montagem
@@ -105,8 +117,8 @@ Veo, fundo verde sem sombra forte e as mãos sem dedos a mais.
 python3 docs/criativos/video-ugc/montar_aula.py \
   --roteiro docs/criativos/video-ugc/aula-forames/roteiro.json \
   --aula ScreenRecording_10-07-2026_08-44-23_1.mov \
-  --gancho G1 --avatar-gancho camila-g1.mp4 --avatar-cta camila-cta.mp4 \
-  --saida ugc-forames-g1.mp4
+  --gancho N1 --avatar-gancho camila-n1.mp4 --avatar-cta camila-cta.mp4 \
+  --saida ugc-forames-n1.mp4
 ```
 
 Sem `--avatar-*`, sai a prévia com a foto parada da Camila e sem voz nesses trechos. O script
@@ -127,20 +139,21 @@ e de Pillow.
 >
 > Ensino online para profissionais da estética e da saúde.
 
-**Texto principal (A1 e A2):**
-> Você estudou tanto e ainda sente a mão hesitar perto do olho? A paciente percebe. E é a
-> segurança na agulha que faz ela voltar e indicar.
+**Texto principal (N1 e C1):**
+> Saber onde não aplicar é o que faz a paciente confiar em você. Nessa aula do curso de
+> anatomia, a Dra. Aline Filgueiras mostra uma região perto dos olhos que pede cuidado máximo,
+> e por quê.
 >
 > Na Filgueiras Academy você estuda a face por dentro em fresh frozen, treina a técnica em mais
-> de 70 aulas e aprende o roteiro da Consulta que Vende. São 12 meses de acesso, com encontros
-> ao vivo ao longo do ano e garantia de 7 dias.
+> de 70 aulas e aprende a Consulta que Vende, pra paciente não sair dizendo "vou pensar". São 12
+> meses de acesso, com encontros ao vivo ao longo do ano e garantia de 7 dias.
 >
 > Ensino online para profissionais da estética e da saúde.
 
 **Título:** Filgueiras Academy · acesso imediato
 **Descrição:** 12x de R$185,85 ou Pix
 **Botão:** Saiba mais
-**Nome do anúncio e `utm_content`:** `ugc-forames-g1`, `ugc-forames-a1`, `ugc-forames-a2`
+**Nome do anúncio e `utm_content`:** `ugc-forames-g1`, `ugc-forames-n1`, `ugc-forames-controle`
 
 ## 6. Teste
 
@@ -149,7 +162,7 @@ e de Pillow.
   1. **Taxa de gancho** (visualizações de 3s ÷ impressões). Abaixo de 25%, o gancho não está
      parando o dedo.
   2. **Retenção entre 4s e 10s.** Mostra se quem parou pelo gancho ficou pra aula. É aqui que
-     o A1 (agenda) pode ganhar no gancho e perder na retenção.
+     um gancho de agenda pode ganhar no gancho e perder na retenção.
   3. **CTR no link** e **custo por venda**. É isso que decide.
 - O gancho vencedor vira a base da rodada 2 (outro texto na tela, ou a mesma fala em outro
   corte da plataforma).

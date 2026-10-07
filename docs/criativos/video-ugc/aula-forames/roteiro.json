@@ -40,24 +40,24 @@
    "texto": "APLICA NA GLABELA?",
    "dur_previa": 3.8
   },
-  "A1": {
-   "angulo": "agenda",
-   "fala": "Aplica e quer a agenda cheia? Começa sabendo o que passa aqui.",
+  "N1": {
+   "angulo": "agenda + onde não aplicar",
+   "fala": "Aplica e quer a agenda cheia? Começa sabendo onde não aplicar.",
    "texto": "PRA QUEM APLICA E QUER AGENDA CHEIA",
-   "dur_previa": 3.9
+   "dur_previa": 3.8
   },
-  "A2": {
-   "angulo": "confiança",
-   "fala": "Aplica harmonização? A paciente percebe quando sua mão hesita.",
-   "texto": "APLICA HARMONIZAÇÃO?",
-   "dur_previa": 3.6
+  "C1": {
+   "angulo": "controle (frase da equipe)",
+   "fala": "Quer encher sua agenda e aplicar com mais segurança?",
+   "texto": "QUER ENCHER SUA AGENDA?",
+   "dur_previa": 3.3
   }
  },
  "cta": {
-  "fala": "Essa aula tá na Filgueiras Academy, a plataforma dela. O link tá aqui embaixo.",
+  "fala": "Na plataforma dela tem isso e a consulta que fecha paciente. Toca em saiba mais.",
   "texto": "FILGUEIRAS ACADEMY",
-  "sub": "a plataforma da Dra. Aline Filgueiras",
-  "dur_previa": 4.6
+  "sub": "7 dias de garantia · acesso imediato",
+  "dur_previa": 5.0
  },
  "cortes": [
   {
