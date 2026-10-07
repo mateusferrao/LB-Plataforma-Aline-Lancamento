@@ -69,6 +69,9 @@ nada de depoimento ("eu fiz", "minha paciente") e nada de profissão ou nome.
 
 ## 3. Prompts do Google Flow (Veo)
 
+Os prompts seguem o formato que a equipe já usa no Flow, em português, com o tom de voz, o ritmo,
+as pausas, as palavras com peso e o gesto descritos frase por frase.
+
 Em todos:
 - **Frames to Video**, com `../avatar/camila-fundo-verde.jpg` como quadro inicial.
 - **Formato 9:16.** Se o Flow só entregar 16:9, avise, que o script precisa de outro recorte.
@@ -76,40 +79,70 @@ Em todos:
 - Na tomada escolhida, corte a respiração antes da primeira palavra e o que sobra depois da
   última (CapCut ou Flow). O script usa a duração do arquivo como duração do trecho.
 
-**Base (cole antes de cada fala):**
+**Base (cole no fim de cada prompt):**
 
-> Vertical 9:16 handheld smartphone selfie video. The same woman from the reference frame, same
-> face, hair, plain white lab coat and black top, in front of the same flat solid green
-> background, which stays perfectly uniform and unchanged for the whole clip. Natural soft
-> window light, subtle handheld sway, realistic skin texture, she looks straight into the lens.
-> Audio: only her voice, close to the microphone, Brazilian Portuguese with a neutral accent.
-> No music, no sound effects, no subtitles, no text on screen.
+> Use a imagem como primeiro quadro. Vídeo vertical 9:16, selfie de celular na mão. É a mesma
+> mulher da imagem, com o mesmo rosto, cabelo, jaleco branco liso e blusa preta, na frente do
+> mesmo fundo verde liso, que não muda em nenhum momento do vídeo. Luz natural de janela, leve
+> balanço da mão e pele real. Ela olha direto pra lente. Português do Brasil, sotaque neutro
+> (paulista leve), voz feminina de timbre médio, perto do microfone, sem eco. Sem música, sem
+> efeito sonoro, sem legenda e sem nenhum texto na tela. Ela fala SOMENTE a frase indicada, sem
+> "oi", sem "gente" e sem nenhuma palavra a mais, e começa a falar já no primeiro segundo.
 
-**G1:**
-> For the first half second she glances back over her shoulder as if she had just watched
-> something behind her, then turns to the lens with slightly raised eyebrows and says, fast and
-> natural, like telling a colleague something serious: "Aplica na glabela? Olha a artéria que
-> sai de dentro da órbita." On the word "Olha" she points back over her shoulder with her thumb.
-> She ends with a falling, confident intonation and holds still.
+**G1 · Risco (até 4s):**
+> Quero criar uma cena da mulher falando de forma rápida e humana, como quem acabou de ver uma
+> coisa séria e precisa avisar uma colega na hora. O vídeo é um criativo de UGC para tráfego
+> pago. A mulher deve falar SOMENTE a frase "Aplica na glabela? Olha a artéria que sai de dentro
+> da órbita."
+>
+> Tom e ritmo: no primeiro meio segundo ela olha rápido por cima do ombro, como se tivesse
+> acabado de assistir a algo atrás dela, e volta pra câmera com a sobrancelha levantada.
+> "Aplica na glabela?" sai rápido e BEM enérgico, com entonação de pergunta. Pausa curtíssima.
+> "Olha a artéria que sai de dentro da órbita" vem mais firme e um pouco mais grave, com peso em
+> "artéria" e "órbita" e a voz descendo no fim, em tom de alerta sério, sem pânico. No "Olha"
+> ela aponta com o polegar por cima do ombro. Ritmo de cerca de 3 palavras por segundo. Energia
+> alta, de colega da área, nunca de locutora nem de vendedora.
 
-**N1:**
-> She looks into the lens with slightly raised eyebrows and says, fast and natural: "Aplica e
-> quer a agenda cheia? Começa sabendo onde não aplicar." After the question she makes a short
-> pause, and on the word "onde" she points back over her shoulder with her thumb. Falling,
-> confident intonation at the end.
+**N1 · Agenda + onde não aplicar (até 4s):**
+> Quero criar uma cena da mulher falando de forma rápida e humana, como quem vai contar pra uma
+> colega uma coisa que pouca gente sabe. O vídeo é um criativo de UGC para tráfego pago. A
+> mulher deve falar SOMENTE a frase "Aplica e quer a agenda cheia? Começa sabendo onde não
+> aplicar."
+>
+> Tom e ritmo: "Aplica e quer a agenda cheia?" sai BEM enérgico e rápido, com a sobrancelha
+> levantada e um meio sorriso, como quem chama a atenção. Pausa curta, de meio segundo, e o rosto
+> fica mais sério. "Começa sabendo onde não aplicar" vem um pouco mais devagar e mais firme, com
+> peso em "onde não aplicar" e a voz descendo no fim, como um conselho de quem tem experiência.
+> No "onde" ela aponta com o polegar por cima do ombro. A virada de energia (animada na
+> pergunta, séria na resposta) é o que segura quem assiste.
 
-**C1:**
-> She looks into the lens, friendly and energetic, and says at a natural pace: "Quer encher sua
-> agenda e aplicar com mais segurança?" She ends with a light questioning intonation and a
-> small nod.
+**C1 · Controle (até 3,5s, no formato original da equipe):**
+> Quero criar uma cena da mulher falando de forma rápida e humana, como se estivesse dando uma
+> notícia urgente. O vídeo será para um criativo em vídeo de UGC para tráfego pago. A mulher
+> deve falar SOMENTE a frase "Quer encher sua agenda e aplicar com mais segurança?", e de forma
+> BEM enérgica. A voz e o tom devem ser rápidos, e a frase é no estilo de um hook forte. Peso em
+> "agenda" e "segurança", entonação de pergunta no fim e um leve aceno de cabeça.
 
-**CTA:**
-> She looks into the lens, calm and confident, and says: "Na plataforma dela tem isso e a
-> consulta que fecha paciente. Toca em saiba mais." On "saiba mais" she points down with her
-> index finger.
+**CTA (até 6s):**
+> Quero criar uma cena da mulher fechando um vídeo de UGC para tráfego pago, de forma humana e
+> confiante, como uma colega que recomenda uma coisa que vale a pena. A mulher deve falar
+> SOMENTE a frase "Na plataforma dela tem isso e a consulta que fecha paciente. Toca em saiba
+> mais."
+>
+> Tom e ritmo: energia média-alta, sorriso leve, voz firme e clara, um pouco mais calma que o
+> gancho (cerca de 2,8 palavras por segundo), pra cada palavra ser entendida. Peso em "consulta
+> que fecha paciente". Pausa curta antes de "Toca em saiba mais", que sai direto e convidativo,
+> com a voz descendo no fim. Em "saiba mais" ela aponta pra baixo com o indicador.
 
-Confira na tomada: nenhuma legenda inventada pelo
-Veo, fundo verde sem sombra forte e as mãos sem dedos a mais.
+Se o Veo errar, ajuste assim:
+- **Falou palavra a mais:** repita no prompt "SOMENTE essa frase, palavra por palavra".
+- **Ficou rápido demais pra entender:** troque "BEM enérgica" por "enérgica, mas articulando
+  cada palavra".
+- **Ficou com cara de vendedora:** acrescente "sem sorriso de propaganda, como numa conversa de
+  WhatsApp com uma colega".
+
+Confira na tomada: nenhuma legenda inventada pelo Veo, fundo verde sem sombra forte e as mãos
+sem dedos a mais.
 
 ## 4. Montagem
 
