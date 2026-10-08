@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Criativos · Filgueiras Academy · Fresh Frozen</title>
+<!--
+  5 criativos da Filgueiras Academy (evergreen, /academy) com o fresh frozen direto dos EUA
+  como o grande diferencial. Cada um em feed 1080x1350 (4:5) e story 1080x1920 (9:16);
+  as stories são clones dos feeds com a classe .story.
+  Estilo clean (pedido de 08/10, nas referências da equipe): fundo creme, título grande em
+  serifa, pouco texto, a Aline recortada, moldura fina e o rosto em traço com as linhas
+  pontilhadas. Recortes em fotos/recortes/ (fundo removido com IA).
+  Para gerar os PNGs: node docs/criativos/render.mjs criativos-academy.html academy
+-->
+<style>
+  @font-face { font-family: "Fraunces"; src: url("../../app/fonts/fraunces-latin.woff2") format("woff2"); font-weight: 400 700; font-style: normal; }
+  @font-face { font-family: "Inter"; src: url("../../app/fonts/inter-latin.woff2") format("woff2"); font-weight: 400 600; }
+
+  :root {
+    --creme: #f6f2ec; --creme-2: #ebe3da;
+    --tinta: #1c1714; --cinza: #6f655d;
+    --vinho: #8a221f; --traco: #b8817b;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #d9d2ca; font-family: "Inter", sans-serif; display: flex; flex-direction: column; align-items: center; gap: 48px; padding: 48px 0; }
+
+  .ad { width: 1080px; height: 1350px; position: relative; overflow: hidden;
+    background: radial-gradient(120% 80% at 70% 18%, var(--creme) 0%, var(--creme) 40%, var(--creme-2) 100%); }
+
+  /* moldura fina: canto de cima à esquerda arredondado; o lado direito some no meio */
+  .moldura { position: absolute; left: 40px; right: 40px; top: 40px; bottom: 40px; border: 2px solid var(--traco); border-radius: 130px 0 0 0;
+    -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 34%, transparent 46%), linear-gradient(90deg, #000 0, #000 6px, transparent 6px);
+    mask-composite: add; }
+
+  /* bloco de texto, alinhado à direita */
+  .texto { position: absolute; right: 76px; top: 150px; width: 840px; text-align: right; }
+  .rotulo { font-size: 25px; font-weight: 600; letter-spacing: .34em; text-transform: uppercase; color: var(--tinta); margin-right: -.34em; }
+  .titulo { margin-top: 18px; font-family: "Fraunces", serif; font-weight: 500; text-transform: uppercase; line-height: .98; letter-spacing: .01em; }
+  .titulo span { display: block; white-space: nowrap; }
+  .titulo .l1 { color: var(--tinta); }
+  .titulo .l2 { color: var(--vinho); margin-top: 8px; }
+  .divisor { margin: 34px 0 0 auto; width: 560px; height: 2px; background: var(--traco); position: relative; }
+  .divisor::after { content: ""; position: absolute; left: 50%; top: -6px; width: 12px; height: 12px; background: var(--vinho); transform: translateX(-50%) rotate(45deg); }
+  .sub { margin-top: 30px; font-size: 24px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--vinho); margin-right: -.2em; }
+
+  .foto { position: absolute; background-repeat: no-repeat; background-size: contain; }
+
+  /* rosto em traço com as linhas pontilhadas dos vasos */
+  .rosto { position: absolute; width: 300px; }
+  .rosto path { stroke: var(--traco); fill: none; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+  .rosto .pontilhado { stroke-dasharray: 2 9; stroke-width: 2.6; }
+  .rosto circle { fill: var(--traco); }
+
+  .selo { position: absolute; right: 76px; border: 2px solid var(--vinho); padding: 18px 26px; font-size: 25px; font-weight: 600; letter-spacing: .26em; text-transform: uppercase; color: var(--tinta); background: rgba(246,242,236,.92); }
+  .assina { position: absolute; right: 76px; text-align: right; font-size: 23px; line-height: 1.5; color: var(--cinza); letter-spacing: .04em; }
+
+  /* ---------- feed (1080x1350) ---------- */
+  .ad .foto { left: 0; bottom: 0; width: 560px; height: 860px; background-position: left bottom; }
+  .ad .rosto { right: 70px; top: 610px; }
+  .ad .selo { bottom: 170px; }
+  .ad .assina { bottom: 86px; }
+
+  /* ---------- story (1080x1920) ----------
+     Texto fora dos ~250px de cima e dos ~330px de baixo. */
+  .ad.story { height: 1920px; }
+  .story .texto { top: 300px; }
+  .story .foto { left: -30px; width: 700px; height: 1130px; }
+  .story .rosto { top: 860px; }
+  .story .selo { bottom: 455px; }
+  .story .assina { bottom: 360px; }
+
+  /* tamanhos do título por peça (cada um cabe em 760px) */
+  #c1 .titulo, #s1 .titulo { font-size: 128px; } #c1 .l2, #s1 .l2 { font-size: 92px; }
+  #c2 .titulo, #s2 .titulo { font-size: 128px; } #c2 .l2, #s2 .l2 { font-size: 98px; }
+  #c3 .titulo, #s3 .titulo { font-size: 84px; } #c3 .l2, #s3 .l2 { font-size: 128px; }
+  #c4 .titulo, #s4 .titulo { font-size: 116px; } #c4 .l2, #s4 .l2 { font-size: 84px; }
+  #c5 .titulo, #s5 .titulo { font-size: 118px; } #c5 .l2, #s5 .l2 { font-size: 74px; }
+
+  /* fotos por peça */
+  .p1 { background-image: url("fotos/recortes/authority-aline.webp"); }
+  .p2 { background-image: url("fotos/recortes/ilustracao-face.webp"); }
+  .p3 { background-image: url("fotos/recortes/lab-braco-erguido.webp"); }
+  .p4 { background-image: url("fotos/recortes/aline-hero-marsala-v2.webp"); }
+  .p5 { background-image: url("fotos/recortes/aline-authority-marsala-v2.webp"); }
+  /* a ilustração é só cabeça e ombros: fica maior e encostada embaixo */
+  #c2 .foto { width: 640px; height: 760px; }
+  #s2 .foto { left: -50px; width: 650px; height: 920px; }
+  /* a foto de jaleco é estreita: um pouco mais pra dentro */
+  #c3 .foto { left: 40px; } #s3 .foto { left: 40px; }
+
+  /* ---------- A6 · fresh frozen em destaque: a ilustração grande com etiquetas de atlas ---------- */
+  .ilu { position: absolute; display: block; }
+  .anot { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; overflow: visible; }
+  .anot line { stroke: var(--vinho); stroke-width: 1.6; }
+  .anot circle.ponto { fill: var(--creme); stroke: var(--vinho); stroke-width: 2.4; }
+  .anot circle.miolo { fill: var(--vinho); }
+  .etiqueta { position: absolute; right: 76px; font-size: 22px; font-weight: 600; letter-spacing: .26em; text-transform: uppercase; color: var(--vinho); margin-right: -.26em; }
+  .etiqueta small { display: block; margin-top: 6px; font-size: 20px; font-weight: 400; letter-spacing: .04em; text-transform: none; color: var(--cinza); }
+  #c6 .titulo, #s6 .titulo { font-size: 150px; letter-spacing: .03em; }
+  #c6 .ilu { left: -20px; bottom: 0; width: 715px; }
+  #s6 .ilu { left: -70px; bottom: 190px; width: 760px; }
+  #c6 .e1 { top: 650px; } #c6 .e2 { top: 790px; } #c6 .e3 { top: 930px; }
+  #s6 .e1 { top: 880px; } #s6 .e2 { top: 1020px; } #s6 .e3 { top: 1160px; }
+</style>
+</head>
+<body>
+
+<template id="rosto">
+  <svg class="rosto" viewBox="0 0 300 520" xmlns="http://www.w3.org/2000/svg">
+    <!-- perfil olhando pra esquerda: testa, nariz, lábios, queixo, mandíbula e pescoço -->
+    <path d="M150 8 C108 22 88 80 94 140 C97 168 92 188 72 214 L34 262 C28 270 32 278 44 279 C55 280 61 285 60 292 C52 298 48 302 54 308 C60 312 61 316 56 321 C50 328 52 336 63 340 C62 352 60 366 72 378 C92 398 170 398 232 372"/>
+    <path d="M214 382 C224 428 222 478 208 518"/>
+    <!-- olho fechado -->
+    <path d="M86 176 Q102 188 120 176"/>
+    <path d="M92 183 L89 192 M101 186 L100 196 M111 185 L113 194"/>
+    <!-- vasos pontilhados -->
+    <path class="pontilhado" d="M72 300 C130 290 200 262 268 214"/>
+    <path class="pontilhado" d="M80 330 C150 322 214 294 280 250"/>
+    <path class="pontilhado" d="M96 362 C164 360 226 334 286 292"/>
+    <circle cx="268" cy="214" r="6"/><circle cx="280" cy="250" r="6"/><circle cx="286" cy="292" r="6"/>
+  </svg>
+</template>
+
+<!-- A1 · Anatomia em fresh frozen, novo na plataforma -->
+<section class="ad" id="c1">
+  <div class="moldura"></div>
+  <div class="foto p1"></div>
+  <div class="texto">
+    <div class="rotulo">Filgueiras Academy</div>
+    <div class="titulo"><span class="l1">Anatomia</span><span class="l2">Fresh Frozen</span></div>
+    <div class="divisor"></div>
+    <div class="sub">Online · direto dos EUA</div>
+  </div>
+  <div class="selo">Novo na plataforma</div>
+  <div class="assina">Dra. Aline Filgueiras<br>1.000+ alunas formadas</div>
+</section>
+
+<!-- A2 · A face por dentro (a ilustração do criativo que mais vendeu) -->
+<section class="ad" id="c2">
+  <div class="moldura"></div>
+  <div class="foto p2"></div>
+  <div class="texto">
+    <div class="rotulo">Fresh frozen · EUA</div>
+    <div class="titulo"><span class="l1">A face</span><span class="l2">por dentro</span></div>
+    <div class="divisor"></div>
+    <div class="sub">Dissecção e aplicação, online</div>
+  </div>
+  <div class="selo">Filgueiras Academy</div>
+  <div class="assina">Dra. Aline Filgueiras<br>1.000+ alunas formadas</div>
+</section>
+
+<!-- A3 · Fresh frozen dos EUA sem viajar -->
+<section class="ad" id="c3">
+  <div class="moldura"></div>
+  <div class="foto p3"></div>
+  <div class="texto">
+    <div class="rotulo">Curso online</div>
+    <div class="titulo"><span class="l1">Fresh frozen</span><span class="l2">dos EUA</span></div>
+    <div class="divisor"></div>
+    <div class="sub">Sem visto e sem passagem</div>
+  </div>
+  <div class="selo">Filgueiras Academy</div>
+  <div class="assina">Dra. Aline Filgueiras<br>garantia de 7 dias</div>
+</section>
+
+<!-- A4 · A plataforma inteira, com o fresh frozen junto -->
+<section class="ad" id="c4">
+  <div class="moldura"></div>
+  <div class="foto p4"></div>
+  <div class="texto">
+    <div class="rotulo">Filgueiras Academy</div>
+    <div class="titulo"><span class="l1">70+ aulas</span><span class="l2">+ fresh frozen</span></div>
+    <div class="divisor"></div>
+    <div class="sub">Toxina · preenchimento · bioestimuladores</div>
+  </div>
+  <div class="selo">6 encontros ao vivo</div>
+  <div class="assina">Dra. Aline Filgueiras<br>12 meses de acesso</div>
+</section>
+
+<!-- A5 · Mão firme perto do risco -->
+<section class="ad" id="c5">
+  <div class="moldura"></div>
+  <div class="foto p5"></div>
+  <div class="texto">
+    <div class="rotulo">Anatomia em fresh frozen</div>
+    <div class="titulo"><span class="l1">Mão firme</span><span class="l2">perto do risco</span></div>
+    <div class="divisor"></div>
+    <div class="sub">O que passa a milímetros da agulha</div>
+  </div>
+  <div class="selo">Filgueiras Academy</div>
+  <div class="assina">Dra. Aline Filgueiras<br>1.000+ alunas formadas</div>
+</section>
+
+<!-- A6 · Fresh frozen em destaque: a ilustração grande, com etiquetas de atlas -->
+<section class="ad" id="c6">
+  <div class="moldura"></div>
+  <img class="ilu" src="fotos/recortes/ilustracao-face.webp" alt="" data-largura="706">
+  <svg class="anot"></svg>
+  <div class="texto">
+    <div class="rotulo">Filgueiras Academy</div>
+    <div class="titulo"><span class="l1">Fresh</span><span class="l2">Frozen</span></div>
+    <div class="divisor"></div>
+    <div class="sub">Anatomia sem formol · direto dos EUA</div>
+  </div>
+  <!-- data-ponto: x,y no recorte da ilustração (706x720) -->
+  <div class="etiqueta e1" data-ponto="318,455">Vasos<small>o que passa perto da agulha</small></div>
+  <div class="etiqueta e2" data-ponto="420,420">Gordura<small>os compartimentos da face</small></div>
+  <div class="etiqueta e3" data-ponto="480,472">Músculo<small>os planos de cada camada</small></div>
+  <div class="selo">Curso online</div>
+  <div class="assina">Dra. Aline Filgueiras<br>1.000+ alunas formadas</div>
+</section>
+
+<script>
+  // O rosto em traço entra nas peças 1, 4 e 5 (a 2 já tem a ilustração e a 3, a foto de jaleco).
+  const rosto = document.getElementById("rosto");
+  for (const id of ["c1", "c4", "c5"]) document.getElementById(id).appendChild(rosto.content.cloneNode(true));
+  // Versão story (1080x1920) de cada criativo: mesmo conteúdo, layout de .story.
+  for (const ad of [...document.querySelectorAll(".ad")]) {
+    const story = ad.cloneNode(true);
+    story.id = ad.id.replace("c", "s");
+    story.classList.add("story");
+    document.body.appendChild(story);
+  }
+  // A6: liga cada etiqueta ao ponto da ilustração (feed e story), depois que a imagem carrega.
+  const ns = "http://www.w3.org/2000/svg";
+  function anotar(ad) {
+    const img = ad.querySelector(".ilu"), svg = ad.querySelector(".anot");
+    const caixa = ad.getBoundingClientRect(), ri = img.getBoundingClientRect();
+    const escala = ri.width / Number(img.dataset.largura);
+    svg.innerHTML = "";
+    for (const et of ad.querySelectorAll(".etiqueta")) {
+      const [px, py] = et.dataset.ponto.split(",").map(Number);
+      const x = ri.left - caixa.left + px * escala, y = ri.top - caixa.top + py * escala;
+      const re = et.getBoundingClientRect();
+      const lx = re.left - caixa.left - 22, ly = re.top - caixa.top + 14;
+      const l = document.createElementNS(ns, "line");
+      l.setAttribute("x1", lx); l.setAttribute("y1", ly); l.setAttribute("x2", x); l.setAttribute("y2", y);
+      svg.appendChild(l);
+      for (const [cls, r] of [["ponto", 11], ["miolo", 4]]) {
+        const c = document.createElementNS(ns, "circle");
+        c.setAttribute("class", cls); c.setAttribute("cx", x); c.setAttribute("cy", y); c.setAttribute("r", r);
+        svg.appendChild(c);
+      }
+    }
+  }
+  const anotaveis = [...document.querySelectorAll(".ad")].filter(a => a.querySelector(".ilu"));
+  Promise.all([document.fonts.ready, ...anotaveis.map(a => a.querySelector(".ilu").decode())]).then(() => {
+    anotaveis.forEach(anotar);
+    document.body.dataset.pronto = "1";
+  });
+</script>
+
+</body>
+</html>

@@ -296,3 +296,92 @@ Regras que valem para todos:
   `criativo-02` etc. pra ler o resultado por peça.
 - **Próximo passo sugerido:** juntar à mão comentários reais em posts de grandes perfis de
   HOF (a pesquisa não achou fala espontânea do público em fóruns) pra afinar a linguagem.
+
+---
+
+# Criativos da Academy · Fresh frozen dos EUA (08/10)
+
+6 estáticos para a **`/academy`** (evergreen, R$1.797), cada um em feed e story. O grande
+diferencial de todos é o **fresh frozen direto de um laboratório nos EUA**.
+
+**Estilo clean** (pedido da equipe em 08/10, nas referências de anúncios de curso de HOF):
+- fundo creme e moldura fina com o canto arredondado;
+- título grande em serifa, em duas linhas (preto e vinho), um divisor com losango e uma linha
+  de apoio;
+- a Aline recortada, embaixo à esquerda, e o rosto em traço com os vasos pontilhados;
+- um selo e uma assinatura, sem botão desenhado (o botão "Saiba mais" é o da Meta).
+- sem preço na peça (decisão de 08/10): o preço fica no texto do anúncio e na página.
+
+Uma versão escura, no estilo das peças da aula, existiu antes e está no histórico do git.
+
+- **Fonte:** `criativos-academy.html`.
+- **Recortes:** `fotos/recortes/` (fundo removido com IA, BiRefNet). Na ilustração, o logo
+  antigo que estava por cima do coque foi pintado com a cor do cabelo, e o texto da aula ficou
+  de fora.
+- **PNGs:** `png/feed/academy-0N.png` e `png/story/academy-0N-story.png`.
+- **Gerar de novo:** `node docs/criativos/render.mjs criativos-academy.html academy`.
+
+| # | Ângulo | Título | Apoio | Selo | Foto |
+|---|---|---|---|---|---|
+| A1 | Lançamento | ANATOMIA / FRESH FROZEN | Online · direto dos EUA | Novo na plataforma | Aline sorrindo, de terno vinho |
+| A2 | Prova visual | A FACE / POR DENTRO | Dissecção e aplicação, online | Filgueiras Academy | A ilustração do criativo que mais vendeu |
+| A3 | Sem viajar | FRESH FROZEN / DOS EUA | Sem visto e sem passagem | Filgueiras Academy | Aline de jaleco no laboratório |
+| A4 | A plataforma inteira | 70+ AULAS / + FRESH FROZEN | Toxina · preenchimento · bioestimuladores | 6 encontros ao vivo | Aline em pé, de braços cruzados |
+| A5 | Segurança | MÃO FIRME / PERTO DO RISCO | O que passa a milímetros da agulha | Filgueiras Academy | Aline sentada, olhando pra câmera |
+| A6 | Fresh frozen em destaque | FRESH / FROZEN | Anatomia sem formol · direto dos EUA | Curso online | A ilustração grande, com etiquetas de atlas: vasos, gordura e músculo |
+
+O A6 liga cada etiqueta a um ponto da ilustração com uma linha fina, como numa prancha de
+atlas. Os pontos ficam em `data-ponto` (coordenadas no recorte de 706×720), e o script da
+página desenha as linhas depois que a imagem carrega, no feed e no story.
+
+Regras mantidas: nada de foto de peça ou de cadáver, nada de antes e depois, nada de
+promessa de agenda ou de resultado clínico, e a palavra "cadáver" fica fora da peça.
+
+## Texto do anúncio
+
+**Texto principal (A1, A2, A4, A5):**
+> Fresh frozen são peças anatômicas humanas preservadas por congelamento, sem formol. É o
+> mais perto da paciente que dá pra estudar a face antes de aplicar.
+>
+> O curso online de Fresh Frozen + dissecção, gravado num laboratório nos EUA, está dentro
+> da Filgueiras Academy, junto com mais de 70 aulas de técnica, a Consulta que Vende e 6
+> encontros ao vivo no ano.
+>
+> 12 meses de acesso. 12x de R$185,85 ou Pix, com garantia de 7 dias.
+>
+> Ensino online para profissionais da estética e da saúde.
+
+**Texto principal (A3):**
+> Um curso de fresh frozen fora do Brasil passa de US$5 mil, fora passagem e visto.
+>
+> Na Filgueiras Academy você estuda fresh frozen online, no seu ritmo, com o curso de
+> Fresh Frozen + dissecção gravado num laboratório nos EUA. Junto vêm mais de 70 aulas de
+> técnica, a Consulta que Vende e 6 encontros ao vivo no ano.
+>
+> 12x de R$185,85 ou Pix, com garantia de 7 dias.
+>
+> Ensino online para profissionais da estética e da saúde.
+
+**Título:** Fresh frozen + 70 aulas de técnica
+**Descrição:** 12x de R$185,85 · garantia de 7 dias
+**Botão da Meta:** Saiba mais
+**Nome do anúncio e `utm_content`:** `academy-01` a `academy-05`
+
+## Teste
+
+- Os 5 no mesmo conjunto, com público frio e feed + story no mesmo anúncio.
+- Comparações diretas:
+  - A1 × A3: Aline de estúdio × Aline no laboratório (qual foto prova mais o fresh frozen).
+  - A4 × A5: a plataforma inteira × a segurança na agulha.
+  - A2 sozinho mede se a ilustração que vendeu a aula também vende a Academy.
+- Olhe a taxa de clique e o custo por venda, e não só o CPM.
+
+## Antes de subir
+
+- [ ] **Curso de Anatomia publicado no Memberkit.** Em 07/10 ele aparecia com 0 aulas. Sem
+  isso, "acesso imediato" e "novo na Academy" viram promessa vazia.
+- [ ] **Confirmar que o curso foi gravado no laboratório dos EUA** ("direto de um
+  laboratório nos EUA", "gravado num laboratório nos EUA").
+- [ ] **Confirmar a âncora "passa de US$5 mil"** (está no pitch de 05/10).
+- [ ] **Arquivo original da ilustração (A2).** A versão do repositório tem 720px de largura e
+  fica um pouco mole ampliada.
