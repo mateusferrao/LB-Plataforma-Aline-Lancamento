@@ -57,7 +57,8 @@ ano. A compra é na página: `https://live.alinefilgueiras.com.br/academy`.
 
 ### 9. Tem desconto ou cupom?
 Não tem, por respeito a quem já entrou: todo mundo paga o mesmo. O que dá é parcelar em 12x de
-R$185,85, e você tem a garantia.
+R$185,85, e você tem a garantia. *(Exceção: quem já foi assinante da Academy e está sem acesso tem a
+condição de volta até 09/10, 23h59. Veja A1.)*
 
 ### 10. Tem garantia?
 A **Garantia Mão Segura**: **7 dias** pra pedir o dinheiro de volta sem explicar nada. E se em
@@ -149,9 +150,23 @@ Sim: **7 dias após a compra para pedir reembolso, sem perguntas**.
 
 ## Ex-alunas
 
-### A1. Sou ex-aluna. Tenho alguma condição?
-A condição de ex-alunas (a aula com o Protocolo de presente) valeu até a aula, em 06/10. Hoje o
-preço da Academy é o mesmo pra todo mundo. *(Se ela insistir que tem um combinado, escale.)*
+### A1. Sou ex-aluna (ou ex-assinante). Tenho alguma condição?
+Depende:
+- **Já foi assinante da Filgueiras Academy e hoje está sem acesso:** sim, até **sexta, 09/10,
+  23h59**. A volta sai por **R$797** à vista ou **12x de R$82,42**, com 12 meses de acesso, o novo
+  curso de Fresh Frozen + dissecção **de presente**, 3 meses de mentoria em grupo com a Aline, o
+  certificado do curso de anatomia e a preferência nos próximos cursos. Página:
+  `https://live.alinefilgueiras.com.br/academy/exalunas`.
+- **Ainda tem acesso ativo:** o curso de anatomia já entra no seu acesso, sem custo.
+- **Ex-aluna só de curso presencial, sem assinatura:** a condição de ex-alunas da aula valeu até
+  06/10. A Academy sai por R$1.797, igual pra todo mundo.
+
+*(Se ela não souber dizer se assinou, ou insistir que tem um combinado, escale.)*
+
+### A2. Assinei e quase não usei. Vale voltar?
+Dessa vez a volta tem a mentoria: por 3 meses você tem encontro marcado com a Aline, ao vivo e em
+grupo, levando os seus casos. E o módulo novo de anatomia é o começo mais direto pra mão ficar
+segura. A condição de volta vai até sexta, 09/10, 23h59.
 
 ### S1. Como falo com o suporte?
 Pelo **WhatsApp +55 31 95349-1799** ou pelo **e-mail suporte.filgueirasacademy@gmail.com**.

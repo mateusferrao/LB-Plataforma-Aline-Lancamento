@@ -217,6 +217,55 @@ export const TICTO_UPSELL_ACADEMY = {
   fallbackOffer: "O5491F4AA",
 } as const;
 
+// Volta das ex-assinantes (/academy/exalunas, decisão de 08/10; plano em
+// docs/plataforma/exalunas.md): quem já foi assinante e está sem acesso renova a
+// Academy por R$797 e leva o novo módulo de anatomia de brinde, a mentoria de 3 meses,
+// a preferência nos próximos cursos e o certificado do curso de anatomia.
+// Âncoras pedidas pela equipe: plataforma R$1.797 + anatomia R$1.297 (somadas).
+// Prazo de sexta, 09/10, 23h59, mas o botão não trava: depois do prazo some só a
+// urgência (barra, contador e "até sexta"); o preço e o checkout seguem.
+// Oferta na Ticto: O647D6C32. Página noindex, link só no disparo.
+export const EXALUNAS = {
+  preco: 797,
+  precoLabel: formatBRL(797),
+  checkoutUrl: "https://payment.ticto.app/O647D6C32",
+  // Mesmo preço e mesmo gateway da anatomia avulsa. Conferir no checkout.
+  parcela12x: ANATOMIA.parcela12x,
+  porDia: "R$2,18", // R$797 / 365
+  mesesAcesso: ACADEMY.mesesAcesso,
+  endsAt: "2026-10-09T23:59:59-03:00",
+  prazoCurto: "sexta, 09/10, 23h59",
+  prazoDia: "sexta, 09/10",
+  contentName: "Filgueiras Academy (ex-assinantes)",
+} as const;
+
+export const RENOVACAO_EXALUNAS: Item = {
+  nome: `Sua volta à Filgueiras Academy · ${ACADEMY.mesesAcesso} meses`,
+  detalhe: "As mais de 70 aulas de técnica, a Consulta que Vende, o material de apoio e os 6 encontros ao vivo no ano.",
+  valor: PRECO,
+};
+export const ANATOMIA_EXALUNAS: Item = {
+  nome: "Novo curso online de Fresh Frozen + dissecção",
+  detalhe: "A face por dentro, camada por camada: os planos, os vasos e os limites que mudam a conduta. Pra mão parar de hesitar.",
+  valor: 1297,
+};
+export const BONUS_EXALUNAS: readonly Item[] = [
+  {
+    nome: "Mentoria em grupo com a Aline · 3 meses",
+    detalhe: "Ao vivo, com a Aline. Você leva os seus casos e não estuda sozinha.",
+    valor: MENTORIA.valor,
+  },
+  { nome: "Certificado do curso de anatomia", detalhe: "Pra paciente ver com quem você estudou a face por dentro." },
+  { nome: "Preferência nos próximos cursos online e presenciais", detalhe: "Você fica sabendo antes e garante a vaga primeiro." },
+];
+export const ENTREGA_EXALUNAS =
+  "Depois da compra, a equipe te chama no WhatsApp pra te colocar na mentoria e combinar o certificado.";
+
+export const VALOR_EXALUNAS = {
+  ancoras: formatBRL((RENOVACAO_EXALUNAS.valor ?? 0) + (ANATOMIA_EXALUNAS.valor ?? 0)),
+  total: formatBRL(soma([RENOVACAO_EXALUNAS, ANATOMIA_EXALUNAS, ...BONUS_EXALUNAS])),
+} as const;
+
 // Garantia nomeada (pitch, bloco 6). Duas camadas.
 export const GARANTIA_ACADEMY = {
   nome: "Garantia Mão Segura",

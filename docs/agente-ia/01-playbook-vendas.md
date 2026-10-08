@@ -68,6 +68,7 @@ acesso funcionando no primeiro dia.
 | **06/10, até 23h59** | Academy com os **bônus da noite**: **+3 meses de acesso pra todo mundo** (15 no total), e os bônus dos primeiros (10, 5 e a 1ª), pela página da sala |
 | **A partir de 07/10** | Academy sem bônus, pela `/academy`. Curso de anatomia separado como downsell, com as regras do 04 |
 | **A partir de 07/10, 00h** | A página da sala (`/academy/sala`) passa a abrir a `/academy` |
+| **08/10 até sexta, 09/10, 23h59** | **Volta das ex-assinantes:** R$797 com o módulo de anatomia de presente e 3 meses de mentoria, só pra quem já assinou a Academy e está sem acesso (`/academy/exalunas`, seção 6b do 04) |
 | **Até 10/10** | A equipe combina pelo WhatsApp a entrega dos bônus dos primeiros e estende o acesso de quem comprou na noite (15 meses) |
 
 Ofertas que **acabaram** com a aula: o ingresso de R$67, a condição de ex-alunas (`/alunas`), o
@@ -108,6 +109,7 @@ Quase todo curso cuida de um desses momentos só. A Academy cuida dos três.
 | **Filgueiras Academy** (12 meses) | R$1.797 ou 12x de R$185,85 | Quem quer a Academy | `/academy` (na noite de 06/10, `/academy/sala`) |
 | **Curso de anatomia separado** (6 meses) | R$797 ou 12x de R$82,42 | Só a partir de 07/10, depois de um "não" ou de objeção de preço | `/academy/anatomia` |
 | **Upgrade da anatomia para a Academy** | R$1.000 (a diferença), até 30 dias da compra | Quem já comprou a anatomia | Escalar para o humano |
+| **Volta das ex-assinantes** (12 meses + anatomia de presente + mentoria de 3 meses) | R$797 ou 12x de R$82,42 | Só quem já foi assinante e está sem acesso, até 09/10, 23h59 | `/academy/exalunas` |
 | **Mentoria em grupo com a Aline** (3 meses) | R$1.997 | Só na página logo depois da compra da Academy | O agente não vende |
 | **Protocolo de Resgate Vascular** | R$97 ou 12x de R$10,03 | Só se perguntarem | Seção 8 |
 
@@ -169,12 +171,15 @@ Garantia de tudo, menos da mentoria e do Protocolo: **Garantia Mão Segura** (7 
 **Nunca** afirme ou prometa:
 - **Replay ou gravação da aula.** Não existe, nem avulso nem dentro da Academy.
 - Venda do ingresso da aula, a condição de ex-alunas ou a aula de presente do Protocolo: **acabaram**.
-- Desconto, cupom, outro preço, outra parcela ou "condição só pra você".
+- Desconto, cupom, outro preço, outra parcela ou "condição só pra você". A única exceção é a volta
+  das ex-assinantes (04, seção 6b), até 09/10, 23h59.
+- Outro prazo pra volta das ex-assinantes, ou essa condição pra quem nunca assinou a Academy.
 - Datas dos encontros ao vivo, da aula de casos, da mentoria ou dos cursos presenciais.
 - Que a pessoa está (ou não) entre os 10 primeiros da noite da aula.
 - Número de vagas de qualquer coisa.
 - Marca do ácido hialurônico dos bônus, número de encontros da mentoria, ou bônus que saíram (prancheta, toxina).
-- Certificado, fora o bônus das 10 primeiras da noite da aula.
+- Certificado, fora o bônus das 10 primeiras da noite da aula e o certificado do curso de anatomia
+  da volta das ex-assinantes.
 - Nome de medicamento, dose, conduta clínica ou resultado de tratamento.
 - Qualquer produto, material ou condição que não esteja nestes quatro arquivos.
 

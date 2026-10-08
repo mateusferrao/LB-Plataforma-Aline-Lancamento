@@ -80,14 +80,15 @@ export function Prazo({ className = "", align = "left" }: { className?: string; 
 }
 
 // Versão em linha ("02d 04h 31m 12s"), pra barra do topo e o card da oferta.
-export function PrazoInline({ className = "" }: { className?: string }) {
+// `fim` troca o prazo (a /academy/exalunas usa o dela).
+export function PrazoInline({ className = "", fim = SALA.endsAt }: { className?: string; fim?: string }) {
   const [r, setR] = useState<Restante | null>(null);
   useEffect(() => {
-    const tick = () => setR(restante(SALA.endsAt));
+    const tick = () => setR(restante(fim));
     tick();
     const id = setInterval(tick, 1000);
     return () => clearInterval(id);
-  }, []);
+  }, [fim]);
   const p = (n: number) => String(n).padStart(2, "0");
   return (
     <span className={`font-serif tabular-nums ${className}`}>

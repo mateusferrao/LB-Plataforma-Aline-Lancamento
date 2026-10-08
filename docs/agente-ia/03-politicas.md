@@ -9,6 +9,10 @@
 ## 1. Filgueiras Academy
 Oferta completa, falas e suporte em `04-filgueiras-academy.md`. Resumo das políticas:
 - **Preço único:** R$1.797 à vista ou em 12x de R$185,85 no cartão. **Sem desconto nem cupom.**
+- **Exceção, a volta das ex-assinantes:** só pra quem já foi assinante e está sem acesso, até
+  **sexta, 09/10, 23h59**. R$797 ou 12x de R$82,42, com 12 meses, o módulo de anatomia de presente,
+  3 meses de mentoria, o certificado do curso de anatomia e a preferência nos próximos cursos. O
+  agente não confere a assinatura: na dúvida, escala. Detalhes no 04, seção 6b.
 - **Bônus da noite da aula:** valeram só em 06/10, até 23h59: **+3 meses de acesso pra todo mundo
   que comprou na noite** (15 no total) e, pros **10 primeiros pela hora da
   compra**, certificado e mentoria em grupo com a Aline; pras **5 primeiras**, o Manual do Envelhecimento;
@@ -20,7 +24,8 @@ Oferta completa, falas e suporte em `04-filgueiras-academy.md`. Resumo das polí
 - **Acesso:** login no e-mail da compra em poucos minutos (Pix: depois de pago). 12 meses (15 pra quem
   comprou na noite de 06/10, estendido pela equipe até 10/10). Anatomia separada: 6 meses.
 - **Links:** só páginas do site (`/academy/sala` na noite de 06/10, `/academy` depois,
-  `/academy/anatomia` só a partir de 07/10 e só depois de um "não"). Nunca checkout da Ticto.
+  `/academy/anatomia` só a partir de 07/10 e só depois de um "não", `/academy/exalunas` só pra
+  ex-assinante e só até 09/10, 23h59). Nunca checkout da Ticto.
 - **Mentoria (upsell) e vaga da colega:** só na página logo depois da compra da Academy. A vaga da
   colega vale só pra quem aceita no mesmo dia; cadastro da colega e casos fora da regra → humano.
 - **Upgrade da anatomia:** R$1.000 até o 30º dia da compra da anatomia. O humano confere a data e
@@ -50,6 +55,8 @@ Oferta completa, falas e suporte em `04-filgueiras-academy.md`. Resumo das polí
 ## 5. Escassez e urgência
 - Só o que é verdade. Os bônus da noite da aula acabaram em 06/10, 23h59.
 - Depois disso, a Academy **não tem prazo nem vagas limitadas**. Não invente urgência.
+- A volta das ex-assinantes tem prazo real: **sexta, 09/10, 23h59**. A mentoria dela não tem limite
+  de vagas.
 - A única data real que segue valendo é o **crédito de 30 dias** da anatomia separada para o upgrade.
 - **Nunca declare número de vagas** de nada.
 
@@ -85,3 +92,4 @@ Oferta completa, falas e suporte em `04-filgueiras-academy.md`. Resumo das polí
 - Condição de ex-alunas (`/alunas`, cupom EXALUNAS).
 - Order bump do Protocolo (R$29,90) no checkout da aula.
 - Bônus da noite da aula (depois de 06/10, 23h59).
+- A partir de 10/10: a volta das ex-assinantes (`/academy/exalunas`). Pedido dessa condição → humano.
