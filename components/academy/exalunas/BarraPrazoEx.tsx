@@ -7,7 +7,7 @@ export function BarraPrazoEx() {
   return (
     <AteOFim fim={EXALUNAS.endsAt}>
       <div className="border-b border-line bg-bg-2 px-4 py-2.5 text-center text-[13px] text-fg-soft">
-        Condição de ex-assinante até {EXALUNAS.prazoCurto} · termina em{" "}
+        Fresh Frozen de presente pra ex-assinante até {EXALUNAS.prazoCurto} · termina em{" "}
         <PrazoInline fim={EXALUNAS.endsAt} className="text-[14px] text-fg" />
       </div>
     </AteOFim>

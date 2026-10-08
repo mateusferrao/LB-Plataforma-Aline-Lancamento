@@ -58,7 +58,7 @@ export function OfertaEx() {
       <Reveal>
         <p className="mx-auto mt-5 max-w-[560px] text-center text-[1.02rem] leading-[1.6] text-fg-soft">
           Quem entra hoje pela primeira vez paga {ACADEMY.precoCheioLabel}. Você já esteve aqui e já confiou na Aline,
-          então a sua volta custa {EXALUNAS.precoLabel}, com o módulo de anatomia de presente.
+          então a sua volta custa {EXALUNAS.precoLabel}, com o novo curso de Fresh Frozen de presente.
         </p>
       </Reveal>
 
@@ -69,7 +69,10 @@ export function OfertaEx() {
 
         <ul className="mt-4 list-none p-0">
           <Linha {...RENOVACAO_EXALUNAS} />
-          <Linha {...ANATOMIA_EXALUNAS} tag="Presente" />
+        </ul>
+        {/* A novidade em destaque (pedido de 08/10). */}
+        <ul className="mt-3 list-none rounded-[6px] border border-wine-ink/50 bg-bg-2 px-4">
+          <Linha {...ANATOMIA_EXALUNAS} tag="Novo · presente" />
         </ul>
         <Total rotulo="A plataforma e o módulo" valor={VALOR_EXALUNAS.ancoras} />
 

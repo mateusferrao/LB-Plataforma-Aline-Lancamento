@@ -14,7 +14,7 @@ export function FinalCtaEx() {
           Você já começou. <span className="text-wine-bright">Volta pra terminar com a mão firme.</span>
         </h2>
         <p className="mt-5 max-w-[560px] text-[1.08rem] leading-[1.6] text-fg-soft">
-          A plataforma inteira por {EXALUNAS.mesesAcesso} meses, o módulo de anatomia de presente e 3 meses de
+          A plataforma inteira por {EXALUNAS.mesesAcesso} meses, o novo curso de Fresh Frozen de presente e 3 meses de
           mentoria com a Aline. Em 12x de {EXALUNAS.parcela12x}, ou {EXALUNAS.precoLabel} à vista.
         </p>
         <CtaEx className="mt-8 w-full sm:w-auto">

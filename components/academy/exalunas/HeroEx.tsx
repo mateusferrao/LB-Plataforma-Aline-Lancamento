@@ -19,14 +19,29 @@ export function HeroEx() {
               Só pra quem já foi assinante da Academy
             </span>
 
-            <h1 className="mt-6 text-balance font-sans font-semibold text-[1.95rem] leading-[1.14] tracking-[-0.015em] text-fg sm:text-[2.5rem] lg:text-[2.7rem]">
+            {/* Selo da novidade (pedido de 08/10: o Fresh Frozen em destaque). */}
+            <p className="mt-5 flex items-center gap-2.5 text-[0.95rem] font-semibold text-fg">
+              <span className="relative flex size-2.5" aria-hidden="true">
+                <span className="absolute inline-flex size-full animate-ping rounded-full bg-wine-bright opacity-60 motion-reduce:animate-none" />
+                <span className="relative inline-flex size-2.5 rounded-full bg-wine-bright" />
+              </span>
+              <span>
+                <span className="mr-1.5 rounded-[2px] bg-wine px-1.5 py-0.5 text-[10.5px] tracking-[0.14em] text-on-wine uppercase">
+                  Novo
+                </span>
+                Curso online de Fresh Frozen + dissecção
+              </span>
+            </p>
+
+            <h1 className="mt-4 text-balance font-sans font-semibold text-[1.95rem] leading-[1.14] tracking-[-0.015em] text-fg sm:text-[2.5rem] lg:text-[2.7rem]">
               Volte pra Academy e{" "}
-              <span className="titulo-grifo">leve o novo módulo de anatomia de presente.</span>
+              <span className="titulo-grifo">leve de presente o novo curso de Fresh Frozen.</span>
             </h1>
 
             <p className="mt-5 max-w-[560px] text-[1.1rem] leading-[1.55] text-fg-soft">
-              Desde que você saiu, a Filgueiras Academy ganhou o curso online de Fresh Frozen + dissecção. Na sua
-              volta ele vem de brinde, junto com 3 meses de mentoria ao vivo com a Aline.
+              A face por dentro, camada por camada, em peças fresh frozen, com a Dra. Aline. É a maior novidade da
+              Academy desde que você saiu, e na sua volta ele vem de brinde, junto com 3 meses de mentoria ao vivo
+              com ela.
             </p>
 
             <VerOfertaButton produto="academy-exalunas" className="mt-8 w-full justify-center sm:w-auto">

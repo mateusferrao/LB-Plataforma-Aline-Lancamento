@@ -37,6 +37,7 @@ contadores e as frases "até sexta"; o preço e o checkout continuam.
 | **Hero sem preço; o botão leva à oferta e aos bônus** (como na `/academy`), e a barra fixa do celular também, até ela chegar no card | Pedido de 08/10: valor antes do preço. O checkout fica no card da oferta, na seção da mentoria e no CTA final. |
 | **Página curta:** o que mudou → oferta → prova → mentoria → autoridade → garantia → FAQ | A oferta entra na 3ª dobra. As objeções ficam depois, pra quem ainda precisa. |
 | **Mentoria como resposta a "assinei e não usei"** (seção "Dessa vez você não estuda sozinha" e FAQ) | É a objeção nº 1 de quem já assinou e saiu. |
+| **O Fresh Frozen como a grande novidade** (08/10): selo "Novo" e H1 no hero, card grande com foto na seção "Enquanto você esteve fora", linha destacada no card da oferta, barra do topo e barra do celular | Dá o ar de novidade: é o motivo de voltar agora. A mentoria, o certificado e a preferência viram "E mais, só na sua volta". |
 | **Sem escassez inventada** | A mentoria é pra todas as que voltarem. A única urgência é o prazo real de sexta. |
 
 ## 3. Link do disparo (com UTMs)

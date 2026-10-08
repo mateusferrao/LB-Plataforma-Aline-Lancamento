@@ -3,21 +3,23 @@ import { Reveal } from "@/components/Reveal";
 import { Titulo } from "@/components/Titulo";
 import { Secao } from "@/components/academy/Secao";
 import { withBasePath } from "@/lib/basePath";
+import { ANATOMIA_EXALUNAS, brl } from "@/lib/ofertaAcademy";
 
-// "O que você perdeu desde que saiu": o motivo de voltar agora, em três blocos.
-const NOVIDADES = [
+// "O que você perdeu desde que saiu". O Fresh Frozen é a novidade e ganha o card
+// grande, com foto (pedido de 08/10); a mentoria, o certificado e a preferência
+// vêm depois, menores, como o que mais entra na volta.
+const O_QUE_VE = [
+  "Os planos de cada região da face, camada por camada",
+  "Os vasos e os limites que mudam a conduta",
+  "Dissecção e aplicação em peças fresh frozen, sem formol",
+];
+
+const E_MAIS = [
   {
-    tag: "Novo na Academy",
-    t: "Curso online de Fresh Frozen + dissecção",
-    d: "Peças anatômicas preservadas por congelamento, sem formol, mais próximas do que você encontra na paciente. Você vê os planos, os vasos e os limites de cada região antes de pôr a agulha.",
-  },
-  {
-    tag: "Novo pra você",
     t: "Mentoria em grupo com a Aline, por 3 meses",
-    d: "Encontros ao vivo, online, com a Aline, levando os seus casos. Até hoje, só os 10 primeiros da aula de 06/10 levaram essa mentoria junto com a Academy.",
+    d: "Encontros ao vivo, online, levando os seus casos. Até hoje, só os 10 primeiros da aula de 06/10 levaram essa mentoria junto com a Academy.",
   },
   {
-    tag: "Só na sua volta",
     t: "Certificado e preferência",
     d: "O certificado do curso de anatomia e a preferência nos próximos cursos online e presenciais: você fica sabendo antes e garante a vaga primeiro.",
   },
@@ -30,28 +32,56 @@ export function NovidadeEx() {
         A Academy ganhou
       </Titulo>
 
-      <Reveal className="relative mt-9 aspect-[16/10] w-full overflow-hidden rounded-[6px] border border-line-soft bg-surface">
-        <Image
-          src={withBasePath("/images/fresh/lab-bracos-abertos.webp")}
-          alt="Dra. Aline Filgueiras no laboratório de dissecção"
-          fill
-          sizes="(min-width: 768px) 640px, 92vw"
-          className="object-cover object-[50%_20%]"
-        />
+      <Reveal className="mt-9 overflow-hidden rounded-[8px] border-2 border-wine">
+        <div className="relative aspect-[16/10] w-full bg-surface">
+          <Image
+            src={withBasePath("/images/fresh/lab-bracos-abertos.webp")}
+            alt="Dra. Aline Filgueiras no laboratório de dissecção"
+            fill
+            sizes="(min-width: 768px) 640px, 92vw"
+            className="object-cover object-[50%_20%]"
+          />
+          <span className="absolute top-3 left-3 rounded-[2px] bg-wine px-2.5 py-1 text-[11px] font-semibold tracking-[0.16em] text-on-wine uppercase">
+            Novo na Academy
+          </span>
+        </div>
+        <div className="px-5 py-6 sm:px-7">
+          <h3 className="font-sans text-[1.45rem] font-semibold leading-[1.2] tracking-[-0.01em] text-fg sm:text-[1.7rem]">
+            Curso online de Fresh Frozen + dissecção
+          </h3>
+          <p className="mt-3 text-[1.03rem] leading-[1.6] text-fg-soft">
+            Fresh frozen são peças anatômicas preservadas por congelamento, sem formol, mais próximas do que você
+            encontra na paciente. Com a Aline, você vê a face por dentro antes de pôr a agulha.
+          </p>
+          <ul className="mt-5 grid list-none gap-2.5 p-0">
+            {O_QUE_VE.map((p) => (
+              <li key={p} className="flex items-baseline gap-2.5 text-[1rem] text-fg">
+                <span className="text-wine-ink" aria-hidden="true">✓</span>
+                {p}
+              </li>
+            ))}
+          </ul>
+          <p className="mt-6 border-t border-dashed border-line pt-5 text-[0.98rem] leading-[1.55] text-fg-soft">
+            Um curso de fresh frozen fora do Brasil passa de US$5.000, sem contar passagem e visto. Este é online, no
+            seu tempo. Vale {brl(ANATOMIA_EXALUNAS.valor ?? 0)}, e{" "}
+            <strong className="font-semibold text-fg">na sua volta ele é de presente.</strong>
+          </p>
+        </div>
       </Reveal>
 
-      <ol className="mt-9 grid list-none gap-4 p-0">
-        {NOVIDADES.map((n, i) => (
-          <Reveal key={n.t} className="grid grid-cols-[40px_1fr] gap-4 rounded-[6px] border border-line p-5">
-            <span className="font-serif text-[1.6rem] leading-none text-wine-bright">{String(i + 1).padStart(2, "0")}</span>
-            <div>
-              <span className="text-[10.5px] font-semibold tracking-[0.16em] text-wine-ink uppercase">{n.tag}</span>
-              <h3 className="mt-1 font-sans text-[1.12rem] font-semibold text-fg">{n.t}</h3>
-              <p className="mt-1.5 text-[0.98rem] leading-[1.55] text-fg-soft">{n.d}</p>
-            </div>
+      <Reveal>
+        <p className="mt-10 text-[11.5px] font-semibold tracking-[0.16em] text-wine-ink uppercase">
+          E mais, só na sua volta
+        </p>
+      </Reveal>
+      <ul className="mt-3 grid list-none gap-3 p-0">
+        {E_MAIS.map((n) => (
+          <Reveal key={n.t} className="rounded-[6px] border border-line p-5">
+            <h3 className="font-sans text-[1.08rem] font-semibold text-fg">{n.t}</h3>
+            <p className="mt-1.5 text-[0.98rem] leading-[1.55] text-fg-soft">{n.d}</p>
           </Reveal>
         ))}
-      </ol>
+      </ul>
 
       <Reveal>
         <p className="mt-8 text-center text-[1.08rem] leading-[1.6] text-fg">
