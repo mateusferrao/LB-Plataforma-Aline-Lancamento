@@ -296,3 +296,95 @@ Regras que valem para todos:
   `criativo-02` etc. pra ler o resultado por peça.
 - **Próximo passo sugerido:** juntar à mão comentários reais em posts de grandes perfis de
   HOF (a pesquisa não achou fala espontânea do público em fóruns) pra afinar a linguagem.
+
+---
+
+# Criativos da Academy · Fresh frozen dos EUA (08/10)
+
+5 estáticos para a **`/academy`** (evergreen, R$1.797), cada um em feed e story, no mesmo
+sistema visual das peças da aula. O grande diferencial de todos é o **fresh frozen direto de
+um laboratório nos EUA**. O resto da Academy (70+ aulas, encontros ao vivo, Consulta que
+Vende) entra como apoio.
+
+- **Fonte:** `criativos-academy.html`.
+- **PNGs:** `png/feed/academy-0N.png` e `png/story/academy-0N-story.png`.
+- **Gerar de novo:** `node docs/criativos/render.mjs criativos-academy.html academy`.
+- **Botão:** "Quero entrar na Academy", o mesmo texto da página.
+
+| # | Ângulo | Headline | Foto |
+|---|---|---|---|
+| A1 | Prova visual (o criativo que mais vendeu) | A face por dentro, *em fresh frozen.* | A ilustração do "Por Dentro da Face", sem o texto da aula |
+| A2 | Educação: o que é fresh frozen | É o mais perto da sua paciente que você chega *antes da primeira agulha.* | Sala de dissecção em P&B + verbete "fresh frozen" |
+| A3 | Âncora de preço | Fresh frozen dos EUA, *sem embarcar.* | Aline de braço erguido + cartão de embarque |
+| A4 | Bastidor e autoridade | Ela foi aos EUA ver a face por dentro. *Agora te mostra camada por camada.* | Aline de braço erguido em tela cheia |
+| A5 | Risco (segurança) | Em fresh frozen, você vê o que passa *a milímetros da sua agulha.* | Sala com a Aline ao fundo, em P&B, com a régua milimetrada |
+
+## Por que cada um
+
+- **A1:** usa a imagem do criativo que mais vendeu na aula, então quem já viu reconhece. O
+  apoio explica o que ela leva ("dissecção e aplicação em peças fresh frozen") e o porquê
+  ("aplicar sabendo o que tem embaixo da pele").
+- **A2:** muita gente do público frio não sabe o que é fresh frozen. O verbete explica em
+  uma frase (a mesma definição da página) e a headline transforma isso em desejo: chegar
+  perto da paciente antes de aplicar. É o único com formato de "conteúdo", e por isso tende
+  a segurar o dedo.
+- **A3:** a âncora é real e já está no pitch: um curso de fresh frozen fora do Brasil passa
+  de US$5 mil, fora passagem e visto. O cartão de embarque transforma "sem viajar" em
+  imagem e põe o preço parcelado no lugar da tarifa.
+- **A4:** prova pelo bastidor. A foto é real, da Aline no laboratório, e a frase conta o
+  caminho (ela foi, ela mostra).
+- **A5:** o medo nº 1 do público (intercorrência) com o fresh frozen como solução. É o par
+  do criativo 07 da aula, agora vendendo a Academy.
+
+Regras mantidas: nada de foto de peça ou de cadáver (só a ilustração e as fotos da sala),
+nada de antes e depois, nada de promessa de agenda ou de resultado clínico, e a palavra
+"cadáver" fica fora da peça.
+
+## Texto do anúncio
+
+**Texto principal (A1, A2, A4, A5):**
+> Fresh frozen são peças anatômicas humanas preservadas por congelamento, sem formol. É o
+> mais perto da paciente que dá pra estudar a face antes de aplicar.
+>
+> O curso online de Fresh Frozen + dissecção, gravado num laboratório nos EUA, está dentro
+> da Filgueiras Academy, junto com mais de 70 aulas de técnica, a Consulta que Vende e 6
+> encontros ao vivo no ano.
+>
+> 12 meses de acesso. 12x de R$185,85 ou Pix, com garantia de 7 dias.
+>
+> Ensino online para profissionais da estética e da saúde.
+
+**Texto principal (A3):**
+> Um curso de fresh frozen fora do Brasil passa de US$5 mil, fora passagem e visto.
+>
+> Na Filgueiras Academy você estuda fresh frozen online, no seu ritmo, com o curso de
+> Fresh Frozen + dissecção gravado num laboratório nos EUA. Junto vêm mais de 70 aulas de
+> técnica, a Consulta que Vende e 6 encontros ao vivo no ano.
+>
+> 12x de R$185,85 ou Pix, com garantia de 7 dias.
+>
+> Ensino online para profissionais da estética e da saúde.
+
+**Título:** Fresh frozen + 70 aulas de técnica
+**Descrição:** 12x de R$185,85 · garantia de 7 dias
+**Botão da Meta:** Saiba mais
+**Nome do anúncio e `utm_content`:** `academy-01` a `academy-05`
+
+## Teste
+
+- Os 5 no mesmo conjunto, com público frio e feed + story no mesmo anúncio.
+- Comparações diretas:
+  - A1 × A4: ilustração × foto real de bastidor.
+  - A2 × A5: educação × medo.
+  - A3 sozinho mede se a âncora de preço puxa o clique certo.
+- Olhe a taxa de clique e o custo por venda, e não só o CPM.
+
+## Antes de subir
+
+- [ ] **Curso de Anatomia publicado no Memberkit.** Em 07/10 ele aparecia com 0 aulas. Sem
+  isso, "acesso imediato" e "novo na Academy" viram promessa vazia.
+- [ ] **Confirmar que o curso foi gravado no laboratório dos EUA** ("direto de um
+  laboratório nos EUA", "gravado num laboratório nos EUA").
+- [ ] **Confirmar a âncora "passa de US$5 mil"** (está no pitch de 05/10).
+- [ ] **Arquivo original da ilustração (A1).** A versão do repositório tem 720px de largura e
+  fica um pouco mole ampliada.
