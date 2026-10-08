@@ -310,6 +310,7 @@ diferencial de todos é o **fresh frozen direto de um laboratório nos EUA**.
   de apoio;
 - a Aline recortada, embaixo à esquerda, e o rosto em traço com os vasos pontilhados;
 - um selo e uma assinatura, sem botão desenhado (o botão "Saiba mais" é o da Meta).
+- sem preço na peça (decisão de 08/10): o preço fica no texto do anúncio e na página.
 
 Uma versão escura, no estilo das peças da aula, existiu antes e está no histórico do git.
 
@@ -324,7 +325,7 @@ Uma versão escura, no estilo das peças da aula, existiu antes e está no hist�
 |---|---|---|---|---|---|
 | A1 | Lançamento | ANATOMIA / FRESH FROZEN | Online · direto dos EUA | Novo na plataforma | Aline sorrindo, de terno vinho |
 | A2 | Prova visual | A FACE / POR DENTRO | Dissecção e aplicação, online | Filgueiras Academy | A ilustração do criativo que mais vendeu |
-| A3 | Sem viajar + preço | FRESH FROZEN / DOS EUA | Sem visto e sem passagem | 12x de R$185,85 | Aline de jaleco no laboratório |
+| A3 | Sem viajar | FRESH FROZEN / DOS EUA | Sem visto e sem passagem | Filgueiras Academy | Aline de jaleco no laboratório |
 | A4 | A plataforma inteira | 70+ AULAS / + FRESH FROZEN | Toxina · preenchimento · bioestimuladores | 6 encontros ao vivo | Aline em pé, de braços cruzados |
 | A5 | Segurança | MÃO FIRME / PERTO DO RISCO | O que passa a milímetros da agulha | Filgueiras Academy | Aline sentada, olhando pra câmera |
 
