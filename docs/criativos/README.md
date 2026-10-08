@@ -301,44 +301,35 @@ Regras que valem para todos:
 
 # Criativos da Academy · Fresh frozen dos EUA (08/10)
 
-5 estáticos para a **`/academy`** (evergreen, R$1.797), cada um em feed e story, no mesmo
-sistema visual das peças da aula. O grande diferencial de todos é o **fresh frozen direto de
-um laboratório nos EUA**. O resto da Academy (70+ aulas, encontros ao vivo, Consulta que
-Vende) entra como apoio.
+5 estáticos para a **`/academy`** (evergreen, R$1.797), cada um em feed e story. O grande
+diferencial de todos é o **fresh frozen direto de um laboratório nos EUA**.
+
+**Estilo clean** (pedido da equipe em 08/10, nas referências de anúncios de curso de HOF):
+- fundo creme e moldura fina com o canto arredondado;
+- título grande em serifa, em duas linhas (preto e vinho), um divisor com losango e uma linha
+  de apoio;
+- a Aline recortada, embaixo à esquerda, e o rosto em traço com os vasos pontilhados;
+- um selo e uma assinatura, sem botão desenhado (o botão "Saiba mais" é o da Meta).
+
+Uma versão escura, no estilo das peças da aula, existiu antes e está no histórico do git.
 
 - **Fonte:** `criativos-academy.html`.
+- **Recortes:** `fotos/recortes/` (fundo removido com IA, BiRefNet). Na ilustração, o logo
+  antigo que estava por cima do coque foi pintado com a cor do cabelo, e o texto da aula ficou
+  de fora.
 - **PNGs:** `png/feed/academy-0N.png` e `png/story/academy-0N-story.png`.
 - **Gerar de novo:** `node docs/criativos/render.mjs criativos-academy.html academy`.
-- **Botão:** "Quero entrar na Academy", o mesmo texto da página.
 
-| # | Ângulo | Headline | Foto |
-|---|---|---|---|
-| A1 | Prova visual (o criativo que mais vendeu) | A face por dentro, *em fresh frozen.* | A ilustração do "Por Dentro da Face", sem o texto da aula |
-| A2 | Educação: o que é fresh frozen | É o mais perto da sua paciente que você chega *antes da primeira agulha.* | Sala de dissecção em P&B + verbete "fresh frozen" |
-| A3 | Âncora de preço | Fresh frozen dos EUA, *sem embarcar.* | Aline de braço erguido + cartão de embarque |
-| A4 | Bastidor e autoridade | Ela foi aos EUA ver a face por dentro. *Agora te mostra camada por camada.* | Aline de braço erguido em tela cheia |
-| A5 | Risco (segurança) | Em fresh frozen, você vê o que passa *a milímetros da sua agulha.* | Sala com a Aline ao fundo, em P&B, com a régua milimetrada |
+| # | Ângulo | Título | Apoio | Selo | Foto |
+|---|---|---|---|---|---|
+| A1 | Lançamento | ANATOMIA / FRESH FROZEN | Online · direto dos EUA | Novo na plataforma | Aline sorrindo, de terno vinho |
+| A2 | Prova visual | A FACE / POR DENTRO | Dissecção e aplicação, online | Filgueiras Academy | A ilustração do criativo que mais vendeu |
+| A3 | Sem viajar + preço | FRESH FROZEN / DOS EUA | Sem visto e sem passagem | 12x de R$185,85 | Aline de jaleco no laboratório |
+| A4 | A plataforma inteira | 70+ AULAS / + FRESH FROZEN | Toxina · preenchimento · bioestimuladores | 6 encontros ao vivo | Aline em pé, de braços cruzados |
+| A5 | Segurança | MÃO FIRME / PERTO DO RISCO | O que passa a milímetros da agulha | Filgueiras Academy | Aline sentada, olhando pra câmera |
 
-## Por que cada um
-
-- **A1:** usa a imagem do criativo que mais vendeu na aula, então quem já viu reconhece. O
-  apoio explica o que ela leva ("dissecção e aplicação em peças fresh frozen") e o porquê
-  ("aplicar sabendo o que tem embaixo da pele").
-- **A2:** muita gente do público frio não sabe o que é fresh frozen. O verbete explica em
-  uma frase (a mesma definição da página) e a headline transforma isso em desejo: chegar
-  perto da paciente antes de aplicar. É o único com formato de "conteúdo", e por isso tende
-  a segurar o dedo.
-- **A3:** a âncora é real e já está no pitch: um curso de fresh frozen fora do Brasil passa
-  de US$5 mil, fora passagem e visto. O cartão de embarque transforma "sem viajar" em
-  imagem e põe o preço parcelado no lugar da tarifa.
-- **A4:** prova pelo bastidor. A foto é real, da Aline no laboratório, e a frase conta o
-  caminho (ela foi, ela mostra).
-- **A5:** o medo nº 1 do público (intercorrência) com o fresh frozen como solução. É o par
-  do criativo 07 da aula, agora vendendo a Academy.
-
-Regras mantidas: nada de foto de peça ou de cadáver (só a ilustração e as fotos da sala),
-nada de antes e depois, nada de promessa de agenda ou de resultado clínico, e a palavra
-"cadáver" fica fora da peça.
+Regras mantidas: nada de foto de peça ou de cadáver, nada de antes e depois, nada de
+promessa de agenda ou de resultado clínico, e a palavra "cadáver" fica fora da peça.
 
 ## Texto do anúncio
 
@@ -374,9 +365,9 @@ nada de antes e depois, nada de promessa de agenda ou de resultado clínico, e a
 
 - Os 5 no mesmo conjunto, com público frio e feed + story no mesmo anúncio.
 - Comparações diretas:
-  - A1 × A4: ilustração × foto real de bastidor.
-  - A2 × A5: educação × medo.
-  - A3 sozinho mede se a âncora de preço puxa o clique certo.
+  - A1 × A3: Aline de estúdio × Aline no laboratório (qual foto prova mais o fresh frozen).
+  - A4 × A5: a plataforma inteira × a segurança na agulha.
+  - A2 sozinho mede se a ilustração que vendeu a aula também vende a Academy.
 - Olhe a taxa de clique e o custo por venda, e não só o CPM.
 
 ## Antes de subir
@@ -386,5 +377,5 @@ nada de antes e depois, nada de promessa de agenda ou de resultado clínico, e a
 - [ ] **Confirmar que o curso foi gravado no laboratório dos EUA** ("direto de um
   laboratório nos EUA", "gravado num laboratório nos EUA").
 - [ ] **Confirmar a âncora "passa de US$5 mil"** (está no pitch de 05/10).
-- [ ] **Arquivo original da ilustração (A1).** A versão do repositório tem 720px de largura e
+- [ ] **Arquivo original da ilustração (A2).** A versão do repositório tem 720px de largura e
   fica um pouco mole ampliada.
