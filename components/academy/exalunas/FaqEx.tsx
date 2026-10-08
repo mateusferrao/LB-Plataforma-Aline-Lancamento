@@ -36,6 +36,10 @@ const FAQS = [
     a: "Fresh frozen são peças anatômicas humanas preservadas por congelamento, sem formol, mais próximas do que você encontra na paciente. O curso é online, dentro da plataforma: você assiste no seu tempo, quantas vezes precisar.",
   },
   {
+    q: "As imagens do curso são de onde?",
+    a: "São reais e autorais: fotos e vídeos das dissecções que a Aline fez no laboratório, nos Estados Unidos. São imagens de estudo, mostradas com respeito e com a explicação de cada estrutura.",
+  },
+  {
     q: "Como pago?",
     a: `Em até 12x de ${EXALUNAS.parcela12x} no cartão, ou ${EXALUNAS.precoLabel} à vista no Pix ou no cartão, direto no checkout.`,
   },

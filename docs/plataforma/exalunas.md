@@ -38,6 +38,7 @@ contadores e as frases "até sexta"; o preço e o checkout continuam.
 | **Página curta:** o que mudou → oferta → prova → mentoria → autoridade → garantia → FAQ | A oferta entra na 3ª dobra. As objeções ficam depois, pra quem ainda precisa. |
 | **Mentoria como resposta a "assinei e não usei"** (seção "Dessa vez você não estuda sozinha" e FAQ) | É a objeção nº 1 de quem já assinou e saiu. |
 | **O Fresh Frozen como a grande novidade** (08/10): selo "Novo" e H1 no hero, card grande com foto na seção "Enquanto você esteve fora", linha destacada no card da oferta, barra do topo e barra do celular | Dá o ar de novidade: é o motivo de voltar agora. A mentoria, o certificado e a preferência viram "E mais, só na sua volta". |
+| **Imagens reais e autorais, direto dos EUA** (08/10): no hero, no card do Fresh Frozen (etiqueta na foto, 1º item da lista e texto), na linha do card da oferta, no FAQ e no CTA final | É o diferencial do curso: o que ela vê são as dissecções da própria Aline, não atlas. |
 | **Sem escassez inventada** | A mentoria é pra todas as que voltarem. A única urgência é o prazo real de sexta. |
 
 ## 3. Link do disparo (com UTMs)
@@ -66,7 +67,7 @@ opção de sair. Se o disparo for pela API oficial do WhatsApp, cadastre como te
 > Oi, {NOME}! Aqui é a equipe da Dra. Aline Filgueiras.
 >
 > Desde que você saiu, a Filgueiras Academy ganhou o curso online de Fresh Frozen + dissecção: a
-> face por dentro, camada por camada.
+> face por dentro, camada por camada, com imagens reais das dissecções que a Aline fez nos EUA.
 >
 > Pra quem já foi assinante, até sexta (09/10, 23h59):
 > • a Academy de volta por 12 meses, por R$797 (ou 12x de R$82,42). Quem entra pela primeira vez paga R$1.797;

@@ -153,8 +153,9 @@ Sim: **7 dias após a compra para pedir reembolso, sem perguntas**.
 ### A1. Sou ex-aluna (ou ex-assinante). Tenho alguma condição?
 Depende:
 - **Já foi assinante da Filgueiras Academy e hoje está sem acesso:** sim, até **sexta, 09/10,
-  23h59**. A volta sai por **R$797** à vista ou **12x de R$82,42**, com 12 meses de acesso, o novo
-  curso de Fresh Frozen + dissecção **de presente**, 3 meses de mentoria em grupo com a Aline, o
+  23h59**. A volta sai em **12x de R$82,42** ou **R$797** à vista, com 12 meses de acesso, o novo
+  curso de Fresh Frozen + dissecção **de presente** (imagens reais e autorais das dissecções da Aline
+  nos EUA), 3 meses de mentoria em grupo com a Aline, o
   certificado do curso de anatomia e a preferência nos próximos cursos. Página:
   `https://live.alinefilgueiras.com.br/academy/exalunas`.
 - **Ainda tem acesso ativo:** o curso de anatomia já entra no seu acesso, sem custo.

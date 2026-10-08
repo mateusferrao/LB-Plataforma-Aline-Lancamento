@@ -7,8 +7,10 @@ import { ANATOMIA_EXALUNAS, brl } from "@/lib/ofertaAcademy";
 
 // "O que você perdeu desde que saiu". O Fresh Frozen é a novidade e ganha o card
 // grande, com foto (pedido de 08/10); a mentoria, o certificado e a preferência
-// vêm depois, menores, como o que mais entra na volta.
+// vêm depois, menores, como o que mais entra na volta. Diferencial (08/10): as
+// imagens do curso são reais e autorais, das dissecções da Aline nos EUA.
 const O_QUE_VE = [
+  "Imagens reais e autorais: fotos e vídeos das dissecções da Aline nos EUA",
   "Os planos de cada região da face, camada por camada",
   "Os vasos e os limites que mudam a conduta",
   "Dissecção e aplicação em peças fresh frozen, sem formol",
@@ -44,6 +46,9 @@ export function NovidadeEx() {
           <span className="absolute top-3 left-3 rounded-[2px] bg-wine px-2.5 py-1 text-[11px] font-semibold tracking-[0.16em] text-on-wine uppercase">
             Novo na Academy
           </span>
+          <span className="absolute bottom-3 left-3 rounded-[2px] bg-bg/80 px-2.5 py-1 text-[11px] font-semibold tracking-[0.14em] text-fg uppercase backdrop-blur-sm">
+            Imagens autorais · direto dos EUA
+          </span>
         </div>
         <div className="px-5 py-6 sm:px-7">
           <h3 className="font-sans text-[1.45rem] font-semibold leading-[1.2] tracking-[-0.01em] text-fg sm:text-[1.7rem]">
@@ -51,7 +56,8 @@ export function NovidadeEx() {
           </h3>
           <p className="mt-3 text-[1.03rem] leading-[1.6] text-fg-soft">
             Fresh frozen são peças anatômicas preservadas por congelamento, sem formol, mais próximas do que você
-            encontra na paciente. Com a Aline, você vê a face por dentro antes de pôr a agulha.
+            encontra na paciente. Você estuda o que a Aline viu com os próprios olhos no laboratório, nos Estados
+            Unidos, antes de pôr a agulha.
           </p>
           <ul className="mt-5 grid list-none gap-2.5 p-0">
             {O_QUE_VE.map((p) => (

@@ -246,7 +246,7 @@ export const RENOVACAO_EXALUNAS: Item = {
 };
 export const ANATOMIA_EXALUNAS: Item = {
   nome: "Novo curso online de Fresh Frozen + dissecção",
-  detalhe: "A face por dentro, camada por camada: os planos, os vasos e os limites que mudam a conduta. Pra mão parar de hesitar.",
+  detalhe: "Imagens reais e autorais das dissecções da Aline nos EUA: os planos, os vasos e os limites que mudam a conduta. Pra mão parar de hesitar.",
   valor: 1297,
 };
 export const BONUS_EXALUNAS: readonly Item[] = [

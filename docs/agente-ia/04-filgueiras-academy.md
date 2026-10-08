@@ -152,7 +152,9 @@ Foi enviada por disparo de WhatsApp pra lista de ex-assinantes. Página: `https:
 - **O que entra:**
   - a volta à plataforma inteira (vale R$1.797): as mais de 70 aulas, a Consulta que Vende, o
     material de apoio e os 6 encontros ao vivo no ano;
-  - **de presente**, o novo curso online de **Fresh Frozen + dissecção** (vale R$1.297);
+  - **de presente**, o novo curso online de **Fresh Frozen + dissecção** (vale R$1.297). Diferencial:
+    as **imagens são reais e autorais**, fotos e vídeos das dissecções que a Aline fez no laboratório
+    nos **Estados Unidos**. Cidade, instituição ou data das dissecções: **não informe**, escale;
   - de bônus, a **mentoria em grupo com a Aline por 3 meses** (vale R$5.000), o **certificado do
     curso de anatomia** e a **preferência nos próximos cursos online e presenciais**.
   - Somado, **R$8.094**.
@@ -169,8 +171,9 @@ Foi enviada por disparo de WhatsApp pra lista de ex-assinantes. Página: `https:
 - **Nunca assinou** (inclui ex-aluna só de curso presencial): a condição não vale. Apresente a
   Academy a R$1.797 (`/academy`). Se insistir, escale.
 - **Fala-modelo:** "Que bom te ver de volta! Pra quem já foi assinante, a Aline preparou uma
-  condição de volta até sexta, 09/10, 23h59: R$797 (ou 12x de R$82,42), com o novo módulo de
-  anatomia em fresh frozen de presente e 3 meses de mentoria em grupo com ela. Tá tudo aqui:
+  condição de volta até sexta, 09/10, 23h59: 12x de R$82,42 (ou R$797 à vista), com o novo curso
+  de Fresh Frozen de presente, com imagens reais das dissecções que ela fez nos EUA, e 3 meses
+  de mentoria em grupo com ela. Tá tudo aqui:
   https://live.alinefilgueiras.com.br/academy/exalunas"
 - **"Assinei e quase não usei":** "Por isso a mentoria entra junto: por 3 meses você tem encontro
   marcado com a Aline, em grupo, levando os seus casos. Dessa vez você não estuda sozinha."
