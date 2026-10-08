@@ -21,6 +21,8 @@ const browser = await chromium.launch();
 const page = await browser.newPage({ viewport: { width: 1200, height: 2000 } });
 await page.goto(`file://${path.join(dir, arquivo)}`);
 await page.evaluate(() => document.fonts.ready);
+// Peças com etiquetas ligadas à foto (ex.: A6 da Academy) avisam quando terminam de desenhar.
+await page.waitForFunction(() => !document.querySelector(".ilu") || document.body.dataset.pronto === "1");
 
 const total = await page.locator('section.ad[id^="c"]').count();
 for (let n = 1; n <= total; n++) {

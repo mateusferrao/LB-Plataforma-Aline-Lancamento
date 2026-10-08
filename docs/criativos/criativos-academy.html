@@ -87,6 +87,20 @@
   #s2 .foto { left: -50px; width: 650px; height: 920px; }
   /* a foto de jaleco é estreita: um pouco mais pra dentro */
   #c3 .foto { left: 40px; } #s3 .foto { left: 40px; }
+
+  /* ---------- A6 · fresh frozen em destaque: a ilustração grande com etiquetas de atlas ---------- */
+  .ilu { position: absolute; display: block; }
+  .anot { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; overflow: visible; }
+  .anot line { stroke: var(--vinho); stroke-width: 1.6; }
+  .anot circle.ponto { fill: var(--creme); stroke: var(--vinho); stroke-width: 2.4; }
+  .anot circle.miolo { fill: var(--vinho); }
+  .etiqueta { position: absolute; right: 76px; font-size: 22px; font-weight: 600; letter-spacing: .26em; text-transform: uppercase; color: var(--vinho); margin-right: -.26em; }
+  .etiqueta small { display: block; margin-top: 6px; font-size: 20px; font-weight: 400; letter-spacing: .04em; text-transform: none; color: var(--cinza); }
+  #c6 .titulo, #s6 .titulo { font-size: 150px; letter-spacing: .03em; }
+  #c6 .ilu { left: -20px; bottom: 0; width: 715px; }
+  #s6 .ilu { left: -70px; bottom: 190px; width: 760px; }
+  #c6 .e1 { top: 650px; } #c6 .e2 { top: 790px; } #c6 .e3 { top: 930px; }
+  #s6 .e1 { top: 880px; } #s6 .e2 { top: 1020px; } #s6 .e3 { top: 1160px; }
 </style>
 </head>
 <body>
@@ -177,6 +191,25 @@
   <div class="assina">Dra. Aline Filgueiras<br>1.000+ alunas formadas</div>
 </section>
 
+<!-- A6 · Fresh frozen em destaque: a ilustração grande, com etiquetas de atlas -->
+<section class="ad" id="c6">
+  <div class="moldura"></div>
+  <img class="ilu" src="fotos/recortes/ilustracao-face.webp" alt="" data-largura="706">
+  <svg class="anot"></svg>
+  <div class="texto">
+    <div class="rotulo">Filgueiras Academy</div>
+    <div class="titulo"><span class="l1">Fresh</span><span class="l2">Frozen</span></div>
+    <div class="divisor"></div>
+    <div class="sub">Anatomia sem formol · direto dos EUA</div>
+  </div>
+  <!-- data-ponto: x,y no recorte da ilustração (706x720) -->
+  <div class="etiqueta e1" data-ponto="318,455">Vasos<small>o que passa perto da agulha</small></div>
+  <div class="etiqueta e2" data-ponto="420,420">Gordura<small>os compartimentos da face</small></div>
+  <div class="etiqueta e3" data-ponto="480,472">Músculo<small>os planos de cada camada</small></div>
+  <div class="selo">Curso online</div>
+  <div class="assina">Dra. Aline Filgueiras<br>1.000+ alunas formadas</div>
+</section>
+
 <script>
   // O rosto em traço entra nas peças 1, 4 e 5 (a 2 já tem a ilustração e a 3, a foto de jaleco).
   const rosto = document.getElementById("rosto");
@@ -188,6 +221,33 @@
     story.classList.add("story");
     document.body.appendChild(story);
   }
+  // A6: liga cada etiqueta ao ponto da ilustração (feed e story), depois que a imagem carrega.
+  const ns = "http://www.w3.org/2000/svg";
+  function anotar(ad) {
+    const img = ad.querySelector(".ilu"), svg = ad.querySelector(".anot");
+    const caixa = ad.getBoundingClientRect(), ri = img.getBoundingClientRect();
+    const escala = ri.width / Number(img.dataset.largura);
+    svg.innerHTML = "";
+    for (const et of ad.querySelectorAll(".etiqueta")) {
+      const [px, py] = et.dataset.ponto.split(",").map(Number);
+      const x = ri.left - caixa.left + px * escala, y = ri.top - caixa.top + py * escala;
+      const re = et.getBoundingClientRect();
+      const lx = re.left - caixa.left - 22, ly = re.top - caixa.top + 14;
+      const l = document.createElementNS(ns, "line");
+      l.setAttribute("x1", lx); l.setAttribute("y1", ly); l.setAttribute("x2", x); l.setAttribute("y2", y);
+      svg.appendChild(l);
+      for (const [cls, r] of [["ponto", 11], ["miolo", 4]]) {
+        const c = document.createElementNS(ns, "circle");
+        c.setAttribute("class", cls); c.setAttribute("cx", x); c.setAttribute("cy", y); c.setAttribute("r", r);
+        svg.appendChild(c);
+      }
+    }
+  }
+  const anotaveis = [...document.querySelectorAll(".ad")].filter(a => a.querySelector(".ilu"));
+  Promise.all([document.fonts.ready, ...anotaveis.map(a => a.querySelector(".ilu").decode())]).then(() => {
+    anotaveis.forEach(anotar);
+    document.body.dataset.pronto = "1";
+  });
 </script>
 
 </body>

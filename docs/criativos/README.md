@@ -301,7 +301,7 @@ Regras que valem para todos:
 
 # Criativos da Academy · Fresh frozen dos EUA (08/10)
 
-5 estáticos para a **`/academy`** (evergreen, R$1.797), cada um em feed e story. O grande
+6 estáticos para a **`/academy`** (evergreen, R$1.797), cada um em feed e story. O grande
 diferencial de todos é o **fresh frozen direto de um laboratório nos EUA**.
 
 **Estilo clean** (pedido da equipe em 08/10, nas referências de anúncios de curso de HOF):
@@ -328,6 +328,11 @@ Uma versão escura, no estilo das peças da aula, existiu antes e está no hist�
 | A3 | Sem viajar | FRESH FROZEN / DOS EUA | Sem visto e sem passagem | Filgueiras Academy | Aline de jaleco no laboratório |
 | A4 | A plataforma inteira | 70+ AULAS / + FRESH FROZEN | Toxina · preenchimento · bioestimuladores | 6 encontros ao vivo | Aline em pé, de braços cruzados |
 | A5 | Segurança | MÃO FIRME / PERTO DO RISCO | O que passa a milímetros da agulha | Filgueiras Academy | Aline sentada, olhando pra câmera |
+| A6 | Fresh frozen em destaque | FRESH / FROZEN | Anatomia sem formol · direto dos EUA | Curso online | A ilustração grande, com etiquetas de atlas: vasos, gordura e músculo |
+
+O A6 liga cada etiqueta a um ponto da ilustração com uma linha fina, como numa prancha de
+atlas. Os pontos ficam em `data-ponto` (coordenadas no recorte de 706×720), e o script da
+página desenha as linhas depois que a imagem carrega, no feed e no story.
 
 Regras mantidas: nada de foto de peça ou de cadáver, nada de antes e depois, nada de
 promessa de agenda ou de resultado clínico, e a palavra "cadáver" fica fora da peça.
