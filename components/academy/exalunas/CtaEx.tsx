@@ -2,7 +2,7 @@ import { CheckoutLink } from "@/components/academy/CheckoutLink";
 import { EXALUNAS } from "@/lib/ofertaAcademy";
 
 // Botão da /academy/exalunas: direto ao checkout da oferta das ex-assinantes
-// (público quente, sem "ver oferta" antes). Não trava depois do prazo.
+// (no card da oferta, na mentoria e no fim). Não trava depois do prazo.
 export function CtaEx({ children, className = "" }: { children: React.ReactNode; className?: string }) {
   return (
     <CheckoutLink

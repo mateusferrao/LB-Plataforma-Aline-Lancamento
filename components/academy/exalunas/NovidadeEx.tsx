@@ -3,7 +3,6 @@ import { Reveal } from "@/components/Reveal";
 import { Titulo } from "@/components/Titulo";
 import { Secao } from "@/components/academy/Secao";
 import { withBasePath } from "@/lib/basePath";
-import { EXALUNAS } from "@/lib/ofertaAcademy";
 
 // "O que você perdeu desde que saiu": o motivo de voltar agora, em três blocos.
 const NOVIDADES = [
@@ -56,7 +55,7 @@ export function NovidadeEx() {
 
       <Reveal>
         <p className="mt-8 text-center text-[1.08rem] leading-[1.6] text-fg">
-          Tudo isso entra na sua volta, por <strong className="font-semibold">{EXALUNAS.precoLabel}</strong>.
+          Tudo isso entra na sua volta. Veja abaixo quanto vale e quanto fica pra você.
         </p>
       </Reveal>
     </Secao>

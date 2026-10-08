@@ -37,7 +37,7 @@ const FAQS = [
   },
   {
     q: "Como pago?",
-    a: `Pix ou cartão: ${EXALUNAS.precoLabel} à vista ou 12x de ${EXALUNAS.parcela12x}, direto no checkout.`,
+    a: `Em até 12x de ${EXALUNAS.parcela12x} no cartão, ou ${EXALUNAS.precoLabel} à vista no Pix ou no cartão, direto no checkout.`,
   },
   {
     q: "Tem garantia?",

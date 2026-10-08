@@ -19,8 +19,8 @@ import {
 
 // Card da oferta das ex-assinantes, no molde da Oferta da Academy: a pilha com o
 // valor riscado por item, as duas âncoras pedidas (plataforma + anatomia), o
-// total com os bônus e, por fim, o preço grande (aqui o argumento é a distância
-// entre R$1.797 e R$797, então o à vista vem antes do 12x).
+// total com os bônus e, por fim, o preço aberto pelo 12x, como na /academy
+// (pedido de 08/10), com o à vista embaixo.
 function Linha({ nome, detalhe, valor, tag }: { nome: string; detalhe: string; valor?: number; tag?: string }) {
   return (
     <li className="flex items-baseline justify-between gap-5 border-b border-dashed border-line py-3">
@@ -82,9 +82,12 @@ export function OfertaEx() {
 
         <div className="mt-9 text-center">
           <p className="text-[1rem] text-fg-soft">Pra ex-assinante, você leva tudo por</p>
-          <p className="mt-2 font-serif text-[3.4rem] leading-none text-fg">{EXALUNAS.precoLabel}</p>
+          <p className="mt-2 font-serif text-fg">
+            <span className="text-[1.5rem]">12x de </span>
+            <span className="text-[3.2rem] leading-none">{EXALUNAS.parcela12x}</span>
+          </p>
           <p className="mt-2 text-[0.98rem] text-fg-soft">
-            à vista · ou <strong className="font-semibold text-fg">12x de {EXALUNAS.parcela12x}</strong> no cartão
+            ou <strong className="font-semibold text-fg">{EXALUNAS.precoLabel}</strong> à vista
           </p>
           <p className="mt-1 text-[0.9rem] text-fg-faint">Dá {EXALUNAS.porDia} por dia ao longo do ano.</p>
           <AteOFim fim={EXALUNAS.endsAt}>

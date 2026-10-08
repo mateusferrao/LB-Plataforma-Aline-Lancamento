@@ -22,7 +22,7 @@ enviada por disparo de WhatsApp (08/10).
 | Certificado do curso de anatomia (bônus) | Incluso |
 | Preferência nos próximos cursos online e presenciais (bônus) | Incluso |
 | **Valor total** | **~~R$8.094~~** |
-| **Pra ex-assinante** | **R$797** ou 12x de R$82,42 (R$2,18 por dia) |
+| **Pra ex-assinante** | **12x de R$82,42** ou R$797 à vista (R$2,18 por dia). No card, o 12x vem em destaque, como na `/academy` |
 
 **Prazo:** sexta, 09/10, 23h59. **O botão não trava:** depois do prazo somem a barra do topo, os
 contadores e as frases "até sexta"; o preço e o checkout continuam.
@@ -31,10 +31,10 @@ contadores e as frases "até sexta"; o preço e o checkout continuam.
 
 | Decisão | Por quê |
 |---|---|
-| **O presente primeiro** (o módulo de anatomia "grátis"), depois o preço | O mesmo aprendizado da `/alunas` (01/10): "grátis" converte mais que "% off". |
+| **O presente primeiro** (o módulo de anatomia de presente), e o preço só no card | O mesmo aprendizado da `/alunas` (01/10): "grátis" converte mais que "% off". |
 | **Duas âncoras somadas** (R$1.797 + R$1.297), a pedido da equipe | Mostra o tamanho da volta. Os R$1.797 da `/academy` já incluem o módulo: se alguém comparar, a resposta é que pra ela o módulo vem de presente. |
 | **Motivo do desconto** escrito ("quem entra pela primeira vez paga R$1.797; a sua volta custa R$797") | Desconto sem motivo soa como liquidação. Com motivo, soa como reconhecimento. |
-| **Preço no hero e CTA direto ao checkout** | Público quente, que já conhece a plataforma. "Ver oferta" antes só acrescentaria um passo. |
+| **Hero sem preço; o botão leva à oferta e aos bônus** (como na `/academy`), e a barra fixa do celular também, até ela chegar no card | Pedido de 08/10: valor antes do preço. O checkout fica no card da oferta, na seção da mentoria e no CTA final. |
 | **Página curta:** o que mudou → oferta → prova → mentoria → autoridade → garantia → FAQ | A oferta entra na 3ª dobra. As objeções ficam depois, pra quem ainda precisa. |
 | **Mentoria como resposta a "assinei e não usei"** (seção "Dessa vez você não estuda sozinha" e FAQ) | É a objeção nº 1 de quem já assinou e saiu. |
 | **Sem escassez inventada** | A mentoria é pra todas as que voltarem. A única urgência é o prazo real de sexta. |

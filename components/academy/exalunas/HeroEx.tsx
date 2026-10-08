@@ -2,12 +2,12 @@ import Image from "next/image";
 import { Container } from "@/components/Container";
 import { AteOFim } from "@/components/academy/AteOFim";
 import { Ticks } from "@/components/academy/Ticks";
-import { CtaEx } from "@/components/academy/exalunas/CtaEx";
+import { VerOfertaButton } from "@/components/academy/CtaButton";
 import { withBasePath } from "@/lib/basePath";
-import { ANATOMIA_EXALUNAS, EXALUNAS, GARANTIA_ACADEMY, RENOVACAO_EXALUNAS, brl } from "@/lib/ofertaAcademy";
+import { EXALUNAS, GARANTIA_ACADEMY } from "@/lib/ofertaAcademy";
 
-// Hero das ex-assinantes: o presente primeiro (o módulo de anatomia), depois o
-// preço com as duas âncoras. Público quente: o botão vai direto ao checkout.
+// Hero das ex-assinantes: o presente (o módulo de anatomia) e a mentoria, sem preço.
+// Como na /academy, o botão leva à oferta (valor antes do preço, pedido de 08/10).
 // No celular a foto sai daqui (a seção seguinte abre com a foto do laboratório).
 export function HeroEx() {
   return (
@@ -29,32 +29,9 @@ export function HeroEx() {
               volta ele vem de brinde, junto com 3 meses de mentoria ao vivo com a Aline.
             </p>
 
-            <div className="mt-7 max-w-[460px] rounded-[6px] border-2 border-wine px-5 py-4">
-              <span className="block text-[10.5px] font-semibold tracking-[0.16em] text-wine-ink uppercase">
-                Seu presente de volta
-              </span>
-              <p className="mt-1 flex items-baseline justify-between gap-4 text-[1rem] text-fg">
-                <span>Módulo de anatomia</span>
-                <span className="shrink-0">
-                  <span className="mr-2 text-fg-soft line-through decoration-wine-bright">
-                    {brl(ANATOMIA_EXALUNAS.valor ?? 0)}
-                  </span>
-                  <strong className="font-semibold text-wine-ink">grátis</strong>
-                </span>
-              </p>
-              <p className="mt-3 flex items-baseline justify-between gap-4 border-t border-dashed border-line pt-3 text-[1rem] text-fg">
-                <span>Sua volta à Academy</span>
-                <span className="shrink-0">
-                  <span className="mr-2 text-fg-soft line-through decoration-wine-bright">
-                    {brl(RENOVACAO_EXALUNAS.valor ?? 0)}
-                  </span>
-                  <strong className="font-serif text-[1.6rem] font-normal">{EXALUNAS.precoLabel}</strong>
-                </span>
-              </p>
-              <p className="mt-1 text-right text-[0.88rem] text-fg-soft">ou 12x de {EXALUNAS.parcela12x}</p>
-            </div>
-
-            <CtaEx className="mt-7 w-full sm:w-auto">Quero voltar com o presente</CtaEx>
+            <VerOfertaButton produto="academy-exalunas" className="mt-8 w-full justify-center sm:w-auto">
+              Ver o presente e os bônus
+            </VerOfertaButton>
             <AteOFim fim={EXALUNAS.endsAt}>
               <p className="mt-3 text-[13.5px] text-fg-soft">
                 Condição de ex-assinante só até <strong className="font-semibold text-fg">{EXALUNAS.prazoCurto}</strong>.

@@ -12,7 +12,7 @@ import { OfertaEx } from "@/components/academy/exalunas/OfertaEx";
 import { StickyCtaEx } from "@/components/academy/exalunas/StickyCtaEx";
 
 // /academy/exalunas: volta das ex-assinantes (plano em docs/plataforma/exalunas.md).
-// Público quente: página curta, o presente (módulo de anatomia) e o preço no hero,
+// Página curta: o presente (módulo de anatomia) no hero, sem preço (o botão leva à oferta),
 // a oferta cedo e as objeções de quem já assinou depois. Reaproveita a prova, a
 // autoridade e a garantia da Academy.
 export function ExAlunasPage() {
