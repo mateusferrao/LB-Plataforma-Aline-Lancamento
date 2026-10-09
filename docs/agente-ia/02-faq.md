@@ -170,4 +170,4 @@ grupo, levando os seus casos. E o módulo novo de anatomia é o começo mais dir
 segura. A condição de volta vai até sexta, 09/10, 23h59.
 
 ### S1. Como falo com o suporte?
-Pelo **WhatsApp +55 31 95349-1799** ou pelo **e-mail suporte.filgueirasacademy@gmail.com**.
+Pelo **WhatsApp +55 31 93618-4139** ou pelo **e-mail suporte.filgueirasacademy@gmail.com**.

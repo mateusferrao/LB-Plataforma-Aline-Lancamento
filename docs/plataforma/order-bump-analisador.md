@@ -23,7 +23,7 @@ Caminho: **Meus Produtos → Criar produto**.
 | Área de membros | Nenhuma (é só físico) |
 | Garantia | 7 dias |
 | E-mail de suporte | suporte.filgueirasacademy@gmail.com |
-| WhatsApp de suporte | +55 31 95349-1799 |
+| WhatsApp de suporte | +55 31 93618-4139 |
 | Pixel | O mesmo Pixel da Meta do produto Filgueiras Academy 3.0, com Purchase ligado |
 
 ## 2. A oferta do produto

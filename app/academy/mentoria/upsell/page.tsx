@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 // (MENTORIA.acompanhante) é bônus só desta página: quem sai sem aceitar não a recebe.
 const OBRIGADO_ACADEMY = "/academy/obrigado";
 const WHATS_URL =
-  "https://wa.me/5531953491799?text=" +
+  "https://wa.me/5531936184139?text=" +
   encodeURIComponent("Oi! Acabei de entrar na Academy e quero a mentoria em grupo com a Aline, com a vaga da minha colega.");
 
 const RECEBE = [

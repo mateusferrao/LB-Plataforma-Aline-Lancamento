@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 // objetivo é a primeira vitória rápida (a primeira aula de anatomia), o que
 // reduz pedido de reembolso, e avisar os primeiros sobre os bônus.
 const TIME_WHATSAPP_URL =
-  "https://wa.me/5531953491799?text=" +
+  "https://wa.me/5531936184139?text=" +
   encodeURIComponent("Oi! Acabei de entrar na Filgueiras Academy e fiquei com uma dúvida.");
 
 const PASSOS = [

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 // "Aceitou" do Flow da Academy (docs/plataforma/ticto-funil.md §2): comprou a
 // Academy e a mentoria. Primeiro a vitória rápida (a anatomia), depois a mentoria.
 const TIME_WHATSAPP_URL =
-  "https://wa.me/5531953491799?text=" +
+  "https://wa.me/5531936184139?text=" +
   encodeURIComponent("Oi! Entrei na Academy e na mentoria em grupo com a Aline. Quero cadastrar a minha colega na mentoria.");
 
 const PASSOS = [

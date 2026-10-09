@@ -20,7 +20,7 @@ type Props = {
 // ficava bloqueado em "Em breve", um beco sem saída pro tráfego de depois da aula).
 // O repasse de UTM pro checkout é do ticto-echo, montado no layout.
 const WHATS_PROTOCOLO =
-  "https://wa.me/5531953491799?text=" + encodeURIComponent("Oi! Quero o Protocolo de Resgate Vascular.");
+  "https://wa.me/5531936184139?text=" + encodeURIComponent("Oi! Quero o Protocolo de Resgate Vascular.");
 
 export function CtaButton({ children, variant = "dark", className = "" }: Props) {
   const { fase, montado } = useOfertaKit();

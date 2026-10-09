@@ -275,7 +275,7 @@ export const GARANTIA_ACADEMY = {
   condicional:
     "Se em 30 dias você assistir ao módulo de anatomia e não sentir a mão mais segura, é só escrever que a gente devolve.",
   linha: "Garantia Mão Segura: 7 dias sem perguntas + 30 dias se a mão não ficar mais segura",
-  whatsapp: "+55 31 95349-1799",
+  whatsapp: "+55 31 93618-4139",
   email: "suporte.filgueirasacademy@gmail.com",
 } as const;
 

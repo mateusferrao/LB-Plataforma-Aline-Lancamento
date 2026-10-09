@@ -42,7 +42,7 @@ export const GARANTIA = {
     "7 dias após a compra, sem perguntas. E se você esteve ao vivo e achou que não valeu, pede até 24h depois da aula e devolvemos.",
   // Uma linha, pra baixo dos botões.
   linha: "Garantia de Presença: 7 dias ou até 24h depois da aula, se você esteve ao vivo",
-  whatsapp: "+55 31 95349-1799",
+  whatsapp: "+55 31 93618-4139",
   email: "suporte.filgueirasacademy@gmail.com",
 } as const;
 

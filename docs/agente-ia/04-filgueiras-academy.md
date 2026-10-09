@@ -102,7 +102,7 @@ R$5 por dia ao longo do ano.
 
 - **7 dias** pra pedir o dinheiro de volta, **sem explicar nada**.
 - **30 dias** se a aluna assistir ao módulo de anatomia e **não sentir a mão mais segura**.
-- Pedido pelo WhatsApp **+55 31 95349-1799** ou pelo e-mail **suporte.filgueirasacademy@gmail.com**.
+- Pedido pelo WhatsApp **+55 31 93618-4139** ou pelo e-mail **suporte.filgueirasacademy@gmail.com**.
   **Todo pedido de reembolso vai para o atendimento humano.**
 - A **mentoria** (seção 7) tem garantia própria de **7 dias**. A Mão Segura não vale para ela.
 
@@ -300,4 +300,4 @@ Nenhuma resposta dá desconto.
 - Que a pessoa está (ou não) entre os 10 primeiros.
 - Resultado clínico, agenda cheia ou aumento de faturamento.
 
-**Na dúvida → humano.** WhatsApp **+55 31 95349-1799** · e-mail **suporte.filgueirasacademy@gmail.com**.
+**Na dúvida → humano.** WhatsApp **+55 31 93618-4139** · e-mail **suporte.filgueirasacademy@gmail.com**.

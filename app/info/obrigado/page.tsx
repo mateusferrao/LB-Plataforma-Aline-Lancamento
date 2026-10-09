@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 const GRUPO_WHATSAPP_URL = "https://chat.whatsapp.com/KmL36ic5sFGFYVCJL6vm7g?s=cl&p=i&mlu=4";
 
 const TIME_WHATSAPP_URL =
-  "https://wa.me/5531953491799?text=" +
+  "https://wa.me/5531936184139?text=" +
   encodeURIComponent("Oi! Comprei o Protocolo de Resgate Vascular e fiquei com uma dúvida.");
 
 export default function ObrigadoInfo() {

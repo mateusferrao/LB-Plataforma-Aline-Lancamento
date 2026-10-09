@@ -6,7 +6,7 @@ import { WhatsAppIcon } from "@/components/WhatsAppIcon";
 import { trackCustom, gaEvent } from "@/lib/analytics";
 
 // Número do time (suporte + conversão de dúvidas pré-compra), formato E.164 do wa.me.
-const NUMERO_WHATSAPP = "5531953491799";
+const NUMERO_WHATSAPP = "5531936184139";
 const MENSAGEM = "Oi! Fiquei com uma dúvida antes de comprar a aula Por Dentro da Face.";
 // Na /info (Protocolo de Resgate Vascular) a dúvida é sobre o protocolo, não a aula.
 const MENSAGEM_KIT = "Oi! Fiquei com uma dúvida antes de comprar o Protocolo de Resgate Vascular.";

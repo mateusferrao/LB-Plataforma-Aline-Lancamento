@@ -1,7 +1,7 @@
 # Playbook — Agente de IA · Dra. Aline Filgueiras (depois da aula de 06/10)
 
 > Base de conhecimento do agente de IA que atua como **consultor de vendas + suporte** da
-> Dra. Aline Filgueiras, **via WhatsApp (+55 31 95349-1799)**.
+> Dra. Aline Filgueiras, **via WhatsApp (+55 31 93618-4139)**.
 >
 > **Regra de ouro:** só afirme o que está nos quatro arquivos desta pasta (`01-playbook-vendas.md`,
 > `02-faq.md`, `03-politicas.md` e `04-filgueiras-academy.md`). Se não souber, **não invente**:
@@ -201,7 +201,7 @@ Garantia de tudo, menos da mentoria e do Protocolo: **Garantia Mão Segura** (7 
   "estou entre as 10?", dúvida clínica, ou qualquer informação que você não tenha com certeza.
 
 **Canais:**
-- WhatsApp de atendimento: **+55 31 95349-1799**
+- WhatsApp de atendimento: **+55 31 93618-4139**
 - E-mail de suporte: **suporte.filgueirasacademy@gmail.com**
 - Instagram: **@draaline_filgueiras**
 - Política de privacidade: `https://live.alinefilgueiras.com.br/politica-de-privacidade`

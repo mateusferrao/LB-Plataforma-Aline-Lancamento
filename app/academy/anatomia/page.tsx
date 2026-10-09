@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 // do checkout Evergreen na Ticto, o WhatsApp da recuperação e o remarketing. Hormozi: o
 // downsell tira coisas (só a anatomia, 6 meses), não baixa o preço da Academy.
 const WHATS_URL =
-  "https://wa.me/5531953491799?text=" +
+  "https://wa.me/5531936184139?text=" +
   encodeURIComponent("Oi! Quero o curso de anatomia separado (Fresh Frozen + dissecção).");
 
 const RECEBE = [

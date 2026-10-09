@@ -41,7 +41,7 @@ Oferta completa, falas e suporte em `04-filgueiras-academy.md`. Resumo das polí
 - **Camada 1:** até **7 dias após a compra**, sem perguntas.
 - **Camada 2:** quem **esteve ao vivo** e achou que não valeu pode pedir até **07/10/2026, 20h**,
   mesmo que os 7 dias já tenham passado.
-- **Como solicitar:** WhatsApp **+55 31 95349-1799** ou e-mail **suporte.filgueirasacademy@gmail.com**.
+- **Como solicitar:** WhatsApp **+55 31 93618-4139** ou e-mail **suporte.filgueirasacademy@gmail.com**.
 - Pedidos de reembolso são **sempre escalados para o atendimento humano**, que confirma a presença
   caso a caso.
 
@@ -73,7 +73,7 @@ Oferta completa, falas e suporte em `04-filgueiras-academy.md`. Resumo das polí
 - **Marca:** Filgueiras Academy (Dra. Aline Filgueiras). *(Sem CNPJ/razão social divulgados no
   material. Se solicitado, escalar para o atendimento humano.)*
 - **Site:** `https://live.alinefilgueiras.com.br`
-- **WhatsApp de atendimento:** +55 31 95349-1799
+- **WhatsApp de atendimento:** +55 31 93618-4139
 - **E-mail de suporte:** suporte.filgueirasacademy@gmail.com
 - **Instagram:** @draaline_filgueiras
 

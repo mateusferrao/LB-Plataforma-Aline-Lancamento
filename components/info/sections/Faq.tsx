@@ -7,7 +7,7 @@ import { useOfertaKit } from "@/lib/useOfertaKit";
 // WhatsApp do time (mesmo número do botão flutuante), com contexto de quem já
 // tem o ingresso da aula e quer o Protocolo sem pagar a aula duas vezes.
 const WHATSAPP_JA_COMPREI =
-  "https://wa.me/5531953491799?text=" +
+  "https://wa.me/5531936184139?text=" +
   encodeURIComponent("Oi! Já comprei o ingresso da aula Por Dentro da Face e quero o Protocolo de Resgate Vascular.");
 
 type Item = { q: string; a: React.ReactNode; soComBonus?: boolean };

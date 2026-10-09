@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 // é a do momento (1 clique, sem preencher dados de novo).
 const OBRIGADO = "/academy/anatomia/obrigado";
 const UPGRADE_WHATSAPP_URL =
-  "https://wa.me/5531953491799?text=" +
+  "https://wa.me/5531936184139?text=" +
   encodeURIComponent(
     `Oi! Comprei o curso de anatomia e quero trocar pela Filgueiras Academy pagando a diferença (${ANATOMIA.upgradePrecoLabel}).`,
   );

@@ -16,7 +16,7 @@ const GRUPO_WHATSAPP_URL = "https://chat.whatsapp.com/KmL36ic5sFGFYVCJL6vm7g?s=c
 
 // Número do time (mesmo do botão flutuante), com mensagem de contexto pós-compra.
 const TIME_WHATSAPP_URL =
-  "https://wa.me/5531953491799?text=" +
+  "https://wa.me/5531936184139?text=" +
   encodeURIComponent("Oi! Comprei a aula Por Dentro da Face e fiquei com uma dúvida.");
 
 export default function Obrigado() {

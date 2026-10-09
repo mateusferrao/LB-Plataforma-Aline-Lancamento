@@ -41,7 +41,7 @@ O funil (upsell de 1 clique, recuperação de carrinho e sequência de WhatsApp)
 | **Tipo de produto** | Curso digital |
 | **Categoria** | A mais próxima de Saúde/Estética. Se não houver, Educação |
 | **E-mail de suporte** | `suporte.filgueirasacademy@gmail.com`. A Ticto manda um e-mail de validação e o produto só fica vinculado depois da confirmação. **Conferir o domínio:** o mais comum é `@gmail.com` |
-| **Contato de suporte (WhatsApp)** | +55 31 95349-1799 |
+| **Contato de suporte (WhatsApp)** | +55 31 93618-4139 |
 | **Imagem de capa** | `docs/plataforma/ticto/capa-produto-1200.jpg` |
 | **Prazo de reembolso** | **30 dias** (veja a nota abaixo) |
 | **Descrição** | O texto da seção 2.1 |

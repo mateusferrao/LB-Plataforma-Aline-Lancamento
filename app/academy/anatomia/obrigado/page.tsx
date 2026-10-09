@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 // a vitória rápida (a primeira aula, o que reduz reembolso). Depois o upgrade pela
 // diferença (rollover do Hormozi): o que ela pagou vira crédito na Academy. Sem o
 // link da oferta oculta, o upgrade vai pelo WhatsApp da equipe.
-const WHATS = "https://wa.me/5531953491799?text=";
+const WHATS = "https://wa.me/5531936184139?text=";
 const TIME_WHATSAPP_URL =
   WHATS + encodeURIComponent("Oi! Acabei de entrar no curso de anatomia e fiquei com uma dúvida.");
 const UPGRADE_WHATSAPP_URL =
