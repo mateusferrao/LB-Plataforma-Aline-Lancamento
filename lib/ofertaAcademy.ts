@@ -219,7 +219,7 @@ export const TICTO_UPSELL_ACADEMY = {
 
 // Volta das ex-assinantes (/academy/exalunas, decisão de 08/10; plano em
 // docs/plataforma/exalunas.md): quem já foi assinante e está sem acesso renova a
-// Academy por R$797 e leva o novo módulo de anatomia de brinde, a mentoria de 3 meses,
+// Academy por R$797 e leva o novo módulo de anatomia de brinde, a mentoria em grupo (sem prazo na página),
 // a preferência nos próximos cursos e o certificado do curso de anatomia.
 // Âncoras pedidas pela equipe: plataforma R$1.797 + anatomia R$1.297 (somadas).
 // Prazo de sexta, 09/10, 23h59, mas o botão não trava: depois do prazo some só a
@@ -251,7 +251,7 @@ export const ANATOMIA_EXALUNAS: Item = {
 };
 export const BONUS_EXALUNAS: readonly Item[] = [
   {
-    nome: "Mentoria em grupo com a Aline · 3 meses",
+    nome: "Mentoria em grupo com a Aline",
     detalhe: "Ao vivo, com a Aline. Você leva os seus casos e não estuda sozinha.",
     valor: MENTORIA.valor,
   },

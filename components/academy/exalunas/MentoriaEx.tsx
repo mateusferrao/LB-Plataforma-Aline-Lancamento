@@ -8,7 +8,7 @@ import { EXALUNAS } from "@/lib/ofertaAcademy";
 const PONTOS = [
   "Encontros ao vivo, online, com a Aline",
   "Você leva os seus casos e as suas dúvidas",
-  `3 meses de mentoria dentro dos seus ${EXALUNAS.mesesAcesso} meses de plataforma`,
+  `A mentoria em grupo junto com os seus ${EXALUNAS.mesesAcesso} meses de plataforma`,
 ];
 
 export function MentoriaEx() {
@@ -20,7 +20,7 @@ export function MentoriaEx() {
       <Reveal>
         <p className="mt-5 text-[1.08rem] leading-[1.6] text-fg-soft">
           Muita gente assina, assiste às primeiras aulas e deixa o resto pra depois, porque a rotina do consultório
-          engole a semana. A mentoria muda isso: por 3 meses você tem encontro marcado com a Aline, em grupo, e chega
+          engole a semana. A mentoria em grupo muda isso: você tem encontro marcado com a Aline, em grupo, e chega
           com os casos da sua cadeira.
         </p>
       </Reveal>

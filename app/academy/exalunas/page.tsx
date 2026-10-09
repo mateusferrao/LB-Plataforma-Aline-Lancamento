@@ -6,7 +6,7 @@ import { ExAlunasPage } from "@/components/academy/exalunas/ExAlunasPage";
 export const metadata: Metadata = {
   title: "Filgueiras Academy · Volta das ex-assinantes",
   description:
-    "Pra quem já foi assinante da Filgueiras Academy: volte por R$797 e leve de presente o novo módulo de anatomia em fresh frozen e 3 meses de mentoria com a Aline.",
+    "Pra quem já foi assinante da Filgueiras Academy: volte por R$797 e leve de presente o novo módulo de anatomia em fresh frozen e a mentoria em grupo com a Aline.",
   robots: { index: false, follow: false },
   openGraph: {
     title: "Filgueiras Academy · Volta das ex-assinantes",

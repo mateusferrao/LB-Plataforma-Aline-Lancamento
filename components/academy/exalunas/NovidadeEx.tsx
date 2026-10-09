@@ -18,7 +18,7 @@ const O_QUE_VE = [
 
 const E_MAIS = [
   {
-    t: "Mentoria em grupo com a Aline, por 3 meses",
+    t: "Mentoria em grupo com a Aline",
     d: "Encontros ao vivo, online, levando os seus casos. Até hoje, só os 10 primeiros da aula de 06/10 levaram essa mentoria junto com a Academy.",
   },
   {

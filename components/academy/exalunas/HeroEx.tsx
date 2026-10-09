@@ -41,7 +41,7 @@ export function HeroEx() {
             <p className="mt-5 max-w-[560px] text-[1.1rem] leading-[1.55] text-fg-soft">
               A face por dentro, camada por camada, em imagens reais e autorais das dissecções que a Dra. Aline fez
               nos Estados Unidos. É a maior novidade da Academy desde que você saiu, e na sua volta ele vem de
-              brinde, junto com 3 meses de mentoria ao vivo com ela.
+              brinde, junto com a mentoria em grupo, ao vivo, com ela.
             </p>
 
             <VerOfertaButton produto="academy-exalunas" className="mt-8 w-full justify-center sm:w-auto">

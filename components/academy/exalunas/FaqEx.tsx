@@ -5,7 +5,7 @@ import { ACADEMY, EXALUNAS, GARANTIA_ACADEMY } from "@/lib/ofertaAcademy";
 const FAQS = [
   {
     q: "Assinei e quase não usei. Por que agora seria diferente?",
-    a: "Porque dessa vez você tem a mentoria: 3 meses de encontros ao vivo com a Aline, em grupo, com os seus casos. E o módulo novo de anatomia é o começo mais direto pra mão ficar segura.",
+    a: "Porque dessa vez você tem a mentoria em grupo: encontros ao vivo com a Aline, levando os seus casos. E o módulo novo de anatomia é o começo mais direto pra mão ficar segura.",
   },
   {
     q: "Por que é mais barato do que pra quem entra agora?",
@@ -21,7 +21,7 @@ const FAQS = [
   },
   {
     q: "Como funciona a mentoria?",
-    a: "São 3 meses de encontros ao vivo, online, em grupo, com a Aline. Você leva os seus casos. Depois da compra, a equipe te chama no WhatsApp pra te colocar na mentoria.",
+    a: "São encontros ao vivo, online, em grupo, com a Aline. Você leva os seus casos. Depois da compra, a equipe te chama no WhatsApp pra te colocar na mentoria.",
   },
   {
     q: "E o certificado?",
