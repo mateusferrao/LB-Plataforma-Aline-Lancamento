@@ -4,9 +4,11 @@ São 3 vídeos (V1, V2, V3), cada um com 2 ganchos (A = Camila, B = abre direto 
 arquivos 9:16 de 27 a 31s. São anúncios na Meta com clique pro WhatsApp.
 
 **O Mapa é a isca. O que se vende é a Filgueiras Academy** (R$1.797 ou 12x de R$185,85), com o
-Mapa incluso. O Mapa avulso por R$597 é downsell e só entra depois de um "não" firme à Academy (o
-agente segue a seção 6c de `docs/agente-ia/04-filgueiras-academy.md`). Por isso nenhum vídeo vende
-só o álbum. Todos fecham com **"o Mapa é o passo 3 de 5 da Consulta que Vende; os outros 4 estão na
+Mapa incluso. Depois de um "não" firme à Academy, o downsell tem dois degraus:
+1. **Anatomia + Mapa por R$1.194.**
+2. **Se ela recusar de novo, só o Mapa por R$597.**
+
+O agente segue a seção 6c de `docs/agente-ia/04-filgueiras-academy.md`. O envio do Mapa é controlado pelo código da conversa no WhatsApp, porque o site não muda. Por isso nenhum vídeo vende só o álbum. Todos fecham com **"o Mapa é o passo 3 de 5 da Consulta que Vende; os outros 4 estão na
 Filgueiras Academy"**, sem preço.
 
 "Mapa do Envelhecimento" é o nome do anúncio para o **Manual do Envelhecimento** (checkout,

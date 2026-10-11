@@ -20,7 +20,7 @@
 | **A partir de 07/10, 00h** | Academy sem bônus. Link: `https://live.alinefilgueiras.com.br/academy`. O downsell (anatomia) pode entrar, com as regras da seção 6 |
 | **08/10 até sexta, 09/10, 23h59** | **Volta das ex-assinantes** (quem já assinou a Academy e hoje está sem acesso): R$797 com o módulo de anatomia de presente e a mentoria de 3 meses. Seção 6b. Link: `https://live.alinefilgueiras.com.br/academy/exalunas` |
 | **A partir de 10/10, 00h** | O agente **não oferece mais** a volta das ex-assinantes. Se alguém chegar com o link ou pedir essa condição, **escale para o humano** |
-| **A partir de 11/10** (anúncios do Mapa) | Quem chega com a mensagem "Quero o Mapa do Envelhecimento (V1A)" (ou V1B…V3B) segue a **seção 6c**: Academy com o Mapa incluso primeiro, Mapa avulso só depois de um "não" firme |
+| **A partir de 11/10** (anúncios do Mapa) | Quem chega com a mensagem "Quero o Mapa do Envelhecimento (V1A)" (ou V1B…V3B) segue a **seção 6c**: Academy com o Mapa incluso primeiro; depois de um "não" firme, anatomia + Mapa (R$1.194) e, por último, só o Mapa (R$597) |
 | **Sempre** | Suporte de quem já comprou (seção 8) |
 
 A aula "Por Dentro da Face" **já aconteceu** (06/10, 20h) e **não tem replay**. Quem pedir a aula
@@ -208,12 +208,21 @@ Se ela disser "manual", é o mesmo.
    O Mapa vai pelo correio. Depois da compra, **a equipe chama no WhatsApp pra combinar o envio**.
    Prazo e frete: **não informe**, escale.
 4. **Trate a objeção** (seção 9) antes de qualquer outra oferta.
-5. **Só depois de um "não" explícito à Academy, mantido depois da objeção tratada:** o **Mapa
-   avulso por R$597**. Ele vem com uma aula da Aline (pelo QR Code do álbum) ensinando a usar na
-   consulta. Não tem página no site: **escale para o humano**, que manda o link de pagamento e
-   combina o envio.
-   - Pra quem veio pelo Mapa, **o downsell é o Mapa avulso**. A anatomia separada (seção 6) não entra.
-   - Nunca abra a conversa pelo Mapa avulso, nem ofereça os R$597 pra quem ainda não ouviu a Academy.
+5. **Downsell em dois degraus**, só depois de um "não" explícito à Academy, mantido depois da
+   objeção tratada:
+   1. **Anatomia + Mapa por R$1.194.** É o curso online de **Fresh Frozen + dissecção** (6 meses de
+      acesso) com o **Mapa** junto, pelo correio. Não tem página no site: **escale para o humano**,
+      que manda o link de pagamento e combina o envio. O crédito de 30 dias pra trocar pela Academy
+      (seção 6) **não vale automaticamente** pra esse combo: se ela perguntar, escale.
+   2. **Só se ela recusar de novo:** o **Mapa avulso por R$597**. Ele vem com uma aula da Aline
+      (pelo QR Code do álbum) ensinando a usar na consulta. Também pelo humano (link e envio).
+   - Pra quem veio pelo Mapa, a anatomia separada de R$797 (seção 6) **não entra**. O degrau é o
+     combo de R$1.194.
+   - Nunca abra a conversa por um downsell, nem ofereça R$1.194 ou R$597 pra quem ainda não ouviu a
+     Academy.
+6. **Comprou a Academy?** Quando a lead que chegou com o código disser que comprou, **escale para o
+   humano** com a nota "veio pelo Mapa (código), enviar o Mapa". O site e o checkout não mostram o
+   Mapa: é essa nota que garante o envio. Prazo e frete: **não informe**.
 
 **Falas-modelo:**
 - Apresentação: "O Mapa é o álbum que a Aline usa no passo 3 da consulta, quando a paciente
@@ -221,7 +230,11 @@ Se ela disser "manual", é o mesmo.
   estão os outros 4 passos da Consulta que Vende, o fresh frozen e as mais de 70 aulas de técnica.
   R$1.797, ou 12x de R$185,85, com 7 dias pra pedir de volta. Tá tudo aqui:
   https://live.alinefilgueiras.com.br/academy"
-- Downsell: "Entendi. Se a Academy não cabe agora, dá pra levar só o Mapa do Envelhecimento, por
+- 1º degrau: "Entendi. Se a Academy inteira não cabe agora, dá pra começar pela anatomia: o curso
+  online de Fresh Frozen + dissecção, com 6 meses de acesso, e o Mapa do Envelhecimento junto, por
+  R$1.194. Assim você já leva a mão mais segura e a ferramenta da consulta. Quer que a equipe te
+  mande o link?"
+- 2º degrau (só se recusar o 1º): "Tranquilo. Então dá pra levar só o Mapa do Envelhecimento, por
   R$597, com a aula da Aline ensinando a usar na consulta. Vou pedir pra equipe te mandar o link e
   combinar o envio."
 
@@ -349,7 +362,8 @@ Nenhuma resposta dá desconto.
   das ex-assinantes, seção 6b, até 09/10, 23h59).
 - Outro prazo pra volta das ex-assinantes, ou que ela vale pra quem nunca assinou.
 - Que a pessoa está (ou não) entre os 10 primeiros.
-- Prazo de envio, frete ou quantas unidades do Mapa restam. Outro preço pro Mapa avulso além de R$597.
+- Prazo de envio, frete ou quantas unidades do Mapa restam. Pra quem veio pelo Mapa, os únicos
+  preços são **R$1.797** (Academy com o Mapa), **R$1.194** (anatomia + Mapa) e **R$597** (só o Mapa).
 - Que a aluna vai fechar 98% das consultas. O 98% é do consultório da Aline.
 - Resultado clínico, agenda cheia ou aumento de faturamento.
 
