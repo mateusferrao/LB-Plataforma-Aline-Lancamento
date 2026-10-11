@@ -1,7 +1,7 @@
 # Vídeos do Mapa do Envelhecimento · tráfego pago → WhatsApp → Academy
 
 São 3 vídeos (V1, V2, V3), cada um com 2 ganchos (A = Camila, B = abre direto na Aline), ou seja, 6
-arquivos 9:16 de 27 a 31s. São anúncios na Meta com clique pro WhatsApp.
+arquivos 9:16 de cerca de 30 a 35s. São anúncios na Meta com clique pro WhatsApp.
 
 **O Mapa é a isca. O que se vende é a Filgueiras Academy** (R$1.797 ou 12x de R$185,85), com o
 Mapa incluso. Depois de um "não" firme à Academy, o downsell tem dois degraus:
@@ -115,6 +115,33 @@ Confira a pronúncia de "Filgueiras". Se sair errado, escreva no prompt como se 
 Com os 5 clipes prontos, preencha `"camila"` no `fontes.json` e rode o script de novo:
 - **Nas versões A,** o gancho passa a ser a Camila sobre o quadro pausado.
 - **Nas 6 versões,** a voz dela entra na ponte e no CTA.
+
+### Como os clipes recebidos (11/10) foram tratados
+
+Os clipes do Flow vieram em 720×1280 e 24fps, com 8s cada. A fala estava arrastada, com 0,5 a 1,4s mudos no começo e pausas de até 1,1s no meio. Por isso o script (bloco `CAMILA` em `montar_mapa.py`) faz quatro coisas:
+
+1. **Corta as pausas** maiores que 0,25s e deixa cerca de 0,12s. Cada corte ganha um punch-in de 1,06x alternado, pra disfarçar o jump cut. No V2 fica uma pausa curta antes de "e a paciente…", pra manter a provocação.
+2. **Acelera 1,25x** o vídeo e a voz juntos (`setpts` + `atempo`). A boca continua em sincronia e o tom da voz não muda.
+3. **Abre os ganchos com um zoom** que entra em 1,15x e assenta em 0,35s.
+4. **Recorta o fundo** com chroma key na cor medida, `#0AAB4B`, e depois tira o reflexo verde (despill).
+
+| Clipe | Faixas que ficam (s) | Duração final |
+|---|---|---|
+| Gancho V1 | 0,00–1,98 · 2,44–7,40 | ~5,5s |
+| Gancho V2 | 0,00–1,02 · 1,42–2,70 · 2,82–3,78 · 4,58–7,30 | ~4,8s |
+| Gancho V3 | 0,80–1,66 · 2,16–4,36 · 4,86–7,50 | ~4,6s |
+| Ponte | 0,80–2,66 · 2,86–5,04 · 5,24–7,70 | ~5,2s |
+| CTA | 1,30–3,45 · 3,62–5,30 · 6,20–7,40 (gesto de apontar) | ~4,0s |
+
+**Onde a Camila aparece:**
+- **Nos ganchos:** com 70% da largura e colada embaixo, abaixo do cabeçalho. A fala dela tem legenda palavra a palavra sobre o peito.
+- **No end card:** no canto direito, apontando pra baixo. O botão desenhado vai pra esquerda e o degradê de baixo sai, pra não escurecer o rosto dela.
+
+**Ouça antes de subir:**
+- No V1, o Flow disse "Aplica **a** harmonização".
+- No V3, disse "com **o** medo da paciente".
+
+Se incomodar, gere de novo só esse clipe e troque no `fontes.json`. As faixas de corte podem precisar de ajuste de ±0,1s.
 
 ## 5. Como montar
 

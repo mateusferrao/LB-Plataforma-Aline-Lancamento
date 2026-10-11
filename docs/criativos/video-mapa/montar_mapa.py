@@ -156,6 +156,19 @@ GANCHO_CAMILA = {
     },
 }
 
+# Etapa 2: o que fica de cada clipe da Camila (segundos de origem). As pausas longas saem
+# (jump cut com punch-in alternado) e o resto acelera junto, vídeo e voz, pra boca não
+# sair de sincronia. Os clipes do Flow vêm com 0,5–1,4s mudos no começo e fala arrastada.
+CAMILA = {
+    "v1": [(0.00, 1.98), (2.44, 7.40)],
+    "v2": [(0.00, 1.02), (1.42, 2.70), (2.82, 3.78), (4.58, 7.30)],
+    "v3": [(0.80, 1.66), (2.16, 4.36), (4.86, 7.50)],
+    "ponte": [(0.80, 2.66), (2.86, 5.04), (5.24, 7.70)],
+    "cta": [(1.30, 3.45), (3.62, 5.30), (6.20, 7.40)],  # a última faixa é só o gesto de apontar
+}
+VEL_CAMILA = 1.25
+VERDE = "0x0AAB4B"  # cor medida no fundo dos clipes do Flow
+
 VIDEOS = {
     "v1a": {"gancho": "v1", "sub": "COM O MAPA DO ENVELHECIMENTO", "seq": ["p98", "mapa", "estrutura", "ponte", "final"]},
     "v1b": {"sub": "COM O MAPA DO ENVELHECIMENTO", "seq": ["p98", "p12", "mapa", "estrutura", "ponte", "final"]},
@@ -310,6 +323,40 @@ def silencio(dur, tmp, nome):
     return saida
 
 
+def preparar_camila(arquivo, chave, palavras, tmp, gancho=False):
+    """Corta as pausas do clipe da Camila e acelera. Devolve vídeo (ainda no verde), voz,
+    duração e as palavras com o tempo já recalculado."""
+    faixas = CAMILA[chave]
+    fv, fa = [], []
+    for i, (a, b) in enumerate(faixas):
+        punch = ",scale=764:1358,crop=720:1280" if i % 2 == 1 else ""  # punch-in de 1,06x
+        fv.append(f"[0:v]trim=start={a}:end={b},setpts=PTS-STARTPTS{punch},setsar=1[v{i}]")
+        fa.append(f"[0:a]atrim=start={a}:end={b},asetpts=PTS-STARTPTS,afade=t=in:d=0.02,"
+                  f"afade=t=out:st={b - a - 0.03:.3f}:d=0.03[a{i}]")
+    n = len(faixas)
+    zoom = ""
+    if gancho:  # entra com 1,15x e assenta em 0,35s: o primeiro quadro já chega com energia
+        zoom = ",scale=w='trunc(iw*(1+0.15*max(0,1-t/0.35))/2)*2':h=-2:eval=frame,crop=720:1280"
+    fil = fv + fa + [
+        "".join(f"[v{i}]" for i in range(n)) + f"concat=n={n}:v=1:a=0,setpts=PTS/{VEL_CAMILA},fps={FPS}{zoom}[v]",
+        "".join(f"[a{i}]" for i in range(n)) + f"concat=n={n}:v=0:a=1,atempo={VEL_CAMILA},"
+        "aresample=48000,aformat=channel_layouts=stereo[a]",
+    ]
+    video, voz = tmp / f"cam_{chave}.mp4", tmp / f"cam_{chave}.wav"
+    rodar(["ffmpeg", "-v", "error", "-y", "-i", arquivo, "-filter_complex", ";".join(fil),
+           "-map", "[v]", "-an", "-c:v", "libx264", "-crf", "12", "-preset", "veryfast", "-pix_fmt", "yuv420p", str(video),
+           "-map", "[a]", "-vn", str(voz)])
+    dur = sum(b - a for a, b in faixas) / VEL_CAMILA
+    ws = [dict(p, s=p["s"] / VEL_CAMILA, e=p["e"] / VEL_CAMILA)
+          for p in palavras_da_fala(palavras, [(f"cam_{chave}", a, b) for a, b in faixas])]
+    return video, voz, dur, ws
+
+
+def filtro_camila(largura):
+    return (f"chromakey={VERDE}:0.13:0.06,despill=type=green:mix=0.6:expand=0.1,"
+            f"scale={largura}:-2,format=yuva420p")
+
+
 def render_quadro_pausado(cfg, fonte, t, dur, tmp, nome, camila=None):
     """Quadro congelado, escurecido e desfocado (fundo do gancho da Camila)."""
     chave = fonte
@@ -326,10 +373,10 @@ def render_quadro_pausado(cfg, fonte, t, dur, tmp, nome, camila=None):
     im.save(quadro)
     saida = tmp / f"{nome}.mp4"
     if camila:
-        # Camila em fundo verde, colada embaixo, com ~88% da largura.
+        # Camila colada embaixo, com 70% da largura: a cabeça fica abaixo do cabeçalho.
         filtro = (
             f"[0:v]fps={FPS},setsar=1[bg];"
-            f"[1:v]fps={FPS},colorkey=0x00B140:0.32:0.08,scale={int(W * 0.88)}:-2[cam];"
+            f"[1:v]{filtro_camila(int(W * 0.70) // 2 * 2)}[cam];"
             f"[bg][cam]overlay=(W-w)/2:H-h:shortest=1[v]"
         )
         rodar(["ffmpeg", "-v", "error", "-y", "-loop", "1", "-i", str(quadro), "-i", camila, "-filter_complex", filtro,
@@ -341,8 +388,20 @@ def render_quadro_pausado(cfg, fonte, t, dur, tmp, nome, camila=None):
     return saida
 
 
-def render_foto(cfg, chave, dur, tmp, nome):
+def render_foto(cfg, chave, dur, tmp, nome, camila=None):
     saida = tmp / f"{nome}.mp4"
+    if camila:
+        # End card: Camila menor, no canto de baixo à direita, apontando pro botão.
+        larg = int(W * 0.46) // 2 * 2
+        filtro = (
+            f"[0:v]fps={FPS},{filtro_kenburns(dur, 0.06)},setsar=1[bg];"
+            f"[1:v]{filtro_camila(larg)},tpad=stop_mode=clone:stop_duration={dur:.3f}[cam];"
+            f"[bg][cam]overlay=W-w+30:H-h+40[v]"
+        )
+        rodar(["ffmpeg", "-v", "error", "-y", "-loop", "1", "-t", f"{dur:.3f}", "-i", str(tmp / f"{chave}.jpg"),
+               "-i", str(camila), "-filter_complex", filtro, "-map", "[v]", "-t", f"{dur:.3f}", "-c:v", "libx264",
+               "-crf", "14", "-preset", "veryfast", "-pix_fmt", "yuv420p", str(saida)])
+        return saida
     rodar(["ffmpeg", "-v", "error", "-y", "-loop", "1", "-t", f"{dur:.3f}", "-i", str(tmp / f"{chave}.jpg"),
            "-vf", f"fps={FPS},{filtro_kenburns(dur, 0.06)},setsar=1", "-c:v", "libx264", "-crf", "14",
            "-preset", "veryfast", "-pix_fmt", "yuv420p", str(saida)])
@@ -531,13 +590,14 @@ def desenha_ponte(im, F):
     desenha_texto(d, (W / 2, 1118), "Filgueiras Academy", F("Inter-Black", 54), BRANCO, 0, "ma")
 
 
-def desenha_final(im, F):
+def desenha_final(im, F, com_camila=False):
     # Na foto girada a capa fica no meio (~700–1450px). O texto vai em cima, sobre o logo
     # escurecido, e o botão embaixo, logo acima da faixa segura dos Stories.
     grad = Image.new("L", (1, H))
     for y in range(H):
         cima = max(0.0, min(1.0, (760 - y) / 420))
-        baixo = max(0.0, min(1.0, (y - 1330) / 160))
+        # Com a Camila na direita, o degradê de baixo sai: ele escureceria o rosto dela.
+        baixo = 0.0 if com_camila else max(0.0, min(1.0, (y - 1330) / 160))
         grad.putpixel((0, y), int(max(cima * 0.88, baixo * 0.80) * 255))
     camada = Image.new("RGBA", (W, H), PRETO + (0,))
     camada.putalpha(grad.resize((W, H)))
@@ -549,6 +609,14 @@ def desenha_final(im, F):
     caixa_centrada(d, 548, "ÚLTIMAS UNIDADES", F("Inter-Black", 34), CREME, MARSALA + (255,), pad_x=26, pad_y=10, raio=30)
     # Botão desenhado + seta para o botão nativo "Enviar mensagem" do anúncio.
     f = F("Inter-Black", 44)
+    if com_camila:
+        # A Camila ocupa a direita apontando pra baixo; o botão vai pra esquerda, em duas linhas.
+        x0, x1, cx = 44, 600, 322
+        d.rounded_rectangle([x0, 1386, x1, 1536], radius=40, fill=CREME + (255,))
+        desenha_texto(d, (cx, 1432), "TOQUE EM", f, MARSALA, 0, "mm")
+        desenha_texto(d, (cx, 1488), "ENVIAR MENSAGEM", f, MARSALA, 0, "mm")
+        d.polygon([(cx - 30, 1550), (cx + 30, 1550), (cx, 1588)], fill=CREME + (255,))
+        return
     txt = "TOQUE EM ENVIAR MENSAGEM"
     larg = d.textlength(txt, font=f)
     d.rounded_rectangle([(W - larg) / 2 - 40, 1424, (W + larg) / 2 + 40, 1528], radius=52, fill=CREME + (255,))
@@ -564,7 +632,11 @@ def montar(nome, cfg, palavras, F, saida_dir, manter=False):
     tmp = Path(tempfile.mkdtemp(prefix=f"mapa_{nome}_"))
     for chave in ("packshot", "foto_pele"):
         preparar_foto(cfg[chave], tmp / f"{chave}.jpg")
-    camila = cfg.get("camila") or {}
+    # Clipes da Camila (etapa 2): cortados e acelerados uma vez por vídeo.
+    camila = {}
+    for chave, arquivo in (cfg.get("camila") or {}).items():
+        if arquivo and chave in CAMILA:
+            camila[chave] = preparar_camila(arquivo, chave, palavras, tmp, gancho=chave.startswith("v"))
 
     clipes, audios, eventos, legendas, sfx = [], [], [], [], []
     t = 0.0
@@ -578,12 +650,14 @@ def montar(nome, cfg, palavras, F, saida_dir, manter=False):
         nome_seg = f"s{i:02d}_{chave}"
         if chave == "gancho":
             g = GANCHO_CAMILA[video["gancho"]]
-            clip_cam = camila.get(video["gancho"])
-            dur = duracao(clip_cam) if clip_cam else 3.6
-            clipes.append(render_quadro_pausado(cfg, g["fundo"][0], g["fundo"][1], dur, tmp, nome_seg, clip_cam))
-            if clip_cam:
-                audios.append(render_fala_audio({"cam": clip_cam}, [("cam", 0.0, dur)], tmp, nome_seg))
-                eventos.append({"ini": t, "fim": t + dur, "tipo": "gancho_texto_cima", "txt": g["fala"]})
+            cam = camila.get(video["gancho"])
+            dur = cam[2] if cam else 3.6
+            clipes.append(render_quadro_pausado(cfg, g["fundo"][0], g["fundo"][1], dur, tmp, nome_seg,
+                                                cam[0] if cam else None))
+            if cam:
+                audios.append(cam[1])
+                # Legenda palavra a palavra da fala dela, sobre o peito, acima da faixa segura.
+                legendas += [dict(e, y=1470) for e in blocos_de_legenda(cam[3], t, t + dur)]
             else:
                 audios.append(silencio(dur, tmp, nome_seg))
                 eventos.append({"ini": t + 0.15, "fim": t + dur, "tipo": "gancho_texto", "txt": g["fala"]})
@@ -623,27 +697,27 @@ def montar(nome, cfg, palavras, F, saida_dir, manter=False):
                 sfx.append(("pop", ini))
         elif seg["tipo"] == "broll":
             dur = seg["dur"]
-            vo = camila.get(seg.get("camila", ""))
-            if vo:
-                dur = max(dur, duracao(vo) + 0.4)
+            cam = camila.get(seg.get("camila", ""))
+            if cam:
+                dur = max(dur, cam[2] + 0.3)
             clipes.append(render_topo(cfg, seg["topo"], dur, H, tmp, nome_seg))
-            audios.append(render_fala_audio({"cam": vo}, [("cam", 0.0, duracao(vo))], tmp, nome_seg) if vo else silencio(dur, tmp, nome_seg))
-            if vo and dur > duracao(vo):
-                audios.append(silencio(dur - duracao(vo), tmp, nome_seg + "_resto"))
+            audios.append(cam[1] if cam else silencio(dur, tmp, nome_seg))
+            if cam and dur > cam[2]:
+                audios.append(silencio(dur - cam[2], tmp, nome_seg + "_resto"))
             tipo, txt = seg["grafico"]
             eventos.append({"ini": t, "fim": t + dur, "tipo": tipo, "txt": txt})
             if inicio_cards is None:
                 inicio_cards = t
         else:  # foto
             dur = seg["dur"]
-            vo = camila.get(seg.get("camila", ""))
-            if vo:
-                dur = max(dur, duracao(vo) + 0.6)
-            clipes.append(render_foto(cfg, seg["chave"], dur, tmp, nome_seg))
-            audios.append(render_fala_audio({"cam": vo}, [("cam", 0.0, duracao(vo))], tmp, nome_seg) if vo else silencio(dur, tmp, nome_seg))
-            if vo and dur > duracao(vo):
-                audios.append(silencio(dur - duracao(vo), tmp, nome_seg + "_resto"))
-            eventos.append({"ini": t, "fim": t + dur, "tipo": seg["grafico"][0], "txt": None})
+            cam = camila.get(seg.get("camila", ""))
+            if cam:
+                dur = max(dur, cam[2] + 0.4)
+            clipes.append(render_foto(cfg, seg["chave"], dur, tmp, nome_seg, cam[0] if cam else None))
+            audios.append(cam[1] if cam else silencio(dur, tmp, nome_seg))
+            if cam and dur > cam[2]:
+                audios.append(silencio(dur - cam[2], tmp, nome_seg + "_resto"))
+            eventos.append({"ini": t, "fim": t + dur, "tipo": seg["grafico"][0], "txt": "camila" if cam else None})
         for tipo_sfx, quando in seg.get("sfx", []):
             sfx.append((tipo_sfx, t + quando))
         if i > 0:
@@ -688,7 +762,7 @@ def montar(nome, cfg, palavras, F, saida_dir, manter=False):
         meio = (a + b) / 2
         im = Image.new("RGBA", (W, H), (0, 0, 0, 0))
         ativos = [e for e in eventos if e["ini"] <= meio < e["fim"]]
-        ordem = ["citacao", "ponte", "final", "gancho_texto", "gancho_texto_cima", "cabecalho", "selo", "rotulo"]
+        ordem = ["citacao", "ponte", "final", "gancho_texto", "cabecalho", "selo", "rotulo"]
         for e in sorted(ativos, key=lambda e: ordem.index(e["tipo"])):
             if e["tipo"] == "cabecalho":
                 desenha_cabecalho(im, e["txt"], F)
@@ -698,14 +772,12 @@ def montar(nome, cfg, palavras, F, saida_dir, manter=False):
                 desenha_rotulo(im, e["txt"], e["y"], F)
             elif e["tipo"] == "gancho_texto":
                 desenha_gancho_texto(im, e["txt"], F)
-            elif e["tipo"] == "gancho_texto_cima":
-                desenha_gancho_texto(im, e["txt"], F, y_meio=800)
             elif e["tipo"] == "citacao":
                 desenha_citacao(im, e["txt"], F)
             elif e["tipo"] == "ponte":
                 desenha_ponte(im, F)
             elif e["tipo"] == "final":
-                desenha_final(im, F)
+                desenha_final(im, F, e["txt"] == "camila")
         for l in legendas:
             if l["ini"] <= meio < l["fim"]:
                 desenha_legenda(im, l, meio, l["y"], F)
