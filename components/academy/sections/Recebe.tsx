@@ -43,7 +43,7 @@ const TRILHAS: { nome: string; titulo: string; cursos: Curso[] }[] = [
     nome: "Espelho",
     titulo: "A Aline perto, enquanto você aplica",
     cursos: [
-      { t: "6 encontros ao vivo no ano", d: "Com a Aline ou o time dela. Você leva as dúvidas do consultório; as gravações ficam na plataforma." },
+      { t: "Encontros ao vivo ao longo do ano", d: "Com a Aline ou o time dela. Você leva as dúvidas do consultório; as gravações ficam na plataforma." },
       { t: "1 aula ao vivo de casos com a Aline", d: "Pra ver como ela pensa a conduta, caso a caso." },
       { t: "Preferência nos cursos presenciais", d: "Pra garantir a vaga quando quiser o hands-on." },
     ],

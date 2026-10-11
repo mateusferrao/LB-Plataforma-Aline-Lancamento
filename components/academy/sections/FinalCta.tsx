@@ -6,7 +6,7 @@ import { ACADEMY, BONUS_10_ESGOTADO, GARANTIA_ACADEMY, SALA } from "@/lib/oferta
 
 // Fechamento: a cena resolvida, o resumo da oferta numa frase, botão e P.S.
 const RESUMO =
-  "Anatomia em fresh frozen e mais de 70 aulas de técnica pra mão firme. A Consulta que Vende e 6 encontros ao vivo no ano pra paciente fechar com você.";
+  "Anatomia em fresh frozen e mais de 70 aulas de técnica pra mão firme. A Consulta que Vende e encontros ao vivo ao longo do ano pra paciente fechar com você.";
 
 const PS_GARANTIA = `Você tem ${GARANTIA_ACADEMY.prazoCondicionalDias} dias pra testar. Se assistir ao módulo de anatomia e a mão não ficar mais segura, a gente devolve.`;
 

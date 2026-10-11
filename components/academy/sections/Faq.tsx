@@ -21,7 +21,7 @@ const COMUNS: Item[] = [
   },
   {
     q: "Como funcionam os encontros ao vivo?",
-    a: "São 6 no ano, online, com a Aline ou com o time dela. As gravações ficam na plataforma. E tem uma aula ao vivo com a Aline pra discussão de casos.",
+    a: "São vários ao longo do ano, online, com a Aline ou com o time dela. As gravações ficam na plataforma. E tem uma aula ao vivo com a Aline pra discussão de casos.",
   },
   {
     q: "Como pago e como recebo o acesso?",

@@ -41,7 +41,7 @@ const PASSOS = [
 const A_MAIS = [
   "Mais de 70 aulas de toxina, preenchimento e bioestimuladores",
   "A Consulta que Vende e as ferramentas prontas",
-  "6 encontros ao vivo no ano e uma aula de casos com a Aline",
+  "Encontros ao vivo ao longo do ano e uma aula de casos com a Aline",
   `${ACADEMY.mesesAcesso} meses de acesso, em vez de ${ANATOMIA.mesesAcesso}`,
 ] as const;
 

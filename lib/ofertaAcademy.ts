@@ -104,7 +104,7 @@ export const PILHA_ACADEMY: readonly Item[] = [
     detalhe: "Aulas do escritório Juk Cattani Advogados Associados. Pra atender com mais tranquilidade.",
   },
   {
-    nome: "6 encontros ao vivo no ano",
+    nome: "Encontros ao vivo ao longo do ano",
     detalhe: "Você leva as dúvidas do consultório e sai com a resposta. Com a Aline ou o time dela.",
     valor: 5000,
   },
@@ -241,7 +241,7 @@ export const EXALUNAS = {
 
 export const RENOVACAO_EXALUNAS: Item = {
   nome: `Sua volta à Filgueiras Academy · ${ACADEMY.mesesAcesso} meses`,
-  detalhe: "As mais de 70 aulas de técnica, a Consulta que Vende, o material de apoio e os 6 encontros ao vivo no ano.",
+  detalhe: "As mais de 70 aulas de técnica, a Consulta que Vende, o material de apoio e os encontros ao vivo ao longo do ano.",
   valor: PRECO,
 };
 export const ANATOMIA_EXALUNAS: Item = {
