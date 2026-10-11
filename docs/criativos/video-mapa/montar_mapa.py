@@ -572,7 +572,7 @@ def montar(nome, cfg, palavras, F, saida_dir, manter=False):
     if video.get("gancho"):
         seq = ["gancho"] + seq
     fim_cabecalho = None
-    inicio_ponte = None
+    inicio_cards = None  # o selo sai no primeiro card (citação ou ponte)
 
     for i, chave in enumerate(seq):
         nome_seg = f"s{i:02d}_{chave}"
@@ -632,8 +632,8 @@ def montar(nome, cfg, palavras, F, saida_dir, manter=False):
                 audios.append(silencio(dur - duracao(vo), tmp, nome_seg + "_resto"))
             tipo, txt = seg["grafico"]
             eventos.append({"ini": t, "fim": t + dur, "tipo": tipo, "txt": txt})
-            if chave == "ponte":
-                inicio_ponte = t
+            if inicio_cards is None:
+                inicio_cards = t
         else:  # foto
             dur = seg["dur"]
             vo = camila.get(seg.get("camila", ""))
@@ -653,9 +653,9 @@ def montar(nome, cfg, palavras, F, saida_dir, manter=False):
         t += dur
 
     total = t
-    # Cabeçalho grande no gancho, depois o selo pequeno até a ponte.
+    # Cabeçalho grande no gancho, depois o selo pequeno até o primeiro card.
     eventos.append({"ini": 0.0, "fim": fim_cabecalho, "tipo": "cabecalho", "txt": video.get("sub")})
-    eventos.append({"ini": fim_cabecalho, "fim": inicio_ponte or total, "tipo": "selo", "txt": None})
+    eventos.append({"ini": fim_cabecalho, "fim": inicio_cards or total, "tipo": "selo", "txt": None})
     sfx.append(("pop", 0.05))
 
     # ---- base de vídeo
@@ -744,7 +744,7 @@ def montar(nome, cfg, palavras, F, saida_dir, manter=False):
             ms = int(q * 1000)
             fil.append(f"[{tp}{j}]adelay={ms}|{ms}[{tp}d{j}]")
             mix.append(f"[{tp}d{j}]")
-    fil.append("".join(mix) + f"amix=inputs={len(mix)}:normalize=0:duration=first,alimiter=limit=0.89,atrim=0:{total:.3f}[a]")
+    fil.append("".join(mix) + f"amix=inputs={len(mix)}:normalize=0:duration=first,alimiter=limit=0.8:level=false,atrim=0:{total:.3f}[a]")
     saida_dir.mkdir(parents=True, exist_ok=True)
     saida = saida_dir / f"mapa-{nome}.mp4"
     rodar(["ffmpeg", "-v", "error", "-y", *entradas, "-filter_complex", ";".join(fil), "-map", "[v]", "-map", "[a]",
