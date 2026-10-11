@@ -164,17 +164,17 @@ CAMILA = {
     "v2": [(0.00, 1.02), (1.42, 2.70), (2.82, 3.78), (4.58, 7.30)],
     "v3": [(0.80, 1.66), (2.16, 4.36), (4.86, 7.50)],
     "ponte": [(0.80, 2.66), (2.86, 5.04), (5.24, 7.70)],
-    # CTA sem corte entre a fala e o gesto: a mão sobe e aponta no tempo dela. Cortar direto
-    # pro "já apontando" e congelar o último quadro deixava a cena robótica.
-    "cta": [(1.30, 3.45), (3.62, 6.60)],
+    # CTA só com a voz, emendando na ponte. A Camila não aparece no end card: o gesto de
+    # apontar, cortado ou não, ficou robótico.
+    "cta": [(1.30, 3.45), (3.62, 5.32)],
 }
-VEL_CAMILA = {"cta": 1.1}  # o resto usa VEL_PADRAO
+VEL_CAMILA = {}  # exceções por clipe; o resto usa VEL_PADRAO
 VEL_PADRAO = 1.25
 VERDE = "0x0AAB4B"  # cor medida no fundo dos clipes do Flow
 
 VIDEOS = {
     "v1a": {"gancho": "v1", "sub": "COM O MAPA DO ENVELHECIMENTO", "seq": ["p98", "mapa", "estrutura", "ponte", "final"]},
-    "v1b": {"sub": "COM O MAPA DO ENVELHECIMENTO", "seq": ["p98", "p12", "mapa", "estrutura", "ponte", "final"]},
+    "v1b": {"sub": "COM O MAPA DO ENVELHECIMENTO", "seq": ["p98", "mapa", "estrutura", "ponte", "final"]},
     "v2a": {"gancho": "v2", "sub": "ELA NÃO ENTENDE O QUE PRECISA", "seq": ["p98", "espelho", "mapa", "citacao", "ponte", "final"]},
     "v2b": {"sub": "ELA ENTENDE NA HORA", "seq": ["p98", "espelho", "mapa", "estrutura", "citacao", "ponte", "final"]},
     "v3a": {"gancho": "v3", "sub": "COBRAR O VALOR CERTO", "seq": ["p98", "ml", "naturalidade", "desconto", "ponte", "final"]},
@@ -703,7 +703,7 @@ def montar(nome, cfg, palavras, F, saida_dir, manter=False):
             dur = seg["dur"]
             cam = camila.get(seg.get("camila", ""))
             if cam:
-                dur = max(dur, cam[2] + 0.3)
+                dur = cam[2] + 0.05  # a ponte acaba junto com a fala: o CTA emenda em seguida
             clipes.append(render_topo(cfg, seg["topo"], dur, H, tmp, nome_seg))
             audios.append(cam[1] if cam else silencio(dur, tmp, nome_seg))
             if cam and dur > cam[2]:
@@ -716,15 +716,15 @@ def montar(nome, cfg, palavras, F, saida_dir, manter=False):
             dur = seg["dur"]
             cam = camila.get(seg.get("camila", ""))
             if cam:
-                dur = max(dur, cam[2])  # sem sobra: segurar o último quadro dela soa congelado
-            clipes.append(render_foto(cfg, seg["chave"], dur, tmp, nome_seg, cam[0] if cam else None))
+                dur = max(dur, cam[2] + 0.6)  # só a voz dela, com tempo pra ler o botão no fim
+            clipes.append(render_foto(cfg, seg["chave"], dur, tmp, nome_seg))
             audios.append(cam[1] if cam else silencio(dur, tmp, nome_seg))
             if cam and dur > cam[2]:
                 audios.append(silencio(dur - cam[2], tmp, nome_seg + "_resto"))
-            eventos.append({"ini": t, "fim": t + dur, "tipo": seg["grafico"][0], "txt": "camila" if cam else None})
+            eventos.append({"ini": t, "fim": t + dur, "tipo": seg["grafico"][0], "txt": None})
         for tipo_sfx, quando in seg.get("sfx", []):
             sfx.append((tipo_sfx, t + quando))
-        if i > 0:
+        if i > 0 and chave != "final":  # sem whoosh na emenda ponte → CTA, que é uma fala só
             sfx.append(("whoosh", max(0.0, t - 0.12)))
         if fim_cabecalho is None:
             fim_cabecalho = t + dur

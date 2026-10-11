@@ -68,7 +68,7 @@ Estrutura comum aos 6:
 | Versão | Sequência | Duração |
 |---|---|---|
 | V1A | Camila + 98% + camadas + "tudo que interferir…" + ponte + final | ~28s |
-| V1B | 98% + 12 anos + camadas + "tudo que interferir…" + ponte + final | ~28s |
+| V1B | 98% + camadas + "tudo que interferir…" + ponte + final | ~27s |
 | V2A | Camila + 98% + "embaixo dessa pele…" + camadas + citação + ponte + final | ~30s |
 | V2B | 98% + "embaixo dessa pele…" + camadas + "tudo que interferir…" + citação + ponte + final | ~31s |
 | V3A | Camila + 98% + ml + "levo com naturalidade…" + "não entra dando desconto…" + ponte + final | ~31s |
@@ -131,13 +131,14 @@ Os clipes do Flow vieram em 720×1280 e 24fps, com 8s cada. A fala estava arrast
 | Gancho V2 | 0,00–1,02 · 1,42–2,70 · 2,82–3,78 · 4,58–7,30 | ~4,8s |
 | Gancho V3 | 0,80–1,66 · 2,16–4,36 · 4,86–7,50 | ~4,6s |
 | Ponte | 0,80–2,66 · 2,86–5,04 · 5,24–7,70 | ~5,2s |
-| CTA (1,1x) | 1,30–3,45 · 3,62–6,60 (fala e gesto numa tomada só) | ~4,7s |
+| CTA (só voz) | 1,30–3,45 · 3,62–5,32 | ~3,1s |
 
 **Onde a Camila aparece:**
 - **Nos ganchos:** com 70% da largura e colada embaixo, abaixo do cabeçalho. A fala dela tem legenda palavra a palavra sobre o peito.
-- **No end card:** no canto direito, apontando pra baixo. O botão desenhado vai pra esquerda e o degradê de baixo sai, pra não escurecer o rosto dela.
-  - A fala e o gesto ficam numa tomada só, sem corte, e sem segurar o último quadro.
-  - O corte direto pro "já apontando", com o sorriso parado, ficou robótico. Não volte pra ele.
+- **No end card: ela não aparece.** O CTA é só a voz, emendando na ponte: "…os outros quatro estão na Filgueiras Academy. Toca em enviar mensagem e fala com a equipe da Aline."
+  - A ponte termina junto com a fala, e não tem "whoosh" na emenda.
+  - A Camila apontando no end card, com ou sem corte, ficou robótica. Não volte pra ele.
+- **No V1B não entra mais a fala dos "12 anos de consultório"**: o corte ficava evidente.
 
 **Ouça antes de subir:**
 - No V1, o Flow disse "Aplica **a** harmonização".
