@@ -6,7 +6,7 @@ import { withBasePath } from "@/lib/basePath";
 
 const STATS = [
   { target: 1000, suffix: "+", formatThousands: true, l: "alunas formadas" },
-  { target: 11, suffix: "+", l: "anos de clínica" },
+  { target: 12, suffix: "+", l: "anos de clínica" },
   { target: 30, suffix: "+", l: "certificações" },
   { target: 40, suffix: " mil+", l: "na comunidade" },
 ];

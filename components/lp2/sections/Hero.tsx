@@ -53,7 +53,7 @@ export function Hero({ comVsl }: { comVsl: boolean }) {
             <UrgenciaFina className="mt-3.5 text-[13.5px] tracking-[0.02em] text-fg-faint" />
 
             <div className="mt-10 grid grid-cols-3 gap-4 border-t border-line pt-7 sm:gap-7">
-              <Stat target={11} suffix="+" l="anos de clínica" />
+              <Stat target={12} suffix="+" l="anos de clínica" />
               <Stat target={1000} suffix="+" formatThousands l="alunas formadas" />
               <Stat target={40} suffix=" mil+" l="na comunidade" />
             </div>

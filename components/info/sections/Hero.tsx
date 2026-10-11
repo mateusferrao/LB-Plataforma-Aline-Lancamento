@@ -82,7 +82,7 @@ export function Hero() {
             <LinhaGarantia className="mt-3 text-center text-[13.5px] tracking-[0.02em] text-fg-faint sm:text-left" />
 
             <div className="mt-9 grid grid-cols-3 gap-4 border-t border-line pt-7 sm:gap-7">
-              <Stat target={11} suffix="+" l="anos de clínica" />
+              <Stat target={12} suffix="+" l="anos de clínica" />
               <Stat target={1000} suffix="+" formatThousands l="alunas formadas" />
               <Stat target={40} suffix=" mil+" l="na comunidade" />
             </div>

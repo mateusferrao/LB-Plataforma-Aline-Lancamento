@@ -478,7 +478,7 @@ Conforme a seção 5 (opção A). Bullets (cada um começa pelo resultado; o "co
 - ✓ **Acerte o resultado em cada rosto**, entendendo por que a mesma técnica muda de uma paciente pra outra
 - ✓ **O curso internacional de fresh frozen da Aline custa cerca de R$35 mil.** Esta aula, R$67, sem viajar.
 
-Faixa de prova logo abaixo: `11+ anos de clínica · 1.000+ alunas · Dissecção fresh frozen nos EUA · Cursos de anatomia na Europa`
+Faixa de prova logo abaixo: `12+ anos de clínica · 1.000+ alunas · Dissecção fresh frozen nos EUA · Cursos de anatomia na Europa`
 
 *Por quê:* a primeira tela entrega o que é, para quem é, quando, quanto custa e por que acreditar.
 Tráfego frio lê só o hero.

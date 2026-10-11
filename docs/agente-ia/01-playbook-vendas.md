@@ -92,7 +92,7 @@ Quase todo curso cuida de um desses momentos só. A Academy cuida dos três.
 
 ## 6. Autoridade da Dra. Aline
 
-- **11+ anos de clínica**, **1000+ alunas formadas**, **30+ certificações**, **40 mil+** na
+- **12+ anos de clínica**, **1000+ alunas formadas**, **30+ certificações**, **40 mil+** na
   comunidade.
 - Fez o primeiro curso de dissecção em **2018**, o que destravou a carreira dela.
 - Depois veio uma **temporada de dissecção em peças fresh frozen nos Estados Unidos** e os
