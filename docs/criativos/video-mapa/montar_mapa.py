@@ -164,9 +164,12 @@ CAMILA = {
     "v2": [(0.00, 1.02), (1.42, 2.70), (2.82, 3.78), (4.58, 7.30)],
     "v3": [(0.80, 1.66), (2.16, 4.36), (4.86, 7.50)],
     "ponte": [(0.80, 2.66), (2.86, 5.04), (5.24, 7.70)],
-    "cta": [(1.30, 3.45), (3.62, 5.30), (6.20, 7.40)],  # a última faixa é só o gesto de apontar
+    # CTA sem corte entre a fala e o gesto: a mão sobe e aponta no tempo dela. Cortar direto
+    # pro "já apontando" e congelar o último quadro deixava a cena robótica.
+    "cta": [(1.30, 3.45), (3.62, 6.60)],
 }
-VEL_CAMILA = 1.25
+VEL_CAMILA = {"cta": 1.1}  # o resto usa VEL_PADRAO
+VEL_PADRAO = 1.25
 VERDE = "0x0AAB4B"  # cor medida no fundo dos clipes do Flow
 
 VIDEOS = {
@@ -327,6 +330,7 @@ def preparar_camila(arquivo, chave, palavras, tmp, gancho=False):
     """Corta as pausas do clipe da Camila e acelera. Devolve vídeo (ainda no verde), voz,
     duração e as palavras com o tempo já recalculado."""
     faixas = CAMILA[chave]
+    vel = VEL_CAMILA.get(chave, VEL_PADRAO)
     fv, fa = [], []
     for i, (a, b) in enumerate(faixas):
         punch = ",scale=764:1358,crop=720:1280" if i % 2 == 1 else ""  # punch-in de 1,06x
@@ -338,16 +342,16 @@ def preparar_camila(arquivo, chave, palavras, tmp, gancho=False):
     if gancho:  # entra com 1,15x e assenta em 0,35s: o primeiro quadro já chega com energia
         zoom = ",scale=w='trunc(iw*(1+0.15*max(0,1-t/0.35))/2)*2':h=-2:eval=frame,crop=720:1280"
     fil = fv + fa + [
-        "".join(f"[v{i}]" for i in range(n)) + f"concat=n={n}:v=1:a=0,setpts=PTS/{VEL_CAMILA},fps={FPS}{zoom}[v]",
-        "".join(f"[a{i}]" for i in range(n)) + f"concat=n={n}:v=0:a=1,atempo={VEL_CAMILA},"
+        "".join(f"[v{i}]" for i in range(n)) + f"concat=n={n}:v=1:a=0,setpts=PTS/{vel},fps={FPS}{zoom}[v]",
+        "".join(f"[a{i}]" for i in range(n)) + f"concat=n={n}:v=0:a=1,atempo={vel},"
         "aresample=48000,aformat=channel_layouts=stereo[a]",
     ]
     video, voz = tmp / f"cam_{chave}.mp4", tmp / f"cam_{chave}.wav"
     rodar(["ffmpeg", "-v", "error", "-y", "-i", arquivo, "-filter_complex", ";".join(fil),
            "-map", "[v]", "-an", "-c:v", "libx264", "-crf", "12", "-preset", "veryfast", "-pix_fmt", "yuv420p", str(video),
            "-map", "[a]", "-vn", str(voz)])
-    dur = sum(b - a for a, b in faixas) / VEL_CAMILA
-    ws = [dict(p, s=p["s"] / VEL_CAMILA, e=p["e"] / VEL_CAMILA)
+    dur = sum(b - a for a, b in faixas) / vel
+    ws = [dict(p, s=p["s"] / vel, e=p["e"] / vel)
           for p in palavras_da_fala(palavras, [(f"cam_{chave}", a, b) for a, b in faixas])]
     return video, voz, dur, ws
 
@@ -712,7 +716,7 @@ def montar(nome, cfg, palavras, F, saida_dir, manter=False):
             dur = seg["dur"]
             cam = camila.get(seg.get("camila", ""))
             if cam:
-                dur = max(dur, cam[2] + 0.4)
+                dur = max(dur, cam[2])  # sem sobra: segurar o último quadro dela soa congelado
             clipes.append(render_foto(cfg, seg["chave"], dur, tmp, nome_seg, cam[0] if cam else None))
             audios.append(cam[1] if cam else silencio(dur, tmp, nome_seg))
             if cam and dur > cam[2]:
