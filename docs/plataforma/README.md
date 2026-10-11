@@ -141,7 +141,7 @@ Durante o pitch, a equipe:
   - os estudos nos EUA e em Portugal;
   - a definição de fresh frozen;
   - os "5 passos da consulta" no conteúdo atual;
-  - os "11+ anos de clínica";
+  - os "12+ anos de clínica" (confirmado pela Aline na aula do Mapa: "mais de 12 anos dentro de consultório");
   - o nome "Garantia Mão Segura".
 - [ ] **Confirmar o conteúdo do "Material de Apoio":** anamnese, termos, precificação e scripts.
 - [x] **Agente de IA:** `docs/agente-ia/04-filgueiras-academy.md` (venda e suporte da Academy, 06/10), e a afirmação de que a gravação existe na Academy saiu dos outros três arquivos.

@@ -5,7 +5,7 @@ import { Reveal } from "@/components/Reveal";
 import { withBasePath } from "@/lib/basePath";
 
 const STATS = [
-  { target: 11, suffix: "+", l: "anos de clínica" },
+  { target: 12, suffix: "+", l: "anos de clínica" },
   { target: 1000, suffix: "+", formatThousands: true, l: "alunas formadas" },
   { target: 30, suffix: "+", l: "certificações" },
   { target: 40, suffix: " mil+", l: "na comunidade" },
@@ -39,7 +39,7 @@ export function Authority() {
               ela fez o primeiro curso de dissecção. Ver a face por dentro deu a ela uma
               segurança que nenhum atlas tinha dado, e foi o que destravou a carreira dela.
               Depois vieram uma temporada de dissecção em peças fresh frozen nos Estados
-              Unidos e os cursos internacionais de anatomia que ela dá hoje na Europa. São onze anos resolvendo
+              Unidos e os cursos internacionais de anatomia que ela dá hoje na Europa. São doze anos resolvendo
               os casos mais complexos da estética. Ela fundou a Filgueiras Academy e a pós em
               Estética Avançada e Integrativa, e atende em Belo Horizonte e Praia Grande.
             </p>

@@ -161,7 +161,7 @@ Regras que valem para todos:
 - CTA "Quero minha vaga", o mesmo texto do botão da LP. No criativo de oferta, "Garantir
   meu ingresso", que conversa com o ingresso da `/lp2`.
 - Só fatos do playbook: R$67, 06/10 às 20h, ~90 min, online, sem gravação, 12x ou Pix,
-  garantia de 7 dias, "poucas vagas" sem número, 11+ anos, 1.000+ alunas, 40 mil+.
+  garantia de 7 dias, "poucas vagas" sem número, 12+ anos, 1.000+ alunas, 40 mil+.
 - Nada de certificado, replay, bônus, número de vagas ou garantia de resultado clínico.
   O desejo aparece como aspiração ("pra quem quer"), não como promessa de tratamento.
 - Nada de antes/depois nem de ganho financeiro. Por isso o print "faturei R$20.000"
@@ -187,7 +187,7 @@ Regras que valem para todos:
   pra você aplicar sabendo o resultado que vai entregar.
 - **Pra quem quer:** resultado bonito em cada rosto · mão firme, sem hesitar · paciente
   que volta e indica
-- **Autoridade:** foto da Aline no laboratório + "11+ anos de clínica e mais de 1.000
+- **Autoridade:** foto da Aline no laboratório + "12+ anos de clínica e mais de 1.000
   alunas formadas".
 - **Por quê:** as três linhas em cinza descrevem a frustração com as palavras dela, e o
   grifo entrega o desejo (é o H1 da `/lp2`). Os cards eram "Técnica/Anatomia/Resultado",
@@ -215,7 +215,7 @@ Regras que valem para todos:
   A headline resume exatamente o que os dois prints dizem.
 - **Rótulo honesto:** "Prints reais de alunas da Filgueiras Academy". Os depoimentos são
   sobre o ensino da Aline, não sobre esta aula, que ainda não aconteceu.
-- **Números:** 11+ anos de clínica · 1.000+ alunas formadas · 40 mil+ na comunidade.
+- **Números:** 12+ anos de clínica · 1.000+ alunas formadas · 40 mil+ na comunidade.
 - **Uso ideal:** remarketing de quem visitou a LP ou engajou no Instagram.
 - **Alternativas:**
   - A. "Elas voltaram pra cadeira mais seguras."
