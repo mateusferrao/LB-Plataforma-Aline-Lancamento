@@ -25,7 +25,7 @@
 ### Bloco 1 · O que a aula não resolve sozinha (2 min)
 > Hoje você viu por dentro. Os planos, as estruturas, os limites que mudam a conduta.
 > Agora deixa eu ser honesta: uma noite não muda a mão. Mão muda com repetição, com revisão, com alguém olhando junto.
-> E tem uma coisa que eu aprendi em mais de 11 anos de clínica [confirmar]: a paciente não vê a sua anatomia. Ela sente a sua segurança.
+> E tem uma coisa que eu aprendi em mais de 12 anos de clínica: a paciente não vê a sua anatomia. Ela sente a sua segurança.
 > E ela decide se confia em você três vezes.
 
 **Slide:** "A paciente decide se confia em você três vezes."
@@ -164,5 +164,5 @@
 2. **O link do checkout na Ticto.**
 3. **Formato da mentoria em grupo** (frequência, duração, por quanto tempo).
 4. **Ácido hialurônico (1ª):** validar com o jurídico e a parte sanitária (o público inclui esteticistas). Só pra quem é habilitada a aplicar. Sem citar marca. (A toxina e a prancheta saíram em 06/10.)
-5. **A Aline confirma** os "mais de 11 anos de clínica".
+5. **A Aline confirma** os "mais de 12 anos de clínica" (confirmado).
 6. **Operação de 07/10 a 10/10:** estender para 15 meses todas as compras da noite (oferta Sala); enviar o Manual do Envelhecimento (5 primeiras) e o ácido hialurônico (1ª), emitir o certificado e abrir a mentoria para os 10 primeiros.

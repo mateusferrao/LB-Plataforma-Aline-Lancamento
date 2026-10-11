@@ -1,0 +1,22 @@
+{
+  "broll": "material/0dce6385-bea0a19d-d129-4ee1-abb2-11fdf96b2539.mp4",
+  "aline98": "material/247c489a-ScreenRecording_10-10-2026_23-45-41_1.mov",
+  "mapa": "material/8dd12c72-ScreenRecording_10-10-2026_23-29-00_1.mp4",
+  "ml": "material/5374380e-ScreenRecording_10-11-2026_00-11-16_1.mp4",
+  "desconto": "material/d198b924-ScreenRecording_10-11-2026_00-16-01_1.mp4",
+  "packshot": "material/fotos/DSC04103.jpeg",
+  "foto_pele": "material/fotos/DSC04112.jpeg",
+  "trilha": "material/mixkit-hazy-after-hours-371.mp3",
+  "trilha_inicio": 28.0,
+  "sfx_folha": "material/mixkit-page-turn-single-1101.mp3",
+  "sfx_pop": "material/mixkit-hard-pop-click-2354.mp3",
+  "sfx_whoosh": "material/mixkit-air-woosh-1492.mp3",
+  "fontes_dir": "material/fontes",
+  "camila": {
+    "v1": "camila/gancho-v1.mp4",
+    "v2": "camila/gancho-v2.mp4",
+    "v3": "camila/gancho-v3.mp4",
+    "ponte": "camila/ponte.mp4",
+    "cta": "camila/cta.mp4"
+  }
+}
