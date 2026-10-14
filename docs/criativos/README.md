@@ -45,6 +45,10 @@ dor e da crença, não do desejo, e servem de contraponto no teste (seção 6).
 > LP feche no resultado (segurança, paciente, diferencial). Ilustração sobre pessoa viva pode; foto
 > real de peça ou de cadáver continua proibida. A LP `/fresh` foi alinhada a esse criativo
 > (`docs/fresh/README.md`, rodada 2).
+>
+> **Atualização de 06/10 (Academy):** a peça **pixelada** está liberada nos anúncios, porque o clipe da
+> aula de calha lacrimal já rodou sem reprovação e converteu. Peça sem pixelização continua proibida.
+> Os criativos da Academy estão em `academy/README.md`.
 ---
 
 ## 1. Material de origem

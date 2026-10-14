@@ -41,3 +41,8 @@ __pycache__/
 # Protocolo de Resgate Vascular (produto pago): fonte, fotos de paciente e PDFs
 # ficam SÓ locais. O repositório é público — nada daqui pode ir para o git.
 /docs/kit-protocolo/
+
+# Criativos da Academy: renders (MP4/PNG), frames em 4K, trilhas e qualquer coisa com
+# a peça anatômica pixelada ficam SÓ locais (repositório público).
+/docs/criativos/academy/out/
+/docs/criativos/academy/privado/
